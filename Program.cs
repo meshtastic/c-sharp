@@ -8,8 +8,12 @@ var portOption = new Option<string>(
 var noProtoCommand = new Command("noproto", "Serial monitor for meshtastic devices");
 noProtoCommand.SetHandler(NoProtoHandler.Handle, portOption);
 
+var infoCommand = new Command("info", "Dump info about the currently connected meshtastic node");
+infoCommand.SetHandler(InfoCommandHandler.Handle, portOption);
+
 var rootCommand = new RootCommand("Meshtastic CLI");
 rootCommand.AddGlobalOption(portOption);
 rootCommand.AddCommand(noProtoCommand);
+rootCommand.AddCommand(infoCommand);
 
 return await rootCommand.InvokeAsync(args);
