@@ -38,6 +38,17 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "regen protos",
+            "command": "protoc",
+            "type": "process",
+            "args": [
+                "--proto_path=protobufs",
+                "--csharp_out=./generated",
+                "--csharp_opt=base_namespace=Meshtastic.Protobufs",
+                "protobufs/*.proto"
+            ],
+        },
+        {
             "label": "run --noproto",
             "command": "dotnet",
             "type": "process",

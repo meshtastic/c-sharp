@@ -1,0 +1,1 @@
+~/.nuget/packages/google.protobuf.tools/3.21.10/tools/macosx_x64/protoc -I=protobufs --csharp_out=./Generated --csharp_opt=base_namespace=Meshtastic.Protobufs ./protobufs/*.proto
