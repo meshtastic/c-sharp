@@ -1,9 +1,8 @@
 using System.IO.Ports;
 
-namespace Meshtastic.Handlers
+namespace Meshtastic.Handlers;
+
+public interface ICommandHandler<TArg> 
 {
-    public interface ICommandHandler<TArg> 
-    {
-        abstract static Task Handle(TArg arg);
-    } 
+    abstract static Task Handle(TArg arg);
 }
