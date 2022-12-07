@@ -4,9 +4,8 @@ using Microsoft.Extensions.Logging;
 
 using Meshtastic.Handlers;
 
-var portOption = new Option<string>(
-    name: "--port",
-    description: "Target serial port for meshtastic device");
+var portOption = new Option<string>(name: "--port", description: "Target serial port for meshtastic device");
+var hostOption = new Option<string>(name: "--host", description: "Target host ip or name for meshtastic device");
 
 var noProtoCommand = new Command("noproto", "Serial monitor for meshtastic devices");
 noProtoCommand.SetHandler(NoProtoHandler.Handle, portOption, new LoggingBinder());
