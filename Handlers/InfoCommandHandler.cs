@@ -6,18 +6,15 @@ namespace Meshtastic.Handlers;
 
 public class InfoCommandHandler : ICommandHandler<string> 
 {
-    public static async Task Handle(string port) 
+    public static async Task Handle(string port)
     {
         var serialConection = new SerialConnection(port);
         var wantConfig = new ToRadio();
-        wantConfig.WantConfigId = 1;
+        wantConfig.WantConfigId = (uint)Random.Shared.Next();
 
-        using (var memoryStream = new MemoryStream()) 
-        {
-            using (var codedOutputStream = new CodedOutputStream(memoryStream))
-            wantConfig.WriteTo(codedOutputStream);
-            await serialConection.WriteToRadio(memoryStream.ToArray());
-            await Task.Delay(5000);
-        }
+        Console.WriteLine("Sending:");
+        Console.WriteLine(wantConfig.ToString());
+
+        await serialConection.WriteToRadio(wantConfig.ToByteArray());
     }
 }
