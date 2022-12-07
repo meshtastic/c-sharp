@@ -64,9 +64,8 @@ public class SerialConnection : IConnection
             //     await writer.FlushAsync();
             //     await Task.Delay(100);
             // }
-            await Task.Delay(3000);
+            //await Task.Delay(3000);
             serialPort.Write(Resources.SERIAL_PREAMBLE, 0, Resources.SERIAL_PREAMBLE.Length);
-            await Task.Delay(100);
             serialPort.DiscardInBuffer();
             serialPort.Write(toRadio, 0, toRadio.Length);
             await Task.Delay(100);
@@ -81,47 +80,35 @@ public class SerialConnection : IConnection
 
     private async Task ReadPacket()
     {
-        var buffer = new byte[] {};
+        List<byte> buffer = new();
         var packetLength = 0;
-        // using (var reader = new StreamReader(serialPort.BaseStream, System.Text.Encoding.UTF8, true)) // may need to change -1 to buffer size and defautl to correct encoding
-        // {
-        //     while (serialPort.IsOpen) 
-        //     {
-        //         string line = await reader.ReadToEndAsync();
-        //         Console.Write(line);
-        //         await Task.Delay(10);
-        //     }
-        // }
-
         while (serialPort.IsOpen)
         {
-            var item = (byte)serialPort.ReadByte();
-            if (item == 0)
+            if (serialPort.BytesToRead == 0)
                 continue;
 
-            int bufferIndex = buffer.Length;
-            buffer.Append(item);
-            Console.Write(serialPort.ReadExisting());
+            var item = (byte)serialPort.ReadByte();
+
+            int bufferIndex = buffer.Count();
+            buffer.Add(item);
             if (bufferIndex == 0) 
             {
-                Console.WriteLine("Found Start");
                 if (item != Resources.PACKET_FRAME_START[0])
-                    buffer = Enumerable.Empty<byte>().ToArray();
+                    buffer.Clear();
             } 
             else if (bufferIndex == 1) 
             {
-                Console.WriteLine("Found Second");
-                if (item != Resources.PACKET_FRAME_START[2])
-                    buffer = Enumerable.Empty<byte>().ToArray();
+                if (item != Resources.PACKET_FRAME_START[1])
+                    buffer.Clear();
             }
             else if (bufferIndex >= Resources.PACKET_HEADER_LENGTH - 1) 
             {
                 packetLength = (buffer[2] << 8) + buffer[3];
                 // Packet fails size validation
                 if (bufferIndex == Resources.PACKET_HEADER_LENGTH - 1 && packetLength > Resources.MAX_TO_FROM_RADIO_LENGTH) 
-                    buffer = Enumerable.Empty<byte>().ToArray();
+                    buffer.Clear();
 
-                if (buffer.Length > 0 && (bufferIndex + 1) >= (packetLength + Resources.PACKET_HEADER_LENGTH))
+                if (buffer.Count() > 0 && (bufferIndex + 1) >= (packetLength + Resources.PACKET_HEADER_LENGTH))
                 {
                     try 
                     {
@@ -132,7 +119,7 @@ public class SerialConnection : IConnection
                     catch (Exception ex) {
                         Console.WriteLine(ex);
                     }
-                    buffer = Enumerable.Empty<byte>().ToArray();
+                    buffer.Clear();
                 }
             }
             // b = self._readBytes(1)
