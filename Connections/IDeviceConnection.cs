@@ -3,7 +3,7 @@ using Meshtastic.Protobufs;
 
 namespace Meshtastic.Connections;
 
-public interface IConnection
+public interface IDeviceConnection
 {
     DeviceStateContainer DeviceStateContainer { get; set; }
 

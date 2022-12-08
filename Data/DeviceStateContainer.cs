@@ -1,6 +1,7 @@
 using System.Reflection;
 using Meshtastic.Protobufs;
 using Spectre.Console;
+using Spectre.Console.Rendering;
 
 namespace Meshtastic.Data;
 
@@ -84,15 +85,30 @@ public class DeviceStateContainer
 
     public void Print()
     {
-        PrintConfig(this.localConfig);
-        PrintConfig(this.localModuleConfig);
+        var grid = new Grid();
+        grid.AddColumn();
+        grid.AddColumn();
+        grid.AddRow(PrintConfig(this.localConfig, "Config"), PrintConfig(this.localModuleConfig, "Module Config"));
+        // grid.AddRow(PrintMyNodeInfo(this.myNodeInfo), PrintMyNodeInfo(this.myNodeInfo));
+        AnsiConsole.Write(grid);
     }
-
-    private void PrintConfig(object config)
+    private Table PrintMyNodeInfo(MyNodeInfo myNodeInfo)
     {
         var table = new Table();
         table.BorderColor(Resources.MESHTASTIC_GREEN);
+        table.RoundedBorder();
+        table.AddColumns("Setting", "Value");
+        foreach (var property in GetProperties(myNodeInfo))
+        {
+            table.AddRow(property.Name, property.GetValue(myNodeInfo)?.ToString() ?? String.Empty);
+        }
+        return table;
+    }
 
+    private Tree PrintConfig(object config, string name)
+    {
+        var root = new Tree(name);
+        root.Style = new Style(Resources.MESHTASTIC_GREEN);
         var sectionValues = new List<string>();
         foreach (var sectionInfo in GetProperties(config))
         {
@@ -100,16 +116,18 @@ public class DeviceStateContainer
             if (section == null)
                 continue;
 
-            table.AddColumn(sectionInfo.Name);
+            var sectionNode = root.AddNode(sectionInfo.Name);
+            var table = new Table();
+            table.BorderColor(Resources.MESHTASTIC_GREEN);
+            table.RoundedBorder();
+            table.AddColumns("Setting", "Value");
 
-            var values = String.Join(Environment.NewLine, GetProperties(section!).Select(prop =>
+            GetProperties(section!).ToList().ForEach(prop =>
             {
-                //Console.WriteLine($"{prop.Name}: {prop.GetValue(section)}");
-                return $"{prop.Name}: {prop.GetValue(section)}";
-            }));
-            sectionValues.Add(values);
+                table.AddRow(prop.Name, prop.GetValue(section)?.ToString() ?? String.Empty);
+            });
+            sectionNode.AddNode(table);
         }
-        table.AddRow(sectionValues.ToArray());
-        AnsiConsole.Write(table);
+        return root;
     }
 }

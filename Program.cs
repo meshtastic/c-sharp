@@ -2,6 +2,7 @@
 using System.CommandLine.Binding;
 using Microsoft.Extensions.Logging;
 
+using Meshtastic;
 using Meshtastic.Handlers;
 using Spectre.Console;
 
@@ -19,7 +20,16 @@ rootCommand.AddGlobalOption(portOption);
 rootCommand.AddCommand(noProtoCommand);
 rootCommand.AddCommand(infoCommand);
 
-return await rootCommand.InvokeAsync(args);
+return await AnsiConsole.Status()
+    .StartAsync("Connecting...", async ctx => 
+    {
+        ctx.Status("Connecting...");
+        ctx.Spinner(Spinner.Known.Dots);
+        ctx.SpinnerStyle(new Style(Resources.MESHTASTIC_GREEN));
+
+        return await rootCommand.InvokeAsync(args);   
+    });
+
 
 public class LoggingBinder : BinderBase<ILogger>
 {

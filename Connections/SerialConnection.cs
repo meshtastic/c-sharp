@@ -4,7 +4,7 @@ using Meshtastic.Protobufs;
 
 namespace Meshtastic.Connections;
 
-public class SerialConnection : IConnection
+public class SerialConnection : IDeviceConnection
 {
     public DeviceStateContainer DeviceStateContainer { get; set; } = new DeviceStateContainer();
 
@@ -54,7 +54,6 @@ public class SerialConnection : IConnection
         {
             Console.WriteLine(ex);
         }
-        //Console.WriteLine("Serial disconnected");
     }
 
     public async Task ReadFromRadio(Func<FromRadio, bool> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
