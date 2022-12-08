@@ -88,19 +88,33 @@ public class DeviceStateContainer
         var grid = new Grid();
         grid.AddColumn();
         grid.AddColumn();
-        grid.AddRow(PrintConfig(this.localConfig, "Config"), PrintConfig(this.localModuleConfig, "Module Config"));
+        grid.AddColumn();
+        grid.AddColumn();
+        grid.AddRow(
+            PrintMyNodeInfo(this.myNodeInfo),
+            PrintMyNodeInfo(this.myNodeInfo),
+            PrintConfig(this.localConfig, "Config"), 
+            PrintConfig(this.localModuleConfig, "Module Config"));
         // grid.AddRow(PrintMyNodeInfo(this.myNodeInfo), PrintMyNodeInfo(this.myNodeInfo));
         AnsiConsole.Write(grid);
     }
+
+    private string GetSettingValue(PropertyInfo property, object instance) =>
+        (property.GetValue(instance)?.ToString() ?? String.Empty).Replace("[", String.Empty).Replace("]", String.Empty);
+
     private Table PrintMyNodeInfo(MyNodeInfo myNodeInfo)
     {
         var table = new Table();
+        table.Expand();
         table.BorderColor(Resources.MESHTASTIC_GREEN);
         table.RoundedBorder();
         table.AddColumns("Setting", "Value");
         foreach (var property in GetProperties(myNodeInfo))
         {
-            table.AddRow(property.Name, property.GetValue(myNodeInfo)?.ToString() ?? String.Empty);
+            if (property == null)
+                continue;
+            
+            table.AddRow(property.Name, GetSettingValue(property, myNodeInfo));
         }
         return table;
     }
@@ -118,13 +132,14 @@ public class DeviceStateContainer
 
             var sectionNode = root.AddNode(sectionInfo.Name);
             var table = new Table();
+            table.Expand();
             table.BorderColor(Resources.MESHTASTIC_GREEN);
             table.RoundedBorder();
             table.AddColumns("Setting", "Value");
 
             GetProperties(section!).ToList().ForEach(prop =>
             {
-                table.AddRow(prop.Name, prop.GetValue(section)?.ToString() ?? String.Empty);
+                table.AddRow(prop.Name, GetSettingValue(prop, section));
             });
             sectionNode.AddNode(table);
         }
