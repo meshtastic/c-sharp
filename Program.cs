@@ -3,6 +3,7 @@ using System.CommandLine.Binding;
 using Microsoft.Extensions.Logging;
 
 using Meshtastic.Handlers;
+using Spectre.Console;
 
 var portOption = new Option<string>(name: "--port", description: "Target serial port for meshtastic device");
 var hostOption = new Option<string>(name: "--host", description: "Target host ip or name for meshtastic device");

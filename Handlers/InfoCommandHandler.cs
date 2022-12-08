@@ -13,8 +13,7 @@ public class InfoCommandHandler : ICommandHandler<string>
         var wantConfig = new ToRadio();
         wantConfig.WantConfigId = (uint)Random.Shared.Next();
 
-        Console.WriteLine("Sending:");
-        Console.WriteLine(wantConfig.ToString());
+        // Console.WriteLine(wantConfig.ToString());
 
         await serialConection.WriteToRadio(wantConfig.ToByteArray());
     }

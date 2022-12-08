@@ -1,11 +1,13 @@
 using System.IO.Ports;
-using System.Text;
+using Meshtastic.Data;
 using Meshtastic.Protobufs;
 
 namespace Meshtastic.Connections;
 
 public class SerialConnection : IConnection
 {
+    public DeviceStateContainer DeviceStateContainer { get; set; } = new DeviceStateContainer();
+
     private readonly SerialPort serialPort;
 
     public SerialConnection(string port, int baudRate = Resources.DEFAULT_BAUD_RATE)
@@ -13,13 +15,6 @@ public class SerialConnection : IConnection
         serialPort = new SerialPort(port, baudRate);
         serialPort.Handshake = Handshake.None;
     }
-
-    // public void OnFromRadio(Action<byte[]> action) 
-    // {
-    //     serialPort.DataReceived += (sender, e) => {
-    //         action.Invoke(UTF8Encoding.Default.GetBytes(serialPort.ReadExisting()));
-    //     };
-    // }
 
     public async Task Monitor() 
     {
@@ -41,22 +36,6 @@ public class SerialConnection : IConnection
         }
     }
 
-    // private char[] EncodeData(byte[] data) => System.Text.Encoding.UTF8.GetString(data).ToCharArray();
-    // using (var writer = new StreamWriter(serialPort.BaseStream, System.Text.Encoding.UTF8, toRadio.Length, true))
-    // {
-    //     var wakeUp = EncodeData(Enumerable.Repeat<byte>(Resources.PACKET_FRAME_START[1], 32).ToArray());
-    //     await writer.WriteAsync(wakeUp);
-    //     await writer.FlushAsync();
-
-    //     // Wait 100ms to give device time to start running
-    //     await Task.Delay(100);
-
-    //     await writer.WriteAsync(EncodeData(toRadio));
-    //     await writer.FlushAsync();
-    //     await Task.Delay(100);
-    // }
-    //await Task.Delay(3000);
-
     public async Task WriteToRadio(byte[] data)
     {
         try
@@ -66,18 +45,19 @@ public class SerialConnection : IConnection
 
             serialPort.Write(Resources.SERIAL_PREAMBLE, 0, Resources.SERIAL_PREAMBLE.Length);
             serialPort.DiscardInBuffer();
+            await Task.Delay(1000);
             serialPort.Write(toRadio, 0, toRadio.Length);
             await Task.Delay(100);
-            await ReadFromRadio();
+            await ReadFromRadio(p => p.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.ConfigCompleteId);
         }
         catch (IOException ex)
         {
             Console.WriteLine(ex);
         }
-        Console.WriteLine("Serial disconnected");
+        //Console.WriteLine("Serial disconnected");
     }
 
-    private async Task ReadFromRadio(int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT) //Func<FromRadio, bool> isComplete, 
+    public async Task ReadFromRadio(Func<FromRadio, bool> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
         List<byte> buffer = new();
         var packetLength = 0;
@@ -107,7 +87,15 @@ public class SerialConnection : IConnection
                     {
                         var payload = buffer.Skip(Resources.PACKET_HEADER_LENGTH).ToArray();
                         var fromRadio = FromRadio.Parser.ParseFrom(payload);
-                        Console.WriteLine(fromRadio.ToString());
+                    
+                        DeviceStateContainer.AddFromRadio(fromRadio);
+                        // Console.WriteLine(fromRadio.ToString());
+
+                        if (isComplete(fromRadio))
+                        {
+                            DeviceStateContainer.Print();
+                            return;
+                        }
                     }
                     catch (Exception ex) {
                         Console.WriteLine(ex);
