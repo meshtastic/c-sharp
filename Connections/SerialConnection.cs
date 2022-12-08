@@ -1,5 +1,6 @@
 using System.IO.Ports;
 using Meshtastic.Data;
+using Meshtastic.Display;
 using Meshtastic.Protobufs;
 
 namespace Meshtastic.Connections;
@@ -42,7 +43,6 @@ public class SerialConnection : IDeviceConnection
         {
             var toRadio = PacketFraming.CreatePacket(data);
             serialPort.Open();
-
             serialPort.Write(Resources.SERIAL_PREAMBLE, 0, Resources.SERIAL_PREAMBLE.Length);
             serialPort.DiscardInBuffer();
             await Task.Delay(1000);
@@ -92,7 +92,7 @@ public class SerialConnection : IDeviceConnection
 
                         if (isComplete(fromRadio))
                         {
-                            DeviceStateContainer.Print();
+                            ProtobufPrinter.Print(DeviceStateContainer);
                             return;
                         }
                     }
