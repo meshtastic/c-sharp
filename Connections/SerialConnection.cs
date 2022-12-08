@@ -88,7 +88,6 @@ public class SerialConnection : IDeviceConnection
                         var fromRadio = FromRadio.Parser.ParseFrom(payload);
                     
                         DeviceStateContainer.AddFromRadio(fromRadio);
-                        // Console.WriteLine(fromRadio.ToString());
 
                         if (isComplete(fromRadio))
                         {
