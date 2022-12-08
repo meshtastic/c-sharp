@@ -74,8 +74,8 @@ public class DeviceStateContainer
             "Name", "ClrType", "ContainingType", 
             "Fields", "Extensions", "NestedTypes",
             "EnumTypes", "Oneofs", "RealOneofCount",
-            "Index", "FullName", "File",
-            "Declaration", "IgnoreIncoming"
+            "FullName", "File", "Declaration",
+            "IgnoreIncoming"
         };
         return instance
             .GetType()
@@ -92,18 +92,46 @@ public class DeviceStateContainer
         grid.AddColumn();
         grid.AddRow(
             PrintMyNodeInfo(this.myNodeInfo),
-            PrintMyNodeInfo(this.myNodeInfo),
+            PrintChannels(this.channels),
             PrintConfig(this.localConfig, "Config"), 
             PrintConfig(this.localModuleConfig, "Module Config"));
-        // grid.AddRow(PrintMyNodeInfo(this.myNodeInfo), PrintMyNodeInfo(this.myNodeInfo));
         AnsiConsole.Write(grid);
     }
 
     private string GetSettingValue(PropertyInfo property, object instance) =>
         (property.GetValue(instance)?.ToString() ?? String.Empty).Replace("[", String.Empty).Replace("]", String.Empty);
 
-    private Table PrintMyNodeInfo(MyNodeInfo myNodeInfo)
+    private Tree PrintChannels(List<Channel> channels)
     {
+        var root = new Tree("Channels");
+        root.Style = new Style(Resources.MESHTASTIC_GREEN);
+
+        var table = new Table();
+        table.Expand();
+        table.BorderColor(Resources.MESHTASTIC_GREEN);
+        table.RoundedBorder();
+        table.AddColumns("#", "Name", "Role", "PSK", "Uplink", "Downlink");
+
+        foreach (var channel in channels) {
+            if (channel == null)
+                continue;
+      
+            table.AddRow(channel.Index.ToString(), 
+                channel.Settings.Name, 
+                channel.Role.ToString(), 
+                channel.Settings.Psk.IsEmpty ? String.Empty : BitConverter.ToString(channel.Settings.Psk.ToByteArray()), 
+                channel.Settings.UplinkEnabled.ToString(),
+                channel.Settings.DownlinkEnabled.ToString());
+        }
+        
+        root.AddNode(table);
+        return root;
+    }
+    private Tree PrintMyNodeInfo(MyNodeInfo myNodeInfo)
+    {
+        var root = new Tree("My Node Info");
+        root.Style = new Style(Resources.MESHTASTIC_GREEN);
+
         var table = new Table();
         table.Expand();
         table.BorderColor(Resources.MESHTASTIC_GREEN);
@@ -116,7 +144,9 @@ public class DeviceStateContainer
             
             table.AddRow(property.Name, GetSettingValue(property, myNodeInfo));
         }
-        return table;
+        root.AddNode(table);
+
+        return root;
     }
 
     private Tree PrintConfig(object config, string name)
