@@ -13,13 +13,35 @@ public static class ProtobufPrinter
         var grid = new Grid();
         grid.AddColumn();
         grid.AddColumn();
-        grid.AddColumn();
-        grid.AddColumn();
         grid.AddRow(PrintMyNodeInfo(container.MyNodeInfo),
-            PrintChannels(container.Channels),
+            PrintChannels(container.Channels));
+        grid.AddRow(
             PrintConfig(container.LocalConfig, "Config"), 
             PrintConfig(container.LocalModuleConfig, "Module Config"));
         AnsiConsole.Write(grid);
+    }
+
+    public static Table PrintNodeInfos(List<NodeInfo> nodeInfos) 
+    {
+        var table = new Table();
+        table.Expand();
+        table.BorderColor(StyleResources.MESHTASTIC_GREEN);
+        table.RoundedBorder();
+        // table.AddColumns("#", "Name", "Role", "PSK", "Uplink", "Downlink");
+
+        // foreach (var channel in channels) {
+        //     if (channel == null)
+        //         continue;
+      
+        //     table.AddRow(channel.Index.ToString(), 
+        //         channel.Settings.Name, 
+        //         channel.Role.ToString(), 
+        //         channel.Settings.Psk.IsEmpty ? String.Empty : BitConverter.ToString(channel.Settings.Psk.ToByteArray()), 
+        //         channel.Settings.UplinkEnabled.ToString(),
+        //         channel.Settings.DownlinkEnabled.ToString());
+        // }
+        
+        return table;
     }
 
     public static Tree PrintChannels(List<Channel> channels)
