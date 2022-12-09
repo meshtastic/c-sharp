@@ -9,8 +9,10 @@ public class SerialConnection : DeviceConnection
     private readonly SerialPort serialPort;
     public SerialConnection(string port, int baudRate = Resources.DEFAULT_BAUD_RATE)
     {
-        serialPort = new SerialPort(port, baudRate);
-        serialPort.Handshake = Handshake.None;
+        serialPort = new SerialPort(port, baudRate)
+        {
+            Handshake = Handshake.None
+        };
     }
 
     public override async Task Monitor() 

@@ -4,7 +4,7 @@ using Meshtastic.Display;
 using Google.Protobuf;
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Handlers;
+namespace Meshtastic.Cli.Handlers;
 
 public class InfoCommandHandler : ICommandHandler<DeviceConnectionContext> 
 {

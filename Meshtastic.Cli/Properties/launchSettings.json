@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "info localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "info --host localhost"
+    },
+    "info com6": {
+      "commandName": "Project",
+      "commandLineArgs": "info --port COM6"
+    }
+  }
+}

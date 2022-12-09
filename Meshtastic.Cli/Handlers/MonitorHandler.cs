@@ -1,7 +1,7 @@
 using Meshtastic.Connections;
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Handlers;
+namespace Meshtastic.Cli.Handlers;
 
 public class MonitorHandler : ICommandHandler<DeviceConnectionContext>
 {

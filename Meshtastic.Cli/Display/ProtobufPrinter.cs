@@ -1,3 +1,5 @@
+using Meshtastic.Cli;
+using Meshtastic.Cli.Reflection;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Spectre.Console;
@@ -22,12 +24,14 @@ public static class ProtobufPrinter
 
     public static Tree PrintChannels(List<Channel> channels)
     {
-        var root = new Tree("Channels");
-        root.Style = new Style(Resources.MESHTASTIC_GREEN);
+        var root = new Tree("Channels")
+        {
+            Style = new Style(StyleResources.MESHTASTIC_GREEN)
+        };
 
         var table = new Table();
         table.Expand();
-        table.BorderColor(Resources.MESHTASTIC_GREEN);
+        table.BorderColor(StyleResources.MESHTASTIC_GREEN);
         table.RoundedBorder();
         table.AddColumns("#", "Name", "Role", "PSK", "Uplink", "Downlink");
 
@@ -49,12 +53,14 @@ public static class ProtobufPrinter
     
     private static Tree PrintMyNodeInfo(MyNodeInfo myNodeInfo)
     {
-        var root = new Tree("My Node Info");
-        root.Style = new Style(Resources.MESHTASTIC_GREEN);
+        var root = new Tree("My Node Info")
+        {
+            Style = new Style(StyleResources.MESHTASTIC_GREEN)
+        };
 
         var table = new Table();
         table.Expand();
-        table.BorderColor(Resources.MESHTASTIC_GREEN);
+        table.BorderColor(StyleResources.MESHTASTIC_GREEN);
         table.RoundedBorder();
         table.AddColumns("Setting", "Value");
         foreach (var property in myNodeInfo.GetProperties())
@@ -71,8 +77,10 @@ public static class ProtobufPrinter
 
     public static Tree PrintConfig(object config, string name)
     {
-        var root = new Tree(name);
-        root.Style = new Style(Resources.MESHTASTIC_GREEN);
+        var root = new Tree(name)
+        {
+            Style = new Style(StyleResources.MESHTASTIC_GREEN)
+        };
         var sectionValues = new List<string>();
         foreach (var sectionInfo in config.GetProperties())
         {
@@ -83,7 +91,7 @@ public static class ProtobufPrinter
             var sectionNode = root.AddNode(sectionInfo.Name);
             var table = new Table();
             table.Expand();
-            table.BorderColor(Resources.MESHTASTIC_GREEN);
+            table.BorderColor(StyleResources.MESHTASTIC_GREEN);
             table.RoundedBorder();
             table.AddColumns("Setting", "Value");
 

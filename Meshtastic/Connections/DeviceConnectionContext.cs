@@ -1,4 +1,3 @@
-
 namespace Meshtastic.Connections;
 
 public class DeviceConnectionContext 

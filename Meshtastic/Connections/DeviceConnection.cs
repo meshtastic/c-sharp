@@ -14,20 +14,20 @@ public abstract class DeviceConnection
 
     protected bool ParsePackets(byte item, Func<FromRadio, DeviceStateContainer, bool> isComplete) 
     {
-        int BufferIndex = Buffer.Count;
+        int bufferIndex = Buffer.Count;
         Buffer.Add(item);
-        if (BufferIndex == 0 && item != PacketFraming.PACKET_FRAME_START[0]) 
+        if (bufferIndex == 0 && item != PacketFraming.PACKET_FRAME_START[0]) 
             Buffer.Clear();
-        else if (BufferIndex == 1 && item != PacketFraming.PACKET_FRAME_START[1])
+        else if (bufferIndex == 1 && item != PacketFraming.PACKET_FRAME_START[1])
             Buffer.Clear();
-        else if (BufferIndex >= PacketFraming.PACKET_HEADER_LENGTH - 1) 
+        else if (bufferIndex >= PacketFraming.PACKET_HEADER_LENGTH - 1) 
         {
             PacketLength = (Buffer[2] << 8) + Buffer[3];
             // Packet fails size validation
-            if (BufferIndex == PacketFraming.PACKET_HEADER_LENGTH - 1 && PacketLength > Resources.MAX_TO_FROM_RADIO_LENGTH) 
+            if (bufferIndex == PacketFraming.PACKET_HEADER_LENGTH - 1 && PacketLength > Resources.MAX_TO_FROM_RADIO_LENGTH) 
                 Buffer.Clear();
 
-            if (Buffer.Count > 0 && (BufferIndex + 1) >= (PacketLength + PacketFraming.PACKET_HEADER_LENGTH))
+            if (Buffer.Count > 0 && (bufferIndex + 1) >= (PacketLength + PacketFraming.PACKET_HEADER_LENGTH))
             {
                 try 
                 {

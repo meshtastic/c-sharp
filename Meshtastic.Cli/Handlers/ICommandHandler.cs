@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Handlers;
+namespace Meshtastic.Cli.Handlers;
 
 public interface ICommandHandler<TArgument> 
 {

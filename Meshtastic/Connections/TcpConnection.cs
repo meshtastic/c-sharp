@@ -3,20 +3,17 @@ using System.Net.Sockets;
 using System.Text;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
+using System;
 
 namespace Meshtastic.Connections;
 
 public class TcpConnection : DeviceConnection, IDisposable
 {
-    private readonly string host;
-    private readonly int port;
     private readonly TcpClient client;
     private NetworkStream? networkStream;
 
     public TcpConnection(string host, int port = Resources.DEFAULT_TCP_PORT)
     {
-        this.host = host;
-        this.port = port;
         client = new TcpClient(host, port);
     }
 
@@ -28,7 +25,7 @@ public class TcpConnection : DeviceConnection, IDisposable
             while (networkStream.CanRead) 
             {
                 byte[] buffer = new byte[1024];
-                int length = await networkStream.ReadAsync(buffer, 0, buffer.Length);
+                int length = await networkStream.ReadAsync(buffer);
                 string data = Encoding.UTF8.GetString(buffer.AsSpan(0, length));
                 Console.WriteLine(data);
             }
@@ -44,20 +41,11 @@ public class TcpConnection : DeviceConnection, IDisposable
         try
         {
             var toRadio = PacketFraming.CreatePacket(data);
-            // await client.ConnectAsync(this.host, this.port);
             networkStream = client.GetStream();
-            // await networkStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE);
-            // await networkStream.WriteAsync(data);
-            // networkStream.Flush();
-            // await networkStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE, 0, PacketFraming.SERIAL_PREAMBLE.Length);
-            // await Task.Delay(100);
-            // await networkStream.WriteAsync(data, 0, data.Length);
-            // await networkStream.FlushAsync();
-            // Console.WriteLine("Reading");
-            // byte[] buffer = new byte[32];
-            // int length = await networkStream.ReadAsync(buffer, 0, buffer.Length);
-            // string text = Encoding.UTF8.GetString(buffer.AsSpan(0, length));
-            // Console.WriteLine(text);
+            await networkStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE);
+            await networkStream.FlushAsync();
+            await networkStream.WriteAsync(data);
+
             await ReadFromRadio(isComplete);
         }
         catch (IOException ex)
@@ -71,24 +59,14 @@ public class TcpConnection : DeviceConnection, IDisposable
         if (networkStream == null)
             throw new ApplicationException("Could not establish network stream");
 
-        while (networkStream.CanRead) 
+        while (networkStream.CanRead)
         {
-            byte[] buffer = new byte[32];
-            await networkStream.ReadAsync(buffer);
-            foreach (var item in buffer) 
-            {
-                string text = Encoding.UTF8.GetString(new [] { item }.AsSpan(0, 1));
-                Console.WriteLine(text);
-                if (ParsePackets(item, isComplete))
-                    return;
-            }
+            if (ParsePackets((byte)networkStream.ReadByte(), isComplete))
+                return;
+
             await Task.Delay(10);
         }
-        await Task.FromResult(0);
     }
 
-    public void Dispose()
-    {
-        client?.Dispose();
-    }
+    public void Dispose() => client?.Dispose();
 }
