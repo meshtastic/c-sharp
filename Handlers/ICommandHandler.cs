@@ -2,7 +2,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Handlers;
 
-public interface ICommandHandler<TArg> 
+public interface ICommandHandler<TArgument> 
 {
-    abstract static Task Handle(TArg arg, ILogger logger);
+    abstract static Task Handle(TArgument arg, ILogger logger);
 }

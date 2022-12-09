@@ -1,17 +1,28 @@
 using Meshtastic.Connections;
 using Meshtastic.Protobufs;
+using Meshtastic.Display;
 using Google.Protobuf;
 using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Handlers;
 
-public class InfoCommandHandler : ICommandHandler<string> 
+public class InfoCommandHandler : ICommandHandler<DeviceConnectionContext> 
 {
-    public static async Task Handle(string port, ILogger logger)
+    public static async Task Handle(DeviceConnectionContext context, ILogger logger)
     {
-        var serialConection = new SerialConnection(port);
-        var wantConfig = new ToRadio();
-        wantConfig.WantConfigId = (uint)Random.Shared.Next();
-        await serialConection.WriteToRadio(wantConfig.ToByteArray());
+        var connection = context.GetDeviceConnection();
+        var wantConfig = new ToRadio
+        {
+            WantConfigId = (uint)Random.Shared.Next()
+        };
+        await connection.WriteToRadio(wantConfig.ToByteArray(),
+            (packet, deviceStateContainer) => {
+                if (packet.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.ConfigCompleteId) 
+                {
+                    ProtobufPrinter.Print(deviceStateContainer);
+                    return true;
+                }
+                return false;
+            });
     }
 }
