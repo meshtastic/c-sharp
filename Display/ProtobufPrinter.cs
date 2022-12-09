@@ -13,8 +13,7 @@ public static class ProtobufPrinter
         grid.AddColumn();
         grid.AddColumn();
         grid.AddColumn();
-        grid.AddRow(
-            PrintMyNodeInfo(container.MyNodeInfo),
+        grid.AddRow(PrintMyNodeInfo(container.MyNodeInfo),
             PrintChannels(container.Channels),
             PrintConfig(container.LocalConfig, "Config"), 
             PrintConfig(container.LocalModuleConfig, "Module Config"));
