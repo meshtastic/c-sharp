@@ -1,7 +1,6 @@
 ﻿using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Handlers;
 
-
 var portOption = new Option<string>(name: "--port", description: "Target serial port for meshtastic device");
 var hostOption = new Option<string>(name: "--host", description: "Target host ip or name for meshtastic device");
 

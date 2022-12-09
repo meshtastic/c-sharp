@@ -10,7 +10,7 @@
     },
     "info com6": {
       "commandName": "Project",
-      "commandLineArgs": "info --port COM6"
+      "commandLineArgs": "info --port COM3"
     }
   }
 }

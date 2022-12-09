@@ -15,33 +15,43 @@ public static class ProtobufPrinter
         grid.AddColumn();
         grid.AddRow(PrintMyNodeInfo(container.MyNodeInfo),
             PrintChannels(container.Channels));
-        grid.AddRow(
-            PrintConfig(container.LocalConfig, "Config"), 
+        grid.AddRow(PrintConfig(container.LocalConfig, "Config"), 
             PrintConfig(container.LocalModuleConfig, "Module Config"));
         AnsiConsole.Write(grid);
+
+        AnsiConsole.Write(PrintNodeInfos(container.Nodes));
     }
 
-    public static Table PrintNodeInfos(List<NodeInfo> nodeInfos) 
+    public static Tree PrintNodeInfos(List<NodeInfo> nodeInfos) 
     {
+        var root = new Tree("Nodes")
+        {
+            Style = new Style(StyleResources.MESHTASTIC_GREEN)
+        };
         var table = new Table();
         table.Expand();
         table.BorderColor(StyleResources.MESHTASTIC_GREEN);
         table.RoundedBorder();
-        // table.AddColumns("#", "Name", "Role", "PSK", "Uplink", "Downlink");
+        table.AddColumns(nameof(NodeInfo.User.Id), nameof(NodeInfo.User.ShortName),
+            nameof(NodeInfo.User.LongName), nameof(NodeInfo.Position.LatitudeI), nameof(NodeInfo.Position.LongitudeI),
+            nameof(NodeInfo.DeviceMetrics.BatteryLevel), nameof(NodeInfo.DeviceMetrics.AirUtilTx), 
+            nameof(NodeInfo.DeviceMetrics.ChannelUtilization), nameof(NodeInfo.Snr), nameof(NodeInfo.LastHeard));
 
-        // foreach (var channel in channels) {
-        //     if (channel == null)
-        //         continue;
-      
-        //     table.AddRow(channel.Index.ToString(), 
-        //         channel.Settings.Name, 
-        //         channel.Role.ToString(), 
-        //         channel.Settings.Psk.IsEmpty ? String.Empty : BitConverter.ToString(channel.Settings.Psk.ToByteArray()), 
-        //         channel.Settings.UplinkEnabled.ToString(),
-        //         channel.Settings.DownlinkEnabled.ToString());
-        // }
-        
-        return table;
+        foreach (var node in nodeInfos)
+        {
+            table.AddRow(node.Num.ToString(),
+                node.User.ShortName,
+                node.User.LongName,
+                node.Position.LatitudeI.ToString(),
+                node.Position.LongitudeI.ToString(),
+                node.DeviceMetrics.BatteryLevel.ToString(),
+                node.DeviceMetrics.AirUtilTx.ToString(),
+                node.DeviceMetrics.ChannelUtilization.ToString(),
+                node.Snr.ToString(),
+                node.LastHeard.ToString());
+        }
+        root.AddNode(table);
+        return root;
     }
 
     public static Tree PrintChannels(List<Channel> channels)
