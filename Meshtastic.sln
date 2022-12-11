@@ -5,7 +5,14 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meshtastic.Cli", "Meshtastic.Cli\Meshtastic.Cli.csproj", "{85FD146B-D0B7-456A-90CF-C84D6A5B8E67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meshtastic", "Meshtastic\Meshtastic.csproj", "{5A78C769-A243-469B-BC18-0E0A4E4F87D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meshtastic", "Meshtastic\Meshtastic.csproj", "{5A78C769-A243-469B-BC18-0E0A4E4F87D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meshtastic.Test", "Meshtastic.Test\Meshtastic.Test.csproj", "{E48770C0-4390-4B24-B9CB-610E5E7EC68A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{020BC5F0-48A6-4870-8220-5A4B7A016094}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,10 @@ Global
 		{5A78C769-A243-469B-BC18-0E0A4E4F87D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A78C769-A243-469B-BC18-0E0A4E4F87D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A78C769-A243-469B-BC18-0E0A4E4F87D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E48770C0-4390-4B24-B9CB-610E5E7EC68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48770C0-4390-4B24-B9CB-610E5E7EC68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48770C0-4390-4B24-B9CB-610E5E7EC68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48770C0-4390-4B24-B9CB-610E5E7EC68A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

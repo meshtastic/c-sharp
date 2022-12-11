@@ -9,10 +9,11 @@ public abstract class DeviceConnection
     protected List<byte> Buffer { get; set; } = new List<byte>();
     protected int PacketLength { get; set; }
     public abstract Task Monitor();
-    public abstract Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, bool> isComplete);
-    public abstract Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, bool> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT);
+    public abstract Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete);
+    public abstract Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, 
+        int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT);
 
-    protected bool ParsePackets(byte item, Func<FromRadio, DeviceStateContainer, bool> isComplete) 
+    protected async Task<bool> ParsePackets(byte item, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete) 
     {
         int bufferIndex = Buffer.Count;
         Buffer.Add(item);
@@ -36,7 +37,7 @@ public abstract class DeviceConnection
                 
                     DeviceStateContainer.AddFromRadio(fromRadio);
 
-                    if (isComplete(fromRadio, DeviceStateContainer))
+                    if (await isComplete(fromRadio, DeviceStateContainer))
                         return true;
                 }
                 catch (Exception ex) {

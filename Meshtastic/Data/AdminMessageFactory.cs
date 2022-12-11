@@ -10,4 +10,16 @@ public class AdminMessageFactory
     {
         this.container = container;
     }
+
+    public AdminMessage CreateBeginEditSettingsMessage() =>
+        new()
+        {
+            BeginEditSettings = true
+        };
+
+    public AdminMessage CreateCommitEditSettingsMessage() =>
+        new()
+        {
+            CommitEditSettings = true
+        };
 }

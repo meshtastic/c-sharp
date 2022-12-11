@@ -35,7 +35,7 @@ public class SerialConnection : DeviceConnection
         }
     }
 
-    public override async Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, bool> isComplete)
+    public override async Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
         try
         {
@@ -54,7 +54,7 @@ public class SerialConnection : DeviceConnection
         }
     }
 
-    public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, bool> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
+    public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
         while (serialPort.IsOpen)
         {
@@ -62,9 +62,8 @@ public class SerialConnection : DeviceConnection
                 continue;
 
             var item = (byte)serialPort.ReadByte();
-            if (ParsePackets(item, isComplete))
+            if (await ParsePackets(item, isComplete))
                 return;
         }
-        await Task.FromResult(0);
     }
 }

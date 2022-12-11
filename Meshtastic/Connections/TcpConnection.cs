@@ -14,7 +14,11 @@ public class TcpConnection : DeviceConnection, IDisposable
 
     public TcpConnection(string host, int port = Resources.DEFAULT_TCP_PORT)
     {
-        client = new TcpClient(host, port);
+        client = new TcpClient(host, port)
+        {
+            ReceiveBufferSize = 8,
+            NoDelay = true
+        };
     }
 
     public override async Task Monitor() 
@@ -36,14 +40,13 @@ public class TcpConnection : DeviceConnection, IDisposable
         }
     }
 
-    public override async Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, bool> isComplete)
+    public override async Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
         try
         {
             var toRadio = PacketFraming.CreatePacket(data);
             networkStream = client.GetStream();
             await networkStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE);
-            await networkStream.FlushAsync();
             await networkStream.WriteAsync(data);
 
             await ReadFromRadio(isComplete);
@@ -54,15 +57,20 @@ public class TcpConnection : DeviceConnection, IDisposable
         }
     }
 
-    public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, bool> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
+    public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
         if (networkStream == null)
             throw new ApplicationException("Could not establish network stream");
 
+        var buffer = new byte[8];
         while (networkStream.CanRead)
         {
-            if (ParsePackets((byte)networkStream.ReadByte(), isComplete))
-                return;
+            await networkStream.ReadAsync(buffer);
+            foreach (var item in buffer)
+            {
+                if (await ParsePackets(item, isComplete))
+                    return;
+            }
 
             await Task.Delay(10);
         }

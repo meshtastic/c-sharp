@@ -1,4 +1,5 @@
 using Meshtastic.Cli;
+using Meshtastic.Cli.Parsers;
 using Meshtastic.Cli.Reflection;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
@@ -6,25 +7,32 @@ using Spectre.Console;
 
 namespace Meshtastic.Display;
 
-public static class ProtobufPrinter
+public class ProtobufPrinter
 {
-    public static void Print(this DeviceStateContainer container)
+    private readonly DeviceStateContainer container;
+
+    public ProtobufPrinter(DeviceStateContainer container)
+    {
+        this.container = container;
+    }
+
+    public void Print()
     {
         var grid = new Grid();
         grid.AddColumn();
         grid.AddColumn();
         grid.AddRow(PrintMyNodeInfo(container.MyNodeInfo),
             PrintChannels(container.Channels));
-        grid.AddRow(PrintConfig(container.LocalConfig, "Config"), 
-            PrintConfig(container.LocalModuleConfig, "Module Config"));
+        grid.AddRow(PrintConfig(container.LocalConfig, "[bold]Config[/]"), 
+            PrintConfig(container.LocalModuleConfig, "[bold]Module Config[/]"));
         AnsiConsole.Write(grid);
 
         AnsiConsole.Write(PrintNodeInfos(container.Nodes));
     }
 
-    public static Tree PrintNodeInfos(List<NodeInfo> nodeInfos) 
+    public Tree PrintNodeInfos(List<NodeInfo> nodeInfos) 
     {
-        var root = new Tree("Nodes")
+        var root = new Tree("[bold]Nodes[/]")
         {
             Style = new Style(StyleResources.MESHTASTIC_GREEN)
         };
@@ -42,11 +50,11 @@ public static class ProtobufPrinter
             table.AddRow(node.Num.ToString(),
                 node.User.ShortName,
                 node.User.LongName,
-                node.Position.LatitudeI.ToString(),
-                node.Position.LongitudeI.ToString(),
-                node.DeviceMetrics.BatteryLevel.ToString(),
-                node.DeviceMetrics.AirUtilTx.ToString(),
-                node.DeviceMetrics.ChannelUtilization.ToString(),
+                node.Position?.LatitudeI.ToString() ?? String.Empty,
+                node.Position?.LongitudeI.ToString() ?? String.Empty,
+                node.DeviceMetrics?.BatteryLevel.ToString() ?? String.Empty,
+                node.DeviceMetrics?.AirUtilTx.ToString() ?? String.Empty,
+                node.DeviceMetrics?.ChannelUtilization.ToString() ?? String.Empty,
                 node.Snr.ToString(),
                 node.LastHeard.ToString());
         }
@@ -54,9 +62,9 @@ public static class ProtobufPrinter
         return root;
     }
 
-    public static Tree PrintChannels(List<Channel> channels)
+    public Tree PrintChannels(List<Channel> channels)
     {
-        var root = new Tree("Channels")
+        var root = new Tree("[bold]Channels[/]")
         {
             Style = new Style(StyleResources.MESHTASTIC_GREEN)
         };
@@ -83,9 +91,9 @@ public static class ProtobufPrinter
         return root;
     }
     
-    private static Tree PrintMyNodeInfo(MyNodeInfo myNodeInfo)
+    private Tree PrintMyNodeInfo(MyNodeInfo myNodeInfo)
     {
-        var root = new Tree("My Node Info")
+        var root = new Tree("[bold]My Node Info[/]")
         {
             Style = new Style(StyleResources.MESHTASTIC_GREEN)
         };
@@ -107,15 +115,15 @@ public static class ProtobufPrinter
         return root;
     }
 
-    public static Tree PrintConfig(object config, string name)
+    public Tree PrintConfig(object config, string name)
     {
-        var root = new Tree(name)
+        var root = new Tree($"[bold]{name}[/]")
         {
             Style = new Style(StyleResources.MESHTASTIC_GREEN)
         };
         var sectionValues = new List<string>();
         foreach (var sectionInfo in config.GetProperties())
-        {
+        { 
             var section = sectionInfo.GetValue(config);
             if (section == null)
                 continue;
@@ -134,5 +142,25 @@ public static class ProtobufPrinter
             sectionNode.AddNode(table);
         }
         return root;
+    }
+
+    public void PrintSettings(IEnumerable<ParsedSetting> parsedSettings)
+    { 
+        var table = new Table();
+        table.Expand();
+        table.BorderColor(StyleResources.MESHTASTIC_GREEN);
+        table.RoundedBorder();
+        table.AddColumns("Setting", "Value");
+
+        foreach (var setting in parsedSettings)
+        {
+            var instance = setting.Section.ReflectedType?.Name == nameof(this.container.LocalConfig) ?
+                setting.Section.GetValue(this.container.LocalConfig) :
+                setting.Section.GetValue(this.container.LocalModuleConfig);
+            var value = setting.Setting.GetValue(instance);
+
+            table.AddRow($"{setting.Section.Name}.{setting.Setting.Name}", value?.ToString() ?? String.Empty);
+        }
+        AnsiConsole.Write(table);
     }
 }
