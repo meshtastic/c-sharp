@@ -8,6 +8,10 @@
       "commandName": "Project",
       "commandLineArgs": "info --host localhost"
     },
+    "monitor": {
+      "commandName": "Project",
+      "commandLineArgs": "monitor --port COM3"
+    },
     "info": {
       "commandName": "Project",
       "commandLineArgs": "info --port COM3"
@@ -15,6 +19,18 @@
     "get --setting mqtt.enabled display.screenOnSecs": {
       "commandName": "Project",
       "commandLineArgs": "get --port COM3 --setting mqtt.enabled display.screenOnSecs"
+    },
+    "get --setting mqtt.enabled display.screenOnSecs localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "get --host localhost --setting mqtt.enabled display.screenOnSecs"
+    },
+    "set --setting mqtt.host=mqtt.myhost.org display.screenOnSecs=222": {
+      "commandName": "Project",
+      "commandLineArgs": "set --port COM3 --setting mqtt.address=mqtt.myhost.org display.screenOnSecs=222"
+    },
+    "set --setting mqtt.host=mqtt.myhost.org display.screenOnSecs=222 localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "set --host localhost --setting mqtt.address=mqtt.myhost.org display.screenOnSecs=222"
     }
   }
 }

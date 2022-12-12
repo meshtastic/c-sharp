@@ -1,9 +1,6 @@
-using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using Meshtastic.Data;
-using Meshtastic.Protobufs;
-using System;
 
 namespace Meshtastic.Connections;
 
@@ -16,7 +13,7 @@ public class TcpConnection : DeviceConnection, IDisposable
     {
         client = new TcpClient(host, port)
         {
-            ReceiveBufferSize = 8,
+            ReceiveBufferSize = 64,
             NoDelay = true
         };
     }
@@ -28,10 +25,10 @@ public class TcpConnection : DeviceConnection, IDisposable
             var networkStream = client.GetStream();
             while (networkStream.CanRead) 
             {
-                byte[] buffer = new byte[1024];
+                byte[] buffer = new byte[64];
                 int length = await networkStream.ReadAsync(buffer);
                 string data = Encoding.UTF8.GetString(buffer.AsSpan(0, length));
-                Console.WriteLine(data);
+                //Console.WriteLine(data);
             }
         }
         catch (IOException ex)
@@ -40,15 +37,15 @@ public class TcpConnection : DeviceConnection, IDisposable
         }
     }
 
-    public override async Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task WriteToRadio(byte[] data, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete)
     {
         try
         {
+            await Task.Delay(100);
             var toRadio = PacketFraming.CreatePacket(data);
             networkStream = client.GetStream();
-            await networkStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE);
-            await networkStream.WriteAsync(data);
-
+            await networkStream.WriteAsync(toRadio);
+            await Task.Delay(100);
             await ReadFromRadio(isComplete);
         }
         catch (IOException ex)
@@ -57,12 +54,13 @@ public class TcpConnection : DeviceConnection, IDisposable
         }
     }
 
-    public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
+    public override async Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
         if (networkStream == null)
             throw new ApplicationException("Could not establish network stream");
 
-        var buffer = new byte[8];
+        await networkStream.FlushAsync();
+        var buffer = new byte[64];
         while (networkStream.CanRead)
         {
             await networkStream.ReadAsync(buffer);

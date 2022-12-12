@@ -1,5 +1,7 @@
 ﻿using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Handlers;
+using Meshtastic.Cli.Reflection;
+using Meshtastic.Protobufs;
 
 var portOption = new Option<string>(name: "--port", description: "Target serial port for meshtastic device");
 var hostOption = new Option<string>(name: "--host", description: "Target host ip or name for meshtastic device");
@@ -9,9 +11,9 @@ var settingOption = new Option<IEnumerable<string>>(name: "--setting", descripti
     AllowMultipleArgumentsPerToken = true,
 };
 settingOption.AddAlias("-s");
-//settingOption.AddCompletions((ctx) => 
-//    typeof(LocalConfig).GetSettingsOptions()
-//    .Concat(typeof(LocalModuleConfig).GetSettingsOptions()));
+settingOption.AddCompletions((ctx) =>
+    new LocalConfig().GetSettingsOptions()
+    .Concat(new LocalModuleConfig().GetSettingsOptions()));
 
 // meshtastic get --pref mqtt.enable=true --pref mqtt.host=mqtt.meshtastic.org
 // meshtastic set --pref mqtt.enable=true --pref mqtt.host=mqtt.meshtastic.org
@@ -40,11 +42,12 @@ getCommand.SetHandler(getCommandHandler.Handle,
 getCommand.AddOption(settingOption);
 
 var setCommand = new Command("set", "Save one or more settings onto the connected device");
-var setCommandHandler = new GetCommandHandler();
+var setCommandHandler = new SetCommandHandler();
 setCommand.SetHandler(setCommandHandler.Handle,
     settingOption,
     new ConnectionBinder(portOption, hostOption),
     new LoggingBinder());
+setCommand.AddOption(settingOption);
 
 var rootCommand = new RootCommand("Meshtastic CLI");
 rootCommand.AddGlobalOption(portOption);
@@ -54,12 +57,4 @@ rootCommand.AddCommand(infoCommand);
 rootCommand.AddCommand(getCommand);
 rootCommand.AddCommand(setCommand);
 
-return await AnsiConsole.Status()
-    .StartAsync("Connecting...", async ctx =>
-    {
-        ctx.Status("Connecting...");
-        ctx.Spinner(Spinner.Known.Dots);
-        ctx.SpinnerStyle(new Style(Meshtastic.Cli.StyleResources.MESHTASTIC_GREEN));
-
-        return await rootCommand.InvokeAsync(args);
-    });
+return await rootCommand.InvokeAsync(args);

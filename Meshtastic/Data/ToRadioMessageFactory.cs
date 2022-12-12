@@ -11,6 +11,12 @@ public class ToRadioMessageFactory
     public ToRadio CreateWantConfigMessage() =>
         new()
         {
-            WantConfigId = (uint)Random.Shared.Next()
+            WantConfigId = (uint)Random.Shared.Next(),
+        };
+
+    public ToRadio CreateMeshPacketMessage(MeshPacket packet) =>
+        new()
+        {
+            Packet = packet
         };
 }

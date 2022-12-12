@@ -1,6 +1,6 @@
 using System.IO.Ports;
+using System.Text;
 using Meshtastic.Data;
-using Meshtastic.Protobufs;
 
 namespace Meshtastic.Connections;
 
@@ -13,6 +13,7 @@ public class SerialConnection : DeviceConnection
         {
             Handshake = Handshake.None
         };
+        //serialPort.Encoding = Encoding.UTF8;
     }
 
     public override async Task Monitor() 
@@ -35,15 +36,16 @@ public class SerialConnection : DeviceConnection
         }
     }
 
-    public override async Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task WriteToRadio(byte[] data, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete)
     {
         try
         {
+            await Task.Delay(500);
             var toRadio = PacketFraming.CreatePacket(data);
-            serialPort.Open();
+            if (!serialPort.IsOpen)
+                serialPort.Open();
             serialPort.Write(PacketFraming.SERIAL_PREAMBLE, 0, PacketFraming.SERIAL_PREAMBLE.Length);
             serialPort.DiscardInBuffer();
-            await Task.Delay(1000);
             serialPort.Write(toRadio, 0, toRadio.Length);
             await Task.Delay(100);
             await ReadFromRadio(isComplete);
@@ -54,7 +56,7 @@ public class SerialConnection : DeviceConnection
         }
     }
 
-    public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
+    public override async Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
         while (serialPort.IsOpen)
         {

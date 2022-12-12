@@ -1,4 +1,5 @@
 ﻿using Meshtastic.Cli.Parsers;
+using Meshtastic.Connections;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 
@@ -6,6 +7,21 @@ namespace Meshtastic.Cli.Handlers;
 
 public class DeviceCommandHandler
 {
+    protected DeviceConnection? connection;
+    protected ToRadioMessageFactory ToRadioMessageFactory = new();
+
+    protected async Task OnConnection(DeviceConnectionContext context, Func<Task> operation)
+    {
+        await AnsiConsole.Status()
+        .StartAsync("Connecting...", async ctx =>
+        {
+            ctx.Status($"Connecting {context.DisplayName}...");
+            ctx.Spinner(Spinner.Known.Dots);
+            ctx.SpinnerStyle(new Style(StyleResources.MESHTASTIC_GREEN));
+            await operation(); 
+        });
+    }
+
     protected static (SettingParserResult? result, bool isValid) ParseSettingOptions(IEnumerable<string> settings, bool isGetOnly)
     {
         var parser = new SettingParser(settings);
@@ -22,17 +38,27 @@ public class DeviceCommandHandler
 
         return (parserResult, true);
     }
-
-    public async Task<bool> DefaultIsCompleteAsync(FromRadio packet, DeviceStateContainer container)
+    public static Task<bool> AdminMessageResponseReceived(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        if (packet.PayloadVariantCase != FromRadio.PayloadVariantOneofCase.ConfigCompleteId)
+        if (packet.ParsedMessage.adminMessage != null)
+        {
+            return Task.FromResult(true);
+        }
+        return Task.FromResult(false);
+    }
+
+    public static Task<bool> AlwaysComplete(FromDeviceMessage packet, DeviceStateContainer container) => Task.FromResult(true);
+
+    public async Task<bool> DefaultIsCompleteAsync(FromDeviceMessage packet, DeviceStateContainer container)
+    {
+        if (packet.ParsedMessage.fromRadio?.PayloadVariantCase != FromRadio.PayloadVariantOneofCase.ConfigCompleteId)
             return false;
 
         await OnCompleted(packet, container);
         return true;
     }
 
-    public virtual async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
+    public virtual async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
         await Task.CompletedTask;
     }

@@ -37,7 +37,7 @@ public class SettingParser
         return new SettingParserResult(parsedSettings, validationIssues);
     }
 
-    private static void TryParse(List<ParsedSetting> parsedSettings, List<string> validationIssues, string setting, string? value)
+    private void TryParse(List<ParsedSetting> parsedSettings, List<string> validationIssues, string setting, string? value)
     {
         var segments = setting.Split('.', StringSplitOptions.TrimEntries);
         if (segments.Length != 2)
@@ -53,9 +53,26 @@ public class SettingParser
                 if (sectionSetting == null)
                     validationIssues.Add($"Could not find setting `{segments[1]}` under {section.Name}");
                 else
-                    parsedSettings.Add(new ParsedSetting(section, sectionSetting, value));
+                {
+                    var parsedValue = value == null ? null : ParseValue(sectionSetting, value!);
+                    parsedSettings.Add(new ParsedSetting(section, sectionSetting, parsedValue));
+                }
             }
         }
+    }
+
+    private static object ParseValue(PropertyInfo setting, string value)
+    {
+        if (setting.PropertyType == typeof(uint))
+            return uint.Parse(value);
+        else if (setting.PropertyType == typeof(float))
+            return float.Parse(value);
+        else if (setting.PropertyType == typeof(bool))
+            return bool.Parse(value);
+        else if (setting.PropertyType == typeof(string))
+            return value;
+        else 
+            return Enum.Parse(setting.DeclaringType!, value);
     }
 
     private static PropertyInfo? SearchConfigSections(string section)
@@ -65,4 +82,4 @@ public class SettingParser
 }
 
 public record SettingParserResult(IEnumerable<ParsedSetting> ParsedSettings, IEnumerable<string> ValidationIssues);
-public record ParsedSetting(PropertyInfo Section, PropertyInfo Setting, string? Value);
+public record ParsedSetting(PropertyInfo Section, PropertyInfo Setting, object? Value);

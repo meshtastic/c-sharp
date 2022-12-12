@@ -1,5 +1,4 @@
 using Meshtastic.Data;
-using Meshtastic.Protobufs;
 
 namespace Meshtastic.Connections;
 
@@ -9,11 +8,11 @@ public abstract class DeviceConnection
     protected List<byte> Buffer { get; set; } = new List<byte>();
     protected int PacketLength { get; set; }
     public abstract Task Monitor();
-    public abstract Task WriteToRadio(byte[] data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete);
-    public abstract Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, 
+    public abstract Task WriteToRadio(byte[] data, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete);
+    public abstract Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete, 
         int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT);
 
-    protected async Task<bool> ParsePackets(byte item, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete) 
+    protected async Task<bool> ParsePackets(byte item, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete) 
     {
         int bufferIndex = Buffer.Count;
         Buffer.Add(item);
@@ -33,15 +32,21 @@ public abstract class DeviceConnection
                 try 
                 {
                     var payload = Buffer.Skip(PacketFraming.PACKET_HEADER_LENGTH).ToArray();
-                    var fromRadio = FromRadio.Parser.ParseFrom(payload);
-                
-                    DeviceStateContainer.AddFromRadio(fromRadio);
+                    var message = new FromDeviceMessage(payload);
 
-                    if (await isComplete(fromRadio, DeviceStateContainer))
+                    if (message.ParsedMessage.fromRadio != null)
+                        DeviceStateContainer.AddFromRadio(message.ParsedMessage.fromRadio!);
+                    //else
+                    //    Console.WriteLine(payload);
+
+                    if (await isComplete(message, DeviceStateContainer))
+                    {
+                        Buffer.Clear();
                         return true;
+                    }
                 }
                 catch (Exception ex) {
-                    Console.WriteLine(ex);
+                    //Console.WriteLine(ex);
                 }
                 Buffer.Clear();
             }

@@ -63,4 +63,10 @@ public class DeviceStateContainer
         if (fromRadio.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.NodeInfo)
             this.Nodes.Add(fromRadio.NodeInfo);
     }
+
+    public uint GetAdminChannelIndex()
+    {
+        return (uint)(this.Channels.FirstOrDefault(p => p.Role == Channel.Types.Role.Secondary && 
+            string.Equals(p.Settings.Name, "admin", StringComparison.OrdinalIgnoreCase))?.Index ?? 0);
+    }
 }
