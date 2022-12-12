@@ -133,6 +133,7 @@ public class ProtobufPrinter
             table.Expand();
             table.BorderColor(StyleResources.MESHTASTIC_GREEN);
             table.RoundedBorder();
+            table.HideHeaders();
             table.AddColumns("Setting", "Value");
 
             section!.GetProperties().ToList().ForEach(prop =>
