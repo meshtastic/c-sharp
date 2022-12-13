@@ -37,18 +37,18 @@ public class SettingParserTests
         result.ValidationIssues.Should().BeEmpty();
     }
 
-    [Test]
-    public void ParseSettings_Should_ReturnResultWithPropertyInfo_GivenIntToImplicitBoolean_Set()
-    {
-        var parser = new SettingParser(new[] { "mqtt.enabled=1" });
-        var result = parser.ParseSettings(isGetOnly: false);
+    //[Test]
+    //public void ParseSettings_Should_ReturnResultWithPropertyInfo_GivenIntToImplicitBoolean_Set()
+    //{
+    //    var parser = new SettingParser(new[] { "mqtt.enabled=1" });
+    //    var result = parser.ParseSettings(isGetOnly: false);
 
-        result.ParsedSettings.Should().AllSatisfy(p => p.Setting.Name.Should().BeEquivalentTo("Enabled"));
-        result.ParsedSettings.Should().AllSatisfy(p => p.Section.Name.Should().BeEquivalentTo("Mqtt"));
-        result.ParsedSettings.Should().AllSatisfy(p => p.Value.Should().Be(true));
+    //    result.ParsedSettings.Should().AllSatisfy(p => p.Setting.Name.Should().BeEquivalentTo("Enabled"));
+    //    result.ParsedSettings.Should().AllSatisfy(p => p.Section.Name.Should().BeEquivalentTo("Mqtt"));
+    //    result.ParsedSettings.Should().AllSatisfy(p => p.Value.Should().Be(true));
 
-        result.ValidationIssues.Should().BeEmpty();
-    }
+    //    result.ValidationIssues.Should().BeEmpty();
+    //}
 
     [Test]
     public void ParseSettings_Should_ReturnResultWithPropertyInfo_GivenEnumValue_Set()

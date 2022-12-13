@@ -9,8 +9,6 @@ using System.ComponentModel;
 using System.Net.Sockets;
 using Spectre.Console;
 using Google.Protobuf.WellKnownTypes;
-using static Meshtastic.Protobufs.ModuleConfig.Types;
-using static Meshtastic.Protobufs.Config.Types;
 
 namespace Meshtastic.Cli.Handlers;
 
