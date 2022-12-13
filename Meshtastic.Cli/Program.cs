@@ -15,11 +15,10 @@ settingOption.AddCompletions((ctx) =>
     new LocalConfig().GetSettingsOptions()
     .Concat(new LocalModuleConfig().GetSettingsOptions()));
 
-// meshtastic get --pref mqtt.enable=true --pref mqtt.host=mqtt.meshtastic.org
-// meshtastic set --pref mqtt.enable=true --pref mqtt.host=mqtt.meshtastic.org
-// meshtastic set -p mqtt.enable=true -p mqtt.host=mqtt.meshtastic.org
+// meshtastic get --setting mqtt.enabled display.screenOnSecs
+// meshtastic set --setting mqtt.enabled=true display.screenOnSecs=240
 
-//ping-text "Payload" --interval 2
+// meshtastic set --channel 
 
 var monitorCommand = new Command("monitor", "Serial monitor for meshtastic devices");
 var monitorCommandHandler = new MonitorCommandHandler();

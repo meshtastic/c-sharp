@@ -72,7 +72,7 @@ public class SettingParser
         else if (setting.PropertyType == typeof(string))
             return value;
         else 
-            return Enum.Parse(setting.DeclaringType!, value);
+            return Enum.Parse(setting.PropertyType!, value, ignoreCase: true);
     }
 
     private static PropertyInfo? SearchConfigSections(string section)

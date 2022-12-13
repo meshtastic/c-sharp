@@ -18,7 +18,8 @@ public class DeviceCommandHandler
             ctx.Status($"Connecting {context.DisplayName}...");
             ctx.Spinner(Spinner.Known.Dots);
             ctx.SpinnerStyle(new Style(StyleResources.MESHTASTIC_GREEN));
-            await operation(); 
+
+            await operation();
         });
     }
 
@@ -38,6 +39,7 @@ public class DeviceCommandHandler
 
         return (parserResult, true);
     }
+
     public static Task<bool> AdminMessageResponseReceived(FromDeviceMessage packet, DeviceStateContainer container)
     {
         if (packet.ParsedMessage.adminMessage != null)
@@ -47,7 +49,11 @@ public class DeviceCommandHandler
         return Task.FromResult(false);
     }
 
-    public static Task<bool> AlwaysComplete(FromDeviceMessage packet, DeviceStateContainer container) => Task.FromResult(true);
+    public static async Task<bool> AlwaysComplete(FromDeviceMessage packet, DeviceStateContainer container)
+    {
+        await Task.Delay(100);
+        return true;
+    }
 
     public async Task<bool> DefaultIsCompleteAsync(FromDeviceMessage packet, DeviceStateContainer container)
     {

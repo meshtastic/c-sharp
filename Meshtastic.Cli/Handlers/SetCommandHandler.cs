@@ -23,6 +23,7 @@ public class SetCommandHandler : DeviceCommandHandler
         var (result, isValid) = ParseSettingOptions(settings, isGetOnly: false);
         if (!isValid)
             return;
+
         parsedSettings = result!.ParsedSettings;
 
         await OnConnection(context, async () =>

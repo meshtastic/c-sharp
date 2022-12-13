@@ -3,7 +3,6 @@ using Meshtastic.Cli.Parsers;
 using Meshtastic.Cli.Reflection;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
-using Spectre.Console;
 
 namespace Meshtastic.Display;
 

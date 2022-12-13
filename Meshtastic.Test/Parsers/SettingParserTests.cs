@@ -1,4 +1,6 @@
 using Meshtastic.Cli.Parsers;
+using Meshtastic.Protobufs;
+using static Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types;
 
 namespace Meshtastic.Test.Parsers;
 
@@ -30,11 +32,36 @@ public class SettingParserTests
 
         result.ParsedSettings.Should().AllSatisfy(p => p.Setting.Name.Should().BeEquivalentTo("Enabled"));
         result.ParsedSettings.Should().AllSatisfy(p => p.Section.Name.Should().BeEquivalentTo("Mqtt"));
-        result.ParsedSettings.Should().AllSatisfy(p => p.Value.Should().Be("true"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Value.Should().Be(true));
 
         result.ValidationIssues.Should().BeEmpty();
     }
 
+    [Test]
+    public void ParseSettings_Should_ReturnResultWithPropertyInfo_GivenIntToImplicitBoolean_Set()
+    {
+        var parser = new SettingParser(new[] { "mqtt.enabled=1" });
+        var result = parser.ParseSettings(isGetOnly: false);
+
+        result.ParsedSettings.Should().AllSatisfy(p => p.Setting.Name.Should().BeEquivalentTo("Enabled"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Section.Name.Should().BeEquivalentTo("Mqtt"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Value.Should().Be(true));
+
+        result.ValidationIssues.Should().BeEmpty();
+    }
+
+    [Test]
+    public void ParseSettings_Should_ReturnResultWithPropertyInfo_GivenEnumValue_Set()
+    {
+        var parser = new SettingParser(new[] { "serial.baud=Baud19200" });
+        var result = parser.ParseSettings(isGetOnly: false);
+
+        result.ParsedSettings.Should().AllSatisfy(p => p.Setting.Name.Should().BeEquivalentTo("Baud"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Section.Name.Should().BeEquivalentTo("Serial"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Value.Should().Be(Serial_Baud.Baud19200));
+
+        result.ValidationIssues.Should().BeEmpty();
+    }
 
     [Test]
     public void ParseSettings_Should_ReturnResultWithPropertyInfo_GivenValidConfigArgs_Get()

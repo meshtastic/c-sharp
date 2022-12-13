@@ -10,7 +10,7 @@
     },
     "monitor": {
       "commandName": "Project",
-      "commandLineArgs": "monitor --port COM3"
+      "commandLineArgs": "info --port COM3"
     },
     "info": {
       "commandName": "Project",
@@ -30,7 +30,7 @@
     },
     "set --setting mqtt.host=mqtt.myhost.org display.screenOnSecs=222 localhost": {
       "commandName": "Project",
-      "commandLineArgs": "set --host localhost --setting mqtt.address=mqtt.myhost.org display.screenOnSecs=222"
+      "commandLineArgs": "set --setting mqtt.address=mqtt.myhost.org display.screenOnSecs=222 --host localhost"
     }
   }
 }
