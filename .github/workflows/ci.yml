@@ -29,21 +29,21 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Release OSX
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet publish --runtime osx-x64 --configuration Release --self-contained true
+      run: dotnet publish --runtime osx-x64 --configuration Release
     - name: Show contents
       run: ls -lR
     - name: Release Linux
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet publish --runtime linux-x64 --configuration Release --self-contained true
+      run: dotnet publish --runtime linux-x64 --configuration Release
     - name: Show contents
       run: ls -lR
     - name: Release Linux ARM64
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet publish --runtime linux-arm64 --configuration Release --self-contained true
+      run: dotnet publish --runtime linux-arm64 --configuration Release
     - name: Show contents
       run: ls -lR
     - name: Release Window
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet publish --runtime win-x64 --configuration Release --self-contained true
+      run: dotnet publish --runtime win-x64 --configuration Release
     - name: Show contents
       run: ls -lR
