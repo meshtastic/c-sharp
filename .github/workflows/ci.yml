@@ -21,29 +21,20 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
+        source-url: https://api.nuget.org/v3/index.json
+      env:
+          NUGET_AUTH_TOKEN: ${{secrets.NUGET_TOKEN}}
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Release OSX
+    - name: Build solution and generate NuGet package
+      run: | 
+          cd ./Meshtastic.Cli
+          dotnet pack -c Release -o out
+    - name: Push package to nuget
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet publish --runtime osx-x64 --configuration Release
-    - name: Show contents
-      run: ls -lR
-    - name: Release Linux
-      if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet publish --runtime linux-x64 --configuration Release
-    - name: Show contents
-      run: ls -lR
-    - name: Release Linux ARM64
-      if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet publish --runtime linux-arm64 --configuration Release
-    - name: Show contents
-      run: ls -lR
-    - name: Release Window
-      if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet publish --runtime win-x64 --configuration Release
-    - name: Show contents
-      run: ls -lR
+      run: dotnet nuget push ./Meshtastic.Cli/out/*.nupkg --skip-duplicate
+
