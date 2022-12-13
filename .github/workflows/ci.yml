@@ -22,8 +22,7 @@ jobs:
       with:
         dotnet-version: 7.0.x
         source-url: https://api.nuget.org/v3/index.json
-      env:
-          NUGET_AUTH_TOKEN: ${{secrets.NUGET_TOKEN}}
+
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
@@ -36,5 +35,5 @@ jobs:
           dotnet pack -c Release -o out
     - name: Push package to nuget
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet nuget push ./Meshtastic.Cli/out/*.nupkg --skip-duplicate
+      run: dotnet nuget push ./Meshtastic.Cli/out/*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}}
 
