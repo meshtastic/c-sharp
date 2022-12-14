@@ -39,4 +39,5 @@ jobs:
           
     - name: Push package to nuget
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet nuget push ./**/*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}}
+      run: dotnet nuget push ./**/*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
+
