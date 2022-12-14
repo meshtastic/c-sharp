@@ -32,8 +32,9 @@ jobs:
       run: dotnet test --no-build --verbosity normal
       
     - name: Build solution and generate NuGet package
+      if: ${{ github.event_name == 'workflow_dispatch' }}
       run: | 
-          cd ./Meshtastic.Cli
+          dotnet build -c Release
           dotnet pack -c Release
           
     - name: Push package to nuget
