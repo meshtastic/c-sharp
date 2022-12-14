@@ -12,8 +12,9 @@
     <RepositoryUrl>htt</RepositoryUrl>
     <Company>Meshtastic LLC</Company>
     <Title>Meshtastic CLI</Title>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
+    <DebugType>embedded</DebugType>
+    <PublishSingleFile>true</PublishSingleFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
