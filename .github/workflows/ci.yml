@@ -24,14 +24,18 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Build
       run: dotnet build --no-restore
+      
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
     - name: Build solution and generate NuGet package
       run: | 
           cd ./Meshtastic.Cli
-          dotnet pack -c Release -o out
+          dotnet pack -c Release
+          
     - name: Push package to nuget
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: dotnet nuget push ./Meshtastic.Cli/out/*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}}
+      run: dotnet nuget push ./**/*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}}
