@@ -13,14 +13,14 @@ public class DeviceCommandHandler
     protected async Task OnConnection(DeviceConnectionContext context, Func<Task> operation)
     {
         await AnsiConsole.Status()
-        .StartAsync("Connecting...", async ctx =>
-        {
-            ctx.Status($"Connecting {context.DisplayName}...");
-            ctx.Spinner(Spinner.Known.Dots);
-            ctx.SpinnerStyle(new Style(StyleResources.MESHTASTIC_GREEN));
+            .StartAsync("Connecting...", async ctx =>
+            {
+                ctx.Status($"Connecting {context.DisplayName}...");
+                ctx.Spinner(Spinner.Known.Dots);
+                ctx.SpinnerStyle(new Style(StyleResources.MESHTASTIC_GREEN));
 
-            await operation();
-        });
+                await operation();
+            });
     }
 
     protected static (SettingParserResult? result, bool isValid) ParseSettingOptions(IEnumerable<string> settings, bool isGetOnly)

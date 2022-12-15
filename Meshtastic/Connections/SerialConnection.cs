@@ -1,5 +1,4 @@
 using System.IO.Ports;
-using System.Text;
 using Meshtastic.Data;
 
 namespace Meshtastic.Connections;
@@ -15,6 +14,8 @@ public class SerialConnection : DeviceConnection
         };
         //serialPort.Encoding = Encoding.UTF8;
     }
+
+    public static string[] ListPorts() => SerialPort.GetPortNames();
 
     public override async Task Monitor() 
     {

@@ -19,6 +19,10 @@ settingOption.AddCompletions((ctx) =>
 // meshtastic set --setting mqtt.enabled=true display.screenOnSecs=240
 
 // meshtastic set --channel 
+var listCommand = new Command("list", "List available serial devices");
+var listCommandHandler = new ListCommandHandler();
+listCommand.SetHandler(listCommandHandler.Handle,
+    new LoggingBinder());
 
 var monitorCommand = new Command("monitor", "Serial monitor for meshtastic devices");
 var monitorCommandHandler = new MonitorCommandHandler();
@@ -51,6 +55,7 @@ setCommand.AddOption(settingOption);
 var rootCommand = new RootCommand("Meshtastic CLI");
 rootCommand.AddGlobalOption(portOption);
 rootCommand.AddGlobalOption(hostOption);
+rootCommand.AddCommand(listCommand);
 rootCommand.AddCommand(monitorCommand);
 rootCommand.AddCommand(infoCommand);
 rootCommand.AddCommand(getCommand);
