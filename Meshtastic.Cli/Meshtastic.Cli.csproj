@@ -14,7 +14,6 @@
     <Title>Meshtastic CLI</Title>
     <IncludeSymbols>True</IncludeSymbols>
     <DebugType>embedded</DebugType>
-    <PublishSingleFile>true</PublishSingleFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
