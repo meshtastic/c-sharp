@@ -75,16 +75,16 @@ jobs:
       run: dotnet nuget push ./**/Meshtastic.Cli.*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
 
     - name: Publish self-contained win-x64
-      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r win-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
+      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r win-x64 -o win-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
     
     - name: Publish self-contained osx-x64
-      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r osx-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
+      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r osx-x64 -o osx-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
 
     - name: Publish self-contained linux-x64
-      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
+      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-x64 -o linux-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
 
     - name: Publish self-contained linux-arm64
-      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-arm64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
+      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-arm64 -o linux-arm64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
 
     # For diagnostics
     - name: Show artifacts
@@ -107,7 +107,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ github.token }}
-        file: ./Meshtastic.Cli/bin/Debug/net7.0/publish/runtimes/linux-arm64/*
+        file: ./linux-arm64/*
         tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
