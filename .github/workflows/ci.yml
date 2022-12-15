@@ -103,23 +103,45 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
-    - name: Add linux-arm64 bins to release
-      uses: svenstaro/upload-release-action@v2
+    - name: Add win-x64 bins to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
       with:
-        repo_token: ${{ github.token }}
-        file: ./linux-arm64/*
-        tag: ${{ github.ref }}
-        overwrite: true
-        file_glob: true
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./win-x64/*
+        asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
+        asset_content_type: application/zip
 
-      # uses: actions/upload-release-asset@v1
-      # env:
-      #   GITHUB_TOKEN: ${{ github.token }}
-      # with:
-      #   upload_url: ${{ steps.create_release.outputs.upload_url }}
-      #   asset_path: ./Meshtastic.Cli/bin/Debug/net7.0/publish/runtimes/linux-arm64
-      #   asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
-      #   asset_content_type: application/zip
+    - name: Add osx-x64 bins to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./osx-x64/*
+        asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
+        asset_content_type: application/zip
+
+    - name: Add linux-arm64 bins to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./linux-arm64/*
+        asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
+        asset_content_type: application/zip
+
+    - name: Add linux-x64 bins to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./linux-x64/*
+        asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
+        asset_content_type: application/zip
 
     - name: Bump version.properties
       run: >-
