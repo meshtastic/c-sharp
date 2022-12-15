@@ -51,8 +51,8 @@ jobs:
       run: dotnet restore
     - name: Build solution and generate NuGet package
       run: | 
-        dotnet build -c Release /p:AssemblyVersion=${{ steps.version.outputs.version }} /p:Version=${{ steps.version.outputs.version }}
-        dotnet pack -c Release /p:AssemblyVersion=${{ steps.version.outputs.version }} /p:Version=${{ steps.version.outputs.version }}
+        dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
+        dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} -p:PackageVersion=${{ steps.version.outputs.version }}
           
     - name: Publish package to nuget
       run: dotnet nuget push ./**/Meshtastic.Cli.*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
@@ -67,8 +67,8 @@ jobs:
       run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-x64 --self-contained true
 
     - name: Publish self-contained linux-arm64
-      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-arm64 --self-contained true /p:AssemblyVersion=${{ steps.version.outputs.version }} /p:Version=${{ steps.version.outputs.version }}
-    #dotnet publish .\ProjectFolder\Project.csproj -r win-x64 /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true --self-contained true -o ReleaseFolderName -c Release -product-version
+      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-arm64 --self-contained true -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
+    #dotnet publish .\ProjectFolder\Project.csproj -r win-x64 -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true --self-contained true -o ReleaseFolderName -c Release -product-version
     - name: Create release
       uses: actions/create-release@v1
       id: create_release
