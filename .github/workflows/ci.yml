@@ -51,8 +51,8 @@ jobs:
       run: dotnet restore
     - name: Build solution and generate NuGet package
       run: | 
-        dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} -p:NugetVersion=${{ steps.version.outputs.version }}
-        dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} -p:NugetVersion=${{ steps.version.outputs.version }}
+        dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} -p:NuGetVersion=${{ steps.version.outputs.version }}
+        dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} -p:NuGetVersion=${{ steps.version.outputs.version }}
           
     - name: Publish package to nuget
       run: dotnet nuget push ./**/Meshtastic.Cli.*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
