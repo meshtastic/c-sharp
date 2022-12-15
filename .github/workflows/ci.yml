@@ -79,6 +79,9 @@ jobs:
     
     - name: Publish self-contained osx-x64
       run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r osx-x64 -o osx-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
+      
+    - name: Publish self-contained osx-arm64
+      run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r osx-arm64 -o osx-arm64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
 
     - name: Publish self-contained linux-x64
       run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-x64 -o linux-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
@@ -90,6 +93,7 @@ jobs:
       run: |
         zip -r win-x64 win-x64
         zip -r osx-x64 osx-x64
+        zip -r osx-arm64 osx-arm64
         zip -r linux-x64 linux-x64
         zip -r linux-arm64 linux-arm64
 
@@ -118,6 +122,16 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./win-x64.zip
         asset_name: Meshtastic.Cli-win-x64-${{ steps.version.outputs.version }}.zip
+        asset_content_type: application/zip
+    
+    - name: Add osx-arm64 bins to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./osx-arm64.zip
+        asset_name: Meshtastic.Cli-osx-arm64-${{ steps.version.outputs.version }}.zip
         asset_content_type: application/zip
 
     - name: Add osx-x64 bins to release
