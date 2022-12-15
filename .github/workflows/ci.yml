@@ -87,11 +87,11 @@ jobs:
       run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-arm64 -o linux-arm64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
 
     - name: Zip bins
-        run: |
-          zip -r win-x64 win-x64
-          zip -r osx-x64 osx-x64
-          zip -r linux-x64 linux-x64
-          zip -r linux-arm64 linux-arm64
+      run: |
+        zip -r win-x64 win-x64
+        zip -r osx-x64 osx-x64
+        zip -r linux-x64 linux-x64
+        zip -r linux-arm64 linux-arm64
 
     # For diagnostics
     - name: Show artifacts
