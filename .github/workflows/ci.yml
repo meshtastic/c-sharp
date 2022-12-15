@@ -86,6 +86,13 @@ jobs:
     - name: Publish self-contained linux-arm64
       run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r linux-arm64 -o linux-arm64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
 
+    - name: Zip bins
+        run: |
+          zip -r win-x64 win-x64
+          zip -r osx-x64 osx-x64
+          zip -r linux-x64 linux-x64
+          zip -r linux-arm64 linux-arm64
+
     # For diagnostics
     - name: Show artifacts
       run: ls -lR
@@ -109,7 +116,7 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./win-x64/*
+        asset_path: ./win-x64.zip
         asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
         asset_content_type: application/zip
 
@@ -119,7 +126,7 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./osx-x64/*
+        asset_path: ./osx-x64.zip
         asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
         asset_content_type: application/zip
 
@@ -129,7 +136,7 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./linux-arm64/*
+        asset_path: ./linux-arm64.zip
         asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
         asset_content_type: application/zip
 
@@ -139,7 +146,7 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./linux-x64/*
+        asset_path: ./linux-x64.zip
         asset_name: Meshtastic.Cli-${{ steps.version.outputs.version }}.zip
         asset_content_type: application/zip
 
