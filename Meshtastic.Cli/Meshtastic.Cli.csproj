@@ -15,7 +15,6 @@
     <IncludeSymbols>True</IncludeSymbols>
     <DebugType>embedded</DebugType>
     <PublishSingleFile>true</PublishSingleFile>
-    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
