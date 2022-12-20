@@ -10,27 +10,59 @@
     },
     "monitor": {
       "commandName": "Project",
-      "commandLineArgs": "info --port COM3"
+      "commandLineArgs": "info --port COM4"
     },
     "info": {
       "commandName": "Project",
-      "commandLineArgs": "info --port COM3"
+      "commandLineArgs": "info --port COM4"
     },
     "get --setting mqtt.enabled display.screenOnSecs": {
       "commandName": "Project",
-      "commandLineArgs": "get --port COM3 --setting mqtt.enabled display.screenOnSecs"
+      "commandLineArgs": "get --port COM4 --setting mqtt.enabled display.screenOnSecs"
     },
     "get --setting mqtt.enabled display.screenOnSecs localhost": {
       "commandName": "Project",
       "commandLineArgs": "get --host localhost --setting mqtt.enabled display.screenOnSecs"
     },
-    "set --setting mqtt.host=mqtt.myhost.org display.screenOnSecs=222": {
+    "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069": {
       "commandName": "Project",
-      "commandLineArgs": "set --port COM3 --setting mqtt.address=mqtt.myhost.org display.screenOnSecs=222"
+      "commandLineArgs": "set --port COM4 --setting mqtt.address=me.myhost.org display.screenOnSecs=42069"
     },
     "set --setting mqtt.host=mqtt.myhost.org display.screenOnSecs=222 localhost": {
       "commandName": "Project",
-      "commandLineArgs": "set --setting mqtt.address=mqtt.myhost.org display.screenOnSecs=222 --host localhost"
+      "commandLineArgs": "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069 --host localhost"
+    },
+    "channel save localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "channel save --index 1 --name Test --role Primary --psk 12345 --uplink-enabled true --host localhost"
+    },
+    "channel save": {
+      "commandName": "Project",
+      "commandLineArgs": "channel save --index 1 --name Test --role Primary --psk 12345 --uplink-enabled true --port COM4"
+    },
+    "url get": {
+      "commandName": "Project",
+      "commandLineArgs": "url get"
+    },
+    "url get localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "url get --host localhost"
+    },
+    "url set": {
+      "commandName": "Project",
+      "commandLineArgs": "url set https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe --port COM4"
+    },
+    "url set localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "url set https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe --host localhost"
+    },
+    "reboot": {
+      "commandName": "Project",
+      "commandLineArgs": "reboot --port COM4"
+    },
+    "reboot localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "reboot --host localhost"
     }
   }
 }

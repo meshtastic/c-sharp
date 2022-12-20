@@ -1,8 +1,10 @@
+using Google.Protobuf;
 using Meshtastic.Cli;
 using Meshtastic.Cli.Parsers;
 using Meshtastic.Cli.Reflection;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
+using QRCoder;
 
 namespace Meshtastic.Display;
 
@@ -162,5 +164,28 @@ public class ProtobufPrinter
             table.AddRow($"{setting.Section.Name}.{setting.Setting.Name}", value?.ToString() ?? String.Empty);
         }
         AnsiConsole.Write(table);
+    }
+
+    public void PrintUrl()
+    {
+        var channelSet = new ChannelSet()
+        {
+            LoraConfig = container.LocalConfig.Lora
+        };
+        container.Channels.ForEach(channel =>
+        {
+            channelSet.Settings.Add(channel.Settings);
+        });
+        var serialized = channelSet.ToByteArray();
+        var base64 = Convert.ToBase64String(serialized);
+        base64 = base64.Replace("-", String.Empty).Replace('+', '-').Replace('/', '_');
+        var url = $"https://meshtastic.org/e/#{base64}";
+        AnsiConsole.MarkupLine(url);
+
+        QRCodeGenerator qrGenerator = new();
+        QRCodeData data = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q);
+        AsciiQRCode qrCode = new(data);
+        string qrCodeAsAsciiArt = qrCode.GetGraphic(1);
+        AnsiConsole.Write(qrCodeAsAsciiArt);
     }
 }

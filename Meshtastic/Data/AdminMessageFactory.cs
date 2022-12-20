@@ -21,14 +21,13 @@ public class AdminMessageFactory
             Channel = container.GetAdminChannelIndex(),
             WantAck = false,
             To = to ?? container.MyNodeInfo.MyNodeNum,
-            From = from ?? container.MyNodeInfo.MyNodeNum,
             Id = (uint)Random.Shared.Next(),
             Decoded = new Protobufs.Data()
             {
                 Dest = dest ?? container.MyNodeInfo.MyNodeNum,
                 Portnum = PortNum.AdminApp,
                 Payload = message.ToByteString(),
-                WantResponse = true
+                WantResponse = true,
             },
         };
     }
@@ -43,6 +42,12 @@ public class AdminMessageFactory
         GetNewMeshPacket(new AdminMessage()
         {
             CommitEditSettings = true
+        });
+
+    public MeshPacket CreateRebootMessage() =>
+        GetNewMeshPacket(new AdminMessage()
+        {
+            RebootSeconds = 10
         });
 
     public MeshPacket CreateSetConfigMessage(object instance)
@@ -76,5 +81,10 @@ public class AdminMessageFactory
             _ => throw new ArgumentException("Could not determine ModuleConfig type", nameof(instance)),
         };
         return GetNewMeshPacket(new AdminMessage() { SetModuleConfig = moduleConfig! });
-    }      
+    }
+
+    public MeshPacket CreateSetChannelMessage(Channel channel)
+    {
+        return GetNewMeshPacket(new AdminMessage() { SetChannel = channel });
+    }
 }

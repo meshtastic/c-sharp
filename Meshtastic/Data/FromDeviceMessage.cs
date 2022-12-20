@@ -1,6 +1,6 @@
 ﻿using Google.Protobuf;
 using Meshtastic.Protobufs;
-using System.Net.Sockets;
+using System.Text;
 
 namespace Meshtastic.Data
 {
@@ -13,6 +13,7 @@ namespace Meshtastic.Data
         {
             try
             {
+                //Console.WriteLine($"Read: {Encoding.ASCII.GetString(bytes)}");
                 fromRadio = FromRadio.Parser.ParseFrom(bytes);
                 if (fromRadio?.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.None)
                 {
@@ -23,9 +24,11 @@ namespace Meshtastic.Data
             }
             catch (InvalidProtocolBufferException) 
             {
+                //fromRadio = null;
+                //adminMessage = new AdminMessage() { };
                 //TODO: Log
             }
-            
+
             if (adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.None)
                 adminMessage = null;
         }

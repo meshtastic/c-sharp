@@ -1,9 +1,10 @@
-﻿using Meshtastic.Cli.Parsers;
+﻿using Google.Protobuf;
+using Meshtastic.Cli.Parsers;
 using Meshtastic.Connections;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 
-namespace Meshtastic.Cli.Handlers;
+namespace Meshtastic.Cli.Commands;
 
 public class DeviceCommandHandler
 {
@@ -12,15 +13,8 @@ public class DeviceCommandHandler
 
     protected async Task OnConnection(DeviceConnectionContext context, Func<Task> operation)
     {
-        await AnsiConsole.Status()
-            .StartAsync("Connecting...", async ctx =>
-            {
-                ctx.Status($"Connecting {context.DisplayName}...");
-                ctx.Spinner(Spinner.Known.Dots);
-                ctx.SpinnerStyle(new Style(StyleResources.MESHTASTIC_GREEN));
-
-                await operation();
-            });
+        AnsiConsole.MarkupLine($"Connecting {context.DisplayName}...");
+        await operation();
     }
 
     protected static (SettingParserResult? result, bool isValid) ParseSettingOptions(IEnumerable<string> settings, bool isGetOnly)
@@ -68,4 +62,21 @@ public class DeviceCommandHandler
     {
         await Task.CompletedTask;
     }
+
+    protected async Task BeginEditSettings(AdminMessageFactory adminMessageFactory)
+    {
+        var message = adminMessageFactory.CreateBeginEditSettingsMessage();
+        await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message).ToByteArray(),
+            AlwaysComplete);
+        AnsiConsole.MarkupLine($"[olive]Starting edit transaction for settings...[/]");
+    }
+
+    protected async Task CommitEditSettings(AdminMessageFactory adminMessageFactory)
+    {
+        var message = adminMessageFactory.CreateCommitEditSettingsMessage();
+        await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message).ToByteArray(),
+            AlwaysComplete);
+        AnsiConsole.MarkupLine($"[green]Commit edit transaction for settings...[/]");
+    }
+
 }

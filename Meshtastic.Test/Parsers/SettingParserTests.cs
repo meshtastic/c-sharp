@@ -1,4 +1,6 @@
+using Google.Protobuf.Reflection;
 using Meshtastic.Cli.Parsers;
+using Meshtastic.Cli.Reflection;
 using Meshtastic.Protobufs;
 using static Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types;
 
@@ -135,5 +137,8 @@ public class SettingParserTests
 
         result.ParsedSettings.Should().BeEmpty();
         result.ValidationIssues.Should().HaveCount(1);
+
+        var thing = LocalConfig.Descriptor.FindFieldByName("display");
+        var field = thing.MessageType.FindFieldByName("screen_on_secs");
     }
 }

@@ -1,12 +1,25 @@
-using Meshtastic.Connections;
 using Meshtastic.Display;
 using Google.Protobuf;
 using Microsoft.Extensions.Logging;
 using Meshtastic.Data;
 using Meshtastic.Cli.Parsers;
+using Meshtastic.Cli.Binders;
 
-namespace Meshtastic.Cli.Handlers;
+namespace Meshtastic.Cli.Commands;
 
+public class GetCommand : Command
+{
+    public GetCommand(string name, string description, Option<string> port, Option<string> host, Option<IEnumerable<string>> settings) : 
+        base(name, description)
+    {
+        var getCommandHandler = new GetCommandHandler();
+        this.SetHandler(getCommandHandler.Handle,
+            settings,
+            new ConnectionBinder(port, host),
+            new LoggingBinder());
+        this.AddOption(settings);
+    }
+}
 public class GetCommandHandler : DeviceCommandHandler
 {
     private IEnumerable<ParsedSetting>? parsedSettings;
@@ -20,7 +33,7 @@ public class GetCommandHandler : DeviceCommandHandler
 
         await OnConnection(context, async () =>
         {
-            var connection = context.GetDeviceConnection();
+            connection = context.GetDeviceConnection();
             var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
 
             await connection.WriteToRadio(wantConfig.ToByteArray(), DefaultIsCompleteAsync);
