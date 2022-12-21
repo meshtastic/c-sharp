@@ -28,7 +28,6 @@ public class TcpConnection : DeviceConnection, IDisposable
                 byte[] buffer = new byte[64];
                 int length = await networkStream.ReadAsync(buffer);
                 string data = Encoding.UTF8.GetString(buffer.AsSpan(0, length));
-                //Console.WriteLine(data);
             }
         }
         catch (IOException ex)
