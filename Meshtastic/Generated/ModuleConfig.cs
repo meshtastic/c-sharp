@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ModuleConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNtb2R1bGVfY29uZmlnLnByb3RvIsAUCgxNb2R1bGVDb25maWcSKAoEbXF0",
+            "ChNtb2R1bGVfY29uZmlnLnByb3RvIvIVCgxNb2R1bGVDb25maWcSKAoEbXF0",
             "dBgBIAEoCzIYLk1vZHVsZUNvbmZpZy5NUVRUQ29uZmlnSAASLAoGc2VyaWFs",
             "GAIgASgLMhouTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZ0gAEkkKFWV4dGVy",
             "bmFsX25vdGlmaWNhdGlvbhgDIAEoCzIoLk1vZHVsZUNvbmZpZy5FeHRlcm5h",
@@ -57,42 +57,46 @@ namespace Meshtastic.Protobufs {
             "MBALEg8KC0JBVURfMjMwNDAwEAwSDwoLQkFVRF80NjA4MDAQDRIPCgtCQVVE",
             "XzU3NjAwMBAOEg8KC0JBVURfOTIxNjAwEA8iSAoLU2VyaWFsX01vZGUSCwoH",
             "REVGQVVMVBAAEgoKBlNJTVBMRRABEgkKBVBST1RPEAISCwoHVEVYVE1TRxAD",
-            "EggKBE5NRUEQBBqcAQoaRXh0ZXJuYWxOb3RpZmljYXRpb25Db25maWcSDwoH",
+            "EggKBE5NRUEQBBrOAgoaRXh0ZXJuYWxOb3RpZmljYXRpb25Db25maWcSDwoH",
             "ZW5hYmxlZBgBIAEoCBIRCglvdXRwdXRfbXMYAiABKA0SDgoGb3V0cHV0GAMg",
-            "ASgNEg4KBmFjdGl2ZRgEIAEoCBIVCg1hbGVydF9tZXNzYWdlGAUgASgIEhIK",
-            "CmFsZXJ0X2JlbGwYBiABKAgSDwoHdXNlX3B3bRgHIAEoCBqEAQoSU3RvcmVG",
-            "b3J3YXJkQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSEQoJaGVhcnRiZWF0GAIg",
-            "ASgIEg8KB3JlY29yZHMYAyABKA0SGgoSaGlzdG9yeV9yZXR1cm5fbWF4GAQg",
-            "ASgNEh0KFWhpc3RvcnlfcmV0dXJuX3dpbmRvdxgFIAEoDRpACg9SYW5nZVRl",
-            "c3RDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIOCgZzZW5kZXIYAiABKA0SDAoE",
-            "c2F2ZRgDIAEoCBrLAQoPVGVsZW1ldHJ5Q29uZmlnEh4KFmRldmljZV91cGRh",
-            "dGVfaW50ZXJ2YWwYASABKA0SIwobZW52aXJvbm1lbnRfdXBkYXRlX2ludGVy",
-            "dmFsGAIgASgNEicKH2Vudmlyb25tZW50X21lYXN1cmVtZW50X2VuYWJsZWQY",
-            "AyABKAgSIgoaZW52aXJvbm1lbnRfc2NyZWVuX2VuYWJsZWQYBCABKAgSJgoe",
-            "ZW52aXJvbm1lbnRfZGlzcGxheV9mYWhyZW5oZWl0GAUgASgIGrUEChNDYW5u",
-            "ZWRNZXNzYWdlQ29uZmlnEhcKD3JvdGFyeTFfZW5hYmxlZBgBIAEoCBIZChFp",
-            "bnB1dGJyb2tlcl9waW5fYRgCIAEoDRIZChFpbnB1dGJyb2tlcl9waW5fYhgD",
-            "IAEoDRIdChVpbnB1dGJyb2tlcl9waW5fcHJlc3MYBCABKA0STgoUaW5wdXRi",
-            "cm9rZXJfZXZlbnRfY3cYBSABKA4yMC5Nb2R1bGVDb25maWcuQ2FubmVkTWVz",
-            "c2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJPChVpbnB1dGJyb2tlcl9ldmVu",
-            "dF9jY3cYBiABKA4yMC5Nb2R1bGVDb25maWcuQ2FubmVkTWVzc2FnZUNvbmZp",
-            "Zy5JbnB1dEV2ZW50Q2hhchJRChdpbnB1dGJyb2tlcl9ldmVudF9wcmVzcxgH",
-            "IAEoDjIwLk1vZHVsZUNvbmZpZy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0",
-            "RXZlbnRDaGFyEhcKD3VwZG93bjFfZW5hYmxlZBgIIAEoCBIPCgdlbmFibGVk",
-            "GAkgASgIEhoKEmFsbG93X2lucHV0X3NvdXJjZRgKIAEoCRIRCglzZW5kX2Jl",
-            "bGwYCyABKAgiYwoOSW5wdXRFdmVudENoYXISCAoETk9ORRAAEgYKAlVQEBES",
-            "CAoERE9XThASEggKBExFRlQQExIJCgVSSUdIVBAUEgoKBlNFTEVDVBAKEggK",
-            "BEJBQ0sQGxIKCgZDQU5DRUwQGEIRCg9wYXlsb2FkX3ZhcmlhbnRCZgoTY29t",
-            "LmdlZWtzdmlsbGUubWVzaEISTW9kdWxlQ29uZmlnUHJvdG9zSANaImdpdGh1",
-            "Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlBy",
-            "b3RvYnVmc2IGcHJvdG8z"));
+            "ASgNEhQKDG91dHB1dF92aWJyYRgIIAEoDRIVCg1vdXRwdXRfYnV6emVyGAkg",
+            "ASgNEg4KBmFjdGl2ZRgEIAEoCBIVCg1hbGVydF9tZXNzYWdlGAUgASgIEhsK",
+            "E2FsZXJ0X21lc3NhZ2VfdmlicmEYCiABKAgSHAoUYWxlcnRfbWVzc2FnZV9i",
+            "dXp6ZXIYCyABKAgSEgoKYWxlcnRfYmVsbBgGIAEoCBIYChBhbGVydF9iZWxs",
+            "X3ZpYnJhGAwgASgIEhkKEWFsZXJ0X2JlbGxfYnV6emVyGA0gASgIEg8KB3Vz",
+            "ZV9wd20YByABKAgSEwoLbmFnX3RpbWVvdXQYDiABKA0ahAEKElN0b3JlRm9y",
+            "d2FyZENvbmZpZxIPCgdlbmFibGVkGAEgASgIEhEKCWhlYXJ0YmVhdBgCIAEo",
+            "CBIPCgdyZWNvcmRzGAMgASgNEhoKEmhpc3RvcnlfcmV0dXJuX21heBgEIAEo",
+            "DRIdChVoaXN0b3J5X3JldHVybl93aW5kb3cYBSABKA0aQAoPUmFuZ2VUZXN0",
+            "Q29uZmlnEg8KB2VuYWJsZWQYASABKAgSDgoGc2VuZGVyGAIgASgNEgwKBHNh",
+            "dmUYAyABKAgaywEKD1RlbGVtZXRyeUNvbmZpZxIeChZkZXZpY2VfdXBkYXRl",
+            "X2ludGVydmFsGAEgASgNEiMKG2Vudmlyb25tZW50X3VwZGF0ZV9pbnRlcnZh",
+            "bBgCIAEoDRInCh9lbnZpcm9ubWVudF9tZWFzdXJlbWVudF9lbmFibGVkGAMg",
+            "ASgIEiIKGmVudmlyb25tZW50X3NjcmVlbl9lbmFibGVkGAQgASgIEiYKHmVu",
+            "dmlyb25tZW50X2Rpc3BsYXlfZmFocmVuaGVpdBgFIAEoCBq1BAoTQ2FubmVk",
+            "TWVzc2FnZUNvbmZpZxIXCg9yb3RhcnkxX2VuYWJsZWQYASABKAgSGQoRaW5w",
+            "dXRicm9rZXJfcGluX2EYAiABKA0SGQoRaW5wdXRicm9rZXJfcGluX2IYAyAB",
+            "KA0SHQoVaW5wdXRicm9rZXJfcGluX3ByZXNzGAQgASgNEk4KFGlucHV0YnJv",
+            "a2VyX2V2ZW50X2N3GAUgASgOMjAuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3Nh",
+            "Z2VDb25maWcuSW5wdXRFdmVudENoYXISTwoVaW5wdXRicm9rZXJfZXZlbnRf",
+            "Y2N3GAYgASgOMjAuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcu",
+            "SW5wdXRFdmVudENoYXISUQoXaW5wdXRicm9rZXJfZXZlbnRfcHJlc3MYByAB",
+            "KA4yMC5Nb2R1bGVDb25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2",
+            "ZW50Q2hhchIXCg91cGRvd24xX2VuYWJsZWQYCCABKAgSDwoHZW5hYmxlZBgJ",
+            "IAEoCBIaChJhbGxvd19pbnB1dF9zb3VyY2UYCiABKAkSEQoJc2VuZF9iZWxs",
+            "GAsgASgIImMKDklucHV0RXZlbnRDaGFyEggKBE5PTkUQABIGCgJVUBAREggK",
+            "BERPV04QEhIICgRMRUZUEBMSCQoFUklHSFQQFBIKCgZTRUxFQ1QQChIICgRC",
+            "QUNLEBsSCgoGQ0FOQ0VMEBhCEQoPcGF5bG9hZF92YXJpYW50QmYKE2NvbS5n",
+            "ZWVrc3ZpbGxlLm1lc2hCEk1vZHVsZUNvbmZpZ1Byb3Rvc0gDWiJnaXRodWIu",
+            "Y29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90",
+            "b2J1ZnNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig), global::Meshtastic.Protobufs.ModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig.Parser, new[]{ "Enabled", "Address", "Username", "Password", "EncryptionEnabled", "JsonEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Parser, new[]{ "Codec2Enabled", "PttPin", "Bitrate", "I2SWs", "I2SSd", "I2SDin", "I2SSck" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Types.Audio_Baud) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Parser, new[]{ "Enabled", "Echo", "Rxd", "Txd", "Baud", "Timeout", "Mode" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types.Serial_Baud), typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types.Serial_Mode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig.Parser, new[]{ "Enabled", "OutputMs", "Output", "Active", "AlertMessage", "AlertBell", "UsePwm" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig.Parser, new[]{ "Enabled", "OutputMs", "Output", "OutputVibra", "OutputBuzzer", "Active", "AlertMessage", "AlertMessageVibra", "AlertMessageBuzzer", "AlertBell", "AlertBellVibra", "AlertBellBuzzer", "UsePwm", "NagTimeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig.Parser, new[]{ "Enabled", "Heartbeat", "Records", "HistoryReturnMax", "HistoryReturnWindow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig.Parser, new[]{ "Enabled", "Sender", "Save" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit" }, null, null, null, null),
@@ -2151,10 +2155,17 @@ namespace Meshtastic.Protobufs {
           enabled_ = other.enabled_;
           outputMs_ = other.outputMs_;
           output_ = other.output_;
+          outputVibra_ = other.outputVibra_;
+          outputBuzzer_ = other.outputBuzzer_;
           active_ = other.active_;
           alertMessage_ = other.alertMessage_;
+          alertMessageVibra_ = other.alertMessageVibra_;
+          alertMessageBuzzer_ = other.alertMessageBuzzer_;
           alertBell_ = other.alertBell_;
+          alertBellVibra_ = other.alertBellVibra_;
+          alertBellBuzzer_ = other.alertBellBuzzer_;
           usePwm_ = other.usePwm_;
+          nagTimeout_ = other.nagTimeout_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2169,7 +2180,7 @@ namespace Meshtastic.Protobufs {
         private bool enabled_;
         /// <summary>
         ///
-        /// Preferences for the ExternalNotificationModule
+        /// Enable the ExternalNotificationModule
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2185,7 +2196,8 @@ namespace Meshtastic.Protobufs {
         private uint outputMs_;
         /// <summary>
         ///
-        /// TODO: REPLACE
+        /// When using in On/Off mode, keep the output on for this many
+        /// milliseconds. Default 1000ms (1 second).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2201,7 +2213,9 @@ namespace Meshtastic.Protobufs {
         private uint output_;
         /// <summary>
         ///
-        /// TODO: REPLACE
+        /// Define the output pin GPIO setting Defaults to
+        /// EXT_NOTIFY_OUT if set for the board.
+        /// In standalone devices this pin should drive the LED to match the UI.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2212,12 +2226,47 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "output_vibra" field.</summary>
+        public const int OutputVibraFieldNumber = 8;
+        private uint outputVibra_;
+        /// <summary>
+        ///
+        /// Optional: Define a secondary output pin for a vibra motor
+        /// This is used in standalone devices to match the UI.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint OutputVibra {
+          get { return outputVibra_; }
+          set {
+            outputVibra_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "output_buzzer" field.</summary>
+        public const int OutputBuzzerFieldNumber = 9;
+        private uint outputBuzzer_;
+        /// <summary>
+        ///
+        /// Optional: Define a tertiary output pin for an active buzzer
+        /// This is used in standalone devices to to match the UI.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint OutputBuzzer {
+          get { return outputBuzzer_; }
+          set {
+            outputBuzzer_ = value;
+          }
+        }
+
         /// <summary>Field number for the "active" field.</summary>
         public const int ActiveFieldNumber = 4;
         private bool active_;
         /// <summary>
         ///
-        /// TODO: REPLACE
+        /// IF this is true, the 'output' Pin will be pulled active high, false
+        /// means active low.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2233,7 +2282,7 @@ namespace Meshtastic.Protobufs {
         private bool alertMessage_;
         /// <summary>
         ///
-        /// TODO: REPLACE
+        /// True: Alert when a text message arrives (output)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2244,12 +2293,44 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "alert_message_vibra" field.</summary>
+        public const int AlertMessageVibraFieldNumber = 10;
+        private bool alertMessageVibra_;
+        /// <summary>
+        ///
+        /// True: Alert when a text message arrives (output_vibra)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AlertMessageVibra {
+          get { return alertMessageVibra_; }
+          set {
+            alertMessageVibra_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "alert_message_buzzer" field.</summary>
+        public const int AlertMessageBuzzerFieldNumber = 11;
+        private bool alertMessageBuzzer_;
+        /// <summary>
+        ///
+        /// True: Alert when a text message arrives (output_buzzer)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AlertMessageBuzzer {
+          get { return alertMessageBuzzer_; }
+          set {
+            alertMessageBuzzer_ = value;
+          }
+        }
+
         /// <summary>Field number for the "alert_bell" field.</summary>
         public const int AlertBellFieldNumber = 6;
         private bool alertBell_;
         /// <summary>
         ///
-        /// TODO: REPLACE
+        /// True: Alert when the bell character is received (output)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2260,12 +2341,46 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "alert_bell_vibra" field.</summary>
+        public const int AlertBellVibraFieldNumber = 12;
+        private bool alertBellVibra_;
+        /// <summary>
+        ///
+        /// True: Alert when the bell character is received (output_vibra)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AlertBellVibra {
+          get { return alertBellVibra_; }
+          set {
+            alertBellVibra_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "alert_bell_buzzer" field.</summary>
+        public const int AlertBellBuzzerFieldNumber = 13;
+        private bool alertBellBuzzer_;
+        /// <summary>
+        ///
+        /// True: Alert when the bell character is received (output_buzzer)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AlertBellBuzzer {
+          get { return alertBellBuzzer_; }
+          set {
+            alertBellBuzzer_ = value;
+          }
+        }
+
         /// <summary>Field number for the "use_pwm" field.</summary>
         public const int UsePwmFieldNumber = 7;
         private bool usePwm_;
         /// <summary>
         ///
-        /// TODO: REPLACE
+        /// use a PWM output instead of a simple on/off output. This will ignore
+        /// the 'output', 'output_ms' and 'active' settings and use the
+        /// device.buzzer_gpio instead.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2273,6 +2388,24 @@ namespace Meshtastic.Protobufs {
           get { return usePwm_; }
           set {
             usePwm_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "nag_timeout" field.</summary>
+        public const int NagTimeoutFieldNumber = 14;
+        private uint nagTimeout_;
+        /// <summary>
+        ///
+        /// The notification will toggle with 'output_ms' for this time of seconds.
+        /// Default is 0 which means don't repeat at all. 60 would mean blink
+        /// and/or beep for 60 seconds
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint NagTimeout {
+          get { return nagTimeout_; }
+          set {
+            nagTimeout_ = value;
           }
         }
 
@@ -2294,10 +2427,17 @@ namespace Meshtastic.Protobufs {
           if (Enabled != other.Enabled) return false;
           if (OutputMs != other.OutputMs) return false;
           if (Output != other.Output) return false;
+          if (OutputVibra != other.OutputVibra) return false;
+          if (OutputBuzzer != other.OutputBuzzer) return false;
           if (Active != other.Active) return false;
           if (AlertMessage != other.AlertMessage) return false;
+          if (AlertMessageVibra != other.AlertMessageVibra) return false;
+          if (AlertMessageBuzzer != other.AlertMessageBuzzer) return false;
           if (AlertBell != other.AlertBell) return false;
+          if (AlertBellVibra != other.AlertBellVibra) return false;
+          if (AlertBellBuzzer != other.AlertBellBuzzer) return false;
           if (UsePwm != other.UsePwm) return false;
+          if (NagTimeout != other.NagTimeout) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2308,10 +2448,17 @@ namespace Meshtastic.Protobufs {
           if (Enabled != false) hash ^= Enabled.GetHashCode();
           if (OutputMs != 0) hash ^= OutputMs.GetHashCode();
           if (Output != 0) hash ^= Output.GetHashCode();
+          if (OutputVibra != 0) hash ^= OutputVibra.GetHashCode();
+          if (OutputBuzzer != 0) hash ^= OutputBuzzer.GetHashCode();
           if (Active != false) hash ^= Active.GetHashCode();
           if (AlertMessage != false) hash ^= AlertMessage.GetHashCode();
+          if (AlertMessageVibra != false) hash ^= AlertMessageVibra.GetHashCode();
+          if (AlertMessageBuzzer != false) hash ^= AlertMessageBuzzer.GetHashCode();
           if (AlertBell != false) hash ^= AlertBell.GetHashCode();
+          if (AlertBellVibra != false) hash ^= AlertBellVibra.GetHashCode();
+          if (AlertBellBuzzer != false) hash ^= AlertBellBuzzer.GetHashCode();
           if (UsePwm != false) hash ^= UsePwm.GetHashCode();
+          if (NagTimeout != 0) hash ^= NagTimeout.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2358,6 +2505,34 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(56);
             output.WriteBool(UsePwm);
           }
+          if (OutputVibra != 0) {
+            output.WriteRawTag(64);
+            output.WriteUInt32(OutputVibra);
+          }
+          if (OutputBuzzer != 0) {
+            output.WriteRawTag(72);
+            output.WriteUInt32(OutputBuzzer);
+          }
+          if (AlertMessageVibra != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(AlertMessageVibra);
+          }
+          if (AlertMessageBuzzer != false) {
+            output.WriteRawTag(88);
+            output.WriteBool(AlertMessageBuzzer);
+          }
+          if (AlertBellVibra != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(AlertBellVibra);
+          }
+          if (AlertBellBuzzer != false) {
+            output.WriteRawTag(104);
+            output.WriteBool(AlertBellBuzzer);
+          }
+          if (NagTimeout != 0) {
+            output.WriteRawTag(112);
+            output.WriteUInt32(NagTimeout);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2396,6 +2571,34 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(56);
             output.WriteBool(UsePwm);
           }
+          if (OutputVibra != 0) {
+            output.WriteRawTag(64);
+            output.WriteUInt32(OutputVibra);
+          }
+          if (OutputBuzzer != 0) {
+            output.WriteRawTag(72);
+            output.WriteUInt32(OutputBuzzer);
+          }
+          if (AlertMessageVibra != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(AlertMessageVibra);
+          }
+          if (AlertMessageBuzzer != false) {
+            output.WriteRawTag(88);
+            output.WriteBool(AlertMessageBuzzer);
+          }
+          if (AlertBellVibra != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(AlertBellVibra);
+          }
+          if (AlertBellBuzzer != false) {
+            output.WriteRawTag(104);
+            output.WriteBool(AlertBellBuzzer);
+          }
+          if (NagTimeout != 0) {
+            output.WriteRawTag(112);
+            output.WriteUInt32(NagTimeout);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2415,17 +2618,38 @@ namespace Meshtastic.Protobufs {
           if (Output != 0) {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Output);
           }
+          if (OutputVibra != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OutputVibra);
+          }
+          if (OutputBuzzer != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OutputBuzzer);
+          }
           if (Active != false) {
             size += 1 + 1;
           }
           if (AlertMessage != false) {
             size += 1 + 1;
           }
+          if (AlertMessageVibra != false) {
+            size += 1 + 1;
+          }
+          if (AlertMessageBuzzer != false) {
+            size += 1 + 1;
+          }
           if (AlertBell != false) {
+            size += 1 + 1;
+          }
+          if (AlertBellVibra != false) {
+            size += 1 + 1;
+          }
+          if (AlertBellBuzzer != false) {
             size += 1 + 1;
           }
           if (UsePwm != false) {
             size += 1 + 1;
+          }
+          if (NagTimeout != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NagTimeout);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2448,17 +2672,38 @@ namespace Meshtastic.Protobufs {
           if (other.Output != 0) {
             Output = other.Output;
           }
+          if (other.OutputVibra != 0) {
+            OutputVibra = other.OutputVibra;
+          }
+          if (other.OutputBuzzer != 0) {
+            OutputBuzzer = other.OutputBuzzer;
+          }
           if (other.Active != false) {
             Active = other.Active;
           }
           if (other.AlertMessage != false) {
             AlertMessage = other.AlertMessage;
           }
+          if (other.AlertMessageVibra != false) {
+            AlertMessageVibra = other.AlertMessageVibra;
+          }
+          if (other.AlertMessageBuzzer != false) {
+            AlertMessageBuzzer = other.AlertMessageBuzzer;
+          }
           if (other.AlertBell != false) {
             AlertBell = other.AlertBell;
           }
+          if (other.AlertBellVibra != false) {
+            AlertBellVibra = other.AlertBellVibra;
+          }
+          if (other.AlertBellBuzzer != false) {
+            AlertBellBuzzer = other.AlertBellBuzzer;
+          }
           if (other.UsePwm != false) {
             UsePwm = other.UsePwm;
+          }
+          if (other.NagTimeout != 0) {
+            NagTimeout = other.NagTimeout;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2503,6 +2748,34 @@ namespace Meshtastic.Protobufs {
                 UsePwm = input.ReadBool();
                 break;
               }
+              case 64: {
+                OutputVibra = input.ReadUInt32();
+                break;
+              }
+              case 72: {
+                OutputBuzzer = input.ReadUInt32();
+                break;
+              }
+              case 80: {
+                AlertMessageVibra = input.ReadBool();
+                break;
+              }
+              case 88: {
+                AlertMessageBuzzer = input.ReadBool();
+                break;
+              }
+              case 96: {
+                AlertBellVibra = input.ReadBool();
+                break;
+              }
+              case 104: {
+                AlertBellBuzzer = input.ReadBool();
+                break;
+              }
+              case 112: {
+                NagTimeout = input.ReadUInt32();
+                break;
+              }
             }
           }
         #endif
@@ -2544,6 +2817,34 @@ namespace Meshtastic.Protobufs {
               }
               case 56: {
                 UsePwm = input.ReadBool();
+                break;
+              }
+              case 64: {
+                OutputVibra = input.ReadUInt32();
+                break;
+              }
+              case 72: {
+                OutputBuzzer = input.ReadUInt32();
+                break;
+              }
+              case 80: {
+                AlertMessageVibra = input.ReadBool();
+                break;
+              }
+              case 88: {
+                AlertMessageBuzzer = input.ReadBool();
+                break;
+              }
+              case 96: {
+                AlertBellVibra = input.ReadBool();
+                break;
+              }
+              case 104: {
+                AlertBellBuzzer = input.ReadBool();
+                break;
+              }
+              case 112: {
+                NagTimeout = input.ReadUInt32();
                 break;
               }
             }
