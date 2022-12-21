@@ -8,12 +8,13 @@ public class TcpConnection : DeviceConnection, IDisposable
 {
     private readonly TcpClient client;
     private NetworkStream? networkStream;
+    private const int DEFAULT_BUFFER_SIZE = 64;
 
     public TcpConnection(string host, int port = Resources.DEFAULT_TCP_PORT)
     {
         client = new TcpClient(host, port)
         {
-            ReceiveBufferSize = 64,
+            ReceiveBufferSize = DEFAULT_BUFFER_SIZE,
             NoDelay = true
         };
     }
@@ -25,7 +26,7 @@ public class TcpConnection : DeviceConnection, IDisposable
             var networkStream = client.GetStream();
             while (networkStream.CanRead) 
             {
-                byte[] buffer = new byte[64];
+                byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
                 int length = await networkStream.ReadAsync(buffer);
                 string data = Encoding.UTF8.GetString(buffer.AsSpan(0, length));
             }
@@ -44,7 +45,6 @@ public class TcpConnection : DeviceConnection, IDisposable
             var toRadio = PacketFraming.CreatePacket(data);
             networkStream = client.GetStream();
             await networkStream.WriteAsync(toRadio);
-            await Task.Delay(100);
             await ReadFromRadio(isComplete);
         }
         catch (IOException ex)
@@ -59,7 +59,7 @@ public class TcpConnection : DeviceConnection, IDisposable
             throw new ApplicationException("Could not establish network stream");
 
         await networkStream.FlushAsync();
-        var buffer = new byte[64];
+        var buffer = new byte[DEFAULT_BUFFER_SIZE];
         while (networkStream.CanRead)
         {
             await networkStream.ReadAsync(buffer);

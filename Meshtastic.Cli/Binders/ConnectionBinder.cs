@@ -1,6 +1,4 @@
-﻿using System.CommandLine;
-using System.CommandLine.Binding;
-using Meshtastic.Connections;
+﻿using System.CommandLine.Binding;
 
 namespace Meshtastic.Cli.Binders;
 
@@ -16,6 +14,6 @@ public class ConnectionBinder : BinderBase<DeviceConnectionContext>
     }
 
     protected override DeviceConnectionContext GetBoundValue(BindingContext bindingContext) =>
-        new DeviceConnectionContext(bindingContext.ParseResult?.GetValueForOption(portOption),
+        new(bindingContext.ParseResult?.GetValueForOption(portOption),
             bindingContext.ParseResult?.GetValueForOption(hostOption)) { };
 }
