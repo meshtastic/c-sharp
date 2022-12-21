@@ -137,8 +137,18 @@ public class SettingParserTests
 
         result.ParsedSettings.Should().BeEmpty();
         result.ValidationIssues.Should().HaveCount(1);
+    }
 
-        var thing = LocalConfig.Descriptor.FindFieldByName("display");
-        var field = thing.MessageType.FindFieldByName("screen_on_secs");
+    [Test]
+    public void ParseSettings_Should_ReturnResultWithPropertyInfo_GivenSnakeCase()
+    {
+        var parser = new SettingParser(new[] { "display.screen_on_secs" });
+        var result = parser.ParseSettings(isGetOnly: true);
+
+        result.ParsedSettings.Should().AllSatisfy(p => p.Setting.Name.Should().BeEquivalentTo("ScreenOnSecs"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Section.Name.Should().BeEquivalentTo("Display"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Value.Should().BeNull());
+
+        result.ValidationIssues.Should().BeEmpty();
     }
 }

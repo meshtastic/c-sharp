@@ -39,7 +39,7 @@ public class SettingParser : Parser
 
     private void TryParse(List<ParsedSetting> parsedSettings, List<string> validationIssues, string setting, string? value)
     {
-        var segments = setting.Split('.', StringSplitOptions.TrimEntries);
+        var segments = setting.Split('.', StringSplitOptions.TrimEntries).Select(s => s.Replace("_", String.Empty)).ToArray();
         if (segments.Length != 2)
             validationIssues.Add($"Could not parse setting `{setting}`. Please use the format `mqtt.host`");
         else
