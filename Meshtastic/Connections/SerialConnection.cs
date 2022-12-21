@@ -10,9 +10,9 @@ public class SerialConnection : DeviceConnection
     {
         serialPort = new SerialPort(port, baudRate)
         {
-            Handshake = Handshake.None
+            Handshake = Handshake.None,
+            DtrEnable = true,
         };
-        //serialPort.Encoding = Encoding.UTF8;
     }
 
     public static string[] ListPorts() => SerialPort.GetPortNames();
@@ -24,6 +24,8 @@ public class SerialConnection : DeviceConnection
             serialPort.Open();
             while (serialPort.IsOpen) 
             {
+                // Hack for posix causing a RST
+                serialPort.DtrEnable = false;
                 if (serialPort.BytesToRead > 0) {
                     Console.Write(serialPort.ReadExisting());
                 }
