@@ -1,6 +1,5 @@
 using Google.Protobuf;
 using Meshtastic.Data;
-using Meshtastic.Protobufs;
 
 namespace Meshtastic.Test.Data;
 
@@ -26,7 +25,7 @@ public class FromDeviceMessageTests
     {
         var action = () =>
         {
-            new FromDeviceMessage(BitConverter.GetBytes(123242));
+            _ = new FromDeviceMessage(BitConverter.GetBytes(123242));
         };
         action.Should().NotThrow<InvalidProtocolBufferException>();
     }

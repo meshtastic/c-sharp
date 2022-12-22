@@ -1,7 +1,5 @@
 using Google.Protobuf;
-using Meshtastic.Protobufs;
 using System.Reflection;
-using static System.Collections.Specialized.BitVector32;
 
 namespace Meshtastic.Cli.Reflection;
 
@@ -28,7 +26,6 @@ public static class ReflectionExtensions
                 return section.MessageType.Fields.InFieldNumberOrder()
                     .Select(setting => $"{section.PropertyName}.{setting.PropertyName}");
             });
-
     }
 
     public static FieldInfo? FindFieldByName(this Type type, string name)

@@ -4,7 +4,6 @@ namespace Meshtastic.Cli.Parsers;
 
 public class Parser
 {
-
     protected static object ParseValue(PropertyInfo setting, string value)
     {
         if (setting.PropertyType == typeof(uint))
