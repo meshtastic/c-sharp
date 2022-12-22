@@ -1,4 +1,5 @@
 using System.IO.Ports;
+using System.Runtime.InteropServices;
 using Meshtastic.Data;
 
 namespace Meshtastic.Connections;
@@ -6,13 +7,16 @@ namespace Meshtastic.Connections;
 public class SerialConnection : DeviceConnection
 {
     private readonly SerialPort serialPort;
+    private static bool IsWindows => RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
     public SerialConnection(string port, int baudRate = Resources.DEFAULT_BAUD_RATE)
     {
         serialPort = new SerialPort(port, baudRate)
         {
             Handshake = Handshake.None,
-            DtrEnable = true,
         };
+        if (!IsWindows)
+            serialPort.DtrEnable = true;
     }
 
     public static string[] ListPorts() => SerialPort.GetPortNames();
@@ -25,7 +29,9 @@ public class SerialConnection : DeviceConnection
             while (serialPort.IsOpen) 
             {
                 // Hack for posix causing a RST
-                serialPort.DtrEnable = false;
+                if (!IsWindows)
+                    serialPort.DtrEnable = false;
+
                 if (serialPort.BytesToRead > 0) {
                     Console.Write(serialPort.ReadExisting());
                 }
@@ -47,6 +53,8 @@ public class SerialConnection : DeviceConnection
             var toRadio = PacketFraming.CreatePacket(data);
             if (!serialPort.IsOpen)
                 serialPort.Open();
+            if (!IsWindows)
+                serialPort.DtrEnable = false;
             serialPort.Write(PacketFraming.SERIAL_PREAMBLE, 0, PacketFraming.SERIAL_PREAMBLE.Length);
             serialPort.DiscardInBuffer();
             serialPort.Write(toRadio, 0, toRadio.Length);

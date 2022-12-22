@@ -10,8 +10,7 @@ var settingOption = new Option<IEnumerable<string>>("--setting", description: "G
     AllowMultipleArgumentsPerToken = true,
 };
 settingOption.AddAlias("-s");
-settingOption.AddCompletions((ctx) =>
-    new LocalConfig().GetSettingsOptions().Concat(new LocalModuleConfig().GetSettingsOptions()));
+settingOption.AddCompletions(ctx => new LocalConfig().GetSettingsOptions().Concat(new LocalModuleConfig().GetSettingsOptions()));
 
 var rootCommand = new RootCommand("Meshtastic CLI");
 rootCommand.AddGlobalOption(portOption);
@@ -25,5 +24,7 @@ rootCommand.AddCommand(new SetCommand("set", "Save one or more settings onto the
 rootCommand.AddCommand(new ChannelCommand("channel", "Enable, Disable, Add, Save channels", portOption, hostOption));
 rootCommand.AddCommand(new UrlCommand("url", "Get or set shared channel url", portOption, hostOption));
 rootCommand.AddCommand(new RebootCommand("reboot", "Reboot the meshtastic node", portOption, hostOption));
+rootCommand.AddCommand(new MetadataCommand("metadata", "Get device metadata from the meshtastic node", portOption, hostOption));
+rootCommand.AddCommand(new FactoryResetCommand("factory-reset", "Factory reset configuration of the meshtastic", portOption, hostOption));
 
 return await rootCommand.InvokeAsync(args);

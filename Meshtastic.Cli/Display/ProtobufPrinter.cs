@@ -188,4 +188,21 @@ public class ProtobufPrinter
         string qrCodeAsAsciiArt = qrCode.GetGraphic(1);
         AnsiConsole.Write(qrCodeAsAsciiArt);
     }
+
+    public void PrintMetadata(DeviceMetadata metadata)
+    {
+        var table = new Table();
+        table.Expand();
+        table.BorderColor(StyleResources.MESHTASTIC_GREEN);
+        table.RoundedBorder();
+        table.AddColumns("Name", "Value");
+
+        table.AddRow(nameof(metadata.FirmwareVersion), metadata.FirmwareVersion.ToString());
+        table.AddRow(nameof(metadata.DeviceStateVersion), metadata.DeviceStateVersion.ToString());
+        table.AddRow(nameof(metadata.HasBluetooth), metadata.HasBluetooth.ToString());
+        table.AddRow(nameof(metadata.HasWifi), metadata.HasWifi.ToString());
+        table.AddRow(nameof(metadata.HasEthernet), metadata.HasEthernet.ToString());
+        table.AddRow(nameof(metadata.CanShutdown), metadata.CanShutdown.ToString());
+        AnsiConsole.Write(table);
+    }
 }

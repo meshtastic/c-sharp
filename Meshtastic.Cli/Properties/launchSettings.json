@@ -10,15 +10,15 @@
     },
     "monitor": {
       "commandName": "Project",
-      "commandLineArgs": "info --port COM4"
+      "commandLineArgs": "info "
     },
     "info": {
       "commandName": "Project",
-      "commandLineArgs": "info --port COM4"
+      "commandLineArgs": "info "
     },
     "get --setting mqtt.enabled display.screenOnSecs": {
       "commandName": "Project",
-      "commandLineArgs": "get --port COM4 --setting mqtt.enabled display.screenOnSecs"
+      "commandLineArgs": "get  --setting mqtt.enabled display.screenOnSecs"
     },
     "get --setting mqtt.enabled display.screenOnSecs localhost": {
       "commandName": "Project",
@@ -26,7 +26,7 @@
     },
     "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069": {
       "commandName": "Project",
-      "commandLineArgs": "set --port COM4 --setting mqtt.address=me.myhost.org display.screenOnSecs=42069"
+      "commandLineArgs": "set  --setting mqtt.address=me.myhost.org display.screenOnSecs=42069"
     },
     "set --setting mqtt.host=mqtt.myhost.org display.screenOnSecs=222 localhost": {
       "commandName": "Project",
@@ -38,7 +38,7 @@
     },
     "channel save": {
       "commandName": "Project",
-      "commandLineArgs": "channel save --index 1 --name Test --role Primary --psk 12345 --uplink-enabled true --port COM4"
+      "commandLineArgs": "channel save --index 1 --name Test --role Primary --psk 12345 --uplink-enabled true "
     },
     "url get": {
       "commandName": "Project",
@@ -50,7 +50,7 @@
     },
     "url set": {
       "commandName": "Project",
-      "commandLineArgs": "url set https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe --port COM4"
+      "commandLineArgs": "url set https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe "
     },
     "url set localhost": {
       "commandName": "Project",
@@ -58,11 +58,19 @@
     },
     "reboot": {
       "commandName": "Project",
-      "commandLineArgs": "reboot --port COM4"
+      "commandLineArgs": "reboot 3"
     },
     "reboot localhost": {
       "commandName": "Project",
       "commandLineArgs": "reboot --host localhost"
+    },
+    "metadata": {
+      "commandName": "Project",
+      "commandLineArgs": "metadata"
+    },
+    "metadata localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "metadata --host localhost"
     }
   }
 }

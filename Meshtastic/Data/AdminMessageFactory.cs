@@ -14,7 +14,7 @@ public class AdminMessageFactory
         this.container = container;
     }
 
-    private MeshPacket GetNewMeshPacket(AdminMessage message, uint? to = null, uint? from = null, uint? dest = null)
+    private MeshPacket GetNewMeshPacket(AdminMessage message, uint? to = null, uint? dest = null)
     {
         return new MeshPacket()
         {
@@ -44,11 +44,20 @@ public class AdminMessageFactory
             CommitEditSettings = true
         });
 
-    public MeshPacket CreateRebootMessage() =>
-        GetNewMeshPacket(new AdminMessage()
+    public MeshPacket CreateRebootMessage(int seconds, bool isOta)
+    {
+        if (isOta)
         {
-            RebootSeconds = 10
+            return GetNewMeshPacket(new AdminMessage()
+            {
+                RebootOtaSeconds = seconds
+            });
+        }
+        return GetNewMeshPacket(new AdminMessage()
+        {
+            RebootSeconds = seconds
         });
+    }      
 
     public MeshPacket CreateSetConfigMessage(object instance)
     {
@@ -86,5 +95,15 @@ public class AdminMessageFactory
     public MeshPacket CreateSetChannelMessage(Channel channel)
     {
         return GetNewMeshPacket(new AdminMessage() { SetChannel = channel });
+    }
+
+    public MeshPacket CreateGetMetadataMessage()
+    {
+        return GetNewMeshPacket(new AdminMessage() { GetDeviceMetadataRequest = true });
+    }
+
+    public MeshPacket CreateFactoryResetMessage()
+    {
+        return GetNewMeshPacket(new AdminMessage() { FactoryReset = 1 });
     }
 }
