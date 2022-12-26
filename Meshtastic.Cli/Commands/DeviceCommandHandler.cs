@@ -1,20 +1,25 @@
-﻿using Google.Protobuf;
+﻿using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Parsers;
 using Meshtastic.Connections;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
 public class DeviceCommandHandler
 {
-    protected DeviceConnection? connection;
-    protected ToRadioMessageFactory ToRadioMessageFactory = new();
+    protected readonly DeviceConnection Connection;
+    protected readonly ToRadioMessageFactory ToRadioMessageFactory;
+    protected readonly OutputFormat OutputFormat;
+    protected readonly ILogger Logger;
 
-    protected async Task OnConnection(DeviceConnectionContext context, Func<Task> operation)
+    public DeviceCommandHandler(DeviceConnectionContext context, OutputFormat outputFormat, ILogger logger)
     {
-        AnsiConsole.MarkupLine($"Connecting {context.DisplayName}...");
-        await operation();
+        this.Connection = context.GetDeviceConnection(logger);
+        this.ToRadioMessageFactory = new();
+        this.OutputFormat = outputFormat;
+        this.Logger = logger;
     }
 
     protected static (SettingParserResult? result, bool isValid) ParseSettingOptions(IEnumerable<string> settings, bool isGetOnly)
@@ -26,7 +31,7 @@ public class DeviceCommandHandler
         {
             foreach (var issue in parserResult.ValidationIssues)
             {
-                AnsiConsole.Markup($":warning: [red]{issue}[/]");
+                AnsiConsole.MarkupLine($"[red]{issue}[/]");
             }
             return (null, false);
         }
@@ -43,13 +48,13 @@ public class DeviceCommandHandler
         return Task.FromResult(false);
     }
 
-    public static async Task<bool> AlwaysComplete(FromDeviceMessage packet, DeviceStateContainer container)
+    public static async Task<bool> AnyResponseReceived(FromDeviceMessage packet, DeviceStateContainer container)
     {
         await Task.Delay(100);
         return true;
     }
 
-    public async Task<bool> DefaultIsCompleteAsync(FromDeviceMessage packet, DeviceStateContainer container)
+    public async Task<bool> CompleteOnConfigReceived(FromDeviceMessage packet, DeviceStateContainer container)
     {
         if (packet.ParsedMessage.fromRadio?.PayloadVariantCase != FromRadio.PayloadVariantOneofCase.ConfigCompleteId)
             return false;
@@ -66,17 +71,16 @@ public class DeviceCommandHandler
     protected async Task BeginEditSettings(AdminMessageFactory adminMessageFactory)
     {
         var message = adminMessageFactory.CreateBeginEditSettingsMessage();
-        await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message).ToByteArray(),
-            AlwaysComplete);
-        AnsiConsole.MarkupLine($"[olive]Starting edit transaction for settings...[/]");
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message),
+            AnyResponseReceived);
+        Logger.LogInformation($"[olive]Starting edit transaction for settings...[/]");
     }
 
     protected async Task CommitEditSettings(AdminMessageFactory adminMessageFactory)
     {
         var message = adminMessageFactory.CreateCommitEditSettingsMessage();
-        await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message).ToByteArray(),
-            AlwaysComplete);
-        AnsiConsole.MarkupLine($"[green]Commit edit transaction for settings...[/]");
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message),
+            AnyResponseReceived);
+        Logger.LogInformation($"[green]Commit edit transaction for settings...[/]");
     }
-
 }

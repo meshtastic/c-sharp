@@ -9,7 +9,7 @@ public record ChannelOperationSettings(ChannelOperation Operation, int? Index, s
 public class ChannelBinder : BinderBase<ChannelOperationSettings>
 {
     private readonly Argument<ChannelOperation> operation;
-    private readonly Option<int?> indexOption;
+    private readonly Option<int> indexOption;
     private readonly Option<string?> nameOption;
     private readonly Option<Channel.Types.Role?> roleOption;
     private readonly Option<string?> pskOption;
@@ -17,7 +17,7 @@ public class ChannelBinder : BinderBase<ChannelOperationSettings>
     private readonly Option<bool?> downlinkOption;
 
     public ChannelBinder(Argument<ChannelOperation> operation, 
-        Option<int?> indexOption,
+        Option<int> indexOption,
         Option<string?> nameOption,
         Option<Channel.Types.Role?> roleOption,
         Option<string?> pskOption,

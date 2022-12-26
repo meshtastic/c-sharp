@@ -21,7 +21,8 @@ public class AdminMessageFactory
             Channel = container.GetAdminChannelIndex(),
             WantAck = false,
             To = to ?? container.MyNodeInfo.MyNodeNum,
-            Id = (uint)Random.Shared.Next(),
+            Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
+            HopLimit = container.GetHopLimitOrDefault(),
             Decoded = new Protobufs.Data()
             {
                 Dest = dest ?? container.MyNodeInfo.MyNodeNum,

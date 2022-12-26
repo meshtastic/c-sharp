@@ -1,30 +1,63 @@
-﻿using Meshtastic.Cli.Commands;
+﻿using Meshtastic.Cli.Binders;
+using Meshtastic.Cli.Commands;
+using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Reflection;
 using Meshtastic.Protobufs;
+using Microsoft.Extensions.Logging;
+using System.CommandLine.Builder;
+using System.CommandLine.Parsing;
 
-var portOption = new Option<string>("--port", description: "Target serial port for meshtastic device");
-var hostOption = new Option<string>("--host", description: "Target host ip or name for meshtastic device");
+var port = new Option<string>("--port", description: "Target serial port for meshtastic device");
+var host = new Option<string>("--host", description: "Target host ip or name for meshtastic device");
 
-var settingOption = new Option<IEnumerable<string>>("--setting", description: "Get or set a value on config / module-config")
+var output = new Option<OutputFormat>("--output", description: "Type of output format for the command");
+output.AddCompletions(Enum.GetNames(typeof(OutputFormat)));
+
+var log = new Option<LogLevel>("--log", description: "Logging level for command events");
+log.AddAlias("-l");
+log.SetDefaultValue(LogLevel.Information);
+log.AddCompletions(Enum.GetNames(typeof(LogLevel)));
+
+var setting = new Option<IEnumerable<string>>("--setting", description: "Get or set a value on config / module-config")
 {
     AllowMultipleArgumentsPerToken = true,
 };
-settingOption.AddAlias("-s");
-settingOption.AddCompletions(ctx => new LocalConfig().GetSettingsOptions().Concat(new LocalModuleConfig().GetSettingsOptions()));
+setting.AddAlias("-s");
+setting.AddCompletions(ctx => new LocalConfig().GetSettingsOptions().Concat(new LocalModuleConfig().GetSettingsOptions()));
 
-var rootCommand = new RootCommand("Meshtastic CLI");
-rootCommand.AddGlobalOption(portOption);
-rootCommand.AddGlobalOption(hostOption);
+var root = new RootCommand("Meshtastic.Cli");
+root.AddGlobalOption(port);
+root.AddGlobalOption(host);
+root.AddGlobalOption(output);
+root.AddGlobalOption(log);
 
-rootCommand.AddCommand(new ListCommand("list", "List available serial devices", portOption, hostOption));
-rootCommand.AddCommand(new MonitorCommand("monitor", "Serial monitor for meshtastic devices", portOption, hostOption));
-rootCommand.AddCommand(new InfoCommand("info", "Dump info about the currently connected meshtastic node", portOption, hostOption));
-rootCommand.AddCommand(new GetCommand("get", "Display one or more settings from the connected device", portOption, hostOption, settingOption));
-rootCommand.AddCommand(new SetCommand("set", "Save one or more settings onto the connected device", portOption, hostOption, settingOption));
-rootCommand.AddCommand(new ChannelCommand("channel", "Enable, Disable, Add, Save channels", portOption, hostOption));
-rootCommand.AddCommand(new UrlCommand("url", "Get or set shared channel url", portOption, hostOption));
-rootCommand.AddCommand(new RebootCommand("reboot", "Reboot the meshtastic node", portOption, hostOption));
-rootCommand.AddCommand(new MetadataCommand("metadata", "Get device metadata from the meshtastic node", portOption, hostOption));
-rootCommand.AddCommand(new FactoryResetCommand("factory-reset", "Factory reset configuration of the meshtastic", portOption, hostOption));
+root.AddCommand(new ListCommand("list", "List available serial devices", output, log));
+root.AddCommand(new MonitorCommand("monitor", "Serial monitor for meshtastic devices", port, host, output, log));
+root.AddCommand(new InfoCommand("info", "Dump info about the currently connected meshtastic node", port, host, output, log));
+root.AddCommand(new GetCommand("get", "Display one or more settings from the connected device", port, host, output, log, setting));
+root.AddCommand(new SetCommand("set", "Save one or more settings onto the connected device", port, host, output, log, setting));
+root.AddCommand(new ChannelCommand("channel", "Enable, Disable, Add, Save channels", port, host, output, log));
+root.AddCommand(new UrlCommand("url", "Get or set shared channel url", port, host, output, log));
+root.AddCommand(new RebootCommand("reboot", "Reboot the meshtastic node", port, host, output, log));
+root.AddCommand(new MetadataCommand("metadata", "Get device metadata from the meshtastic node", port, host, output, log));
+root.AddCommand(new FactoryResetCommand("factory-reset", "Factory reset configuration of the meshtastic", port, host, output, log));
 
-return await rootCommand.InvokeAsync(args);
+var parser = new CommandLineBuilder(root)
+    .UseExceptionHandler((ex, context) =>
+    {
+        var logging = new LoggingBinder(log);
+        logging.GetLogger(context.BindingContext).LogError(ex, message: ex.Message);
+    }, errorExitCode: 1)
+    .UseVersionOption()
+    .UseEnvironmentVariableDirective()
+    .UseParseDirective()
+    .UseSuggestDirective()
+    .RegisterWithDotnetSuggest()
+    .UseTypoCorrections()
+    .UseParseErrorReporting()
+    .CancelOnProcessTermination()
+    .UseTypoCorrections()
+    .UseHelp()
+    .Build();
+
+return await parser.InvokeAsync(args);

@@ -4,44 +4,48 @@ using Meshtastic.Data;
 using Meshtastic.Cli.Binders;
 using Meshtastic.Display;
 using Meshtastic.Protobufs;
+using Meshtastic.Cli.Enums;
 
 namespace Meshtastic.Cli.Commands;
 
 public class MetadataCommand : Command
 {
-    public MetadataCommand(string name, string description, Option<string> port, Option<string> host) : base(name, description)
+    public MetadataCommand(string name, string description, Option<string> port, Option<string> host, 
+        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
     {
-        var metadataCommandHandler = new MetadataCommandHandler();
-        this.SetHandler(metadataCommandHandler.Handle,
-            new ConnectionBinder(port, host),
-            new LoggingBinder());
+        this.SetHandler(async (context, outputFormat, logger) =>
+            {
+                var handler = new MetadataCommandHandler(context, outputFormat, logger);
+                await handler.Handle();
+            },
+            new DeviceConnectionBinder(port, host),
+            output,
+            new LoggingBinder(log));
     }
 }
 public class MetadataCommandHandler : DeviceCommandHandler
 {
-    public async Task Handle(DeviceConnectionContext context, ILogger logger)
-    {
-        await OnConnection(context, async () =>
-        {
-            connection = context.GetDeviceConnection();
-            var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
+    public MetadataCommandHandler(DeviceConnectionContext context,
+        OutputFormat outputFormat,
+        ILogger logger) : base(context, outputFormat, logger) { }
 
-            await connection.WriteToRadio(wantConfig.ToByteArray(), DefaultIsCompleteAsync);
-        });
+    public async Task Handle()
+    {
+        var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
+        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        AnsiConsole.WriteLine("Getting device metadata...");
+        Logger.LogInformation("Getting device metadata...");
         var adminMessageFactory = new AdminMessageFactory(container);
         var adminMessage = adminMessageFactory.CreateGetMetadataMessage();
-        await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage).ToByteArray(), 
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), 
             (fromDevice, container) =>
             {
-                if (fromDevice != null && 
-                    fromDevice.ParsedMessage.adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.GetDeviceMetadataResponse) 
+                if (fromDevice?.ParsedMessage.adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.GetDeviceMetadataResponse) 
                 {
-                    var printer = new ProtobufPrinter(container);
+                    var printer = new ProtobufPrinter(container, OutputFormat);
                     printer.PrintMetadata(fromDevice.ParsedMessage.adminMessage!.GetDeviceMetadataResponse);
                     return Task.FromResult(true);
                 }

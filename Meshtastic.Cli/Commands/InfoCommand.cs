@@ -1,37 +1,39 @@
-using Meshtastic.Connections;
-using Google.Protobuf;
 using Microsoft.Extensions.Logging;
 using Meshtastic.Data;
 using Meshtastic.Display;
 using Meshtastic.Cli.Binders;
+using Meshtastic.Cli.Enums;
 
 namespace Meshtastic.Cli.Commands;
 public class InfoCommand : Command
 {
-    public InfoCommand(string name, string description, Option<string> port, Option<string> host) : base(name, description)
+    public InfoCommand(string name, string description, Option<string> port, Option<string> host, 
+        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
     {
-        var infoCommandHandler = new InfoCommandHandler();
-        this.SetHandler(infoCommandHandler.Handle,
-            new ConnectionBinder(port, host),
-            new LoggingBinder());
+        this.SetHandler(async (context, outputFormat, logger) =>
+            {
+                var handler = new InfoCommandHandler(context, outputFormat, logger);
+                await handler.Handle();
+            },
+            new DeviceConnectionBinder(port, host),
+            output,
+            new LoggingBinder(log));
     }
 }
 public class InfoCommandHandler : DeviceCommandHandler
 {
-    public async Task Handle(DeviceConnectionContext context, ILogger logger)
+    public InfoCommandHandler(DeviceConnectionContext context,
+        OutputFormat outputFormat,
+        ILogger logger) : base(context, outputFormat, logger) { }
+    public async Task Handle()
     {
-        await OnConnection(context, async () =>
-        {
-            connection = context.GetDeviceConnection();
-            var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
-
-            await connection.WriteToRadio(wantConfig.ToByteArray(), DefaultIsCompleteAsync);
-        });
+        var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
+        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
     public override Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        var printer = new ProtobufPrinter(container);
+        var printer = new ProtobufPrinter(container, OutputFormat);
         printer.Print();
         return Task.CompletedTask;
     }

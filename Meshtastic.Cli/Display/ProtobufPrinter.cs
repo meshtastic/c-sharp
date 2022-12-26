@@ -1,5 +1,6 @@
 using Google.Protobuf;
 using Meshtastic.Cli;
+using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Parsers;
 using Meshtastic.Cli.Reflection;
 using Meshtastic.Data;
@@ -11,24 +12,29 @@ namespace Meshtastic.Display;
 public class ProtobufPrinter
 {
     private readonly DeviceStateContainer container;
+    private readonly OutputFormat outputFormat;
 
-    public ProtobufPrinter(DeviceStateContainer container)
+    public ProtobufPrinter(DeviceStateContainer container, OutputFormat outputFormat)
     {
         this.container = container;
+        this.outputFormat = outputFormat;
     }
 
     public void Print()
     {
-        var grid = new Grid();
-        grid.AddColumn();
-        grid.AddColumn();
-        grid.AddRow(PrintMyNodeInfo(container.MyNodeInfo),
-            PrintChannels(container.Channels));
-        grid.AddRow(PrintConfig(container.LocalConfig, "[bold]Config[/]"), 
-            PrintConfig(container.LocalModuleConfig, "[bold]Module Config[/]"));
-        AnsiConsole.Write(grid);
+        if (outputFormat == OutputFormat.Console) 
+        {
+            var grid = new Grid();
+            grid.AddColumn();
+            grid.AddColumn();
+            grid.AddRow(PrintMyNodeInfo(container.MyNodeInfo),
+                PrintChannels(container.Channels));
+            grid.AddRow(PrintConfig(container.LocalConfig, "[bold]Config[/]"), 
+                PrintConfig(container.LocalModuleConfig, "[bold]Module Config[/]"));
+            AnsiConsole.Write(grid);
 
-        AnsiConsole.Write(PrintNodeInfos(container.Nodes));
+            AnsiConsole.Write(PrintNodeInfos(container.Nodes));
+        }
     }
 
     public Tree PrintNodeInfos(List<NodeInfo> nodeInfos) 
@@ -124,7 +130,7 @@ public class ProtobufPrinter
         };
         var sectionValues = new List<string>();
         foreach (var sectionInfo in config.GetProperties())
-        { 
+        {
             var section = sectionInfo.GetValue(config);
             if (section == null)
                 continue;
@@ -147,62 +153,71 @@ public class ProtobufPrinter
     }
 
     public void PrintSettings(IEnumerable<ParsedSetting> parsedSettings)
-    { 
-        var table = new Table();
-        table.Expand();
-        table.BorderColor(StyleResources.MESHTASTIC_GREEN);
-        table.RoundedBorder();
-        table.AddColumns("Setting", "Value");
-
-        foreach (var setting in parsedSettings)
+    {
+        if (outputFormat == OutputFormat.Console)
         {
-            var instance = setting.Section.ReflectedType?.Name == nameof(this.container.LocalConfig) ?
-                setting.Section.GetValue(this.container.LocalConfig) :
-                setting.Section.GetValue(this.container.LocalModuleConfig);
-            var value = setting.Setting.GetValue(instance);
+            var table = new Table();
+            table.Expand();
+            table.BorderColor(StyleResources.MESHTASTIC_GREEN);
+            table.RoundedBorder();
+            table.AddColumns("Setting", "Value");
 
-            table.AddRow($"{setting.Section.Name}.{setting.Setting.Name}", value?.ToString() ?? String.Empty);
+            foreach (var setting in parsedSettings)
+            {
+                var instance = setting.Section.ReflectedType?.Name == nameof(this.container.LocalConfig) ?
+                    setting.Section.GetValue(this.container.LocalConfig) :
+                    setting.Section.GetValue(this.container.LocalModuleConfig);
+                var value = setting.Setting.GetValue(instance);
+
+                table.AddRow($"{setting.Section.Name}.{setting.Setting.Name}", value?.ToString() ?? String.Empty);
+            }
+            AnsiConsole.Write(table); 
         }
-        AnsiConsole.Write(table);
     }
 
     public void PrintUrl()
     {
-        var channelSet = new ChannelSet()
+        if (outputFormat == OutputFormat.Console)
         {
-            LoraConfig = container.LocalConfig.Lora
-        };
-        container.Channels.ForEach(channel =>
-        {
-            channelSet.Settings.Add(channel.Settings);
-        });
-        var serialized = channelSet.ToByteArray();
-        var base64 = Convert.ToBase64String(serialized);
-        base64 = base64.Replace("-", String.Empty).Replace('+', '-').Replace('/', '_');
-        var url = $"https://meshtastic.org/e/#{base64}";
-        AnsiConsole.MarkupLine(url);
+            var channelSet = new ChannelSet()
+            {
+                LoraConfig = container.LocalConfig.Lora
+            };
+            container.Channels.ForEach(channel =>
+            {
+                channelSet.Settings.Add(channel.Settings);
+            });
+            var serialized = channelSet.ToByteArray();
+            var base64 = Convert.ToBase64String(serialized);
+            base64 = base64.Replace("-", String.Empty).Replace('+', '-').Replace('/', '_');
+            var url = $"https://meshtastic.org/e/#{base64}";
+            AnsiConsole.MarkupLine(url);
 
-        QRCodeGenerator qrGenerator = new();
-        QRCodeData data = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q);
-        AsciiQRCode qrCode = new(data);
-        string qrCodeAsAsciiArt = qrCode.GetGraphic(1);
-        AnsiConsole.Write(qrCodeAsAsciiArt);
+            QRCodeGenerator qrGenerator = new();
+            QRCodeData data = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q);
+            AsciiQRCode qrCode = new(data);
+            string qrCodeAsAsciiArt = qrCode.GetGraphic(1);
+            AnsiConsole.Write(qrCodeAsAsciiArt); 
+        }
     }
 
     public void PrintMetadata(DeviceMetadata metadata)
     {
-        var table = new Table();
-        table.Expand();
-        table.BorderColor(StyleResources.MESHTASTIC_GREEN);
-        table.RoundedBorder();
-        table.AddColumns("Name", "Value");
+        if (outputFormat == OutputFormat.Console)
+        {
+            var table = new Table();
+            table.Expand();
+            table.BorderColor(StyleResources.MESHTASTIC_GREEN);
+            table.RoundedBorder();
+            table.AddColumns("Name", "Value");
 
-        table.AddRow(nameof(metadata.FirmwareVersion), metadata.FirmwareVersion.ToString());
-        table.AddRow(nameof(metadata.DeviceStateVersion), metadata.DeviceStateVersion.ToString());
-        table.AddRow(nameof(metadata.HasBluetooth), metadata.HasBluetooth.ToString());
-        table.AddRow(nameof(metadata.HasWifi), metadata.HasWifi.ToString());
-        table.AddRow(nameof(metadata.HasEthernet), metadata.HasEthernet.ToString());
-        table.AddRow(nameof(metadata.CanShutdown), metadata.CanShutdown.ToString());
-        AnsiConsole.Write(table);
+            table.AddRow(nameof(metadata.FirmwareVersion), metadata.FirmwareVersion.ToString());
+            table.AddRow(nameof(metadata.DeviceStateVersion), metadata.DeviceStateVersion.ToString());
+            table.AddRow(nameof(metadata.HasBluetooth), metadata.HasBluetooth.ToString());
+            table.AddRow(nameof(metadata.HasWifi), metadata.HasWifi.ToString());
+            table.AddRow(nameof(metadata.HasEthernet), metadata.HasEthernet.ToString());
+            table.AddRow(nameof(metadata.CanShutdown), metadata.CanShutdown.ToString());
+            AnsiConsole.Write(table); 
+        }
     }
 }

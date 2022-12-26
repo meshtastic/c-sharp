@@ -1,4 +1,5 @@
 using Meshtastic.Protobufs;
+using System.ComponentModel;
 
 namespace Meshtastic.Data;
 
@@ -68,5 +69,10 @@ public class DeviceStateContainer
     {
         return (uint)(this.Channels.FirstOrDefault(p => p.Role == Channel.Types.Role.Secondary && 
             string.Equals(p.Settings.Name, "admin", StringComparison.OrdinalIgnoreCase))?.Index ?? 0);
+    }
+
+    public uint GetHopLimitOrDefault()
+    {
+        return (uint)(this.LocalConfig.Lora.HopLimit > 0 ? this.LocalConfig.Lora.HopLimit : 3);
     }
 }

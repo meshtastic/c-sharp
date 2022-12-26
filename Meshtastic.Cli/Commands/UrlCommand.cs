@@ -12,19 +12,24 @@ namespace Meshtastic.Cli.Commands;
 
 public class UrlCommand : Command
 {
-    public UrlCommand(string name, string description, Option<string> port, Option<string> host) : base(name, description)
+    public UrlCommand(string name, string description, Option<string> port, Option<string> host, 
+        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
     {
         var urlOperationArgument = new Argument<UrlOperation>("operation", "The type of url operation");
         urlOperationArgument.AddCompletions(ctx => Enum.GetNames(typeof(UrlOperation)));
         var urlArgument = new Argument<string?>("url", "The channel url to set on the device");
         urlArgument.SetDefaultValue(null);
 
-        var urlCommandHandler = new UrlCommandHandler();
-        this.SetHandler(urlCommandHandler.Handle,
+        this.SetHandler(async (operation, url, context, outputFormat, logger) =>
+            {
+                var handler = new UrlCommandHandler(operation, url, context, outputFormat, logger);
+                await handler.Handle();
+            },
             urlOperationArgument,
             urlArgument,
-            new ConnectionBinder(port, host),
-            new LoggingBinder());
+            new DeviceConnectionBinder(port, host),
+            output,
+            new LoggingBinder(log));
         this.AddArgument(urlOperationArgument);
         this.AddArgument(urlArgument);
     }
@@ -32,30 +37,32 @@ public class UrlCommand : Command
 
 public class UrlCommandHandler : DeviceCommandHandler
 {
-    private UrlOperation _operation;
-    private string? _url;
+    private UrlOperation operation;
+    private readonly string? url;
 
-    public async Task Handle(UrlOperation operation, string? url, DeviceConnectionContext context, ILogger logger)
+    public UrlCommandHandler(UrlOperation operation, 
+        string? url,
+        DeviceConnectionContext context,
+       OutputFormat outputFormat,
+       ILogger logger) : base(context, outputFormat, logger) 
     {
-        _operation = operation;
-        _url = url;
+        this.operation = operation;
+        this.url = url;
+    }
 
-        await OnConnection(context, async () =>
-        {
-            connection = context.GetDeviceConnection();
-            var wantConfig = ToRadioMessageFactory.CreateWantConfigMessage();
-
-            await connection.WriteToRadio(wantConfig.ToByteArray(), DefaultIsCompleteAsync);
-        });
+    public async Task Handle()
+    {
+        var wantConfig = ToRadioMessageFactory.CreateWantConfigMessage();
+        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        if (_operation == UrlOperation.Set)
+        if (this.operation == UrlOperation.Set)
             await SetChannelsFromUrl(container);
-        else if (_operation == UrlOperation.Get)
+        else if (operation == UrlOperation.Get)
         {
-            var printer = new ProtobufPrinter(container);
+            var printer = new ProtobufPrinter(container, OutputFormat);
             printer.PrintUrl();
         }
     }
@@ -65,7 +72,7 @@ public class UrlCommandHandler : DeviceCommandHandler
         var adminMessageFactory = new AdminMessageFactory(container);
         await BeginEditSettings(adminMessageFactory);
 
-        var urlParser = new UrlParser(_url!);
+        var urlParser = new UrlParser(this.url!);
         var channelSet = urlParser.Parse();
         int index = 0;
         foreach (var setting in channelSet.Settings)
@@ -76,18 +83,16 @@ public class UrlCommandHandler : DeviceCommandHandler
                 Role = index == 0 ? Channel.Types.Role.Primary : Channel.Types.Role.Secondary,
                 Settings = setting
             };
-            AnsiConsole.MarkupLine($"Sending channel {index} to device...");
+            Logger.LogInformation($"Sending channel {index} to device...");
             var setChannel = adminMessageFactory.CreateSetChannelMessage(channel);
-            //AnsiConsole.MarkupLine(setChannel.ToString());
-            await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setChannel).ToByteArray(), 
-                AlwaysComplete);
+            await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setChannel), 
+                AnyResponseReceived);
             index++;
         }
-        AnsiConsole.MarkupLine("Sending LoRA config device...");
+        Logger.LogInformation("Sending LoRA config device...");
 
         var setLoraConfig = adminMessageFactory.CreateSetConfigMessage(channelSet.LoraConfig);
-        //AnsiConsole.MarkupLine(setLoraConfig.ToString());
-        await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setLoraConfig).ToByteArray(), AlwaysComplete);
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setLoraConfig), AnyResponseReceived);
 
         await CommitEditSettings(adminMessageFactory);
     }

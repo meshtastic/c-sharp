@@ -6,39 +6,39 @@
     },
     "info localhost": {
       "commandName": "Project",
-      "commandLineArgs": "info --host localhost"
+      "commandLineArgs": "info --host localhost --log debug"
     },
     "monitor": {
       "commandName": "Project",
-      "commandLineArgs": "info "
+      "commandLineArgs": "monitor"
     },
     "info": {
       "commandName": "Project",
-      "commandLineArgs": "info "
+      "commandLineArgs": "info"
     },
     "get --setting mqtt.enabled display.screenOnSecs": {
       "commandName": "Project",
-      "commandLineArgs": "get  --setting mqtt.enabled display.screenOnSecs"
+      "commandLineArgs": "get  --setting mqtt.enabled display.screenOnSecs --log debug"
     },
     "get --setting mqtt.enabled display.screenOnSecs localhost": {
       "commandName": "Project",
-      "commandLineArgs": "get --host localhost --setting mqtt.enabled display.screenOnSecs"
+      "commandLineArgs": "get --host localhost --setting mqtt.enabled display.screenOnSecs --log debug"
     },
     "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069": {
       "commandName": "Project",
-      "commandLineArgs": "set  --setting mqtt.address=me.myhost.org display.screenOnSecs=42069"
+      "commandLineArgs": "set  --setting mqtt.address=me.myhost.org display.screenOnSecs=42069 --log debug"
     },
     "set --setting mqtt.host=mqtt.myhost.org display.screenOnSecs=222 localhost": {
       "commandName": "Project",
-      "commandLineArgs": "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069 --host localhost"
+      "commandLineArgs": "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069 --host localhost --log debug"
     },
     "channel save localhost": {
       "commandName": "Project",
-      "commandLineArgs": "channel save --index 1 --name Test --role Primary --psk 12345 --uplink-enabled true --host localhost"
+      "commandLineArgs": "channel save --index 1 --name Test --role Primary --psk 12345 --uplink-enabled true --host localhost --log debug"
     },
     "channel save": {
       "commandName": "Project",
-      "commandLineArgs": "channel save --index 1 --name Test --role Primary --psk 12345 --uplink-enabled true "
+      "commandLineArgs": "channel save --index 1 --name Test --role Primary --psk 12345 --uplink-enabled true --log debug"
     },
     "url get": {
       "commandName": "Project",
@@ -46,31 +46,31 @@
     },
     "url get localhost": {
       "commandName": "Project",
-      "commandLineArgs": "url get --host localhost"
+      "commandLineArgs": "url get --host localhost --log debug"
     },
     "url set": {
       "commandName": "Project",
-      "commandLineArgs": "url set https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe "
+      "commandLineArgs": "url set https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe --log debug"
     },
     "url set localhost": {
       "commandName": "Project",
-      "commandLineArgs": "url set https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe --host localhost"
+      "commandLineArgs": "url set https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe --host localhost --log debug"
     },
     "reboot": {
       "commandName": "Project",
-      "commandLineArgs": "reboot 3"
+      "commandLineArgs": "reboot 3 --log debug"
     },
     "reboot localhost": {
       "commandName": "Project",
-      "commandLineArgs": "reboot --host localhost"
+      "commandLineArgs": "reboot --host localhost --log debug"
     },
     "metadata": {
       "commandName": "Project",
-      "commandLineArgs": "metadata"
+      "commandLineArgs": "metadata --log debug"
     },
     "metadata localhost": {
       "commandName": "Project",
-      "commandLineArgs": "metadata --host localhost"
+      "commandLineArgs": "metadata --host localhost --log debug"
     }
   }
 }

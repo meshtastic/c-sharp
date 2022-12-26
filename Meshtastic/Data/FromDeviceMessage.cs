@@ -19,6 +19,7 @@ namespace Meshtastic.Data
                     var meshPacket = MeshPacket.Parser.ParseFrom(bytes);
                     adminMessage = AdminMessage.Parser.ParseFrom(meshPacket.Decoded.Payload);
                 }
+                
                 if (fromRadio?.Packet?.Decoded?.Portnum == PortNum.AdminApp)
                     adminMessage = AdminMessage.Parser?.ParseFrom(fromRadio?.Packet?.Decoded.Payload);
             }

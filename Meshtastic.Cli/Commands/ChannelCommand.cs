@@ -6,18 +6,33 @@ using Meshtastic.Cli.Binders;
 using Meshtastic.Protobufs;
 using System.Security.Cryptography;
 using System.Text;
+using System.Diagnostics;
 
 namespace Meshtastic.Cli.Commands;
 
 public class ChannelCommand : Command
 {
-    public ChannelCommand(string name, string description, Option<string> port, Option<string> host) : base(name, description)
+    public ChannelCommand(string name, string description, Option<string> port, Option<string> host, 
+        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
     {
+        var loggingBinder = new LoggingBinder(log);
         var operationArgument = new Argument<ChannelOperation>("operation", "The type of channel operation");
         operationArgument.AddCompletions(ctx => Enum.GetNames(typeof(ChannelOperation)));
 
-        var indexOption = new Option<int?>("--index", description: "Channel index");
+        var indexOption = new Option<int>("--index", description: "Channel index");
         indexOption.AddAlias("-i");
+        indexOption.SetDefaultValue(0);
+        indexOption.AddValidator(context =>
+        {
+            var nonIndexZeroOperation = new [] { ChannelOperation.Disable, ChannelOperation.Enable };
+            if (context.GetValueForOption(indexOption) < 0 || context.GetValueForOption(indexOption) > 8)
+                context.ErrorMessage = "Channel index is out of range (0-8)";
+            else if (nonIndexZeroOperation.Contains(context.GetValueForArgument(operationArgument)) &&
+                context.GetValueForOption(indexOption) == 0) 
+            {
+                context.ErrorMessage = "Cannot enable / disable PRIMARY channel";
+            }
+        });
         var nameOption = new Option<string?>("--name", description: "Channel name");
         nameOption.AddAlias("-n");
         var roleOption = new Option<Channel.Types.Role?>("--role", description: "Channel role");
@@ -29,12 +44,6 @@ public class ChannelCommand : Command
         var downlinkOption = new Option<bool?>("--downlink-enabled", description: "Channel downlink enabled");
         downlinkOption.AddAlias("-d");
         var channelBinder = new ChannelBinder(operationArgument, indexOption, nameOption, roleOption, pskOption, uplinkOption, downlinkOption);
-        
-        var channelCommandHandler = new ChannelCommandHandler();
-        this.SetHandler(channelCommandHandler.Handle, 
-            channelBinder, 
-            new ConnectionBinder(port, host), 
-            new LoggingBinder());
 
         AddArgument(operationArgument);
         AddOption(indexOption);
@@ -43,78 +52,71 @@ public class ChannelCommand : Command
         AddOption(pskOption);
         AddOption(uplinkOption);
         AddOption(downlinkOption);
+
+        this.SetHandler(async (settings, context, outputFormat, logger) =>
+            {
+                var handler = new ChannelCommandHandler(settings, context, outputFormat, logger);
+                await handler.Handle();
+            },
+            channelBinder,
+            new DeviceConnectionBinder(port, host),
+            output,
+            loggingBinder);
     }
 }
 
 public class ChannelCommandHandler : DeviceCommandHandler
 {
-    private ChannelOperationSettings? _settings;
-    public async Task Handle(ChannelOperationSettings settings, DeviceConnectionContext context, ILogger logger)
+    private readonly ChannelOperationSettings settings;
+
+    public ChannelCommandHandler(ChannelOperationSettings settings, 
+        DeviceConnectionContext context, 
+        OutputFormat outputFormat,
+        ILogger logger) : base(context, outputFormat, logger) 
+        {
+            this.settings = settings;
+        }
+
+    public async Task Handle()
     {
-        _settings = settings;
-        if (settings.Index.HasValue && (settings.Index.Value > 8 || settings.Index.Value < 0))
-        {
-            AnsiConsole.WriteLine("[red]Channel index is out of range[/]");
-            return;
-        }
-        if (settings.Operation != ChannelOperation.Add && !settings.Index.HasValue)
-        {
-            AnsiConsole.WriteLine($"[red]Must specify an index for this {settings.Operation} operation[/]");
-            return; 
-        }
-        if ((settings.Operation == ChannelOperation.Disable || settings.Operation == ChannelOperation.Enable) && 
-            settings.Index == 0) 
-        {
-            AnsiConsole.WriteLine($"[red]Cannot enable / disable PRIMARY channel[/]");
-            return;
-        }
-
-        await OnConnection(context, async () =>
-        {
-            connection = context.GetDeviceConnection();
-            var wantConfig = ToRadioMessageFactory.CreateWantConfigMessage();
-
-            await connection.WriteToRadio(wantConfig.ToByteArray(), DefaultIsCompleteAsync);
-        });
+        var wantConfig = ToRadioMessageFactory.CreateWantConfigMessage();
+        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        if (_settings == null)
-            throw new InvalidOperationException("Cannot complete ChannelCommandHandler without ChannelOperationSettings");
-
         var adminMessageFactory = new AdminMessageFactory(container);
         await BeginEditSettings(adminMessageFactory);
 
-        var channel = container.Channels.Find(c => c.Index == _settings.Index);
+        var channel = container.Channels.Find(c => c.Index == settings.Index);
 
         AnsiConsole.MarkupLine("Writing channel");
 
-        switch (_settings.Operation)
+        switch (settings.Operation)
         {
             case ChannelOperation.Add:
                 container.Channels.Find(c => c.Role == Channel.Types.Role.Disabled);
-                SetChannelSettings(_settings, channel);
+                SetChannelSettings(channel);
                 break;
             case ChannelOperation.Disable:
                 if (channel != null) channel.Role = Channel.Types.Role.Disabled;
                 break;
             case ChannelOperation.Save:
-                SetChannelSettings(_settings, channel);
+                SetChannelSettings(channel);
                 break;
             case ChannelOperation.Enable:
                 if (channel != null) channel.Role = Channel.Types.Role.Primary;
                 break;
             default:
-                throw new InvalidOperationException("Cannot complete ChannelCommandHandler without ChannelOperation");
+                throw new UnreachableException("Cannot complete ChannelCommandHandler without ChannelOperation");
         }
         var adminMessage = adminMessageFactory.CreateSetChannelMessage(channel!);
-        await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage).ToByteArray(), 
-            AlwaysComplete);
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), 
+            AnyResponseReceived);
         await CommitEditSettings(adminMessageFactory);
     }
 
-    private static void SetChannelSettings(ChannelOperationSettings settings, Channel? channel)
+    private void SetChannelSettings(Channel? channel)
     {
         if (channel != null)
         {
@@ -146,7 +148,7 @@ public class ChannelCommandHandler : DeviceCommandHandler
         }
         else
         {
-            AnsiConsole.MarkupLine("[red]Could not find available channel[/]");
+            throw new IndexOutOfRangeException($"Could not find available channel with index {settings!.Index}");
         }
     }
 }

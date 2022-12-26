@@ -2,38 +2,43 @@ using Google.Protobuf;
 using Microsoft.Extensions.Logging;
 using Meshtastic.Data;
 using Meshtastic.Cli.Binders;
+using Meshtastic.Cli.Enums;
 
 namespace Meshtastic.Cli.Commands;
 
 public class FactoryResetCommand : Command
 {
-    public FactoryResetCommand(string name, string description, Option<string> port, Option<string> host) : base(name, description)
+    public FactoryResetCommand(string name, string description, Option<string> port, Option<string> host, 
+        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
     {
-        var handler = new FactoryResetCommandHandler();
-        this.SetHandler(handler.Handle,
-            new ConnectionBinder(port, host),
-            new LoggingBinder());
+        this.SetHandler(async (context, outputFormat, logger) =>
+            {
+                var handler = new FactoryResetCommandHandler(context, outputFormat, logger);
+                await handler.Handle();
+            },
+            new DeviceConnectionBinder(port, host),
+            output,
+            new LoggingBinder(log));
     }
 }
 public class FactoryResetCommandHandler : DeviceCommandHandler
 {
-    public async Task Handle(DeviceConnectionContext context, ILogger logger)
-    {
-        await OnConnection(context, async () =>
-        {
-            connection = context.GetDeviceConnection();
-            var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
+    public FactoryResetCommandHandler(DeviceConnectionContext context,
+        OutputFormat outputFormat,
+        ILogger logger) : base(context, outputFormat, logger) { }
 
-            await connection.WriteToRadio(wantConfig.ToByteArray(), DefaultIsCompleteAsync);
-        });
+    public async Task Handle()
+    {
+        var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
+        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        AnsiConsole.WriteLine("Getting device metadata...");
+        Logger.LogInformation("Factory reseting device...");
         var adminMessageFactory = new AdminMessageFactory(container);
         var adminMessage = adminMessageFactory.CreateFactoryResetMessage();
-        await connection!.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage).ToByteArray(), 
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), 
             (fromDevice, container) =>
             {
                 return Task.FromResult(fromDevice != null);
