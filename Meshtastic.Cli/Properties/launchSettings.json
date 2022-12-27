@@ -26,11 +26,15 @@
     },
     "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069": {
       "commandName": "Project",
-      "commandLineArgs": "set  --setting mqtt.address=me.myhost.org display.screenOnSecs=42069 --log debug"
+      "commandLineArgs": "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069 --log debug"
     },
     "set --setting mqtt.host=mqtt.myhost.org display.screenOnSecs=222 localhost": {
       "commandName": "Project",
       "commandLineArgs": "set --setting mqtt.address=me.myhost.org display.screenOnSecs=42069 --host localhost --log debug"
+    },
+    "set --setting lora.region=US": {
+      "commandName": "Project",
+      "commandLineArgs": "set --setting lora.region=US --log debug"
     },
     "channel save localhost": {
       "commandName": "Project",
@@ -75,6 +79,10 @@
     "fixed-position": {
       "commandName": "Project",
       "commandLineArgs": "fixed-position 34.000 -90.023 123 --log debug"
+    },
+    "text": {
+      "commandName": "Project",
+      "commandLineArgs": "text \"Derp\" --log debug"
     }
   }
 }

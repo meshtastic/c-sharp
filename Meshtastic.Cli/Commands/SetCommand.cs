@@ -9,8 +9,8 @@ namespace Meshtastic.Cli.Commands;
 
 public class SetCommand : Command
 {
-    public SetCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log, Option<IEnumerable<string>> settings) : 
+    public SetCommand(string name, string description, Option<IEnumerable<string>> settings, Option<string> port, Option<string> host, 
+        Option<OutputFormat> output, Option<LogLevel> log) : 
         base(name, description)
     {
         this.SetHandler(async (settings, context, outputFormat, logger) =>

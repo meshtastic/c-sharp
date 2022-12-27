@@ -3,16 +3,16 @@ using Meshtastic.Protobufs;
 
 namespace Meshtastic.Data;
 
-public class PositionMessageFactory 
+public class TextMessageFactory
 {
     private readonly DeviceStateContainer container;
 
-    public PositionMessageFactory(DeviceStateContainer container)
+    public TextMessageFactory(DeviceStateContainer container)
     {
         this.container = container;
     }
 
-    public MeshPacket GetNewPositionPacket(Position message, uint channel = 0, uint? to = null, uint? dest = null)
+    public MeshPacket GetTextMessagePacket(string message, uint channel = 0, uint? to = null, uint? dest = null)
     {
         return new MeshPacket()
         {
@@ -24,8 +24,8 @@ public class PositionMessageFactory
             Decoded = new Protobufs.Data()
             {
                 Dest = dest ?? container.MyNodeInfo.MyNodeNum,
-                Portnum = PortNum.PositionApp,
-                Payload = message.ToByteString(),
+                Portnum = PortNum.TextMessageApp,
+                Payload = ByteString.CopyFromUtf8(message),
                 WantResponse = true,
             },
         };

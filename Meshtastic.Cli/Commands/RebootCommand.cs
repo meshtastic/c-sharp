@@ -1,9 +1,7 @@
-using Google.Protobuf;
 using Microsoft.Extensions.Logging;
 using Meshtastic.Data;
 using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
-using Meshtastic.Cli.Parsers;
 
 namespace Meshtastic.Cli.Commands;
 

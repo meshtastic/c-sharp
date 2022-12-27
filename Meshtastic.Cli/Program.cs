@@ -31,17 +31,19 @@ root.AddGlobalOption(host);
 root.AddGlobalOption(output);
 root.AddGlobalOption(log);
 
+
 root.AddCommand(new ListCommand("list", "List available serial ports", output, log));
 root.AddCommand(new MonitorCommand("monitor", "Serial monitor for the device", port, host, output, log));
 root.AddCommand(new InfoCommand("info", "Dump info about the device", port, host, output, log));
-root.AddCommand(new GetCommand("get", "Display one or more settings from the device", port, host, output, log, setting));
-root.AddCommand(new SetCommand("set", "Save one or more settings onto the device", port, host, output, log, setting));
+root.AddCommand(new GetCommand("get", "Display one or more settings from the device", setting, port, host, output, log));
+root.AddCommand(new SetCommand("set", "Save one or more settings onto the device", setting, port, host, output, log));
 root.AddCommand(new ChannelCommand("channel", "Enable, Disable, Add, Save channels on the device", port, host, output, log));
 root.AddCommand(new UrlCommand("url", "Get or set shared channel url", port, host, output, log));
 root.AddCommand(new RebootCommand("reboot", "Reboot the device", port, host, output, log));
 root.AddCommand(new MetadataCommand("metadata", "Get device metadata from the device", port, host, output, log));
 root.AddCommand(new FactoryResetCommand("factory-reset", "Factory reset configuration of the device", port, host, output, log));
 root.AddCommand(new FixedPositionCommand("fixed-position", "Set the device to a fixed position", port, host, output, log));
+root.AddCommand(new SendTextCommand("text", "Send a text message from the device", port, host, output, log));
 
 var parser = new CommandLineBuilder(root)
     .UseExceptionHandler((ex, context) =>
