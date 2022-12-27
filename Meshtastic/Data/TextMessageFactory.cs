@@ -18,7 +18,7 @@ public class TextMessageFactory
         {
             Channel = channel,
             WantAck = false,
-            To = to ?? container.MyNodeInfo.MyNodeNum,
+            To = to ?? 0xffffffff, // Default to broadcast
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
             HopLimit = container.GetHopLimitOrDefault(),
             Decoded = new Protobufs.Data()
