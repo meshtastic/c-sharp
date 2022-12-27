@@ -1,7 +1,7 @@
 using Google.Protobuf;
 using System.Reflection;
 
-namespace Meshtastic.Cli.Reflection;
+namespace Meshtastic.Cli.Extensions;
 
 public static class ReflectionExtensions
 {

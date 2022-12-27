@@ -2,7 +2,7 @@ using Google.Protobuf;
 using Meshtastic.Cli;
 using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Parsers;
-using Meshtastic.Cli.Reflection;
+using Meshtastic.Cli.Extensions;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using QRCoder;
@@ -32,7 +32,6 @@ public class ProtobufPrinter
             grid.AddRow(PrintConfig(container.LocalConfig, "[bold]Config[/]"), 
                 PrintConfig(container.LocalModuleConfig, "[bold]Module Config[/]"));
             AnsiConsole.Write(grid);
-
             AnsiConsole.Write(PrintNodeInfos(container.Nodes));
         }
     }
@@ -57,8 +56,8 @@ public class ProtobufPrinter
             table.AddRow(node.Num.ToString(),
                 node.User.ShortName,
                 node.User.LongName,
-                node.Position?.LatitudeI.ToString() ?? String.Empty,
-                node.Position?.LongitudeI.ToString() ?? String.Empty,
+                (node.Position?.LatitudeI * 1e-7).ToString() ?? String.Empty,
+                (node.Position?.LongitudeI * 1e-7).ToString() ?? String.Empty,
                 node.DeviceMetrics?.BatteryLevel.ToString() ?? String.Empty,
                 node.DeviceMetrics?.AirUtilTx.ToString() ?? String.Empty,
                 node.DeviceMetrics?.ChannelUtilization.ToString() ?? String.Empty,

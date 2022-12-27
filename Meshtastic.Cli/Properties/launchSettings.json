@@ -71,6 +71,10 @@
     "metadata localhost": {
       "commandName": "Project",
       "commandLineArgs": "metadata --host localhost --log debug"
+    },
+    "fixed-position": {
+      "commandName": "Project",
+      "commandLineArgs": "fixed-position 34.000 -90.023 123 --log debug"
     }
   }
 }

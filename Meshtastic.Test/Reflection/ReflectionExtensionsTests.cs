@@ -1,5 +1,5 @@
 using Meshtastic.Cli.Parsers;
-using Meshtastic.Cli.Reflection;
+using Meshtastic.Cli.Extensions;
 using Meshtastic.Protobufs;
 
 namespace Meshtastic.Test.Parsers;

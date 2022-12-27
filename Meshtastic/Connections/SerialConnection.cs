@@ -4,6 +4,7 @@ using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Meshtastic.Connections;
 
@@ -16,8 +17,8 @@ public class SerialConnection : DeviceConnection
     {
         serialPort = new SerialPort(port, baudRate)
         {
-            Handshake = Handshake.None,
             DtrEnable = true,
+            WriteBufferSize = 8,
         };
     }
 
@@ -30,9 +31,6 @@ public class SerialConnection : DeviceConnection
         while (serialPort.IsOpen) 
         {
             Logger.LogDebug("Opened serial port");
-            // Hack for posix causing a RST
-            serialPort.DtrEnable = false;
-
             if (serialPort.BytesToRead > 0) {
                 Console.Write(serialPort.ReadExisting());
             }
@@ -43,14 +41,12 @@ public class SerialConnection : DeviceConnection
 
     public override async Task WriteToRadio(ToRadio data, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete)
     {
-
-        await Task.Delay(500);
+        await Task.Delay(700);
         var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
         if (!serialPort.IsOpen)
             serialPort.Open();
-        serialPort.DtrEnable = false;
-        serialPort.Write(PacketFraming.SERIAL_PREAMBLE, 0, PacketFraming.SERIAL_PREAMBLE.Length);
-        serialPort.Write(toRadio, 0, toRadio.Length);
+        await serialPort.BaseStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE, 0, PacketFraming.SERIAL_PREAMBLE.Length);
+        await serialPort.BaseStream.WriteAsync(toRadio, 0, toRadio.Length);
         Logger.LogDebug($"Sent: {data}");
         await ReadFromRadio(isComplete);
     }
@@ -59,18 +55,15 @@ public class SerialConnection : DeviceConnection
     {
         while (serialPort.IsOpen)
         {
-            if (await ParsePackets(Convert.ToByte(serialPort.ReadByte()), isComplete))
+            if (serialPort.BytesToRead == 0) 
+            {
+                await Task.Delay(10);
+                continue;
+            }
+            var buffer = new byte[1];
+            await serialPort.BaseStream.ReadAsync(buffer);
+            if (await ParsePackets(buffer.First(), isComplete))
                 return;
         }
     }
-    //public override async Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
-    //{
-    //    while (serialPort.IsOpen)
-    //    {
-    //        var buffer = new byte[1];
-    //        await serialPort.BaseStream.ReadAsync(buffer, 0, 1);
-    //        if (await ParsePackets(buffer.First(), isComplete))
-    //            return;
-    //    }
-    //}
 }

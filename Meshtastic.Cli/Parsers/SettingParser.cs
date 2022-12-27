@@ -1,4 +1,4 @@
-﻿using Meshtastic.Cli.Reflection;
+﻿using Meshtastic.Cli.Extensions;
 using Meshtastic.Protobufs;
 using System.Reflection;
 
