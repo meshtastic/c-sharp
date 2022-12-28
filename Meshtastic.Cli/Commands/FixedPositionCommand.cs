@@ -23,7 +23,7 @@ public class FixedPositionCommand : Command
         });
         AddArgument(latArg);
 
-        var lonArg = new Argument<decimal>("lat", description: "Longitude of the node (decimal format)");
+        var lonArg = new Argument<decimal>("lon", description: "Longitude of the node (decimal format)");
         lonArg.AddValidator(result =>
         {
             if (Math.Abs(result.GetValueForArgument(lonArg)) > 180)

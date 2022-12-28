@@ -37,10 +37,6 @@ public class FactoryResetCommandHandler : DeviceCommandHandler
         Logger.LogInformation("Factory reseting device...");
         var adminMessageFactory = new AdminMessageFactory(container);
         var adminMessage = adminMessageFactory.CreateFactoryResetMessage();
-        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), 
-            (fromDevice, container) =>
-            {
-                return Task.FromResult(fromDevice != null);
-            });
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AnyResponseReceived);
     }
 }
