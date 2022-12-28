@@ -33,13 +33,13 @@ namespace Meshtastic.Protobufs {
             "dXJyZW50GAYgASgCIoIBCglUZWxlbWV0cnkSDAoEdGltZRgBIAEoBxIoCg5k",
             "ZXZpY2VfbWV0cmljcxgCIAEoCzIOLkRldmljZU1ldHJpY3NIABIyChNlbnZp",
             "cm9ubWVudF9tZXRyaWNzGAMgASgLMhMuRW52aXJvbm1lbnRNZXRyaWNzSABC",
-            "CQoHdmFyaWFudCquAQoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1Jf",
+            "CQoHdmFyaWFudCq5AQoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1Jf",
             "VU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMS",
             "CgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQ",
             "BxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoSDAoIUU1D",
-            "NTg4M0wQC0JjChNjb20uZ2Vla3N2aWxsZS5tZXNoQg9UZWxlbWV0cnlQcm90",
-            "b3NIA1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1l",
-            "c2h0YXN0aWMuUHJvdG9idWZzYgZwcm90bzM="));
+            "NTg4M0wQCxIJCgVTSFQzMRAMQmMKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1Rl",
+            "bGVtZXRyeVByb3Rvc0gDWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
+            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -117,6 +117,11 @@ namespace Meshtastic.Protobufs {
     /// 3-Axis magnetic sensor
     /// </summary>
     [pbr::OriginalName("QMC5883L")] Qmc5883L = 11,
+    /// <summary>
+    ///
+    /// High accuracy temperature and humidity
+    /// </summary>
+    [pbr::OriginalName("SHT31")] Sht31 = 12,
   }
 
   #endregion
