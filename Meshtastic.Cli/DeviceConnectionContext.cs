@@ -27,9 +27,7 @@ public class DeviceConnectionContext
         var ports = SerialConnection.ListPorts();
 
         if (!ports.Any())
-        {
             throw new InvalidOperationException("No port or hostname specified and could not find available serial ports");
-        }
         if (ports.Length == 1)
             return new SerialConnection(logger, ports.First());
 
