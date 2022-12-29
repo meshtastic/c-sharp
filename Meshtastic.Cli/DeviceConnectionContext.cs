@@ -32,7 +32,7 @@ public class DeviceConnectionContext
             return new SerialConnection(logger, ports.First());
 
         var selectedPort = AnsiConsole.Prompt(new SelectionPrompt<string>()
-            .Title("No port or host specificified, please select a serial port")
+            .Title("No port or host specified, please select a serial port")
             .AddChoices(ports));
 
         return new SerialConnection(logger, selectedPort);

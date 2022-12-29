@@ -41,7 +41,7 @@ public class SerialConnection : DeviceConnection
 
     public override async Task WriteToRadio(ToRadio data, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete)
     {
-        await Task.Delay(700);
+        await Task.Delay(1000);
         var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
         if (!serialPort.IsOpen)
             serialPort.Open();

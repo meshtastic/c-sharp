@@ -13,9 +13,9 @@ namespace Meshtastic.Cli.Commands;
 public class ChannelCommand : Command
 {
     public ChannelCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
     {
-        var loggingBinder = new LoggingBinder(log);
+        var commandContextBinder = new CommandContextBinder(log, output, dest);
         var operationArgument = new Argument<ChannelOperation>("operation", "The type of channel operation");
         operationArgument.AddCompletions(ctx => Enum.GetNames(typeof(ChannelOperation)));
 
@@ -53,15 +53,14 @@ public class ChannelCommand : Command
         AddOption(uplinkOption);
         AddOption(downlinkOption);
 
-        this.SetHandler(async (settings, context, outputFormat, logger) =>
+        this.SetHandler(async (settings, context, commandContext) =>
             {
-                var handler = new ChannelCommandHandler(settings, context, outputFormat, logger);
+                var handler = new ChannelCommandHandler(settings, context, commandContext);
                 await handler.Handle();
             },
             channelBinder,
             new DeviceConnectionBinder(port, host),
-            output,
-            loggingBinder);
+            commandContextBinder);
     }
 }
 
@@ -70,9 +69,8 @@ public class ChannelCommandHandler : DeviceCommandHandler
     private readonly ChannelOperationSettings settings;
 
     public ChannelCommandHandler(ChannelOperationSettings settings, 
-        DeviceConnectionContext context, 
-        OutputFormat outputFormat,
-        ILogger logger) : base(context, outputFormat, logger) 
+        DeviceConnectionContext connectionContext, 
+        CommandContext commandContext) : base(connectionContext, commandContext) 
         {
             this.settings = settings;
         }

@@ -10,23 +10,20 @@ namespace Meshtastic.Cli.Commands;
 public class MetadataCommand : Command
 {
     public MetadataCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
     {
-        this.SetHandler(async (context, outputFormat, logger) =>
+        this.SetHandler(async (context, commandContext) =>
             {
-                var handler = new MetadataCommandHandler(context, outputFormat, logger);
+                var handler = new MetadataCommandHandler(context, commandContext);
                 await handler.Handle();
             },
             new DeviceConnectionBinder(port, host),
-            output,
-            new LoggingBinder(log));
+            new CommandContextBinder(log, output, dest));
     }
 }
 public class MetadataCommandHandler : DeviceCommandHandler
 {
-    public MetadataCommandHandler(DeviceConnectionContext context,
-        OutputFormat outputFormat,
-        ILogger logger) : base(context, outputFormat, logger) { }
+    public MetadataCommandHandler(DeviceConnectionContext context, CommandContext commandContext) : base(context, commandContext) { }
 
     public async Task Handle()
     {

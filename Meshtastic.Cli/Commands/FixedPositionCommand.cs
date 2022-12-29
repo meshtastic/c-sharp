@@ -1,11 +1,8 @@
-using Google.Protobuf;
 using Microsoft.Extensions.Logging;
 using Meshtastic.Data;
-using Meshtastic.Cli.Parsers;
 using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
 using Meshtastic.Protobufs;
-using System;
 using Meshtastic.Extensions;
 
 namespace Meshtastic.Cli.Commands;
@@ -13,7 +10,7 @@ namespace Meshtastic.Cli.Commands;
 public class FixedPositionCommand : Command
 {
     public FixedPositionCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
     {
         var latArg = new Argument<decimal>("lat", description: "Latitude of the node (decimal format)");
         latArg.AddValidator(result => 
@@ -35,17 +32,16 @@ public class FixedPositionCommand : Command
         altArg.SetDefaultValue(0);
         AddArgument(altArg);
 
-        this.SetHandler(async (lat, lon, alt, context, outputFormat, logger) =>
+        this.SetHandler(async (lat, lon, alt, context, commandContext) =>
             {
-                var handler = new FixedPositionCommandHandler(lat, lon, alt, context, outputFormat, logger);
+                var handler = new FixedPositionCommandHandler(lat, lon, alt, context, commandContext);
                 await handler.Handle();
             },
             latArg, 
             lonArg, 
             altArg,
             new DeviceConnectionBinder(port, host),
-            output,
-            new LoggingBinder(log));
+            new CommandContextBinder(log, output, dest));
     }
 }
 public class FixedPositionCommandHandler : DeviceCommandHandler
@@ -59,8 +55,7 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
         decimal longitude,
         int altitude,
         DeviceConnectionContext context,
-        OutputFormat outputFormat,
-        ILogger logger) : base(context, outputFormat, logger)
+        CommandContext commandContext) : base(context, commandContext)
     {
         this.latitude = latitude;
         this.longitude = longitude;

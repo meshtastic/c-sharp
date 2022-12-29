@@ -8,7 +8,7 @@ namespace Meshtastic.Cli.Commands;
 public class RebootCommand : Command
 {
     public RebootCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
     {
         var otaOption = new Option<bool>("ota", "Reboot into OTA update mode");
         otaOption.SetDefaultValue(false);
@@ -16,16 +16,15 @@ public class RebootCommand : Command
         var secondsArgument = new Argument<int>("seconds", "Number of seconds until reboot");
         secondsArgument.SetDefaultValue(5);
 
-        this.SetHandler(async (isOtaMode, seconds, context, outputFormat, logger) =>
+        this.SetHandler(async (isOtaMode, seconds, context, commandContext) =>
             {
-                var handler = new RebootCommandHandler(isOtaMode, seconds, context, outputFormat, logger);
+                var handler = new RebootCommandHandler(isOtaMode, seconds, context, commandContext);
                 await handler.Handle();
             },
             otaOption,
             secondsArgument,
             new DeviceConnectionBinder(port, host),
-            output,
-            new LoggingBinder(log));
+            new CommandContextBinder(log, output, dest));
         this.AddOption(otaOption);
         this.AddArgument(secondsArgument);
     }
@@ -37,8 +36,7 @@ public class RebootCommandHandler : DeviceCommandHandler
     public RebootCommandHandler(bool isOtaMode, 
         int seconds,
         DeviceConnectionContext context,
-        OutputFormat outputFormat,
-        ILogger logger) : base(context, outputFormat, logger)
+        CommandContext commandContext) : base(context, commandContext)
     {
         this.isOtaMode = isOtaMode;
         this.seconds = seconds;

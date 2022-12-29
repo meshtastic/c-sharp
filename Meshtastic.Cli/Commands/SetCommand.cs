@@ -10,28 +10,25 @@ namespace Meshtastic.Cli.Commands;
 public class SetCommand : Command
 {
     public SetCommand(string name, string description, Option<IEnumerable<string>> settings, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log) : 
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : 
         base(name, description)
     {
-        this.SetHandler(async (settings, context, outputFormat, logger) =>
+        this.SetHandler(async (settings, context, commandContext) =>
             {
-                var handler = new SetCommandHandler(settings, context, outputFormat, logger);
+                var handler = new SetCommandHandler(settings, context, commandContext);
                 await handler.Handle();
             },
             settings,
             new DeviceConnectionBinder(port, host),
-            output,
-            new LoggingBinder(log));
+            new CommandContextBinder(log, output, dest));
         this.AddOption(settings);
     }
 }
 public class SetCommandHandler : DeviceCommandHandler
 {
     private readonly IEnumerable<ParsedSetting>? parsedSettings;
-    public SetCommandHandler(IEnumerable<string> settings,
-        DeviceConnectionContext context,
-        OutputFormat outputFormat,
-        ILogger logger) : base(context, outputFormat, logger)
+    public SetCommandHandler(IEnumerable<string> settings, DeviceConnectionContext context, CommandContext commandContext) : 
+        base(context, commandContext)
     {
         var (result, isValid) = ParseSettingOptions(settings, isGetOnly: false);
         if (!isValid)

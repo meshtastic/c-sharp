@@ -20,16 +20,15 @@ public class UrlCommand : Command
         var urlArgument = new Argument<string?>("url", "The channel url to set on the device");
         urlArgument.SetDefaultValue(null);
 
-        this.SetHandler(async (operation, url, context, outputFormat, logger) =>
+        this.SetHandler(async (operation, url, context, commandContext) =>
             {
-                var handler = new UrlCommandHandler(operation, url, context, outputFormat, logger);
+                var handler = new UrlCommandHandler(operation, url, context, commandContext);
                 await handler.Handle();
             },
             urlOperationArgument,
             urlArgument,
             new DeviceConnectionBinder(port, host),
-            output,
-            new LoggingBinder(log));
+            new CommandContextBinder(log, output, new Option<uint?>("dest") { }));
         this.AddArgument(urlOperationArgument);
         this.AddArgument(urlArgument);
     }
@@ -40,11 +39,8 @@ public class UrlCommandHandler : DeviceCommandHandler
     private UrlOperation operation;
     private readonly string? url;
 
-    public UrlCommandHandler(UrlOperation operation, 
-        string? url,
-        DeviceConnectionContext context,
-       OutputFormat outputFormat,
-       ILogger logger) : base(context, outputFormat, logger) 
+    public UrlCommandHandler(UrlOperation operation, string? url, DeviceConnectionContext context, CommandContext commandContext) : 
+        base(context, commandContext) 
     {
         this.operation = operation;
         this.url = url;

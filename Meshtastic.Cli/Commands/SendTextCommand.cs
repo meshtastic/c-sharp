@@ -8,7 +8,7 @@ namespace Meshtastic.Cli.Commands;
 public class SendTextCommand : Command
 {
     public SendTextCommand(string name, string description, Option<string> port, Option<string> host,
-        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
     {
         var messageArg = new Argument<string>("message", description: "Text message contents");
         messageArg.AddValidator(result =>
@@ -18,15 +18,14 @@ public class SendTextCommand : Command
         });
         AddArgument(messageArg);
 
-        this.SetHandler(async (message, context, outputFormat, logger) =>
+        this.SetHandler(async (message, context, commandContext) =>
             {
-                var handler = new SendTextCommandHandler(message, context, outputFormat, logger);
+                var handler = new SendTextCommandHandler(message, context, commandContext);
                 await handler.Handle();
             },
             messageArg,
             new DeviceConnectionBinder(port, host),
-            output,
-            new LoggingBinder(log));
+            new CommandContextBinder(log, output, dest));
     }
 }
 
@@ -34,10 +33,8 @@ public class SendTextCommandHandler : DeviceCommandHandler
 {
     private readonly string message;
 
-    public SendTextCommandHandler(string message,
-        DeviceConnectionContext context,
-        OutputFormat outputFormat,
-        ILogger logger) : base(context, outputFormat, logger)
+    public SendTextCommandHandler(string message, DeviceConnectionContext context, CommandContext commandContext) : 
+        base(context, commandContext)
     {
         this.message = message;
     }

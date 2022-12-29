@@ -13,13 +13,15 @@ public class DeviceCommandHandler
     protected readonly ToRadioMessageFactory ToRadioMessageFactory;
     protected readonly OutputFormat OutputFormat;
     protected readonly ILogger Logger;
+    private readonly uint? Destination;
 
-    public DeviceCommandHandler(DeviceConnectionContext context, OutputFormat outputFormat, ILogger logger)
+    public DeviceCommandHandler(DeviceConnectionContext connectionContext, CommandContext commandContext)
     {
-        this.Connection = context.GetDeviceConnection(logger);
+        this.Connection = connectionContext.GetDeviceConnection(commandContext.Logger);
         this.ToRadioMessageFactory = new();
-        this.OutputFormat = outputFormat;
-        this.Logger = logger;
+        this.OutputFormat = commandContext.OutputFormat;
+        this.Logger = commandContext.Logger;
+        this.Destination = commandContext.Destination;
     }
 
     protected static (SettingParserResult? result, bool isValid) ParseSettingOptions(IEnumerable<string> settings, bool isGetOnly)

@@ -8,23 +8,20 @@ namespace Meshtastic.Cli.Commands;
 public class InfoCommand : Command
 {
     public InfoCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
     {
-        this.SetHandler(async (context, outputFormat, logger) =>
+        this.SetHandler(async (context, commandContext) =>
             {
-                var handler = new InfoCommandHandler(context, outputFormat, logger);
+                var handler = new InfoCommandHandler(context, commandContext);
                 await handler.Handle();
             },
             new DeviceConnectionBinder(port, host),
-            output,
-            new LoggingBinder(log));
+            new CommandContextBinder(log, output, dest));
     }
 }
 public class InfoCommandHandler : DeviceCommandHandler
 {
-    public InfoCommandHandler(DeviceConnectionContext context,
-        OutputFormat outputFormat,
-        ILogger logger) : base(context, outputFormat, logger) { }
+    public InfoCommandHandler(DeviceConnectionContext context, CommandContext commandContext) : base(context, commandContext) { }
     public async Task Handle()
     {
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
