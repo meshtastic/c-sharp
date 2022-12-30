@@ -65,7 +65,7 @@ public class UrlCommandHandler : DeviceCommandHandler
 
     private async Task SetChannelsFromUrl(DeviceStateContainer container)
     {
-        var adminMessageFactory = new AdminMessageFactory(container);
+        var adminMessageFactory = new AdminMessageFactory(container, Destination);
         await BeginEditSettings(adminMessageFactory);
 
         var urlParser = new UrlParser(this.url!);

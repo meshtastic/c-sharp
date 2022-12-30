@@ -33,7 +33,7 @@ public class FactoryResetCommandHandler : DeviceCommandHandler
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
         Logger.LogInformation("Factory reseting device...");
-        var adminMessageFactory = new AdminMessageFactory(container);
+        var adminMessageFactory = new AdminMessageFactory(container, Destination);
         var adminMessage = adminMessageFactory.CreateFactoryResetMessage();
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AnyResponseReceived);
     }

@@ -82,7 +82,7 @@
     },
     "text": {
       "commandName": "Project",
-      "commandLineArgs": "text \"Derp\" --log debug"
+      "commandLineArgs": "text \"Derp\" --log debug --dest 0"
     }
   }
 }

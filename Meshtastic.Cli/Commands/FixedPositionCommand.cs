@@ -69,7 +69,7 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
 
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        var adminMessageFactory = new AdminMessageFactory(container);
+        var adminMessageFactory = new AdminMessageFactory(container, Destination);
         var positionMessageFactory = new PositionMessageFactory(container);
         
         await BeginEditSettings(adminMessageFactory);

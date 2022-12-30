@@ -8,24 +8,25 @@ namespace Meshtastic.Data;
 public class AdminMessageFactory 
 {
     private readonly DeviceStateContainer container;
+    private readonly uint? dest;
 
-    public AdminMessageFactory(DeviceStateContainer container)
+    public AdminMessageFactory(DeviceStateContainer container, uint? dest = null)
     {
         this.container = container;
+        this.dest = dest;
     }
 
-    private MeshPacket GetNewMeshPacket(AdminMessage message, uint? to = null, uint? dest = null)
+    private MeshPacket GetNewMeshPacket(AdminMessage message)
     {
         return new MeshPacket()
         {
             Channel = container.GetAdminChannelIndex(),
             WantAck = false,
-            To = to ?? container.MyNodeInfo.MyNodeNum,
+            To = dest ?? container.MyNodeInfo.MyNodeNum,
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
             HopLimit = container.GetHopLimitOrDefault(),
             Decoded = new Protobufs.Data()
             {
-                Dest = dest ?? container.MyNodeInfo.MyNodeNum,
                 Portnum = PortNum.AdminApp,
                 Payload = message.ToByteString(),
                 WantResponse = true,

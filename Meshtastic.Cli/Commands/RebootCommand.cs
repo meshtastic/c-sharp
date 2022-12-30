@@ -32,7 +32,7 @@ public class RebootCommand : Command
 public class RebootCommandHandler : DeviceCommandHandler
 {
     private bool isOtaMode = false;
-    private int seconds = 10;
+    private int seconds = 5;
     public RebootCommandHandler(bool isOtaMode, 
         int seconds,
         DeviceConnectionContext context,
@@ -50,7 +50,7 @@ public class RebootCommandHandler : DeviceCommandHandler
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
         Logger.LogInformation($"Rebooting in {seconds} seconds...");
-        var adminMessageFactory = new AdminMessageFactory(container);
+        var adminMessageFactory = new AdminMessageFactory(container, Destination);
         var adminMessage = adminMessageFactory.CreateRebootMessage(seconds, isOtaMode);
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AnyResponseReceived);
     }

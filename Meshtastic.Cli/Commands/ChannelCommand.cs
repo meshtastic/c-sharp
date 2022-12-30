@@ -83,7 +83,7 @@ public class ChannelCommandHandler : DeviceCommandHandler
 
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        var adminMessageFactory = new AdminMessageFactory(container);
+        var adminMessageFactory = new AdminMessageFactory(container, Destination);
         await BeginEditSettings(adminMessageFactory);
 
         var channel = container.Channels.Find(c => c.Index == settings.Index);

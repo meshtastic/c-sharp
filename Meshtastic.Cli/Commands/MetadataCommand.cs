@@ -34,7 +34,7 @@ public class MetadataCommandHandler : DeviceCommandHandler
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
         Logger.LogInformation("Getting device metadata...");
-        var adminMessageFactory = new AdminMessageFactory(container);
+        var adminMessageFactory = new AdminMessageFactory(container, Destination);
         var adminMessage = adminMessageFactory.CreateGetMetadataMessage();
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), 
             (fromDevice, container) =>

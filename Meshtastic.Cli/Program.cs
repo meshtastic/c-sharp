@@ -32,6 +32,7 @@ root.AddGlobalOption(port);
 root.AddGlobalOption(host);
 root.AddGlobalOption(output);
 root.AddGlobalOption(log);
+root.AddGlobalOption(dest);
 
 
 root.AddCommand(new ListCommand("list", "List available serial ports", output, log));

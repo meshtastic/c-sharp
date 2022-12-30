@@ -2,6 +2,8 @@ using Microsoft.Extensions.Logging;
 using Meshtastic.Data;
 using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
+using Meshtastic.Display;
+using Meshtastic.Protobufs;
 
 namespace Meshtastic.Cli.Commands;
 
@@ -49,7 +51,11 @@ public class SendTextCommandHandler : DeviceCommandHandler
         var textMessageFactory = new TextMessageFactory(container);
 
         var textMessage = textMessageFactory.GetTextMessagePacket(message);
-        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(textMessage), AnyResponseReceived);
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(textMessage),
+             (fromDevice, container) =>
+             {
+                 return Task.FromResult(false);
+             });
         Logger.LogInformation($"Sending text messagee...");
     }
 }

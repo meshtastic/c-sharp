@@ -1,4 +1,3 @@
-using Google.Protobuf;
 using Microsoft.Extensions.Logging;
 using Meshtastic.Data;
 using Meshtastic.Cli.Parsers;
@@ -24,6 +23,7 @@ public class SetCommand : Command
         this.AddOption(settings);
     }
 }
+
 public class SetCommandHandler : DeviceCommandHandler
 {
     private readonly IEnumerable<ParsedSetting>? parsedSettings;
@@ -44,7 +44,7 @@ public class SetCommandHandler : DeviceCommandHandler
 
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        var adminMessageFactory = new AdminMessageFactory(container);
+        var adminMessageFactory = new AdminMessageFactory(container, Destination);
         await BeginEditSettings(adminMessageFactory);
 
         foreach (var setting in parsedSettings!)

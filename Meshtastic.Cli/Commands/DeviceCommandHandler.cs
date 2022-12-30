@@ -13,7 +13,7 @@ public class DeviceCommandHandler
     protected readonly ToRadioMessageFactory ToRadioMessageFactory;
     protected readonly OutputFormat OutputFormat;
     protected readonly ILogger Logger;
-    private readonly uint? Destination;
+    protected readonly uint? Destination;
 
     public DeviceCommandHandler(DeviceConnectionContext connectionContext, CommandContext commandContext)
     {
