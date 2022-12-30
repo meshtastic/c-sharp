@@ -8,7 +8,8 @@ namespace Meshtastic.Cli.Commands;
 public class FactoryResetCommand : Command
 {
     public FactoryResetCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : 
+        base(name, description)
     {
         this.SetHandler(async (context, commandContext) =>
             {
@@ -16,7 +17,7 @@ public class FactoryResetCommand : Command
                 await handler.Handle();
             },
             new DeviceConnectionBinder(port, host),
-            new CommandContextBinder(log, output, new Option<uint?>("dest") { }));
+            new CommandContextBinder(log, output, dest, selectDest));
     }
 }
 public class FactoryResetCommandHandler : DeviceCommandHandler

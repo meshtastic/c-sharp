@@ -13,9 +13,10 @@ namespace Meshtastic.Cli.Commands;
 public class ChannelCommand : Command
 {
     public ChannelCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : 
+        base(name, description)
     {
-        var commandContextBinder = new CommandContextBinder(log, output, dest);
+        var commandContextBinder = new CommandContextBinder(log, output, dest, selectDest);
         var operationArgument = new Argument<ChannelOperation>("operation", "The type of channel operation");
         operationArgument.AddCompletions(ctx => Enum.GetNames(typeof(ChannelOperation)));
 

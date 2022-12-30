@@ -17,7 +17,7 @@ public class MonitorCommand : Command
             await handler.Handle();
         },
         new DeviceConnectionBinder(port, host),
-        new CommandContextBinder(log, output, new Option<uint?>("dest") { }));
+        new CommandContextBinder(log, output, new Option<uint?>("dest") { }, new Option<bool>("selectDest") { }));
     }
 }
 

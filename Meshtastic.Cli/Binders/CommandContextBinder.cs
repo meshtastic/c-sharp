@@ -11,19 +11,22 @@ public class CommandContextBinder : BinderBase<CommandContext>
     private readonly Option<LogLevel> logLevel;
     private readonly Option<OutputFormat> outputFormat;
     private readonly Option<uint?> destination;
+    private readonly Option<bool> selectDest;
 
-    public CommandContextBinder(Option<LogLevel> logLevel, Option<OutputFormat> outputFormat, Option<uint?> destination)
+    public CommandContextBinder(Option<LogLevel> logLevel, Option<OutputFormat> outputFormat, Option<uint?> destination, Option<bool> selectDest)
     {
         this.logLevel = logLevel;
         this.outputFormat = outputFormat;
         this.destination = destination;
+        this.selectDest = selectDest;
     }
 
     protected override CommandContext GetBoundValue(BindingContext bindingContext)
     {
         return new CommandContext(GetLogger(bindingContext),
             bindingContext.ParseResult?.GetValueForOption(outputFormat) ?? OutputFormat.Console,
-            bindingContext.ParseResult?.GetValueForOption(destination));
+            bindingContext.ParseResult?.GetValueForOption(destination),
+            bindingContext.ParseResult?.GetValueForOption(selectDest) ?? false);
     }
 
     public ILogger GetLogger(BindingContext bindingContext)

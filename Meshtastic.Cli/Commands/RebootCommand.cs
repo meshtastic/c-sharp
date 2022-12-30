@@ -8,7 +8,7 @@ namespace Meshtastic.Cli.Commands;
 public class RebootCommand : Command
 {
     public RebootCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : base(name, description)
     {
         var otaOption = new Option<bool>("ota", "Reboot into OTA update mode");
         otaOption.SetDefaultValue(false);
@@ -24,7 +24,7 @@ public class RebootCommand : Command
             otaOption,
             secondsArgument,
             new DeviceConnectionBinder(port, host),
-            new CommandContextBinder(log, output, dest));
+            new CommandContextBinder(log, output, dest, selectDest));
         this.AddOption(otaOption);
         this.AddArgument(secondsArgument);
     }

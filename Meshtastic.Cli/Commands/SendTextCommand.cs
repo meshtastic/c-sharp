@@ -10,7 +10,7 @@ namespace Meshtastic.Cli.Commands;
 public class SendTextCommand : Command
 {
     public SendTextCommand(string name, string description, Option<string> port, Option<string> host,
-        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : base(name, description)
     {
         var messageArg = new Argument<string>("message", description: "Text message contents");
         messageArg.AddValidator(result =>
@@ -27,7 +27,7 @@ public class SendTextCommand : Command
             },
             messageArg,
             new DeviceConnectionBinder(port, host),
-            new CommandContextBinder(log, output, dest));
+            new CommandContextBinder(log, output, dest, selectDest));
     }
 }
 
@@ -54,7 +54,13 @@ public class SendTextCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(textMessage),
              (fromDevice, container) =>
              {
-                 return Task.FromResult(false);
+                 if (Destination.HasValue && fromDevice.ParsedMessage.fromRadio?.Packet.From == Destination.Value)
+                 {
+                     Logger.LogInformation("Acknowledged");
+                     return Task.FromResult(true);
+                 }
+
+                 return Task.FromResult(fromDevice.ParsedMessage.fromRadio != null);
              });
         Logger.LogInformation($"Sending text messagee...");
     }

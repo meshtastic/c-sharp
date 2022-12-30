@@ -10,7 +10,7 @@ namespace Meshtastic.Cli.Commands;
 public class FixedPositionCommand : Command
 {
     public FixedPositionCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest) : base(name, description)
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : base(name, description)
     {
         var latArg = new Argument<decimal>("lat", description: "Latitude of the node (decimal format)");
         latArg.AddValidator(result => 
@@ -41,7 +41,7 @@ public class FixedPositionCommand : Command
             lonArg, 
             altArg,
             new DeviceConnectionBinder(port, host),
-            new CommandContextBinder(log, output, dest));
+            new CommandContextBinder(log, output, dest, selectDest));
     }
 }
 public class FixedPositionCommandHandler : DeviceCommandHandler

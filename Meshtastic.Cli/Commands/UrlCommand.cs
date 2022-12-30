@@ -28,7 +28,7 @@ public class UrlCommand : Command
             urlOperationArgument,
             urlArgument,
             new DeviceConnectionBinder(port, host),
-            new CommandContextBinder(log, output, new Option<uint?>("dest") { }));
+            new CommandContextBinder(log, output, new Option<uint?>("dest") { }, new Option<bool>("select-dest") { }));
         this.AddArgument(urlOperationArgument);
         this.AddArgument(urlArgument);
     }

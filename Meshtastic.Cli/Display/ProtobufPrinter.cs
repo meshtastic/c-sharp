@@ -81,14 +81,14 @@ public class ProtobufPrinter
         table.RoundedBorder();
         table.AddColumns("#", "Name", "Role", "PSK", "Uplink", "Downlink");
 
-        foreach (var channel in channels) {
+        foreach (var channel in channels) { 
             if (channel == null)
                 continue;
       
             table.AddRow(channel.Index.ToString(), 
                 channel.Settings.Name, 
                 channel.Role.ToString(), 
-                channel.Settings.Psk.IsEmpty ? String.Empty : BitConverter.ToString(channel.Settings.Psk.ToByteArray()), 
+                channel.Settings.Psk.IsEmpty ? String.Empty : Convert.ToBase64String(channel.Settings.Psk.ToByteArray()), 
                 channel.Settings.UplinkEnabled.ToString(),
                 channel.Settings.DownlinkEnabled.ToString());
         }

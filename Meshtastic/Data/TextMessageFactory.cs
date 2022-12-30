@@ -19,7 +19,7 @@ public class TextMessageFactory
         return new MeshPacket()
         {
             Channel = channel,
-            WantAck = false,
+            WantAck = true,
             To = dest ?? 0xffffffff, // Default to broadcast
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
             HopLimit = container.GetHopLimitOrDefault(),
@@ -27,7 +27,6 @@ public class TextMessageFactory
             {
                 Portnum = PortNum.TextMessageApp,
                 Payload = ByteString.CopyFromUtf8(message),
-                WantResponse = true,
             },
         };
     }

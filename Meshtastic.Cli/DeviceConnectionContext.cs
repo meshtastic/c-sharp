@@ -14,8 +14,7 @@ public class DeviceConnectionContext
         this.host = host;
     }
 
-    public string DisplayName => !String.IsNullOrWhiteSpace(this.host) ? 
-        $"via tcp to hostname/IP {this.host}" : $"to port {this.port}";
+    public string DisplayName => !String.IsNullOrWhiteSpace(this.host) ? $"via tcp to hostname/IP {this.host}" : $"to port {this.port}";
 
     public DeviceConnection GetDeviceConnection(ILogger logger)
     {
