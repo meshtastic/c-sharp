@@ -24,31 +24,32 @@ namespace Meshtastic.Protobufs {
     static StoreforwardReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJzdG9yZWZvcndhcmQucHJvdG8iigYKD1N0b3JlQW5kRm9yd2FyZBIsCgJy",
-            "chgBIAEoDjIgLlN0b3JlQW5kRm9yd2FyZC5SZXF1ZXN0UmVzcG9uc2USKgoF",
-            "c3RhdHMYAiABKAsyGy5TdG9yZUFuZEZvcndhcmQuU3RhdGlzdGljcxIpCgdo",
-            "aXN0b3J5GAMgASgLMhguU3RvcmVBbmRGb3J3YXJkLkhpc3RvcnkSLQoJaGVh",
-            "cnRiZWF0GAQgASgLMhouU3RvcmVBbmRGb3J3YXJkLkhlYXJ0YmVhdBrNAQoK",
-            "U3RhdGlzdGljcxIWCg5tZXNzYWdlc190b3RhbBgBIAEoDRIWCg5tZXNzYWdl",
-            "c19zYXZlZBgCIAEoDRIUCgxtZXNzYWdlc19tYXgYAyABKA0SDwoHdXBfdGlt",
-            "ZRgEIAEoDRIQCghyZXF1ZXN0cxgFIAEoDRIYChByZXF1ZXN0c19oaXN0b3J5",
-            "GAYgASgNEhEKCWhlYXJ0YmVhdBgHIAEoCBISCgpyZXR1cm5fbWF4GAggASgN",
-            "EhUKDXJldHVybl93aW5kb3cYCSABKA0aSQoHSGlzdG9yeRIYChBoaXN0b3J5",
-            "X21lc3NhZ2VzGAEgASgNEg4KBndpbmRvdxgCIAEoDRIUCgxsYXN0X3JlcXVl",
-            "c3QYAyABKA0aLgoJSGVhcnRiZWF0Eg4KBnBlcmlvZBgBIAEoDRIRCglzZWNv",
-            "bmRhcnkYAiABKA0i9wEKD1JlcXVlc3RSZXNwb25zZRIJCgVVTlNFVBAAEhAK",
-            "DFJPVVRFUl9FUlJPUhABEhQKEFJPVVRFUl9IRUFSVEJFQVQQAhIPCgtST1VU",
-            "RVJfUElORxADEg8KC1JPVVRFUl9QT05HEAQSDwoLUk9VVEVSX0JVU1kQBRIS",
-            "Cg5ST1VURVJfSElTVE9SWRAGEhAKDENMSUVOVF9FUlJPUhBlEhIKDkNMSUVO",
-            "VF9ISVNUT1JZEGYSEAoMQ0xJRU5UX1NUQVRTEGcSDwoLQ0xJRU5UX1BJTkcQ",
-            "aBIPCgtDTElFTlRfUE9ORxBpEhAKDENMSUVOVF9BQk9SVBBqQmkKE2NvbS5n",
-            "ZWVrc3ZpbGxlLm1lc2hCFVN0b3JlQW5kRm9yd2FyZFByb3Rvc0gDWiJnaXRo",
-            "dWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Q",
-            "cm90b2J1ZnNiBnByb3RvMw=="));
+            "ChJzdG9yZWZvcndhcmQucHJvdG8ivgYKD1N0b3JlQW5kRm9yd2FyZBIsCgJy",
+            "chgBIAEoDjIgLlN0b3JlQW5kRm9yd2FyZC5SZXF1ZXN0UmVzcG9uc2USLAoF",
+            "c3RhdHMYAiABKAsyGy5TdG9yZUFuZEZvcndhcmQuU3RhdGlzdGljc0gAEisK",
+            "B2hpc3RvcnkYAyABKAsyGC5TdG9yZUFuZEZvcndhcmQuSGlzdG9yeUgAEi8K",
+            "CWhlYXJ0YmVhdBgEIAEoCzIaLlN0b3JlQW5kRm9yd2FyZC5IZWFydGJlYXRI",
+            "ABIPCgVlbXB0eRgFIAEoCEgAGs0BCgpTdGF0aXN0aWNzEhYKDm1lc3NhZ2Vz",
+            "X3RvdGFsGAEgASgNEhYKDm1lc3NhZ2VzX3NhdmVkGAIgASgNEhQKDG1lc3Nh",
+            "Z2VzX21heBgDIAEoDRIPCgd1cF90aW1lGAQgASgNEhAKCHJlcXVlc3RzGAUg",
+            "ASgNEhgKEHJlcXVlc3RzX2hpc3RvcnkYBiABKA0SEQoJaGVhcnRiZWF0GAcg",
+            "ASgIEhIKCnJldHVybl9tYXgYCCABKA0SFQoNcmV0dXJuX3dpbmRvdxgJIAEo",
+            "DRpJCgdIaXN0b3J5EhgKEGhpc3RvcnlfbWVzc2FnZXMYASABKA0SDgoGd2lu",
+            "ZG93GAIgASgNEhQKDGxhc3RfcmVxdWVzdBgDIAEoDRouCglIZWFydGJlYXQS",
+            "DgoGcGVyaW9kGAEgASgNEhEKCXNlY29uZGFyeRgCIAEoDSKJAgoPUmVxdWVz",
+            "dFJlc3BvbnNlEgkKBVVOU0VUEAASEAoMUk9VVEVSX0VSUk9SEAESFAoQUk9V",
+            "VEVSX0hFQVJUQkVBVBACEg8KC1JPVVRFUl9QSU5HEAMSDwoLUk9VVEVSX1BP",
+            "TkcQBBIPCgtST1VURVJfQlVTWRAFEhIKDlJPVVRFUl9ISVNUT1JZEAYSEAoM",
+            "Uk9VVEVSX1NUQVRTEAcSEAoMQ0xJRU5UX0VSUk9SEEASEgoOQ0xJRU5UX0hJ",
+            "U1RPUlkQQRIQCgxDTElFTlRfU1RBVFMQQhIPCgtDTElFTlRfUElORxBDEg8K",
+            "C0NMSUVOVF9QT05HEEQSEAoMQ0xJRU5UX0FCT1JUEGpCCQoHdmFyaWFudEJp",
+            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQhVTdG9yZUFuZEZvcndhcmRQcm90b3NI",
+            "A1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0",
+            "YXN0aWMuUHJvdG9idWZzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward), global::Meshtastic.Protobufs.StoreAndForward.Parser, new[]{ "Rr", "Stats", "History", "Heartbeat" }, null, new[]{ typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.RequestResponse) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics), global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics.Parser, new[]{ "MessagesTotal", "MessagesSaved", "MessagesMax", "UpTime", "Requests", "RequestsHistory", "Heartbeat", "ReturnMax", "ReturnWindow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward), global::Meshtastic.Protobufs.StoreAndForward.Parser, new[]{ "Rr", "Stats", "History", "Heartbeat", "Empty" }, new[]{ "Variant" }, new[]{ typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.RequestResponse) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics), global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics.Parser, new[]{ "MessagesTotal", "MessagesSaved", "MessagesMax", "UpTime", "Requests", "RequestsHistory", "Heartbeat", "ReturnMax", "ReturnWindow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.History), global::Meshtastic.Protobufs.StoreAndForward.Types.History.Parser, new[]{ "HistoryMessages", "Window", "LastRequest" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat), global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat.Parser, new[]{ "Period", "Secondary" }, null, null, null, null)})
           }));
@@ -96,9 +97,21 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StoreAndForward(StoreAndForward other) : this() {
       rr_ = other.rr_;
-      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
-      history_ = other.history_ != null ? other.history_.Clone() : null;
-      heartbeat_ = other.heartbeat_ != null ? other.heartbeat_.Clone() : null;
+      switch (other.VariantCase) {
+        case VariantOneofCase.Stats:
+          Stats = other.Stats.Clone();
+          break;
+        case VariantOneofCase.History:
+          History = other.History.Clone();
+          break;
+        case VariantOneofCase.Heartbeat:
+          Heartbeat = other.Heartbeat.Clone();
+          break;
+        case VariantOneofCase.Empty:
+          Empty = other.Empty;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -126,7 +139,6 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "stats" field.</summary>
     public const int StatsFieldNumber = 2;
-    private global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics stats_;
     /// <summary>
     ///
     /// TODO: REPLACE
@@ -134,15 +146,15 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics Stats {
-      get { return stats_; }
+      get { return variantCase_ == VariantOneofCase.Stats ? (global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics) variant_ : null; }
       set {
-        stats_ = value;
+        variant_ = value;
+        variantCase_ = value == null ? VariantOneofCase.None : VariantOneofCase.Stats;
       }
     }
 
     /// <summary>Field number for the "history" field.</summary>
     public const int HistoryFieldNumber = 3;
-    private global::Meshtastic.Protobufs.StoreAndForward.Types.History history_;
     /// <summary>
     ///
     /// TODO: REPLACE
@@ -150,15 +162,15 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Meshtastic.Protobufs.StoreAndForward.Types.History History {
-      get { return history_; }
+      get { return variantCase_ == VariantOneofCase.History ? (global::Meshtastic.Protobufs.StoreAndForward.Types.History) variant_ : null; }
       set {
-        history_ = value;
+        variant_ = value;
+        variantCase_ = value == null ? VariantOneofCase.None : VariantOneofCase.History;
       }
     }
 
     /// <summary>Field number for the "heartbeat" field.</summary>
     public const int HeartbeatFieldNumber = 4;
-    private global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat heartbeat_;
     /// <summary>
     ///
     /// TODO: REPLACE
@@ -166,10 +178,50 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat Heartbeat {
-      get { return heartbeat_; }
+      get { return variantCase_ == VariantOneofCase.Heartbeat ? (global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat) variant_ : null; }
       set {
-        heartbeat_ = value;
+        variant_ = value;
+        variantCase_ = value == null ? VariantOneofCase.None : VariantOneofCase.Heartbeat;
       }
+    }
+
+    /// <summary>Field number for the "empty" field.</summary>
+    public const int EmptyFieldNumber = 5;
+    /// <summary>
+    ///
+    /// Empty Payload
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Empty {
+      get { return variantCase_ == VariantOneofCase.Empty ? (bool) variant_ : false; }
+      set {
+        variant_ = value;
+        variantCase_ = VariantOneofCase.Empty;
+      }
+    }
+
+    private object variant_;
+    /// <summary>Enum of possible cases for the "variant" oneof.</summary>
+    public enum VariantOneofCase {
+      None = 0,
+      Stats = 2,
+      History = 3,
+      Heartbeat = 4,
+      Empty = 5,
+    }
+    private VariantOneofCase variantCase_ = VariantOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VariantOneofCase VariantCase {
+      get { return variantCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVariant() {
+      variantCase_ = VariantOneofCase.None;
+      variant_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -191,6 +243,8 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Stats, other.Stats)) return false;
       if (!object.Equals(History, other.History)) return false;
       if (!object.Equals(Heartbeat, other.Heartbeat)) return false;
+      if (Empty != other.Empty) return false;
+      if (VariantCase != other.VariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -199,9 +253,11 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       if (Rr != global::Meshtastic.Protobufs.StoreAndForward.Types.RequestResponse.Unset) hash ^= Rr.GetHashCode();
-      if (stats_ != null) hash ^= Stats.GetHashCode();
-      if (history_ != null) hash ^= History.GetHashCode();
-      if (heartbeat_ != null) hash ^= Heartbeat.GetHashCode();
+      if (variantCase_ == VariantOneofCase.Stats) hash ^= Stats.GetHashCode();
+      if (variantCase_ == VariantOneofCase.History) hash ^= History.GetHashCode();
+      if (variantCase_ == VariantOneofCase.Heartbeat) hash ^= Heartbeat.GetHashCode();
+      if (variantCase_ == VariantOneofCase.Empty) hash ^= Empty.GetHashCode();
+      hash ^= (int) variantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -224,17 +280,21 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteEnum((int) Rr);
       }
-      if (stats_ != null) {
+      if (variantCase_ == VariantOneofCase.Stats) {
         output.WriteRawTag(18);
         output.WriteMessage(Stats);
       }
-      if (history_ != null) {
+      if (variantCase_ == VariantOneofCase.History) {
         output.WriteRawTag(26);
         output.WriteMessage(History);
       }
-      if (heartbeat_ != null) {
+      if (variantCase_ == VariantOneofCase.Heartbeat) {
         output.WriteRawTag(34);
         output.WriteMessage(Heartbeat);
+      }
+      if (variantCase_ == VariantOneofCase.Empty) {
+        output.WriteRawTag(40);
+        output.WriteBool(Empty);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -250,17 +310,21 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteEnum((int) Rr);
       }
-      if (stats_ != null) {
+      if (variantCase_ == VariantOneofCase.Stats) {
         output.WriteRawTag(18);
         output.WriteMessage(Stats);
       }
-      if (history_ != null) {
+      if (variantCase_ == VariantOneofCase.History) {
         output.WriteRawTag(26);
         output.WriteMessage(History);
       }
-      if (heartbeat_ != null) {
+      if (variantCase_ == VariantOneofCase.Heartbeat) {
         output.WriteRawTag(34);
         output.WriteMessage(Heartbeat);
+      }
+      if (variantCase_ == VariantOneofCase.Empty) {
+        output.WriteRawTag(40);
+        output.WriteBool(Empty);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -275,14 +339,17 @@ namespace Meshtastic.Protobufs {
       if (Rr != global::Meshtastic.Protobufs.StoreAndForward.Types.RequestResponse.Unset) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Rr);
       }
-      if (stats_ != null) {
+      if (variantCase_ == VariantOneofCase.Stats) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
-      if (history_ != null) {
+      if (variantCase_ == VariantOneofCase.History) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(History);
       }
-      if (heartbeat_ != null) {
+      if (variantCase_ == VariantOneofCase.Heartbeat) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Heartbeat);
+      }
+      if (variantCase_ == VariantOneofCase.Empty) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -299,24 +366,30 @@ namespace Meshtastic.Protobufs {
       if (other.Rr != global::Meshtastic.Protobufs.StoreAndForward.Types.RequestResponse.Unset) {
         Rr = other.Rr;
       }
-      if (other.stats_ != null) {
-        if (stats_ == null) {
-          Stats = new global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics();
-        }
-        Stats.MergeFrom(other.Stats);
+      switch (other.VariantCase) {
+        case VariantOneofCase.Stats:
+          if (Stats == null) {
+            Stats = new global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics();
+          }
+          Stats.MergeFrom(other.Stats);
+          break;
+        case VariantOneofCase.History:
+          if (History == null) {
+            History = new global::Meshtastic.Protobufs.StoreAndForward.Types.History();
+          }
+          History.MergeFrom(other.History);
+          break;
+        case VariantOneofCase.Heartbeat:
+          if (Heartbeat == null) {
+            Heartbeat = new global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat();
+          }
+          Heartbeat.MergeFrom(other.Heartbeat);
+          break;
+        case VariantOneofCase.Empty:
+          Empty = other.Empty;
+          break;
       }
-      if (other.history_ != null) {
-        if (history_ == null) {
-          History = new global::Meshtastic.Protobufs.StoreAndForward.Types.History();
-        }
-        History.MergeFrom(other.History);
-      }
-      if (other.heartbeat_ != null) {
-        if (heartbeat_ == null) {
-          Heartbeat = new global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat();
-        }
-        Heartbeat.MergeFrom(other.Heartbeat);
-      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -337,24 +410,34 @@ namespace Meshtastic.Protobufs {
             break;
           }
           case 18: {
-            if (stats_ == null) {
-              Stats = new global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics();
+            global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics subBuilder = new global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics();
+            if (variantCase_ == VariantOneofCase.Stats) {
+              subBuilder.MergeFrom(Stats);
             }
-            input.ReadMessage(Stats);
+            input.ReadMessage(subBuilder);
+            Stats = subBuilder;
             break;
           }
           case 26: {
-            if (history_ == null) {
-              History = new global::Meshtastic.Protobufs.StoreAndForward.Types.History();
+            global::Meshtastic.Protobufs.StoreAndForward.Types.History subBuilder = new global::Meshtastic.Protobufs.StoreAndForward.Types.History();
+            if (variantCase_ == VariantOneofCase.History) {
+              subBuilder.MergeFrom(History);
             }
-            input.ReadMessage(History);
+            input.ReadMessage(subBuilder);
+            History = subBuilder;
             break;
           }
           case 34: {
-            if (heartbeat_ == null) {
-              Heartbeat = new global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat();
+            global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat subBuilder = new global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat();
+            if (variantCase_ == VariantOneofCase.Heartbeat) {
+              subBuilder.MergeFrom(Heartbeat);
             }
-            input.ReadMessage(Heartbeat);
+            input.ReadMessage(subBuilder);
+            Heartbeat = subBuilder;
+            break;
+          }
+          case 40: {
+            Empty = input.ReadBool();
             break;
           }
         }
@@ -377,24 +460,34 @@ namespace Meshtastic.Protobufs {
             break;
           }
           case 18: {
-            if (stats_ == null) {
-              Stats = new global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics();
+            global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics subBuilder = new global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics();
+            if (variantCase_ == VariantOneofCase.Stats) {
+              subBuilder.MergeFrom(Stats);
             }
-            input.ReadMessage(Stats);
+            input.ReadMessage(subBuilder);
+            Stats = subBuilder;
             break;
           }
           case 26: {
-            if (history_ == null) {
-              History = new global::Meshtastic.Protobufs.StoreAndForward.Types.History();
+            global::Meshtastic.Protobufs.StoreAndForward.Types.History subBuilder = new global::Meshtastic.Protobufs.StoreAndForward.Types.History();
+            if (variantCase_ == VariantOneofCase.History) {
+              subBuilder.MergeFrom(History);
             }
-            input.ReadMessage(History);
+            input.ReadMessage(subBuilder);
+            History = subBuilder;
             break;
           }
           case 34: {
-            if (heartbeat_ == null) {
-              Heartbeat = new global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat();
+            global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat subBuilder = new global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat();
+            if (variantCase_ == VariantOneofCase.Heartbeat) {
+              subBuilder.MergeFrom(Heartbeat);
             }
-            input.ReadMessage(Heartbeat);
+            input.ReadMessage(subBuilder);
+            Heartbeat = subBuilder;
+            break;
+          }
+          case 40: {
+            Empty = input.ReadBool();
             break;
           }
         }
@@ -409,8 +502,8 @@ namespace Meshtastic.Protobufs {
     public static partial class Types {
       /// <summary>
       ///
-      /// 1   - 99  = From Router
-      /// 101 - 199 = From Client
+      /// 001 - 063 = From Router
+      /// 064 - 127 = From Client
       /// </summary>
       public enum RequestResponse {
         /// <summary>
@@ -451,30 +544,35 @@ namespace Meshtastic.Protobufs {
         [pbr::OriginalName("ROUTER_HISTORY")] RouterHistory = 6,
         /// <summary>
         ///
+        /// Router is responding to a request for stats.
+        /// </summary>
+        [pbr::OriginalName("ROUTER_STATS")] RouterStats = 7,
+        /// <summary>
+        ///
         /// Client is an in error state.
         /// </summary>
-        [pbr::OriginalName("CLIENT_ERROR")] ClientError = 101,
+        [pbr::OriginalName("CLIENT_ERROR")] ClientError = 64,
         /// <summary>
         ///
         /// Client has requested a replay from the router.
         /// </summary>
-        [pbr::OriginalName("CLIENT_HISTORY")] ClientHistory = 102,
+        [pbr::OriginalName("CLIENT_HISTORY")] ClientHistory = 65,
         /// <summary>
         ///
         /// Client has requested stats from the router.
         /// </summary>
-        [pbr::OriginalName("CLIENT_STATS")] ClientStats = 103,
+        [pbr::OriginalName("CLIENT_STATS")] ClientStats = 66,
         /// <summary>
         ///
         /// Client has requested the router respond. This can work as a
         /// "are you there" message.
         /// </summary>
-        [pbr::OriginalName("CLIENT_PING")] ClientPing = 104,
+        [pbr::OriginalName("CLIENT_PING")] ClientPing = 67,
         /// <summary>
         ///
         /// The response to a "Ping"
         /// </summary>
-        [pbr::OriginalName("CLIENT_PONG")] ClientPong = 105,
+        [pbr::OriginalName("CLIENT_PONG")] ClientPong = 68,
         /// <summary>
         ///
         /// Client has requested that the router abort processing the client's request

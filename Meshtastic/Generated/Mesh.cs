@@ -96,27 +96,28 @@ namespace Meshtastic.Protobufs {
             "bnQiawoHVG9SYWRpbxIdCgZwYWNrZXQYASABKAsyCy5NZXNoUGFja2V0SAAS",
             "GAoOd2FudF9jb25maWdfaWQYAyABKA1IABIUCgpkaXNjb25uZWN0GAQgASgI",
             "SABCEQoPcGF5bG9hZF92YXJpYW50IjUKCkNvbXByZXNzZWQSGQoHcG9ydG51",
-            "bRgBIAEoDjIILlBvcnROdW0SDAoEZGF0YRgCIAEoDCr5AwoNSGFyZHdhcmVN",
+            "bRgBIAEoDjIILlBvcnROdW0SDAoEZGF0YRgCIAEoDCqKBAoNSGFyZHdhcmVN",
             "b2RlbBIJCgVVTlNFVBAAEgwKCFRMT1JBX1YyEAESDAoIVExPUkFfVjEQAhIS",
             "Cg5UTE9SQV9WMl8xXzFQNhADEgkKBVRCRUFNEAQSDwoLSEVMVEVDX1YyXzAQ",
             "BRIOCgpUQkVBTV9WMFA3EAYSCgoGVF9FQ0hPEAcSEAoMVExPUkFfVjFfMVAz",
             "EAgSCwoHUkFLNDYzMRAJEg8KC0hFTFRFQ19WMl8xEAoSDQoJSEVMVEVDX1Yx",
             "EAsSGAoUTElMWUdPX1RCRUFNX1MzX0NPUkUQDBIMCghSQUsxMTIwMBANEgsK",
-            "B05BTk9fRzEQDhISCg5UTE9SQV9WMl8xXzFQOBAPEg4KClNUQVRJT05fRzEQ",
-            "GRIRCg1MT1JBX1JFTEFZX1YxECASDgoKTlJGNTI4NDBESxAhEgcKA1BQUhAi",
-            "Eg8KC0dFTklFQkxPQ0tTECMSEQoNTlJGNTJfVU5LTk9XThAkEg0KCVBPUlRE",
-            "VUlOTxAlEg8KC0FORFJPSURfU0lNECYSCgoGRElZX1YxECcSFQoRTlJGNTI4",
-            "NDBfUENBMTAwNTkQKBIKCgZEUl9ERVYQKRILCgdNNVNUQUNLECoSDQoJSEVM",
-            "VEVDX1YzECsSEQoNSEVMVEVDX1dTTF9WMxAsEg8KClBSSVZBVEVfSFcQ/wEq",
-            "LAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRBX1BBWUxPQURfTEVOEO0B",
-            "Ku4BChFDcml0aWNhbEVycm9yQ29kZRIICgROT05FEAASDwoLVFhfV0FUQ0hE",
-            "T0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoITk9fUkFESU8QAxIPCgtV",
-            "TlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJTEVEEAUSDQoJTk9fQVhQ",
-            "MTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5HEAcSEwoPVFJBTlNNSVRf",
-            "RkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEyNjJfRkFJTFVSRRAKEhEK",
-            "DVJBRElPX1NQSV9CVUcQC0JeChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpNZXNo",
-            "UHJvdG9zSANaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSq",
-            "AhRNZXNodGFzdGljLlByb3RvYnVmc2IGcHJvdG8z"));
+            "B05BTk9fRzEQDhISCg5UTE9SQV9WMl8xXzFQOBAPEg8KC1RMT1JBX1QzX1Mz",
+            "EBASDgoKU1RBVElPTl9HMRAZEhEKDUxPUkFfUkVMQVlfVjEQIBIOCgpOUkY1",
+            "Mjg0MERLECESBwoDUFBSECISDwoLR0VOSUVCTE9DS1MQIxIRCg1OUkY1Ml9V",
+            "TktOT1dOECQSDQoJUE9SVERVSU5PECUSDwoLQU5EUk9JRF9TSU0QJhIKCgZE",
+            "SVlfVjEQJxIVChFOUkY1Mjg0MF9QQ0ExMDA1ORAoEgoKBkRSX0RFVhApEgsK",
+            "B001U1RBQ0sQKhINCglIRUxURUNfVjMQKxIRCg1IRUxURUNfV1NMX1YzECwS",
+            "DwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAAEhUKEERB",
+            "VEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2RlEggKBE5P",
+            "TkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQAhIM",
+            "CghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9G",
+            "QUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NFVFRJ",
+            "TkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIKDlNY",
+            "MTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl4KE2NvbS5nZWVr",
+            "c3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NIA1oiZ2l0aHViLmNvbS9tZXNodGFz",
+            "dGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -229,6 +230,11 @@ namespace Meshtastic.Protobufs {
     /// TODO: REPLACE
     /// </summary>
     [pbr::OriginalName("TLORA_V2_1_1P8")] TloraV211P8 = 15,
+    /// <summary>
+    ///
+    /// TODO: REPLACE
+    /// </summary>
+    [pbr::OriginalName("TLORA_T3_S3")] TloraT3S3 = 16,
     /// <summary>
     ///
     /// B&amp;Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station

@@ -20,13 +20,3 @@ public class MonitorCommand : Command
         new CommandContextBinder(log, output, new Option<uint?>("dest") { }, new Option<bool>("selectDest") { }));
     }
 }
-
-public class MonitorCommandHandler : DeviceCommandHandler
-{
-    public MonitorCommandHandler(DeviceConnectionContext context,
-        CommandContext commandContext) : base(context, commandContext) { }
-    public async Task Handle()
-    {
-        await Connection.Monitor();
-    }
-}

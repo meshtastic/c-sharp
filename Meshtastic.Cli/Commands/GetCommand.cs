@@ -1,7 +1,4 @@
-using Meshtastic.Display;
 using Microsoft.Extensions.Logging;
-using Meshtastic.Data;
-using Meshtastic.Cli.Parsers;
 using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
 
@@ -21,33 +18,5 @@ public class GetCommand : Command
             new DeviceConnectionBinder(port, host),
             new CommandContextBinder(log, output, dest, selectDest));
         this.AddOption(settings);
-    }
-}
-public class GetCommandHandler : DeviceCommandHandler
-{
-    private readonly IEnumerable<ParsedSetting>? parsedSettings;
-
-    public GetCommandHandler(IEnumerable<string> settings,
-        DeviceConnectionContext context,
-        CommandContext commandContext) : base(context, commandContext)
-    {
-        var (result, isValid) = ParseSettingOptions(settings, isGetOnly: true);
-        if (!isValid)
-            return;
-
-        parsedSettings = result!.ParsedSettings;
-    }
-
-    public async Task Handle()
-    {
-        var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
-        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
-    }
-
-    public override Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
-    {
-        var printer = new ProtobufPrinter(container, OutputFormat);
-        printer.PrintSettings(parsedSettings!);
-        return Task.CompletedTask;
     }
 }
