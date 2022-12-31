@@ -32,7 +32,8 @@ internal class PrettyConsoleLogger : ILogger
             return;
 
         var prefix = GetLevelMarkup(logLevel);
-        console.MarkupLine($"{prefix}{formatter(state, exception)}[/]");
+        var message = formatter(state, exception).EscapeMarkup();
+        console.MarkupLine($"{prefix}{message}[/]");
     }
 
     private static string GetLevelMarkup(LogLevel level)
@@ -43,7 +44,7 @@ internal class PrettyConsoleLogger : ILogger
             LogLevel.Error => "[bold red]",
             LogLevel.Warning => "[bold orange3]",
             LogLevel.Information => "[bold dim]",
-            LogLevel.Debug => "[dim]",
+            LogLevel.Debug => "[dim cyan1]",
             LogLevel.Trace => "[dim grey]",
             (LogLevel.None or _) => String.Empty,
         };

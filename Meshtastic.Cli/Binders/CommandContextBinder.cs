@@ -38,7 +38,7 @@ public class CommandContextBinder : BinderBase<CommandContext>
             builder.AddPrettyConsole(new PrettyConsoleLoggerConfiguration()
             {
                 // Don't allow non-console output formats to set chatty loglevels that will corrupt clean ouput
-                LogLevel = output != OutputFormat.Console ? level : LogLevel.Error,
+                LogLevel = output == OutputFormat.Console ? level : LogLevel.Error,
             });
             builder.SetMinimumLevel(level);
         });

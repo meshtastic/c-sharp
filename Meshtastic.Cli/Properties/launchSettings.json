@@ -10,7 +10,7 @@
     },
     "monitor": {
       "commandName": "Project",
-      "commandLineArgs": "monitor"
+      "commandLineArgs": "monitor --log debug"
     },
     "info": {
       "commandName": "Project",

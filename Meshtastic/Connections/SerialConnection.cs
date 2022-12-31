@@ -30,9 +30,18 @@ public class SerialConnection : DeviceConnection
         serialPort.Open();
         while (serialPort.IsOpen) 
         {
-            Logger.LogDebug("Opened serial port");
             if (serialPort.BytesToRead > 0) {
-                Console.Write(serialPort.ReadExisting());
+                var line = serialPort.ReadLine();
+                if (line.Contains("INFO  |"))
+                    Logger.LogInformation(line);
+                else if (line.Contains("WARN  |"))
+                    Logger.LogWarning(line);
+                else if (line.Contains("DEBUG |"))
+                    Logger.LogDebug(line);
+                else if (line.Contains("ERROR |"))
+                    Logger.LogError(line);
+                else
+                    Logger.LogInformation(line);
             }
             await Task.Delay(10);
         }

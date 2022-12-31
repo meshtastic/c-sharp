@@ -54,9 +54,15 @@ public class SendTextCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(textMessage),
              (fromDevice, container) =>
              {
-                 if (Destination.HasValue && fromDevice.ParsedMessage.fromRadio?.Packet.From == Destination.Value)
+                 if (fromDevice.ParsedMessage.fromRadio?.Packet.Decoded.Portnum == PortNum.RoutingApp &&
+                    fromDevice.ParsedMessage.fromRadio?.Packet.Priority == MeshPacket.Types.Priority.Ack)
                  {
-                     Logger.LogInformation("Acknowledged");
+                     var routingResult = Routing.Parser.ParseFrom(fromDevice.ParsedMessage.fromRadio?.Packet.Decoded.Payload);
+                     if (routingResult.ErrorReason == Routing.Types.Error.None)
+                         Logger.LogInformation("Acknowledged");
+                     else
+                         Logger.LogInformation($"Message delivery failed due to reason: {routingResult.ErrorReason}");
+
                      return Task.FromResult(true);
                  }
 
