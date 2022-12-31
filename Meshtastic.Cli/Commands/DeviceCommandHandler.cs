@@ -4,7 +4,6 @@ using Meshtastic.Connections;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
-using System.Reflection.Metadata.Ecma335;
 
 namespace Meshtastic.Cli.Commands;
 

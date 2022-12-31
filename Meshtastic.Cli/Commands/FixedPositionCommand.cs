@@ -1,16 +1,16 @@
-using Microsoft.Extensions.Logging;
 using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
 public class FixedPositionCommand : Command
 {
-    public FixedPositionCommand(string name, string description, Option<string> port, Option<string> host, 
+    public FixedPositionCommand(string name, string description, Option<string> port, Option<string> host,
         Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : base(name, description)
     {
         var latArg = new Argument<decimal>("lat", description: "Latitude of the node (decimal format)");
-        latArg.AddValidator(result => 
+        latArg.AddValidator(result =>
         {
             if (Math.Abs(result.GetValueForArgument(latArg)) > 90)
                 result.ErrorMessage = "Invalid latitude";
@@ -34,8 +34,8 @@ public class FixedPositionCommand : Command
                 var handler = new FixedPositionCommandHandler(lat, lon, alt, context, commandContext);
                 await handler.Handle();
             },
-            latArg, 
-            lonArg, 
+            latArg,
+            lonArg,
             altArg,
             new DeviceConnectionBinder(port, host),
             new CommandContextBinder(log, output, dest, selectDest));

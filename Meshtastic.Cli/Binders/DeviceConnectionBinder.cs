@@ -14,6 +14,6 @@ public class DeviceConnectionBinder : BinderBase<DeviceConnectionContext>
     }
 
     protected override DeviceConnectionContext GetBoundValue(BindingContext bindingContext) =>
-        new(bindingContext.ParseResult?.GetValueForOption(portOption), 
+        new(bindingContext.ParseResult?.GetValueForOption(portOption),
             bindingContext.ParseResult?.GetValueForOption(hostOption));
 }

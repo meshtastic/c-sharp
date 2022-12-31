@@ -1,14 +1,14 @@
-using Microsoft.Extensions.Logging;
-using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Binders;
+using Meshtastic.Cli.Enums;
 using Meshtastic.Protobufs;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
 public class ChannelCommand : Command
 {
-    public ChannelCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : 
+    public ChannelCommand(string name, string description, Option<string> port, Option<string> host,
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) :
         base(name, description)
     {
         var commandContextBinder = new CommandContextBinder(log, output, dest, selectDest);
@@ -20,11 +20,11 @@ public class ChannelCommand : Command
         indexOption.SetDefaultValue(0);
         indexOption.AddValidator(context =>
         {
-            var nonIndexZeroOperation = new [] { ChannelOperation.Disable, ChannelOperation.Enable };
+            var nonIndexZeroOperation = new[] { ChannelOperation.Disable, ChannelOperation.Enable };
             if (context.GetValueForOption(indexOption) < 0 || context.GetValueForOption(indexOption) > 8)
                 context.ErrorMessage = "Channel index is out of range (0-8)";
             else if (nonIndexZeroOperation.Contains(context.GetValueForArgument(operationArgument)) &&
-                context.GetValueForOption(indexOption) == 0) 
+                context.GetValueForOption(indexOption) == 0)
             {
                 context.ErrorMessage = "Cannot enable / disable PRIMARY channel";
             }

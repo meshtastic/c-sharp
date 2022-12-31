@@ -1,8 +1,7 @@
-﻿using System;
-using System.CommandLine.Binding;
-using Meshtastic.Cli.Enums;
+﻿using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Logging;
 using Microsoft.Extensions.Logging;
+using System.CommandLine.Binding;
 
 namespace Meshtastic.Cli.Binders;
 

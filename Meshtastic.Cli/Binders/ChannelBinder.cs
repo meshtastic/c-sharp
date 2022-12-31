@@ -1,6 +1,6 @@
-﻿using System.CommandLine.Binding;
-using Meshtastic.Cli.Enums;
+﻿using Meshtastic.Cli.Enums;
 using Meshtastic.Protobufs;
+using System.CommandLine.Binding;
 
 namespace Meshtastic.Cli.Binders;
 
@@ -16,7 +16,7 @@ public class ChannelBinder : BinderBase<ChannelOperationSettings>
     private readonly Option<bool?> uplinkOption;
     private readonly Option<bool?> downlinkOption;
 
-    public ChannelBinder(Argument<ChannelOperation> operation, 
+    public ChannelBinder(Argument<ChannelOperation> operation,
         Option<int> indexOption,
         Option<string?> nameOption,
         Option<Channel.Types.Role?> roleOption,
@@ -41,6 +41,6 @@ public class ChannelBinder : BinderBase<ChannelOperationSettings>
             bindingContext.ParseResult?.GetValueForOption(pskOption),
             bindingContext.ParseResult?.GetValueForOption(uplinkOption),
             bindingContext.ParseResult?.GetValueForOption(downlinkOption))
-        { 
+        {
         };
 }

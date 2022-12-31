@@ -9,7 +9,7 @@ public class SettingParser : Parser
     private readonly IEnumerable<string> settings;
 
     public SettingParser(IEnumerable<string> settings)
-	{
+    {
         this.settings = settings;
     }
 
@@ -18,7 +18,7 @@ public class SettingParser : Parser
         var parsedSettings = new List<ParsedSetting>();
         var validationIssues = new List<string>();
 
-        foreach(var setting in this.settings)
+        foreach (var setting in this.settings)
         {
             if (isGetOnly)
             {

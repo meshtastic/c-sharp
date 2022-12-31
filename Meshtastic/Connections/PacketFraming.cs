@@ -3,8 +3,8 @@ namespace Meshtastic.Connections;
 public static class PacketFraming
 {
     public static byte[] PACKET_FRAME_START => new byte[] { 0x94, 0xc3 };
-    public static byte[] SERIAL_PREAMBLE => new byte[] 
-    { 
+    public static byte[] SERIAL_PREAMBLE => new byte[]
+    {
         PACKET_FRAME_START[1],
         PACKET_FRAME_START[1],
         PACKET_FRAME_START[1],
@@ -12,7 +12,7 @@ public static class PacketFraming
     };
 
     public const int PACKET_HEADER_LENGTH = 4;
-    public static byte[] GetPacketHeader(byte[] data) => 
+    public static byte[] GetPacketHeader(byte[] data) =>
         new byte[] {
             PACKET_FRAME_START[0],
             PACKET_FRAME_START[1],

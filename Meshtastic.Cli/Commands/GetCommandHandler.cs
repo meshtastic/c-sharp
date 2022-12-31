@@ -1,6 +1,6 @@
-﻿using Meshtastic.Display;
+﻿using Meshtastic.Cli.Parsers;
 using Meshtastic.Data;
-using Meshtastic.Cli.Parsers;
+using Meshtastic.Display;
 
 namespace Meshtastic.Cli.Commands;
 

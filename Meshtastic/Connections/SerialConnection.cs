@@ -1,10 +1,9 @@
-using System.IO.Ports;
-using System.Runtime.InteropServices;
 using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
-using System;
+using System.IO.Ports;
+using System.Runtime.InteropServices;
 
 namespace Meshtastic.Connections;
 
@@ -24,13 +23,14 @@ public class SerialConnection : DeviceConnection
 
     public static string[] ListPorts() => SerialPort.GetPortNames();
 
-    public override async Task Monitor() 
+    public override async Task Monitor()
     {
         Logger.LogDebug("Opening serial port...");
         serialPort.Open();
-        while (serialPort.IsOpen) 
+        while (serialPort.IsOpen)
         {
-            if (serialPort.BytesToRead > 0) {
+            if (serialPort.BytesToRead > 0)
+            {
                 var line = serialPort.ReadLine();
                 if (line.Contains("INFO  |"))
                     Logger.LogInformation(line);
@@ -64,7 +64,7 @@ public class SerialConnection : DeviceConnection
     {
         while (serialPort.IsOpen)
         {
-            if (serialPort.BytesToRead == 0) 
+            if (serialPort.BytesToRead == 0)
             {
                 await Task.Delay(10);
                 continue;

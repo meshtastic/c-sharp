@@ -1,13 +1,13 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Meshtastic.Cli.Parsers;
 using Meshtastic.Data;
-using Meshtastic.Cli.Parsers;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
 public class SetCommandHandler : DeviceCommandHandler
 {
     private readonly IEnumerable<ParsedSetting>? parsedSettings;
-    public SetCommandHandler(IEnumerable<string> settings, DeviceConnectionContext context, CommandContext commandContext) : 
+    public SetCommandHandler(IEnumerable<string> settings, DeviceConnectionContext context, CommandContext commandContext) :
         base(context, commandContext)
     {
         var (result, isValid) = ParseSettingOptions(settings, isGetOnly: false);

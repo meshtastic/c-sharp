@@ -1,8 +1,8 @@
 using Google.Protobuf;
 using Meshtastic.Cli;
 using Meshtastic.Cli.Enums;
-using Meshtastic.Cli.Parsers;
 using Meshtastic.Cli.Extensions;
+using Meshtastic.Cli.Parsers;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using QRCoder;
@@ -22,21 +22,21 @@ public class ProtobufPrinter
 
     public void Print()
     {
-        if (outputFormat == OutputFormat.Console) 
+        if (outputFormat == OutputFormat.Console)
         {
             var grid = new Grid();
             grid.AddColumn();
             grid.AddColumn();
             grid.AddRow(PrintMyNodeInfo(container.MyNodeInfo),
                 PrintChannels(container.Channels));
-            grid.AddRow(PrintConfig(container.LocalConfig, "[bold]Config[/]"), 
+            grid.AddRow(PrintConfig(container.LocalConfig, "[bold]Config[/]"),
                 PrintConfig(container.LocalModuleConfig, "[bold]Module Config[/]"));
             AnsiConsole.Write(grid);
             AnsiConsole.Write(PrintNodeInfos(container.Nodes));
         }
     }
 
-    public Tree PrintNodeInfos(List<NodeInfo> nodeInfos) 
+    public Tree PrintNodeInfos(List<NodeInfo> nodeInfos)
     {
         var root = new Tree("[bold]Nodes[/]")
         {
@@ -48,7 +48,7 @@ public class ProtobufPrinter
         table.RoundedBorder();
         table.AddColumns(nameof(NodeInfo.User.Id), nameof(NodeInfo.User.ShortName),
             nameof(NodeInfo.User.LongName), nameof(NodeInfo.Position.LatitudeI), nameof(NodeInfo.Position.LongitudeI),
-            nameof(NodeInfo.DeviceMetrics.BatteryLevel), nameof(NodeInfo.DeviceMetrics.AirUtilTx), 
+            nameof(NodeInfo.DeviceMetrics.BatteryLevel), nameof(NodeInfo.DeviceMetrics.AirUtilTx),
             nameof(NodeInfo.DeviceMetrics.ChannelUtilization), nameof(NodeInfo.Snr), nameof(NodeInfo.LastHeard));
 
         foreach (var node in nodeInfos)
@@ -81,22 +81,23 @@ public class ProtobufPrinter
         table.RoundedBorder();
         table.AddColumns("#", "Name", "Role", "PSK", "Uplink", "Downlink");
 
-        foreach (var channel in channels) { 
+        foreach (var channel in channels)
+        {
             if (channel == null)
                 continue;
-      
-            table.AddRow(channel.Index.ToString(), 
-                channel.Settings.Name, 
-                channel.Role.ToString(), 
-                channel.Settings.Psk.IsEmpty ? String.Empty : Convert.ToBase64String(channel.Settings.Psk.ToByteArray()), 
+
+            table.AddRow(channel.Index.ToString(),
+                channel.Settings.Name,
+                channel.Role.ToString(),
+                channel.Settings.Psk.IsEmpty ? String.Empty : Convert.ToBase64String(channel.Settings.Psk.ToByteArray()),
                 channel.Settings.UplinkEnabled.ToString(),
                 channel.Settings.DownlinkEnabled.ToString());
         }
-        
+
         root.AddNode(table);
         return root;
     }
-    
+
     private Tree PrintMyNodeInfo(MyNodeInfo myNodeInfo)
     {
         var root = new Tree("[bold]My Node Info[/]")
@@ -113,7 +114,7 @@ public class ProtobufPrinter
         {
             if (property == null)
                 continue;
-            
+
             table.AddRow(property.Name, property.GetSettingValue(myNodeInfo));
         }
         root.AddNode(table);
@@ -170,7 +171,7 @@ public class ProtobufPrinter
 
                 table.AddRow($"{setting.Section.Name}.{setting.Setting.Name}", value?.ToString() ?? String.Empty);
             }
-            AnsiConsole.Write(table); 
+            AnsiConsole.Write(table);
         }
     }
 
@@ -196,7 +197,7 @@ public class ProtobufPrinter
             QRCodeData data = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q);
             AsciiQRCode qrCode = new(data);
             string qrCodeAsAsciiArt = qrCode.GetGraphic(1);
-            AnsiConsole.Write(qrCodeAsAsciiArt); 
+            AnsiConsole.Write(qrCodeAsAsciiArt);
         }
     }
 
@@ -216,7 +217,7 @@ public class ProtobufPrinter
             table.AddRow(nameof(metadata.HasWifi), metadata.HasWifi.ToString());
             table.AddRow(nameof(metadata.HasEthernet), metadata.HasEthernet.ToString());
             table.AddRow(nameof(metadata.CanShutdown), metadata.CanShutdown.ToString());
-            AnsiConsole.Write(table); 
+            AnsiConsole.Write(table);
         }
     }
 }

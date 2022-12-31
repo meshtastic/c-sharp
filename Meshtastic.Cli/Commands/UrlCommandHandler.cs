@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
-using Meshtastic.Data;
+﻿using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Parsers;
-using Meshtastic.Cli.Enums;
-using Meshtastic.Protobufs;
+using Meshtastic.Data;
 using Meshtastic.Display;
+using Meshtastic.Protobufs;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
@@ -12,8 +12,8 @@ public class UrlCommandHandler : DeviceCommandHandler
     private readonly UrlOperation operation;
     private readonly string? url;
 
-    public UrlCommandHandler(UrlOperation operation, string? url, DeviceConnectionContext context, CommandContext commandContext) : 
-        base(context, commandContext) 
+    public UrlCommandHandler(UrlOperation operation, string? url, DeviceConnectionContext context, CommandContext commandContext) :
+        base(context, commandContext)
     {
         this.operation = operation;
         this.url = url;
@@ -54,7 +54,7 @@ public class UrlCommandHandler : DeviceCommandHandler
             };
             Logger.LogInformation($"Sending channel {index} to device...");
             var setChannel = adminMessageFactory.CreateSetChannelMessage(channel);
-            await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setChannel), 
+            await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setChannel),
                 AnyResponseReceived);
             index++;
         }

@@ -1,11 +1,11 @@
 ﻿using Google.Protobuf;
-using Meshtastic.Data;
-using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Binders;
+using Meshtastic.Cli.Enums;
+using Meshtastic.Data;
 using Meshtastic.Protobufs;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
-using System.Diagnostics;
 
 namespace Meshtastic.Cli.Commands;
 
@@ -13,12 +13,12 @@ public class ChannelCommandHandler : DeviceCommandHandler
 {
     private readonly ChannelOperationSettings settings;
 
-    public ChannelCommandHandler(ChannelOperationSettings settings, 
-        DeviceConnectionContext connectionContext, 
-        CommandContext commandContext) : base(connectionContext, commandContext) 
-        {
-            this.settings = settings;
-        }
+    public ChannelCommandHandler(ChannelOperationSettings settings,
+        DeviceConnectionContext connectionContext,
+        CommandContext commandContext) : base(connectionContext, commandContext)
+    {
+        this.settings = settings;
+    }
 
     public async Task Handle()
     {
@@ -54,7 +54,7 @@ public class ChannelCommandHandler : DeviceCommandHandler
                 throw new UnreachableException("Cannot complete ChannelCommandHandler without ChannelOperation");
         }
         var adminMessage = adminMessageFactory.CreateSetChannelMessage(channel!);
-        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), 
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage),
             AnyResponseReceived);
         await CommitEditSettings(adminMessageFactory);
     }

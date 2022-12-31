@@ -1,14 +1,12 @@
-using Meshtastic.Connections;
-using Google.Protobuf;
-using Microsoft.Extensions.Logging;
-using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Binders;
+using Meshtastic.Cli.Enums;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
 public class UrlCommand : Command
 {
-    public UrlCommand(string name, string description, Option<string> port, Option<string> host, 
+    public UrlCommand(string name, string description, Option<string> port, Option<string> host,
         Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
     {
         var urlOperationArgument = new Argument<UrlOperation>("operation", "The type of url operation");

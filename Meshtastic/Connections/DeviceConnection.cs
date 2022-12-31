@@ -23,18 +23,18 @@ public abstract class DeviceConnection
 
     public abstract Task WriteToRadio(ToRadio toRadio, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete);
 
-    public abstract Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete, 
+    public abstract Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete,
         int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT);
 
-    protected async Task<bool> ParsePackets(byte item, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete) 
+    protected async Task<bool> ParsePackets(byte item, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete)
     {
         int bufferIndex = Buffer.Count;
         Buffer.Add(item);
-        if (bufferIndex == 0 && item != PacketFraming.PACKET_FRAME_START[0]) 
+        if (bufferIndex == 0 && item != PacketFraming.PACKET_FRAME_START[0])
             Buffer.Clear();
         else if (bufferIndex == 1 && item != PacketFraming.PACKET_FRAME_START[1])
             Buffer.Clear();
-        else if (bufferIndex >= PacketFraming.PACKET_HEADER_LENGTH - 1) 
+        else if (bufferIndex >= PacketFraming.PACKET_HEADER_LENGTH - 1)
         {
             PacketLength = (Buffer[2] << 8) + Buffer[3];
             if (bufferIndex == PacketFraming.PACKET_HEADER_LENGTH - 1 && PacketLength > Resources.MAX_TO_FROM_RADIO_LENGTH)

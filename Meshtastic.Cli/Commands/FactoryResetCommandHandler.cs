@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using Meshtastic.Data;
+﻿using Meshtastic.Data;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 

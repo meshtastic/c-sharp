@@ -5,7 +5,7 @@ using static Meshtastic.Protobufs.ModuleConfig.Types;
 
 namespace Meshtastic.Data;
 
-public class AdminMessageFactory 
+public class AdminMessageFactory
 {
     private readonly DeviceStateContainer container;
     private readonly uint? dest;
@@ -59,7 +59,7 @@ public class AdminMessageFactory
         {
             RebootSeconds = seconds
         });
-    }      
+    }
 
     public MeshPacket CreateSetConfigMessage(object instance)
     {
@@ -74,7 +74,7 @@ public class AdminMessageFactory
             PowerConfig => new Config() { Power = instance as PowerConfig },
             _ => throw new ArgumentException("Could not determine Config type", nameof(instance)),
         };
-        return GetNewMeshPacket(new AdminMessage() {  SetConfig = config! });
+        return GetNewMeshPacket(new AdminMessage() { SetConfig = config! });
     }
 
     public MeshPacket CreateSetModuleConfigMessage(object instance)

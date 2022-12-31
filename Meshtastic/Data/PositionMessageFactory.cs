@@ -3,7 +3,7 @@ using Meshtastic.Protobufs;
 
 namespace Meshtastic.Data;
 
-public class PositionMessageFactory 
+public class PositionMessageFactory
 {
     private readonly DeviceStateContainer container;
 

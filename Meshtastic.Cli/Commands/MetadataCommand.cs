@@ -1,13 +1,13 @@
-using Microsoft.Extensions.Logging;
 using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
 public class MetadataCommand : Command
 {
-    public MetadataCommand(string name, string description, Option<string> port, Option<string> host, 
-        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : 
+    public MetadataCommand(string name, string description, Option<string> port, Option<string> host,
+        Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) :
         base(name, description)
     {
         this.SetHandler(async (context, commandContext) =>

@@ -1,12 +1,12 @@
-using Microsoft.Extensions.Logging;
 using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
 public class RebootCommand : Command
 {
-    public RebootCommand(string name, string description, Option<string> port, Option<string> host, 
+    public RebootCommand(string name, string description, Option<string> port, Option<string> host,
         Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) : base(name, description)
     {
         var otaOption = new Option<bool>("ota", "Reboot into OTA update mode");

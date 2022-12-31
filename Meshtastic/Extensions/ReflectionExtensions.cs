@@ -49,7 +49,7 @@ public static class ReflectionExtensions
     }
 
     public static IEnumerable<PropertyInfo> GetProperties(this object instance)
-    { 
+    {
         return instance
             .GetType()
             .GetProperties()

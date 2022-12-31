@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using Meshtastic.Data;
+﻿using Meshtastic.Data;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
@@ -8,7 +8,7 @@ public class RebootCommandHandler : DeviceCommandHandler
     private readonly bool isOtaMode = false;
     private readonly int seconds = 5;
 
-    public RebootCommandHandler(bool isOtaMode, 
+    public RebootCommandHandler(bool isOtaMode,
         int seconds,
         DeviceConnectionContext context,
         CommandContext commandContext) : base(context, commandContext)

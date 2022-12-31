@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
-using Meshtastic.Data;
-using Meshtastic.Protobufs;
+﻿using Meshtastic.Data;
 using Meshtastic.Extensions;
+using Meshtastic.Protobufs;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
@@ -32,12 +32,12 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
     {
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         var positionMessageFactory = new PositionMessageFactory(container);
-        
+
         await BeginEditSettings(adminMessageFactory);
 
         var positionConfig = container.LocalConfig.Position;
         positionConfig.FixedPosition = true;
-        var adminMessage = adminMessageFactory.CreateSetConfigMessage(positionConfig); 
+        var adminMessage = adminMessageFactory.CreateSetConfigMessage(positionConfig);
         Logger.LogInformation($"Setting Position.FixedPosition to True...");
 
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AdminMessageResponseReceived);

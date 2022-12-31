@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using Meshtastic.Data;
+﻿using Meshtastic.Data;
 using Meshtastic.Protobufs;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.Commands;
 
@@ -8,7 +8,7 @@ public class SendTextCommandHandler : DeviceCommandHandler
 {
     private readonly string message;
 
-    public SendTextCommandHandler(string message, DeviceConnectionContext context, CommandContext commandContext) : 
+    public SendTextCommandHandler(string message, DeviceConnectionContext context, CommandContext commandContext) :
         base(context, commandContext)
     {
         this.message = message;

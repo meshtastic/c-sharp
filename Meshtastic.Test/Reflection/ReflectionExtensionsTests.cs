@@ -1,4 +1,3 @@
-using Meshtastic.Cli.Parsers;
 using Meshtastic.Cli.Extensions;
 using Meshtastic.Protobufs;
 

@@ -1,8 +1,8 @@
-using System.Net.Sockets;
 using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
+using System.Net.Sockets;
 
 namespace Meshtastic.Connections;
 

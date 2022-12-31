@@ -1,5 +1,4 @@
 ﻿using Meshtastic.Protobufs;
-using System.Buffers.Text;
 
 namespace Meshtastic.Cli.Parsers;
 
@@ -8,7 +7,7 @@ public class UrlParser
     private readonly string url;
 
     public UrlParser(string url)
-	{
+    {
         if (string.IsNullOrWhiteSpace(url))
             throw new ArgumentException($"'{nameof(url)}' must be provided.", nameof(url));
 
