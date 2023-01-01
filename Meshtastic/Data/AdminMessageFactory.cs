@@ -108,4 +108,8 @@ public class AdminMessageFactory
     {
         return GetNewMeshPacket(new AdminMessage() { FactoryReset = 1 });
     }
+    public MeshPacket CreateNodeDbResetMessage()
+    {
+        return GetNewMeshPacket(new AdminMessage() { NodedbReset = 1 });
+    }
 }
