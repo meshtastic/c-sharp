@@ -6,8 +6,8 @@ namespace Meshtastic.Cli;
 public class CommandContext
 {
     public CommandContext(ILogger logger,
-        OutputFormat outputFormat, 
-        uint? destination = null, 
+        OutputFormat outputFormat,
+        uint? destination = null,
         bool selectDestination = false,
         uint? channel = null)
     {

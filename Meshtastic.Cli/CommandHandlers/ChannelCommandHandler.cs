@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class ChannelCommandHandler : DeviceCommandHandler
 {

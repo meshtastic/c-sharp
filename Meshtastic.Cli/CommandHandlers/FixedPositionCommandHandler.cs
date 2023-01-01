@@ -3,7 +3,7 @@ using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class FixedPositionCommandHandler : DeviceCommandHandler
 {
@@ -43,8 +43,8 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AdminMessageResponseReceived);
         var positionMessage = positionMessageFactory.GetNewPositionPacket(new Position()
         {
-            LatitudeI = latitude != 0 ? Decimal.ToInt32(latitude / divisor) : 0,
-            LongitudeI = longitude != 0 ? Decimal.ToInt32(longitude / divisor) : 0,
+            LatitudeI = latitude != 0 ? decimal.ToInt32(latitude / divisor) : 0,
+            LongitudeI = longitude != 0 ? decimal.ToInt32(longitude / divisor) : 0,
             Altitude = altitude,
             Time = DateTime.Now.GetUnixTimestamp(),
             Timestamp = DateTime.Now.GetUnixTimestamp(),

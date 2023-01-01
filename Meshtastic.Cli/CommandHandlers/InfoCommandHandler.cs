@@ -1,7 +1,7 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Display;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class InfoCommandHandler : DeviceCommandHandler
 {

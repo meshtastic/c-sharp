@@ -2,7 +2,7 @@
 using Meshtastic.Data;
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class SetCommandHandler : DeviceCommandHandler
 {
@@ -33,7 +33,7 @@ public class SetCommandHandler : DeviceCommandHandler
                 await SetConfig(container, adminMessageFactory, setting);
             else
                 await SetModuleConfig(container, adminMessageFactory, setting);
-            Logger.LogInformation($"Setting {setting.Section.Name}.{setting.Setting.Name} to {setting.Value?.ToString() ?? String.Empty}...");
+            Logger.LogInformation($"Setting {setting.Section.Name}.{setting.Setting.Name} to {setting.Value?.ToString() ?? string.Empty}...");
         }
         await CommitEditSettings(adminMessageFactory);
     }

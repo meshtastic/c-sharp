@@ -5,7 +5,7 @@ using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class DeviceCommandHandler
 {
@@ -18,12 +18,12 @@ public class DeviceCommandHandler
 
     public DeviceCommandHandler(DeviceConnectionContext connectionContext, CommandContext commandContext)
     {
-        this.Connection = connectionContext.GetDeviceConnection(commandContext.Logger);
-        this.ToRadioMessageFactory = new();
-        this.OutputFormat = commandContext.OutputFormat;
-        this.Logger = commandContext.Logger;
-        this.Destination = commandContext.Destination;
-        this.SelectDestination = commandContext.SelectDestination;
+        Connection = connectionContext.GetDeviceConnection(commandContext.Logger);
+        ToRadioMessageFactory = new();
+        OutputFormat = commandContext.OutputFormat;
+        Logger = commandContext.Logger;
+        Destination = commandContext.Destination;
+        SelectDestination = commandContext.SelectDestination;
     }
 
     protected static (SettingParserResult? result, bool isValid) ParseSettingOptions(IEnumerable<string> settings, bool isGetOnly)
@@ -63,7 +63,7 @@ public class DeviceCommandHandler
         if (packet.ParsedMessage.fromRadio?.PayloadVariantCase != FromRadio.PayloadVariantOneofCase.ConfigCompleteId)
             return false;
 
-        if (this.SelectDestination)
+        if (SelectDestination)
         {
             var selection = new SelectionPrompt<uint>()
                     .Title("Please select a destination node")
@@ -73,7 +73,7 @@ public class DeviceCommandHandler
                 var node = container.Nodes.Find(n => n.Num == num);
                 return $"{node.User.LongName} ({node.User.ShortName}) - {node.Num}";
             };
-            this.Destination = AnsiConsole.Prompt(selection);
+            Destination = AnsiConsole.Prompt(selection);
         }
 
         await OnCompleted(packet, container);

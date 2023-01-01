@@ -5,7 +5,7 @@ using Meshtastic.Display;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class UrlCommandHandler : DeviceCommandHandler
 {
@@ -27,7 +27,7 @@ public class UrlCommandHandler : DeviceCommandHandler
 
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
-        if (this.operation == UrlOperation.Set)
+        if (operation == UrlOperation.Set)
             await SetChannelsFromUrl(container);
         else if (operation == UrlOperation.Get)
         {
@@ -41,7 +41,7 @@ public class UrlCommandHandler : DeviceCommandHandler
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         await BeginEditSettings(adminMessageFactory);
 
-        var urlParser = new UrlParser(this.url!);
+        var urlParser = new UrlParser(url!);
         var channelSet = urlParser.Parse();
         int index = 0;
         foreach (var setting in channelSet.Settings)

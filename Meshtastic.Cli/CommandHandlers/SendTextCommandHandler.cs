@@ -2,7 +2,7 @@
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class SendTextCommandHandler : DeviceCommandHandler
 {

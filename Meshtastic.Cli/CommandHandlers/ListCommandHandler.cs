@@ -1,6 +1,6 @@
 ﻿using Meshtastic.Connections;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class ListCommandHandler
 {

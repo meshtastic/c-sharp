@@ -1,7 +1,7 @@
 ﻿using Meshtastic.Data;
 using Microsoft.Extensions.Logging;
 
-namespace Meshtastic.Cli.Commands;
+namespace Meshtastic.Cli.CommandHandlers;
 
 public class RebootCommandHandler : DeviceCommandHandler
 {
