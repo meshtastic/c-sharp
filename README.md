@@ -1,5 +1,5 @@
-![Build status](https://img.shields.io/github/actions/workflow/status/meshtastic/c-sharp/ci.yml)
 ![GitHub release downloads](https://img.shields.io/github/downloads/meshtastic/c-sharp/total)
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/meshtastic/c-sharp/ci.yml?branch=master&label=CI)
 [![CLA assistant](https://cla-assistant.io/readme/badge/meshtastic/c-sharp)](https://cla-assistant.io/meshtastic/c-sharp)
 [![Fiscal Contributors](https://opencollective.com/meshtastic/tiers/badge.svg?label=Fiscal%20Contributors&color=deeppink)](https://opencollective.com/meshtastic/)
 
