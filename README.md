@@ -34,7 +34,7 @@ Commands:
   text <message>                         Send a text message from the device
 ```
 
-## Example of `Meshtastic.Cli info` output with default console output level
+### Example of `Meshtastic.Cli info` output with default console output level
 ![image](https://user-images.githubusercontent.com/9000580/210158789-96f2c61f-1ed6-4ea0-97e0-187a27e89bd6.png)
 
 ## Installation (dotnet cli / tool method)
