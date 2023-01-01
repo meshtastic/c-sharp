@@ -1,3 +1,8 @@
+![Build status](https://img.shields.io/github/actions/workflow/status/meshtastic/c-sharp/ci.yml)
+![GitHub release downloads](https://img.shields.io/github/downloads/meshtastic/c-sharp/total)
+[![CLA assistant](https://cla-assistant.io/readme/badge/meshtastic/c-sharp)](https://cla-assistant.io/meshtastic/c-sharp)
+[![Fiscal Contributors](https://opencollective.com/meshtastic/tiers/badge.svg?label=Fiscal%20Contributors&color=deeppink)](https://opencollective.com/meshtastic/)
+
 # Meshtastic C#
 C# / .NET 7 based command line interface for meshtastic
 
