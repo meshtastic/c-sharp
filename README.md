@@ -19,8 +19,7 @@ Options:
   --output <Console|Json>                                          Type of output format for the command
   -l, --log <Critical|Debug|Error|Information|None|Trace|Warning>  Logging level for command events [default: Information]
   --dest <dest>                                                    Destination node address for command
-  -sd, --select-dest                                               Interactively select a destination address from device's node list for command [default:
-                                                                   False]
+  -sd, --select-dest                                               Interactively select a destination from device's node list [default: False]
   --version                                                        Show version information
   -?, -h, --help                                                   Show help and usage information
 
@@ -37,6 +36,7 @@ Commands:
   factory-reset                          Factory reset configuration of the device
   fixed-position <lat> <lon> <altitude>  Set the device to a fixed position [default: 0]
   text <message>                         Send a text message from the device
+  reset-nodedb                           Reset the node db of the devicee
 ```
 
 ### Example of `Meshtastic.Cli info` output with default console output level
