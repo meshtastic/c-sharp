@@ -19,8 +19,8 @@ log.SetDefaultValue(LogLevel.Information);
 log.AddCompletions(Enum.GetNames(typeof(LogLevel)));
 
 var dest = new Option<uint?>("--dest", description: "Destination node address for command");
-var selectDest = new Option<bool>("--select-dest", description: "Select an destination address from device's node list for command");
-log.AddAlias("-sd");
+var selectDest = new Option<bool>("--select-dest", description: "Interactively select a destination address from device's node list for command");
+selectDest.AddAlias("-sd");
 selectDest.SetDefaultValue(false);
 
 var setting = new Option<IEnumerable<string>>("--setting", description: "Get or set a value on config / module-config")

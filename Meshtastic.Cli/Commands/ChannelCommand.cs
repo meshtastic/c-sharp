@@ -11,7 +11,7 @@ public class ChannelCommand : Command
         Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) :
         base(name, description)
     {
-        var commandContextBinder = new CommandContextBinder(log, output, dest, selectDest);
+        var commandContextBinder = new CommandContextBinder(log, output, dest, selectDest, null);
         var operationArgument = new Argument<ChannelOperation>("operation", "The type of channel operation");
         operationArgument.AddCompletions(ctx => Enum.GetNames(typeof(ChannelOperation)));
 

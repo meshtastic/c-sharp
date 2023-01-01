@@ -22,8 +22,9 @@ public class SendTextCommandHandler : DeviceCommandHandler
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
         var textMessageFactory = new TextMessageFactory(container);
-
         var textMessage = textMessageFactory.GetTextMessagePacket(message);
+        Logger.LogInformation($"Sending text messagee...");
+
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(textMessage),
              (fromDevice, container) =>
              {
@@ -41,6 +42,5 @@ public class SendTextCommandHandler : DeviceCommandHandler
 
                  return Task.FromResult(fromDevice.ParsedMessage.fromRadio != null);
              });
-        Logger.LogInformation($"Sending text messagee...");
     }
 }

@@ -11,13 +11,19 @@ public class CommandContextBinder : BinderBase<CommandContext>
     private readonly Option<OutputFormat> outputFormat;
     private readonly Option<uint?> destination;
     private readonly Option<bool> selectDest;
+    private readonly Option<uint?>? channel;
 
-    public CommandContextBinder(Option<LogLevel> logLevel, Option<OutputFormat> outputFormat, Option<uint?> destination, Option<bool> selectDest)
+    public CommandContextBinder(Option<LogLevel> logLevel,
+        Option<OutputFormat> outputFormat,
+        Option<uint?> destination,
+        Option<bool> selectDest,
+        Option<uint?>? channel = null)
     {
         this.logLevel = logLevel;
         this.outputFormat = outputFormat;
         this.destination = destination;
         this.selectDest = selectDest;
+        this.channel = channel;
     }
 
     protected override CommandContext GetBoundValue(BindingContext bindingContext)
@@ -25,7 +31,8 @@ public class CommandContextBinder : BinderBase<CommandContext>
         return new CommandContext(GetLogger(bindingContext),
             bindingContext.ParseResult?.GetValueForOption(outputFormat) ?? OutputFormat.Console,
             bindingContext.ParseResult?.GetValueForOption(destination),
-            bindingContext.ParseResult?.GetValueForOption(selectDest) ?? false);
+            bindingContext.ParseResult?.GetValueForOption(selectDest) ?? false,
+            channel != null ? bindingContext.ParseResult?.GetValueForOption(channel) : null);
     }
 
     public ILogger GetLogger(BindingContext bindingContext)
