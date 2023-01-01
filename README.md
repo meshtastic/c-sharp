@@ -36,7 +36,7 @@ Commands:
   factory-reset                          Factory reset configuration of the device
   fixed-position <lat> <lon> <altitude>  Set the device to a fixed position [default: 0]
   text <message>                         Send a text message from the device
-  reset-nodedb                           Reset the node db of the devicee
+  reset-nodedb                           Reset the node db of the device
 ```
 
 ### Example of `Meshtastic.Cli info` output with default console output level
