@@ -1,9 +1,11 @@
 using Google.Protobuf;
+using Google.Protobuf.Collections;
 using Meshtastic.Cli;
 using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Extensions;
 using Meshtastic.Cli.Parsers;
 using Meshtastic.Data;
+using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using QRCoder;
 
@@ -22,7 +24,7 @@ public class ProtobufPrinter
 
     public void Print()
     {
-        if (outputFormat == OutputFormat.Console)
+        if (outputFormat == OutputFormat.PrettyConsole)
         {
             var grid = new Grid();
             grid.AddColumn();
@@ -154,7 +156,7 @@ public class ProtobufPrinter
 
     public void PrintSettings(IEnumerable<ParsedSetting> parsedSettings)
     {
-        if (outputFormat == OutputFormat.Console)
+        if (outputFormat == OutputFormat.PrettyConsole)
         {
             var table = new Table();
             table.Expand();
@@ -177,7 +179,7 @@ public class ProtobufPrinter
 
     public void PrintUrl()
     {
-        if (outputFormat == OutputFormat.Console)
+        if (outputFormat == OutputFormat.PrettyConsole)
         {
             var channelSet = new ChannelSet()
             {
@@ -203,7 +205,7 @@ public class ProtobufPrinter
 
     public void PrintMetadata(DeviceMetadata metadata)
     {
-        if (outputFormat == OutputFormat.Console)
+        if (outputFormat == OutputFormat.PrettyConsole)
         {
             var table = new Table();
             table.Expand();
@@ -218,6 +220,30 @@ public class ProtobufPrinter
             table.AddRow(nameof(metadata.HasEthernet), metadata.HasEthernet.ToString());
             table.AddRow(nameof(metadata.CanShutdown), metadata.CanShutdown.ToString());
             AnsiConsole.Write(table);
+        }
+    }
+
+    public void PrintRoute(RepeatedField<uint> route)
+    {
+        if (outputFormat == OutputFormat.PrettyConsole)
+        {
+            var root = new Tree("[bold]Route[/]")
+            {
+                Style = new Style(StyleResources.MESHTASTIC_GREEN)
+            };
+
+            IHasTreeNodes currentTreeNode = root;
+            foreach (var nodeNum in route)
+            {
+                var node = container.Nodes.Find(n => n.Num == nodeNum);
+                var content = $"Position: {node?.Position.ToDisplayString()}{Environment.NewLine}";
+                var panel = new Panel(content)
+                {
+                    Header = new PanelHeader(container.GetNodeDisplayName(nodeNum))
+                };
+                currentTreeNode = currentTreeNode.AddNode(panel);
+            }
+            AnsiConsole.Write(root);
         }
     }
 }

@@ -29,7 +29,7 @@ public class CommandContextBinder : BinderBase<CommandContext>
     protected override CommandContext GetBoundValue(BindingContext bindingContext)
     {
         return new CommandContext(GetLogger(bindingContext),
-            bindingContext.ParseResult?.GetValueForOption(outputFormat) ?? OutputFormat.Console,
+            bindingContext.ParseResult?.GetValueForOption(outputFormat) ?? OutputFormat.PrettyConsole,
             bindingContext.ParseResult?.GetValueForOption(destination),
             bindingContext.ParseResult?.GetValueForOption(selectDest) ?? false,
             channel != null ? bindingContext.ParseResult?.GetValueForOption(channel) : null);
@@ -38,13 +38,13 @@ public class CommandContextBinder : BinderBase<CommandContext>
     public ILogger GetLogger(BindingContext bindingContext)
     {
         var level = bindingContext.ParseResult?.GetValueForOption(logLevel) ?? LogLevel.Information;
-        var output = bindingContext.ParseResult?.GetValueForOption(outputFormat) ?? OutputFormat.Console;
+        var output = bindingContext.ParseResult?.GetValueForOption(outputFormat) ?? OutputFormat.PrettyConsole;
         var loggerFactory = LoggerFactory.Create(builder =>
         {
             builder.AddPrettyConsole(new PrettyConsoleLoggerConfiguration()
             {
                 // Don't allow non-console output formats to set chatty loglevels that will corrupt clean ouput
-                LogLevel = output == OutputFormat.Console ? level : LogLevel.Error,
+                LogLevel = output == OutputFormat.PrettyConsole ? level : LogLevel.Error,
             });
             builder.SetMinimumLevel(level);
         });

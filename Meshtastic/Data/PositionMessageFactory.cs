@@ -6,27 +6,27 @@ namespace Meshtastic.Data;
 public class PositionMessageFactory
 {
     private readonly DeviceStateContainer container;
+    private readonly uint? dest;
 
-    public PositionMessageFactory(DeviceStateContainer container)
+    public PositionMessageFactory(DeviceStateContainer container, uint? dest = null)
     {
         this.container = container;
+        this.dest = dest;
     }
 
-    public MeshPacket GetNewPositionPacket(Position message, uint channel = 0, uint? to = null, uint? dest = null)
+    public MeshPacket CreatePositionPacket(Position message, uint channel = 0)
     {
         return new MeshPacket()
         {
             Channel = channel,
-            WantAck = false,
-            To = to ?? container.MyNodeInfo.MyNodeNum,
+            WantAck = true,
+            To = dest ?? container.MyNodeInfo.MyNodeNum,
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
             HopLimit = container.GetHopLimitOrDefault(),
             Decoded = new Protobufs.Data()
             {
-                Dest = dest ?? container.MyNodeInfo.MyNodeNum,
                 Portnum = PortNum.PositionApp,
                 Payload = message.ToByteString(),
-                WantResponse = true,
             },
         };
     }

@@ -31,7 +31,7 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
     public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
-        var positionMessageFactory = new PositionMessageFactory(container);
+        var positionMessageFactory = new PositionMessageFactory(container, Destination);
 
         await BeginEditSettings(adminMessageFactory);
 
@@ -41,7 +41,7 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
         Logger.LogInformation($"Setting Position.FixedPosition to True...");
 
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AdminMessageResponseReceived);
-        var positionMessage = positionMessageFactory.GetNewPositionPacket(new Position()
+        var positionMessage = positionMessageFactory.CreatePositionPacket(new Position()
         {
             LatitudeI = latitude != 0 ? decimal.ToInt32(latitude / divisor) : 0,
             LongitudeI = longitude != 0 ? decimal.ToInt32(longitude / divisor) : 0,

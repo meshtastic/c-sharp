@@ -1,4 +1,5 @@
 using Meshtastic.Protobufs;
+using System.ComponentModel;
 
 namespace Meshtastic.Data;
 
@@ -73,5 +74,14 @@ public class DeviceStateContainer
     public uint GetHopLimitOrDefault()
     {
         return (uint)(this.LocalConfig.Lora.HopLimit > 0 ? this.LocalConfig.Lora.HopLimit : 3);
+    }
+
+    public string GetNodeDisplayName(uint nodeNum)
+    {
+        var node = this.Nodes.Find(n => n.Num == nodeNum);
+        if (node == null)
+            return nodeNum.ToString();
+
+        return $"{node.User.LongName} ({node.User.ShortName}) - {node.Num}";
     }
 }

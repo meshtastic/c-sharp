@@ -70,8 +70,7 @@ public class DeviceCommandHandler
                     .AddChoices(container.Nodes.Select(n => n.Num));
             selection.Converter = num =>
             {
-                var node = container.Nodes.Find(n => n.Num == num);
-                return $"{node.User.LongName} ({node.User.ShortName}) - {node.Num}";
+                return container.GetNodeDisplayName(num);
             };
             Destination = AnsiConsole.Prompt(selection);
         }
@@ -79,6 +78,7 @@ public class DeviceCommandHandler
         await OnCompleted(packet, container);
         return true;
     }
+
 
     public virtual async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
     {

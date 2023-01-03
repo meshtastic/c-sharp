@@ -51,6 +51,7 @@ root.AddCommand(new FactoryResetCommand("factory-reset", "Factory reset configur
 root.AddCommand(new FixedPositionCommand("fixed-position", "Set the device to a fixed position", port, host, output, log, dest, selectDest));
 root.AddCommand(new SendTextCommand("text", "Send a text message from the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new ResetNodeDbCommand("reset-nodedb", "Reset the node db of the device", port, host, output, log, dest, selectDest));
+root.AddCommand(new TraceRouteCommand("trace-route", "Trace the sequence of nodes routing to the destination", port, host, output, log, dest, selectDest));
 
 var parser = new CommandLineBuilder(root)
     .UseExceptionHandler((ex, context) =>

@@ -3,30 +3,30 @@ using Meshtastic.Protobufs;
 
 namespace Meshtastic.Data;
 
-public class TextMessageFactory
+public class TraceRouteMessageFactory
 {
     private readonly DeviceStateContainer container;
     private readonly uint? dest;
 
-    public TextMessageFactory(DeviceStateContainer container, uint? dest = null)
+    public TraceRouteMessageFactory(DeviceStateContainer container, uint? dest = null)
     {
         this.container = container;
         this.dest = dest;
     }
 
-    public MeshPacket CreateTextMessagePacket(string message, uint channel = 0)
+    public MeshPacket CreateRouteDiscoveryPacket(uint channel = 0)
     {
         return new MeshPacket()
         {
             Channel = channel,
-            WantAck = true,
-            To = dest ?? 0xffffffff, // Default to broadcast
+            To = dest!.Value,
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
             HopLimit = container.GetHopLimitOrDefault(),
             Decoded = new Protobufs.Data()
             {
-                Portnum = PortNum.TextMessageApp,
-                Payload = ByteString.CopyFromUtf8(message),
+                WantResponse = true,
+                Portnum = PortNum.TracerouteApp,
+                Payload = new RouteDiscovery().ToByteString(), // Traceroute just wants an empty bytestring
             },
         };
     }

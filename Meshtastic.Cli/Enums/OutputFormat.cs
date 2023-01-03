@@ -2,6 +2,6 @@
 
 public enum OutputFormat
 {
-    Console = 0,
+    PrettyConsole = 0,
     Json = 1,
 }
