@@ -54,8 +54,7 @@ public class UrlCommandHandler : DeviceCommandHandler
             };
             Logger.LogInformation($"Sending channel {index} to device...");
             var setChannel = adminMessageFactory.CreateSetChannelMessage(channel);
-            await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setChannel),
-                AnyResponseReceived);
+            await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setChannel), AnyResponseReceived);
             index++;
         }
         Logger.LogInformation("Sending LoRA config device...");
