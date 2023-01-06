@@ -18,7 +18,7 @@ public class UrlParser
     {
         var split = this.url.Split("/#");
         var base64ChannelSet = split.Last();
-        base64ChannelSet = base64ChannelSet.Replace('_', '+').Replace('_', '/');
+        base64ChannelSet = base64ChannelSet.Replace('-', '+').Replace('_', '/');
         var missingPadding = base64ChannelSet.Length % 4;
         if (missingPadding > 0)
             base64ChannelSet += new string('=', 4 - missingPadding);
