@@ -51,10 +51,10 @@ public abstract class DeviceConnection
                 if (message.ParsedMessage.fromRadio != null)
                 {
                     DeviceStateContainer.AddFromRadio(message.ParsedMessage.fromRadio!);
-                    Logger.LogDebug($"Recieved: {message.ParsedMessage.fromRadio}");
+                    Logger.LogDebug($"Received: {message.ParsedMessage.fromRadio}");
                 }
                 else
-                    Logger.LogWarning($"Recieved payload from device we could not decode: {Convert.ToBase64String(payload)}");
+                    Logger.LogDebug($"Notification of pending packets {Convert.ToBase64String(payload)}");
 
                 if (await isComplete(message, DeviceStateContainer))
                 {

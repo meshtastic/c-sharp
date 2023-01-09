@@ -35,12 +35,6 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
 
         await BeginEditSettings(adminMessageFactory);
 
-        var positionConfig = container.LocalConfig.Position;
-        positionConfig.FixedPosition = true;
-        var adminMessage = adminMessageFactory.CreateSetConfigMessage(positionConfig);
-        Logger.LogInformation($"Setting Position.FixedPosition to True...");
-
-        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AdminMessageResponseReceived);
         var positionMessage = positionMessageFactory.CreatePositionPacket(new Position()
         {
             LatitudeI = latitude != 0 ? decimal.ToInt32(latitude / divisor) : 0,
@@ -51,6 +45,13 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
         });
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(positionMessage), AnyResponseReceived);
         Logger.LogInformation($"Sending position to device...");
+
+        var positionConfig = container.LocalConfig.Position;
+        positionConfig.FixedPosition = true;
+        var adminMessage = adminMessageFactory.CreateSetConfigMessage(positionConfig);
+        Logger.LogInformation($"Setting Position.FixedPosition to True...");
+
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AdminMessageResponseReceived);
 
         await CommitEditSettings(adminMessageFactory);
     }

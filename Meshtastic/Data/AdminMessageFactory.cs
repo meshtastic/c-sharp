@@ -112,4 +112,12 @@ public class AdminMessageFactory
     {
         return GetNewMeshPacket(new AdminMessage() { NodedbReset = 1 });
     }
+    public MeshPacket CreateSetCannedMessage(string message)
+    {
+        return GetNewMeshPacket(new AdminMessage() { SetCannedMessageModuleMessages = message });
+    }
+    public MeshPacket CreateGetCannedMessage()
+    {
+        return GetNewMeshPacket(new AdminMessage() { GetCannedMessageModuleMessagesRequest = true });
+    }
 }

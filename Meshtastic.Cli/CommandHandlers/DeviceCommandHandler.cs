@@ -90,7 +90,7 @@ public class DeviceCommandHandler
         var message = adminMessageFactory.CreateBeginEditSettingsMessage();
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message),
             AnyResponseReceived);
-        Logger.LogInformation($"[olive]Starting edit transaction for settings...[/]");
+        Logger.LogInformation($"Starting edit transaction for settings...");
     }
 
     protected async Task CommitEditSettings(AdminMessageFactory adminMessageFactory)
@@ -98,6 +98,6 @@ public class DeviceCommandHandler
         var message = adminMessageFactory.CreateCommitEditSettingsMessage();
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message),
             AnyResponseReceived);
-        Logger.LogInformation($"[green]Commit edit transaction for settings...[/]");
+        Logger.LogInformation($"Commit edit transaction for settings...");
     }
 }

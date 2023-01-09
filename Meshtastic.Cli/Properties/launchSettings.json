@@ -87,6 +87,22 @@
     "trace route": {
       "commandName": "Project",
       "commandLineArgs": "trace-route --log debug --select-dest"
+    },
+    "set-canned-messages localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "set-canned-messages \"I need an alpinist!|Call Me|Roger Roger|Keep Calm|On my way\" --host localhost --log debug"
+    },
+    "get-canned-messages localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "get-canned-messages --host localhost --log debug"
+    },
+    "get-canned-messages": {
+      "commandName": "Project",
+      "commandLineArgs": "get-canned-messages --log debug"
+    },
+    "set-canned-messages": {
+      "commandName": "Project",
+      "commandLineArgs": "set-canned-messages \"I need an alpinist!|Call Me|Roger Roger|Keep Calm|On my way\" --log debug"
     }
   }
 }
