@@ -32,7 +32,7 @@ namespace Meshtastic.Protobufs {
             "JgoHZGlzcGxheRgFIAEoCzIVLkNvbmZpZy5EaXNwbGF5Q29uZmlnEiAKBGxv",
             "cmEYBiABKAsyEi5Db25maWcuTG9SYUNvbmZpZxIqCglibHVldG9vdGgYByAB",
             "KAsyFy5Db25maWcuQmx1ZXRvb3RoQ29uZmlnEg8KB3ZlcnNpb24YCCABKA0i",
-            "xAMKEUxvY2FsTW9kdWxlQ29uZmlnEiYKBG1xdHQYASABKAsyGC5Nb2R1bGVD",
+            "gQQKEUxvY2FsTW9kdWxlQ29uZmlnEiYKBG1xdHQYASABKAsyGC5Nb2R1bGVD",
             "b25maWcuTVFUVENvbmZpZxIqCgZzZXJpYWwYAiABKAsyGi5Nb2R1bGVDb25m",
             "aWcuU2VyaWFsQ29uZmlnEkcKFWV4dGVybmFsX25vdGlmaWNhdGlvbhgDIAEo",
             "CzIoLk1vZHVsZUNvbmZpZy5FeHRlcm5hbE5vdGlmaWNhdGlvbkNvbmZpZxI3",
@@ -41,15 +41,16 @@ namespace Meshtastic.Protobufs {
             "LlJhbmdlVGVzdENvbmZpZxIwCgl0ZWxlbWV0cnkYBiABKAsyHS5Nb2R1bGVD",
             "b25maWcuVGVsZW1ldHJ5Q29uZmlnEjkKDmNhbm5lZF9tZXNzYWdlGAcgASgL",
             "MiEuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcSKAoFYXVkaW8Y",
-            "CSABKAsyGS5Nb2R1bGVDb25maWcuQXVkaW9Db25maWcSDwoHdmVyc2lvbhgI",
-            "IAEoDUJjChNjb20uZ2Vla3N2aWxsZS5tZXNoQg9Mb2NhbE9ubHlQcm90b3NI",
-            "A1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0",
-            "YXN0aWMuUHJvdG9idWZzYgZwcm90bzM="));
+            "CSABKAsyGS5Nb2R1bGVDb25maWcuQXVkaW9Db25maWcSOwoPcmVtb3RlX2hh",
+            "cmR3YXJlGAogASgLMiIuTW9kdWxlQ29uZmlnLlJlbW90ZUhhcmR3YXJlQ29u",
+            "ZmlnEg8KB3ZlcnNpb24YCCABKA1CYwoTY29tLmdlZWtzdmlsbGUubWVzaEIP",
+            "TG9jYWxPbmx5UHJvdG9zSANaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9n",
+            "ZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalConfig), global::Meshtastic.Protobufs.LocalConfig.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth", "Version" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalModuleConfig), global::Meshtastic.Protobufs.LocalModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "Version" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalModuleConfig), global::Meshtastic.Protobufs.LocalModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "Version" }, null, null, null, null)
           }));
     }
     #endregion
@@ -643,6 +644,7 @@ namespace Meshtastic.Protobufs {
       telemetry_ = other.telemetry_ != null ? other.telemetry_.Clone() : null;
       cannedMessage_ = other.cannedMessage_ != null ? other.cannedMessage_.Clone() : null;
       audio_ = other.audio_ != null ? other.audio_.Clone() : null;
+      remoteHardware_ = other.remoteHardware_ != null ? other.remoteHardware_.Clone() : null;
       version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -781,6 +783,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "remote_hardware" field.</summary>
+    public const int RemoteHardwareFieldNumber = 10;
+    private global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig remoteHardware_;
+    /// <summary>
+    ///
+    /// The part of the config that is specific to the Remote Hardware module
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig RemoteHardware {
+      get { return remoteHardware_; }
+      set {
+        remoteHardware_ = value;
+      }
+    }
+
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 8;
     private uint version_;
@@ -822,6 +840,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Telemetry, other.Telemetry)) return false;
       if (!object.Equals(CannedMessage, other.CannedMessage)) return false;
       if (!object.Equals(Audio, other.Audio)) return false;
+      if (!object.Equals(RemoteHardware, other.RemoteHardware)) return false;
       if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -838,6 +857,7 @@ namespace Meshtastic.Protobufs {
       if (telemetry_ != null) hash ^= Telemetry.GetHashCode();
       if (cannedMessage_ != null) hash ^= CannedMessage.GetHashCode();
       if (audio_ != null) hash ^= Audio.GetHashCode();
+      if (remoteHardware_ != null) hash ^= RemoteHardware.GetHashCode();
       if (Version != 0) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -893,6 +913,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(74);
         output.WriteMessage(Audio);
       }
+      if (remoteHardware_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RemoteHardware);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -939,6 +963,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(74);
         output.WriteMessage(Audio);
       }
+      if (remoteHardware_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RemoteHardware);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -972,6 +1000,9 @@ namespace Meshtastic.Protobufs {
       }
       if (audio_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Audio);
+      }
+      if (remoteHardware_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoteHardware);
       }
       if (Version != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
@@ -1035,6 +1066,12 @@ namespace Meshtastic.Protobufs {
           Audio = new global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig();
         }
         Audio.MergeFrom(other.Audio);
+      }
+      if (other.remoteHardware_ != null) {
+        if (remoteHardware_ == null) {
+          RemoteHardware = new global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig();
+        }
+        RemoteHardware.MergeFrom(other.RemoteHardware);
       }
       if (other.Version != 0) {
         Version = other.Version;
@@ -1114,6 +1151,13 @@ namespace Meshtastic.Protobufs {
             input.ReadMessage(Audio);
             break;
           }
+          case 82: {
+            if (remoteHardware_ == null) {
+              RemoteHardware = new global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig();
+            }
+            input.ReadMessage(RemoteHardware);
+            break;
+          }
         }
       }
     #endif
@@ -1187,6 +1231,13 @@ namespace Meshtastic.Protobufs {
               Audio = new global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig();
             }
             input.ReadMessage(Audio);
+            break;
+          }
+          case 82: {
+            if (remoteHardware_ == null) {
+              RemoteHardware = new global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig();
+            }
+            input.ReadMessage(RemoteHardware);
             break;
           }
         }

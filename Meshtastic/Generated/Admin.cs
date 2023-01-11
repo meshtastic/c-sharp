@@ -26,7 +26,7 @@ namespace Meshtastic.Protobufs {
           string.Concat(
             "CgthZG1pbi5wcm90bxoNY2hhbm5lbC5wcm90bxoMY29uZmlnLnByb3RvGhVk",
             "ZXZpY2VfbWV0YWRhdGEucHJvdG8aCm1lc2gucHJvdG8aE21vZHVsZV9jb25m",
-            "aWcucHJvdG8i9goKDEFkbWluTWVzc2FnZRIdChNnZXRfY2hhbm5lbF9yZXF1",
+            "aWcucHJvdG8i8gsKDEFkbWluTWVzc2FnZRIdChNnZXRfY2hhbm5lbF9yZXF1",
             "ZXN0GAEgASgNSAASKAoUZ2V0X2NoYW5uZWxfcmVzcG9uc2UYAiABKAsyCC5D",
             "aGFubmVsSAASGwoRZ2V0X293bmVyX3JlcXVlc3QYAyABKAhIABIjChJnZXRf",
             "b3duZXJfcmVzcG9uc2UYBCABKAsyBS5Vc2VySAASNgoSZ2V0X2NvbmZpZ19y",
@@ -39,31 +39,34 @@ namespace Meshtastic.Protobufs {
             "X21lc3NhZ2VfbW9kdWxlX21lc3NhZ2VzX3Jlc3BvbnNlGAsgASgJSAASJQob",
             "Z2V0X2RldmljZV9tZXRhZGF0YV9yZXF1ZXN0GAwgASgISAASNwocZ2V0X2Rl",
             "dmljZV9tZXRhZGF0YV9yZXNwb25zZRgNIAEoCzIPLkRldmljZU1ldGFkYXRh",
-            "SAASGgoJc2V0X293bmVyGCAgASgLMgUuVXNlckgAEh8KC3NldF9jaGFubmVs",
-            "GCEgASgLMgguQ2hhbm5lbEgAEh0KCnNldF9jb25maWcYIiABKAsyBy5Db25m",
-            "aWdIABIqChFzZXRfbW9kdWxlX2NvbmZpZxgjIAEoCzINLk1vZHVsZUNvbmZp",
-            "Z0gAEiwKInNldF9jYW5uZWRfbWVzc2FnZV9tb2R1bGVfbWVzc2FnZXMYJCAB",
-            "KAlIABIdChNiZWdpbl9lZGl0X3NldHRpbmdzGEAgASgISAASHgoUY29tbWl0",
-            "X2VkaXRfc2V0dGluZ3MYQSABKAhIABIdChNjb25maXJtX3NldF9jaGFubmVs",
-            "GEIgASgISAASGwoRY29uZmlybV9zZXRfcmFkaW8YQyABKAhIABIcChJyZWJv",
-            "b3Rfb3RhX3NlY29uZHMYXyABKAVIABIYCg5leGl0X3NpbXVsYXRvchhgIAEo",
-            "CEgAEhgKDnJlYm9vdF9zZWNvbmRzGGEgASgFSAASGgoQc2h1dGRvd25fc2Vj",
-            "b25kcxhiIAEoBUgAEhcKDWZhY3RvcnlfcmVzZXQYYyABKAVIABIWCgxub2Rl",
-            "ZGJfcmVzZXQYZCABKAVIACKVAQoKQ29uZmlnVHlwZRIRCg1ERVZJQ0VfQ09O",
-            "RklHEAASEwoPUE9TSVRJT05fQ09ORklHEAESEAoMUE9XRVJfQ09ORklHEAIS",
-            "EgoOTkVUV09SS19DT05GSUcQAxISCg5ESVNQTEFZX0NPTkZJRxAEEg8KC0xP",
-            "UkFfQ09ORklHEAUSFAoQQkxVRVRPT1RIX0NPTkZJRxAGIrgBChBNb2R1bGVD",
-            "b25maWdUeXBlEg8KC01RVFRfQ09ORklHEAASEQoNU0VSSUFMX0NPTkZJRxAB",
-            "EhMKD0VYVE5PVElGX0NPTkZJRxACEhcKE1NUT1JFRk9SV0FSRF9DT05GSUcQ",
-            "AxIUChBSQU5HRVRFU1RfQ09ORklHEAQSFAoQVEVMRU1FVFJZX0NPTkZJRxAF",
-            "EhQKEENBTk5FRE1TR19DT05GSUcQBhIQCgxBVURJT19DT05GSUcQB0IRCg9w",
-            "YXlsb2FkX3ZhcmlhbnRCXwoTY29tLmdlZWtzdmlsbGUubWVzaEILQWRtaW5Q",
-            "cm90b3NIA1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoC",
-            "FE1lc2h0YXN0aWMuUHJvdG9idWZzYgZwcm90bzM="));
+            "SAASHgoUZ2V0X3Jpbmd0b25lX3JlcXVlc3QYDiABKAhIABIfChVnZXRfcmlu",
+            "Z3RvbmVfcmVzcG9uc2UYDyABKAlIABIaCglzZXRfb3duZXIYICABKAsyBS5V",
+            "c2VySAASHwoLc2V0X2NoYW5uZWwYISABKAsyCC5DaGFubmVsSAASHQoKc2V0",
+            "X2NvbmZpZxgiIAEoCzIHLkNvbmZpZ0gAEioKEXNldF9tb2R1bGVfY29uZmln",
+            "GCMgASgLMg0uTW9kdWxlQ29uZmlnSAASLAoic2V0X2Nhbm5lZF9tZXNzYWdl",
+            "X21vZHVsZV9tZXNzYWdlcxgkIAEoCUgAEh4KFHNldF9yaW5ndG9uZV9tZXNz",
+            "YWdlGCUgASgJSAASHQoTYmVnaW5fZWRpdF9zZXR0aW5ncxhAIAEoCEgAEh4K",
+            "FGNvbW1pdF9lZGl0X3NldHRpbmdzGEEgASgISAASHQoTY29uZmlybV9zZXRf",
+            "Y2hhbm5lbBhCIAEoCEgAEhsKEWNvbmZpcm1fc2V0X3JhZGlvGEMgASgISAAS",
+            "HAoScmVib290X290YV9zZWNvbmRzGF8gASgFSAASGAoOZXhpdF9zaW11bGF0",
+            "b3IYYCABKAhIABIYCg5yZWJvb3Rfc2Vjb25kcxhhIAEoBUgAEhoKEHNodXRk",
+            "b3duX3NlY29uZHMYYiABKAVIABIXCg1mYWN0b3J5X3Jlc2V0GGMgASgFSAAS",
+            "FgoMbm9kZWRiX3Jlc2V0GGQgASgFSAAilQEKCkNvbmZpZ1R5cGUSEQoNREVW",
+            "SUNFX0NPTkZJRxAAEhMKD1BPU0lUSU9OX0NPTkZJRxABEhAKDFBPV0VSX0NP",
+            "TkZJRxACEhIKDk5FVFdPUktfQ09ORklHEAMSEgoORElTUExBWV9DT05GSUcQ",
+            "BBIPCgtMT1JBX0NPTkZJRxAFEhQKEEJMVUVUT09USF9DT05GSUcQBiLTAQoQ",
+            "TW9kdWxlQ29uZmlnVHlwZRIPCgtNUVRUX0NPTkZJRxAAEhEKDVNFUklBTF9D",
+            "T05GSUcQARITCg9FWFROT1RJRl9DT05GSUcQAhIXChNTVE9SRUZPUldBUkRf",
+            "Q09ORklHEAMSFAoQUkFOR0VURVNUX0NPTkZJRxAEEhQKEFRFTEVNRVRSWV9D",
+            "T05GSUcQBRIUChBDQU5ORURNU0dfQ09ORklHEAYSEAoMQVVESU9fQ09ORklH",
+            "EAcSGQoVUkVNT1RFSEFSRFdBUkVfQ09ORklHEAhCEQoPcGF5bG9hZF92YXJp",
+            "YW50Ql8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCC0FkbWluUHJvdG9zSANaImdp",
+            "dGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGlj",
+            "LlByb3RvYnVmc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceMetadataReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "BeginEditSettings", "CommitEditSettings", "ConfirmSetChannel", "ConfirmSetRadio", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "BeginEditSettings", "CommitEditSettings", "ConfirmSetChannel", "ConfirmSetRadio", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null)
           }));
     }
     #endregion
@@ -147,6 +150,12 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.GetDeviceMetadataResponse:
           GetDeviceMetadataResponse = other.GetDeviceMetadataResponse.Clone();
           break;
+        case PayloadVariantOneofCase.GetRingtoneRequest:
+          GetRingtoneRequest = other.GetRingtoneRequest;
+          break;
+        case PayloadVariantOneofCase.GetRingtoneResponse:
+          GetRingtoneResponse = other.GetRingtoneResponse;
+          break;
         case PayloadVariantOneofCase.SetOwner:
           SetOwner = other.SetOwner.Clone();
           break;
@@ -161,6 +170,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.SetCannedMessageModuleMessages:
           SetCannedMessageModuleMessages = other.SetCannedMessageModuleMessages;
+          break;
+        case PayloadVariantOneofCase.SetRingtoneMessage:
+          SetRingtoneMessage = other.SetRingtoneMessage;
           break;
         case PayloadVariantOneofCase.BeginEditSettings:
           BeginEditSettings = other.BeginEditSettings;
@@ -396,6 +408,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "get_ringtone_request" field.</summary>
+    public const int GetRingtoneRequestFieldNumber = 14;
+    /// <summary>
+    ///
+    /// Get the Ringtone in the response to this message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GetRingtoneRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest ? (bool) payloadVariant_ : false; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.GetRingtoneRequest;
+      }
+    }
+
+    /// <summary>Field number for the "get_ringtone_response" field.</summary>
+    public const int GetRingtoneResponseFieldNumber = 15;
+    /// <summary>
+    ///
+    /// Get the Ringtone in the response to this message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GetRingtoneResponse {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse ? (string) payloadVariant_ : ""; }
+      set {
+        payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        payloadVariantCase_ = PayloadVariantOneofCase.GetRingtoneResponse;
+      }
+    }
+
     /// <summary>Field number for the "set_owner" field.</summary>
     public const int SetOwnerFieldNumber = 32;
     /// <summary>
@@ -477,6 +521,22 @@ namespace Meshtastic.Protobufs {
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.SetCannedMessageModuleMessages;
+      }
+    }
+
+    /// <summary>Field number for the "set_ringtone_message" field.</summary>
+    public const int SetRingtoneMessageFieldNumber = 37;
+    /// <summary>
+    ///
+    /// Set the ringtone for ExternalNotification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SetRingtoneMessage {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage ? (string) payloadVariant_ : ""; }
+      set {
+        payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        payloadVariantCase_ = PayloadVariantOneofCase.SetRingtoneMessage;
       }
     }
 
@@ -662,11 +722,14 @@ namespace Meshtastic.Protobufs {
       GetCannedMessageModuleMessagesResponse = 11,
       GetDeviceMetadataRequest = 12,
       GetDeviceMetadataResponse = 13,
+      GetRingtoneRequest = 14,
+      GetRingtoneResponse = 15,
       SetOwner = 32,
       SetChannel = 33,
       SetConfig = 34,
       SetModuleConfig = 35,
       SetCannedMessageModuleMessages = 36,
+      SetRingtoneMessage = 37,
       BeginEditSettings = 64,
       CommitEditSettings = 65,
       ConfirmSetChannel = 66,
@@ -719,11 +782,14 @@ namespace Meshtastic.Protobufs {
       if (GetCannedMessageModuleMessagesResponse != other.GetCannedMessageModuleMessagesResponse) return false;
       if (GetDeviceMetadataRequest != other.GetDeviceMetadataRequest) return false;
       if (!object.Equals(GetDeviceMetadataResponse, other.GetDeviceMetadataResponse)) return false;
+      if (GetRingtoneRequest != other.GetRingtoneRequest) return false;
+      if (GetRingtoneResponse != other.GetRingtoneResponse) return false;
       if (!object.Equals(SetOwner, other.SetOwner)) return false;
       if (!object.Equals(SetChannel, other.SetChannel)) return false;
       if (!object.Equals(SetConfig, other.SetConfig)) return false;
       if (!object.Equals(SetModuleConfig, other.SetModuleConfig)) return false;
       if (SetCannedMessageModuleMessages != other.SetCannedMessageModuleMessages) return false;
+      if (SetRingtoneMessage != other.SetRingtoneMessage) return false;
       if (BeginEditSettings != other.BeginEditSettings) return false;
       if (CommitEditSettings != other.CommitEditSettings) return false;
       if (ConfirmSetChannel != other.ConfirmSetChannel) return false;
@@ -754,11 +820,14 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse) hash ^= GetCannedMessageModuleMessagesResponse.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataRequest) hash ^= GetDeviceMetadataRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataResponse) hash ^= GetDeviceMetadataResponse.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) hash ^= GetRingtoneRequest.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) hash ^= GetRingtoneResponse.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) hash ^= SetOwner.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetChannel) hash ^= SetChannel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetConfig) hash ^= SetConfig.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetModuleConfig) hash ^= SetModuleConfig.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) hash ^= SetCannedMessageModuleMessages.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) hash ^= SetRingtoneMessage.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetChannel) hash ^= ConfirmSetChannel.GetHashCode();
@@ -836,6 +905,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(106);
         output.WriteMessage(GetDeviceMetadataResponse);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) {
+        output.WriteRawTag(112);
+        output.WriteBool(GetRingtoneRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) {
+        output.WriteRawTag(122);
+        output.WriteString(GetRingtoneResponse);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -855,6 +932,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) {
         output.WriteRawTag(162, 2);
         output.WriteString(SetCannedMessageModuleMessages);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) {
+        output.WriteRawTag(170, 2);
+        output.WriteString(SetRingtoneMessage);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         output.WriteRawTag(128, 4);
@@ -954,6 +1035,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(106);
         output.WriteMessage(GetDeviceMetadataResponse);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) {
+        output.WriteRawTag(112);
+        output.WriteBool(GetRingtoneRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) {
+        output.WriteRawTag(122);
+        output.WriteString(GetRingtoneResponse);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -973,6 +1062,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) {
         output.WriteRawTag(162, 2);
         output.WriteString(SetCannedMessageModuleMessages);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) {
+        output.WriteRawTag(170, 2);
+        output.WriteString(SetRingtoneMessage);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         output.WriteRawTag(128, 4);
@@ -1060,6 +1153,12 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataResponse) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GetDeviceMetadataResponse);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) {
+        size += 1 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GetRingtoneResponse);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetOwner);
       }
@@ -1074,6 +1173,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SetCannedMessageModuleMessages);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(SetRingtoneMessage);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         size += 2 + 1;
@@ -1169,6 +1271,12 @@ namespace Meshtastic.Protobufs {
           }
           GetDeviceMetadataResponse.MergeFrom(other.GetDeviceMetadataResponse);
           break;
+        case PayloadVariantOneofCase.GetRingtoneRequest:
+          GetRingtoneRequest = other.GetRingtoneRequest;
+          break;
+        case PayloadVariantOneofCase.GetRingtoneResponse:
+          GetRingtoneResponse = other.GetRingtoneResponse;
+          break;
         case PayloadVariantOneofCase.SetOwner:
           if (SetOwner == null) {
             SetOwner = new global::Meshtastic.Protobufs.User();
@@ -1195,6 +1303,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.SetCannedMessageModuleMessages:
           SetCannedMessageModuleMessages = other.SetCannedMessageModuleMessages;
+          break;
+        case PayloadVariantOneofCase.SetRingtoneMessage:
+          SetRingtoneMessage = other.SetRingtoneMessage;
           break;
         case PayloadVariantOneofCase.BeginEditSettings:
           BeginEditSettings = other.BeginEditSettings;
@@ -1318,6 +1429,14 @@ namespace Meshtastic.Protobufs {
             GetDeviceMetadataResponse = subBuilder;
             break;
           }
+          case 112: {
+            GetRingtoneRequest = input.ReadBool();
+            break;
+          }
+          case 122: {
+            GetRingtoneResponse = input.ReadString();
+            break;
+          }
           case 258: {
             global::Meshtastic.Protobufs.User subBuilder = new global::Meshtastic.Protobufs.User();
             if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
@@ -1356,6 +1475,10 @@ namespace Meshtastic.Protobufs {
           }
           case 290: {
             SetCannedMessageModuleMessages = input.ReadString();
+            break;
+          }
+          case 298: {
+            SetRingtoneMessage = input.ReadString();
             break;
           }
           case 512: {
@@ -1488,6 +1611,14 @@ namespace Meshtastic.Protobufs {
             GetDeviceMetadataResponse = subBuilder;
             break;
           }
+          case 112: {
+            GetRingtoneRequest = input.ReadBool();
+            break;
+          }
+          case 122: {
+            GetRingtoneResponse = input.ReadString();
+            break;
+          }
           case 258: {
             global::Meshtastic.Protobufs.User subBuilder = new global::Meshtastic.Protobufs.User();
             if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
@@ -1526,6 +1657,10 @@ namespace Meshtastic.Protobufs {
           }
           case 290: {
             SetCannedMessageModuleMessages = input.ReadString();
+            break;
+          }
+          case 298: {
+            SetRingtoneMessage = input.ReadString();
             break;
           }
           case 512: {
@@ -1665,6 +1800,11 @@ namespace Meshtastic.Protobufs {
         /// TODO: REPLACE
         /// </summary>
         [pbr::OriginalName("AUDIO_CONFIG")] AudioConfig = 7,
+        /// <summary>
+        ///
+        /// TODO: REPLACE
+        /// </summary>
+        [pbr::OriginalName("REMOTEHARDWARE_CONFIG")] RemotehardwareConfig = 8,
       }
 
     }

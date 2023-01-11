@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgxjb25maWcucHJvdG8i5RUKBkNvbmZpZxImCgZkZXZpY2UYASABKAsyFC5D",
+            "Cgxjb25maWcucHJvdG8ighcKBkNvbmZpZxImCgZkZXZpY2UYASABKAsyFC5D",
             "b25maWcuRGV2aWNlQ29uZmlnSAASKgoIcG9zaXRpb24YAiABKAsyFi5Db25m",
             "aWcuUG9zaXRpb25Db25maWdIABIkCgVwb3dlchgDIAEoCzITLkNvbmZpZy5Q",
             "b3dlckNvbmZpZ0gAEigKB25ldHdvcmsYBCABKAsyFS5Db25maWcuTmV0d29y",
@@ -50,53 +50,57 @@ namespace Meshtastic.Protobufs {
             "IAEoDRIfChdhZGNfbXVsdGlwbGllcl9vdmVycmlkZRgDIAEoAhIbChN3YWl0",
             "X2JsdWV0b290aF9zZWNzGAQgASgNEh0KFW1lc2hfc2RzX3RpbWVvdXRfc2Vj",
             "cxgFIAEoDRIQCghzZHNfc2VjcxgGIAEoDRIPCgdsc19zZWNzGAcgASgNEhUK",
-            "DW1pbl93YWtlX3NlY3MYCCABKA0axAIKDU5ldHdvcmtDb25maWcSFAoMd2lm",
+            "DW1pbl93YWtlX3NlY3MYCCABKA0a0AIKDU5ldHdvcmtDb25maWcSFAoMd2lm",
             "aV9lbmFibGVkGAEgASgIEhEKCXdpZmlfc3NpZBgDIAEoCRIQCgh3aWZpX3Bz",
             "axgEIAEoCRISCgpudHBfc2VydmVyGAUgASgJEhMKC2V0aF9lbmFibGVkGAYg",
-            "ASgIEi8KCGV0aF9tb2RlGAcgASgOMh0uQ29uZmlnLk5ldHdvcmtDb25maWcu",
-            "RXRoTW9kZRI1CgtpcHY0X2NvbmZpZxgIIAEoCzIgLkNvbmZpZy5OZXR3b3Jr",
-            "Q29uZmlnLklwVjRDb25maWcaRgoKSXBWNENvbmZpZxIKCgJpcBgBIAEoBxIP",
-            "CgdnYXRld2F5GAIgASgHEg4KBnN1Ym5ldBgDIAEoBxILCgNkbnMYBCABKAci",
-            "HwoHRXRoTW9kZRIICgRESENQEAASCgoGU1RBVElDEAEa0QMKDURpc3BsYXlD",
-            "b25maWcSFgoOc2NyZWVuX29uX3NlY3MYASABKA0SPQoKZ3BzX2Zvcm1hdBgC",
-            "IAEoDjIpLkNvbmZpZy5EaXNwbGF5Q29uZmlnLkdwc0Nvb3JkaW5hdGVGb3Jt",
-            "YXQSIQoZYXV0b19zY3JlZW5fY2Fyb3VzZWxfc2VjcxgDIAEoDRIZChFjb21w",
-            "YXNzX25vcnRoX3RvcBgEIAEoCBITCgtmbGlwX3NjcmVlbhgFIAEoCBIxCgV1",
-            "bml0cxgGIAEoDjIiLkNvbmZpZy5EaXNwbGF5Q29uZmlnLkRpc3BsYXlVbml0",
-            "cxIsCgRvbGVkGAcgASgOMh4uQ29uZmlnLkRpc3BsYXlDb25maWcuT2xlZFR5",
-            "cGUiTQoTR3BzQ29vcmRpbmF0ZUZvcm1hdBIHCgNERUMQABIHCgNETVMQARIH",
+            "ASgIEjcKDGFkZHJlc3NfbW9kZRgHIAEoDjIhLkNvbmZpZy5OZXR3b3JrQ29u",
+            "ZmlnLkFkZHJlc3NNb2RlEjUKC2lwdjRfY29uZmlnGAggASgLMiAuQ29uZmln",
+            "Lk5ldHdvcmtDb25maWcuSXBWNENvbmZpZxpGCgpJcFY0Q29uZmlnEgoKAmlw",
+            "GAEgASgHEg8KB2dhdGV3YXkYAiABKAcSDgoGc3VibmV0GAMgASgHEgsKA2Ru",
+            "cxgEIAEoByIjCgtBZGRyZXNzTW9kZRIICgRESENQEAASCgoGU1RBVElDEAEa",
+            "4gQKDURpc3BsYXlDb25maWcSFgoOc2NyZWVuX29uX3NlY3MYASABKA0SPQoK",
+            "Z3BzX2Zvcm1hdBgCIAEoDjIpLkNvbmZpZy5EaXNwbGF5Q29uZmlnLkdwc0Nv",
+            "b3JkaW5hdGVGb3JtYXQSIQoZYXV0b19zY3JlZW5fY2Fyb3VzZWxfc2VjcxgD",
+            "IAEoDRIZChFjb21wYXNzX25vcnRoX3RvcBgEIAEoCBITCgtmbGlwX3NjcmVl",
+            "bhgFIAEoCBIxCgV1bml0cxgGIAEoDjIiLkNvbmZpZy5EaXNwbGF5Q29uZmln",
+            "LkRpc3BsYXlVbml0cxIsCgRvbGVkGAcgASgOMh4uQ29uZmlnLkRpc3BsYXlD",
+            "b25maWcuT2xlZFR5cGUSNgoLZGlzcGxheW1vZGUYCCABKA4yIS5Db25maWcu",
+            "RGlzcGxheUNvbmZpZy5EaXNwbGF5TW9kZRIUCgxoZWFkaW5nX2JvbGQYCSAB",
+            "KAgiTQoTR3BzQ29vcmRpbmF0ZUZvcm1hdBIHCgNERUMQABIHCgNETVMQARIH",
             "CgNVVE0QAhIICgRNR1JTEAMSBwoDT0xDEAQSCAoET1NHUhAFIigKDERpc3Bs",
             "YXlVbml0cxIKCgZNRVRSSUMQABIMCghJTVBFUklBTBABIjwKCE9sZWRUeXBl",
             "Eg0KCU9MRURfQVVUTxAAEhAKDE9MRURfU1NEMTMwNhABEg8KC09MRURfU0gx",
-            "MTA2EAIa+gQKCkxvUmFDb25maWcSEgoKdXNlX3ByZXNldBgBIAEoCBI0Cgxt",
-            "b2RlbV9wcmVzZXQYAiABKA4yHi5Db25maWcuTG9SYUNvbmZpZy5Nb2RlbVBy",
-            "ZXNldBIRCgliYW5kd2lkdGgYAyABKA0SFQoNc3ByZWFkX2ZhY3RvchgEIAEo",
-            "DRITCgtjb2RpbmdfcmF0ZRgFIAEoDRIYChBmcmVxdWVuY3lfb2Zmc2V0GAYg",
-            "ASgCEi0KBnJlZ2lvbhgHIAEoDjIdLkNvbmZpZy5Mb1JhQ29uZmlnLlJlZ2lv",
-            "bkNvZGUSEQoJaG9wX2xpbWl0GAggASgNEhIKCnR4X2VuYWJsZWQYCSABKAgS",
-            "EAoIdHhfcG93ZXIYCiABKAUSEwoLY2hhbm5lbF9udW0YCyABKA0SGwoTb3Zl",
-            "cnJpZGVfZHV0eV9jeWNsZRgMIAEoCBIXCg9pZ25vcmVfaW5jb21pbmcYZyAD",
-            "KA0ikQEKClJlZ2lvbkNvZGUSCQoFVU5TRVQQABIGCgJVUxABEgoKBkVVXzQz",
-            "MxACEgoKBkVVXzg2OBADEgYKAkNOEAQSBgoCSlAQBRIHCgNBTloQBhIGCgJL",
-            "UhAHEgYKAlRXEAgSBgoCUlUQCRIGCgJJThAKEgoKBk5aXzg2NRALEgYKAlRI",
-            "EAwSCwoHTE9SQV8yNBANIoEBCgtNb2RlbVByZXNldBINCglMT05HX0ZBU1QQ",
-            "ABINCglMT05HX1NMT1cQARISCg5WRVJZX0xPTkdfU0xPVxACEg8KC01FRElV",
-            "TV9TTE9XEAMSDwoLTUVESVVNX0ZBU1QQBBIOCgpTSE9SVF9TTE9XEAUSDgoK",
-            "U0hPUlRfRkFTVBAGGqIBCg9CbHVldG9vdGhDb25maWcSDwoHZW5hYmxlZBgB",
-            "IAEoCBIxCgRtb2RlGAIgASgOMiMuQ29uZmlnLkJsdWV0b290aENvbmZpZy5Q",
-            "YWlyaW5nTW9kZRIRCglmaXhlZF9waW4YAyABKA0iOAoLUGFpcmluZ01vZGUS",
-            "DgoKUkFORE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJThACQhEK",
-            "D3BheWxvYWRfdmFyaWFudEJgChNjb20uZ2Vla3N2aWxsZS5tZXNoQgxDb25m",
-            "aWdQcm90b3NIA1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRl",
-            "ZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzYgZwcm90bzM="));
+            "MTA2EAIiQQoLRGlzcGxheU1vZGUSCwoHREVGQVVMVBAAEgwKCFRXT0NPTE9S",
+            "EAESDAoISU5WRVJURUQQAhIJCgVDT0xPUhADGvoECgpMb1JhQ29uZmlnEhIK",
+            "CnVzZV9wcmVzZXQYASABKAgSNAoMbW9kZW1fcHJlc2V0GAIgASgOMh4uQ29u",
+            "ZmlnLkxvUmFDb25maWcuTW9kZW1QcmVzZXQSEQoJYmFuZHdpZHRoGAMgASgN",
+            "EhUKDXNwcmVhZF9mYWN0b3IYBCABKA0SEwoLY29kaW5nX3JhdGUYBSABKA0S",
+            "GAoQZnJlcXVlbmN5X29mZnNldBgGIAEoAhItCgZyZWdpb24YByABKA4yHS5D",
+            "b25maWcuTG9SYUNvbmZpZy5SZWdpb25Db2RlEhEKCWhvcF9saW1pdBgIIAEo",
+            "DRISCgp0eF9lbmFibGVkGAkgASgIEhAKCHR4X3Bvd2VyGAogASgFEhMKC2No",
+            "YW5uZWxfbnVtGAsgASgNEhsKE292ZXJyaWRlX2R1dHlfY3ljbGUYDCABKAgS",
+            "FwoPaWdub3JlX2luY29taW5nGGcgAygNIpEBCgpSZWdpb25Db2RlEgkKBVVO",
+            "U0VUEAASBgoCVVMQARIKCgZFVV80MzMQAhIKCgZFVV84NjgQAxIGCgJDThAE",
+            "EgYKAkpQEAUSBwoDQU5aEAYSBgoCS1IQBxIGCgJUVxAIEgYKAlJVEAkSBgoC",
+            "SU4QChIKCgZOWl84NjUQCxIGCgJUSBAMEgsKB0xPUkFfMjQQDSKBAQoLTW9k",
+            "ZW1QcmVzZXQSDQoJTE9OR19GQVNUEAASDQoJTE9OR19TTE9XEAESEgoOVkVS",
+            "WV9MT05HX1NMT1cQAhIPCgtNRURJVU1fU0xPVxADEg8KC01FRElVTV9GQVNU",
+            "EAQSDgoKU0hPUlRfU0xPVxAFEg4KClNIT1JUX0ZBU1QQBhqiAQoPQmx1ZXRv",
+            "b3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSMQoEbW9kZRgCIAEoDjIjLkNv",
+            "bmZpZy5CbHVldG9vdGhDb25maWcuUGFpcmluZ01vZGUSEQoJZml4ZWRfcGlu",
+            "GAMgASgNIjgKC1BhaXJpbmdNb2RlEg4KClJBTkRPTV9QSU4QABINCglGSVhF",
+            "RF9QSU4QARIKCgZOT19QSU4QAkIRCg9wYXlsb2FkX3ZhcmlhbnRCYAoTY29t",
+            "LmdlZWtzdmlsbGUubWVzaEIMQ29uZmlnUHJvdG9zSANaImdpdGh1Yi5jb20v",
+            "bWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVm",
+            "c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config), global::Meshtastic.Protobufs.Config.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig), global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Parser, new[]{ "Role", "SerialEnabled", "DebugLogEnabled", "ButtonGpio", "BuzzerGpio" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig), global::Meshtastic.Protobufs.Config.Types.PositionConfig.Parser, new[]{ "PositionBroadcastSecs", "PositionBroadcastSmartEnabled", "FixedPosition", "GpsEnabled", "GpsUpdateInterval", "GpsAttemptTime", "PositionFlags", "RxGpio", "TxGpio" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.PositionFlags) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PowerConfig), global::Meshtastic.Protobufs.Config.Types.PowerConfig.Parser, new[]{ "IsPowerSaving", "OnBatteryShutdownAfterSecs", "AdcMultiplierOverride", "WaitBluetoothSecs", "MeshSdsTimeoutSecs", "SdsSecs", "LsSecs", "MinWakeSecs" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "EthMode", "Ipv4Config" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "AddressMode", "Ipv4Config" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "IgnoreIncoming" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null)})
           }));
@@ -2220,7 +2224,7 @@ namespace Meshtastic.Protobufs {
           wifiPsk_ = other.wifiPsk_;
           ntpServer_ = other.ntpServer_;
           ethEnabled_ = other.ethEnabled_;
-          ethMode_ = other.ethMode_;
+          addressMode_ = other.addressMode_;
           ipv4Config_ = other.ipv4Config_ != null ? other.ipv4Config_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -2312,19 +2316,19 @@ namespace Meshtastic.Protobufs {
           }
         }
 
-        /// <summary>Field number for the "eth_mode" field.</summary>
-        public const int EthModeFieldNumber = 7;
-        private global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode ethMode_ = global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode.Dhcp;
+        /// <summary>Field number for the "address_mode" field.</summary>
+        public const int AddressModeFieldNumber = 7;
+        private global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode addressMode_ = global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode.Dhcp;
         /// <summary>
         ///
         /// acquire an address via DHCP or assign static
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode EthMode {
-          get { return ethMode_; }
+        public global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode AddressMode {
+          get { return addressMode_; }
           set {
-            ethMode_ = value;
+            addressMode_ = value;
           }
         }
 
@@ -2364,7 +2368,7 @@ namespace Meshtastic.Protobufs {
           if (WifiPsk != other.WifiPsk) return false;
           if (NtpServer != other.NtpServer) return false;
           if (EthEnabled != other.EthEnabled) return false;
-          if (EthMode != other.EthMode) return false;
+          if (AddressMode != other.AddressMode) return false;
           if (!object.Equals(Ipv4Config, other.Ipv4Config)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -2378,7 +2382,7 @@ namespace Meshtastic.Protobufs {
           if (WifiPsk.Length != 0) hash ^= WifiPsk.GetHashCode();
           if (NtpServer.Length != 0) hash ^= NtpServer.GetHashCode();
           if (EthEnabled != false) hash ^= EthEnabled.GetHashCode();
-          if (EthMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode.Dhcp) hash ^= EthMode.GetHashCode();
+          if (AddressMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode.Dhcp) hash ^= AddressMode.GetHashCode();
           if (ipv4Config_ != null) hash ^= Ipv4Config.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2418,9 +2422,9 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(48);
             output.WriteBool(EthEnabled);
           }
-          if (EthMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode.Dhcp) {
+          if (AddressMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode.Dhcp) {
             output.WriteRawTag(56);
-            output.WriteEnum((int) EthMode);
+            output.WriteEnum((int) AddressMode);
           }
           if (ipv4Config_ != null) {
             output.WriteRawTag(66);
@@ -2456,9 +2460,9 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(48);
             output.WriteBool(EthEnabled);
           }
-          if (EthMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode.Dhcp) {
+          if (AddressMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode.Dhcp) {
             output.WriteRawTag(56);
-            output.WriteEnum((int) EthMode);
+            output.WriteEnum((int) AddressMode);
           }
           if (ipv4Config_ != null) {
             output.WriteRawTag(66);
@@ -2489,8 +2493,8 @@ namespace Meshtastic.Protobufs {
           if (EthEnabled != false) {
             size += 1 + 1;
           }
-          if (EthMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode.Dhcp) {
-            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EthMode);
+          if (AddressMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode.Dhcp) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AddressMode);
           }
           if (ipv4Config_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ipv4Config);
@@ -2522,8 +2526,8 @@ namespace Meshtastic.Protobufs {
           if (other.EthEnabled != false) {
             EthEnabled = other.EthEnabled;
           }
-          if (other.EthMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode.Dhcp) {
-            EthMode = other.EthMode;
+          if (other.AddressMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode.Dhcp) {
+            AddressMode = other.AddressMode;
           }
           if (other.ipv4Config_ != null) {
             if (ipv4Config_ == null) {
@@ -2567,7 +2571,7 @@ namespace Meshtastic.Protobufs {
                 break;
               }
               case 56: {
-                EthMode = (global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode) input.ReadEnum();
+                AddressMode = (global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) input.ReadEnum();
                 break;
               }
               case 66: {
@@ -2613,7 +2617,7 @@ namespace Meshtastic.Protobufs {
                 break;
               }
               case 56: {
-                EthMode = (global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.EthMode) input.ReadEnum();
+                AddressMode = (global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) input.ReadEnum();
                 break;
               }
               case 66: {
@@ -2633,7 +2637,7 @@ namespace Meshtastic.Protobufs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
-          public enum EthMode {
+          public enum AddressMode {
             /// <summary>
             ///
             /// obtain ip address via DHCP
@@ -3012,6 +3016,8 @@ namespace Meshtastic.Protobufs {
           flipScreen_ = other.flipScreen_;
           units_ = other.units_;
           oled_ = other.oled_;
+          displaymode_ = other.displaymode_;
+          headingBold_ = other.headingBold_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3136,6 +3142,38 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "displaymode" field.</summary>
+        public const int DisplaymodeFieldNumber = 8;
+        private global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode displaymode_ = global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode.Default;
+        /// <summary>
+        ///
+        /// Display Mode
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode Displaymode {
+          get { return displaymode_; }
+          set {
+            displaymode_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "heading_bold" field.</summary>
+        public const int HeadingBoldFieldNumber = 9;
+        private bool headingBold_;
+        /// <summary>
+        ///
+        /// Print first line in pseudo-bold? FALSE is original style, TRUE is bold
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HeadingBold {
+          get { return headingBold_; }
+          set {
+            headingBold_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3158,6 +3196,8 @@ namespace Meshtastic.Protobufs {
           if (FlipScreen != other.FlipScreen) return false;
           if (Units != other.Units) return false;
           if (Oled != other.Oled) return false;
+          if (Displaymode != other.Displaymode) return false;
+          if (HeadingBold != other.HeadingBold) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3172,6 +3212,8 @@ namespace Meshtastic.Protobufs {
           if (FlipScreen != false) hash ^= FlipScreen.GetHashCode();
           if (Units != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits.Metric) hash ^= Units.GetHashCode();
           if (Oled != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType.OledAuto) hash ^= Oled.GetHashCode();
+          if (Displaymode != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode.Default) hash ^= Displaymode.GetHashCode();
+          if (HeadingBold != false) hash ^= HeadingBold.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3218,6 +3260,14 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(56);
             output.WriteEnum((int) Oled);
           }
+          if (Displaymode != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode.Default) {
+            output.WriteRawTag(64);
+            output.WriteEnum((int) Displaymode);
+          }
+          if (HeadingBold != false) {
+            output.WriteRawTag(72);
+            output.WriteBool(HeadingBold);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3256,6 +3306,14 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(56);
             output.WriteEnum((int) Oled);
           }
+          if (Displaymode != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode.Default) {
+            output.WriteRawTag(64);
+            output.WriteEnum((int) Displaymode);
+          }
+          if (HeadingBold != false) {
+            output.WriteRawTag(72);
+            output.WriteBool(HeadingBold);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3286,6 +3344,12 @@ namespace Meshtastic.Protobufs {
           }
           if (Oled != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType.OledAuto) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Oled);
+          }
+          if (Displaymode != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode.Default) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Displaymode);
+          }
+          if (HeadingBold != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3319,6 +3383,12 @@ namespace Meshtastic.Protobufs {
           }
           if (other.Oled != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType.OledAuto) {
             Oled = other.Oled;
+          }
+          if (other.Displaymode != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode.Default) {
+            Displaymode = other.Displaymode;
+          }
+          if (other.HeadingBold != false) {
+            HeadingBold = other.HeadingBold;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3363,6 +3433,14 @@ namespace Meshtastic.Protobufs {
                 Oled = (global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType) input.ReadEnum();
                 break;
               }
+              case 64: {
+                Displaymode = (global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode) input.ReadEnum();
+                break;
+              }
+              case 72: {
+                HeadingBold = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -3404,6 +3482,14 @@ namespace Meshtastic.Protobufs {
               }
               case 56: {
                 Oled = (global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType) input.ReadEnum();
+                break;
+              }
+              case 64: {
+                Displaymode = (global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode) input.ReadEnum();
+                break;
+              }
+              case 72: {
+                HeadingBold = input.ReadBool();
                 break;
               }
             }
@@ -3497,6 +3583,29 @@ namespace Meshtastic.Protobufs {
             /// Default / Auto
             /// </summary>
             [pbr::OriginalName("OLED_SH1106")] OledSh1106 = 2,
+          }
+
+          public enum DisplayMode {
+            /// <summary>
+            ///
+            /// Default. The old style for the 128x64 OLED screen
+            /// </summary>
+            [pbr::OriginalName("DEFAULT")] Default = 0,
+            /// <summary>
+            ///
+            /// Rearrange display elements to cater for bicolor OLED displays
+            /// </summary>
+            [pbr::OriginalName("TWOCOLOR")] Twocolor = 1,
+            /// <summary>
+            ///
+            /// Same as TwoColor, but with inverted top bar. Not so good for Epaper displays
+            /// </summary>
+            [pbr::OriginalName("INVERTED")] Inverted = 2,
+            /// <summary>
+            ///
+            /// TFT Full Color Displays (not implemented yet)
+            /// </summary>
+            [pbr::OriginalName("COLOR")] Color = 3,
           }
 
         }

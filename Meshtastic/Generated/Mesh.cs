@@ -56,68 +56,71 @@ namespace Meshtastic.Protobufs {
             "YW50IpwBCgREYXRhEhkKB3BvcnRudW0YASABKA4yCC5Qb3J0TnVtEg8KB3Bh",
             "eWxvYWQYAiABKAwSFQoNd2FudF9yZXNwb25zZRgDIAEoCBIMCgRkZXN0GAQg",
             "ASgHEg4KBnNvdXJjZRgFIAEoBxISCgpyZXF1ZXN0X2lkGAYgASgHEhAKCHJl",
-            "cGx5X2lkGAcgASgHEg0KBWVtb2ppGAggASgHIoIBCghXYXlwb2ludBIKCgJp",
+            "cGx5X2lkGAcgASgHEg0KBWVtb2ppGAggASgHIpEBCghXYXlwb2ludBIKCgJp",
             "ZBgBIAEoDRISCgpsYXRpdHVkZV9pGAIgASgPEhMKC2xvbmdpdHVkZV9pGAMg",
             "ASgPEg4KBmV4cGlyZRgEIAEoDRIOCgZsb2NrZWQYBSABKAgSDAoEbmFtZRgG",
-            "IAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCSLLAwoKTWVzaFBhY2tldBIMCgRm",
-            "cm9tGAEgASgHEgoKAnRvGAIgASgHEg8KB2NoYW5uZWwYAyABKA0SGAoHZGVj",
-            "b2RlZBgEIAEoCzIFLkRhdGFIABITCgllbmNyeXB0ZWQYBSABKAxIABIKCgJp",
-            "ZBgGIAEoBxIPCgdyeF90aW1lGAcgASgHEg4KBnJ4X3NuchgIIAEoAhIRCglo",
-            "b3BfbGltaXQYCSABKA0SEAoId2FudF9hY2sYCiABKAgSJgoIcHJpb3JpdHkY",
-            "CyABKA4yFC5NZXNoUGFja2V0LlByaW9yaXR5Eg8KB3J4X3Jzc2kYDCABKAUS",
-            "JAoHZGVsYXllZBgNIAEoDjITLk1lc2hQYWNrZXQuRGVsYXllZCJbCghQcmlv",
-            "cml0eRIJCgVVTlNFVBAAEgcKA01JThABEg4KCkJBQ0tHUk9VTkQQChILCgdE",
-            "RUZBVUxUEEASDAoIUkVMSUFCTEUQRhIHCgNBQ0sQeBIHCgNNQVgQfyJCCgdE",
-            "ZWxheWVkEgwKCE5PX0RFTEFZEAASFQoRREVMQVlFRF9CUk9BRENBU1QQARIS",
-            "Cg5ERUxBWUVEX0RJUkVDVBACQhEKD3BheWxvYWRfdmFyaWFudCKSAQoITm9k",
-            "ZUluZm8SCwoDbnVtGAEgASgNEhMKBHVzZXIYAiABKAsyBS5Vc2VyEhsKCHBv",
-            "c2l0aW9uGAMgASgLMgkuUG9zaXRpb24SCwoDc25yGAQgASgCEhIKCmxhc3Rf",
-            "aGVhcmQYBSABKAcSJgoOZGV2aWNlX21ldHJpY3MYBiABKAsyDi5EZXZpY2VN",
-            "ZXRyaWNzIoYDCgpNeU5vZGVJbmZvEhMKC215X25vZGVfbnVtGAEgASgNEg8K",
-            "B2hhc19ncHMYAiABKAgSFAoMbWF4X2NoYW5uZWxzGAMgASgNEhgKEGZpcm13",
-            "YXJlX3ZlcnNpb24YBCABKAkSJgoKZXJyb3JfY29kZRgFIAEoDjISLkNyaXRp",
-            "Y2FsRXJyb3JDb2RlEhUKDWVycm9yX2FkZHJlc3MYBiABKA0SEwoLZXJyb3Jf",
-            "Y291bnQYByABKA0SFAoMcmVib290X2NvdW50GAggASgNEg8KB2JpdHJhdGUY",
-            "CSABKAISHAoUbWVzc2FnZV90aW1lb3V0X21zZWMYCiABKA0SFwoPbWluX2Fw",
-            "cF92ZXJzaW9uGAsgASgNEhUKDWFpcl9wZXJpb2RfdHgYDCADKA0SFQoNYWly",
-            "X3BlcmlvZF9yeBgNIAMoDRIQCghoYXNfd2lmaRgOIAEoCBIbChNjaGFubmVs",
-            "X3V0aWxpemF0aW9uGA8gASgCEhMKC2Fpcl91dGlsX3R4GBAgASgCIrUBCglM",
-            "b2dSZWNvcmQSDwoHbWVzc2FnZRgBIAEoCRIMCgR0aW1lGAIgASgHEg4KBnNv",
-            "dXJjZRgDIAEoCRIfCgVsZXZlbBgEIAEoDjIQLkxvZ1JlY29yZC5MZXZlbCJY",
-            "CgVMZXZlbBIJCgVVTlNFVBAAEgwKCENSSVRJQ0FMEDISCQoFRVJST1IQKBIL",
-            "CgdXQVJOSU5HEB4SCAoESU5GTxAUEgkKBURFQlVHEAoSCQoFVFJBQ0UQBSK8",
-            "AgoJRnJvbVJhZGlvEgoKAmlkGAEgASgNEh0KBnBhY2tldBgCIAEoCzILLk1l",
-            "c2hQYWNrZXRIABIeCgdteV9pbmZvGAMgASgLMgsuTXlOb2RlSW5mb0gAEh4K",
-            "CW5vZGVfaW5mbxgEIAEoCzIJLk5vZGVJbmZvSAASGQoGY29uZmlnGAUgASgL",
-            "MgcuQ29uZmlnSAASIAoKbG9nX3JlY29yZBgGIAEoCzIKLkxvZ1JlY29yZEgA",
-            "EhwKEmNvbmZpZ19jb21wbGV0ZV9pZBgHIAEoDUgAEhIKCHJlYm9vdGVkGAgg",
-            "ASgISAASJQoMbW9kdWxlQ29uZmlnGAkgASgLMg0uTW9kdWxlQ29uZmlnSAAS",
-            "GwoHY2hhbm5lbBgKIAEoCzIILkNoYW5uZWxIAEIRCg9wYXlsb2FkX3Zhcmlh",
-            "bnQiawoHVG9SYWRpbxIdCgZwYWNrZXQYASABKAsyCy5NZXNoUGFja2V0SAAS",
-            "GAoOd2FudF9jb25maWdfaWQYAyABKA1IABIUCgpkaXNjb25uZWN0GAQgASgI",
-            "SABCEQoPcGF5bG9hZF92YXJpYW50IjUKCkNvbXByZXNzZWQSGQoHcG9ydG51",
-            "bRgBIAEoDjIILlBvcnROdW0SDAoEZGF0YRgCIAEoDCqKBAoNSGFyZHdhcmVN",
-            "b2RlbBIJCgVVTlNFVBAAEgwKCFRMT1JBX1YyEAESDAoIVExPUkFfVjEQAhIS",
-            "Cg5UTE9SQV9WMl8xXzFQNhADEgkKBVRCRUFNEAQSDwoLSEVMVEVDX1YyXzAQ",
-            "BRIOCgpUQkVBTV9WMFA3EAYSCgoGVF9FQ0hPEAcSEAoMVExPUkFfVjFfMVAz",
-            "EAgSCwoHUkFLNDYzMRAJEg8KC0hFTFRFQ19WMl8xEAoSDQoJSEVMVEVDX1Yx",
-            "EAsSGAoUTElMWUdPX1RCRUFNX1MzX0NPUkUQDBIMCghSQUsxMTIwMBANEgsK",
-            "B05BTk9fRzEQDhISCg5UTE9SQV9WMl8xXzFQOBAPEg8KC1RMT1JBX1QzX1Mz",
-            "EBASDgoKU1RBVElPTl9HMRAZEhEKDUxPUkFfUkVMQVlfVjEQIBIOCgpOUkY1",
-            "Mjg0MERLECESBwoDUFBSECISDwoLR0VOSUVCTE9DS1MQIxIRCg1OUkY1Ml9V",
-            "TktOT1dOECQSDQoJUE9SVERVSU5PECUSDwoLQU5EUk9JRF9TSU0QJhIKCgZE",
-            "SVlfVjEQJxIVChFOUkY1Mjg0MF9QQ0ExMDA1ORAoEgoKBkRSX0RFVhApEgsK",
-            "B001U1RBQ0sQKhINCglIRUxURUNfVjMQKxIRCg1IRUxURUNfV1NMX1YzECwS",
-            "DwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAAEhUKEERB",
-            "VEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2RlEggKBE5P",
-            "TkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQAhIM",
-            "CghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9G",
-            "QUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NFVFRJ",
-            "TkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIKDlNY",
-            "MTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl4KE2NvbS5nZWVr",
-            "c3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NIA1oiZ2l0aHViLmNvbS9tZXNodGFz",
-            "dGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzYgZwcm90",
-            "bzM="));
+            "IAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCRINCgVlbW9qaRgIIAEoByLLAwoK",
+            "TWVzaFBhY2tldBIMCgRmcm9tGAEgASgHEgoKAnRvGAIgASgHEg8KB2NoYW5u",
+            "ZWwYAyABKA0SGAoHZGVjb2RlZBgEIAEoCzIFLkRhdGFIABITCgllbmNyeXB0",
+            "ZWQYBSABKAxIABIKCgJpZBgGIAEoBxIPCgdyeF90aW1lGAcgASgHEg4KBnJ4",
+            "X3NuchgIIAEoAhIRCglob3BfbGltaXQYCSABKA0SEAoId2FudF9hY2sYCiAB",
+            "KAgSJgoIcHJpb3JpdHkYCyABKA4yFC5NZXNoUGFja2V0LlByaW9yaXR5Eg8K",
+            "B3J4X3Jzc2kYDCABKAUSJAoHZGVsYXllZBgNIAEoDjITLk1lc2hQYWNrZXQu",
+            "RGVsYXllZCJbCghQcmlvcml0eRIJCgVVTlNFVBAAEgcKA01JThABEg4KCkJB",
+            "Q0tHUk9VTkQQChILCgdERUZBVUxUEEASDAoIUkVMSUFCTEUQRhIHCgNBQ0sQ",
+            "eBIHCgNNQVgQfyJCCgdEZWxheWVkEgwKCE5PX0RFTEFZEAASFQoRREVMQVlF",
+            "RF9CUk9BRENBU1QQARISCg5ERUxBWUVEX0RJUkVDVBACQhEKD3BheWxvYWRf",
+            "dmFyaWFudCKSAQoITm9kZUluZm8SCwoDbnVtGAEgASgNEhMKBHVzZXIYAiAB",
+            "KAsyBS5Vc2VyEhsKCHBvc2l0aW9uGAMgASgLMgkuUG9zaXRpb24SCwoDc25y",
+            "GAQgASgCEhIKCmxhc3RfaGVhcmQYBSABKAcSJgoOZGV2aWNlX21ldHJpY3MY",
+            "BiABKAsyDi5EZXZpY2VNZXRyaWNzIoYDCgpNeU5vZGVJbmZvEhMKC215X25v",
+            "ZGVfbnVtGAEgASgNEg8KB2hhc19ncHMYAiABKAgSFAoMbWF4X2NoYW5uZWxz",
+            "GAMgASgNEhgKEGZpcm13YXJlX3ZlcnNpb24YBCABKAkSJgoKZXJyb3JfY29k",
+            "ZRgFIAEoDjISLkNyaXRpY2FsRXJyb3JDb2RlEhUKDWVycm9yX2FkZHJlc3MY",
+            "BiABKA0SEwoLZXJyb3JfY291bnQYByABKA0SFAoMcmVib290X2NvdW50GAgg",
+            "ASgNEg8KB2JpdHJhdGUYCSABKAISHAoUbWVzc2FnZV90aW1lb3V0X21zZWMY",
+            "CiABKA0SFwoPbWluX2FwcF92ZXJzaW9uGAsgASgNEhUKDWFpcl9wZXJpb2Rf",
+            "dHgYDCADKA0SFQoNYWlyX3BlcmlvZF9yeBgNIAMoDRIQCghoYXNfd2lmaRgO",
+            "IAEoCBIbChNjaGFubmVsX3V0aWxpemF0aW9uGA8gASgCEhMKC2Fpcl91dGls",
+            "X3R4GBAgASgCIrUBCglMb2dSZWNvcmQSDwoHbWVzc2FnZRgBIAEoCRIMCgR0",
+            "aW1lGAIgASgHEg4KBnNvdXJjZRgDIAEoCRIfCgVsZXZlbBgEIAEoDjIQLkxv",
+            "Z1JlY29yZC5MZXZlbCJYCgVMZXZlbBIJCgVVTlNFVBAAEgwKCENSSVRJQ0FM",
+            "EDISCQoFRVJST1IQKBILCgdXQVJOSU5HEB4SCAoESU5GTxAUEgkKBURFQlVH",
+            "EAoSCQoFVFJBQ0UQBSJQCgtRdWV1ZVN0YXR1cxILCgNyZXMYASABKAUSDAoE",
+            "ZnJlZRgCIAEoDRIOCgZtYXhsZW4YAyABKA0SFgoObWVzaF9wYWNrZXRfaWQY",
+            "BCABKA0i4QIKCUZyb21SYWRpbxIKCgJpZBgBIAEoDRIdCgZwYWNrZXQYAiAB",
+            "KAsyCy5NZXNoUGFja2V0SAASHgoHbXlfaW5mbxgDIAEoCzILLk15Tm9kZUlu",
+            "Zm9IABIeCglub2RlX2luZm8YBCABKAsyCS5Ob2RlSW5mb0gAEhkKBmNvbmZp",
+            "ZxgFIAEoCzIHLkNvbmZpZ0gAEiAKCmxvZ19yZWNvcmQYBiABKAsyCi5Mb2dS",
+            "ZWNvcmRIABIcChJjb25maWdfY29tcGxldGVfaWQYByABKA1IABISCghyZWJv",
+            "b3RlZBgIIAEoCEgAEiUKDG1vZHVsZUNvbmZpZxgJIAEoCzINLk1vZHVsZUNv",
+            "bmZpZ0gAEhsKB2NoYW5uZWwYCiABKAsyCC5DaGFubmVsSAASIwoLcXVldWVT",
+            "dGF0dXMYCyABKAsyDC5RdWV1ZVN0YXR1c0gAQhEKD3BheWxvYWRfdmFyaWFu",
+            "dCJrCgdUb1JhZGlvEh0KBnBhY2tldBgBIAEoCzILLk1lc2hQYWNrZXRIABIY",
+            "Cg53YW50X2NvbmZpZ19pZBgDIAEoDUgAEhQKCmRpc2Nvbm5lY3QYBCABKAhI",
+            "AEIRCg9wYXlsb2FkX3ZhcmlhbnQiNQoKQ29tcHJlc3NlZBIZCgdwb3J0bnVt",
+            "GAEgASgOMgguUG9ydE51bRIMCgRkYXRhGAIgASgMKp8ECg1IYXJkd2FyZU1v",
+            "ZGVsEgkKBVVOU0VUEAASDAoIVExPUkFfVjIQARIMCghUTE9SQV9WMRACEhIK",
+            "DlRMT1JBX1YyXzFfMVA2EAMSCQoFVEJFQU0QBBIPCgtIRUxURUNfVjJfMBAF",
+            "Eg4KClRCRUFNX1YwUDcQBhIKCgZUX0VDSE8QBxIQCgxUTE9SQV9WMV8xUDMQ",
+            "CBILCgdSQUs0NjMxEAkSDwoLSEVMVEVDX1YyXzEQChINCglIRUxURUNfVjEQ",
+            "CxIYChRMSUxZR09fVEJFQU1fUzNfQ09SRRAMEgwKCFJBSzExMjAwEA0SCwoH",
+            "TkFOT19HMRAOEhIKDlRMT1JBX1YyXzFfMVA4EA8SDwoLVExPUkFfVDNfUzMQ",
+            "EBIOCgpTVEFUSU9OX0cxEBkSEQoNTE9SQV9SRUxBWV9WMRAgEg4KCk5SRjUy",
+            "ODQwREsQIRIHCgNQUFIQIhIPCgtHRU5JRUJMT0NLUxAjEhEKDU5SRjUyX1VO",
+            "S05PV04QJBINCglQT1JURFVJTk8QJRIPCgtBTkRST0lEX1NJTRAmEgoKBkRJ",
+            "WV9WMRAnEhUKEU5SRjUyODQwX1BDQTEwMDU5ECgSCgoGRFJfREVWECkSCwoH",
+            "TTVTVEFDSxAqEg0KCUhFTFRFQ19WMxArEhEKDUhFTFRFQ19XU0xfVjMQLBIT",
+            "Cg9CRVRBRlBWXzI0MDBfVFgQLRIPCgpQUklWQVRFX0hXEP8BKiwKCUNvbnN0",
+            "YW50cxIICgRaRVJPEAASFQoQREFUQV9QQVlMT0FEX0xFThDtASruAQoRQ3Jp",
+            "dGljYWxFcnJvckNvZGUSCAoETk9ORRAAEg8KC1RYX1dBVENIRE9HEAESFAoQ",
+            "U0xFRVBfRU5URVJfV0FJVBACEgwKCE5PX1JBRElPEAMSDwoLVU5TUEVDSUZJ",
+            "RUQQBBIVChFVQkxPWF9VTklUX0ZBSUxFRBAFEg0KCU5PX0FYUDE5MhAGEhkK",
+            "FUlOVkFMSURfUkFESU9fU0VUVElORxAHEhMKD1RSQU5TTUlUX0ZBSUxFRBAI",
+            "EgwKCEJST1dOT1VUEAkSEgoOU1gxMjYyX0ZBSUxVUkUQChIRCg1SQURJT19T",
+            "UElfQlVHEAtCXgoTY29tLmdlZWtzdmlsbGUubWVzaEIKTWVzaFByb3Rvc0gD",
+            "WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRh",
+            "c3RpYy5Qcm90b2J1ZnNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,12 +129,13 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.RouteDiscovery), global::Meshtastic.Protobufs.RouteDiscovery.Parser, new[]{ "Route" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Routing), global::Meshtastic.Protobufs.Routing.Parser, new[]{ "RouteRequest", "RouteReply", "ErrorReason" }, new[]{ "Variant" }, new[]{ typeof(global::Meshtastic.Protobufs.Routing.Types.Error) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Data), global::Meshtastic.Protobufs.Data.Parser, new[]{ "Portnum", "Payload", "WantResponse", "Dest", "Source", "RequestId", "ReplyId", "Emoji" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Waypoint), global::Meshtastic.Protobufs.Waypoint.Parser, new[]{ "Id", "LatitudeI", "LongitudeI", "Expire", "Locked", "Name", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Waypoint), global::Meshtastic.Protobufs.Waypoint.Parser, new[]{ "Id", "LatitudeI", "LongitudeI", "Expire", "Locked", "Name", "Description", "Emoji" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MeshPacket), global::Meshtastic.Protobufs.MeshPacket.Parser, new[]{ "From", "To", "Channel", "Decoded", "Encrypted", "Id", "RxTime", "RxSnr", "HopLimit", "WantAck", "Priority", "RxRssi", "Delayed" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Priority), typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Delayed) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfo), global::Meshtastic.Protobufs.NodeInfo.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MyNodeInfo), global::Meshtastic.Protobufs.MyNodeInfo.Parser, new[]{ "MyNodeNum", "HasGps", "MaxChannels", "FirmwareVersion", "ErrorCode", "ErrorAddress", "ErrorCount", "RebootCount", "Bitrate", "MessageTimeoutMsec", "MinAppVersion", "AirPeriodTx", "AirPeriodRx", "HasWifi", "ChannelUtilization", "AirUtilTx" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LogRecord), global::Meshtastic.Protobufs.LogRecord.Parser, new[]{ "Message", "Time", "Source", "Level" }, null, new[]{ typeof(global::Meshtastic.Protobufs.LogRecord.Types.Level) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel" }, new[]{ "PayloadVariant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.QueueStatus), global::Meshtastic.Protobufs.QueueStatus.Parser, new[]{ "Res", "Free", "Maxlen", "MeshPacketId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel", "QueueStatus" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ToRadio), global::Meshtastic.Protobufs.ToRadio.Parser, new[]{ "Packet", "WantConfigId", "Disconnect" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Compressed), global::Meshtastic.Protobufs.Compressed.Parser, new[]{ "Portnum", "Data" }, null, null, null, null)
           }));
@@ -305,6 +309,11 @@ namespace Meshtastic.Protobufs {
     /// New Heltec Wireless Stick Lite with ESP32-S3 CPU
     /// </summary>
     [pbr::OriginalName("HELTEC_WSL_V3")] HeltecWslV3 = 44,
+    /// <summary>
+    ///
+    /// New BETAFPV ELRS Micro TX Module 2.4G with ESP32 CPU
+    /// </summary>
+    [pbr::OriginalName("BETAFPV_2400_TX")] Betafpv2400Tx = 45,
     /// <summary>
     ///
     /// Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
@@ -3135,6 +3144,7 @@ namespace Meshtastic.Protobufs {
       locked_ = other.locked_;
       name_ = other.name_;
       description_ = other.description_;
+      emoji_ = other.emoji_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3244,7 +3254,7 @@ namespace Meshtastic.Protobufs {
     public const int DescriptionFieldNumber = 7;
     private string description_ = "";
     /// <summary>
-    ///*
+    ///
     /// Description of the waypoint - max 100 chars
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3253,6 +3263,22 @@ namespace Meshtastic.Protobufs {
       get { return description_; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "emoji" field.</summary>
+    public const int EmojiFieldNumber = 8;
+    private uint emoji_;
+    /// <summary>
+    ///
+    /// Designator icon for the waypoint in the form of a unicode emoji
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Emoji {
+      get { return emoji_; }
+      set {
+        emoji_ = value;
       }
     }
 
@@ -3278,6 +3304,7 @@ namespace Meshtastic.Protobufs {
       if (Locked != other.Locked) return false;
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
+      if (Emoji != other.Emoji) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3292,6 +3319,7 @@ namespace Meshtastic.Protobufs {
       if (Locked != false) hash ^= Locked.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Emoji != 0) hash ^= Emoji.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3338,6 +3366,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
+      if (Emoji != 0) {
+        output.WriteRawTag(69);
+        output.WriteFixed32(Emoji);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3376,6 +3408,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
+      if (Emoji != 0) {
+        output.WriteRawTag(69);
+        output.WriteFixed32(Emoji);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3406,6 +3442,9 @@ namespace Meshtastic.Protobufs {
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (Emoji != 0) {
+        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3439,6 +3478,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.Emoji != 0) {
+        Emoji = other.Emoji;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3483,6 +3525,10 @@ namespace Meshtastic.Protobufs {
             Description = input.ReadString();
             break;
           }
+          case 69: {
+            Emoji = input.ReadFixed32();
+            break;
+          }
         }
       }
     #endif
@@ -3524,6 +3570,10 @@ namespace Meshtastic.Protobufs {
           }
           case 58: {
             Description = input.ReadString();
+            break;
+          }
+          case 69: {
+            Emoji = input.ReadFixed32();
             break;
           }
         }
@@ -6027,6 +6077,318 @@ namespace Meshtastic.Protobufs {
 
   }
 
+  public sealed partial class QueueStatus : pb::IMessage<QueueStatus>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QueueStatus> _parser = new pb::MessageParser<QueueStatus>(() => new QueueStatus());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QueueStatus> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueueStatus() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueueStatus(QueueStatus other) : this() {
+      res_ = other.res_;
+      free_ = other.free_;
+      maxlen_ = other.maxlen_;
+      meshPacketId_ = other.meshPacketId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueueStatus Clone() {
+      return new QueueStatus(this);
+    }
+
+    /// <summary>Field number for the "res" field.</summary>
+    public const int ResFieldNumber = 1;
+    private int res_;
+    /// <summary>
+    /// Last attempt to queue status, ErrorCode 
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Res {
+      get { return res_; }
+      set {
+        res_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "free" field.</summary>
+    public const int FreeFieldNumber = 2;
+    private uint free_;
+    /// <summary>
+    /// Free entries in the outgoing queue 
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Free {
+      get { return free_; }
+      set {
+        free_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "maxlen" field.</summary>
+    public const int MaxlenFieldNumber = 3;
+    private uint maxlen_;
+    /// <summary>
+    /// Maximum entries in the outgoing queue 
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Maxlen {
+      get { return maxlen_; }
+      set {
+        maxlen_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mesh_packet_id" field.</summary>
+    public const int MeshPacketIdFieldNumber = 4;
+    private uint meshPacketId_;
+    /// <summary>
+    /// What was mesh packet id that generated this response? 
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MeshPacketId {
+      get { return meshPacketId_; }
+      set {
+        meshPacketId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QueueStatus);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QueueStatus other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Res != other.Res) return false;
+      if (Free != other.Free) return false;
+      if (Maxlen != other.Maxlen) return false;
+      if (MeshPacketId != other.MeshPacketId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Res != 0) hash ^= Res.GetHashCode();
+      if (Free != 0) hash ^= Free.GetHashCode();
+      if (Maxlen != 0) hash ^= Maxlen.GetHashCode();
+      if (MeshPacketId != 0) hash ^= MeshPacketId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Res != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Res);
+      }
+      if (Free != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Free);
+      }
+      if (Maxlen != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Maxlen);
+      }
+      if (MeshPacketId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(MeshPacketId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Res != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Res);
+      }
+      if (Free != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Free);
+      }
+      if (Maxlen != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Maxlen);
+      }
+      if (MeshPacketId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(MeshPacketId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Res != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Res);
+      }
+      if (Free != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Free);
+      }
+      if (Maxlen != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Maxlen);
+      }
+      if (MeshPacketId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MeshPacketId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QueueStatus other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Res != 0) {
+        Res = other.Res;
+      }
+      if (other.Free != 0) {
+        Free = other.Free;
+      }
+      if (other.Maxlen != 0) {
+        Maxlen = other.Maxlen;
+      }
+      if (other.MeshPacketId != 0) {
+        MeshPacketId = other.MeshPacketId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Res = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Free = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Maxlen = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            MeshPacketId = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Res = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Free = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Maxlen = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            MeshPacketId = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   /// <summary>
   ///
   /// Packets from the radio to the phone will appear on the fromRadio characteristic.
@@ -6048,7 +6410,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6096,6 +6458,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.Channel:
           Channel = other.Channel.Clone();
+          break;
+        case PayloadVariantOneofCase.QueueStatus:
+          QueueStatus = other.QueueStatus.Clone();
           break;
       }
 
@@ -6277,6 +6642,21 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "queueStatus" field.</summary>
+    public const int QueueStatusFieldNumber = 11;
+    /// <summary>
+    /// Queue status info 
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.QueueStatus QueueStatus {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus ? (global::Meshtastic.Protobufs.QueueStatus) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.QueueStatus;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -6290,6 +6670,7 @@ namespace Meshtastic.Protobufs {
       Rebooted = 8,
       ModuleConfig = 9,
       Channel = 10,
+      QueueStatus = 11,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6330,6 +6711,7 @@ namespace Meshtastic.Protobufs {
       if (Rebooted != other.Rebooted) return false;
       if (!object.Equals(ModuleConfig, other.ModuleConfig)) return false;
       if (!object.Equals(Channel, other.Channel)) return false;
+      if (!object.Equals(QueueStatus, other.QueueStatus)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6348,6 +6730,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Rebooted) hash ^= Rebooted.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.ModuleConfig) hash ^= ModuleConfig.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Channel) hash ^= Channel.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) hash ^= QueueStatus.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6407,6 +6790,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(82);
         output.WriteMessage(Channel);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) {
+        output.WriteRawTag(90);
+        output.WriteMessage(QueueStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6457,6 +6844,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(82);
         output.WriteMessage(Channel);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) {
+        output.WriteRawTag(90);
+        output.WriteMessage(QueueStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6496,6 +6887,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.Channel) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Channel);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueueStatus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6560,6 +6954,12 @@ namespace Meshtastic.Protobufs {
             Channel = new global::Meshtastic.Protobufs.Channel();
           }
           Channel.MergeFrom(other.Channel);
+          break;
+        case PayloadVariantOneofCase.QueueStatus:
+          if (QueueStatus == null) {
+            QueueStatus = new global::Meshtastic.Protobufs.QueueStatus();
+          }
+          QueueStatus.MergeFrom(other.QueueStatus);
           break;
       }
 
@@ -6653,6 +7053,15 @@ namespace Meshtastic.Protobufs {
             Channel = subBuilder;
             break;
           }
+          case 90: {
+            global::Meshtastic.Protobufs.QueueStatus subBuilder = new global::Meshtastic.Protobufs.QueueStatus();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) {
+              subBuilder.MergeFrom(QueueStatus);
+            }
+            input.ReadMessage(subBuilder);
+            QueueStatus = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -6743,6 +7152,15 @@ namespace Meshtastic.Protobufs {
             Channel = subBuilder;
             break;
           }
+          case 90: {
+            global::Meshtastic.Protobufs.QueueStatus subBuilder = new global::Meshtastic.Protobufs.QueueStatus();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) {
+              subBuilder.MergeFrom(QueueStatus);
+            }
+            input.ReadMessage(subBuilder);
+            QueueStatus = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -6769,7 +7187,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7106,7 +7524,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
