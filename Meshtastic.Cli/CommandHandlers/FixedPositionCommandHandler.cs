@@ -22,6 +22,7 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
         this.longitude = longitude;
         this.altitude = altitude;
     }
+
     public async Task Handle()
     {
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();

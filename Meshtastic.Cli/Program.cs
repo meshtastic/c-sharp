@@ -54,6 +54,7 @@ root.AddCommand(new ResetNodeDbCommand("reset-nodedb", "Reset the node db of the
 root.AddCommand(new TraceRouteCommand("trace-route", "Trace the sequence of nodes routing to the destination", port, host, output, log, dest, selectDest));
 root.AddCommand(new SetCannedMessagesCommand("set-canned-messages", "Set the collection of canned messages on the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new GetCannedMessagesCommand("get-canned-messages", "Get the collection of canned messages on the device", port, host, output, log, dest, selectDest));
+root.AddCommand(new SendWaypointCommand("waypoint", "Send a waypoint from the device", port, host, output, log, dest, selectDest));
 
 var parser = new CommandLineBuilder(root)
     .UseExceptionHandler((ex, context) =>

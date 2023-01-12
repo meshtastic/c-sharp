@@ -103,6 +103,10 @@
     "set-canned-messages": {
       "commandName": "Project",
       "commandLineArgs": "set-canned-messages \"I need an alpinist!|Call Me|Roger Roger|Keep Calm|On my way\" --log debug"
+    },
+    "waypoint": {
+      "commandName": "Project",
+      "commandLineArgs": "waypoint 34.000 -90.023 --name Turd --icon 💩 --log debug"
     }
   }
 }

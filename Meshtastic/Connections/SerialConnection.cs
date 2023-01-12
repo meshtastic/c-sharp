@@ -56,6 +56,7 @@ public class SerialConnection : DeviceConnection
             serialPort.Open();
         await serialPort.BaseStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE, 0, PacketFraming.SERIAL_PREAMBLE.Length);
         await serialPort.BaseStream.WriteAsync(toRadio, 0, toRadio.Length);
+        serialPort.RtsEnable = false;
         Logger.LogDebug($"Sent: {data}");
         await ReadFromRadio(isComplete);
     }
