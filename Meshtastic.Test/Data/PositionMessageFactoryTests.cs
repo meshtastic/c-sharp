@@ -5,11 +5,11 @@ using static Meshtastic.Protobufs.ModuleConfig.Types;
 namespace Meshtastic.Test.Data;
 
 [TestFixture]
-public class TextMessageFactoryTests
+public class PositionMessageFactoryTests
 {
     private Fixture fixture;
     private DeviceStateContainer deviceStateContainer;
-    private TextMessageFactory factory;
+    private PositionMessageFactory factory;
 
     [SetUp]
     public void Setup()
@@ -24,13 +24,13 @@ public class TextMessageFactoryTests
                 HopLimit = 3,
             }
         };
-        factory = new TextMessageFactory(deviceStateContainer);
+        factory = new PositionMessageFactory(deviceStateContainer);
     }
 
     [Test]
-    public void CreateTextMessagePacket_Should_ReturnValidAdminMessage()
+    public void CreatePositionPacket_Should_ReturnValidAdminMessage()
     {
-        var result = factory.CreateTextMessagePacket("Text");
-        result.Decoded.Portnum.Should().Be(PortNum.TextMessageApp);
+        var result = factory.CreatePositionPacket(new Position());
+        result.Decoded.Portnum.Should().Be(PortNum.PositionApp);
     }
 }
