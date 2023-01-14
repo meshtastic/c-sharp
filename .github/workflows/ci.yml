@@ -43,7 +43,7 @@ jobs:
         dotnet-version: 7.0.x
         
     - name: Run automated unit and integration tests
-      run: dotnet test /p:CollectCoverage=true /p:CoverletOutput=./ /p:CoverletOutputFormat=lcov --collect:"XPlat Code Coverage"
+      run: dotnet test dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=json,lcov,opencover
       
     - name: Coveralls
       uses: coverallsapp/github-action@master
