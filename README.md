@@ -1,6 +1,7 @@
 # Meshtastic C#
 
 ![GitHub release downloads](https://img.shields.io/github/downloads/meshtastic/c-sharp/total)
+[![Coverage Status](https://coveralls.io/repos/github/meshtastic/c-sharp/badge.svg)](https://coveralls.io/github/meshtastic/c-sharp)
 [![CI](https://img.shields.io/github/actions/workflow/status/meshtastic/c-sharp/ci.yml?branch=master&label=actions&logo=github&color=yellow)](https://github.com/meshtastic/c-sharp/actions/workflows/ci.yml)
 [![CLA assistant](https://cla-assistant.io/readme/badge/meshtastic/c-sharp)](https://cla-assistant.io/meshtastic/c-sharp)
 [![Fiscal Contributors](https://opencollective.com/meshtastic/tiers/badge.svg?label=Fiscal%20Contributors&color=deeppink)](https://opencollective.com/meshtastic/)
