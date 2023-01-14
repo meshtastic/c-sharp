@@ -5,7 +5,7 @@
       <DataCollector friendlyName="XPlat code coverage">
         <Configuration>
           <Format>json,cobertura,lcov,opencover</Format>          
-          <Exclude>[Meshtastic.Protobufs]*,[Meshtastic.Cli.Logging]*,[Meshtastic.Connections]*</Exclude>
+          <Exclude>[*]Meshtastic.Protobufs.*,[*]Meshtastic.Cli.Logging*,[*]Meshtastic.Connections.*</Exclude>
           <ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute,ExcludeFromCodeCoverage</ExcludeByAttribute>
           <SkipAutoProps>true</SkipAutoProps>
           <ExcludeAssembliesWithoutSources>MissingAll,MissingAny,None</ExcludeAssembliesWithoutSources>
