@@ -53,11 +53,21 @@ public class AdminMessageFactoryTests
     }
 
     [Test]
-    public void CreateSetConfigMessage_Should_ReturnValidAdminMessage()
+    public void CreateSetConfigMessage_Should_ReturnValidAdminMessageMeshPacket()
     {
-        var instance = new NetworkConfig();
-
-        var result = factory.CreateSetConfigMessage(instance);
+        var result = factory.CreateSetConfigMessage(new NetworkConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetConfigMessage(new BluetoothConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetConfigMessage(new DeviceConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetConfigMessage(new DisplayConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetConfigMessage(new LoRaConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetConfigMessage(new PositionConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetConfigMessage(new PowerConfig());
         result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
     }
 
@@ -73,9 +83,21 @@ public class AdminMessageFactoryTests
     [Test]
     public void CreateSetModuleConfigMessage_Should_ReturnValidAdminMessage()
     {
-        var instance = new SerialConfig();
-
-        var result = factory.CreateSetModuleConfigMessage(instance);
+        var result = factory.CreateSetModuleConfigMessage(new AudioConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetModuleConfigMessage(new CannedMessageConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetModuleConfigMessage(new ExternalNotificationConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetModuleConfigMessage(new MQTTConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetModuleConfigMessage(new RangeTestConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetModuleConfigMessage(new SerialConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetModuleConfigMessage(new StoreForwardConfig());
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateSetModuleConfigMessage(new TelemetryConfig());
         result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
     }
 
