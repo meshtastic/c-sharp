@@ -5,7 +5,6 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Connections;
 
-[ExcludeFromCodeCoverage]
 public abstract class DeviceConnection
 {
     protected ILogger Logger { get; set; }

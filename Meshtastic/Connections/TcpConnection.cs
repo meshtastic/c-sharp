@@ -7,7 +7,6 @@ using System.Net.Sockets;
 
 namespace Meshtastic.Connections;
 
-[ExcludeFromCodeCoverage]
 public class TcpConnection : DeviceConnection, IDisposable
 {
     private readonly TcpClient client;

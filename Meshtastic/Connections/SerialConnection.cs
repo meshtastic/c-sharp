@@ -8,7 +8,6 @@ using System.Runtime.InteropServices;
 
 namespace Meshtastic.Connections;
 
-[ExcludeFromCodeCoverage]
 public class SerialConnection : DeviceConnection
 {
     private readonly SerialPort serialPort;
