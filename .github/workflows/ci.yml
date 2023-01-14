@@ -45,8 +45,12 @@ jobs:
     - name: Run tests
       run: dotnet test --collect:"XPlat Code Coverage" --settings ./Meshtastic.Test/coverlet.runsettings
 
-    - name: Run tests
+    - name: Move files up
       run: mv ./Meshtastic.Test/TestResults/**/coverage.info ../
+
+    # For diagnostics
+    - name: Show test results
+      run: ls -lR
 
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@master
