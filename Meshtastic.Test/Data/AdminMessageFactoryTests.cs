@@ -45,10 +45,9 @@ public class AdminMessageFactoryTests
     [Test]
     public void CreateRebootMessage_Should_ReturnValidAdminMessage()
     {
-        int seconds = 0;
-        bool isOta = false;
-
-        var result = factory.CreateRebootMessage(seconds,isOta);
+        var result = factory.CreateRebootMessage(0, true);
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result = factory.CreateRebootMessage(0, false);
         result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
     }
 
