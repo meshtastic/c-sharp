@@ -1,4 +1,5 @@
 ﻿using Meshtastic.Data;
+using Meshtastic.Data.MessageFactories;
 using Meshtastic.Display;
 
 namespace Meshtastic.Cli.CommandHandlers;

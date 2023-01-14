@@ -2,6 +2,7 @@
 using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
 using Meshtastic.Data;
+using Meshtastic.Data.MessageFactories;
 using Meshtastic.Protobufs;
 using System.Diagnostics;
 using System.Security.Cryptography;

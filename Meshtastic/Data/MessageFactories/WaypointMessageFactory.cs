@@ -1,32 +1,32 @@
 using Google.Protobuf;
 using Meshtastic.Protobufs;
 
-namespace Meshtastic.Data;
+namespace Meshtastic.Data.MessageFactories;
 
-public class PositionMessageFactory
+public class WaypointMessageFactory
 {
     private readonly DeviceStateContainer container;
     private readonly uint? dest;
 
-    public PositionMessageFactory(DeviceStateContainer container, uint? dest = null)
+    public WaypointMessageFactory(DeviceStateContainer container, uint? dest = null)
     {
         this.container = container;
         this.dest = dest;
     }
 
-    public MeshPacket CreatePositionPacket(Position message, uint channel = 0)
+    public MeshPacket CreateWaypointPacket(Waypoint waypoint, uint channel = 0)
     {
         return new MeshPacket()
         {
             Channel = channel,
             WantAck = true,
-            To = dest ?? container.MyNodeInfo.MyNodeNum,
+            To = dest ?? 0xffffffff, // Default to broadcast
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
             HopLimit = container.GetHopLimitOrDefault(),
             Decoded = new Protobufs.Data()
             {
-                Portnum = PortNum.PositionApp,
-                Payload = message.ToByteString(),
+                Portnum = PortNum.WaypointApp,
+                Payload = waypoint.ToByteString(),
             },
         };
     }

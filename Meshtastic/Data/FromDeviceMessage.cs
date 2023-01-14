@@ -22,7 +22,7 @@ namespace Meshtastic.Data
                         adminMessage = AdminMessage.Parser.ParseFrom(meshPacket.Decoded.Payload);
                 }
 
-                if (fromRadio?.Packet?.Decoded?.Portnum == PortNum.AdminApp && 
+                if (fromRadio?.Packet?.Decoded?.Portnum == PortNum.AdminApp &&
                     fromRadio?.Packet?.Decoded?.Payload != null)
                     adminMessage = AdminMessage.Parser?.ParseFrom(fromRadio.Packet.Decoded.Payload);
             }

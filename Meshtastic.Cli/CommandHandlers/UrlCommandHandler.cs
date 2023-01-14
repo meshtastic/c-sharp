@@ -1,6 +1,7 @@
 ﻿using Meshtastic.Cli.Enums;
 using Meshtastic.Cli.Parsers;
 using Meshtastic.Data;
+using Meshtastic.Data.MessageFactories;
 using Meshtastic.Display;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;

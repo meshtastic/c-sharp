@@ -1,7 +1,7 @@
 using Google.Protobuf;
 using Meshtastic.Protobufs;
 
-namespace Meshtastic.Data;
+namespace Meshtastic.Data.MessageFactories;
 
 public class TraceRouteMessageFactory
 {

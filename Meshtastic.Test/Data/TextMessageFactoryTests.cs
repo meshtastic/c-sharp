@@ -1,4 +1,5 @@
-﻿using Meshtastic.Protobufs;
+﻿using Meshtastic.Data.MessageFactories;
+using Meshtastic.Protobufs;
 using static Meshtastic.Protobufs.Config.Types;
 using static Meshtastic.Protobufs.ModuleConfig.Types;
 

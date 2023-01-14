@@ -3,7 +3,7 @@ using Meshtastic.Protobufs;
 using static Meshtastic.Protobufs.Config.Types;
 using static Meshtastic.Protobufs.ModuleConfig.Types;
 
-namespace Meshtastic.Data;
+namespace Meshtastic.Data.MessageFactories;
 
 public class AdminMessageFactory
 {

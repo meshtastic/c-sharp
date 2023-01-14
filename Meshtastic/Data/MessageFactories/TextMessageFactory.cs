@@ -1,20 +1,20 @@
 using Google.Protobuf;
 using Meshtastic.Protobufs;
 
-namespace Meshtastic.Data;
+namespace Meshtastic.Data.MessageFactories;
 
-public class WaypointMessageFactory
+public class TextMessageFactory
 {
     private readonly DeviceStateContainer container;
     private readonly uint? dest;
 
-    public WaypointMessageFactory(DeviceStateContainer container, uint? dest = null)
+    public TextMessageFactory(DeviceStateContainer container, uint? dest = null)
     {
         this.container = container;
         this.dest = dest;
     }
 
-    public MeshPacket CreateWaypointPacket(Waypoint waypoint, uint channel = 0)
+    public MeshPacket CreateTextMessagePacket(string message, uint channel = 0)
     {
         return new MeshPacket()
         {
@@ -25,8 +25,8 @@ public class WaypointMessageFactory
             HopLimit = container.GetHopLimitOrDefault(),
             Decoded = new Protobufs.Data()
             {
-                Portnum = PortNum.WaypointApp,
-                Payload = waypoint.ToByteString(),
+                Portnum = PortNum.TextMessageApp,
+                Payload = ByteString.CopyFromUtf8(message),
             },
         };
     }

@@ -2,6 +2,7 @@
 using Meshtastic.Cli.Parsers;
 using Meshtastic.Connections;
 using Meshtastic.Data;
+using Meshtastic.Data.MessageFactories;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 

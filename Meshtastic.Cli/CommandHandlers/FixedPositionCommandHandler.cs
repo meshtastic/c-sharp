@@ -1,4 +1,5 @@
 ﻿using Meshtastic.Data;
+using Meshtastic.Data.MessageFactories;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
