@@ -43,9 +43,11 @@ jobs:
         dotnet-version: 7.0.x
         
     - name: Run tests
-      run: dotnet test --collect:"XPlat Code Coverage" --settings coverlet.runsettings
+      run: dotnet test --collect:"XPlat Code Coverage" --settings ./Meshtastic.Test/coverlet.runsettings
+
     - name: Run tests
       run: mv ./Meshtastic.Test/TestResults/**/coverage.info ../
+
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@master
       with:
