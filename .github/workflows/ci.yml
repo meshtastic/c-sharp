@@ -45,6 +45,9 @@ jobs:
     - name: Run automated unit and integration tests
       run: dotnet test /p:CollectCoverage=true /p:CoverletOutput=./ /p:CoverletOutputFormat=lcov
       
+    - name: Show artifacts
+      run: ls -lR
+      
     - name: Publish coverage report to coveralls.io
       uses: coverallsapp/github-action@master
       with:
