@@ -10,19 +10,6 @@ public class DeviceStateContainer
     public MyNodeInfo MyNodeInfo;
     public List<NodeInfo> Nodes;
 
-    public DeviceStateContainer(LocalConfig localConfig,
-        LocalModuleConfig localModuleConfig,
-        List<Channel> channels,
-        MyNodeInfo myNodeInfo,
-        List<NodeInfo> nodes)
-    {
-        this.LocalConfig = localConfig;
-        this.LocalModuleConfig = localModuleConfig;
-        this.Channels = channels;
-        this.MyNodeInfo = myNodeInfo;
-        this.Nodes = nodes;
-    }
-
     public DeviceStateContainer()
     {
         this.LocalConfig = new LocalConfig();

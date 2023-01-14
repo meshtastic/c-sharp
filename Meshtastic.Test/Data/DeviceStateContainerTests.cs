@@ -44,6 +44,59 @@ public class DeviceStateContainerTests
     }
 
     [Test]
+    public void AddFromRadio_Should_AddChannel_GivenNewChannel()
+    {
+        var deviceStateContainer = new DeviceStateContainer
+        {
+            Channels = new List<Channel>()
+        };
+        var fromRadio = new FromRadio()
+        {
+            Channel = new Channel()
+            {
+                Index = 3,
+                Role = Channel.Types.Role.Secondary,
+                Settings = new ChannelSettings()
+                {
+                    Name = "admin"
+                }
+            }
+        };
+        deviceStateContainer.AddFromRadio(fromRadio);
+        deviceStateContainer.Channels.Should().Contain(c => c.Settings.Name == "admin");
+    }
+
+    [Test]
+    public void AddFromRadio_Should_SetMyInfo_GivenMyNodeInfo()
+    {
+        var deviceStateContainer = new DeviceStateContainer();
+        var fromRadio = new FromRadio()
+        {
+            MyInfo = new MyNodeInfo()
+            {
+                FirmwareVersion = "420"
+            }
+        };
+        deviceStateContainer.AddFromRadio(fromRadio);
+        deviceStateContainer.MyNodeInfo.FirmwareVersion.Should().Be("420");
+    }
+
+    [Test]
+    public void AddFromRadio_Should_AddNode_GivenNodeInfo()
+    {
+        var deviceStateContainer = new DeviceStateContainer();
+        var fromRadio = new FromRadio()
+        {
+            NodeInfo = new NodeInfo()
+            {
+                Num = 1234
+            }
+        };
+        deviceStateContainer.AddFromRadio(fromRadio);
+        deviceStateContainer.Nodes.Should().Contain(n => n.Num == 1234);
+    }
+
+    [Test]
     public void GetAdminChannelIndex_Should_DefaultToZero()
     {
         var deviceStateContainer = new DeviceStateContainer();
@@ -95,8 +148,33 @@ public class DeviceStateContainerTests
     }
 
     [Test]
-    public void GetNodeDisplayName_StateUnderTest_ExpectedBehavior()
+    public void GetNodeDisplayName_Should_ReturnNumShortNameLongNameFromNodeList()
     {
+        var deviceStateContainer = new DeviceStateContainer();
+        var fromRadio = new FromRadio()
+        {
+            NodeInfo = new NodeInfo()
+            {
+                Num = 1234,
+                User = new User()
+                {
+                    LongName = "Bunghole",
+                    ShortName = "BUTT"
+                }
+            }
+        };
+        deviceStateContainer.AddFromRadio(fromRadio);
+        var result = deviceStateContainer.GetNodeDisplayName(1234);
+        result.Should().Contain("BUTT");
+        result.Should().Contain("Bunghole");
+        result.Should().Contain("1234");
+    }
 
+    [Test]
+    public void GetNodeDisplayName_Should_ReturnNodeNum_WhenNodeIsntPresentInList()
+    {
+        var deviceStateContainer = new DeviceStateContainer();
+        var result = deviceStateContainer.GetNodeDisplayName(1234);
+        result.Should().Be("1234");
     }
 }
