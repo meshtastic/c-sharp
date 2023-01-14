@@ -46,7 +46,7 @@ jobs:
       run: dotnet test --collect:"XPlat Code Coverage" --settings ./Meshtastic.Test/coverlet.runsettings
 
     - name: Move files up
-      run: mv ./Meshtastic.Test/TestResults/**/coverage.info ../
+      run: mv ./Meshtastic.Test/TestResults/**/coverage.info ./Meshtastic.Test/TestResults
 
     # For diagnostics
     - name: Show test results
