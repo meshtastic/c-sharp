@@ -2,11 +2,13 @@ using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 using System.IO.Ports;
 using System.Runtime.InteropServices;
 
 namespace Meshtastic.Connections;
 
+[ExcludeFromCodeCoverage]
 public class SerialConnection : DeviceConnection
 {
     private readonly SerialPort serialPort;

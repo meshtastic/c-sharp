@@ -1,8 +1,10 @@
 using Meshtastic.Connections;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Cli;
 
+[ExcludeFromCodeCoverage]
 public class DeviceConnectionContext
 {
     private readonly string? port;

@@ -6,7 +6,7 @@
         <Configuration>
           <Format>json,cobertura,lcov,opencover</Format>          
           <Exclude>*Meshtastic.Protobufs*</Exclude>
-          <ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute</ExcludeByAttribute>
+          <ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute,ExcludeFromCodeCoverage</ExcludeByAttribute>
           <SkipAutoProps>true</SkipAutoProps>
           <ExcludeAssembliesWithoutSources>MissingAll,MissingAny,None</ExcludeAssembliesWithoutSources>
         </Configuration>
