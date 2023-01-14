@@ -10,7 +10,7 @@ namespace Meshtastic.Extensions
             if (position == null || (position.LatitudeI == 0 && position.LongitudeI == 0))
                 return display;
 
-            return $"{position.LatitudeI * 1e-7}, {position.LongitudeI * 1e-7}";
+            return $"{Math.Round(position.LatitudeI * 1e-7, 7)}, {Math.Round(position.LongitudeI * 1e-7, 7)}";
         }
     }
 }

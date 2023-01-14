@@ -2,10 +2,12 @@ using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Sockets;
 
 namespace Meshtastic.Connections;
 
+[ExcludeFromCodeCoverage]
 public class TcpConnection : DeviceConnection, IDisposable
 {
     private readonly TcpClient client;
