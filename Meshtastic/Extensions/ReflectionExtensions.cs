@@ -28,15 +28,6 @@ public static class ReflectionExtensions
             });
     }
 
-    public static FieldInfo? FindFieldByName(this Type type, string name)
-    {
-        var fields = type.GetFields();
-        return fields.FirstOrDefault(field => String.Equals(field.Name, name.Trim(), StringComparison.InvariantCultureIgnoreCase));
-    }
-    public static PropertyInfo? FindPropertyByName(this object instance, string name) =>
-      GetProperties(instance)
-      .FirstOrDefault(prop => String.Equals(prop.Name, name.Trim(), StringComparison.InvariantCultureIgnoreCase));
-
     public static PropertyInfo? FindPropertyByName(this Type type, string name) =>
         GetProperties(type)
         .FirstOrDefault(prop => String.Equals(prop.Name, name.Trim(), StringComparison.InvariantCultureIgnoreCase));
