@@ -30,7 +30,28 @@ jobs:
       
     - name: Test
       run: dotnet test --no-build --verbosity normal
-  
+      
+  test:
+    if: ${{ github.event_name != 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+        
+    - name: Run automated unit and integration tests
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutput=./ /p:CoverletOutputFormat=lcov
+      
+    - name: Publish coverage report to coveralls.io
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: ./**/coverage.info
+              
+
   release:
     if: ${{ github.event_name == 'workflow_dispatch' }}
 
