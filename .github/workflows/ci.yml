@@ -45,14 +45,10 @@ jobs:
     - name: Run automated unit and integration tests
       run: dotnet test /p:CollectCoverage=true /p:CoverletOutput=./ /p:CoverletOutputFormat=lcov
       
-    - name: Show artifacts
-      run: ls -lR
-      
-    - name: Publish coverage report to coveralls.io
+    - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: ./Meshtastic.Test/TestResults/coverage.info
               
   release:
     if: ${{ github.event_name == 'workflow_dispatch' }}
