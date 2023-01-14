@@ -42,14 +42,16 @@ jobs:
       with:
         dotnet-version: 7.0.x
         
-    - name: Run automated unit and integration tests
-      run: dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=json,lcov,opencover
-      
-    - name: Coveralls
+    - name: Run tests
+      run: dotnet test --collect:"XPlat Code Coverage" --settings coverlet.runsettings
+    - name: Run tests
+      run: mv ./Meshtastic.Test/TestResults/**/coverage.info ../
+    - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-              
+        path-to-lcov: ./Meshtastic.Test/TestResults/coverage.info
+
   release:
     if: ${{ github.event_name == 'workflow_dispatch' }}
 
