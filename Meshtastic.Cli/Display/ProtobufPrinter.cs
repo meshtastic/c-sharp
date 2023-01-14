@@ -8,9 +8,11 @@ using Meshtastic.Data;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using QRCoder;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Display;
 
+[ExcludeFromCodeCoverage]
 public class ProtobufPrinter
 {
     private readonly DeviceStateContainer container;

@@ -1,9 +1,11 @@
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Connections;
 
+[ExcludeFromCodeCoverage]
 public abstract class DeviceConnection
 {
     protected ILogger Logger { get; set; }
