@@ -26,117 +26,119 @@ namespace Meshtastic.Protobufs {
           string.Concat(
             "CgptZXNoLnByb3RvGg1jaGFubmVsLnByb3RvGgxjb25maWcucHJvdG8aE21v",
             "ZHVsZV9jb25maWcucHJvdG8aDnBvcnRudW1zLnByb3RvGg90ZWxlbWV0cnku",
-            "cHJvdG8itwUKCFBvc2l0aW9uEhIKCmxhdGl0dWRlX2kYASABKA8SEwoLbG9u",
-            "Z2l0dWRlX2kYAiABKA8SEAoIYWx0aXR1ZGUYAyABKAUSDAoEdGltZRgEIAEo",
-            "BxIsCg9sb2NhdGlvbl9zb3VyY2UYBSABKA4yEy5Qb3NpdGlvbi5Mb2NTb3Vy",
-            "Y2USLAoPYWx0aXR1ZGVfc291cmNlGAYgASgOMhMuUG9zaXRpb24uQWx0U291",
-            "cmNlEhEKCXRpbWVzdGFtcBgHIAEoBxIfChd0aW1lc3RhbXBfbWlsbGlzX2Fk",
-            "anVzdBgIIAEoBRIUCgxhbHRpdHVkZV9oYWUYCSABKBESIwobYWx0aXR1ZGVf",
-            "Z2VvaWRhbF9zZXBhcmF0aW9uGAogASgREgwKBFBET1AYCyABKA0SDAoESERP",
-            "UBgMIAEoDRIMCgRWRE9QGA0gASgNEhQKDGdwc19hY2N1cmFjeRgOIAEoDRIU",
-            "Cgxncm91bmRfc3BlZWQYDyABKA0SFAoMZ3JvdW5kX3RyYWNrGBAgASgNEhMK",
-            "C2ZpeF9xdWFsaXR5GBEgASgNEhAKCGZpeF90eXBlGBIgASgNEhQKDHNhdHNf",
-            "aW5fdmlldxgTIAEoDRIRCglzZW5zb3JfaWQYFCABKA0SEwoLbmV4dF91cGRh",
-            "dGUYFSABKA0SEgoKc2VxX251bWJlchgWIAEoDSJOCglMb2NTb3VyY2USDQoJ",
-            "TE9DX1VOU0VUEAASDgoKTE9DX01BTlVBTBABEhAKDExPQ19JTlRFUk5BTBAC",
-            "EhAKDExPQ19FWFRFUk5BTBADImIKCUFsdFNvdXJjZRINCglBTFRfVU5TRVQQ",
-            "ABIOCgpBTFRfTUFOVUFMEAESEAoMQUxUX0lOVEVSTkFMEAISEAoMQUxUX0VY",
-            "VEVSTkFMEAMSEgoOQUxUX0JBUk9NRVRSSUMQBCKBAQoEVXNlchIKCgJpZBgB",
-            "IAEoCRIRCglsb25nX25hbWUYAiABKAkSEgoKc2hvcnRfbmFtZRgDIAEoCRIP",
-            "CgdtYWNhZGRyGAQgASgMEiAKCGh3X21vZGVsGAUgASgOMg4uSGFyZHdhcmVN",
-            "b2RlbBITCgtpc19saWNlbnNlZBgGIAEoCCIfCg5Sb3V0ZURpc2NvdmVyeRIN",
-            "CgVyb3V0ZRgBIAMoByLbAgoHUm91dGluZxIoCg1yb3V0ZV9yZXF1ZXN0GAEg",
-            "ASgLMg8uUm91dGVEaXNjb3ZlcnlIABImCgtyb3V0ZV9yZXBseRgCIAEoCzIP",
-            "LlJvdXRlRGlzY292ZXJ5SAASJgoMZXJyb3JfcmVhc29uGAMgASgOMg4uUm91",
-            "dGluZy5FcnJvckgAIsoBCgVFcnJvchIICgROT05FEAASDAoITk9fUk9VVEUQ",
-            "ARILCgdHT1RfTkFLEAISCwoHVElNRU9VVBADEhAKDE5PX0lOVEVSRkFDRRAE",
-            "EhIKDk1BWF9SRVRSQU5TTUlUEAUSDgoKTk9fQ0hBTk5FTBAGEg0KCVRPT19M",
-            "QVJHRRAHEg8KC05PX1JFU1BPTlNFEAgSFAoQRFVUWV9DWUNMRV9MSU1JVBAJ",
-            "Eg8KC0JBRF9SRVFVRVNUECASEgoOTk9UX0FVVEhPUklaRUQQIUIJCgd2YXJp",
-            "YW50IpwBCgREYXRhEhkKB3BvcnRudW0YASABKA4yCC5Qb3J0TnVtEg8KB3Bh",
-            "eWxvYWQYAiABKAwSFQoNd2FudF9yZXNwb25zZRgDIAEoCBIMCgRkZXN0GAQg",
-            "ASgHEg4KBnNvdXJjZRgFIAEoBxISCgpyZXF1ZXN0X2lkGAYgASgHEhAKCHJl",
-            "cGx5X2lkGAcgASgHEg0KBWVtb2ppGAggASgHIpABCghXYXlwb2ludBIKCgJp",
-            "ZBgBIAEoDRISCgpsYXRpdHVkZV9pGAIgASgPEhMKC2xvbmdpdHVkZV9pGAMg",
-            "ASgPEg4KBmV4cGlyZRgEIAEoDRIOCgZsb2NrZWQYBSABKAgSDAoEbmFtZRgG",
-            "IAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCRIMCgRpY29uGAggASgHIssDCgpN",
-            "ZXNoUGFja2V0EgwKBGZyb20YASABKAcSCgoCdG8YAiABKAcSDwoHY2hhbm5l",
-            "bBgDIAEoDRIYCgdkZWNvZGVkGAQgASgLMgUuRGF0YUgAEhMKCWVuY3J5cHRl",
-            "ZBgFIAEoDEgAEgoKAmlkGAYgASgHEg8KB3J4X3RpbWUYByABKAcSDgoGcnhf",
-            "c25yGAggASgCEhEKCWhvcF9saW1pdBgJIAEoDRIQCgh3YW50X2FjaxgKIAEo",
-            "CBImCghwcmlvcml0eRgLIAEoDjIULk1lc2hQYWNrZXQuUHJpb3JpdHkSDwoH",
-            "cnhfcnNzaRgMIAEoBRIkCgdkZWxheWVkGA0gASgOMhMuTWVzaFBhY2tldC5E",
-            "ZWxheWVkIlsKCFByaW9yaXR5EgkKBVVOU0VUEAASBwoDTUlOEAESDgoKQkFD",
-            "S0dST1VORBAKEgsKB0RFRkFVTFQQQBIMCghSRUxJQUJMRRBGEgcKA0FDSxB4",
-            "EgcKA01BWBB/IkIKB0RlbGF5ZWQSDAoITk9fREVMQVkQABIVChFERUxBWUVE",
-            "X0JST0FEQ0FTVBABEhIKDkRFTEFZRURfRElSRUNUEAJCEQoPcGF5bG9hZF92",
-            "YXJpYW50IpIBCghOb2RlSW5mbxILCgNudW0YASABKA0SEwoEdXNlchgCIAEo",
-            "CzIFLlVzZXISGwoIcG9zaXRpb24YAyABKAsyCS5Qb3NpdGlvbhILCgNzbnIY",
-            "BCABKAISEgoKbGFzdF9oZWFyZBgFIAEoBxImCg5kZXZpY2VfbWV0cmljcxgG",
-            "IAEoCzIOLkRldmljZU1ldHJpY3MihgMKCk15Tm9kZUluZm8SEwoLbXlfbm9k",
-            "ZV9udW0YASABKA0SDwoHaGFzX2dwcxgCIAEoCBIUCgxtYXhfY2hhbm5lbHMY",
-            "AyABKA0SGAoQZmlybXdhcmVfdmVyc2lvbhgEIAEoCRImCgplcnJvcl9jb2Rl",
-            "GAUgASgOMhIuQ3JpdGljYWxFcnJvckNvZGUSFQoNZXJyb3JfYWRkcmVzcxgG",
-            "IAEoDRITCgtlcnJvcl9jb3VudBgHIAEoDRIUCgxyZWJvb3RfY291bnQYCCAB",
-            "KA0SDwoHYml0cmF0ZRgJIAEoAhIcChRtZXNzYWdlX3RpbWVvdXRfbXNlYxgK",
-            "IAEoDRIXCg9taW5fYXBwX3ZlcnNpb24YCyABKA0SFQoNYWlyX3BlcmlvZF90",
-            "eBgMIAMoDRIVCg1haXJfcGVyaW9kX3J4GA0gAygNEhAKCGhhc193aWZpGA4g",
-            "ASgIEhsKE2NoYW5uZWxfdXRpbGl6YXRpb24YDyABKAISEwoLYWlyX3V0aWxf",
-            "dHgYECABKAIitQEKCUxvZ1JlY29yZBIPCgdtZXNzYWdlGAEgASgJEgwKBHRp",
-            "bWUYAiABKAcSDgoGc291cmNlGAMgASgJEh8KBWxldmVsGAQgASgOMhAuTG9n",
-            "UmVjb3JkLkxldmVsIlgKBUxldmVsEgkKBVVOU0VUEAASDAoIQ1JJVElDQUwQ",
-            "MhIJCgVFUlJPUhAoEgsKB1dBUk5JTkcQHhIICgRJTkZPEBQSCQoFREVCVUcQ",
-            "ChIJCgVUUkFDRRAFIlAKC1F1ZXVlU3RhdHVzEgsKA3JlcxgBIAEoBRIMCgRm",
-            "cmVlGAIgASgNEg4KBm1heGxlbhgDIAEoDRIWCg5tZXNoX3BhY2tldF9pZBgE",
-            "IAEoDSLhAgoJRnJvbVJhZGlvEgoKAmlkGAEgASgNEh0KBnBhY2tldBgCIAEo",
-            "CzILLk1lc2hQYWNrZXRIABIeCgdteV9pbmZvGAMgASgLMgsuTXlOb2RlSW5m",
-            "b0gAEh4KCW5vZGVfaW5mbxgEIAEoCzIJLk5vZGVJbmZvSAASGQoGY29uZmln",
-            "GAUgASgLMgcuQ29uZmlnSAASIAoKbG9nX3JlY29yZBgGIAEoCzIKLkxvZ1Jl",
-            "Y29yZEgAEhwKEmNvbmZpZ19jb21wbGV0ZV9pZBgHIAEoDUgAEhIKCHJlYm9v",
-            "dGVkGAggASgISAASJQoMbW9kdWxlQ29uZmlnGAkgASgLMg0uTW9kdWxlQ29u",
-            "ZmlnSAASGwoHY2hhbm5lbBgKIAEoCzIILkNoYW5uZWxIABIjCgtxdWV1ZVN0",
-            "YXR1cxgLIAEoCzIMLlF1ZXVlU3RhdHVzSABCEQoPcGF5bG9hZF92YXJpYW50",
-            "ImsKB1RvUmFkaW8SHQoGcGFja2V0GAEgASgLMgsuTWVzaFBhY2tldEgAEhgK",
-            "DndhbnRfY29uZmlnX2lkGAMgASgNSAASFAoKZGlzY29ubmVjdBgEIAEoCEgA",
-            "QhEKD3BheWxvYWRfdmFyaWFudCI1CgpDb21wcmVzc2VkEhkKB3BvcnRudW0Y",
-            "ASABKA4yCC5Qb3J0TnVtEgwKBGRhdGEYAiABKAwqnwQKDUhhcmR3YXJlTW9k",
-            "ZWwSCQoFVU5TRVQQABIMCghUTE9SQV9WMhABEgwKCFRMT1JBX1YxEAISEgoO",
-            "VExPUkFfVjJfMV8xUDYQAxIJCgVUQkVBTRAEEg8KC0hFTFRFQ19WMl8wEAUS",
-            "DgoKVEJFQU1fVjBQNxAGEgoKBlRfRUNITxAHEhAKDFRMT1JBX1YxXzFQMxAI",
-            "EgsKB1JBSzQ2MzEQCRIPCgtIRUxURUNfVjJfMRAKEg0KCUhFTFRFQ19WMRAL",
-            "EhgKFExJTFlHT19UQkVBTV9TM19DT1JFEAwSDAoIUkFLMTEyMDAQDRILCgdO",
-            "QU5PX0cxEA4SEgoOVExPUkFfVjJfMV8xUDgQDxIPCgtUTE9SQV9UM19TMxAQ",
-            "Eg4KClNUQVRJT05fRzEQGRIRCg1MT1JBX1JFTEFZX1YxECASDgoKTlJGNTI4",
-            "NDBESxAhEgcKA1BQUhAiEg8KC0dFTklFQkxPQ0tTECMSEQoNTlJGNTJfVU5L",
-            "Tk9XThAkEg0KCVBPUlREVUlOTxAlEg8KC0FORFJPSURfU0lNECYSCgoGRElZ",
-            "X1YxECcSFQoRTlJGNTI4NDBfUENBMTAwNTkQKBIKCgZEUl9ERVYQKRILCgdN",
-            "NVNUQUNLECoSDQoJSEVMVEVDX1YzECsSEQoNSEVMVEVDX1dTTF9WMxAsEhMK",
-            "D0JFVEFGUFZfMjQwMF9UWBAtEg8KClBSSVZBVEVfSFcQ/wEqLAoJQ29uc3Rh",
-            "bnRzEggKBFpFUk8QABIVChBEQVRBX1BBWUxPQURfTEVOEO0BKu4BChFDcml0",
-            "aWNhbEVycm9yQ29kZRIICgROT05FEAASDwoLVFhfV0FUQ0hET0cQARIUChBT",
-            "TEVFUF9FTlRFUl9XQUlUEAISDAoITk9fUkFESU8QAxIPCgtVTlNQRUNJRklF",
-            "RBAEEhUKEVVCTE9YX1VOSVRfRkFJTEVEEAUSDQoJTk9fQVhQMTkyEAYSGQoV",
-            "SU5WQUxJRF9SQURJT19TRVRUSU5HEAcSEwoPVFJBTlNNSVRfRkFJTEVEEAgS",
-            "DAoIQlJPV05PVVQQCRISCg5TWDEyNjJfRkFJTFVSRRAKEhEKDVJBRElPX1NQ",
-            "SV9CVUcQC0JeChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpNZXNoUHJvdG9zSANa",
-            "ImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFz",
-            "dGljLlByb3RvYnVmc2IGcHJvdG8z"));
+            "cHJvdG8aDHhtb2RlbS5wcm90byK3BQoIUG9zaXRpb24SEgoKbGF0aXR1ZGVf",
+            "aRgBIAEoDxITCgtsb25naXR1ZGVfaRgCIAEoDxIQCghhbHRpdHVkZRgDIAEo",
+            "BRIMCgR0aW1lGAQgASgHEiwKD2xvY2F0aW9uX3NvdXJjZRgFIAEoDjITLlBv",
+            "c2l0aW9uLkxvY1NvdXJjZRIsCg9hbHRpdHVkZV9zb3VyY2UYBiABKA4yEy5Q",
+            "b3NpdGlvbi5BbHRTb3VyY2USEQoJdGltZXN0YW1wGAcgASgHEh8KF3RpbWVz",
+            "dGFtcF9taWxsaXNfYWRqdXN0GAggASgFEhQKDGFsdGl0dWRlX2hhZRgJIAEo",
+            "ERIjChthbHRpdHVkZV9nZW9pZGFsX3NlcGFyYXRpb24YCiABKBESDAoEUERP",
+            "UBgLIAEoDRIMCgRIRE9QGAwgASgNEgwKBFZET1AYDSABKA0SFAoMZ3BzX2Fj",
+            "Y3VyYWN5GA4gASgNEhQKDGdyb3VuZF9zcGVlZBgPIAEoDRIUCgxncm91bmRf",
+            "dHJhY2sYECABKA0SEwoLZml4X3F1YWxpdHkYESABKA0SEAoIZml4X3R5cGUY",
+            "EiABKA0SFAoMc2F0c19pbl92aWV3GBMgASgNEhEKCXNlbnNvcl9pZBgUIAEo",
+            "DRITCgtuZXh0X3VwZGF0ZRgVIAEoDRISCgpzZXFfbnVtYmVyGBYgASgNIk4K",
+            "CUxvY1NvdXJjZRINCglMT0NfVU5TRVQQABIOCgpMT0NfTUFOVUFMEAESEAoM",
+            "TE9DX0lOVEVSTkFMEAISEAoMTE9DX0VYVEVSTkFMEAMiYgoJQWx0U291cmNl",
+            "Eg0KCUFMVF9VTlNFVBAAEg4KCkFMVF9NQU5VQUwQARIQCgxBTFRfSU5URVJO",
+            "QUwQAhIQCgxBTFRfRVhURVJOQUwQAxISCg5BTFRfQkFST01FVFJJQxAEIoEB",
+            "CgRVc2VyEgoKAmlkGAEgASgJEhEKCWxvbmdfbmFtZRgCIAEoCRISCgpzaG9y",
+            "dF9uYW1lGAMgASgJEg8KB21hY2FkZHIYBCABKAwSIAoIaHdfbW9kZWwYBSAB",
+            "KA4yDi5IYXJkd2FyZU1vZGVsEhMKC2lzX2xpY2Vuc2VkGAYgASgIIh8KDlJv",
+            "dXRlRGlzY292ZXJ5Eg0KBXJvdXRlGAEgAygHItsCCgdSb3V0aW5nEigKDXJv",
+            "dXRlX3JlcXVlc3QYASABKAsyDy5Sb3V0ZURpc2NvdmVyeUgAEiYKC3JvdXRl",
+            "X3JlcGx5GAIgASgLMg8uUm91dGVEaXNjb3ZlcnlIABImCgxlcnJvcl9yZWFz",
+            "b24YAyABKA4yDi5Sb3V0aW5nLkVycm9ySAAiygEKBUVycm9yEggKBE5PTkUQ",
+            "ABIMCghOT19ST1VURRABEgsKB0dPVF9OQUsQAhILCgdUSU1FT1VUEAMSEAoM",
+            "Tk9fSU5URVJGQUNFEAQSEgoOTUFYX1JFVFJBTlNNSVQQBRIOCgpOT19DSEFO",
+            "TkVMEAYSDQoJVE9PX0xBUkdFEAcSDwoLTk9fUkVTUE9OU0UQCBIUChBEVVRZ",
+            "X0NZQ0xFX0xJTUlUEAkSDwoLQkFEX1JFUVVFU1QQIBISCg5OT1RfQVVUSE9S",
+            "SVpFRBAhQgkKB3ZhcmlhbnQinAEKBERhdGESGQoHcG9ydG51bRgBIAEoDjII",
+            "LlBvcnROdW0SDwoHcGF5bG9hZBgCIAEoDBIVCg13YW50X3Jlc3BvbnNlGAMg",
+            "ASgIEgwKBGRlc3QYBCABKAcSDgoGc291cmNlGAUgASgHEhIKCnJlcXVlc3Rf",
+            "aWQYBiABKAcSEAoIcmVwbHlfaWQYByABKAcSDQoFZW1vamkYCCABKAcikwEK",
+            "CFdheXBvaW50EgoKAmlkGAEgASgNEhIKCmxhdGl0dWRlX2kYAiABKA8SEwoL",
+            "bG9uZ2l0dWRlX2kYAyABKA8SDgoGZXhwaXJlGAQgASgNEhEKCWxvY2tlZF90",
+            "bxgFIAEoDRIMCgRuYW1lGAYgASgJEhMKC2Rlc2NyaXB0aW9uGAcgASgJEgwK",
+            "BGljb24YCCABKAciywMKCk1lc2hQYWNrZXQSDAoEZnJvbRgBIAEoBxIKCgJ0",
+            "bxgCIAEoBxIPCgdjaGFubmVsGAMgASgNEhgKB2RlY29kZWQYBCABKAsyBS5E",
+            "YXRhSAASEwoJZW5jcnlwdGVkGAUgASgMSAASCgoCaWQYBiABKAcSDwoHcnhf",
+            "dGltZRgHIAEoBxIOCgZyeF9zbnIYCCABKAISEQoJaG9wX2xpbWl0GAkgASgN",
+            "EhAKCHdhbnRfYWNrGAogASgIEiYKCHByaW9yaXR5GAsgASgOMhQuTWVzaFBh",
+            "Y2tldC5Qcmlvcml0eRIPCgdyeF9yc3NpGAwgASgFEiQKB2RlbGF5ZWQYDSAB",
+            "KA4yEy5NZXNoUGFja2V0LkRlbGF5ZWQiWwoIUHJpb3JpdHkSCQoFVU5TRVQQ",
+            "ABIHCgNNSU4QARIOCgpCQUNLR1JPVU5EEAoSCwoHREVGQVVMVBBAEgwKCFJF",
+            "TElBQkxFEEYSBwoDQUNLEHgSBwoDTUFYEH8iQgoHRGVsYXllZBIMCghOT19E",
+            "RUxBWRAAEhUKEURFTEFZRURfQlJPQURDQVNUEAESEgoOREVMQVlFRF9ESVJF",
+            "Q1QQAkIRCg9wYXlsb2FkX3ZhcmlhbnQikgEKCE5vZGVJbmZvEgsKA251bRgB",
+            "IAEoDRITCgR1c2VyGAIgASgLMgUuVXNlchIbCghwb3NpdGlvbhgDIAEoCzIJ",
+            "LlBvc2l0aW9uEgsKA3NuchgEIAEoAhISCgpsYXN0X2hlYXJkGAUgASgHEiYK",
+            "DmRldmljZV9tZXRyaWNzGAYgASgLMg4uRGV2aWNlTWV0cmljcyKGAwoKTXlO",
+            "b2RlSW5mbxITCgtteV9ub2RlX251bRgBIAEoDRIPCgdoYXNfZ3BzGAIgASgI",
+            "EhQKDG1heF9jaGFubmVscxgDIAEoDRIYChBmaXJtd2FyZV92ZXJzaW9uGAQg",
+            "ASgJEiYKCmVycm9yX2NvZGUYBSABKA4yEi5Dcml0aWNhbEVycm9yQ29kZRIV",
+            "Cg1lcnJvcl9hZGRyZXNzGAYgASgNEhMKC2Vycm9yX2NvdW50GAcgASgNEhQK",
+            "DHJlYm9vdF9jb3VudBgIIAEoDRIPCgdiaXRyYXRlGAkgASgCEhwKFG1lc3Nh",
+            "Z2VfdGltZW91dF9tc2VjGAogASgNEhcKD21pbl9hcHBfdmVyc2lvbhgLIAEo",
+            "DRIVCg1haXJfcGVyaW9kX3R4GAwgAygNEhUKDWFpcl9wZXJpb2RfcngYDSAD",
+            "KA0SEAoIaGFzX3dpZmkYDiABKAgSGwoTY2hhbm5lbF91dGlsaXphdGlvbhgP",
+            "IAEoAhITCgthaXJfdXRpbF90eBgQIAEoAiK1AQoJTG9nUmVjb3JkEg8KB21l",
+            "c3NhZ2UYASABKAkSDAoEdGltZRgCIAEoBxIOCgZzb3VyY2UYAyABKAkSHwoF",
+            "bGV2ZWwYBCABKA4yEC5Mb2dSZWNvcmQuTGV2ZWwiWAoFTGV2ZWwSCQoFVU5T",
+            "RVQQABIMCghDUklUSUNBTBAyEgkKBUVSUk9SECgSCwoHV0FSTklORxAeEggK",
+            "BElORk8QFBIJCgVERUJVRxAKEgkKBVRSQUNFEAUiUAoLUXVldWVTdGF0dXMS",
+            "CwoDcmVzGAEgASgFEgwKBGZyZWUYAiABKA0SDgoGbWF4bGVuGAMgASgNEhYK",
+            "Dm1lc2hfcGFja2V0X2lkGAQgASgNIoIDCglGcm9tUmFkaW8SCgoCaWQYASAB",
+            "KA0SHQoGcGFja2V0GAIgASgLMgsuTWVzaFBhY2tldEgAEh4KB215X2luZm8Y",
+            "AyABKAsyCy5NeU5vZGVJbmZvSAASHgoJbm9kZV9pbmZvGAQgASgLMgkuTm9k",
+            "ZUluZm9IABIZCgZjb25maWcYBSABKAsyBy5Db25maWdIABIgCgpsb2dfcmVj",
+            "b3JkGAYgASgLMgouTG9nUmVjb3JkSAASHAoSY29uZmlnX2NvbXBsZXRlX2lk",
+            "GAcgASgNSAASEgoIcmVib290ZWQYCCABKAhIABIlCgxtb2R1bGVDb25maWcY",
+            "CSABKAsyDS5Nb2R1bGVDb25maWdIABIbCgdjaGFubmVsGAogASgLMgguQ2hh",
+            "bm5lbEgAEiMKC3F1ZXVlU3RhdHVzGAsgASgLMgwuUXVldWVTdGF0dXNIABIf",
+            "Cgx4bW9kZW1QYWNrZXQYDCABKAsyBy5YTW9kZW1IAEIRCg9wYXlsb2FkX3Zh",
+            "cmlhbnQijAEKB1RvUmFkaW8SHQoGcGFja2V0GAEgASgLMgsuTWVzaFBhY2tl",
+            "dEgAEhgKDndhbnRfY29uZmlnX2lkGAMgASgNSAASFAoKZGlzY29ubmVjdBgE",
+            "IAEoCEgAEh8KDHhtb2RlbVBhY2tldBgFIAEoCzIHLlhNb2RlbUgAQhEKD3Bh",
+            "eWxvYWRfdmFyaWFudCI1CgpDb21wcmVzc2VkEhkKB3BvcnRudW0YASABKA4y",
+            "CC5Qb3J0TnVtEgwKBGRhdGEYAiABKAwqnwQKDUhhcmR3YXJlTW9kZWwSCQoF",
+            "VU5TRVQQABIMCghUTE9SQV9WMhABEgwKCFRMT1JBX1YxEAISEgoOVExPUkFf",
+            "VjJfMV8xUDYQAxIJCgVUQkVBTRAEEg8KC0hFTFRFQ19WMl8wEAUSDgoKVEJF",
+            "QU1fVjBQNxAGEgoKBlRfRUNITxAHEhAKDFRMT1JBX1YxXzFQMxAIEgsKB1JB",
+            "SzQ2MzEQCRIPCgtIRUxURUNfVjJfMRAKEg0KCUhFTFRFQ19WMRALEhgKFExJ",
+            "TFlHT19UQkVBTV9TM19DT1JFEAwSDAoIUkFLMTEyMDAQDRILCgdOQU5PX0cx",
+            "EA4SEgoOVExPUkFfVjJfMV8xUDgQDxIPCgtUTE9SQV9UM19TMxAQEg4KClNU",
+            "QVRJT05fRzEQGRIRCg1MT1JBX1JFTEFZX1YxECASDgoKTlJGNTI4NDBESxAh",
+            "EgcKA1BQUhAiEg8KC0dFTklFQkxPQ0tTECMSEQoNTlJGNTJfVU5LTk9XThAk",
+            "Eg0KCVBPUlREVUlOTxAlEg8KC0FORFJPSURfU0lNECYSCgoGRElZX1YxECcS",
+            "FQoRTlJGNTI4NDBfUENBMTAwNTkQKBIKCgZEUl9ERVYQKRILCgdNNVNUQUNL",
+            "ECoSDQoJSEVMVEVDX1YzECsSEQoNSEVMVEVDX1dTTF9WMxAsEhMKD0JFVEFG",
+            "UFZfMjQwMF9UWBAtEg8KClBSSVZBVEVfSFcQ/wEqLAoJQ29uc3RhbnRzEggK",
+            "BFpFUk8QABIVChBEQVRBX1BBWUxPQURfTEVOEO0BKu4BChFDcml0aWNhbEVy",
+            "cm9yQ29kZRIICgROT05FEAASDwoLVFhfV0FUQ0hET0cQARIUChBTTEVFUF9F",
+            "TlRFUl9XQUlUEAISDAoITk9fUkFESU8QAxIPCgtVTlNQRUNJRklFRBAEEhUK",
+            "EVVCTE9YX1VOSVRfRkFJTEVEEAUSDQoJTk9fQVhQMTkyEAYSGQoVSU5WQUxJ",
+            "RF9SQURJT19TRVRUSU5HEAcSEwoPVFJBTlNNSVRfRkFJTEVEEAgSDAoIQlJP",
+            "V05PVVQQCRISCg5TWDEyNjJfRkFJTFVSRRAKEhEKDVJBRElPX1NQSV9CVUcQ",
+            "C0JeChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpNZXNoUHJvdG9zSANaImdpdGh1",
+            "Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlBy",
+            "b3RvYnVmc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Position), global::Meshtastic.Protobufs.Position.Parser, new[]{ "LatitudeI", "LongitudeI", "Altitude", "Time", "LocationSource", "AltitudeSource", "Timestamp", "TimestampMillisAdjust", "AltitudeHae", "AltitudeGeoidalSeparation", "PDOP", "HDOP", "VDOP", "GpsAccuracy", "GroundSpeed", "GroundTrack", "FixQuality", "FixType", "SatsInView", "SensorId", "NextUpdate", "SeqNumber" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Position.Types.LocSource), typeof(global::Meshtastic.Protobufs.Position.Types.AltSource) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.User), global::Meshtastic.Protobufs.User.Parser, new[]{ "Id", "LongName", "ShortName", "Macaddr", "HwModel", "IsLicensed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.RouteDiscovery), global::Meshtastic.Protobufs.RouteDiscovery.Parser, new[]{ "Route" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Routing), global::Meshtastic.Protobufs.Routing.Parser, new[]{ "RouteRequest", "RouteReply", "ErrorReason" }, new[]{ "Variant" }, new[]{ typeof(global::Meshtastic.Protobufs.Routing.Types.Error) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Data), global::Meshtastic.Protobufs.Data.Parser, new[]{ "Portnum", "Payload", "WantResponse", "Dest", "Source", "RequestId", "ReplyId", "Emoji" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Waypoint), global::Meshtastic.Protobufs.Waypoint.Parser, new[]{ "Id", "LatitudeI", "LongitudeI", "Expire", "Locked", "Name", "Description", "Icon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Waypoint), global::Meshtastic.Protobufs.Waypoint.Parser, new[]{ "Id", "LatitudeI", "LongitudeI", "Expire", "LockedTo", "Name", "Description", "Icon" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MeshPacket), global::Meshtastic.Protobufs.MeshPacket.Parser, new[]{ "From", "To", "Channel", "Decoded", "Encrypted", "Id", "RxTime", "RxSnr", "HopLimit", "WantAck", "Priority", "RxRssi", "Delayed" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Priority), typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Delayed) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfo), global::Meshtastic.Protobufs.NodeInfo.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MyNodeInfo), global::Meshtastic.Protobufs.MyNodeInfo.Parser, new[]{ "MyNodeNum", "HasGps", "MaxChannels", "FirmwareVersion", "ErrorCode", "ErrorAddress", "ErrorCount", "RebootCount", "Bitrate", "MessageTimeoutMsec", "MinAppVersion", "AirPeriodTx", "AirPeriodRx", "HasWifi", "ChannelUtilization", "AirUtilTx" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LogRecord), global::Meshtastic.Protobufs.LogRecord.Parser, new[]{ "Message", "Time", "Source", "Level" }, null, new[]{ typeof(global::Meshtastic.Protobufs.LogRecord.Types.Level) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.QueueStatus), global::Meshtastic.Protobufs.QueueStatus.Parser, new[]{ "Res", "Free", "Maxlen", "MeshPacketId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel", "QueueStatus" }, new[]{ "PayloadVariant" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ToRadio), global::Meshtastic.Protobufs.ToRadio.Parser, new[]{ "Packet", "WantConfigId", "Disconnect" }, new[]{ "PayloadVariant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel", "QueueStatus", "XmodemPacket" }, new[]{ "PayloadVariant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ToRadio), global::Meshtastic.Protobufs.ToRadio.Parser, new[]{ "Packet", "WantConfigId", "Disconnect", "XmodemPacket" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Compressed), global::Meshtastic.Protobufs.Compressed.Parser, new[]{ "Portnum", "Data" }, null, null, null, null)
           }));
     }
@@ -3141,7 +3143,7 @@ namespace Meshtastic.Protobufs {
       latitudeI_ = other.latitudeI_;
       longitudeI_ = other.longitudeI_;
       expire_ = other.expire_;
-      locked_ = other.locked_;
+      lockedTo_ = other.lockedTo_;
       name_ = other.name_;
       description_ = other.description_;
       icon_ = other.icon_;
@@ -3218,19 +3220,20 @@ namespace Meshtastic.Protobufs {
       }
     }
 
-    /// <summary>Field number for the "locked" field.</summary>
-    public const int LockedFieldNumber = 5;
-    private bool locked_;
+    /// <summary>Field number for the "locked_to" field.</summary>
+    public const int LockedToFieldNumber = 5;
+    private uint lockedTo_;
     /// <summary>
     ///
-    /// If true, only allow the original sender to update the waypoint.
+    /// If greater than zero, treat the value as a nodenum only allowing them to update the waypoint.
+    /// If zero, the waypoint is open to be edited by any member of the mesh.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Locked {
-      get { return locked_; }
+    public uint LockedTo {
+      get { return lockedTo_; }
       set {
-        locked_ = value;
+        lockedTo_ = value;
       }
     }
 
@@ -3301,7 +3304,7 @@ namespace Meshtastic.Protobufs {
       if (LatitudeI != other.LatitudeI) return false;
       if (LongitudeI != other.LongitudeI) return false;
       if (Expire != other.Expire) return false;
-      if (Locked != other.Locked) return false;
+      if (LockedTo != other.LockedTo) return false;
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
       if (Icon != other.Icon) return false;
@@ -3316,7 +3319,7 @@ namespace Meshtastic.Protobufs {
       if (LatitudeI != 0) hash ^= LatitudeI.GetHashCode();
       if (LongitudeI != 0) hash ^= LongitudeI.GetHashCode();
       if (Expire != 0) hash ^= Expire.GetHashCode();
-      if (Locked != false) hash ^= Locked.GetHashCode();
+      if (LockedTo != 0) hash ^= LockedTo.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Icon != 0) hash ^= Icon.GetHashCode();
@@ -3354,9 +3357,9 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(32);
         output.WriteUInt32(Expire);
       }
-      if (Locked != false) {
+      if (LockedTo != 0) {
         output.WriteRawTag(40);
-        output.WriteBool(Locked);
+        output.WriteUInt32(LockedTo);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(50);
@@ -3396,9 +3399,9 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(32);
         output.WriteUInt32(Expire);
       }
-      if (Locked != false) {
+      if (LockedTo != 0) {
         output.WriteRawTag(40);
-        output.WriteBool(Locked);
+        output.WriteUInt32(LockedTo);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(50);
@@ -3434,8 +3437,8 @@ namespace Meshtastic.Protobufs {
       if (Expire != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Expire);
       }
-      if (Locked != false) {
-        size += 1 + 1;
+      if (LockedTo != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LockedTo);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -3470,8 +3473,8 @@ namespace Meshtastic.Protobufs {
       if (other.Expire != 0) {
         Expire = other.Expire;
       }
-      if (other.Locked != false) {
-        Locked = other.Locked;
+      if (other.LockedTo != 0) {
+        LockedTo = other.LockedTo;
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
@@ -3514,7 +3517,7 @@ namespace Meshtastic.Protobufs {
             break;
           }
           case 40: {
-            Locked = input.ReadBool();
+            LockedTo = input.ReadUInt32();
             break;
           }
           case 50: {
@@ -3561,7 +3564,7 @@ namespace Meshtastic.Protobufs {
             break;
           }
           case 40: {
-            Locked = input.ReadBool();
+            LockedTo = input.ReadUInt32();
             break;
           }
           case 50: {
@@ -6462,6 +6465,9 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.QueueStatus:
           QueueStatus = other.QueueStatus.Clone();
           break;
+        case PayloadVariantOneofCase.XmodemPacket:
+          XmodemPacket = other.XmodemPacket.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -6645,7 +6651,8 @@ namespace Meshtastic.Protobufs {
     /// <summary>Field number for the "queueStatus" field.</summary>
     public const int QueueStatusFieldNumber = 11;
     /// <summary>
-    /// Queue status info 
+    ///
+    /// Queue status info
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6654,6 +6661,22 @@ namespace Meshtastic.Protobufs {
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.QueueStatus;
+      }
+    }
+
+    /// <summary>Field number for the "xmodemPacket" field.</summary>
+    public const int XmodemPacketFieldNumber = 12;
+    /// <summary>
+    ///
+    /// File Transfer Chunk
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.XModem XmodemPacket {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket ? (global::Meshtastic.Protobufs.XModem) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.XmodemPacket;
       }
     }
 
@@ -6671,6 +6694,7 @@ namespace Meshtastic.Protobufs {
       ModuleConfig = 9,
       Channel = 10,
       QueueStatus = 11,
+      XmodemPacket = 12,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6712,6 +6736,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(ModuleConfig, other.ModuleConfig)) return false;
       if (!object.Equals(Channel, other.Channel)) return false;
       if (!object.Equals(QueueStatus, other.QueueStatus)) return false;
+      if (!object.Equals(XmodemPacket, other.XmodemPacket)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6731,6 +6756,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.ModuleConfig) hash ^= ModuleConfig.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Channel) hash ^= Channel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) hash ^= QueueStatus.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) hash ^= XmodemPacket.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6794,6 +6820,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(90);
         output.WriteMessage(QueueStatus);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+        output.WriteRawTag(98);
+        output.WriteMessage(XmodemPacket);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6848,6 +6878,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(90);
         output.WriteMessage(QueueStatus);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+        output.WriteRawTag(98);
+        output.WriteMessage(XmodemPacket);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6890,6 +6924,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueueStatus);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(XmodemPacket);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6961,6 +6998,12 @@ namespace Meshtastic.Protobufs {
           }
           QueueStatus.MergeFrom(other.QueueStatus);
           break;
+        case PayloadVariantOneofCase.XmodemPacket:
+          if (XmodemPacket == null) {
+            XmodemPacket = new global::Meshtastic.Protobufs.XModem();
+          }
+          XmodemPacket.MergeFrom(other.XmodemPacket);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -7062,6 +7105,15 @@ namespace Meshtastic.Protobufs {
             QueueStatus = subBuilder;
             break;
           }
+          case 98: {
+            global::Meshtastic.Protobufs.XModem subBuilder = new global::Meshtastic.Protobufs.XModem();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+              subBuilder.MergeFrom(XmodemPacket);
+            }
+            input.ReadMessage(subBuilder);
+            XmodemPacket = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -7161,6 +7213,15 @@ namespace Meshtastic.Protobufs {
             QueueStatus = subBuilder;
             break;
           }
+          case 98: {
+            global::Meshtastic.Protobufs.XModem subBuilder = new global::Meshtastic.Protobufs.XModem();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+              subBuilder.MergeFrom(XmodemPacket);
+            }
+            input.ReadMessage(subBuilder);
+            XmodemPacket = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -7216,6 +7277,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.Disconnect:
           Disconnect = other.Disconnect;
+          break;
+        case PayloadVariantOneofCase.XmodemPacket:
+          XmodemPacket = other.XmodemPacket.Clone();
           break;
       }
 
@@ -7285,6 +7349,18 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "xmodemPacket" field.</summary>
+    public const int XmodemPacketFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.XModem XmodemPacket {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket ? (global::Meshtastic.Protobufs.XModem) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.XmodemPacket;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -7292,6 +7368,7 @@ namespace Meshtastic.Protobufs {
       Packet = 1,
       WantConfigId = 3,
       Disconnect = 4,
+      XmodemPacket = 5,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7325,6 +7402,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Packet, other.Packet)) return false;
       if (WantConfigId != other.WantConfigId) return false;
       if (Disconnect != other.Disconnect) return false;
+      if (!object.Equals(XmodemPacket, other.XmodemPacket)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7336,6 +7414,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Packet) hash ^= Packet.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.WantConfigId) hash ^= WantConfigId.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Disconnect) hash ^= Disconnect.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) hash ^= XmodemPacket.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7367,6 +7446,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(32);
         output.WriteBool(Disconnect);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+        output.WriteRawTag(42);
+        output.WriteMessage(XmodemPacket);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7389,6 +7472,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(32);
         output.WriteBool(Disconnect);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+        output.WriteRawTag(42);
+        output.WriteMessage(XmodemPacket);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7407,6 +7494,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.Disconnect) {
         size += 1 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(XmodemPacket);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7432,6 +7522,12 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.Disconnect:
           Disconnect = other.Disconnect;
+          break;
+        case PayloadVariantOneofCase.XmodemPacket:
+          if (XmodemPacket == null) {
+            XmodemPacket = new global::Meshtastic.Protobufs.XModem();
+          }
+          XmodemPacket.MergeFrom(other.XmodemPacket);
           break;
       }
 
@@ -7467,6 +7563,15 @@ namespace Meshtastic.Protobufs {
             Disconnect = input.ReadBool();
             break;
           }
+          case 42: {
+            global::Meshtastic.Protobufs.XModem subBuilder = new global::Meshtastic.Protobufs.XModem();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+              subBuilder.MergeFrom(XmodemPacket);
+            }
+            input.ReadMessage(subBuilder);
+            XmodemPacket = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -7497,6 +7602,15 @@ namespace Meshtastic.Protobufs {
           }
           case 32: {
             Disconnect = input.ReadBool();
+            break;
+          }
+          case 42: {
+            global::Meshtastic.Protobufs.XModem subBuilder = new global::Meshtastic.Protobufs.XModem();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
+              subBuilder.MergeFrom(XmodemPacket);
+            }
+            input.ReadMessage(subBuilder);
+            XmodemPacket = subBuilder;
             break;
           }
         }

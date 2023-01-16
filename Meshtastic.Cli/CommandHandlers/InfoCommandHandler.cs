@@ -1,6 +1,7 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
 using Meshtastic.Display;
+using Meshtastic.Protobufs;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
@@ -13,7 +14,7 @@ public class InfoCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         var printer = new ProtobufPrinter(container, OutputFormat);
         printer.Print();

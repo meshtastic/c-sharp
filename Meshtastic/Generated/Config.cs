@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgxjb25maWcucHJvdG8ighcKBkNvbmZpZxImCgZkZXZpY2UYASABKAsyFC5D",
+            "Cgxjb25maWcucHJvdG8imhcKBkNvbmZpZxImCgZkZXZpY2UYASABKAsyFC5D",
             "b25maWcuRGV2aWNlQ29uZmlnSAASKgoIcG9zaXRpb24YAiABKAsyFi5Db25m",
             "aWcuUG9zaXRpb25Db25maWdIABIkCgVwb3dlchgDIAEoCzITLkNvbmZpZy5Q",
             "b3dlckNvbmZpZ0gAEigKB25ldHdvcmsYBCABKAsyFS5Db25maWcuTmV0d29y",
@@ -71,7 +71,7 @@ namespace Meshtastic.Protobufs {
             "YXlVbml0cxIKCgZNRVRSSUMQABIMCghJTVBFUklBTBABIjwKCE9sZWRUeXBl",
             "Eg0KCU9MRURfQVVUTxAAEhAKDE9MRURfU1NEMTMwNhABEg8KC09MRURfU0gx",
             "MTA2EAIiQQoLRGlzcGxheU1vZGUSCwoHREVGQVVMVBAAEgwKCFRXT0NPTE9S",
-            "EAESDAoISU5WRVJURUQQAhIJCgVDT0xPUhADGvoECgpMb1JhQ29uZmlnEhIK",
+            "EAESDAoISU5WRVJURUQQAhIJCgVDT0xPUhADGpIFCgpMb1JhQ29uZmlnEhIK",
             "CnVzZV9wcmVzZXQYASABKAgSNAoMbW9kZW1fcHJlc2V0GAIgASgOMh4uQ29u",
             "ZmlnLkxvUmFDb25maWcuTW9kZW1QcmVzZXQSEQoJYmFuZHdpZHRoGAMgASgN",
             "EhUKDXNwcmVhZF9mYWN0b3IYBCABKA0SEwoLY29kaW5nX3JhdGUYBSABKA0S",
@@ -79,20 +79,20 @@ namespace Meshtastic.Protobufs {
             "b25maWcuTG9SYUNvbmZpZy5SZWdpb25Db2RlEhEKCWhvcF9saW1pdBgIIAEo",
             "DRISCgp0eF9lbmFibGVkGAkgASgIEhAKCHR4X3Bvd2VyGAogASgFEhMKC2No",
             "YW5uZWxfbnVtGAsgASgNEhsKE292ZXJyaWRlX2R1dHlfY3ljbGUYDCABKAgS",
-            "FwoPaWdub3JlX2luY29taW5nGGcgAygNIpEBCgpSZWdpb25Db2RlEgkKBVVO",
+            "FwoPaWdub3JlX2luY29taW5nGGcgAygNIqkBCgpSZWdpb25Db2RlEgkKBVVO",
             "U0VUEAASBgoCVVMQARIKCgZFVV80MzMQAhIKCgZFVV84NjgQAxIGCgJDThAE",
             "EgYKAkpQEAUSBwoDQU5aEAYSBgoCS1IQBxIGCgJUVxAIEgYKAlJVEAkSBgoC",
-            "SU4QChIKCgZOWl84NjUQCxIGCgJUSBAMEgsKB0xPUkFfMjQQDSKBAQoLTW9k",
-            "ZW1QcmVzZXQSDQoJTE9OR19GQVNUEAASDQoJTE9OR19TTE9XEAESEgoOVkVS",
-            "WV9MT05HX1NMT1cQAhIPCgtNRURJVU1fU0xPVxADEg8KC01FRElVTV9GQVNU",
-            "EAQSDgoKU0hPUlRfU0xPVxAFEg4KClNIT1JUX0ZBU1QQBhqiAQoPQmx1ZXRv",
-            "b3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSMQoEbW9kZRgCIAEoDjIjLkNv",
-            "bmZpZy5CbHVldG9vdGhDb25maWcuUGFpcmluZ01vZGUSEQoJZml4ZWRfcGlu",
-            "GAMgASgNIjgKC1BhaXJpbmdNb2RlEg4KClJBTkRPTV9QSU4QABINCglGSVhF",
-            "RF9QSU4QARIKCgZOT19QSU4QAkIRCg9wYXlsb2FkX3ZhcmlhbnRCYAoTY29t",
-            "LmdlZWtzdmlsbGUubWVzaEIMQ29uZmlnUHJvdG9zSANaImdpdGh1Yi5jb20v",
-            "bWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVm",
-            "c2IGcHJvdG8z"));
+            "SU4QChIKCgZOWl84NjUQCxIGCgJUSBAMEgsKB0xPUkFfMjQQDRIKCgZVQV80",
+            "MzMQDhIKCgZVQV84NjgQDyKBAQoLTW9kZW1QcmVzZXQSDQoJTE9OR19GQVNU",
+            "EAASDQoJTE9OR19TTE9XEAESEgoOVkVSWV9MT05HX1NMT1cQAhIPCgtNRURJ",
+            "VU1fU0xPVxADEg8KC01FRElVTV9GQVNUEAQSDgoKU0hPUlRfU0xPVxAFEg4K",
+            "ClNIT1JUX0ZBU1QQBhqiAQoPQmx1ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQY",
+            "ASABKAgSMQoEbW9kZRgCIAEoDjIjLkNvbmZpZy5CbHVldG9vdGhDb25maWcu",
+            "UGFpcmluZ01vZGUSEQoJZml4ZWRfcGluGAMgASgNIjgKC1BhaXJpbmdNb2Rl",
+            "Eg4KClJBTkRPTV9QSU4QABINCglGSVhFRF9QSU4QARIKCgZOT19QSU4QAkIR",
+            "Cg9wYXlsb2FkX3ZhcmlhbnRCYAoTY29tLmdlZWtzdmlsbGUubWVzaEIMQ29u",
+            "ZmlnUHJvdG9zSANaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0",
+            "ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -4393,6 +4393,16 @@ namespace Meshtastic.Protobufs {
             /// WLAN Band
             /// </summary>
             [pbr::OriginalName("LORA_24")] Lora24 = 13,
+            /// <summary>
+            ///
+            /// Ukraine 433mhz
+            /// </summary>
+            [pbr::OriginalName("UA_433")] Ua433 = 14,
+            /// <summary>
+            ///
+            /// Ukraine 868mhz
+            /// </summary>
+            [pbr::OriginalName("UA_868")] Ua868 = 15,
           }
 
           /// <summary>

@@ -3,6 +3,7 @@ using Meshtastic.Cli.Parsers;
 using Meshtastic.Connections;
 using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
+using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
@@ -44,24 +45,24 @@ public class DeviceCommandHandler
         return (parserResult, true);
     }
 
-    public static Task<bool> AdminMessageResponseReceived(FromDeviceMessage packet, DeviceStateContainer container)
+    public static Task<bool> AdminMessageResponseReceived(FromRadio fromRadio, DeviceStateContainer container)
     {
-        if (packet.ParsedMessage.adminMessage != null)
+        if (fromRadio.GetMessage<AdminMessage>() != null)
         {
             return Task.FromResult(true);
         }
         return Task.FromResult(false);
     }
 
-    public static async Task<bool> AnyResponseReceived(FromDeviceMessage packet, DeviceStateContainer container)
+    public static async Task<bool> AnyResponseReceived(FromRadio fromRadio, DeviceStateContainer container)
     {
         await Task.Delay(100);
         return true;
     }
 
-    public async Task<bool> CompleteOnConfigReceived(FromDeviceMessage packet, DeviceStateContainer container)
+    public async Task<bool> CompleteOnConfigReceived(FromRadio fromRadio, DeviceStateContainer container)
     {
-        if (packet.ParsedMessage.fromRadio?.PayloadVariantCase != FromRadio.PayloadVariantOneofCase.ConfigCompleteId)
+        if (fromRadio.PayloadVariantCase != FromRadio.PayloadVariantOneofCase.ConfigCompleteId)
             return false;
 
         if (SelectDestination)
@@ -76,12 +77,12 @@ public class DeviceCommandHandler
             Destination = AnsiConsole.Prompt(selection);
         }
 
-        await OnCompleted(packet, container);
+        await OnCompleted(fromRadio, container);
         return true;
     }
 
 
-    public virtual async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public virtual async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         await Task.CompletedTask;
     }

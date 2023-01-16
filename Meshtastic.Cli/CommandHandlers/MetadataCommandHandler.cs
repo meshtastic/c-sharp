@@ -1,6 +1,7 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
 using Meshtastic.Display;
+using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
@@ -16,18 +17,19 @@ public class MetadataCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         Logger.LogInformation("Getting device metadata...");
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         var adminMessage = adminMessageFactory.CreateGetMetadataMessage();
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage),
-            (fromDevice, container) =>
+            (fromRadio, container) =>
             {
-                if (fromDevice?.ParsedMessage.adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.GetDeviceMetadataResponse)
+                var adminMessage = fromRadio.GetMessage<AdminMessage>();
+                if (adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.GetDeviceMetadataResponse)
                 {
                     var printer = new ProtobufPrinter(container, OutputFormat);
-                    printer.PrintMetadata(fromDevice.ParsedMessage.adminMessage!.GetDeviceMetadataResponse);
+                    printer.PrintMetadata(adminMessage!.GetDeviceMetadataResponse);
                     return Task.FromResult(true);
                 }
                 return Task.FromResult(false);

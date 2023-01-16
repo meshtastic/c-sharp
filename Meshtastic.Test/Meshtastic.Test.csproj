@@ -35,4 +35,8 @@
     <ProjectReference Include="..\Meshtastic\Meshtastic.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CommandHandlers\" />
+  </ItemGroup>
+
 </Project>

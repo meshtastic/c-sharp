@@ -26,7 +26,7 @@ public class UrlCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         if (operation == UrlOperation.Set)
             await SetChannelsFromUrl(container);

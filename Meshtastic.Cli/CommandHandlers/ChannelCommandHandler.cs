@@ -27,7 +27,7 @@ public class ChannelCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio fromRadio, DeviceStateContainer container)
     {
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         await BeginEditSettings(adminMessageFactory);
@@ -55,8 +55,7 @@ public class ChannelCommandHandler : DeviceCommandHandler
                 throw new UnreachableException("Cannot complete ChannelCommandHandler without ChannelOperation");
         }
         var adminMessage = adminMessageFactory.CreateSetChannelMessage(channel!);
-        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage),
-            AnyResponseReceived);
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AnyResponseReceived);
         await CommitEditSettings(adminMessageFactory);
     }
 

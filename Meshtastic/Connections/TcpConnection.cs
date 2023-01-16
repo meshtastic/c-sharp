@@ -22,7 +22,7 @@ public class TcpConnection : DeviceConnection, IDisposable
         };
     }
 
-    public override async Task WriteToRadio(ToRadio data, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task WriteToRadio(ToRadio data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
         var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
         networkStream = client.GetStream();
@@ -31,7 +31,7 @@ public class TcpConnection : DeviceConnection, IDisposable
         await ReadFromRadio(isComplete);
     }
 
-    public override async Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
+    public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
         if (networkStream == null)
             throw new ApplicationException("Could not establish network stream");

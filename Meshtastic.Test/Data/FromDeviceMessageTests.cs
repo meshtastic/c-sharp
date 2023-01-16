@@ -1,4 +1,5 @@
 using Google.Protobuf;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Test.Data;
 
@@ -12,9 +13,11 @@ public class FromDeviceMessageTests
     [Test]
     public void FromDeviceMessage_SwallowsException_Given_BadPayload()
     {
+        var fixture = new Fixture();
         var action = () =>
         {
-            _ = new FromDeviceMessage(BitConverter.GetBytes(123242));
+            var derp = new FromDeviceMessage(fixture.Create<ILogger>());
+            derp.ParsedFromRadio(BitConverter.GetBytes(123456));
         };
         action.Should().NotThrow<InvalidProtocolBufferException>();
     }

@@ -1,5 +1,6 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
+using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
@@ -20,19 +21,18 @@ public class SendTextCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         var textMessageFactory = new TextMessageFactory(container);
         var textMessage = textMessageFactory.CreateTextMessagePacket(message);
         Logger.LogInformation($"Sending text messagee...");
 
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(textMessage),
-             (fromDevice, container) =>
+             (fromRadio, container) =>
              {
-                 if (fromDevice.ParsedMessage.fromRadio?.Packet.Decoded.Portnum == PortNum.RoutingApp &&
-                    fromDevice.ParsedMessage.fromRadio?.Packet.Priority == MeshPacket.Types.Priority.Ack)
+                 var routingResult = fromRadio.GetMessage<Routing>();
+                 if (routingResult != null && fromRadio.Packet.Priority == MeshPacket.Types.Priority.Ack)
                  {
-                     var routingResult = Routing.Parser.ParseFrom(fromDevice.ParsedMessage.fromRadio?.Packet.Decoded.Payload);
                      if (routingResult.ErrorReason == Routing.Types.Error.None)
                          Logger.LogInformation("Acknowledged");
                      else
@@ -41,7 +41,7 @@ public class SendTextCommandHandler : DeviceCommandHandler
                      return Task.FromResult(true);
                  }
 
-                 return Task.FromResult(fromDevice.ParsedMessage.fromRadio != null);
+                 return Task.FromResult(fromRadio != null);
              });
     }
 }

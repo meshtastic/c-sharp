@@ -1,6 +1,6 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
-using Meshtastic.Display;
+using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
@@ -8,7 +8,6 @@ namespace Meshtastic.Cli.CommandHandlers;
 
 public class GetCannedMessagesCommandHandler : DeviceCommandHandler
 {
-
     public GetCannedMessagesCommandHandler(DeviceConnectionContext context, CommandContext commandContext) :
         base(context, commandContext) { }
 
@@ -18,17 +17,18 @@ public class GetCannedMessagesCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         Logger.LogInformation("Getting canned messages from device...");
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         var adminMessage = adminMessageFactory.CreateGetCannedMessage();
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage),
-            (fromDevice, container) =>
+            (fromRadio, container) =>
             {
-                if (fromDevice?.ParsedMessage.adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse)
+                var adminMessage = fromRadio.GetMessage<AdminMessage>();
+                if (adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse)
                 {
-                    Logger.LogInformation($"Canned messages: {fromDevice?.ParsedMessage.adminMessage.GetCannedMessageModuleMessagesResponse}");
+                    Logger.LogInformation($"Canned messages: {adminMessage?.GetCannedMessageModuleMessagesResponse}");
                     return Task.FromResult(true);
                 }
                 return Task.FromResult(false);

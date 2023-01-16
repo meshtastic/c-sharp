@@ -30,7 +30,7 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         var positionMessageFactory = new PositionMessageFactory(container, Destination);

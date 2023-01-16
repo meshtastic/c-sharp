@@ -49,7 +49,7 @@ public class SerialConnection : DeviceConnection
         Logger.LogDebug("Disconnected from serial");
     }
 
-    public override async Task WriteToRadio(ToRadio data, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task WriteToRadio(ToRadio data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
         await Task.Delay(1000);
         var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
@@ -62,7 +62,7 @@ public class SerialConnection : DeviceConnection
         await ReadFromRadio(isComplete);
     }
 
-    public override async Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
+    public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
         while (serialPort.IsOpen)
         {

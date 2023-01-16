@@ -1,5 +1,6 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
+using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.CommandHandlers;
@@ -19,7 +20,7 @@ public class SetCannedMessagesCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         await BeginEditSettings(adminMessageFactory);

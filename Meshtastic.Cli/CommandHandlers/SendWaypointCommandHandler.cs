@@ -39,10 +39,9 @@ public class SendWaypointCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio fromRadio, DeviceStateContainer container)
     {
         var factory = new WaypointMessageFactory(container, Destination);
-
         var message = factory.CreateWaypointPacket(new Waypoint()
         {
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
@@ -55,12 +54,12 @@ public class SendWaypointCommandHandler : DeviceCommandHandler
         });
         Logger.LogInformation($"Sending waypoint to device...");
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message),
-            (fromDevice, container) =>
+            (fromRadio, container) =>
             {
-                if (fromDevice.ParsedMessage.fromRadio?.Packet?.Decoded.Portnum == PortNum.RoutingApp &&
-                   fromDevice.ParsedMessage.fromRadio?.Packet?.Priority == MeshPacket.Types.Priority.Ack)
+                if (fromRadio.Packet?.Decoded?.Portnum == PortNum.RoutingApp &&
+                   fromRadio?.Packet?.Priority == MeshPacket.Types.Priority.Ack)
                 {
-                    var routingResult = Routing.Parser.ParseFrom(fromDevice.ParsedMessage.fromRadio?.Packet.Decoded.Payload);
+                    var routingResult = Routing.Parser.ParseFrom(fromRadio.Packet.Decoded.Payload);
                     if (routingResult.ErrorReason == Routing.Types.Error.None)
                         Logger.LogInformation("Acknowledged");
                     else

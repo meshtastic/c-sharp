@@ -1,6 +1,7 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
 using Meshtastic.Display;
+using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
@@ -16,17 +17,17 @@ public class TraceRouteCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
     }
 
-    public override async Task OnCompleted(FromDeviceMessage packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         Logger.LogInformation($"Tracing route to {container.GetNodeDisplayName(Destination!.Value)}...");
         var messageFactory = new TraceRouteMessageFactory(container, Destination);
         var message = messageFactory.CreateRouteDiscoveryPacket();
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message),
-            (fromDevice, container) =>
+            (fromRadio, container) =>
             {
-                if (fromDevice.ParsedMessage.fromRadio?.Packet?.Decoded?.Portnum == PortNum.TracerouteApp)
+                var routeDiscovery = fromRadio.GetMessage<RouteDiscovery>();
+                if (routeDiscovery != null)
                 {
-                    var routeDiscovery = RouteDiscovery.Parser.ParseFrom(fromDevice.ParsedMessage.fromRadio?.Packet.Decoded.Payload);
                     if (routeDiscovery.Route.Count > 0)
                     {
                         var printer = new ProtobufPrinter(container, OutputFormat);

@@ -22,12 +22,12 @@ public abstract class DeviceConnection
         throw new NotImplementedException();
     }
 
-    public abstract Task WriteToRadio(ToRadio toRadio, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete);
+    public abstract Task WriteToRadio(ToRadio toRadio, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete);
 
-    public abstract Task ReadFromRadio(Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete,
+    public abstract Task ReadFromRadio(Func<FromRadio?, DeviceStateContainer, Task<bool>> isComplete,
         int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT);
 
-    protected async Task<bool> ParsePackets(byte item, Func<FromDeviceMessage, DeviceStateContainer, Task<bool>> isComplete)
+    protected async Task<bool> ParsePackets(byte item, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
         int bufferIndex = Buffer.Count;
         Buffer.Add(item);
@@ -47,20 +47,22 @@ public abstract class DeviceConnection
             if (Buffer.Count > 0 && (bufferIndex + 1) >= (PacketLength + PacketFraming.PACKET_HEADER_LENGTH))
             {
                 var payload = Buffer.Skip(PacketFraming.PACKET_HEADER_LENGTH).ToArray();
-                var message = new FromDeviceMessage(payload);
+                var message = new FromDeviceMessage(Logger);
+                var fromRadio = message.ParsedFromRadio(payload);
 
-                if (message.ParsedMessage.fromRadio != null)
+                if (fromRadio != null)
                 {
-                    DeviceStateContainer.AddFromRadio(message.ParsedMessage.fromRadio!);
-                    Logger.LogDebug($"Received: {message.ParsedMessage.fromRadio}");
+                    DeviceStateContainer.AddFromRadio(fromRadio);
+                    Logger.LogDebug($"Received: {fromRadio}");
+                    if (await isComplete(fromRadio, DeviceStateContainer))
+                    {
+                        Buffer.Clear();
+                        return true;
+                    }
                 }
                 else
-                    Logger.LogDebug($"Notification of pending packets {Convert.ToBase64String(payload)}");
-
-                if (await isComplete(message, DeviceStateContainer))
                 {
-                    Buffer.Clear();
-                    return true;
+                    Logger.LogDebug($"Notification of pending packets {Convert.ToBase64String(payload)}");
                 }
                 Buffer.Clear();
             }
