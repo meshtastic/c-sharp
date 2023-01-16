@@ -18,6 +18,9 @@ public class DeviceConnectionContext
 
     public DeviceConnection GetDeviceConnection(ILogger logger)
     {
+        if (this.port == "SIMPORT")
+            return new SimulatedConnection(logger);
+
         if (!String.IsNullOrWhiteSpace(this.host))
             return new TcpConnection(logger, this.host);
         else if (!String.IsNullOrWhiteSpace(this.port))
