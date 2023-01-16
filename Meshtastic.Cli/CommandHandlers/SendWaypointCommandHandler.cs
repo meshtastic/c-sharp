@@ -50,7 +50,7 @@ public class SendWaypointCommandHandler : DeviceCommandHandler
             Icon = BitConverter.ToUInt32(Encoding.UTF8.GetBytes(icon)),
             Name = name,
             Description = description ?? String.Empty,
-            Locked = locked,
+            LockedTo = locked ? container.MyNodeInfo.MyNodeNum : 0,
         });
         Logger.LogInformation($"Sending waypoint to device...");
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message),
