@@ -25,7 +25,7 @@ public class SendWaypointCommand : Command
         lonArg.AddValidator(result =>
         {
             if (Math.Abs(result.GetValueForArgument(lonArg)) > 180)
-                result.ErrorMessage = "Invalid latitude";
+                result.ErrorMessage = "Invalid longitude";
         });
         AddArgument(lonArg);
 

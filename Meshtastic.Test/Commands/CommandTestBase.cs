@@ -30,7 +30,7 @@ namespace Meshtastic.Test.Commands
         public FakeConsole Console { get; private set; }
 
         [SetUp]
-        public void Setup()
+        public void BaseSetup()
         {
             Error = new FakeStdIOWriter();
             Out = new FakeStdIOWriter();
