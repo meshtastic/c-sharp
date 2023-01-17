@@ -17,7 +17,7 @@ public class InfoCommandTests : CommandTestBase
     }
 
     [Test]
-    public async Task FixedPositionCommand_Should_Succeed_ForValidCoords()
+    public async Task InfoCommand_Should_Succeed_ForValidCoords()
     {
         var result = await rootCommand.InvokeAsync("info --port SIMPORT", Console);
         result.Should().Be(0);
