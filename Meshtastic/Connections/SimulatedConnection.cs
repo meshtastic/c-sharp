@@ -13,13 +13,13 @@ public class SimulatedConnection : DeviceConnection
 
     public new ILogger Logger { get; }
 
-    public override Task ReadFromRadio(Func<FromRadio?, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = 15000)
+    public override async Task ReadFromRadio(Func<FromRadio?, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = 15000)
     {
-        throw new NotImplementedException();
+        await Task.CompletedTask;
     }
 
-    public override Task WriteToRadio(ToRadio toRadio, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task WriteToRadio(ToRadio toRadio, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
-        throw new NotImplementedException();
+        await Task.CompletedTask;
     }
 }

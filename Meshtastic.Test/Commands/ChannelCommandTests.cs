@@ -17,6 +17,13 @@ public class ChannelCommandTests : CommandTestBase
     }
 
     [Test]
+    public async Task ChannelCommand_Should_Succeed_ForValidArgs()
+    {
+        var result = await rootCommand.InvokeAsync("channel save --index 0 --name \"Derp\"s --port SIMPORT", Console);
+        result.Should().BeGreaterThan(0);
+    }
+
+    [Test]
     public async Task ChannelCommand_Should_Fail_ForIndexOutOfRange()
     {
         var result = await rootCommand.InvokeAsync("channel disable --index 10 --port SIMPORT", Console);

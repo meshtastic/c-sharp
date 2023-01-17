@@ -37,4 +37,11 @@ public class SendWaypointCommandTests : CommandTestBase
         result.Should().BeGreaterThan(0);
         Out.Output.Should().Contain("Invalid longitude");
     }
+
+    [Test]
+    public async Task SendWaypointCommand_Should_Succeed_ForValidCoords()
+    {
+        var result = await rootCommand.InvokeAsync("waypoint 34.00 -90 --port SIMPORT", Console);
+        result.Should().Be(0);
+    }
 }
