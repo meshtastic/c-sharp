@@ -29,4 +29,11 @@ public class ToRadioMessageFactoryTests
         var result = factory.CreateWantConfigMessage();
         result.WantConfigId.Should().BeGreaterThan(0);
     }
+
+    [Test]
+    public void CreateXmodemPacketMessage_Should_ReturnValidXModemMessage()
+    {
+        var result = factory.CreateXmodemPacketMessage();
+        result.XmodemPacket.Should().NotBeNull();
+    }
 }
