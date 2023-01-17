@@ -8,6 +8,11 @@ public class MonitorCommandTests : CommandTestBase
 {
     private RootCommand rootCommand;
 
+    [SetUp]
+    public void Setup()
+    {
+        rootCommand = GetRootCommand();
+        var command = new MonitorCommand("monitor", "monitor description", portOption, hostOption, outputOption, logLevelOption);
         rootCommand.AddCommand(command);
     }
 
