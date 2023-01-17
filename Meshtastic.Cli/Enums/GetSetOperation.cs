@@ -1,6 +1,6 @@
 ﻿namespace Meshtastic.Cli.Enums;
 
-public enum UrlOperation
+public enum GetSetOperation
 {
     Get,
     Set,

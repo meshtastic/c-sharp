@@ -26,6 +26,7 @@ selectDest.SetDefaultValue(false);
 var setting = new Option<IEnumerable<string>>("--setting", description: "Get or set a value on config / module-config")
 {
     AllowMultipleArgumentsPerToken = true,
+    IsRequired = true,
 };
 setting.AddAlias("-s");
 setting.AddCompletions(ctx => new LocalConfig().GetSettingsOptions().Concat(new LocalModuleConfig().GetSettingsOptions()));
@@ -52,8 +53,7 @@ root.AddCommand(new FixedPositionCommand("fixed-position", "Set the device to a 
 root.AddCommand(new SendTextCommand("text", "Send a text message from the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new ResetNodeDbCommand("reset-nodedb", "Reset the node db of the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new TraceRouteCommand("trace-route", "Trace the sequence of nodes routing to the destination", port, host, output, log, dest, selectDest));
-root.AddCommand(new SetCannedMessagesCommand("set-canned-messages", "Set the collection of canned messages on the device", port, host, output, log, dest, selectDest));
-root.AddCommand(new GetCannedMessagesCommand("get-canned-messages", "Get the collection of canned messages on the device", port, host, output, log, dest, selectDest));
+root.AddCommand(new CannedMessagesCommand("canned-messages", "Get or set the collection of canned messages on the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new SendWaypointCommand("waypoint", "Send a waypoint from the device", port, host, output, log, dest, selectDest));
 
 var parser = new CommandLineBuilder(root)

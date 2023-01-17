@@ -10,10 +10,10 @@ namespace Meshtastic.Cli.CommandHandlers;
 
 public class UrlCommandHandler : DeviceCommandHandler
 {
-    private readonly UrlOperation operation;
+    private readonly GetSetOperation operation;
     private readonly string? url;
 
-    public UrlCommandHandler(UrlOperation operation, string? url, DeviceConnectionContext context, CommandContext commandContext) :
+    public UrlCommandHandler(GetSetOperation operation, string? url, DeviceConnectionContext context, CommandContext commandContext) :
         base(context, commandContext)
     {
         this.operation = operation;
@@ -28,9 +28,9 @@ public class UrlCommandHandler : DeviceCommandHandler
 
     public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
-        if (operation == UrlOperation.Set)
+        if (operation == GetSetOperation.Set)
             await SetChannelsFromUrl(container);
-        else if (operation == UrlOperation.Get)
+        else if (operation == GetSetOperation.Get)
         {
             var printer = new ProtobufPrinter(container, OutputFormat);
             printer.PrintUrl();

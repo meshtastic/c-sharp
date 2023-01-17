@@ -6,12 +6,12 @@ namespace Meshtastic.Test.Commands
 {
     public class CommandTestBase
     {
-        protected Option<string> portOption = new Option<string>("--port", "");
-        protected Option<string> hostOption = new Option<string>("--host", "");
-        protected Option<OutputFormat> outputOption = new Option<OutputFormat>("--output", "");
+        protected Option<string> portOption = new("--port", "");
+        protected Option<string> hostOption = new("--host", "");
+        protected Option<OutputFormat> outputOption = new("--output", "");
         protected Option<LogLevel> logLevelOption = new("--log", "");
-        protected Option<uint?> destOption = new Option<uint?>("--dest", "");
-        protected Option<bool> selectDestOption = new Option<bool>("--select-dest", "");
+        protected Option<uint?> destOption = new("--dest", "");
+        protected Option<bool> selectDestOption = new("--select-dest", "");
 
         protected RootCommand GetRootCommand()
         {

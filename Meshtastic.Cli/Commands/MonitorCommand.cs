@@ -2,9 +2,11 @@ using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.CommandHandlers;
 using Meshtastic.Cli.Enums;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Cli.Commands;
 
+[ExcludeFromCodeCoverage(Justification ="Creates serial stream")]
 public class MonitorCommand : Command
 {
     public MonitorCommand(string name, string description, Option<string> port, Option<string> host,
