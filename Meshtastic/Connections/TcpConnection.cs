@@ -4,6 +4,7 @@ using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Sockets;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Meshtastic.Connections;
 
@@ -29,6 +30,13 @@ public class TcpConnection : DeviceConnection, IDisposable
         await networkStream.WriteAsync(toRadio);
         Logger.LogDebug($"Sent: {data}");
         await ReadFromRadio(isComplete);
+    }
+
+    public override async Task WriteToRadio(ToRadio data)
+    {
+        var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
+        await networkStream!.WriteAsync(toRadio);
+        Logger.LogDebug($"Sent: {data}");
     }
 
     public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)

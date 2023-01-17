@@ -25,7 +25,7 @@ namespace Meshtastic.Data
             }
             catch (InvalidProtocolBufferException ex)
             {
-                Logger.LogDebug(ex.ToString());
+                Logger.LogTrace(ex.ToString());
                 return null;
             }
         }

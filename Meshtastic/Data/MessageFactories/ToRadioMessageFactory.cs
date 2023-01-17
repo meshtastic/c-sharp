@@ -1,4 +1,5 @@
 using Meshtastic.Protobufs;
+using static Meshtastic.Protobufs.XModem.Types;
 
 namespace Meshtastic.Data.MessageFactories;
 
@@ -18,5 +19,14 @@ public class ToRadioMessageFactory
         new()
         {
             Packet = packet
+        };
+
+    public ToRadio CreateXmodemPacketMessage(Control control = XModem.Types.Control.Stx) =>
+        new()
+        {
+            XmodemPacket = new XModem()
+            {
+                Control = control
+            }
         };
 }

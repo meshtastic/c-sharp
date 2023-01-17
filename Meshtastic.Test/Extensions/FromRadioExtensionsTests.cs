@@ -79,5 +79,22 @@ namespace Meshtastic.Test.Extensions
             result.Should().NotBeNull();
             result.Should().BeOfType<Routing>();
         }
+
+
+        [Test]
+        public void GetMessage_Should_ReturnValidXModemPacket()
+        {
+            FromRadio fromRadio = new()
+            {
+                XmodemPacket = new XModem()
+                {
+                    Control = XModem.Types.Control.Stx
+                }
+            };
+            var result = fromRadio.GetMessage<XModem>();
+            result.Should().NotBeNull();
+            result.Should().BeOfType<XModem>();
+            result!.Control.Should().Be(XModem.Types.Control.Stx);
+        }
     }
 }

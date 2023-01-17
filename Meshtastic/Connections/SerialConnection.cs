@@ -62,6 +62,14 @@ public class SerialConnection : DeviceConnection
         await ReadFromRadio(isComplete);
     }
 
+    public override async Task WriteToRadio(ToRadio data)
+    {
+        var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
+        await serialPort.BaseStream.WriteAsync(toRadio, 0, toRadio.Length);
+        await serialPort.BaseStream.FlushAsync();
+        Logger.LogDebug($"Sent: {data}");
+    }
+
     public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
         while (serialPort.IsOpen)

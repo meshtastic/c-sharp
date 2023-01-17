@@ -22,4 +22,9 @@ public class SimulatedConnection : DeviceConnection
     {
         await Task.CompletedTask;
     }
+
+    public override async Task WriteToRadio(ToRadio toRadio)
+    {
+        await Task.CompletedTask;
+    }
 }
