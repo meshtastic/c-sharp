@@ -43,6 +43,9 @@ public class UpdateCommandHandler : DeviceCommandHandler
 
         if (HardwareModelMappings.NrfHardwareModels.Contains(hardwareModel))
         {
+            var _ = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                .AddChoices(new[] { "Yes" }) 
+                .Title("Have you double-pressed the RST button to enter DFU mode?"));
             var drive = GetSelectedDrive();
             await Uf2Update(drive, filePath);
         }
@@ -54,9 +57,16 @@ public class UpdateCommandHandler : DeviceCommandHandler
 
     private static async Task Uf2Update(string drive, string uf2Path)
     {
-        AnsiConsole.WriteLine($"Copying uf2 file to {drive}");
-        await RunAsync("cp", uf2Path);
-        AnsiConsole.WriteLine($"Copying complete");
+        await AnsiConsole.Status()
+            .Spinner(Spinner.Known.Dots)
+            .StartAsync("Flashing", async (ctx) =>
+            {
+                AnsiConsole.WriteLine($"Copying uf2 file to {drive}");
+                File.Copy(uf2Path, Path.Combine(drive, new FileInfo(uf2Path).Name));
+                await Task.Delay(2000);
+                File.Delete(uf2Path);
+                AnsiConsole.Write("Completed device update!");
+            });
     }
 
     private static void EsptoolUpdate(string binPath, string port)
@@ -107,7 +117,7 @@ public class UpdateCommandHandler : DeviceCommandHandler
     private static string GetSelectedDrive()
     {
         return AnsiConsole.Prompt(new SelectionPrompt<string>()
-            .Title("Which drive?")
+            .Title("Which drive is the device?")
             .AddChoices(Directory.GetLogicalDrives()));
     }
 
