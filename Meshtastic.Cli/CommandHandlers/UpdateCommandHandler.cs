@@ -5,6 +5,7 @@ using Meshtastic.Data.MessageFactories;
 using Meshtastic.Protobufs;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.InteropServices;
 using static SimpleExec.Command;
 
 namespace Meshtastic.Cli.CommandHandlers;
@@ -12,18 +13,15 @@ namespace Meshtastic.Cli.CommandHandlers;
 [ExcludeFromCodeCoverage(Justification = "Requires interaction")]
 public class UpdateCommandHandler : DeviceCommandHandler
 {
-    public UpdateCommandHandler(GithubService githubService, ReleaseZipService releaseZipService, DeviceConnectionContext context, CommandContext commandContext)
+    public UpdateCommandHandler(FirmwarePackageService firmwarePackageService, ReleaseZipService releaseZipService, DeviceConnectionContext context, CommandContext commandContext)
         : base(context, commandContext)
     {
-        this.githubService = githubService;
+        this.firmwarePackageService = firmwarePackageService;
         this.releaseZipService = releaseZipService;
     }
 
-    private static readonly string PullRequest = "Pull-request";
-    private static readonly string FirmwareRelease = "Firmware Release";
-
     private DeviceStateContainer? deviceStateContainer;
-    private readonly GithubService githubService;
+    private readonly FirmwarePackageService firmwarePackageService;
     private readonly ReleaseZipService releaseZipService;
 
     public async Task Handle()
@@ -32,27 +30,15 @@ public class UpdateCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
         Connection.Disconnect();
         var hardwareModel = deviceStateContainer!.Nodes.First(n => n.Num == deviceStateContainer.MyNodeInfo.MyNodeNum).User.HwModel;
-        await StartInteractiveFlash(hardwareModel);
-    }
-
-    private async Task StartInteractiveFlash(HardwareModel hardwareModel)
-    {
-        var prOrRelease = AnsiConsole.Prompt(new SelectionPrompt<string>()
-            .Title("Flash update from pull-request or firmware release?")
-            .AddChoices(new[] { FirmwareRelease, PullRequest }));
-
-        if (prOrRelease == PullRequest)
-            throw new NotImplementedException();
-        else
-            await StartInteractiveFlashUpdate(hardwareModel);
+        await StartInteractiveFlashUpdate(hardwareModel);
     }
 
     private async Task StartInteractiveFlashUpdate(HardwareModel hardwareModel)
     {
-        var releases = await githubService.GetLatest5Releases();
-        var selection = GetFirmwareSelection(releases, "Which release version?");
+        var releaseOptions = await firmwarePackageService.GetFirmwareReleases();
+        var selection = GetFirmwareSelection(releaseOptions, "Which release or pull-request?");
         var release = AnsiConsole.Prompt(selection);
-        var memoryStream = await githubService.DownloadRelease(release);
+        var memoryStream = await firmwarePackageService.DownloadRelease(release);
         var filePath = await releaseZipService.ExtractUpdateBinary(memoryStream, hardwareModel);
 
         if (HardwareModelMappings.NrfHardwareModels.Contains(hardwareModel))
@@ -73,7 +59,7 @@ public class UpdateCommandHandler : DeviceCommandHandler
         AnsiConsole.WriteLine($"Copying complete");
     }
 
-    private static void EsptoolUpdate(string filePath, string port)
+    private static void EsptoolUpdate(string binPath, string port)
     {
         AnsiConsole.Status()
             .Spinner(Spinner.Known.Dots)
@@ -82,12 +68,11 @@ public class UpdateCommandHandler : DeviceCommandHandler
             var info = new ProcessStartInfo()
             {
                 UseShellExecute = false,
-                FileName = "cmd.exe",
-                Arguments = $"cmd /C \"python -m esptool --baud 921600 write_flash 0x10000 {filePath} -p {port}\"",
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 CreateNoWindow = true,
             };
+            SetEsptoolProcessInfo(info, binPath, port);
             using var process = Process.Start(info);
             process!.OutputDataReceived += (sender, args) => AnsiConsole.WriteLine(args.Data ?? String.Empty);
             process!.ErrorDataReceived += (sender, args) => AnsiConsole.WriteLine(args.Data ?? String.Empty);
@@ -95,8 +80,28 @@ public class UpdateCommandHandler : DeviceCommandHandler
             process.BeginErrorReadLine();
             process.WaitForExit();
             process.Close();
+            File.Delete(binPath);
             AnsiConsole.Write("Completed device update!");
         });
+    }
+
+    private static void SetEsptoolProcessInfo(ProcessStartInfo processStartInfo, string filePath, string port)
+    {
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        {
+            processStartInfo.FileName = "cmd.exe";
+            processStartInfo.Arguments = $"cmd /C \"python -m esptool --baud 921600 write_flash 0x10000 {filePath} -p {port}\"";
+        }
+        else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+        {
+            processStartInfo.FileName = "bash";
+            processStartInfo.Arguments = $"python -m esptool --baud 921600 write_flash 0x10000 {filePath} -p {port}";
+        }
+        else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+        {
+            processStartInfo.FileName = "sh";
+            processStartInfo.Arguments = $"python -m esptool --baud 921600 write_flash 0x10000 {filePath} -p {port}";
+        }
     }
 
     private static string GetSelectedDrive()
@@ -106,12 +111,17 @@ public class UpdateCommandHandler : DeviceCommandHandler
             .AddChoices(Directory.GetLogicalDrives()));
     }
 
-    private static SelectionPrompt<FirmwareRelease> GetFirmwareSelection(IEnumerable<FirmwareRelease> releases, string promptText)
+    private static SelectionPrompt<FirmwarePackage> GetFirmwareSelection(FirmwarePackageOptions releases, string promptText)
     {
-        var selection = new SelectionPrompt<FirmwareRelease>()
+        var selection = new SelectionPrompt<FirmwarePackage>()
             .Title(promptText)
-            .AddChoices(releases);
-        selection.Converter = r => r.Name;
+            .PageSize(20)
+            .AddChoiceGroup(new FirmwarePackage("Stable", String.Empty), releases.releases.stable)
+            .AddChoiceGroup(new FirmwarePackage("Alpha", String.Empty), releases.releases.alpha)
+            .AddChoiceGroup(new FirmwarePackage("Pull-requests", String.Empty), releases
+                .pullRequests
+                .Select(pr => new FirmwarePackage(pr.title.EscapeMarkup(), pr.zip_url)));
+        selection.Converter = r => r.title;
         return selection;
     }
 

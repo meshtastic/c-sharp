@@ -16,7 +16,7 @@ public class UpdateCommand : Command
     {
         this.SetHandler(async (context, commandContext) =>
             {
-                var handler = new UpdateCommandHandler(new GithubService(), new ReleaseZipService(), context, commandContext);
+                var handler = new UpdateCommandHandler(new FirmwarePackageService(), new ReleaseZipService(), context, commandContext);
                 await handler.Handle();
             },
             new DeviceConnectionBinder(port, host),

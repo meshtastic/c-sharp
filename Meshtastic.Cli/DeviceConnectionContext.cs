@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Cli;
 
-[ExcludeFromCodeCoverage]
+[ExcludeFromCodeCoverage(Justification = "Requires hardware")]
 public class DeviceConnectionContext
 {
     public readonly string? Port;

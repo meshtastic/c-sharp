@@ -10,7 +10,6 @@ namespace Meshtastic.Connections;
 public class SerialConnection : DeviceConnection
 {
     private readonly SerialPort serialPort;
-    private static bool IsWindows => RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 
     public SerialConnection(ILogger logger, string port, int baudRate = Resources.DEFAULT_BAUD_RATE) : base(logger)
     {
