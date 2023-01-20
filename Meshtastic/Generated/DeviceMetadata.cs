@@ -25,17 +25,19 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBtZXNodGFzdGljL2RldmljZV9tZXRhZGF0YS5wcm90bxIKbWVzaHRhc3Rp",
-            "YyKZAQoORGV2aWNlTWV0YWRhdGESGAoQZmlybXdhcmVfdmVyc2lvbhgBIAEo",
-            "CRIcChRkZXZpY2Vfc3RhdGVfdmVyc2lvbhgCIAEoDRITCgtjYW5TaHV0ZG93",
-            "bhgDIAEoCBIPCgdoYXNXaWZpGAQgASgIEhQKDGhhc0JsdWV0b290aBgFIAEo",
-            "CBITCgtoYXNFdGhlcm5ldBgGIAEoCEJoChNjb20uZ2Vla3N2aWxsZS5tZXNo",
-            "QhREZXZpY2VNZXRhZGF0YVByb3Rvc0gDWiJnaXRodWIuY29tL21lc2h0YXN0",
-            "aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnNiBnByb3Rv",
-            "Mw=="));
+            "YxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8i5QEKDkRldmljZU1ldGFkYXRh",
+            "EhgKEGZpcm13YXJlX3ZlcnNpb24YASABKAkSHAoUZGV2aWNlX3N0YXRlX3Zl",
+            "cnNpb24YAiABKA0SEwoLY2FuU2h1dGRvd24YAyABKAgSDwoHaGFzV2lmaRgE",
+            "IAEoCBIUCgxoYXNCbHVldG9vdGgYBSABKAgSEwoLaGFzRXRoZXJuZXQYBiAB",
+            "KAgSMgoEcm9sZRgHIAEoDjIkLm1lc2h0YXN0aWMuQ29uZmlnLkRldmljZUNv",
+            "bmZpZy5Sb2xlEhYKDnBvc2l0aW9uX2ZsYWdzGAggASgNQmgKE2NvbS5nZWVr",
+            "c3ZpbGxlLm1lc2hCFERldmljZU1ldGFkYXRhUHJvdG9zSANaImdpdGh1Yi5j",
+            "b20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3Rv",
+            "YnVmc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetadata), global::Meshtastic.Protobufs.DeviceMetadata.Parser, new[]{ "FirmwareVersion", "DeviceStateVersion", "CanShutdown", "HasWifi", "HasBluetooth", "HasEthernet" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetadata), global::Meshtastic.Protobufs.DeviceMetadata.Parser, new[]{ "FirmwareVersion", "DeviceStateVersion", "CanShutdown", "HasWifi", "HasBluetooth", "HasEthernet", "Role", "PositionFlags" }, null, null, null, null)
           }));
     }
     #endregion
@@ -86,6 +88,8 @@ namespace Meshtastic.Protobufs {
       hasWifi_ = other.hasWifi_;
       hasBluetooth_ = other.hasBluetooth_;
       hasEthernet_ = other.hasEthernet_;
+      role_ = other.role_;
+      positionFlags_ = other.positionFlags_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -191,6 +195,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "role" field.</summary>
+    public const int RoleFieldNumber = 7;
+    private global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role role_ = global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client;
+    /// <summary>
+    ///
+    /// Indicates that the device's role in the mesh
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role Role {
+      get { return role_; }
+      set {
+        role_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "position_flags" field.</summary>
+    public const int PositionFlagsFieldNumber = 8;
+    private uint positionFlags_;
+    /// <summary>
+    ///
+    /// Indicates the device's current enabled position flags
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PositionFlags {
+      get { return positionFlags_; }
+      set {
+        positionFlags_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -212,6 +248,8 @@ namespace Meshtastic.Protobufs {
       if (HasWifi != other.HasWifi) return false;
       if (HasBluetooth != other.HasBluetooth) return false;
       if (HasEthernet != other.HasEthernet) return false;
+      if (Role != other.Role) return false;
+      if (PositionFlags != other.PositionFlags) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -225,6 +263,8 @@ namespace Meshtastic.Protobufs {
       if (HasWifi != false) hash ^= HasWifi.GetHashCode();
       if (HasBluetooth != false) hash ^= HasBluetooth.GetHashCode();
       if (HasEthernet != false) hash ^= HasEthernet.GetHashCode();
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) hash ^= Role.GetHashCode();
+      if (PositionFlags != 0) hash ^= PositionFlags.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -267,6 +307,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(48);
         output.WriteBool(HasEthernet);
       }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Role);
+      }
+      if (PositionFlags != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(PositionFlags);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -301,6 +349,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(48);
         output.WriteBool(HasEthernet);
       }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Role);
+      }
+      if (PositionFlags != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(PositionFlags);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -328,6 +384,12 @@ namespace Meshtastic.Protobufs {
       }
       if (HasEthernet != false) {
         size += 1 + 1;
+      }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Role);
+      }
+      if (PositionFlags != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PositionFlags);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -358,6 +420,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.HasEthernet != false) {
         HasEthernet = other.HasEthernet;
+      }
+      if (other.Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        Role = other.Role;
+      }
+      if (other.PositionFlags != 0) {
+        PositionFlags = other.PositionFlags;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -398,6 +466,14 @@ namespace Meshtastic.Protobufs {
             HasEthernet = input.ReadBool();
             break;
           }
+          case 56: {
+            Role = (global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            PositionFlags = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -435,6 +511,14 @@ namespace Meshtastic.Protobufs {
           }
           case 48: {
             HasEthernet = input.ReadBool();
+            break;
+          }
+          case 56: {
+            Role = (global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            PositionFlags = input.ReadUInt32();
             break;
           }
         }
