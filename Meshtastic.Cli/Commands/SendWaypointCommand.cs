@@ -2,9 +2,6 @@
 using Meshtastic.Cli.CommandHandlers;
 using Meshtastic.Cli.Enums;
 using Microsoft.Extensions.Logging;
-using Spectre.Console;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Meshtastic.Cli.Commands;
 

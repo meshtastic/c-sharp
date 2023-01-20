@@ -21,7 +21,7 @@ public class CannedMessagesCommandTests : CommandTestBase
     {
         var result = await rootCommand.InvokeAsync("canned-messages set --port SIMPORT", Console);
         result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Must specify pipe delimited messages"); 
+        Out.Output.Should().Contain("Must specify pipe delimited messages");
     }
 
     [Test]

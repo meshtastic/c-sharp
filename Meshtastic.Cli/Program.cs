@@ -56,6 +56,7 @@ root.AddCommand(new TraceRouteCommand("trace-route", "Trace the sequence of node
 root.AddCommand(new CannedMessagesCommand("canned-messages", "Get or set the collection of canned messages on the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new SendWaypointCommand("waypoint", "Send a waypoint from the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new FileCommand("file", "Get or send a file from the device", port, host, output, log));
+root.AddCommand(new UpdateCommand("update", "Update the firmware of the serial connected device", port, host, output, log));
 
 var parser = new CommandLineBuilder(root)
     .UseExceptionHandler((ex, context) =>

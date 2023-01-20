@@ -1,7 +1,6 @@
 ﻿using Meshtastic.Data.MessageFactories;
 using Meshtastic.Protobufs;
 using static Meshtastic.Protobufs.Config.Types;
-using static Meshtastic.Protobufs.ModuleConfig.Types;
 
 namespace Meshtastic.Test.Data;
 

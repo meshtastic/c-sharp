@@ -2,7 +2,6 @@ using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
-using System.Diagnostics.CodeAnalysis;
 using System.IO.Ports;
 using System.Runtime.InteropServices;
 
@@ -60,6 +59,11 @@ public class SerialConnection : DeviceConnection
         serialPort.RtsEnable = false;
         Logger.LogDebug($"Sent: {data}");
         await ReadFromRadio(isComplete);
+    }
+
+    public override void Disconnect()
+    {
+        serialPort.Close();
     }
 
     public override async Task WriteToRadio(ToRadio data)

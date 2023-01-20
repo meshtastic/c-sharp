@@ -21,7 +21,7 @@ public class SendTextCommandTests : CommandTestBase
     {
         var result = await rootCommand.InvokeAsync("text --port SIMPORT", Console);
         result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Required argument missing for command: 'text'"); 
+        Out.Output.Should().Contain("Required argument missing for command: 'text'");
     }
 
     [Test]

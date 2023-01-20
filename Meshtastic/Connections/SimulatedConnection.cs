@@ -27,4 +27,8 @@ public class SimulatedConnection : DeviceConnection
     {
         await Task.CompletedTask;
     }
+
+    public override void Disconnect()
+    {
+    }
 }

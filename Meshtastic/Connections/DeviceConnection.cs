@@ -1,7 +1,6 @@
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Connections;
 
@@ -25,6 +24,8 @@ public abstract class DeviceConnection
     public abstract Task WriteToRadio(ToRadio toRadio, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete);
 
     public abstract Task WriteToRadio(ToRadio toRadio);
+
+    public abstract void Disconnect();
 
     public abstract Task ReadFromRadio(Func<FromRadio?, DeviceStateContainer, Task<bool>> isComplete,
         int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT);

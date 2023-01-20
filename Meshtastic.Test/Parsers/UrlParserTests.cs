@@ -21,7 +21,9 @@ public class UrlParserTests
     [Test]
     public void Should_ThrowException_GivenNoMeshtasticUrl()
     {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
         var action = () => new UrlParser(null);
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         action.Should().Throw<ArgumentException>();
     }
 

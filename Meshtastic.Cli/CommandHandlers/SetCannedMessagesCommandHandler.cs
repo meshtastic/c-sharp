@@ -33,8 +33,8 @@ public class SetCannedMessagesCommandHandler : DeviceCommandHandler
             var setCannedMessage = adminMessageFactory.CreateSetCannedMessage(messages[index..upperBound]);
             await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setCannedMessage), AnyResponseReceived);
 
-            index = upperBound+1;
-        } while (index < (messages.Length-200));
+            index = upperBound + 1;
+        } while (index < (messages.Length - 200));
 
         await CommitEditSettings(adminMessageFactory);
     }

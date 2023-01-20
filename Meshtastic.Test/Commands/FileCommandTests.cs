@@ -12,7 +12,7 @@ public class FileCommandTests : CommandTestBase
     public void Setup()
     {
         rootCommand = GetRootCommand();
-        var command = new FileCommand("file", "file description",  portOption, hostOption, outputOption, logLevelOption);
+        var command = new FileCommand("file", "file description", portOption, hostOption, outputOption, logLevelOption);
         rootCommand.AddCommand(command);
     }
 
@@ -21,7 +21,7 @@ public class FileCommandTests : CommandTestBase
     {
         var result = await rootCommand.InvokeAsync("file --port SIMPORT", Console);
         result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Required argument missing for command: 'file'"); 
+        Out.Output.Should().Contain("Required argument missing for command: 'file'");
     }
 
     [Test]

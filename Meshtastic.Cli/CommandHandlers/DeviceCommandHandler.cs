@@ -11,6 +11,7 @@ namespace Meshtastic.Cli.CommandHandlers;
 
 public class DeviceCommandHandler
 {
+    protected readonly DeviceConnectionContext ConnectionContext;
     protected readonly DeviceConnection Connection;
     protected readonly ToRadioMessageFactory ToRadioMessageFactory;
     protected readonly OutputFormat OutputFormat;
@@ -20,6 +21,7 @@ public class DeviceCommandHandler
 
     public DeviceCommandHandler(DeviceConnectionContext connectionContext, CommandContext commandContext)
     {
+        ConnectionContext = connectionContext;
         Connection = connectionContext.GetDeviceConnection(commandContext.Logger);
         ToRadioMessageFactory = new();
         OutputFormat = commandContext.OutputFormat;
@@ -81,6 +83,10 @@ public class DeviceCommandHandler
         return true;
     }
 
+    public virtual async Task Disconnect()
+    {
+        await Task.CompletedTask;
+    }
 
     public virtual async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {

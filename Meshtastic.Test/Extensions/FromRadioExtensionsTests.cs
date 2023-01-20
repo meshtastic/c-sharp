@@ -1,8 +1,6 @@
 ﻿using Google.Protobuf;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
-using NUnit.Framework;
-using System;
 
 namespace Meshtastic.Test.Extensions
 {

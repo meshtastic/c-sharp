@@ -1,5 +1,4 @@
-﻿using Google.Protobuf;
-using Meshtastic.Protobufs;
+﻿using Meshtastic.Protobufs;
 
 namespace Meshtastic.Extensions;
 
@@ -14,7 +13,7 @@ public static class FromRadioExtensions
 
     public static TResult? GetMessage<TResult>(this FromRadio fromRadio) where TResult : class
     {
-        if (typeof(TResult) == typeof(XModem) && fromRadio.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.XmodemPacket) 
+        if (typeof(TResult) == typeof(XModem) && fromRadio.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.XmodemPacket)
             return fromRadio.XmodemPacket as TResult;
 
         if (!IsValidMeshPacket(fromRadio))

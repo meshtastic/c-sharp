@@ -2,7 +2,6 @@ using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.CommandHandlers;
 using Meshtastic.Cli.Enums;
 using Microsoft.Extensions.Logging;
-using System.CommandLine;
 
 namespace Meshtastic.Cli.Commands;
 

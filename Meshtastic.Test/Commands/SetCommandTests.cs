@@ -12,7 +12,7 @@ public class SetCommandTests : CommandTestBase
 
     [SetUp]
     public void Setup()
-    { 
+    {
         var settingOption = new Option<IEnumerable<string>>("--setting", description: "Get or set a value on config / module-config")
         {
             AllowMultipleArgumentsPerToken = true,
@@ -30,7 +30,7 @@ public class SetCommandTests : CommandTestBase
     {
         var result = await rootCommand.InvokeAsync("set --port SIMPORT", Console);
         result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Option '--setting' is required"); 
+        Out.Output.Should().Contain("Option '--setting' is required");
     }
 
     [Test]

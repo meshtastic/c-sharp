@@ -105,7 +105,7 @@ public class DeviceStateContainerTests
     }
 
     [Test]
-    public void GetAdminChannelIndex_Should_ReturnIndexOfValidAdminChannel ()
+    public void GetAdminChannelIndex_Should_ReturnIndexOfValidAdminChannel()
     {
         var deviceStateContainer = new DeviceStateContainer();
         deviceStateContainer.Channels.Add(new Channel()

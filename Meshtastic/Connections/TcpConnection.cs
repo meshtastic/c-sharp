@@ -2,9 +2,7 @@ using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
-using System.Diagnostics.CodeAnalysis;
 using System.Net.Sockets;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Meshtastic.Connections;
 
@@ -54,6 +52,11 @@ public class TcpConnection : DeviceConnection, IDisposable
                     return;
             }
         }
+    }
+
+    public override void Disconnect()
+    {
+        this.Dispose();
     }
 
     public void Dispose()

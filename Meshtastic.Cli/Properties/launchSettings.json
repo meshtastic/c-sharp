@@ -111,6 +111,14 @@
     "file": {
       "commandName": "Project",
       "commandLineArgs": "file /prefs/db.proto --log debug"
+    },
+    "file localhost": {
+      "commandName": "Project",
+      "commandLineArgs": "file /prefs/db.proto --host localhost --log debug"
+    },
+    "update": {
+      "commandName": "Project",
+      "commandLineArgs": "update"
     }
   }
 }

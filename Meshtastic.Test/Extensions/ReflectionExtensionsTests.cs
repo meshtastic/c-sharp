@@ -19,7 +19,7 @@ namespace Meshtastic.Test.Extensions
         [Test]
         public void GetSettingsOptions_Should_EnumerateConfigSettings()
         {
-            var list =  new LocalConfig().GetSettingsOptions();
+            var list = new LocalConfig().GetSettingsOptions();
             list.Should().Contain("Device.Role");
         }
 

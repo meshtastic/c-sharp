@@ -24,7 +24,7 @@ namespace Meshtastic.Test.Extensions
             Position position = new()
             {
                 LatitudeI = 0,
-                LongitudeI = 0, 
+                LongitudeI = 0,
             };
             var result = position.ToDisplayString();
             result.Should().Be("Not available");

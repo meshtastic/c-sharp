@@ -7,24 +7,24 @@ namespace Meshtastic.Cli;
 [ExcludeFromCodeCoverage]
 public class DeviceConnectionContext
 {
-    private readonly string? port;
-    private readonly string? host;
+    public readonly string? Port;
+    public readonly string? Host;
 
     public DeviceConnectionContext(string? port, string? host)
     {
-        this.port = port;
-        this.host = host;
+        this.Port = port;
+        this.Host = host;
     }
 
     public DeviceConnection GetDeviceConnection(ILogger logger)
     {
-        if (this.port == "SIMPORT")
+        if (this.Port == "SIMPORT")
             return new SimulatedConnection(logger);
 
-        if (!String.IsNullOrWhiteSpace(this.host))
-            return new TcpConnection(logger, this.host);
-        else if (!String.IsNullOrWhiteSpace(this.port))
-            return new SerialConnection(logger, this.port);
+        if (!String.IsNullOrWhiteSpace(this.Host))
+            return new TcpConnection(logger, this.Host);
+        else if (!String.IsNullOrWhiteSpace(this.Port))
+            return new SerialConnection(logger, this.Port);
 
         var ports = SerialConnection.ListPorts();
 

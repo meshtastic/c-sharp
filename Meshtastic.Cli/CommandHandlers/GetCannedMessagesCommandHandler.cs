@@ -9,7 +9,8 @@ namespace Meshtastic.Cli.CommandHandlers;
 public class GetCannedMessagesCommandHandler : DeviceCommandHandler
 {
     public GetCannedMessagesCommandHandler(DeviceConnectionContext context, CommandContext commandContext) :
-        base(context, commandContext) { }
+        base(context, commandContext)
+    { }
 
     public async Task Handle()
     {

@@ -11,7 +11,7 @@ namespace Meshtastic.Data
             Logger = logger;
         }
 
-        public FromRadio? ParsedFromRadio(byte[] bytes) 
+        public FromRadio? ParsedFromRadio(byte[] bytes)
         {
             try
             {

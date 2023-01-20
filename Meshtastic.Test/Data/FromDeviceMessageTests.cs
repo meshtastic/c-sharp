@@ -1,4 +1,3 @@
-using AutoFixture;
 using Google.Protobuf;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;

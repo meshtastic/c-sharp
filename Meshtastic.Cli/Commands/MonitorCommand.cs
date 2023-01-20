@@ -6,7 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Cli.Commands;
 
-[ExcludeFromCodeCoverage(Justification ="Creates serial stream")]
+[ExcludeFromCodeCoverage(Justification = "Creates serial stream")]
 public class MonitorCommand : Command
 {
     public MonitorCommand(string name, string description, Option<string> port, Option<string> host,
