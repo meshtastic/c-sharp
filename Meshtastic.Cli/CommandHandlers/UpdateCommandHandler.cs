@@ -99,8 +99,8 @@ public class UpdateCommandHandler : DeviceCommandHandler
         }
         else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
-            processStartInfo.FileName = "sh";
-            processStartInfo.Arguments = $"python -m esptool --baud 921600 write_flash 0x10000 {filePath} -p {port}";
+            processStartInfo.FileName = "esptool.py";
+            processStartInfo.Arguments = $"--baud 921600 write_flash 0x10000 {filePath} -p {port}";
         }
     }
 
