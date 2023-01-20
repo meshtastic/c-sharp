@@ -6,7 +6,6 @@ using Meshtastic.Protobufs;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
-using static SimpleExec.Command;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
@@ -29,7 +28,8 @@ public class UpdateCommandHandler : DeviceCommandHandler
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
         await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
         Connection.Disconnect();
-        var hardwareModel = deviceStateContainer!.Nodes.First(n => n.Num == deviceStateContainer.MyNodeInfo.MyNodeNum).User.HwModel;
+        var hardwareModel = deviceStateContainer!.Nodes.FirstOrDefault(n => n.Num == deviceStateContainer.MyNodeInfo.MyNodeNum)?.User?.HwModel ??
+            deviceStateContainer!.Nodes.FirstOrDefault()?.User?.HwModel ?? HardwareModel.Unset;
         await StartInteractiveFlashUpdate(hardwareModel);
     }
 
