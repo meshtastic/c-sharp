@@ -15,7 +15,7 @@ public class SerialConnection : DeviceConnection
         serialPort = new SerialPort(port, baudRate)
         {
             DtrEnable = true,
-            Handshake = Handshake.None,
+            Handshake = Handshake.XOnXOff,
             WriteBufferSize = 8,
         };
     }
