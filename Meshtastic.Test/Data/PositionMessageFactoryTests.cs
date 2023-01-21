@@ -7,14 +7,12 @@ namespace Meshtastic.Test.Data;
 [TestFixture]
 public class PositionMessageFactoryTests
 {
-    private Fixture fixture;
     private DeviceStateContainer deviceStateContainer;
     private PositionMessageFactory factory;
 
     [SetUp]
     public void Setup()
     {
-        fixture = new Fixture();
         deviceStateContainer = new DeviceStateContainer();
         deviceStateContainer.MyNodeInfo.MyNodeNum = 100;
         deviceStateContainer.LocalConfig = new LocalConfig

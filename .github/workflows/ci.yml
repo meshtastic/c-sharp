@@ -41,6 +41,9 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
+
+    - name: Run device simulator
+      run: docker run --rm -p 4403:4403 meshtastic/device-simulator
         
     - name: Run tests
       run: dotnet test --collect:"XPlat Code Coverage" --settings ./Meshtastic.Test/coverlet.runsettings

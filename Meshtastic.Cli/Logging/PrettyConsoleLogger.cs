@@ -2,8 +2,21 @@
 
 namespace Meshtastic.Cli.Logging;
 
-internal class PrettyConsoleLogger : ILogger
+public class PrettyConsoleLogger : ILogger
 {
+    public PrettyConsoleLogger()
+    {
+        this.config = new PrettyConsoleLoggerConfiguration();
+
+        var settings = config.ConsoleSettings ?? new AnsiConsoleSettings
+        {
+            Ansi = AnsiSupport.Detect,
+            ColorSystem = ColorSystemSupport.Detect,
+        };
+        console = AnsiConsole.Create(settings);
+        config.ConsoleConfiguration?.Invoke(console);
+    }
+
     private readonly PrettyConsoleLoggerConfiguration config;
     private readonly IAnsiConsole console;
 

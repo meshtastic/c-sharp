@@ -15,9 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoFixture.AutoMoq" Version="4.17.0" />
     <PackageReference Include="FluentAssertions" Version="6.9.0" />
+    <PackageReference Include="ILogger.Moq" Version="1.1.10" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+    <PackageReference Include="Moq" Version="4.18.4" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
     <PackageReference Include="NUnit.Analyzers" Version="3.5.0">
@@ -33,10 +34,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Meshtastic.Cli\Meshtastic.Cli.csproj" />
     <ProjectReference Include="..\Meshtastic\Meshtastic.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="CommandHandlers\" />
   </ItemGroup>
 
 </Project>
