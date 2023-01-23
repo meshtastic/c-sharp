@@ -6,11 +6,11 @@ namespace Meshtastic.Test.CommandHandlers
 {
     public class CommandHandlerTestBase
     {
-        public Mock<ILogger> FakeLogger = new();
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "Consistency")]
-        public DeviceConnectionContext ConnectionContext => new(null, "localhost");
-        public CommandContext CommandContext => new(FakeLogger.Object, OutputFormat.PrettyConsole, null, false);
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public Mock<ILogger> FakeLogger;
+        public DeviceConnectionContext ConnectionContext;
+        public CommandContext CommandContext;
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
         protected void DebugLogsContain(string messagePart, Times? times = null)
         {

@@ -1,4 +1,5 @@
 ﻿using Meshtastic.Cli.CommandHandlers;
+using Meshtastic.Cli.Enums;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 
@@ -14,6 +15,10 @@ public class CommandHandlerTests : CommandHandlerTestBase
     {
         // Give the docker container some space between commands
         await Task.Delay(3000);
+
+        FakeLogger = new();
+        ConnectionContext = new(null, "localhost");
+        CommandContext = new(FakeLogger.Object, OutputFormat.PrettyConsole, null, false);
     }
 
     [Test]
