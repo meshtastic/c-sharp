@@ -80,11 +80,6 @@ public class DeviceCommandHandler
         return true;
     }
 
-    public virtual async Task Disconnect()
-    {
-        await Task.CompletedTask;
-    }
-
     public virtual async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         await Task.CompletedTask;

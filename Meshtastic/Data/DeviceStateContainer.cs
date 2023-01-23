@@ -9,6 +9,7 @@ public class DeviceStateContainer
     public List<Channel> Channels;
     public MyNodeInfo MyNodeInfo;
     public List<NodeInfo> Nodes;
+    public List<FromRadio> FromRadioMessageLog;
 
     public DeviceStateContainer()
     {
@@ -17,6 +18,7 @@ public class DeviceStateContainer
         this.Channels = new List<Channel>();
         this.MyNodeInfo = new MyNodeInfo();
         this.Nodes = new List<NodeInfo>();
+        this.FromRadioMessageLog = new List<FromRadio>();
     }
 
     private void SetConfig(Config.PayloadVariantOneofCase variant, Config config)
@@ -49,6 +51,8 @@ public class DeviceStateContainer
 
         if (fromRadio.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.NodeInfo)
             this.Nodes.Add(fromRadio.NodeInfo);
+
+        this.FromRadioMessageLog.Add(fromRadio);
     }
 
     public uint GetAdminChannelIndex()

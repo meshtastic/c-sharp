@@ -1,5 +1,8 @@
-﻿namespace Meshtastic.Cli.CommandHandlers;
+﻿using System.Diagnostics.CodeAnalysis;
 
+namespace Meshtastic.Cli.CommandHandlers;
+
+[ExcludeFromCodeCoverage(Justification = "Requires serial hardware")]
 public class MonitorCommandHandler : DeviceCommandHandler
 {
     public MonitorCommandHandler(DeviceConnectionContext context,

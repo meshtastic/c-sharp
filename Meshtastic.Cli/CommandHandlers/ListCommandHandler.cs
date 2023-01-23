@@ -1,7 +1,9 @@
 ﻿using Meshtastic.Connections;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
+[ExcludeFromCodeCoverage(Justification = "Requires serial hardware")]
 public class ListCommandHandler
 {
     public static async Task Handle()

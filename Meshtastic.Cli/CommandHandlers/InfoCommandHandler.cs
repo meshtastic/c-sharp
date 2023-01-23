@@ -8,10 +8,12 @@ namespace Meshtastic.Cli.CommandHandlers;
 public class InfoCommandHandler : DeviceCommandHandler
 {
     public InfoCommandHandler(DeviceConnectionContext context, CommandContext commandContext) : base(context, commandContext) { }
-    public async Task Handle()
+    public async Task<DeviceStateContainer> Handle()
     {
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
-        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
+        var container = await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
+        Connection.Disconnect();
+        return container;
     }
 
     public override Task OnCompleted(FromRadio packet, DeviceStateContainer container)

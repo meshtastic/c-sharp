@@ -23,14 +23,15 @@ public class UpdateCommandHandler : DeviceCommandHandler
     private readonly FirmwarePackageService firmwarePackageService;
     private readonly ReleaseZipService releaseZipService;
 
-    public async Task Handle()
+    public async Task<DeviceStateContainer> Handle()
     {
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
-        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
+        var container = await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
         Connection.Disconnect();
         var hardwareModel = deviceStateContainer!.Nodes.FirstOrDefault(n => n.Num == deviceStateContainer.MyNodeInfo.MyNodeNum)?.User?.HwModel ??
             deviceStateContainer!.Nodes.FirstOrDefault()?.User?.HwModel ?? HardwareModel.Unset;
         await StartInteractiveFlashUpdate(hardwareModel);
+        return container;
     }
 
     private async Task StartInteractiveFlashUpdate(HardwareModel hardwareModel)

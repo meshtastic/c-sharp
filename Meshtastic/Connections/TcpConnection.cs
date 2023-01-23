@@ -21,13 +21,14 @@ public class TcpConnection : DeviceConnection, IDisposable
         };
     }
 
-    public override async Task WriteToRadio(ToRadio data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task<DeviceStateContainer> WriteToRadio(ToRadio data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
         var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
         networkStream = client.GetStream();
         await networkStream.WriteAsync(toRadio);
         Logger.LogDebug($"Sent: {data}");
         await ReadFromRadio(isComplete);
+        return DeviceStateContainer;
     }
 
     public override async Task WriteToRadio(ToRadio data)

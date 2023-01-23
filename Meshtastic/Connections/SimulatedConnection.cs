@@ -18,9 +18,9 @@ public class SimulatedConnection : DeviceConnection
         await Task.CompletedTask;
     }
 
-    public override async Task WriteToRadio(ToRadio toRadio, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task<DeviceStateContainer> WriteToRadio(ToRadio toRadio, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
-        await Task.CompletedTask;
+        return await Task.FromResult(new DeviceStateContainer());
     }
 
     public override async Task WriteToRadio(ToRadio toRadio)

@@ -17,5 +17,21 @@ namespace Meshtastic.Test.CommandHandlers
             FakeLogger.VerifyLog(l =>
             l.LogDebug(It.Is<string>(message => message.StartsWith(messagePart))), times ?? Times.Once());
         }
+        protected void InformationLogsContain(string messagePart, Times? times = null)
+        {
+            FakeLogger.VerifyLog(l =>
+            l.LogInformation(It.Is<string>(message => message.StartsWith(messagePart))), times ?? Times.Once());
+        }
+
+        protected void ReceivedWantConfigPayloads()
+        {
+            DebugLogsContain("Sent: { \"wantConfigId\":");
+            DebugLogsContain("Received: { \"myInfo\": {");
+            DebugLogsContain("Received: { \"nodeInfo\": {", Times.AtLeastOnce());
+            DebugLogsContain("Received: { \"channel\": {", Times.Exactly(8));
+            DebugLogsContain("Received: { \"config\": {", Times.AtLeastOnce());
+            DebugLogsContain("Received: { \"moduleConfig\": {", Times.AtLeastOnce());
+            DebugLogsContain("Received: { \"configCompleteId\":");
+        }
     }
 }

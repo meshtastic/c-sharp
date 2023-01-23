@@ -7,7 +7,7 @@ namespace Meshtastic.Connections;
 public abstract class DeviceConnection
 {
     protected ILogger Logger { get; set; }
-    protected DeviceStateContainer DeviceStateContainer { get; set; } = new DeviceStateContainer();
+    public DeviceStateContainer DeviceStateContainer { get; set; } = new DeviceStateContainer();
     protected List<byte> Buffer { get; set; } = new List<byte>();
     protected int PacketLength { get; set; }
 
@@ -21,7 +21,7 @@ public abstract class DeviceConnection
         throw new NotImplementedException();
     }
 
-    public abstract Task WriteToRadio(ToRadio toRadio, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete);
+    public abstract Task<DeviceStateContainer> WriteToRadio(ToRadio toRadio, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete);
 
     public abstract Task WriteToRadio(ToRadio toRadio);
 

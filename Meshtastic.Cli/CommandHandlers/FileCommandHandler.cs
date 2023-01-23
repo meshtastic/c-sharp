@@ -19,10 +19,12 @@ public class FileCommandHandler : DeviceCommandHandler
         this.path = path;
     }
 
-    public async Task Handle()
+    public async Task<DeviceStateContainer> Handle()
     {
         var wantConfig = ToRadioMessageFactory.CreateWantConfigMessage();
-        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
+        var container = await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
+        Connection.Disconnect();
+        return container;
     }
 
     public override async Task OnCompleted(FromRadio _, DeviceStateContainer container)

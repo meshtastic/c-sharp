@@ -10,10 +10,12 @@ public class ResetNodeDbCommandHandler : DeviceCommandHandler
     public ResetNodeDbCommandHandler(DeviceConnectionContext context,
         CommandContext commandContext) : base(context, commandContext) { }
 
-    public async Task Handle()
+    public async Task<DeviceStateContainer> Handle()
     {
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
-        await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
+        var container = await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
+        Connection.Disconnect();
+        return container;
     }
 
     public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)

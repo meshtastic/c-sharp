@@ -40,7 +40,7 @@ jobs:
         dotnet-version: 7.0.x
 
     - name: Run device simulator
-      run: docker run --rm -d -p 4403:4403 meshtastic/device-simulator
+      run: docker run --rm --name device-simulator -d -p 4403:4403 meshtastic/device-simulator
         
     - name: Run tests
       run: dotnet test --collect:"XPlat Code Coverage" --settings ./Meshtastic.Test/coverlet.runsettings
