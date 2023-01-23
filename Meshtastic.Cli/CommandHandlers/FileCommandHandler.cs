@@ -42,13 +42,17 @@ public class FileCommandHandler : DeviceCommandHandler
 
             if (xmodem.Control == XModem.Types.Control.Soh)
             {
+                await Task.Delay(100);
                 var ack = ToRadioMessageFactory.CreateXmodemPacketMessage(XModem.Types.Control.Ack);
                 await Connection.WriteToRadio(ack);
             }
             else if (xmodem?.Control == XModem.Types.Control.Eot)
             {
+                var fileName = Path.GetFileName(this.path);
                 Logger.LogInformation("Retrieved file contents");
-                Console.WriteLine(memoryStream.ToString());
+                Logger.LogInformation($"Writing to {fileName}");
+                
+                File.WriteAllBytes(Path.Combine(Environment.CurrentDirectory, fileName), memoryStream.ToArray());
                 return true;
             }
             return false;

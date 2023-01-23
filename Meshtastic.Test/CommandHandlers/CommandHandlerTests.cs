@@ -2,7 +2,6 @@
 using Meshtastic.Cli.Enums;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
-using System.Net.Sockets;
 
 namespace Meshtastic.Test.CommandHandlers;
 
