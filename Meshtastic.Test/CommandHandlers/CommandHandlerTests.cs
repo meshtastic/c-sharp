@@ -2,6 +2,7 @@
 using Meshtastic.Cli.Enums;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
+using System.Net.Sockets;
 
 namespace Meshtastic.Test.CommandHandlers;
 
@@ -39,6 +40,17 @@ public class CommandHandlerTests : CommandHandlerTestBase
         ReceivedWantConfigPayloads();
         InformationLogsContain("Getting device metadata");
         container.FromRadioMessageLog.Should()
-            .Contain(fromRadio => fromRadio.GetMessage<AdminMessage>() != null && fromRadio.GetMessage<AdminMessage>()!.GetDeviceMetadataResponse != null);
+            .Contain(fromRadio => fromRadio.GetMessage<AdminMessage>() != null && 
+                fromRadio.GetMessage<AdminMessage>()!.GetDeviceMetadataResponse != null);
+    }
+
+    [Test]
+    public async Task FactoryResetCommandHandler_Should_ReceiveResponse()
+    {
+        var handler = new FactoryResetCommandHandler(ConnectionContext, CommandContext);
+        var container = await handler.Handle();
+
+        ReceivedWantConfigPayloads();
+        InformationLogsContain("Factory reseting device");
     }
 }
