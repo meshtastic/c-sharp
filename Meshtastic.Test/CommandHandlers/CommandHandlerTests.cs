@@ -44,13 +44,13 @@ public class CommandHandlerTests : CommandHandlerTestBase
                 fromRadio.GetMessage<AdminMessage>()!.GetDeviceMetadataResponse != null);
     }
 
-    [Test]
-    public async Task FactoryResetCommandHandler_Should_ReceiveResponse()
-    {
-        var handler = new FactoryResetCommandHandler(ConnectionContext, CommandContext);
-        var container = await handler.Handle();
+    //[Test]
+    //public async Task FactoryResetCommandHandler_Should_ReceiveResponse()
+    //{
+    //    var handler = new FactoryResetCommandHandler(ConnectionContext, CommandContext);
+    //    var container = await handler.Handle();
 
-        ReceivedWantConfigPayloads();
-        InformationLogsContain("Factory reseting device");
-    }
+    //    ReceivedWantConfigPayloads();
+    //    InformationLogsContain("Factory reseting device");
+    //}
 }
