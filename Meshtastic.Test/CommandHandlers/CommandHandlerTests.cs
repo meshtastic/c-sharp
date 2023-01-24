@@ -43,13 +43,22 @@ public class CommandHandlerTests : CommandHandlerTestBase
                 fromRadio.GetMessage<AdminMessage>()!.GetDeviceMetadataResponse != null);
     }
 
-    //[Test]
-    //public async Task FactoryResetCommandHandler_Should_ReceiveResponse()
-    //{
-    //    var handler = new FactoryResetCommandHandler(ConnectionContext, CommandContext);
-    //    var container = await handler.Handle();
+    [Test]
+    public async Task GetCommandHandler_Should_ReceiveWantConfigPayloads()
+    {
+        var settings = new List<string>() { "power.ls_secs", "mqtt.address" };
+        var handler = new GetCommandHandler(settings, ConnectionContext, CommandContext);
+        await handler.Handle();
 
-    //    ReceivedWantConfigPayloads();
-    //    InformationLogsContain("Factory reseting device");
-    //}
+        ReceivedWantConfigPayloads();
+    }
+
+
+    [Test]
+    public void GetCommandHandler_Should_RejectBadSettings()
+    {
+        var settings = new List<string>() { "butt.farts" };
+        var handler = new GetCommandHandler(settings, ConnectionContext, CommandContext);
+        handler.ParsedSettings.Should().BeNull();
+    }
 }

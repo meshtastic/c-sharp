@@ -8,7 +8,7 @@ namespace Meshtastic.Cli.CommandHandlers;
 
 public class GetCommandHandler : DeviceCommandHandler
 {
-    private readonly IEnumerable<ParsedSetting>? parsedSettings;
+    public readonly IEnumerable<ParsedSetting>? ParsedSettings;
 
     public GetCommandHandler(IEnumerable<string> settings,
         DeviceConnectionContext context,
@@ -18,7 +18,7 @@ public class GetCommandHandler : DeviceCommandHandler
         if (!isValid)
             return;
 
-        parsedSettings = result!.ParsedSettings;
+        ParsedSettings = result!.ParsedSettings;
     }
 
     public async Task<DeviceStateContainer> Handle()
@@ -32,7 +32,7 @@ public class GetCommandHandler : DeviceCommandHandler
     public override Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         var printer = new ProtobufPrinter(container, OutputFormat);
-        printer.PrintSettings(parsedSettings!);
+        printer.PrintSettings(ParsedSettings!);
         return Task.CompletedTask;
     }
 }
