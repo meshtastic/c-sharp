@@ -2,9 +2,11 @@
 using Meshtastic.Data.MessageFactories;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
+[ExcludeFromCodeCoverage(Justification = "Destructive")]
 public class FactoryResetCommandHandler : DeviceCommandHandler
 {
     public FactoryResetCommandHandler(DeviceConnectionContext context,
