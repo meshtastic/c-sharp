@@ -53,12 +53,31 @@ public class CommandHandlerTests : CommandHandlerTestBase
         ReceivedWantConfigPayloads();
     }
 
-
     [Test]
     public void GetCommandHandler_Should_RejectBadSettings()
     {
         var settings = new List<string>() { "butt.farts" };
         var handler = new GetCommandHandler(settings, ConnectionContext, CommandContext);
+        handler.ParsedSettings.Should().BeNull();
+    }
+
+
+    [Test]
+    public async Task SetCommandHandler_Should_SetValues()
+    {
+        var settings = new List<string>() { "display.screen_on_secs=123456" };
+        var handler = new SetCommandHandler(settings, ConnectionContext, CommandContext);
+        await handler.Handle();
+
+        var container = await new InfoCommandHandler(ConnectionContext, CommandContext).Handle();
+        container.LocalConfig.Display.ScreenOnSecs.Should().Be(123456);
+    }
+
+    [Test]
+    public void SetCommandHandler_Should_RejectBadSettings()
+    {
+        var settings = new List<string>() { "butt.farts=2" };
+        var handler = new SetCommandHandler(settings, ConnectionContext, CommandContext);
         handler.ParsedSettings.Should().BeNull();
     }
 }

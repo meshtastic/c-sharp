@@ -8,7 +8,7 @@ namespace Meshtastic.Cli.CommandHandlers;
 
 public class SetCommandHandler : DeviceCommandHandler
 {
-    private readonly IEnumerable<ParsedSetting>? parsedSettings;
+    public readonly IEnumerable<ParsedSetting>? ParsedSettings;
     public SetCommandHandler(IEnumerable<string> settings, DeviceConnectionContext context, CommandContext commandContext) :
         base(context, commandContext)
     {
@@ -16,7 +16,7 @@ public class SetCommandHandler : DeviceCommandHandler
         if (!isValid)
             return;
 
-        parsedSettings = result!.ParsedSettings;
+        ParsedSettings = result!.ParsedSettings;
     }
     public async Task<DeviceStateContainer> Handle()
     {
@@ -31,7 +31,7 @@ public class SetCommandHandler : DeviceCommandHandler
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         await BeginEditSettings(adminMessageFactory);
 
-        foreach (var setting in parsedSettings!)
+        foreach (var setting in ParsedSettings!)
         {
             if (setting.Section.ReflectedType?.Name == nameof(container.LocalConfig))
                 await SetConfig(container, adminMessageFactory, setting);
