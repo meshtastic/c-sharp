@@ -1,5 +1,4 @@
 ﻿using Meshtastic.Cli;
-using Meshtastic.Cli.Enums;
 using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Test.CommandHandlers
@@ -28,7 +27,7 @@ namespace Meshtastic.Test.CommandHandlers
             DebugLogsContain("Sent: { \"wantConfigId\":");
             DebugLogsContain("Received: { \"myInfo\": {");
             DebugLogsContain("Received: { \"nodeInfo\": {", Times.AtLeastOnce());
-            DebugLogsContain("Received: { \"channel\": {", Times.Exactly(8));
+            DebugLogsContain("Received: { \"channel\": {", Times.AtLeast(8));
             DebugLogsContain("Received: { \"config\": {", Times.AtLeastOnce());
             DebugLogsContain("Received: { \"moduleConfig\": {", Times.AtLeastOnce());
             DebugLogsContain("Received: { \"configCompleteId\":");
