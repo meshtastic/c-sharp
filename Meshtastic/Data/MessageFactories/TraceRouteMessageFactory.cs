@@ -21,7 +21,7 @@ public class TraceRouteMessageFactory
             Channel = channel,
             To = dest!.Value,
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
-            HopLimit = container.GetHopLimitOrDefault(),
+            HopLimit = container?.GetHopLimitOrDefault() ?? 3,
             Decoded = new Protobufs.Data()
             {
                 WantResponse = true,

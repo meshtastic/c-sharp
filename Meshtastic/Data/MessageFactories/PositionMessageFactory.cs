@@ -22,7 +22,7 @@ public class PositionMessageFactory
             WantAck = true,
             To = dest ?? container.MyNodeInfo.MyNodeNum,
             Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
-            HopLimit = container.GetHopLimitOrDefault(),
+            HopLimit = container?.GetHopLimitOrDefault() ?? 3,
             Decoded = new Protobufs.Data()
             {
                 Portnum = PortNum.PositionApp,
