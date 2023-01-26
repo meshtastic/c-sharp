@@ -21,21 +21,24 @@ public class TcpConnection : DeviceConnection, IDisposable
         };
     }
 
-    public override async Task<DeviceStateContainer> WriteToRadio(ToRadio data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task<DeviceStateContainer> WriteToRadio(ToRadio packet, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
-        var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
+        DeviceStateContainer.AddToRadio(packet);
+        var toRadio = PacketFraming.CreatePacket(packet.ToByteArray());
         networkStream = client.GetStream();
         await networkStream.WriteAsync(toRadio);
-        Logger.LogDebug($"Sent: {data}");
+        Logger.LogDebug($"Sent: {packet}");
         await ReadFromRadio(isComplete);
         return DeviceStateContainer;
     }
 
-    public override async Task WriteToRadio(ToRadio data)
+    public override async Task WriteToRadio(ToRadio packet)
     {
-        var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
+        DeviceStateContainer.AddToRadio(packet);
+        var toRadio = PacketFraming.CreatePacket(packet.ToByteArray());
         await networkStream!.WriteAsync(toRadio);
-        Logger.LogDebug($"Sent: {data}");
+        await networkStream.FlushAsync();
+        Logger.LogDebug($"Sent: {packet}");
     }
 
     public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)

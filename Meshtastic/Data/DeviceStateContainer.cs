@@ -10,6 +10,7 @@ public class DeviceStateContainer
     public MyNodeInfo MyNodeInfo;
     public List<NodeInfo> Nodes;
     public List<FromRadio> FromRadioMessageLog;
+    public List<ToRadio> ToRadioMessageLog;
 
     public DeviceStateContainer()
     {
@@ -18,6 +19,7 @@ public class DeviceStateContainer
         this.Channels = new List<Channel>();
         this.MyNodeInfo = new MyNodeInfo();
         this.Nodes = new List<NodeInfo>();
+        this.ToRadioMessageLog = new List<ToRadio>();
         this.FromRadioMessageLog = new List<FromRadio>();
     }
 
@@ -53,6 +55,11 @@ public class DeviceStateContainer
             this.Nodes.Add(fromRadio.NodeInfo);
 
         this.FromRadioMessageLog.Add(fromRadio);
+    }
+
+    public void AddToRadio(ToRadio toRadio)
+    {
+        this.ToRadioMessageLog.Add(toRadio);
     }
 
     public uint GetAdminChannelIndex()

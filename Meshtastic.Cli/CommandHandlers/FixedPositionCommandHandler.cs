@@ -55,7 +55,10 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
         var adminMessage = adminMessageFactory.CreateSetConfigMessage(positionConfig);
         Logger.LogInformation($"Setting Position.FixedPosition to True...");
 
-        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AdminMessageResponseReceived);
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), (fromRadio, container) =>
+        {
+            return Task.FromResult(fromRadio.GetMessage<Routing>() != null);
+        });
 
         await CommitEditSettings(adminMessageFactory);
     }

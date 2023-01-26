@@ -47,15 +47,6 @@ public class DeviceCommandHandler
         return (parserResult, true);
     }
 
-    public static Task<bool> AdminMessageResponseReceived(FromRadio fromRadio, DeviceStateContainer container)
-    {
-        if (fromRadio.GetMessage<AdminMessage>() != null)
-        {
-            return Task.FromResult(true);
-        }
-        return Task.FromResult(false);
-    }
-
     public static async Task<bool> AnyResponseReceived(FromRadio fromRadio, DeviceStateContainer container)
     {
         await Task.Delay(100);

@@ -3,6 +3,7 @@ using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 using System.IO.Ports;
+using System;
 
 namespace Meshtastic.Connections;
 
@@ -47,15 +48,16 @@ public class SerialConnection : DeviceConnection
         Logger.LogDebug("Disconnected from serial");
     }
 
-    public override async Task<DeviceStateContainer> WriteToRadio(ToRadio data, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
+    public override async Task<DeviceStateContainer> WriteToRadio(ToRadio packet, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
         await Task.Delay(1000);
-        var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
+        DeviceStateContainer.AddToRadio(packet);
+        var toRadio = PacketFraming.CreatePacket(packet.ToByteArray());
         if (!serialPort.IsOpen)
             serialPort.Open();
         await serialPort.BaseStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE.AsMemory(0, PacketFraming.SERIAL_PREAMBLE.Length));
         await serialPort.BaseStream.WriteAsync(toRadio);
-        Logger.LogDebug($"Sent: {data}");
+        Logger.LogDebug($"Sent: {packet}");
         await ReadFromRadio(isComplete);
         return DeviceStateContainer;
     }
@@ -65,12 +67,13 @@ public class SerialConnection : DeviceConnection
         serialPort.Close();
     }
 
-    public override async Task WriteToRadio(ToRadio data)
+    public override async Task WriteToRadio(ToRadio packet)
     {
-        var toRadio = PacketFraming.CreatePacket(data.ToByteArray());
-        await serialPort.BaseStream.WriteAsync(toRadio, 0, toRadio.Length);
+        DeviceStateContainer.AddToRadio(packet);
+        var toRadio = PacketFraming.CreatePacket(packet.ToByteArray());
+        await serialPort.BaseStream.WriteAsync(toRadio);
         await serialPort.BaseStream.FlushAsync();
-        Logger.LogDebug($"Sent: {data}");
+        Logger.LogDebug($"Sent: {packet}");
     }
 
     public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)

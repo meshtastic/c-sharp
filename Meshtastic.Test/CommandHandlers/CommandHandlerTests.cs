@@ -2,6 +2,7 @@
 using Meshtastic.Cli.Enums;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
+using Spectre.Console;
 
 namespace Meshtastic.Test.CommandHandlers;
 
@@ -61,7 +62,6 @@ public class CommandHandlerTests : CommandHandlerTestBase
         handler.ParsedSettings.Should().BeNull();
     }
 
-
     [Test]
     public async Task SetCommandHandler_Should_SetValues()
     {
@@ -79,5 +79,16 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var settings = new List<string>() { "butt.farts=2" };
         var handler = new SetCommandHandler(settings, ConnectionContext, CommandContext);
         handler.ParsedSettings.Should().BeNull();
+    }
+
+    [Test]
+    public async Task FixedPositionCommandHandler_Should_Acknowledge()
+    {
+        var handler = new FixedPositionCommandHandler(34.00m, -92.000m, 123, ConnectionContext, CommandContext);
+        var container = await handler.Handle();
+        InformationLogsContain("Sending position to device");
+        InformationLogsContain("Setting Position.FixedPosition to True");
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
+        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
     }
 }
