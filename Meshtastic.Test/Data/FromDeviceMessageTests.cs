@@ -25,6 +25,14 @@ public class FromDeviceMessageTests
     }
 
     [Test]
+    public void FromDeviceMessage_ReturnsNull_Given_NoVariantPayload()
+    {
+        var fromRadio = new FromRadio() { };
+        var message = fromDeviceMessage.ParsedFromRadio(fromRadio.ToByteArray());
+        message.Should().BeNull();
+    }
+
+    [Test]
     public void FromDeviceMessage_GivesResult_Given_ValidFromRadioPayload()
     {
         var fromRadio = new FromRadio()
