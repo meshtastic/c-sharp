@@ -106,4 +106,32 @@ public class CommandHandlerTests : CommandHandlerTestBase
         adminMessages.Should().Contain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
     }
+
+    [Test]
+    public async Task ChannelCommandHandler_Should_SavePrimaryChannelWithNoPsk()
+    {
+        var channelSettings = new ChannelOperationSettings(ChannelOperation.Save, 0, "Test", Channel.Types.Role.Primary, "none", false, false);
+        var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
+        var container = await handler.Handle();
+        InformationLogsContain("Writing channel");
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
+        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
+        adminMessages.Should().Contain(adminMessage =>
+            AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
+    }
+
+    [Test]
+    public async Task ChannelCommandHandler_Should_SavePrimaryChannelWithPsk()
+    {
+        var channelSettings = new ChannelOperationSettings(ChannelOperation.Save, 0, "Test", Channel.Types.Role.Primary, "0x1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b", false, false);
+        var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
+        var container = await handler.Handle();
+        InformationLogsContain("Writing channel");
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
+        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
+        adminMessages.Should().Contain(adminMessage =>
+            AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
+    }
 }
