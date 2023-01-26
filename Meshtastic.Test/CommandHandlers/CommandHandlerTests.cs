@@ -3,7 +3,6 @@ using Meshtastic.Cli.CommandHandlers;
 using Meshtastic.Cli.Enums;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
-using Spectre.Console;
 
 namespace Meshtastic.Test.CommandHandlers;
 
