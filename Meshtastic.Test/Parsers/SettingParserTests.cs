@@ -148,4 +148,17 @@ public class SettingParserTests
 
         result.ValidationIssues.Should().BeEmpty();
     }
+
+    [Test]
+    public void ParseSettings_Should_SetFloatValue()
+    {
+        var parser = new SettingParser(new[] { "Power.AdcMultiplierOverride=2.5" });
+        var result = parser.ParseSettings(isGetOnly: false);
+
+        result.ParsedSettings.Should().AllSatisfy(p => p.Setting.Name.Should().BeEquivalentTo("AdcMultiplierOverride"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Section.Name.Should().BeEquivalentTo("Power"));
+        result.ParsedSettings.Should().AllSatisfy(p => p.Value.Should().BeEquivalentTo(2.5));
+
+        result.ValidationIssues.Should().BeEmpty();
+    }
 }
