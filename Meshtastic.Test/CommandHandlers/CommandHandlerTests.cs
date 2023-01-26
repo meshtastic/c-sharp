@@ -1,4 +1,5 @@
-﻿using Meshtastic.Cli.CommandHandlers;
+﻿using Meshtastic.Cli.Binders;
+using Meshtastic.Cli.CommandHandlers;
 using Meshtastic.Cli.Enums;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
@@ -90,5 +91,19 @@ public class CommandHandlerTests : CommandHandlerTestBase
         InformationLogsContain("Setting Position.FixedPosition to True");
         var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
         routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+    }
+
+    [Test]
+    public async Task ChannelCommandHandler_Should_SavePrimaryChannel()
+    {
+        var channelSettings = new ChannelOperationSettings(ChannelOperation.Save, 0, "Test", Channel.Types.Role.Primary, "generate", false, false);
+        var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
+        var container = await handler.Handle();
+        InformationLogsContain("Writing channel");
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
+        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
+        adminMessages.Should().Contain(adminMessage =>
+            AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
     }
 }

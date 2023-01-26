@@ -1,11 +1,13 @@
 ﻿using Meshtastic.Cli.Enums;
 using Meshtastic.Protobufs;
 using System.CommandLine.Binding;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Cli.Binders;
 
 public record ChannelOperationSettings(ChannelOperation Operation, int? Index, string? Name, Channel.Types.Role? Role, string? PSK, bool? UplinkEnabled, bool? DownlinkEnabled);
 
+[ExcludeFromCodeCoverage(Justification = "Container object")]
 public class ChannelBinder : BinderBase<ChannelOperationSettings>
 {
     private readonly Argument<ChannelOperation> operation;

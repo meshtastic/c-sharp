@@ -3,7 +3,9 @@ using Meshtastic.Cli.Binders;
 using Meshtastic.Cli.Enums;
 using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
+using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
+using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
@@ -36,7 +38,7 @@ public class ChannelCommandHandler : DeviceCommandHandler
 
         var channel = container.Channels.Find(c => c.Index == settings.Index);
 
-        AnsiConsole.MarkupLine("Writing channel");
+        Logger.LogInformation("Writing channel");
 
         switch (settings.Operation)
         {
@@ -57,7 +59,11 @@ public class ChannelCommandHandler : DeviceCommandHandler
                 throw new UnreachableException("Cannot complete ChannelCommandHandler without ChannelOperation");
         }
         var adminMessage = adminMessageFactory.CreateSetChannelMessage(channel!);
-        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AnyResponseReceived);
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), (fromRadio, container) =>
+        {
+            return Task.FromResult(fromRadio.GetMessage<Routing>()?.ErrorReason == Routing.Types.Error.None);
+        });
+
         await CommitEditSettings(adminMessageFactory);
     }
 
