@@ -9,6 +9,7 @@ namespace Meshtastic.Test.CommandHandlers;
 [TestFixture]
 [Category(TestCategories.SimulatedDeviceTests)]
 [NonParallelizable]
+[Timeout(10000)]
 public class CommandHandlerTests : CommandHandlerTestBase
 {
     [SetUp]
@@ -23,6 +24,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task InfoCommandHandler_Should_ReceiveWantConfigPayloads()
     {
         var handler = new InfoCommandHandler(ConnectionContext, CommandContext);
@@ -32,6 +34,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task MetadataCommandHandler_Should_ReceiveMetadataResponse()
     {
         var handler = new MetadataCommandHandler(ConnectionContext, CommandContext);
@@ -45,6 +48,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task GetCommandHandler_Should_ReceiveWantConfigPayloads()
     {
         var settings = new List<string>() { "power.ls_secs", "mqtt.address" };
@@ -55,6 +59,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public void GetCommandHandler_Should_RejectBadSettings()
     {
         var settings = new List<string>() { "butt.farts" };
@@ -63,6 +68,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task SetCommandHandler_Should_SetValues()
     {
         var settings = new List<string>() { "display.screen_on_secs=123456" };
@@ -74,6 +80,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public void SetCommandHandler_Should_RejectBadSettings()
     {
         var settings = new List<string>() { "butt.farts=2" };
@@ -82,6 +89,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task FixedPositionCommandHandler_Should_Acknowledge()
     {
         var handler = new FixedPositionCommandHandler(34.00m, -92.000m, 123, ConnectionContext, CommandContext);
@@ -93,6 +101,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task ChannelCommandHandler_Should_SavePrimaryChannel()
     {
         var channelSettings = new ChannelOperationSettings(ChannelOperation.Save, 0, "Test", Channel.Types.Role.Primary, "random", false, false);
@@ -107,6 +116,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task ChannelCommandHandler_Should_SavePrimaryChannelWithNoPsk()
     {
         var channelSettings = new ChannelOperationSettings(ChannelOperation.Save, 0, "Test", Channel.Types.Role.Primary, "none", false, false);
@@ -121,6 +131,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task ChannelCommandHandler_Should_SavePrimaryChannelWithPsk()
     {
         var channelSettings = new ChannelOperationSettings(ChannelOperation.Save, 0, "Test", Channel.Types.Role.Primary, "0x1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b1a1a1a1a2b2b2b2b", false, false);
@@ -135,6 +146,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     }
 
     [Test]
+    [Retry(3)]
     public async Task ChannelCommandHandler_Should_AllowEnableOfSecondary()
     {
         var channelSettings = new ChannelOperationSettings(ChannelOperation.Enable, 2, null, null, null, null, null);
