@@ -128,9 +128,9 @@ namespace Meshtastic.Protobufs {
             "QURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQ",
             "BRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NFVFRJTkcQBxIT",
             "Cg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9G",
-            "QUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl4KE2NvbS5nZWVrc3ZpbGxl",
+            "QUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQmEKE2NvbS5nZWVrc3ZpbGxl",
             "Lm1lc2hCCk1lc2hQcm90b3NIA1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dv",
-            "L2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzYgZwcm90bzM="));
+            "L2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {

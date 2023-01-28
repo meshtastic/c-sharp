@@ -38,9 +38,9 @@ namespace Meshtastic.Protobufs {
             "VU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMS",
             "CgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQ",
             "BxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoSDAoIUU1D",
-            "NTg4M0wQCxIJCgVTSFQzMRAMQmMKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1Rl",
+            "NTg4M0wQCxIJCgVTSFQzMRAMQmYKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1Rl",
             "bGVtZXRyeVByb3Rvc0gDWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
-            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnNiBnByb3RvMw=="));
+            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {

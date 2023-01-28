@@ -44,9 +44,10 @@ namespace Meshtastic.Protobufs {
             "Cg5ST1VURVJfSElTVE9SWRAGEhAKDFJPVVRFUl9TVEFUUxAHEhAKDENMSUVO",
             "VF9FUlJPUhBAEhIKDkNMSUVOVF9ISVNUT1JZEEESEAoMQ0xJRU5UX1NUQVRT",
             "EEISDwoLQ0xJRU5UX1BJTkcQQxIPCgtDTElFTlRfUE9ORxBEEhAKDENMSUVO",
-            "VF9BQk9SVBBqQgkKB3ZhcmlhbnRCaQoTY29tLmdlZWtzdmlsbGUubWVzaEIV",
+            "VF9BQk9SVBBqQgkKB3ZhcmlhbnRCbAoTY29tLmdlZWtzdmlsbGUubWVzaEIV",
             "U3RvcmVBbmRGb3J3YXJkUHJvdG9zSANaImdpdGh1Yi5jb20vbWVzaHRhc3Rp",
-            "Yy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc2IGcHJvdG8z"));
+            "Yy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

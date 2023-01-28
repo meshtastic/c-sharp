@@ -39,9 +39,9 @@ namespace Meshtastic.Protobufs {
             "GAQgASgOMhcubWVzaHRhc3RpYy5TY3JlZW5Gb250cxIQCghvZW1fdGV4dBgF",
             "IAEoCRITCgtvZW1fYWVzX2tleRgGIAEoDCo+CgtTY3JlZW5Gb250cxIOCgpG",
             "T05UX1NNQUxMEAASDwoLRk9OVF9NRURJVU0QARIOCgpGT05UX0xBUkdFEAJC",
-            "XgoTY29tLmdlZWtzdmlsbGUubWVzaEIKRGV2aWNlT25seUgDWiJnaXRodWIu",
+            "YQoTY29tLmdlZWtzdmlsbGUubWVzaEIKRGV2aWNlT25seUgDWiJnaXRodWIu",
             "Y29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90",
-            "b2J1ZnNiBnByb3RvMw=="));
+            "b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.ScreenFonts), }, null, new pbr::GeneratedClrTypeInfo[] {

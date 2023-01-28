@@ -27,7 +27,7 @@ namespace Meshtastic.Protobufs {
             "ChZtZXNodGFzdGljL2FkbWluLnByb3RvEgptZXNodGFzdGljGhhtZXNodGFz",
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiBt",
             "ZXNodGFzdGljL2RldmljZV9tZXRhZGF0YS5wcm90bxoVbWVzaHRhc3RpYy9t",
-            "ZXNoLnByb3RvGh5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8i6wwK",
+            "ZXNoLnByb3RvGh5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8irwwK",
             "DEFkbWluTWVzc2FnZRIdChNnZXRfY2hhbm5lbF9yZXF1ZXN0GAEgASgNSAAS",
             "MwoUZ2V0X2NoYW5uZWxfcmVzcG9uc2UYAiABKAsyEy5tZXNodGFzdGljLkNo",
             "YW5uZWxIABIbChFnZXRfb3duZXJfcmVxdWVzdBgDIAEoCEgAEi4KEmdldF9v",
@@ -51,26 +51,25 @@ namespace Meshtastic.Protobufs {
             "InNldF9jYW5uZWRfbWVzc2FnZV9tb2R1bGVfbWVzc2FnZXMYJCABKAlIABIe",
             "ChRzZXRfcmluZ3RvbmVfbWVzc2FnZRglIAEoCUgAEh0KE2JlZ2luX2VkaXRf",
             "c2V0dGluZ3MYQCABKAhIABIeChRjb21taXRfZWRpdF9zZXR0aW5ncxhBIAEo",
-            "CEgAEh0KE2NvbmZpcm1fc2V0X2NoYW5uZWwYQiABKAhIABIbChFjb25maXJt",
-            "X3NldF9yYWRpbxhDIAEoCEgAEhwKEnJlYm9vdF9vdGFfc2Vjb25kcxhfIAEo",
-            "BUgAEhgKDmV4aXRfc2ltdWxhdG9yGGAgASgISAASGAoOcmVib290X3NlY29u",
-            "ZHMYYSABKAVIABIaChBzaHV0ZG93bl9zZWNvbmRzGGIgASgFSAASFwoNZmFj",
-            "dG9yeV9yZXNldBhjIAEoBUgAEhYKDG5vZGVkYl9yZXNldBhkIAEoBUgAIpUB",
-            "CgpDb25maWdUeXBlEhEKDURFVklDRV9DT05GSUcQABITCg9QT1NJVElPTl9D",
-            "T05GSUcQARIQCgxQT1dFUl9DT05GSUcQAhISCg5ORVRXT1JLX0NPTkZJRxAD",
-            "EhIKDkRJU1BMQVlfQ09ORklHEAQSDwoLTE9SQV9DT05GSUcQBRIUChBCTFVF",
-            "VE9PVEhfQ09ORklHEAYi0wEKEE1vZHVsZUNvbmZpZ1R5cGUSDwoLTVFUVF9D",
-            "T05GSUcQABIRCg1TRVJJQUxfQ09ORklHEAESEwoPRVhUTk9USUZfQ09ORklH",
-            "EAISFwoTU1RPUkVGT1JXQVJEX0NPTkZJRxADEhQKEFJBTkdFVEVTVF9DT05G",
-            "SUcQBBIUChBURUxFTUVUUllfQ09ORklHEAUSFAoQQ0FOTkVETVNHX0NPTkZJ",
-            "RxAGEhAKDEFVRElPX0NPTkZJRxAHEhkKFVJFTU9URUhBUkRXQVJFX0NPTkZJ",
-            "RxAIQhEKD3BheWxvYWRfdmFyaWFudEJfChNjb20uZ2Vla3N2aWxsZS5tZXNo",
-            "QgtBZG1pblByb3Rvc0gDWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
-            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnNiBnByb3RvMw=="));
+            "CEgAEhwKEnJlYm9vdF9vdGFfc2Vjb25kcxhfIAEoBUgAEhgKDmV4aXRfc2lt",
+            "dWxhdG9yGGAgASgISAASGAoOcmVib290X3NlY29uZHMYYSABKAVIABIaChBz",
+            "aHV0ZG93bl9zZWNvbmRzGGIgASgFSAASFwoNZmFjdG9yeV9yZXNldBhjIAEo",
+            "BUgAEhYKDG5vZGVkYl9yZXNldBhkIAEoBUgAIpUBCgpDb25maWdUeXBlEhEK",
+            "DURFVklDRV9DT05GSUcQABITCg9QT1NJVElPTl9DT05GSUcQARIQCgxQT1dF",
+            "Ul9DT05GSUcQAhISCg5ORVRXT1JLX0NPTkZJRxADEhIKDkRJU1BMQVlfQ09O",
+            "RklHEAQSDwoLTE9SQV9DT05GSUcQBRIUChBCTFVFVE9PVEhfQ09ORklHEAYi",
+            "0wEKEE1vZHVsZUNvbmZpZ1R5cGUSDwoLTVFUVF9DT05GSUcQABIRCg1TRVJJ",
+            "QUxfQ09ORklHEAESEwoPRVhUTk9USUZfQ09ORklHEAISFwoTU1RPUkVGT1JX",
+            "QVJEX0NPTkZJRxADEhQKEFJBTkdFVEVTVF9DT05GSUcQBBIUChBURUxFTUVU",
+            "UllfQ09ORklHEAUSFAoQQ0FOTkVETVNHX0NPTkZJRxAGEhAKDEFVRElPX0NP",
+            "TkZJRxAHEhkKFVJFTU9URUhBUkRXQVJFX0NPTkZJRxAIQhEKD3BheWxvYWRf",
+            "dmFyaWFudEJiChNjb20uZ2Vla3N2aWxsZS5tZXNoQgtBZG1pblByb3Rvc0gD",
+            "WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRh",
+            "c3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceMetadataReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "BeginEditSettings", "CommitEditSettings", "ConfirmSetChannel", "ConfirmSetRadio", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null)
           }));
     }
     #endregion
@@ -183,12 +182,6 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.CommitEditSettings:
           CommitEditSettings = other.CommitEditSettings;
-          break;
-        case PayloadVariantOneofCase.ConfirmSetChannel:
-          ConfirmSetChannel = other.ConfirmSetChannel;
-          break;
-        case PayloadVariantOneofCase.ConfirmSetRadio:
-          ConfirmSetRadio = other.ConfirmSetRadio;
           break;
         case PayloadVariantOneofCase.RebootOtaSeconds:
           RebootOtaSeconds = other.RebootOtaSeconds;
@@ -577,41 +570,6 @@ namespace Meshtastic.Protobufs {
       }
     }
 
-    /// <summary>Field number for the "confirm_set_channel" field.</summary>
-    public const int ConfirmSetChannelFieldNumber = 66;
-    /// <summary>
-    ///
-    /// Setting channels/radio config remotely carries the risk that you might send an invalid config and the radio never talks to your mesh again.
-    /// Therefore if setting either of these properties remotely, you must send a confirm_xxx message within 10 minutes.
-    /// If you fail to do so, the radio will assume loss of comms and revert your changes.
-    /// These messages are optional when changing the local node.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ConfirmSetChannel {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetChannel ? (bool) payloadVariant_ : false; }
-      set {
-        payloadVariant_ = value;
-        payloadVariantCase_ = PayloadVariantOneofCase.ConfirmSetChannel;
-      }
-    }
-
-    /// <summary>Field number for the "confirm_set_radio" field.</summary>
-    public const int ConfirmSetRadioFieldNumber = 67;
-    /// <summary>
-    ///
-    /// TODO: REPLACE
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ConfirmSetRadio {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetRadio ? (bool) payloadVariant_ : false; }
-      set {
-        payloadVariant_ = value;
-        payloadVariantCase_ = PayloadVariantOneofCase.ConfirmSetRadio;
-      }
-    }
-
     /// <summary>Field number for the "reboot_ota_seconds" field.</summary>
     public const int RebootOtaSecondsFieldNumber = 95;
     /// <summary>
@@ -736,8 +694,6 @@ namespace Meshtastic.Protobufs {
       SetRingtoneMessage = 37,
       BeginEditSettings = 64,
       CommitEditSettings = 65,
-      ConfirmSetChannel = 66,
-      ConfirmSetRadio = 67,
       RebootOtaSeconds = 95,
       ExitSimulator = 96,
       RebootSeconds = 97,
@@ -796,8 +752,6 @@ namespace Meshtastic.Protobufs {
       if (SetRingtoneMessage != other.SetRingtoneMessage) return false;
       if (BeginEditSettings != other.BeginEditSettings) return false;
       if (CommitEditSettings != other.CommitEditSettings) return false;
-      if (ConfirmSetChannel != other.ConfirmSetChannel) return false;
-      if (ConfirmSetRadio != other.ConfirmSetRadio) return false;
       if (RebootOtaSeconds != other.RebootOtaSeconds) return false;
       if (ExitSimulator != other.ExitSimulator) return false;
       if (RebootSeconds != other.RebootSeconds) return false;
@@ -834,8 +788,6 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) hash ^= SetRingtoneMessage.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetChannel) hash ^= ConfirmSetChannel.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetRadio) hash ^= ConfirmSetRadio.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) hash ^= RebootOtaSeconds.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.ExitSimulator) hash ^= ExitSimulator.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootSeconds) hash ^= RebootSeconds.GetHashCode();
@@ -948,14 +900,6 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) {
         output.WriteRawTag(136, 4);
         output.WriteBool(CommitEditSettings);
-      }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetChannel) {
-        output.WriteRawTag(144, 4);
-        output.WriteBool(ConfirmSetChannel);
-      }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetRadio) {
-        output.WriteRawTag(152, 4);
-        output.WriteBool(ConfirmSetRadio);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
         output.WriteRawTag(248, 5);
@@ -1079,14 +1023,6 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(136, 4);
         output.WriteBool(CommitEditSettings);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetChannel) {
-        output.WriteRawTag(144, 4);
-        output.WriteBool(ConfirmSetChannel);
-      }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetRadio) {
-        output.WriteRawTag(152, 4);
-        output.WriteBool(ConfirmSetRadio);
-      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
         output.WriteRawTag(248, 5);
         output.WriteInt32(RebootOtaSeconds);
@@ -1185,12 +1121,6 @@ namespace Meshtastic.Protobufs {
         size += 2 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) {
-        size += 2 + 1;
-      }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetChannel) {
-        size += 2 + 1;
-      }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfirmSetRadio) {
         size += 2 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
@@ -1316,12 +1246,6 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.CommitEditSettings:
           CommitEditSettings = other.CommitEditSettings;
-          break;
-        case PayloadVariantOneofCase.ConfirmSetChannel:
-          ConfirmSetChannel = other.ConfirmSetChannel;
-          break;
-        case PayloadVariantOneofCase.ConfirmSetRadio:
-          ConfirmSetRadio = other.ConfirmSetRadio;
           break;
         case PayloadVariantOneofCase.RebootOtaSeconds:
           RebootOtaSeconds = other.RebootOtaSeconds;
@@ -1491,14 +1415,6 @@ namespace Meshtastic.Protobufs {
           }
           case 520: {
             CommitEditSettings = input.ReadBool();
-            break;
-          }
-          case 528: {
-            ConfirmSetChannel = input.ReadBool();
-            break;
-          }
-          case 536: {
-            ConfirmSetRadio = input.ReadBool();
             break;
           }
           case 760: {
@@ -1673,14 +1589,6 @@ namespace Meshtastic.Protobufs {
           }
           case 520: {
             CommitEditSettings = input.ReadBool();
-            break;
-          }
-          case 528: {
-            ConfirmSetChannel = input.ReadBool();
-            break;
-          }
-          case 536: {
-            ConfirmSetRadio = input.ReadBool();
             break;
           }
           case 760: {
