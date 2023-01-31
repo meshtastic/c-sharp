@@ -159,4 +159,14 @@ public class CommandHandlerTests : CommandHandlerTestBase
         adminMessages.Should().Contain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
     }
+
+    [Test]
+    [Retry(3)]
+    public async Task ChannelCommandHandler_Should_ThrowExceptionForOutOfRangeIndex()
+    {
+        var channelSettings = new ChannelOperationSettings(ChannelOperation.Save, 10, null, null, null, null, null);
+        var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
+        var action = () => handler.Handle();
+        await action.Should().ThrowAsync<IndexOutOfRangeException>();
+    }
 }

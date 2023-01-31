@@ -21,6 +21,11 @@ namespace Meshtastic.Test.CommandHandlers
             FakeLogger.VerifyLog(l =>
             l.LogInformation(It.Is<string>(message => message.StartsWith(messagePart))), times ?? Times.Once());
         }
+        protected void ErrorLogsContain(string messagePart, Times? times = null)
+        {
+            FakeLogger.VerifyLog(l =>
+            l.LogError(It.Is<string>(message => message.StartsWith(messagePart))), times ?? Times.Once());
+        }
 
         protected void ReceivedWantConfigPayloads()
         {
