@@ -66,7 +66,7 @@ public class DeviceCommandHandler
             selection.Converter = container.GetNodeDisplayName;
             Destination = AnsiConsole.Prompt(selection);
         }
-        await Task.Delay(250);
+        await Task.Delay(500);
         await OnCompleted(fromRadio, container);
         return true;
     }
