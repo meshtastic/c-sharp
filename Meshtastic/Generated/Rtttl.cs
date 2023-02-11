@@ -25,10 +25,10 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZtZXNodGFzdGljL3J0dHRsLnByb3RvEgptZXNodGFzdGljIh8KC1JUVFRM",
-            "Q29uZmlnEhAKCHJpbmd0b25lGAEgASgJQmgKE2NvbS5nZWVrc3ZpbGxlLm1l",
-            "c2hCEVJUVFRMQ29uZmlnUHJvdG9zSANaImdpdGh1Yi5jb20vbWVzaHRhc3Rp",
-            "Yy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJv",
-            "dG8z"));
+            "Q29uZmlnEhAKCHJpbmd0b25lGAEgASgJQmYKE2NvbS5nZWVrc3ZpbGxlLm1l",
+            "c2hCEVJUVFRMQ29uZmlnUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMv",
+            "Z28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

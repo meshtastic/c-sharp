@@ -30,23 +30,33 @@ namespace Meshtastic.Protobufs {
             "dGlsX3R4GAQgASgCIpsBChJFbnZpcm9ubWVudE1ldHJpY3MSEwoLdGVtcGVy",
             "YXR1cmUYASABKAISGQoRcmVsYXRpdmVfaHVtaWRpdHkYAiABKAISGwoTYmFy",
             "b21ldHJpY19wcmVzc3VyZRgDIAEoAhIWCg5nYXNfcmVzaXN0YW5jZRgEIAEo",
-            "AhIPCgd2b2x0YWdlGAUgASgCEg8KB2N1cnJlbnQYBiABKAIimAEKCVRlbGVt",
-            "ZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRldmljZV9tZXRyaWNzGAIgASgLMhku",
-            "bWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNzSAASPQoTZW52aXJvbm1lbnRfbWV0",
-            "cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMuRW52aXJvbm1lbnRNZXRyaWNzSABC",
-            "CQoHdmFyaWFudCq5AQoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1Jf",
-            "VU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMS",
-            "CgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQ",
-            "BxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoSDAoIUU1D",
-            "NTg4M0wQCxIJCgVTSFQzMRAMQmYKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1Rl",
-            "bGVtZXRyeVByb3Rvc0gDWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
-            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "AhIPCgd2b2x0YWdlGAUgASgCEg8KB2N1cnJlbnQYBiABKAIivwIKEUFpclF1",
+            "YWxpdHlNZXRyaWNzEhUKDXBtMTBfc3RhbmRhcmQYASABKA0SFQoNcG0yNV9z",
+            "dGFuZGFyZBgCIAEoDRIWCg5wbTEwMF9zdGFuZGFyZBgDIAEoDRIaChJwbTEw",
+            "X2Vudmlyb25tZW50YWwYBCABKA0SGgoScG0yNV9lbnZpcm9ubWVudGFsGAUg",
+            "ASgNEhsKE3BtMTAwX2Vudmlyb25tZW50YWwYBiABKA0SFgoOcGFydGljbGVz",
+            "XzAzdW0YByABKA0SFgoOcGFydGljbGVzXzA1dW0YCCABKA0SFgoOcGFydGlj",
+            "bGVzXzEwdW0YCSABKA0SFgoOcGFydGljbGVzXzI1dW0YCiABKA0SFgoOcGFy",
+            "dGljbGVzXzUwdW0YCyABKA0SFwoPcGFydGljbGVzXzEwMHVtGAwgASgNItYB",
+            "CglUZWxlbWV0cnkSDAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0cmljcxgC",
+            "IAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vudmlyb25t",
+            "ZW50X21ldHJpY3MYAyABKAsyHi5tZXNodGFzdGljLkVudmlyb25tZW50TWV0",
+            "cmljc0gAEjwKE2Fpcl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5tZXNodGFz",
+            "dGljLkFpclF1YWxpdHlNZXRyaWNzSABCCQoHdmFyaWFudCrHAQoTVGVsZW1l",
+            "dHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIK",
+            "CgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5",
+            "EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYz",
+            "MTAQCRILCgdRTUk4NjU4EAoSDAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwK",
+            "CFBNU0EwMDNJEA1CZAoTY29tLmdlZWtzdmlsbGUubWVzaEIPVGVsZW1ldHJ5",
+            "UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
+            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics" }, new[]{ "Variant" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics" }, new[]{ "Variant" }, null, null, null)
           }));
     }
     #endregion
@@ -55,7 +65,7 @@ namespace Meshtastic.Protobufs {
   #region Enums
   /// <summary>
   ///
-  /// TODO: REPLACE
+  /// Supported I2C Sensors for telemetry in Meshtastic
   /// </summary>
   public enum TelemetrySensorType {
     /// <summary>
@@ -123,6 +133,11 @@ namespace Meshtastic.Protobufs {
     /// High accuracy temperature and humidity
     /// </summary>
     [pbr::OriginalName("SHT31")] Sht31 = 12,
+    /// <summary>
+    ///
+    /// PM2.5 air quality sensor
+    /// </summary>
+    [pbr::OriginalName("PMSA003I")] Pmsa003I = 13,
   }
 
   #endregion
@@ -852,6 +867,654 @@ namespace Meshtastic.Protobufs {
 
   /// <summary>
   ///
+  /// Air quality metrics
+  /// </summary>
+  public sealed partial class AirQualityMetrics : pb::IMessage<AirQualityMetrics>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AirQualityMetrics> _parser = new pb::MessageParser<AirQualityMetrics>(() => new AirQualityMetrics());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AirQualityMetrics> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AirQualityMetrics() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AirQualityMetrics(AirQualityMetrics other) : this() {
+      pm10Standard_ = other.pm10Standard_;
+      pm25Standard_ = other.pm25Standard_;
+      pm100Standard_ = other.pm100Standard_;
+      pm10Environmental_ = other.pm10Environmental_;
+      pm25Environmental_ = other.pm25Environmental_;
+      pm100Environmental_ = other.pm100Environmental_;
+      particles03Um_ = other.particles03Um_;
+      particles05Um_ = other.particles05Um_;
+      particles10Um_ = other.particles10Um_;
+      particles25Um_ = other.particles25Um_;
+      particles50Um_ = other.particles50Um_;
+      particles100Um_ = other.particles100Um_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AirQualityMetrics Clone() {
+      return new AirQualityMetrics(this);
+    }
+
+    /// <summary>Field number for the "pm10_standard" field.</summary>
+    public const int Pm10StandardFieldNumber = 1;
+    private uint pm10Standard_;
+    /// <summary>
+    ///
+    /// Concentration Units Standard PM1.0
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pm10Standard {
+      get { return pm10Standard_; }
+      set {
+        pm10Standard_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pm25_standard" field.</summary>
+    public const int Pm25StandardFieldNumber = 2;
+    private uint pm25Standard_;
+    /// <summary>
+    ///
+    /// Concentration Units Standard PM2.5
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pm25Standard {
+      get { return pm25Standard_; }
+      set {
+        pm25Standard_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pm100_standard" field.</summary>
+    public const int Pm100StandardFieldNumber = 3;
+    private uint pm100Standard_;
+    /// <summary>
+    ///
+    /// Concentration Units Standard PM10.0
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pm100Standard {
+      get { return pm100Standard_; }
+      set {
+        pm100Standard_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pm10_environmental" field.</summary>
+    public const int Pm10EnvironmentalFieldNumber = 4;
+    private uint pm10Environmental_;
+    /// <summary>
+    ///
+    /// Concentration Units Environmental PM1.0
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pm10Environmental {
+      get { return pm10Environmental_; }
+      set {
+        pm10Environmental_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pm25_environmental" field.</summary>
+    public const int Pm25EnvironmentalFieldNumber = 5;
+    private uint pm25Environmental_;
+    /// <summary>
+    ///
+    /// Concentration Units Environmental PM2.5
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pm25Environmental {
+      get { return pm25Environmental_; }
+      set {
+        pm25Environmental_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pm100_environmental" field.</summary>
+    public const int Pm100EnvironmentalFieldNumber = 6;
+    private uint pm100Environmental_;
+    /// <summary>
+    ///
+    /// Concentration Units Environmental PM10.0
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pm100Environmental {
+      get { return pm100Environmental_; }
+      set {
+        pm100Environmental_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "particles_03um" field.</summary>
+    public const int Particles03UmFieldNumber = 7;
+    private uint particles03Um_;
+    /// <summary>
+    ///
+    /// 0.3um Particle Count
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Particles03Um {
+      get { return particles03Um_; }
+      set {
+        particles03Um_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "particles_05um" field.</summary>
+    public const int Particles05UmFieldNumber = 8;
+    private uint particles05Um_;
+    /// <summary>
+    ///
+    /// 0.5um Particle Count
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Particles05Um {
+      get { return particles05Um_; }
+      set {
+        particles05Um_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "particles_10um" field.</summary>
+    public const int Particles10UmFieldNumber = 9;
+    private uint particles10Um_;
+    /// <summary>
+    ///
+    /// 1.0um Particle Count
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Particles10Um {
+      get { return particles10Um_; }
+      set {
+        particles10Um_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "particles_25um" field.</summary>
+    public const int Particles25UmFieldNumber = 10;
+    private uint particles25Um_;
+    /// <summary>
+    ///
+    /// 2.5um Particle Count
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Particles25Um {
+      get { return particles25Um_; }
+      set {
+        particles25Um_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "particles_50um" field.</summary>
+    public const int Particles50UmFieldNumber = 11;
+    private uint particles50Um_;
+    /// <summary>
+    ///
+    /// 5.0um Particle Count
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Particles50Um {
+      get { return particles50Um_; }
+      set {
+        particles50Um_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "particles_100um" field.</summary>
+    public const int Particles100UmFieldNumber = 12;
+    private uint particles100Um_;
+    /// <summary>
+    ///
+    /// 10.0um Particle Count
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Particles100Um {
+      get { return particles100Um_; }
+      set {
+        particles100Um_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AirQualityMetrics);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AirQualityMetrics other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Pm10Standard != other.Pm10Standard) return false;
+      if (Pm25Standard != other.Pm25Standard) return false;
+      if (Pm100Standard != other.Pm100Standard) return false;
+      if (Pm10Environmental != other.Pm10Environmental) return false;
+      if (Pm25Environmental != other.Pm25Environmental) return false;
+      if (Pm100Environmental != other.Pm100Environmental) return false;
+      if (Particles03Um != other.Particles03Um) return false;
+      if (Particles05Um != other.Particles05Um) return false;
+      if (Particles10Um != other.Particles10Um) return false;
+      if (Particles25Um != other.Particles25Um) return false;
+      if (Particles50Um != other.Particles50Um) return false;
+      if (Particles100Um != other.Particles100Um) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Pm10Standard != 0) hash ^= Pm10Standard.GetHashCode();
+      if (Pm25Standard != 0) hash ^= Pm25Standard.GetHashCode();
+      if (Pm100Standard != 0) hash ^= Pm100Standard.GetHashCode();
+      if (Pm10Environmental != 0) hash ^= Pm10Environmental.GetHashCode();
+      if (Pm25Environmental != 0) hash ^= Pm25Environmental.GetHashCode();
+      if (Pm100Environmental != 0) hash ^= Pm100Environmental.GetHashCode();
+      if (Particles03Um != 0) hash ^= Particles03Um.GetHashCode();
+      if (Particles05Um != 0) hash ^= Particles05Um.GetHashCode();
+      if (Particles10Um != 0) hash ^= Particles10Um.GetHashCode();
+      if (Particles25Um != 0) hash ^= Particles25Um.GetHashCode();
+      if (Particles50Um != 0) hash ^= Particles50Um.GetHashCode();
+      if (Particles100Um != 0) hash ^= Particles100Um.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Pm10Standard != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Pm10Standard);
+      }
+      if (Pm25Standard != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Pm25Standard);
+      }
+      if (Pm100Standard != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Pm100Standard);
+      }
+      if (Pm10Environmental != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Pm10Environmental);
+      }
+      if (Pm25Environmental != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Pm25Environmental);
+      }
+      if (Pm100Environmental != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Pm100Environmental);
+      }
+      if (Particles03Um != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Particles03Um);
+      }
+      if (Particles05Um != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Particles05Um);
+      }
+      if (Particles10Um != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Particles10Um);
+      }
+      if (Particles25Um != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Particles25Um);
+      }
+      if (Particles50Um != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Particles50Um);
+      }
+      if (Particles100Um != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Particles100Um);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Pm10Standard != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Pm10Standard);
+      }
+      if (Pm25Standard != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Pm25Standard);
+      }
+      if (Pm100Standard != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Pm100Standard);
+      }
+      if (Pm10Environmental != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Pm10Environmental);
+      }
+      if (Pm25Environmental != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Pm25Environmental);
+      }
+      if (Pm100Environmental != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Pm100Environmental);
+      }
+      if (Particles03Um != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Particles03Um);
+      }
+      if (Particles05Um != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Particles05Um);
+      }
+      if (Particles10Um != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Particles10Um);
+      }
+      if (Particles25Um != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Particles25Um);
+      }
+      if (Particles50Um != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Particles50Um);
+      }
+      if (Particles100Um != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Particles100Um);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Pm10Standard != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pm10Standard);
+      }
+      if (Pm25Standard != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pm25Standard);
+      }
+      if (Pm100Standard != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pm100Standard);
+      }
+      if (Pm10Environmental != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pm10Environmental);
+      }
+      if (Pm25Environmental != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pm25Environmental);
+      }
+      if (Pm100Environmental != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pm100Environmental);
+      }
+      if (Particles03Um != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Particles03Um);
+      }
+      if (Particles05Um != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Particles05Um);
+      }
+      if (Particles10Um != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Particles10Um);
+      }
+      if (Particles25Um != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Particles25Um);
+      }
+      if (Particles50Um != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Particles50Um);
+      }
+      if (Particles100Um != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Particles100Um);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AirQualityMetrics other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Pm10Standard != 0) {
+        Pm10Standard = other.Pm10Standard;
+      }
+      if (other.Pm25Standard != 0) {
+        Pm25Standard = other.Pm25Standard;
+      }
+      if (other.Pm100Standard != 0) {
+        Pm100Standard = other.Pm100Standard;
+      }
+      if (other.Pm10Environmental != 0) {
+        Pm10Environmental = other.Pm10Environmental;
+      }
+      if (other.Pm25Environmental != 0) {
+        Pm25Environmental = other.Pm25Environmental;
+      }
+      if (other.Pm100Environmental != 0) {
+        Pm100Environmental = other.Pm100Environmental;
+      }
+      if (other.Particles03Um != 0) {
+        Particles03Um = other.Particles03Um;
+      }
+      if (other.Particles05Um != 0) {
+        Particles05Um = other.Particles05Um;
+      }
+      if (other.Particles10Um != 0) {
+        Particles10Um = other.Particles10Um;
+      }
+      if (other.Particles25Um != 0) {
+        Particles25Um = other.Particles25Um;
+      }
+      if (other.Particles50Um != 0) {
+        Particles50Um = other.Particles50Um;
+      }
+      if (other.Particles100Um != 0) {
+        Particles100Um = other.Particles100Um;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Pm10Standard = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            Pm25Standard = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Pm100Standard = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            Pm10Environmental = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            Pm25Environmental = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            Pm100Environmental = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Particles03Um = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Particles05Um = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            Particles10Um = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            Particles25Um = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            Particles50Um = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Particles100Um = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Pm10Standard = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            Pm25Standard = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Pm100Standard = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            Pm10Environmental = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            Pm25Environmental = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            Pm100Environmental = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Particles03Um = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Particles05Um = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            Particles10Um = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            Particles25Um = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            Particles50Um = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Particles100Um = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
   /// Types of Measurements the telemetry module is equipped to handle
   /// </summary>
   public sealed partial class Telemetry : pb::IMessage<Telemetry>
@@ -868,7 +1531,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -895,6 +1558,9 @@ namespace Meshtastic.Protobufs {
           break;
         case VariantOneofCase.EnvironmentMetrics:
           EnvironmentMetrics = other.EnvironmentMetrics.Clone();
+          break;
+        case VariantOneofCase.AirQualityMetrics:
+          AirQualityMetrics = other.AirQualityMetrics.Clone();
           break;
       }
 
@@ -959,12 +1625,29 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "air_quality_metrics" field.</summary>
+    public const int AirQualityMetricsFieldNumber = 4;
+    /// <summary>
+    ///
+    /// Air quality metrics
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.AirQualityMetrics AirQualityMetrics {
+      get { return variantCase_ == VariantOneofCase.AirQualityMetrics ? (global::Meshtastic.Protobufs.AirQualityMetrics) variant_ : null; }
+      set {
+        variant_ = value;
+        variantCase_ = value == null ? VariantOneofCase.None : VariantOneofCase.AirQualityMetrics;
+      }
+    }
+
     private object variant_;
     /// <summary>Enum of possible cases for the "variant" oneof.</summary>
     public enum VariantOneofCase {
       None = 0,
       DeviceMetrics = 2,
       EnvironmentMetrics = 3,
+      AirQualityMetrics = 4,
     }
     private VariantOneofCase variantCase_ = VariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -998,6 +1681,7 @@ namespace Meshtastic.Protobufs {
       if (Time != other.Time) return false;
       if (!object.Equals(DeviceMetrics, other.DeviceMetrics)) return false;
       if (!object.Equals(EnvironmentMetrics, other.EnvironmentMetrics)) return false;
+      if (!object.Equals(AirQualityMetrics, other.AirQualityMetrics)) return false;
       if (VariantCase != other.VariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1009,6 +1693,7 @@ namespace Meshtastic.Protobufs {
       if (Time != 0) hash ^= Time.GetHashCode();
       if (variantCase_ == VariantOneofCase.DeviceMetrics) hash ^= DeviceMetrics.GetHashCode();
       if (variantCase_ == VariantOneofCase.EnvironmentMetrics) hash ^= EnvironmentMetrics.GetHashCode();
+      if (variantCase_ == VariantOneofCase.AirQualityMetrics) hash ^= AirQualityMetrics.GetHashCode();
       hash ^= (int) variantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1040,6 +1725,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(26);
         output.WriteMessage(EnvironmentMetrics);
       }
+      if (variantCase_ == VariantOneofCase.AirQualityMetrics) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AirQualityMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1062,6 +1751,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(26);
         output.WriteMessage(EnvironmentMetrics);
       }
+      if (variantCase_ == VariantOneofCase.AirQualityMetrics) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AirQualityMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1080,6 +1773,9 @@ namespace Meshtastic.Protobufs {
       }
       if (variantCase_ == VariantOneofCase.EnvironmentMetrics) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnvironmentMetrics);
+      }
+      if (variantCase_ == VariantOneofCase.AirQualityMetrics) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AirQualityMetrics);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1108,6 +1804,12 @@ namespace Meshtastic.Protobufs {
             EnvironmentMetrics = new global::Meshtastic.Protobufs.EnvironmentMetrics();
           }
           EnvironmentMetrics.MergeFrom(other.EnvironmentMetrics);
+          break;
+        case VariantOneofCase.AirQualityMetrics:
+          if (AirQualityMetrics == null) {
+            AirQualityMetrics = new global::Meshtastic.Protobufs.AirQualityMetrics();
+          }
+          AirQualityMetrics.MergeFrom(other.AirQualityMetrics);
           break;
       }
 
@@ -1148,6 +1850,15 @@ namespace Meshtastic.Protobufs {
             EnvironmentMetrics = subBuilder;
             break;
           }
+          case 34: {
+            global::Meshtastic.Protobufs.AirQualityMetrics subBuilder = new global::Meshtastic.Protobufs.AirQualityMetrics();
+            if (variantCase_ == VariantOneofCase.AirQualityMetrics) {
+              subBuilder.MergeFrom(AirQualityMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            AirQualityMetrics = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1183,6 +1894,15 @@ namespace Meshtastic.Protobufs {
             }
             input.ReadMessage(subBuilder);
             EnvironmentMetrics = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Meshtastic.Protobufs.AirQualityMetrics subBuilder = new global::Meshtastic.Protobufs.AirQualityMetrics();
+            if (variantCase_ == VariantOneofCase.AirQualityMetrics) {
+              subBuilder.MergeFrom(AirQualityMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            AirQualityMetrics = subBuilder;
             break;
           }
         }

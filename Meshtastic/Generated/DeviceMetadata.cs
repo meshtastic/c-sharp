@@ -25,19 +25,20 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBtZXNodGFzdGljL2RldmljZV9tZXRhZGF0YS5wcm90bxIKbWVzaHRhc3Rp",
-            "YxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8i5QEKDkRldmljZU1ldGFkYXRh",
-            "EhgKEGZpcm13YXJlX3ZlcnNpb24YASABKAkSHAoUZGV2aWNlX3N0YXRlX3Zl",
-            "cnNpb24YAiABKA0SEwoLY2FuU2h1dGRvd24YAyABKAgSDwoHaGFzV2lmaRgE",
-            "IAEoCBIUCgxoYXNCbHVldG9vdGgYBSABKAgSEwoLaGFzRXRoZXJuZXQYBiAB",
-            "KAgSMgoEcm9sZRgHIAEoDjIkLm1lc2h0YXN0aWMuQ29uZmlnLkRldmljZUNv",
-            "bmZpZy5Sb2xlEhYKDnBvc2l0aW9uX2ZsYWdzGAggASgNQmsKE2NvbS5nZWVr",
-            "c3ZpbGxlLm1lc2hCFERldmljZU1ldGFkYXRhUHJvdG9zSANaImdpdGh1Yi5j",
-            "b20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3Rv",
-            "YnVmc7oCAGIGcHJvdG8z"));
+            "YxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5w",
+            "cm90byKSAgoORGV2aWNlTWV0YWRhdGESGAoQZmlybXdhcmVfdmVyc2lvbhgB",
+            "IAEoCRIcChRkZXZpY2Vfc3RhdGVfdmVyc2lvbhgCIAEoDRITCgtjYW5TaHV0",
+            "ZG93bhgDIAEoCBIPCgdoYXNXaWZpGAQgASgIEhQKDGhhc0JsdWV0b290aBgF",
+            "IAEoCBITCgtoYXNFdGhlcm5ldBgGIAEoCBIyCgRyb2xlGAcgASgOMiQubWVz",
+            "aHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnLlJvbGUSFgoOcG9zaXRpb25f",
+            "ZmxhZ3MYCCABKA0SKwoIaHdfbW9kZWwYCSABKA4yGS5tZXNodGFzdGljLkhh",
+            "cmR3YXJlTW9kZWxCaQoTY29tLmdlZWtzdmlsbGUubWVzaEIURGV2aWNlTWV0",
+            "YWRhdGFQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0",
+            "ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ConfigReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetadata), global::Meshtastic.Protobufs.DeviceMetadata.Parser, new[]{ "FirmwareVersion", "DeviceStateVersion", "CanShutdown", "HasWifi", "HasBluetooth", "HasEthernet", "Role", "PositionFlags" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetadata), global::Meshtastic.Protobufs.DeviceMetadata.Parser, new[]{ "FirmwareVersion", "DeviceStateVersion", "CanShutdown", "HasWifi", "HasBluetooth", "HasEthernet", "Role", "PositionFlags", "HwModel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -90,6 +91,7 @@ namespace Meshtastic.Protobufs {
       hasEthernet_ = other.hasEthernet_;
       role_ = other.role_;
       positionFlags_ = other.positionFlags_;
+      hwModel_ = other.hwModel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -227,6 +229,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "hw_model" field.</summary>
+    public const int HwModelFieldNumber = 9;
+    private global::Meshtastic.Protobufs.HardwareModel hwModel_ = global::Meshtastic.Protobufs.HardwareModel.Unset;
+    /// <summary>
+    ///
+    /// Device hardware model
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.HardwareModel HwModel {
+      get { return hwModel_; }
+      set {
+        hwModel_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -250,6 +268,7 @@ namespace Meshtastic.Protobufs {
       if (HasEthernet != other.HasEthernet) return false;
       if (Role != other.Role) return false;
       if (PositionFlags != other.PositionFlags) return false;
+      if (HwModel != other.HwModel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -265,6 +284,7 @@ namespace Meshtastic.Protobufs {
       if (HasEthernet != false) hash ^= HasEthernet.GetHashCode();
       if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) hash ^= Role.GetHashCode();
       if (PositionFlags != 0) hash ^= PositionFlags.GetHashCode();
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) hash ^= HwModel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -315,6 +335,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(64);
         output.WriteUInt32(PositionFlags);
       }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) HwModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -357,6 +381,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(64);
         output.WriteUInt32(PositionFlags);
       }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) HwModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -390,6 +418,9 @@ namespace Meshtastic.Protobufs {
       }
       if (PositionFlags != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PositionFlags);
+      }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HwModel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -426,6 +457,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.PositionFlags != 0) {
         PositionFlags = other.PositionFlags;
+      }
+      if (other.HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        HwModel = other.HwModel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -474,6 +508,10 @@ namespace Meshtastic.Protobufs {
             PositionFlags = input.ReadUInt32();
             break;
           }
+          case 72: {
+            HwModel = (global::Meshtastic.Protobufs.HardwareModel) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -519,6 +557,10 @@ namespace Meshtastic.Protobufs {
           }
           case 64: {
             PositionFlags = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            HwModel = (global::Meshtastic.Protobufs.HardwareModel) input.ReadEnum();
             break;
           }
         }

@@ -27,49 +27,57 @@ namespace Meshtastic.Protobufs {
             "ChZtZXNodGFzdGljL2FkbWluLnByb3RvEgptZXNodGFzdGljGhhtZXNodGFz",
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiBt",
             "ZXNodGFzdGljL2RldmljZV9tZXRhZGF0YS5wcm90bxoVbWVzaHRhc3RpYy9t",
-            "ZXNoLnByb3RvGh5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8irwwK",
-            "DEFkbWluTWVzc2FnZRIdChNnZXRfY2hhbm5lbF9yZXF1ZXN0GAEgASgNSAAS",
-            "MwoUZ2V0X2NoYW5uZWxfcmVzcG9uc2UYAiABKAsyEy5tZXNodGFzdGljLkNo",
-            "YW5uZWxIABIbChFnZXRfb3duZXJfcmVxdWVzdBgDIAEoCEgAEi4KEmdldF9v",
-            "d25lcl9yZXNwb25zZRgEIAEoCzIQLm1lc2h0YXN0aWMuVXNlckgAEkEKEmdl",
-            "dF9jb25maWdfcmVxdWVzdBgFIAEoDjIjLm1lc2h0YXN0aWMuQWRtaW5NZXNz",
-            "YWdlLkNvbmZpZ1R5cGVIABIxChNnZXRfY29uZmlnX3Jlc3BvbnNlGAYgASgL",
-            "MhIubWVzaHRhc3RpYy5Db25maWdIABJOChlnZXRfbW9kdWxlX2NvbmZpZ19y",
-            "ZXF1ZXN0GAcgASgOMikubWVzaHRhc3RpYy5BZG1pbk1lc3NhZ2UuTW9kdWxl",
-            "Q29uZmlnVHlwZUgAEj4KGmdldF9tb2R1bGVfY29uZmlnX3Jlc3BvbnNlGAgg",
-            "ASgLMhgubWVzaHRhc3RpYy5Nb2R1bGVDb25maWdIABI0CipnZXRfY2FubmVk",
-            "X21lc3NhZ2VfbW9kdWxlX21lc3NhZ2VzX3JlcXVlc3QYCiABKAhIABI1Citn",
-            "ZXRfY2FubmVkX21lc3NhZ2VfbW9kdWxlX21lc3NhZ2VzX3Jlc3BvbnNlGAsg",
-            "ASgJSAASJQobZ2V0X2RldmljZV9tZXRhZGF0YV9yZXF1ZXN0GAwgASgISAAS",
-            "QgocZ2V0X2RldmljZV9tZXRhZGF0YV9yZXNwb25zZRgNIAEoCzIaLm1lc2h0",
-            "YXN0aWMuRGV2aWNlTWV0YWRhdGFIABIeChRnZXRfcmluZ3RvbmVfcmVxdWVz",
-            "dBgOIAEoCEgAEh8KFWdldF9yaW5ndG9uZV9yZXNwb25zZRgPIAEoCUgAEiUK",
-            "CXNldF9vd25lchggIAEoCzIQLm1lc2h0YXN0aWMuVXNlckgAEioKC3NldF9j",
-            "aGFubmVsGCEgASgLMhMubWVzaHRhc3RpYy5DaGFubmVsSAASKAoKc2V0X2Nv",
-            "bmZpZxgiIAEoCzISLm1lc2h0YXN0aWMuQ29uZmlnSAASNQoRc2V0X21vZHVs",
-            "ZV9jb25maWcYIyABKAsyGC5tZXNodGFzdGljLk1vZHVsZUNvbmZpZ0gAEiwK",
-            "InNldF9jYW5uZWRfbWVzc2FnZV9tb2R1bGVfbWVzc2FnZXMYJCABKAlIABIe",
-            "ChRzZXRfcmluZ3RvbmVfbWVzc2FnZRglIAEoCUgAEh0KE2JlZ2luX2VkaXRf",
-            "c2V0dGluZ3MYQCABKAhIABIeChRjb21taXRfZWRpdF9zZXR0aW5ncxhBIAEo",
-            "CEgAEhwKEnJlYm9vdF9vdGFfc2Vjb25kcxhfIAEoBUgAEhgKDmV4aXRfc2lt",
-            "dWxhdG9yGGAgASgISAASGAoOcmVib290X3NlY29uZHMYYSABKAVIABIaChBz",
-            "aHV0ZG93bl9zZWNvbmRzGGIgASgFSAASFwoNZmFjdG9yeV9yZXNldBhjIAEo",
-            "BUgAEhYKDG5vZGVkYl9yZXNldBhkIAEoBUgAIpUBCgpDb25maWdUeXBlEhEK",
-            "DURFVklDRV9DT05GSUcQABITCg9QT1NJVElPTl9DT05GSUcQARIQCgxQT1dF",
-            "Ul9DT05GSUcQAhISCg5ORVRXT1JLX0NPTkZJRxADEhIKDkRJU1BMQVlfQ09O",
-            "RklHEAQSDwoLTE9SQV9DT05GSUcQBRIUChBCTFVFVE9PVEhfQ09ORklHEAYi",
-            "0wEKEE1vZHVsZUNvbmZpZ1R5cGUSDwoLTVFUVF9DT05GSUcQABIRCg1TRVJJ",
-            "QUxfQ09ORklHEAESEwoPRVhUTk9USUZfQ09ORklHEAISFwoTU1RPUkVGT1JX",
-            "QVJEX0NPTkZJRxADEhQKEFJBTkdFVEVTVF9DT05GSUcQBBIUChBURUxFTUVU",
-            "UllfQ09ORklHEAUSFAoQQ0FOTkVETVNHX0NPTkZJRxAGEhAKDEFVRElPX0NP",
-            "TkZJRxAHEhkKFVJFTU9URUhBUkRXQVJFX0NPTkZJRxAIQhEKD3BheWxvYWRf",
-            "dmFyaWFudEJiChNjb20uZ2Vla3N2aWxsZS5tZXNoQgtBZG1pblByb3Rvc0gD",
-            "WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRh",
-            "c3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "ZXNoLnByb3RvGh5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8aIm1l",
+            "c2h0YXN0aWMvY29ubmVjdGlvbl9zdGF0dXMucHJvdG8i5w0KDEFkbWluTWVz",
+            "c2FnZRIdChNnZXRfY2hhbm5lbF9yZXF1ZXN0GAEgASgNSAASMwoUZ2V0X2No",
+            "YW5uZWxfcmVzcG9uc2UYAiABKAsyEy5tZXNodGFzdGljLkNoYW5uZWxIABIb",
+            "ChFnZXRfb3duZXJfcmVxdWVzdBgDIAEoCEgAEi4KEmdldF9vd25lcl9yZXNw",
+            "b25zZRgEIAEoCzIQLm1lc2h0YXN0aWMuVXNlckgAEkEKEmdldF9jb25maWdf",
+            "cmVxdWVzdBgFIAEoDjIjLm1lc2h0YXN0aWMuQWRtaW5NZXNzYWdlLkNvbmZp",
+            "Z1R5cGVIABIxChNnZXRfY29uZmlnX3Jlc3BvbnNlGAYgASgLMhIubWVzaHRh",
+            "c3RpYy5Db25maWdIABJOChlnZXRfbW9kdWxlX2NvbmZpZ19yZXF1ZXN0GAcg",
+            "ASgOMikubWVzaHRhc3RpYy5BZG1pbk1lc3NhZ2UuTW9kdWxlQ29uZmlnVHlw",
+            "ZUgAEj4KGmdldF9tb2R1bGVfY29uZmlnX3Jlc3BvbnNlGAggASgLMhgubWVz",
+            "aHRhc3RpYy5Nb2R1bGVDb25maWdIABI0CipnZXRfY2FubmVkX21lc3NhZ2Vf",
+            "bW9kdWxlX21lc3NhZ2VzX3JlcXVlc3QYCiABKAhIABI1CitnZXRfY2FubmVk",
+            "X21lc3NhZ2VfbW9kdWxlX21lc3NhZ2VzX3Jlc3BvbnNlGAsgASgJSAASJQob",
+            "Z2V0X2RldmljZV9tZXRhZGF0YV9yZXF1ZXN0GAwgASgISAASQgocZ2V0X2Rl",
+            "dmljZV9tZXRhZGF0YV9yZXNwb25zZRgNIAEoCzIaLm1lc2h0YXN0aWMuRGV2",
+            "aWNlTWV0YWRhdGFIABIeChRnZXRfcmluZ3RvbmVfcmVxdWVzdBgOIAEoCEgA",
+            "Eh8KFWdldF9yaW5ndG9uZV9yZXNwb25zZRgPIAEoCUgAEi4KJGdldF9kZXZp",
+            "Y2VfY29ubmVjdGlvbl9zdGF0dXNfcmVxdWVzdBgQIAEoCEgAElMKJWdldF9k",
+            "ZXZpY2VfY29ubmVjdGlvbl9zdGF0dXNfcmVzcG9uc2UYESABKAsyIi5tZXNo",
+            "dGFzdGljLkRldmljZUNvbm5lY3Rpb25TdGF0dXNIABIxCgxzZXRfaGFtX21v",
+            "ZGUYEiABKAsyGS5tZXNodGFzdGljLkhhbVBhcmFtZXRlcnNIABIlCglzZXRf",
+            "b3duZXIYICABKAsyEC5tZXNodGFzdGljLlVzZXJIABIqCgtzZXRfY2hhbm5l",
+            "bBghIAEoCzITLm1lc2h0YXN0aWMuQ2hhbm5lbEgAEigKCnNldF9jb25maWcY",
+            "IiABKAsyEi5tZXNodGFzdGljLkNvbmZpZ0gAEjUKEXNldF9tb2R1bGVfY29u",
+            "ZmlnGCMgASgLMhgubWVzaHRhc3RpYy5Nb2R1bGVDb25maWdIABIsCiJzZXRf",
+            "Y2FubmVkX21lc3NhZ2VfbW9kdWxlX21lc3NhZ2VzGCQgASgJSAASHgoUc2V0",
+            "X3Jpbmd0b25lX21lc3NhZ2UYJSABKAlIABIdChNiZWdpbl9lZGl0X3NldHRp",
+            "bmdzGEAgASgISAASHgoUY29tbWl0X2VkaXRfc2V0dGluZ3MYQSABKAhIABIc",
+            "ChJyZWJvb3Rfb3RhX3NlY29uZHMYXyABKAVIABIYCg5leGl0X3NpbXVsYXRv",
+            "chhgIAEoCEgAEhgKDnJlYm9vdF9zZWNvbmRzGGEgASgFSAASGgoQc2h1dGRv",
+            "d25fc2Vjb25kcxhiIAEoBUgAEhcKDWZhY3RvcnlfcmVzZXQYYyABKAVIABIW",
+            "Cgxub2RlZGJfcmVzZXQYZCABKAVIACKVAQoKQ29uZmlnVHlwZRIRCg1ERVZJ",
+            "Q0VfQ09ORklHEAASEwoPUE9TSVRJT05fQ09ORklHEAESEAoMUE9XRVJfQ09O",
+            "RklHEAISEgoOTkVUV09SS19DT05GSUcQAxISCg5ESVNQTEFZX0NPTkZJRxAE",
+            "Eg8KC0xPUkFfQ09ORklHEAUSFAoQQkxVRVRPT1RIX0NPTkZJRxAGItMBChBN",
+            "b2R1bGVDb25maWdUeXBlEg8KC01RVFRfQ09ORklHEAASEQoNU0VSSUFMX0NP",
+            "TkZJRxABEhMKD0VYVE5PVElGX0NPTkZJRxACEhcKE1NUT1JFRk9SV0FSRF9D",
+            "T05GSUcQAxIUChBSQU5HRVRFU1RfQ09ORklHEAQSFAoQVEVMRU1FVFJZX0NP",
+            "TkZJRxAFEhQKEENBTk5FRE1TR19DT05GSUcQBhIQCgxBVURJT19DT05GSUcQ",
+            "BxIZChVSRU1PVEVIQVJEV0FSRV9DT05GSUcQCEIRCg9wYXlsb2FkX3Zhcmlh",
+            "bnQiWwoNSGFtUGFyYW1ldGVycxIRCgljYWxsX3NpZ24YASABKAkSEAoIdHhf",
+            "cG93ZXIYAiABKAUSEQoJZnJlcXVlbmN5GAMgASgCEhIKCnNob3J0X25hbWUY",
+            "BCABKAlCYAoTY29tLmdlZWtzdmlsbGUubWVzaEILQWRtaW5Qcm90b3NaImdp",
+            "dGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGlj",
+            "LlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceMetadataReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceMetadataReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -158,6 +166,15 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.GetRingtoneResponse:
           GetRingtoneResponse = other.GetRingtoneResponse;
+          break;
+        case PayloadVariantOneofCase.GetDeviceConnectionStatusRequest:
+          GetDeviceConnectionStatusRequest = other.GetDeviceConnectionStatusRequest;
+          break;
+        case PayloadVariantOneofCase.GetDeviceConnectionStatusResponse:
+          GetDeviceConnectionStatusResponse = other.GetDeviceConnectionStatusResponse.Clone();
+          break;
+        case PayloadVariantOneofCase.SetHamMode:
+          SetHamMode = other.SetHamMode.Clone();
           break;
         case PayloadVariantOneofCase.SetOwner:
           SetOwner = other.SetOwner.Clone();
@@ -437,6 +454,54 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "get_device_connection_status_request" field.</summary>
+    public const int GetDeviceConnectionStatusRequestFieldNumber = 16;
+    /// <summary>
+    ///
+    /// Request the node to send it's connection status
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GetDeviceConnectionStatusRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest ? (bool) payloadVariant_ : false; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.GetDeviceConnectionStatusRequest;
+      }
+    }
+
+    /// <summary>Field number for the "get_device_connection_status_response" field.</summary>
+    public const int GetDeviceConnectionStatusResponseFieldNumber = 17;
+    /// <summary>
+    ///
+    /// Device connection status response
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.DeviceConnectionStatus GetDeviceConnectionStatusResponse {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse ? (global::Meshtastic.Protobufs.DeviceConnectionStatus) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.GetDeviceConnectionStatusResponse;
+      }
+    }
+
+    /// <summary>Field number for the "set_ham_mode" field.</summary>
+    public const int SetHamModeFieldNumber = 18;
+    /// <summary>
+    ///
+    /// Setup a node for licensed amateur (ham) radio operation
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.HamParameters SetHamMode {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode ? (global::Meshtastic.Protobufs.HamParameters) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.SetHamMode;
+      }
+    }
+
     /// <summary>Field number for the "set_owner" field.</summary>
     public const int SetOwnerFieldNumber = 32;
     /// <summary>
@@ -686,6 +751,9 @@ namespace Meshtastic.Protobufs {
       GetDeviceMetadataResponse = 13,
       GetRingtoneRequest = 14,
       GetRingtoneResponse = 15,
+      GetDeviceConnectionStatusRequest = 16,
+      GetDeviceConnectionStatusResponse = 17,
+      SetHamMode = 18,
       SetOwner = 32,
       SetChannel = 33,
       SetConfig = 34,
@@ -744,6 +812,9 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(GetDeviceMetadataResponse, other.GetDeviceMetadataResponse)) return false;
       if (GetRingtoneRequest != other.GetRingtoneRequest) return false;
       if (GetRingtoneResponse != other.GetRingtoneResponse) return false;
+      if (GetDeviceConnectionStatusRequest != other.GetDeviceConnectionStatusRequest) return false;
+      if (!object.Equals(GetDeviceConnectionStatusResponse, other.GetDeviceConnectionStatusResponse)) return false;
+      if (!object.Equals(SetHamMode, other.SetHamMode)) return false;
       if (!object.Equals(SetOwner, other.SetOwner)) return false;
       if (!object.Equals(SetChannel, other.SetChannel)) return false;
       if (!object.Equals(SetConfig, other.SetConfig)) return false;
@@ -780,6 +851,9 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataResponse) hash ^= GetDeviceMetadataResponse.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) hash ^= GetRingtoneRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) hash ^= GetRingtoneResponse.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest) hash ^= GetDeviceConnectionStatusRequest.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse) hash ^= GetDeviceConnectionStatusResponse.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode) hash ^= SetHamMode.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) hash ^= SetOwner.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetChannel) hash ^= SetChannel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetConfig) hash ^= SetConfig.GetHashCode();
@@ -868,6 +942,18 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) {
         output.WriteRawTag(122);
         output.WriteString(GetRingtoneResponse);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(GetDeviceConnectionStatusRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(GetDeviceConnectionStatusResponse);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(SetHamMode);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
@@ -991,6 +1077,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(122);
         output.WriteString(GetRingtoneResponse);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(GetDeviceConnectionStatusRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(GetDeviceConnectionStatusResponse);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(SetHamMode);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -1098,6 +1196,15 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GetRingtoneResponse);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest) {
+        size += 2 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GetDeviceConnectionStatusResponse);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetHamMode);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetOwner);
@@ -1210,6 +1317,21 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.GetRingtoneResponse:
           GetRingtoneResponse = other.GetRingtoneResponse;
+          break;
+        case PayloadVariantOneofCase.GetDeviceConnectionStatusRequest:
+          GetDeviceConnectionStatusRequest = other.GetDeviceConnectionStatusRequest;
+          break;
+        case PayloadVariantOneofCase.GetDeviceConnectionStatusResponse:
+          if (GetDeviceConnectionStatusResponse == null) {
+            GetDeviceConnectionStatusResponse = new global::Meshtastic.Protobufs.DeviceConnectionStatus();
+          }
+          GetDeviceConnectionStatusResponse.MergeFrom(other.GetDeviceConnectionStatusResponse);
+          break;
+        case PayloadVariantOneofCase.SetHamMode:
+          if (SetHamMode == null) {
+            SetHamMode = new global::Meshtastic.Protobufs.HamParameters();
+          }
+          SetHamMode.MergeFrom(other.SetHamMode);
           break;
         case PayloadVariantOneofCase.SetOwner:
           if (SetOwner == null) {
@@ -1363,6 +1485,28 @@ namespace Meshtastic.Protobufs {
           }
           case 122: {
             GetRingtoneResponse = input.ReadString();
+            break;
+          }
+          case 128: {
+            GetDeviceConnectionStatusRequest = input.ReadBool();
+            break;
+          }
+          case 138: {
+            global::Meshtastic.Protobufs.DeviceConnectionStatus subBuilder = new global::Meshtastic.Protobufs.DeviceConnectionStatus();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse) {
+              subBuilder.MergeFrom(GetDeviceConnectionStatusResponse);
+            }
+            input.ReadMessage(subBuilder);
+            GetDeviceConnectionStatusResponse = subBuilder;
+            break;
+          }
+          case 146: {
+            global::Meshtastic.Protobufs.HamParameters subBuilder = new global::Meshtastic.Protobufs.HamParameters();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode) {
+              subBuilder.MergeFrom(SetHamMode);
+            }
+            input.ReadMessage(subBuilder);
+            SetHamMode = subBuilder;
             break;
           }
           case 258: {
@@ -1537,6 +1681,28 @@ namespace Meshtastic.Protobufs {
           }
           case 122: {
             GetRingtoneResponse = input.ReadString();
+            break;
+          }
+          case 128: {
+            GetDeviceConnectionStatusRequest = input.ReadBool();
+            break;
+          }
+          case 138: {
+            global::Meshtastic.Protobufs.DeviceConnectionStatus subBuilder = new global::Meshtastic.Protobufs.DeviceConnectionStatus();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse) {
+              subBuilder.MergeFrom(GetDeviceConnectionStatusResponse);
+            }
+            input.ReadMessage(subBuilder);
+            GetDeviceConnectionStatusResponse = subBuilder;
+            break;
+          }
+          case 146: {
+            global::Meshtastic.Protobufs.HamParameters subBuilder = new global::Meshtastic.Protobufs.HamParameters();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode) {
+              subBuilder.MergeFrom(SetHamMode);
+            }
+            input.ReadMessage(subBuilder);
+            SetHamMode = subBuilder;
             break;
           }
           case 258: {
@@ -1721,6 +1887,328 @@ namespace Meshtastic.Protobufs {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  ///
+  /// Parameters for setting up Meshtastic for ameteur radio usage
+  /// </summary>
+  public sealed partial class HamParameters : pb::IMessage<HamParameters>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<HamParameters> _parser = new pb::MessageParser<HamParameters>(() => new HamParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<HamParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.AdminReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HamParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HamParameters(HamParameters other) : this() {
+      callSign_ = other.callSign_;
+      txPower_ = other.txPower_;
+      frequency_ = other.frequency_;
+      shortName_ = other.shortName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HamParameters Clone() {
+      return new HamParameters(this);
+    }
+
+    /// <summary>Field number for the "call_sign" field.</summary>
+    public const int CallSignFieldNumber = 1;
+    private string callSign_ = "";
+    /// <summary>
+    ///
+    /// Amateur radio call sign, eg. KD2ABC
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallSign {
+      get { return callSign_; }
+      set {
+        callSign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tx_power" field.</summary>
+    public const int TxPowerFieldNumber = 2;
+    private int txPower_;
+    /// <summary>
+    ///
+    /// Transmit power in dBm at the LoRA transceiver, not including any amplification
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TxPower {
+      get { return txPower_; }
+      set {
+        txPower_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frequency" field.</summary>
+    public const int FrequencyFieldNumber = 3;
+    private float frequency_;
+    /// <summary>
+    ///
+    /// The selected frequency of LoRA operation
+    /// Please respect your local laws, regulations, and band plans.
+    /// Ensure your radio is capable of operating of the selected frequency before setting this.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Frequency {
+      get { return frequency_; }
+      set {
+        frequency_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "short_name" field.</summary>
+    public const int ShortNameFieldNumber = 4;
+    private string shortName_ = "";
+    /// <summary>
+    ///
+    /// Optional short name of user
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ShortName {
+      get { return shortName_; }
+      set {
+        shortName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as HamParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(HamParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CallSign != other.CallSign) return false;
+      if (TxPower != other.TxPower) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Frequency, other.Frequency)) return false;
+      if (ShortName != other.ShortName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CallSign.Length != 0) hash ^= CallSign.GetHashCode();
+      if (TxPower != 0) hash ^= TxPower.GetHashCode();
+      if (Frequency != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Frequency);
+      if (ShortName.Length != 0) hash ^= ShortName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CallSign.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CallSign);
+      }
+      if (TxPower != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TxPower);
+      }
+      if (Frequency != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Frequency);
+      }
+      if (ShortName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ShortName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CallSign.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CallSign);
+      }
+      if (TxPower != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TxPower);
+      }
+      if (Frequency != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Frequency);
+      }
+      if (ShortName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ShortName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CallSign.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallSign);
+      }
+      if (TxPower != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TxPower);
+      }
+      if (Frequency != 0F) {
+        size += 1 + 4;
+      }
+      if (ShortName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ShortName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(HamParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CallSign.Length != 0) {
+        CallSign = other.CallSign;
+      }
+      if (other.TxPower != 0) {
+        TxPower = other.TxPower;
+      }
+      if (other.Frequency != 0F) {
+        Frequency = other.Frequency;
+      }
+      if (other.ShortName.Length != 0) {
+        ShortName = other.ShortName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            CallSign = input.ReadString();
+            break;
+          }
+          case 16: {
+            TxPower = input.ReadInt32();
+            break;
+          }
+          case 29: {
+            Frequency = input.ReadFloat();
+            break;
+          }
+          case 34: {
+            ShortName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CallSign = input.ReadString();
+            break;
+          }
+          case 16: {
+            TxPower = input.ReadInt32();
+            break;
+          }
+          case 29: {
+            Frequency = input.ReadFloat();
+            break;
+          }
+          case 34: {
+            ShortName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

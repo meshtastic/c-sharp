@@ -25,29 +25,32 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChttZXNodGFzdGljL2RldmljZW9ubHkucHJvdG8SCm1lc2h0YXN0aWMaGG1l",
-            "c2h0YXN0aWMvY2hhbm5lbC5wcm90bxoVbWVzaHRhc3RpYy9tZXNoLnByb3Rv",
-            "IpcCCgtEZXZpY2VTdGF0ZRInCgdteV9ub2RlGAIgASgLMhYubWVzaHRhc3Rp",
-            "Yy5NeU5vZGVJbmZvEh8KBW93bmVyGAMgASgLMhAubWVzaHRhc3RpYy5Vc2Vy",
-            "EiUKB25vZGVfZGIYBCADKAsyFC5tZXNodGFzdGljLk5vZGVJbmZvEi0KDXJl",
-            "Y2VpdmVfcXVldWUYBSADKAsyFi5tZXNodGFzdGljLk1lc2hQYWNrZXQSDwoH",
-            "dmVyc2lvbhgIIAEoDRIvCg9yeF90ZXh0X21lc3NhZ2UYByABKAsyFi5tZXNo",
-            "dGFzdGljLk1lc2hQYWNrZXQSDwoHbm9fc2F2ZRgJIAEoCBIVCg1kaWRfZ3Bz",
-            "X3Jlc2V0GAsgASgIIkUKC0NoYW5uZWxGaWxlEiUKCGNoYW5uZWxzGAEgAygL",
-            "MhMubWVzaHRhc3RpYy5DaGFubmVsEg8KB3ZlcnNpb24YAiABKA0ipAEKCE9F",
-            "TVN0b3JlEhYKDm9lbV9pY29uX3dpZHRoGAEgASgNEhcKD29lbV9pY29uX2hl",
-            "aWdodBgCIAEoDRIVCg1vZW1faWNvbl9iaXRzGAMgASgMEikKCG9lbV9mb250",
-            "GAQgASgOMhcubWVzaHRhc3RpYy5TY3JlZW5Gb250cxIQCghvZW1fdGV4dBgF",
-            "IAEoCRITCgtvZW1fYWVzX2tleRgGIAEoDCo+CgtTY3JlZW5Gb250cxIOCgpG",
-            "T05UX1NNQUxMEAASDwoLRk9OVF9NRURJVU0QARIOCgpGT05UX0xBUkdFEAJC",
-            "YQoTY29tLmdlZWtzdmlsbGUubWVzaEIKRGV2aWNlT25seUgDWiJnaXRodWIu",
-            "Y29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90",
-            "b2J1ZnO6AgBiBnByb3RvMw=="));
+            "c2h0YXN0aWMvY2hhbm5lbC5wcm90bxoabWVzaHRhc3RpYy9sb2NhbG9ubHku",
+            "cHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90byKXAgoLRGV2aWNlU3RhdGUS",
+            "JwoHbXlfbm9kZRgCIAEoCzIWLm1lc2h0YXN0aWMuTXlOb2RlSW5mbxIfCgVv",
+            "d25lchgDIAEoCzIQLm1lc2h0YXN0aWMuVXNlchIlCgdub2RlX2RiGAQgAygL",
+            "MhQubWVzaHRhc3RpYy5Ob2RlSW5mbxItCg1yZWNlaXZlX3F1ZXVlGAUgAygL",
+            "MhYubWVzaHRhc3RpYy5NZXNoUGFja2V0Eg8KB3ZlcnNpb24YCCABKA0SLwoP",
+            "cnhfdGV4dF9tZXNzYWdlGAcgASgLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0",
+            "Eg8KB25vX3NhdmUYCSABKAgSFQoNZGlkX2dwc19yZXNldBgLIAEoCCJFCgtD",
+            "aGFubmVsRmlsZRIlCghjaGFubmVscxgBIAMoCzITLm1lc2h0YXN0aWMuQ2hh",
+            "bm5lbBIPCgd2ZXJzaW9uGAIgASgNIpcCCghPRU1TdG9yZRIWCg5vZW1faWNv",
+            "bl93aWR0aBgBIAEoDRIXCg9vZW1faWNvbl9oZWlnaHQYAiABKA0SFQoNb2Vt",
+            "X2ljb25fYml0cxgDIAEoDBIpCghvZW1fZm9udBgEIAEoDjIXLm1lc2h0YXN0",
+            "aWMuU2NyZWVuRm9udHMSEAoIb2VtX3RleHQYBSABKAkSEwoLb2VtX2Flc19r",
+            "ZXkYBiABKAwSMQoQb2VtX2xvY2FsX2NvbmZpZxgHIAEoCzIXLm1lc2h0YXN0",
+            "aWMuTG9jYWxDb25maWcSPgoXb2VtX2xvY2FsX21vZHVsZV9jb25maWcYCCAB",
+            "KAsyHS5tZXNodGFzdGljLkxvY2FsTW9kdWxlQ29uZmlnKj4KC1NjcmVlbkZv",
+            "bnRzEg4KCkZPTlRfU01BTEwQABIPCgtGT05UX01FRElVTRABEg4KCkZPTlRf",
+            "TEFSR0UQAkJfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpEZXZpY2VPbmx5WiJn",
+            "aXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3Rp",
+            "Yy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.ScreenFonts), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceState), global::Meshtastic.Protobufs.DeviceState.Parser, new[]{ "MyNode", "Owner", "NodeDb", "ReceiveQueue", "Version", "RxTextMessage", "NoSave", "DidGpsReset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ChannelFile), global::Meshtastic.Protobufs.ChannelFile.Parser, new[]{ "Channels", "Version" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.OEMStore), global::Meshtastic.Protobufs.OEMStore.Parser, new[]{ "OemIconWidth", "OemIconHeight", "OemIconBits", "OemFont", "OemText", "OemAesKey" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.OEMStore), global::Meshtastic.Protobufs.OEMStore.Parser, new[]{ "OemIconWidth", "OemIconHeight", "OemIconBits", "OemFont", "OemText", "OemAesKey", "OemLocalConfig", "OemLocalModuleConfig" }, null, null, null, null)
           }));
     }
     #endregion
@@ -851,6 +854,8 @@ namespace Meshtastic.Protobufs {
       oemFont_ = other.oemFont_;
       oemText_ = other.oemText_;
       oemAesKey_ = other.oemAesKey_;
+      oemLocalConfig_ = other.oemLocalConfig_ != null ? other.oemLocalConfig_.Clone() : null;
+      oemLocalModuleConfig_ = other.oemLocalModuleConfig_ != null ? other.oemLocalModuleConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -956,6 +961,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "oem_local_config" field.</summary>
+    public const int OemLocalConfigFieldNumber = 7;
+    private global::Meshtastic.Protobufs.LocalConfig oemLocalConfig_;
+    /// <summary>
+    ///
+    /// A Preset LocalConfig to apply during factory reset
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.LocalConfig OemLocalConfig {
+      get { return oemLocalConfig_; }
+      set {
+        oemLocalConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "oem_local_module_config" field.</summary>
+    public const int OemLocalModuleConfigFieldNumber = 8;
+    private global::Meshtastic.Protobufs.LocalModuleConfig oemLocalModuleConfig_;
+    /// <summary>
+    ///
+    /// A Preset LocalModuleConfig to apply during factory reset
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.LocalModuleConfig OemLocalModuleConfig {
+      get { return oemLocalModuleConfig_; }
+      set {
+        oemLocalModuleConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -977,6 +1014,8 @@ namespace Meshtastic.Protobufs {
       if (OemFont != other.OemFont) return false;
       if (OemText != other.OemText) return false;
       if (OemAesKey != other.OemAesKey) return false;
+      if (!object.Equals(OemLocalConfig, other.OemLocalConfig)) return false;
+      if (!object.Equals(OemLocalModuleConfig, other.OemLocalModuleConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -990,6 +1029,8 @@ namespace Meshtastic.Protobufs {
       if (OemFont != global::Meshtastic.Protobufs.ScreenFonts.FontSmall) hash ^= OemFont.GetHashCode();
       if (OemText.Length != 0) hash ^= OemText.GetHashCode();
       if (OemAesKey.Length != 0) hash ^= OemAesKey.GetHashCode();
+      if (oemLocalConfig_ != null) hash ^= OemLocalConfig.GetHashCode();
+      if (oemLocalModuleConfig_ != null) hash ^= OemLocalModuleConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1032,6 +1073,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteBytes(OemAesKey);
       }
+      if (oemLocalConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(OemLocalConfig);
+      }
+      if (oemLocalModuleConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(OemLocalModuleConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1066,6 +1115,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteBytes(OemAesKey);
       }
+      if (oemLocalConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(OemLocalConfig);
+      }
+      if (oemLocalModuleConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(OemLocalModuleConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1093,6 +1150,12 @@ namespace Meshtastic.Protobufs {
       }
       if (OemAesKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(OemAesKey);
+      }
+      if (oemLocalConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OemLocalConfig);
+      }
+      if (oemLocalModuleConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OemLocalModuleConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1123,6 +1186,18 @@ namespace Meshtastic.Protobufs {
       }
       if (other.OemAesKey.Length != 0) {
         OemAesKey = other.OemAesKey;
+      }
+      if (other.oemLocalConfig_ != null) {
+        if (oemLocalConfig_ == null) {
+          OemLocalConfig = new global::Meshtastic.Protobufs.LocalConfig();
+        }
+        OemLocalConfig.MergeFrom(other.OemLocalConfig);
+      }
+      if (other.oemLocalModuleConfig_ != null) {
+        if (oemLocalModuleConfig_ == null) {
+          OemLocalModuleConfig = new global::Meshtastic.Protobufs.LocalModuleConfig();
+        }
+        OemLocalModuleConfig.MergeFrom(other.OemLocalModuleConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1163,6 +1238,20 @@ namespace Meshtastic.Protobufs {
             OemAesKey = input.ReadBytes();
             break;
           }
+          case 58: {
+            if (oemLocalConfig_ == null) {
+              OemLocalConfig = new global::Meshtastic.Protobufs.LocalConfig();
+            }
+            input.ReadMessage(OemLocalConfig);
+            break;
+          }
+          case 66: {
+            if (oemLocalModuleConfig_ == null) {
+              OemLocalModuleConfig = new global::Meshtastic.Protobufs.LocalModuleConfig();
+            }
+            input.ReadMessage(OemLocalModuleConfig);
+            break;
+          }
         }
       }
     #endif
@@ -1200,6 +1289,20 @@ namespace Meshtastic.Protobufs {
           }
           case 50: {
             OemAesKey = input.ReadBytes();
+            break;
+          }
+          case 58: {
+            if (oemLocalConfig_ == null) {
+              OemLocalConfig = new global::Meshtastic.Protobufs.LocalConfig();
+            }
+            input.ReadMessage(OemLocalConfig);
+            break;
+          }
+          case 66: {
+            if (oemLocalModuleConfig_ == null) {
+              OemLocalModuleConfig = new global::Meshtastic.Protobufs.LocalModuleConfig();
+            }
+            input.ReadMessage(OemLocalModuleConfig);
             break;
           }
         }
