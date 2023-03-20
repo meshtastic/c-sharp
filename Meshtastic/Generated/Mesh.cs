@@ -94,7 +94,7 @@ namespace Meshtastic.Protobufs {
             "EDISCQoFRVJST1IQKBILCgdXQVJOSU5HEB4SCAoESU5GTxAUEgkKBURFQlVH",
             "EAoSCQoFVFJBQ0UQBSJQCgtRdWV1ZVN0YXR1cxILCgNyZXMYASABKAUSDAoE",
             "ZnJlZRgCIAEoDRIOCgZtYXhsZW4YAyABKA0SFgoObWVzaF9wYWNrZXRfaWQY",
-            "BCABKA0i5QMKCUZyb21SYWRpbxIKCgJpZBgBIAEoDRIoCgZwYWNrZXQYAiAB",
+            "BCABKA0ilQQKCUZyb21SYWRpbxIKCgJpZBgBIAEoDRIoCgZwYWNrZXQYAiAB",
             "KAsyFi5tZXNodGFzdGljLk1lc2hQYWNrZXRIABIpCgdteV9pbmZvGAMgASgL",
             "MhYubWVzaHRhc3RpYy5NeU5vZGVJbmZvSAASKQoJbm9kZV9pbmZvGAQgASgL",
             "MhQubWVzaHRhc3RpYy5Ob2RlSW5mb0gAEiQKBmNvbmZpZxgFIAEoCzISLm1l",
@@ -104,33 +104,42 @@ namespace Meshtastic.Protobufs {
             "GC5tZXNodGFzdGljLk1vZHVsZUNvbmZpZ0gAEiYKB2NoYW5uZWwYCiABKAsy",
             "Ey5tZXNodGFzdGljLkNoYW5uZWxIABIuCgtxdWV1ZVN0YXR1cxgLIAEoCzIX",
             "Lm1lc2h0YXN0aWMuUXVldWVTdGF0dXNIABIqCgx4bW9kZW1QYWNrZXQYDCAB",
-            "KAsyEi5tZXNodGFzdGljLlhNb2RlbUgAQhEKD3BheWxvYWRfdmFyaWFudCKi",
-            "AQoHVG9SYWRpbxIoCgZwYWNrZXQYASABKAsyFi5tZXNodGFzdGljLk1lc2hQ",
-            "YWNrZXRIABIYCg53YW50X2NvbmZpZ19pZBgDIAEoDUgAEhQKCmRpc2Nvbm5l",
-            "Y3QYBCABKAhIABIqCgx4bW9kZW1QYWNrZXQYBSABKAsyEi5tZXNodGFzdGlj",
-            "LlhNb2RlbUgAQhEKD3BheWxvYWRfdmFyaWFudCJACgpDb21wcmVzc2VkEiQK",
-            "B3BvcnRudW0YASABKA4yEy5tZXNodGFzdGljLlBvcnROdW0SDAoEZGF0YRgC",
-            "IAEoDCqfBAoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRMT1JBX1Yy",
-            "EAESDAoIVExPUkFfVjEQAhISCg5UTE9SQV9WMl8xXzFQNhADEgkKBVRCRUFN",
-            "EAQSDwoLSEVMVEVDX1YyXzAQBRIOCgpUQkVBTV9WMFA3EAYSCgoGVF9FQ0hP",
-            "EAcSEAoMVExPUkFfVjFfMVAzEAgSCwoHUkFLNDYzMRAJEg8KC0hFTFRFQ19W",
-            "Ml8xEAoSDQoJSEVMVEVDX1YxEAsSGAoUTElMWUdPX1RCRUFNX1MzX0NPUkUQ",
-            "DBIMCghSQUsxMTIwMBANEgsKB05BTk9fRzEQDhISCg5UTE9SQV9WMl8xXzFQ",
-            "OBAPEg8KC1RMT1JBX1QzX1MzEBASDgoKU1RBVElPTl9HMRAZEhEKDUxPUkFf",
-            "UkVMQVlfVjEQIBIOCgpOUkY1Mjg0MERLECESBwoDUFBSECISDwoLR0VOSUVC",
-            "TE9DS1MQIxIRCg1OUkY1Ml9VTktOT1dOECQSDQoJUE9SVERVSU5PECUSDwoL",
-            "QU5EUk9JRF9TSU0QJhIKCgZESVlfVjEQJxIVChFOUkY1Mjg0MF9QQ0ExMDA1",
-            "ORAoEgoKBkRSX0RFVhApEgsKB001U1RBQ0sQKhINCglIRUxURUNfVjMQKxIR",
-            "Cg1IRUxURUNfV1NMX1YzECwSEwoPQkVUQUZQVl8yNDAwX1RYEC0SDwoKUFJJ",
-            "VkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAAEhUKEERBVEFfUEFZ",
-            "TE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2RlEggKBE5PTkUQABIP",
-            "CgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQAhIMCghOT19S",
-            "QURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQ",
-            "BRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NFVFRJTkcQBxIT",
-            "Cg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9G",
-            "QUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl8KE2NvbS5nZWVrc3ZpbGxl",
-            "Lm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9n",
-            "ZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "KAsyEi5tZXNodGFzdGljLlhNb2RlbUgAEi4KCG1ldGFkYXRhGA0gASgLMhou",
+            "bWVzaHRhc3RpYy5EZXZpY2VNZXRhZGF0YUgAQhEKD3BheWxvYWRfdmFyaWFu",
+            "dCKiAQoHVG9SYWRpbxIoCgZwYWNrZXQYASABKAsyFi5tZXNodGFzdGljLk1l",
+            "c2hQYWNrZXRIABIYCg53YW50X2NvbmZpZ19pZBgDIAEoDUgAEhQKCmRpc2Nv",
+            "bm5lY3QYBCABKAhIABIqCgx4bW9kZW1QYWNrZXQYBSABKAsyEi5tZXNodGFz",
+            "dGljLlhNb2RlbUgAQhEKD3BheWxvYWRfdmFyaWFudCJACgpDb21wcmVzc2Vk",
+            "EiQKB3BvcnRudW0YASABKA4yEy5tZXNodGFzdGljLlBvcnROdW0SDAoEZGF0",
+            "YRgCIAEoDCKSAgoORGV2aWNlTWV0YWRhdGESGAoQZmlybXdhcmVfdmVyc2lv",
+            "bhgBIAEoCRIcChRkZXZpY2Vfc3RhdGVfdmVyc2lvbhgCIAEoDRITCgtjYW5T",
+            "aHV0ZG93bhgDIAEoCBIPCgdoYXNXaWZpGAQgASgIEhQKDGhhc0JsdWV0b290",
+            "aBgFIAEoCBITCgtoYXNFdGhlcm5ldBgGIAEoCBIyCgRyb2xlGAcgASgOMiQu",
+            "bWVzaHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnLlJvbGUSFgoOcG9zaXRp",
+            "b25fZmxhZ3MYCCABKA0SKwoIaHdfbW9kZWwYCSABKA4yGS5tZXNodGFzdGlj",
+            "LkhhcmR3YXJlTW9kZWwqzgQKDUhhcmR3YXJlTW9kZWwSCQoFVU5TRVQQABIM",
+            "CghUTE9SQV9WMhABEgwKCFRMT1JBX1YxEAISEgoOVExPUkFfVjJfMV8xUDYQ",
+            "AxIJCgVUQkVBTRAEEg8KC0hFTFRFQ19WMl8wEAUSDgoKVEJFQU1fVjBQNxAG",
+            "EgoKBlRfRUNITxAHEhAKDFRMT1JBX1YxXzFQMxAIEgsKB1JBSzQ2MzEQCRIP",
+            "CgtIRUxURUNfVjJfMRAKEg0KCUhFTFRFQ19WMRALEhgKFExJTFlHT19UQkVB",
+            "TV9TM19DT1JFEAwSDAoIUkFLMTEyMDAQDRILCgdOQU5PX0cxEA4SEgoOVExP",
+            "UkFfVjJfMV8xUDgQDxIPCgtUTE9SQV9UM19TMxAQEhQKEE5BTk9fRzFfRVhQ",
+            "TE9SRVIQERIOCgpTVEFUSU9OX0cxEBkSEQoNTE9SQV9SRUxBWV9WMRAgEg4K",
+            "Ck5SRjUyODQwREsQIRIHCgNQUFIQIhIPCgtHRU5JRUJMT0NLUxAjEhEKDU5S",
+            "RjUyX1VOS05PV04QJBINCglQT1JURFVJTk8QJRIPCgtBTkRST0lEX1NJTRAm",
+            "EgoKBkRJWV9WMRAnEhUKEU5SRjUyODQwX1BDQTEwMDU5ECgSCgoGRFJfREVW",
+            "ECkSCwoHTTVTVEFDSxAqEg0KCUhFTFRFQ19WMxArEhEKDUhFTFRFQ19XU0xf",
+            "VjMQLBITCg9CRVRBRlBWXzI0MDBfVFgQLRIXChNCRVRBRlBWXzkwMF9OQU5P",
+            "X1RYEC4SDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAA",
+            "EhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2Rl",
+            "EggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dB",
+            "SVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hf",
+            "VU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElP",
+            "X1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJ",
+            "EhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl8KE2Nv",
+            "bS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5jb20vbWVz",
+            "aHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oC",
+            "AGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -145,9 +154,10 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MyNodeInfo), global::Meshtastic.Protobufs.MyNodeInfo.Parser, new[]{ "MyNodeNum", "HasGps", "MaxChannels", "FirmwareVersion", "ErrorCode", "ErrorAddress", "ErrorCount", "RebootCount", "Bitrate", "MessageTimeoutMsec", "MinAppVersion", "AirPeriodTx", "AirPeriodRx", "HasWifi", "ChannelUtilization", "AirUtilTx" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LogRecord), global::Meshtastic.Protobufs.LogRecord.Parser, new[]{ "Message", "Time", "Source", "Level" }, null, new[]{ typeof(global::Meshtastic.Protobufs.LogRecord.Types.Level) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.QueueStatus), global::Meshtastic.Protobufs.QueueStatus.Parser, new[]{ "Res", "Free", "Maxlen", "MeshPacketId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel", "QueueStatus", "XmodemPacket" }, new[]{ "PayloadVariant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel", "QueueStatus", "XmodemPacket", "Metadata" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ToRadio), global::Meshtastic.Protobufs.ToRadio.Parser, new[]{ "Packet", "WantConfigId", "Disconnect", "XmodemPacket" }, new[]{ "PayloadVariant" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Compressed), global::Meshtastic.Protobufs.Compressed.Parser, new[]{ "Portnum", "Data" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Compressed), global::Meshtastic.Protobufs.Compressed.Parser, new[]{ "Portnum", "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetadata), global::Meshtastic.Protobufs.DeviceMetadata.Parser, new[]{ "FirmwareVersion", "DeviceStateVersion", "CanShutdown", "HasWifi", "HasBluetooth", "HasEthernet", "Role", "PositionFlags", "HwModel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -251,12 +261,19 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("TLORA_T3_S3")] TloraT3S3 = 16,
     /// <summary>
     ///
+    /// B&amp;Q Consulting Nano G1 Explorer: https://wiki.uniteng.com/en/meshtastic/nano-g1-explorer
+    /// </summary>
+    [pbr::OriginalName("NANO_G1_EXPLORER")] NanoG1Explorer = 17,
+    /// <summary>
+    ///
     /// B&amp;Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
     /// </summary>
     [pbr::OriginalName("STATION_G1")] StationG1 = 25,
     /// <summary>
     ///
+    /// ---------------------------------------------------------------------------
     /// Less common/prototype boards listed here (needs one more byte over the air)
+    /// ---------------------------------------------------------------------------
     /// </summary>
     [pbr::OriginalName("LORA_RELAY_V1")] LoraRelayV1 = 32,
     /// <summary>
@@ -326,7 +343,14 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("BETAFPV_2400_TX")] Betafpv2400Tx = 45,
     /// <summary>
     ///
+    /// BetaFPV ExpressLRS "Nano" TX Module 900MHz with ESP32 CPU
+    /// </summary>
+    [pbr::OriginalName("BETAFPV_900_NANO_TX")] Betafpv900NanoTx = 46,
+    /// <summary>
+    ///
+    /// ------------------------------------------------------------------------------------------------------------------------------------------
     /// Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
+    /// ------------------------------------------------------------------------------------------------------------------------------------------
     /// </summary>
     [pbr::OriginalName("PRIVATE_HW")] PrivateHw = 255,
   }
@@ -6476,6 +6500,9 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.XmodemPacket:
           XmodemPacket = other.XmodemPacket.Clone();
           break;
+        case PayloadVariantOneofCase.Metadata:
+          Metadata = other.Metadata.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -6688,6 +6715,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 13;
+    /// <summary>
+    ///
+    /// Device metadata message
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.DeviceMetadata Metadata {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Metadata ? (global::Meshtastic.Protobufs.DeviceMetadata) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.Metadata;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -6703,6 +6746,7 @@ namespace Meshtastic.Protobufs {
       Channel = 10,
       QueueStatus = 11,
       XmodemPacket = 12,
+      Metadata = 13,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6745,6 +6789,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Channel, other.Channel)) return false;
       if (!object.Equals(QueueStatus, other.QueueStatus)) return false;
       if (!object.Equals(XmodemPacket, other.XmodemPacket)) return false;
+      if (!object.Equals(Metadata, other.Metadata)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6765,6 +6810,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Channel) hash ^= Channel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) hash ^= QueueStatus.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) hash ^= XmodemPacket.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Metadata) hash ^= Metadata.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6832,6 +6878,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(98);
         output.WriteMessage(XmodemPacket);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Metadata) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Metadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6890,6 +6940,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(98);
         output.WriteMessage(XmodemPacket);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Metadata) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Metadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6935,6 +6989,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(XmodemPacket);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Metadata) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7011,6 +7068,12 @@ namespace Meshtastic.Protobufs {
             XmodemPacket = new global::Meshtastic.Protobufs.XModem();
           }
           XmodemPacket.MergeFrom(other.XmodemPacket);
+          break;
+        case PayloadVariantOneofCase.Metadata:
+          if (Metadata == null) {
+            Metadata = new global::Meshtastic.Protobufs.DeviceMetadata();
+          }
+          Metadata.MergeFrom(other.Metadata);
           break;
       }
 
@@ -7122,6 +7185,15 @@ namespace Meshtastic.Protobufs {
             XmodemPacket = subBuilder;
             break;
           }
+          case 106: {
+            global::Meshtastic.Protobufs.DeviceMetadata subBuilder = new global::Meshtastic.Protobufs.DeviceMetadata();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Metadata) {
+              subBuilder.MergeFrom(Metadata);
+            }
+            input.ReadMessage(subBuilder);
+            Metadata = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -7228,6 +7300,15 @@ namespace Meshtastic.Protobufs {
             }
             input.ReadMessage(subBuilder);
             XmodemPacket = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Meshtastic.Protobufs.DeviceMetadata subBuilder = new global::Meshtastic.Protobufs.DeviceMetadata();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Metadata) {
+              subBuilder.MergeFrom(Metadata);
+            }
+            input.ReadMessage(subBuilder);
+            Metadata = subBuilder;
             break;
           }
         }
@@ -7857,6 +7938,531 @@ namespace Meshtastic.Protobufs {
           }
           case 18: {
             Data = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// Device metadata response
+  /// </summary>
+  public sealed partial class DeviceMetadata : pb::IMessage<DeviceMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeviceMetadata> _parser = new pb::MessageParser<DeviceMetadata>(() => new DeviceMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeviceMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceMetadata(DeviceMetadata other) : this() {
+      firmwareVersion_ = other.firmwareVersion_;
+      deviceStateVersion_ = other.deviceStateVersion_;
+      canShutdown_ = other.canShutdown_;
+      hasWifi_ = other.hasWifi_;
+      hasBluetooth_ = other.hasBluetooth_;
+      hasEthernet_ = other.hasEthernet_;
+      role_ = other.role_;
+      positionFlags_ = other.positionFlags_;
+      hwModel_ = other.hwModel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceMetadata Clone() {
+      return new DeviceMetadata(this);
+    }
+
+    /// <summary>Field number for the "firmware_version" field.</summary>
+    public const int FirmwareVersionFieldNumber = 1;
+    private string firmwareVersion_ = "";
+    /// <summary>
+    ///
+    /// Device firmware version string
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FirmwareVersion {
+      get { return firmwareVersion_; }
+      set {
+        firmwareVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "device_state_version" field.</summary>
+    public const int DeviceStateVersionFieldNumber = 2;
+    private uint deviceStateVersion_;
+    /// <summary>
+    ///
+    /// Device state version
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DeviceStateVersion {
+      get { return deviceStateVersion_; }
+      set {
+        deviceStateVersion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "canShutdown" field.</summary>
+    public const int CanShutdownFieldNumber = 3;
+    private bool canShutdown_;
+    /// <summary>
+    ///
+    /// Indicates whether the device can shutdown CPU natively or via power management chip
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CanShutdown {
+      get { return canShutdown_; }
+      set {
+        canShutdown_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hasWifi" field.</summary>
+    public const int HasWifiFieldNumber = 4;
+    private bool hasWifi_;
+    /// <summary>
+    ///
+    /// Indicates that the device has native wifi capability
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWifi {
+      get { return hasWifi_; }
+      set {
+        hasWifi_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hasBluetooth" field.</summary>
+    public const int HasBluetoothFieldNumber = 5;
+    private bool hasBluetooth_;
+    /// <summary>
+    ///
+    /// Indicates that the device has native bluetooth capability
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBluetooth {
+      get { return hasBluetooth_; }
+      set {
+        hasBluetooth_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hasEthernet" field.</summary>
+    public const int HasEthernetFieldNumber = 6;
+    private bool hasEthernet_;
+    /// <summary>
+    ///
+    /// Indicates that the device has an ethernet peripheral
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEthernet {
+      get { return hasEthernet_; }
+      set {
+        hasEthernet_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "role" field.</summary>
+    public const int RoleFieldNumber = 7;
+    private global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role role_ = global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client;
+    /// <summary>
+    ///
+    /// Indicates that the device's role in the mesh
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role Role {
+      get { return role_; }
+      set {
+        role_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "position_flags" field.</summary>
+    public const int PositionFlagsFieldNumber = 8;
+    private uint positionFlags_;
+    /// <summary>
+    ///
+    /// Indicates the device's current enabled position flags
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PositionFlags {
+      get { return positionFlags_; }
+      set {
+        positionFlags_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hw_model" field.</summary>
+    public const int HwModelFieldNumber = 9;
+    private global::Meshtastic.Protobufs.HardwareModel hwModel_ = global::Meshtastic.Protobufs.HardwareModel.Unset;
+    /// <summary>
+    ///
+    /// Device hardware model
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.HardwareModel HwModel {
+      get { return hwModel_; }
+      set {
+        hwModel_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeviceMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeviceMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FirmwareVersion != other.FirmwareVersion) return false;
+      if (DeviceStateVersion != other.DeviceStateVersion) return false;
+      if (CanShutdown != other.CanShutdown) return false;
+      if (HasWifi != other.HasWifi) return false;
+      if (HasBluetooth != other.HasBluetooth) return false;
+      if (HasEthernet != other.HasEthernet) return false;
+      if (Role != other.Role) return false;
+      if (PositionFlags != other.PositionFlags) return false;
+      if (HwModel != other.HwModel) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FirmwareVersion.Length != 0) hash ^= FirmwareVersion.GetHashCode();
+      if (DeviceStateVersion != 0) hash ^= DeviceStateVersion.GetHashCode();
+      if (CanShutdown != false) hash ^= CanShutdown.GetHashCode();
+      if (HasWifi != false) hash ^= HasWifi.GetHashCode();
+      if (HasBluetooth != false) hash ^= HasBluetooth.GetHashCode();
+      if (HasEthernet != false) hash ^= HasEthernet.GetHashCode();
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) hash ^= Role.GetHashCode();
+      if (PositionFlags != 0) hash ^= PositionFlags.GetHashCode();
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) hash ^= HwModel.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FirmwareVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FirmwareVersion);
+      }
+      if (DeviceStateVersion != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(DeviceStateVersion);
+      }
+      if (CanShutdown != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(CanShutdown);
+      }
+      if (HasWifi != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(HasWifi);
+      }
+      if (HasBluetooth != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(HasBluetooth);
+      }
+      if (HasEthernet != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(HasEthernet);
+      }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Role);
+      }
+      if (PositionFlags != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(PositionFlags);
+      }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) HwModel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FirmwareVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FirmwareVersion);
+      }
+      if (DeviceStateVersion != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(DeviceStateVersion);
+      }
+      if (CanShutdown != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(CanShutdown);
+      }
+      if (HasWifi != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(HasWifi);
+      }
+      if (HasBluetooth != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(HasBluetooth);
+      }
+      if (HasEthernet != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(HasEthernet);
+      }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Role);
+      }
+      if (PositionFlags != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(PositionFlags);
+      }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) HwModel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FirmwareVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareVersion);
+      }
+      if (DeviceStateVersion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DeviceStateVersion);
+      }
+      if (CanShutdown != false) {
+        size += 1 + 1;
+      }
+      if (HasWifi != false) {
+        size += 1 + 1;
+      }
+      if (HasBluetooth != false) {
+        size += 1 + 1;
+      }
+      if (HasEthernet != false) {
+        size += 1 + 1;
+      }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Role);
+      }
+      if (PositionFlags != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PositionFlags);
+      }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HwModel);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeviceMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FirmwareVersion.Length != 0) {
+        FirmwareVersion = other.FirmwareVersion;
+      }
+      if (other.DeviceStateVersion != 0) {
+        DeviceStateVersion = other.DeviceStateVersion;
+      }
+      if (other.CanShutdown != false) {
+        CanShutdown = other.CanShutdown;
+      }
+      if (other.HasWifi != false) {
+        HasWifi = other.HasWifi;
+      }
+      if (other.HasBluetooth != false) {
+        HasBluetooth = other.HasBluetooth;
+      }
+      if (other.HasEthernet != false) {
+        HasEthernet = other.HasEthernet;
+      }
+      if (other.Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        Role = other.Role;
+      }
+      if (other.PositionFlags != 0) {
+        PositionFlags = other.PositionFlags;
+      }
+      if (other.HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        HwModel = other.HwModel;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FirmwareVersion = input.ReadString();
+            break;
+          }
+          case 16: {
+            DeviceStateVersion = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            CanShutdown = input.ReadBool();
+            break;
+          }
+          case 32: {
+            HasWifi = input.ReadBool();
+            break;
+          }
+          case 40: {
+            HasBluetooth = input.ReadBool();
+            break;
+          }
+          case 48: {
+            HasEthernet = input.ReadBool();
+            break;
+          }
+          case 56: {
+            Role = (global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            PositionFlags = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            HwModel = (global::Meshtastic.Protobufs.HardwareModel) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FirmwareVersion = input.ReadString();
+            break;
+          }
+          case 16: {
+            DeviceStateVersion = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            CanShutdown = input.ReadBool();
+            break;
+          }
+          case 32: {
+            HasWifi = input.ReadBool();
+            break;
+          }
+          case 40: {
+            HasBluetooth = input.ReadBool();
+            break;
+          }
+          case 48: {
+            HasEthernet = input.ReadBool();
+            break;
+          }
+          case 56: {
+            Role = (global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            PositionFlags = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            HwModel = (global::Meshtastic.Protobufs.HardwareModel) input.ReadEnum();
             break;
           }
         }

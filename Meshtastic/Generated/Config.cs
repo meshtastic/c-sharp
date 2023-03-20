@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyKYGwoGQ29u",
+            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyKkGwoGQ29u",
             "ZmlnEjEKBmRldmljZRgBIAEoCzIfLm1lc2h0YXN0aWMuQ29uZmlnLkRldmlj",
             "ZUNvbmZpZ0gAEjUKCHBvc2l0aW9uGAIgASgLMiEubWVzaHRhc3RpYy5Db25m",
             "aWcuUG9zaXRpb25Db25maWdIABIvCgVwb3dlchgDIAEoCzIeLm1lc2h0YXN0",
@@ -33,78 +33,78 @@ namespace Meshtastic.Protobufs {
             "ASgLMiAubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZ0gAEi0KBGxv",
             "cmEYBiABKAsyHS5tZXNodGFzdGljLkNvbmZpZy5Mb1JhQ29uZmlnSAASNwoJ",
             "Ymx1ZXRvb3RoGAcgASgLMiIubWVzaHRhc3RpYy5Db25maWcuQmx1ZXRvb3Ro",
-            "Q29uZmlnSAAargMKDERldmljZUNvbmZpZxIyCgRyb2xlGAEgASgOMiQubWVz",
+            "Q29uZmlnSAAaugMKDERldmljZUNvbmZpZxIyCgRyb2xlGAEgASgOMiQubWVz",
             "aHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnLlJvbGUSFgoOc2VyaWFsX2Vu",
             "YWJsZWQYAiABKAgSGQoRZGVidWdfbG9nX2VuYWJsZWQYAyABKAgSEwoLYnV0",
             "dG9uX2dwaW8YBCABKA0SEwoLYnV6emVyX2dwaW8YBSABKA0SSQoQcmVicm9h",
             "ZGNhc3RfbW9kZRgGIAEoDjIvLm1lc2h0YXN0aWMuQ29uZmlnLkRldmljZUNv",
             "bmZpZy5SZWJyb2FkY2FzdE1vZGUSIAoYbm9kZV9pbmZvX2Jyb2FkY2FzdF9z",
-            "ZWNzGAcgASgNIl0KBFJvbGUSCgoGQ0xJRU5UEAASDwoLQ0xJRU5UX01VVEUQ",
+            "ZWNzGAcgASgNImkKBFJvbGUSCgoGQ0xJRU5UEAASDwoLQ0xJRU5UX01VVEUQ",
             "ARIKCgZST1VURVIQAhIRCg1ST1VURVJfQ0xJRU5UEAMSDAoIUkVQRUFURVIQ",
-            "BBILCgdUUkFDS0VSEAUiQQoPUmVicm9hZGNhc3RNb2RlEgcKA0FMTBAAEhUK",
-            "EUFMTF9TS0lQX0RFQ09ESU5HEAESDgoKTE9DQUxfT05MWRACGqcDCg5Qb3Np",
-            "dGlvbkNvbmZpZxIfChdwb3NpdGlvbl9icm9hZGNhc3Rfc2VjcxgBIAEoDRIo",
-            "CiBwb3NpdGlvbl9icm9hZGNhc3Rfc21hcnRfZW5hYmxlZBgCIAEoCBIWCg5m",
-            "aXhlZF9wb3NpdGlvbhgDIAEoCBITCgtncHNfZW5hYmxlZBgEIAEoCBIbChNn",
-            "cHNfdXBkYXRlX2ludGVydmFsGAUgASgNEhgKEGdwc19hdHRlbXB0X3RpbWUY",
-            "BiABKA0SFgoOcG9zaXRpb25fZmxhZ3MYByABKA0SDwoHcnhfZ3BpbxgIIAEo",
-            "DRIPCgd0eF9ncGlvGAkgASgNIqsBCg1Qb3NpdGlvbkZsYWdzEgkKBVVOU0VU",
-            "EAASDAoIQUxUSVRVREUQARIQCgxBTFRJVFVERV9NU0wQAhIWChJHRU9JREFM",
-            "X1NFUEFSQVRJT04QBBIHCgNET1AQCBIJCgVIVkRPUBAQEg0KCVNBVElOVklF",
-            "VxAgEgoKBlNFUV9OTxBAEg4KCVRJTUVTVEFNUBCAARIMCgdIRUFESU5HEIAC",
-            "EgoKBVNQRUVEEIAEGuUBCgtQb3dlckNvbmZpZxIXCg9pc19wb3dlcl9zYXZp",
-            "bmcYASABKAgSJgoeb25fYmF0dGVyeV9zaHV0ZG93bl9hZnRlcl9zZWNzGAIg",
-            "ASgNEh8KF2FkY19tdWx0aXBsaWVyX292ZXJyaWRlGAMgASgCEhsKE3dhaXRf",
-            "Ymx1ZXRvb3RoX3NlY3MYBCABKA0SHQoVbWVzaF9zZHNfdGltZW91dF9zZWNz",
-            "GAUgASgNEhAKCHNkc19zZWNzGAYgASgNEg8KB2xzX3NlY3MYByABKA0SFQoN",
-            "bWluX3dha2Vfc2VjcxgIIAEoDRr+AgoNTmV0d29ya0NvbmZpZxIUCgx3aWZp",
-            "X2VuYWJsZWQYASABKAgSEQoJd2lmaV9zc2lkGAMgASgJEhAKCHdpZmlfcHNr",
-            "GAQgASgJEhIKCm50cF9zZXJ2ZXIYBSABKAkSEwoLZXRoX2VuYWJsZWQYBiAB",
-            "KAgSQgoMYWRkcmVzc19tb2RlGAcgASgOMiwubWVzaHRhc3RpYy5Db25maWcu",
-            "TmV0d29ya0NvbmZpZy5BZGRyZXNzTW9kZRJACgtpcHY0X2NvbmZpZxgIIAEo",
-            "CzIrLm1lc2h0YXN0aWMuQ29uZmlnLk5ldHdvcmtDb25maWcuSXBWNENvbmZp",
-            "ZxIWCg5yc3lzbG9nX3NlcnZlchgJIAEoCRpGCgpJcFY0Q29uZmlnEgoKAmlw",
-            "GAEgASgHEg8KB2dhdGV3YXkYAiABKAcSDgoGc3VibmV0GAMgASgHEgsKA2Ru",
-            "cxgEIAEoByIjCgtBZGRyZXNzTW9kZRIICgRESENQEAASCgoGU1RBVElDEAEa",
-            "nwUKDURpc3BsYXlDb25maWcSFgoOc2NyZWVuX29uX3NlY3MYASABKA0SSAoK",
-            "Z3BzX2Zvcm1hdBgCIAEoDjI0Lm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlD",
-            "b25maWcuR3BzQ29vcmRpbmF0ZUZvcm1hdBIhChlhdXRvX3NjcmVlbl9jYXJv",
-            "dXNlbF9zZWNzGAMgASgNEhkKEWNvbXBhc3Nfbm9ydGhfdG9wGAQgASgIEhMK",
-            "C2ZsaXBfc2NyZWVuGAUgASgIEjwKBXVuaXRzGAYgASgOMi0ubWVzaHRhc3Rp",
-            "Yy5Db25maWcuRGlzcGxheUNvbmZpZy5EaXNwbGF5VW5pdHMSNwoEb2xlZBgH",
-            "IAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlDb25maWcuT2xlZFR5",
-            "cGUSQQoLZGlzcGxheW1vZGUYCCABKA4yLC5tZXNodGFzdGljLkNvbmZpZy5E",
-            "aXNwbGF5Q29uZmlnLkRpc3BsYXlNb2RlEhQKDGhlYWRpbmdfYm9sZBgJIAEo",
-            "CCJNChNHcHNDb29yZGluYXRlRm9ybWF0EgcKA0RFQxAAEgcKA0RNUxABEgcK",
-            "A1VUTRACEggKBE1HUlMQAxIHCgNPTEMQBBIICgRPU0dSEAUiKAoMRGlzcGxh",
-            "eVVuaXRzEgoKBk1FVFJJQxAAEgwKCElNUEVSSUFMEAEiTQoIT2xlZFR5cGUS",
-            "DQoJT0xFRF9BVVRPEAASEAoMT0xFRF9TU0QxMzA2EAESDwoLT0xFRF9TSDEx",
-            "MDYQAhIPCgtPTEVEX1NIMTEwNxADIkEKC0Rpc3BsYXlNb2RlEgsKB0RFRkFV",
-            "TFQQABIMCghUV09DT0xPUhABEgwKCElOVkVSVEVEEAISCQoFQ09MT1IQAxr3",
-            "BQoKTG9SYUNvbmZpZxISCgp1c2VfcHJlc2V0GAEgASgIEj8KDG1vZGVtX3By",
-            "ZXNldBgCIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25maWcuTW9k",
-            "ZW1QcmVzZXQSEQoJYmFuZHdpZHRoGAMgASgNEhUKDXNwcmVhZF9mYWN0b3IY",
-            "BCABKA0SEwoLY29kaW5nX3JhdGUYBSABKA0SGAoQZnJlcXVlbmN5X29mZnNl",
-            "dBgGIAEoAhI4CgZyZWdpb24YByABKA4yKC5tZXNodGFzdGljLkNvbmZpZy5M",
-            "b1JhQ29uZmlnLlJlZ2lvbkNvZGUSEQoJaG9wX2xpbWl0GAggASgNEhIKCnR4",
-            "X2VuYWJsZWQYCSABKAgSEAoIdHhfcG93ZXIYCiABKAUSEwoLY2hhbm5lbF9u",
-            "dW0YCyABKA0SGwoTb3ZlcnJpZGVfZHV0eV9jeWNsZRgMIAEoCBIeChZzeDEy",
-            "NnhfcnhfYm9vc3RlZF9nYWluGA0gASgIEhoKEm92ZXJyaWRlX2ZyZXF1ZW5j",
-            "eRgOIAEoAhIXCg9pZ25vcmVfaW5jb21pbmcYZyADKA0iqQEKClJlZ2lvbkNv",
-            "ZGUSCQoFVU5TRVQQABIGCgJVUxABEgoKBkVVXzQzMxACEgoKBkVVXzg2OBAD",
-            "EgYKAkNOEAQSBgoCSlAQBRIHCgNBTloQBhIGCgJLUhAHEgYKAlRXEAgSBgoC",
-            "UlUQCRIGCgJJThAKEgoKBk5aXzg2NRALEgYKAlRIEAwSCwoHTE9SQV8yNBAN",
-            "EgoKBlVBXzQzMxAOEgoKBlVBXzg2OBAPIpQBCgtNb2RlbVByZXNldBINCglM",
-            "T05HX0ZBU1QQABINCglMT05HX1NMT1cQARISCg5WRVJZX0xPTkdfU0xPVxAC",
-            "Eg8KC01FRElVTV9TTE9XEAMSDwoLTUVESVVNX0ZBU1QQBBIOCgpTSE9SVF9T",
-            "TE9XEAUSDgoKU0hPUlRfRkFTVBAGEhEKDUxPTkdfTU9ERVJBVEUQBxqtAQoP",
-            "Qmx1ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSPAoEbW9kZRgCIAEo",
-            "DjIuLm1lc2h0YXN0aWMuQ29uZmlnLkJsdWV0b290aENvbmZpZy5QYWlyaW5n",
-            "TW9kZRIRCglmaXhlZF9waW4YAyABKA0iOAoLUGFpcmluZ01vZGUSDgoKUkFO",
-            "RE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJThACQhEKD3BheWxv",
-            "YWRfdmFyaWFudEJhChNjb20uZ2Vla3N2aWxsZS5tZXNoQgxDb25maWdQcm90",
-            "b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNo",
-            "dGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "BBILCgdUUkFDS0VSEAUSCgoGU0VOU09SEAYiQQoPUmVicm9hZGNhc3RNb2Rl",
+            "EgcKA0FMTBAAEhUKEUFMTF9TS0lQX0RFQ09ESU5HEAESDgoKTE9DQUxfT05M",
+            "WRACGqcDCg5Qb3NpdGlvbkNvbmZpZxIfChdwb3NpdGlvbl9icm9hZGNhc3Rf",
+            "c2VjcxgBIAEoDRIoCiBwb3NpdGlvbl9icm9hZGNhc3Rfc21hcnRfZW5hYmxl",
+            "ZBgCIAEoCBIWCg5maXhlZF9wb3NpdGlvbhgDIAEoCBITCgtncHNfZW5hYmxl",
+            "ZBgEIAEoCBIbChNncHNfdXBkYXRlX2ludGVydmFsGAUgASgNEhgKEGdwc19h",
+            "dHRlbXB0X3RpbWUYBiABKA0SFgoOcG9zaXRpb25fZmxhZ3MYByABKA0SDwoH",
+            "cnhfZ3BpbxgIIAEoDRIPCgd0eF9ncGlvGAkgASgNIqsBCg1Qb3NpdGlvbkZs",
+            "YWdzEgkKBVVOU0VUEAASDAoIQUxUSVRVREUQARIQCgxBTFRJVFVERV9NU0wQ",
+            "AhIWChJHRU9JREFMX1NFUEFSQVRJT04QBBIHCgNET1AQCBIJCgVIVkRPUBAQ",
+            "Eg0KCVNBVElOVklFVxAgEgoKBlNFUV9OTxBAEg4KCVRJTUVTVEFNUBCAARIM",
+            "CgdIRUFESU5HEIACEgoKBVNQRUVEEIAEGuUBCgtQb3dlckNvbmZpZxIXCg9p",
+            "c19wb3dlcl9zYXZpbmcYASABKAgSJgoeb25fYmF0dGVyeV9zaHV0ZG93bl9h",
+            "ZnRlcl9zZWNzGAIgASgNEh8KF2FkY19tdWx0aXBsaWVyX292ZXJyaWRlGAMg",
+            "ASgCEhsKE3dhaXRfYmx1ZXRvb3RoX3NlY3MYBCABKA0SHQoVbWVzaF9zZHNf",
+            "dGltZW91dF9zZWNzGAUgASgNEhAKCHNkc19zZWNzGAYgASgNEg8KB2xzX3Nl",
+            "Y3MYByABKA0SFQoNbWluX3dha2Vfc2VjcxgIIAEoDRr+AgoNTmV0d29ya0Nv",
+            "bmZpZxIUCgx3aWZpX2VuYWJsZWQYASABKAgSEQoJd2lmaV9zc2lkGAMgASgJ",
+            "EhAKCHdpZmlfcHNrGAQgASgJEhIKCm50cF9zZXJ2ZXIYBSABKAkSEwoLZXRo",
+            "X2VuYWJsZWQYBiABKAgSQgoMYWRkcmVzc19tb2RlGAcgASgOMiwubWVzaHRh",
+            "c3RpYy5Db25maWcuTmV0d29ya0NvbmZpZy5BZGRyZXNzTW9kZRJACgtpcHY0",
+            "X2NvbmZpZxgIIAEoCzIrLm1lc2h0YXN0aWMuQ29uZmlnLk5ldHdvcmtDb25m",
+            "aWcuSXBWNENvbmZpZxIWCg5yc3lzbG9nX3NlcnZlchgJIAEoCRpGCgpJcFY0",
+            "Q29uZmlnEgoKAmlwGAEgASgHEg8KB2dhdGV3YXkYAiABKAcSDgoGc3VibmV0",
+            "GAMgASgHEgsKA2RucxgEIAEoByIjCgtBZGRyZXNzTW9kZRIICgRESENQEAAS",
+            "CgoGU1RBVElDEAEanwUKDURpc3BsYXlDb25maWcSFgoOc2NyZWVuX29uX3Nl",
+            "Y3MYASABKA0SSAoKZ3BzX2Zvcm1hdBgCIAEoDjI0Lm1lc2h0YXN0aWMuQ29u",
+            "ZmlnLkRpc3BsYXlDb25maWcuR3BzQ29vcmRpbmF0ZUZvcm1hdBIhChlhdXRv",
+            "X3NjcmVlbl9jYXJvdXNlbF9zZWNzGAMgASgNEhkKEWNvbXBhc3Nfbm9ydGhf",
+            "dG9wGAQgASgIEhMKC2ZsaXBfc2NyZWVuGAUgASgIEjwKBXVuaXRzGAYgASgO",
+            "Mi0ubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZy5EaXNwbGF5VW5p",
+            "dHMSNwoEb2xlZBgHIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlD",
+            "b25maWcuT2xlZFR5cGUSQQoLZGlzcGxheW1vZGUYCCABKA4yLC5tZXNodGFz",
+            "dGljLkNvbmZpZy5EaXNwbGF5Q29uZmlnLkRpc3BsYXlNb2RlEhQKDGhlYWRp",
+            "bmdfYm9sZBgJIAEoCCJNChNHcHNDb29yZGluYXRlRm9ybWF0EgcKA0RFQxAA",
+            "EgcKA0RNUxABEgcKA1VUTRACEggKBE1HUlMQAxIHCgNPTEMQBBIICgRPU0dS",
+            "EAUiKAoMRGlzcGxheVVuaXRzEgoKBk1FVFJJQxAAEgwKCElNUEVSSUFMEAEi",
+            "TQoIT2xlZFR5cGUSDQoJT0xFRF9BVVRPEAASEAoMT0xFRF9TU0QxMzA2EAES",
+            "DwoLT0xFRF9TSDExMDYQAhIPCgtPTEVEX1NIMTEwNxADIkEKC0Rpc3BsYXlN",
+            "b2RlEgsKB0RFRkFVTFQQABIMCghUV09DT0xPUhABEgwKCElOVkVSVEVEEAIS",
+            "CQoFQ09MT1IQAxr3BQoKTG9SYUNvbmZpZxISCgp1c2VfcHJlc2V0GAEgASgI",
+            "Ej8KDG1vZGVtX3ByZXNldBgCIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkxv",
+            "UmFDb25maWcuTW9kZW1QcmVzZXQSEQoJYmFuZHdpZHRoGAMgASgNEhUKDXNw",
+            "cmVhZF9mYWN0b3IYBCABKA0SEwoLY29kaW5nX3JhdGUYBSABKA0SGAoQZnJl",
+            "cXVlbmN5X29mZnNldBgGIAEoAhI4CgZyZWdpb24YByABKA4yKC5tZXNodGFz",
+            "dGljLkNvbmZpZy5Mb1JhQ29uZmlnLlJlZ2lvbkNvZGUSEQoJaG9wX2xpbWl0",
+            "GAggASgNEhIKCnR4X2VuYWJsZWQYCSABKAgSEAoIdHhfcG93ZXIYCiABKAUS",
+            "EwoLY2hhbm5lbF9udW0YCyABKA0SGwoTb3ZlcnJpZGVfZHV0eV9jeWNsZRgM",
+            "IAEoCBIeChZzeDEyNnhfcnhfYm9vc3RlZF9nYWluGA0gASgIEhoKEm92ZXJy",
+            "aWRlX2ZyZXF1ZW5jeRgOIAEoAhIXCg9pZ25vcmVfaW5jb21pbmcYZyADKA0i",
+            "qQEKClJlZ2lvbkNvZGUSCQoFVU5TRVQQABIGCgJVUxABEgoKBkVVXzQzMxAC",
+            "EgoKBkVVXzg2OBADEgYKAkNOEAQSBgoCSlAQBRIHCgNBTloQBhIGCgJLUhAH",
+            "EgYKAlRXEAgSBgoCUlUQCRIGCgJJThAKEgoKBk5aXzg2NRALEgYKAlRIEAwS",
+            "CwoHTE9SQV8yNBANEgoKBlVBXzQzMxAOEgoKBlVBXzg2OBAPIpQBCgtNb2Rl",
+            "bVByZXNldBINCglMT05HX0ZBU1QQABINCglMT05HX1NMT1cQARISCg5WRVJZ",
+            "X0xPTkdfU0xPVxACEg8KC01FRElVTV9TTE9XEAMSDwoLTUVESVVNX0ZBU1QQ",
+            "BBIOCgpTSE9SVF9TTE9XEAUSDgoKU0hPUlRfRkFTVBAGEhEKDUxPTkdfTU9E",
+            "RVJBVEUQBxqtAQoPQmx1ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgS",
+            "PAoEbW9kZRgCIAEoDjIuLm1lc2h0YXN0aWMuQ29uZmlnLkJsdWV0b290aENv",
+            "bmZpZy5QYWlyaW5nTW9kZRIRCglmaXhlZF9waW4YAyABKA0iOAoLUGFpcmlu",
+            "Z01vZGUSDgoKUkFORE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJ",
+            "ThACQhEKD3BheWxvYWRfdmFyaWFudEJhChNjb20uZ2Vla3N2aWxsZS5tZXNo",
+            "QgxDb25maWdQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5l",
+            "cmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1167,6 +1167,12 @@ namespace Meshtastic.Protobufs {
             ///   Position Mesh packets will be prioritized higher and sent more frequently by default.
             /// </summary>
             [pbr::OriginalName("TRACKER")] Tracker = 5,
+            /// <summary>
+            ///
+            /// Sensor device role
+            ///   Telemetry Mesh packets will be prioritized higher and sent more frequently by default.
+            /// </summary>
+            [pbr::OriginalName("SENSOR")] Sensor = 6,
           }
 
           /// <summary>
@@ -3860,7 +3866,7 @@ namespace Meshtastic.Protobufs {
         private bool usePreset_;
         /// <summary>
         ///
-        /// When enabled, the `modem_preset` fields will be adheared to, else the `bandwidth`/`spread_factor`/`coding_rate`
+        /// When enabled, the `modem_preset` fields will be adhered to, else the `bandwidth`/`spread_factor`/`coding_rate`
         /// will be taked from their respective manually defined fields
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4017,7 +4023,7 @@ namespace Meshtastic.Protobufs {
         private int txPower_;
         /// <summary>
         ///
-        /// If zero then, use default max legal continuous power (ie. something that won't
+        /// If zero, then use default max legal continuous power (ie. something that won't
         /// burn out the radio hardware)
         /// In most cases you should use zero here.
         /// Units are in dBm.
@@ -4036,7 +4042,7 @@ namespace Meshtastic.Protobufs {
         private uint channelNum_;
         /// <summary>
         ///
-        /// This is controlling the actual hardware frequency the radio is transmitting on.
+        /// This controls the actual hardware frequency the radio transmits on.
         /// Most users should never need to be exposed to this field/concept.
         /// A channel number between 1 and NUM_CHANNELS (whatever the max is in the current region).
         /// If ZERO then the rule is "use the old channel name hash based
@@ -4116,7 +4122,7 @@ namespace Meshtastic.Protobufs {
         ///
         /// For testing it is useful sometimes to force a node to never listen to
         /// particular other nodes (simulating radio out of range). All nodenums listed
-        /// in ignore_incoming will have packets they send droped on receive (by router.cpp)
+        /// in ignore_incoming will have packets they send dropped on receive (by router.cpp)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4606,7 +4612,7 @@ namespace Meshtastic.Protobufs {
             [pbr::OriginalName("EU_433")] Eu433 = 2,
             /// <summary>
             ///
-            /// European Union 433mhz
+            /// European Union 868mhz
             /// </summary>
             [pbr::OriginalName("EU_868")] Eu868 = 3,
             /// <summary>
@@ -4807,7 +4813,7 @@ namespace Meshtastic.Protobufs {
         private uint fixedPin_;
         /// <summary>
         ///
-        /// Specified pin for PairingMode.FixedPin
+        /// Specified PIN for PairingMode.FixedPin
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5005,17 +5011,17 @@ namespace Meshtastic.Protobufs {
           public enum PairingMode {
             /// <summary>
             ///
-            /// Device generates a random pin that will be shown on the screen of the device for pairing
+            /// Device generates a random PIN that will be shown on the screen of the device for pairing
             /// </summary>
             [pbr::OriginalName("RANDOM_PIN")] RandomPin = 0,
             /// <summary>
             ///
-            /// Device requires a specified fixed pin for pairing
+            /// Device requires a specified fixed PIN for pairing
             /// </summary>
             [pbr::OriginalName("FIXED_PIN")] FixedPin = 1,
             /// <summary>
             ///
-            /// Device requires no pin for pairing
+            /// Device requires no PIN for pairing
             /// </summary>
             [pbr::OriginalName("NO_PIN")] NoPin = 2,
           }

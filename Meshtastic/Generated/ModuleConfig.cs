@@ -25,7 +25,7 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8SCm1lc2h0YXN0aWMi",
-            "/xcKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
+            "uhgKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
             "b2R1bGVDb25maWcuTVFUVENvbmZpZ0gAEjcKBnNlcmlhbBgCIAEoCzIlLm1l",
             "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZ0gAElQKFWV4dGVy",
             "bmFsX25vdGlmaWNhdGlvbhgDIAEoCzIzLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
@@ -74,28 +74,30 @@ namespace Meshtastic.Protobufs {
             "DwoHZW5hYmxlZBgBIAEoCBIRCgloZWFydGJlYXQYAiABKAgSDwoHcmVjb3Jk",
             "cxgDIAEoDRIaChJoaXN0b3J5X3JldHVybl9tYXgYBCABKA0SHQoVaGlzdG9y",
             "eV9yZXR1cm5fd2luZG93GAUgASgNGkAKD1JhbmdlVGVzdENvbmZpZxIPCgdl",
-            "bmFibGVkGAEgASgIEg4KBnNlbmRlchgCIAEoDRIMCgRzYXZlGAMgASgIGssB",
+            "bmFibGVkGAEgASgIEg4KBnNlbmRlchgCIAEoDRIMCgRzYXZlGAMgASgIGoYC",
             "Cg9UZWxlbWV0cnlDb25maWcSHgoWZGV2aWNlX3VwZGF0ZV9pbnRlcnZhbBgB",
             "IAEoDRIjChtlbnZpcm9ubWVudF91cGRhdGVfaW50ZXJ2YWwYAiABKA0SJwof",
             "ZW52aXJvbm1lbnRfbWVhc3VyZW1lbnRfZW5hYmxlZBgDIAEoCBIiChplbnZp",
             "cm9ubWVudF9zY3JlZW5fZW5hYmxlZBgEIAEoCBImCh5lbnZpcm9ubWVudF9k",
-            "aXNwbGF5X2ZhaHJlbmhlaXQYBSABKAga1gQKE0Nhbm5lZE1lc3NhZ2VDb25m",
-            "aWcSFwoPcm90YXJ5MV9lbmFibGVkGAEgASgIEhkKEWlucHV0YnJva2VyX3Bp",
-            "bl9hGAIgASgNEhkKEWlucHV0YnJva2VyX3Bpbl9iGAMgASgNEh0KFWlucHV0",
-            "YnJva2VyX3Bpbl9wcmVzcxgEIAEoDRJZChRpbnB1dGJyb2tlcl9ldmVudF9j",
-            "dxgFIAEoDjI7Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3Nh",
-            "Z2VDb25maWcuSW5wdXRFdmVudENoYXISWgoVaW5wdXRicm9rZXJfZXZlbnRf",
-            "Y2N3GAYgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQ2FubmVkTWVz",
-            "c2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJcChdpbnB1dGJyb2tlcl9ldmVu",
-            "dF9wcmVzcxgHIAEoDjI7Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5l",
-            "ZE1lc3NhZ2VDb25maWcuSW5wdXRFdmVudENoYXISFwoPdXBkb3duMV9lbmFi",
-            "bGVkGAggASgIEg8KB2VuYWJsZWQYCSABKAgSGgoSYWxsb3dfaW5wdXRfc291",
-            "cmNlGAogASgJEhEKCXNlbmRfYmVsbBgLIAEoCCJjCg5JbnB1dEV2ZW50Q2hh",
-            "chIICgROT05FEAASBgoCVVAQERIICgRET1dOEBISCAoETEVGVBATEgkKBVJJ",
-            "R0hUEBQSCgoGU0VMRUNUEAoSCAoEQkFDSxAbEgoKBkNBTkNFTBAYQhEKD3Bh",
-            "eWxvYWRfdmFyaWFudEJnChNjb20uZ2Vla3N2aWxsZS5tZXNoQhJNb2R1bGVD",
-            "b25maWdQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0",
-            "ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "aXNwbGF5X2ZhaHJlbmhlaXQYBSABKAgSGwoTYWlyX3F1YWxpdHlfZW5hYmxl",
+            "ZBgGIAEoCBIcChRhaXJfcXVhbGl0eV9pbnRlcnZhbBgHIAEoDRrWBAoTQ2Fu",
+            "bmVkTWVzc2FnZUNvbmZpZxIXCg9yb3RhcnkxX2VuYWJsZWQYASABKAgSGQoR",
+            "aW5wdXRicm9rZXJfcGluX2EYAiABKA0SGQoRaW5wdXRicm9rZXJfcGluX2IY",
+            "AyABKA0SHQoVaW5wdXRicm9rZXJfcGluX3ByZXNzGAQgASgNElkKFGlucHV0",
+            "YnJva2VyX2V2ZW50X2N3GAUgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25m",
+            "aWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJaChVpbnB1",
+            "dGJyb2tlcl9ldmVudF9jY3cYBiABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNv",
+            "bmZpZy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0RXZlbnRDaGFyElwKF2lu",
+            "cHV0YnJva2VyX2V2ZW50X3ByZXNzGAcgASgOMjsubWVzaHRhc3RpYy5Nb2R1",
+            "bGVDb25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchIX",
+            "Cg91cGRvd24xX2VuYWJsZWQYCCABKAgSDwoHZW5hYmxlZBgJIAEoCBIaChJh",
+            "bGxvd19pbnB1dF9zb3VyY2UYCiABKAkSEQoJc2VuZF9iZWxsGAsgASgIImMK",
+            "DklucHV0RXZlbnRDaGFyEggKBE5PTkUQABIGCgJVUBAREggKBERPV04QEhII",
+            "CgRMRUZUEBMSCQoFUklHSFQQFBIKCgZTRUxFQ1QQChIICgRCQUNLEBsSCgoG",
+            "Q0FOQ0VMEBhCEQoPcGF5bG9hZF92YXJpYW50QmcKE2NvbS5nZWVrc3ZpbGxl",
+            "Lm1lc2hCEk1vZHVsZUNvbmZpZ1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFz",
+            "dGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -106,7 +108,7 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig.Parser, new[]{ "Enabled", "OutputMs", "Output", "OutputVibra", "OutputBuzzer", "Active", "AlertMessage", "AlertMessageVibra", "AlertMessageBuzzer", "AlertBell", "AlertBellVibra", "AlertBellBuzzer", "UsePwm", "NagTimeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig.Parser, new[]{ "Enabled", "Heartbeat", "Records", "HistoryReturnMax", "HistoryReturnWindow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig.Parser, new[]{ "Enabled", "Sender", "Save" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit", "AirQualityEnabled", "AirQualityInterval" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Parser, new[]{ "Rotary1Enabled", "InputbrokerPinA", "InputbrokerPinB", "InputbrokerPinPress", "InputbrokerEventCw", "InputbrokerEventCcw", "InputbrokerEventPress", "Updown1Enabled", "Enabled", "AllowInputSource", "SendBell" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Types.InputEventChar) }, null, null)})
           }));
     }
@@ -3799,6 +3801,8 @@ namespace Meshtastic.Protobufs {
           environmentMeasurementEnabled_ = other.environmentMeasurementEnabled_;
           environmentScreenEnabled_ = other.environmentScreenEnabled_;
           environmentDisplayFahrenheit_ = other.environmentDisplayFahrenheit_;
+          airQualityEnabled_ = other.airQualityEnabled_;
+          airQualityInterval_ = other.airQualityInterval_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3887,6 +3891,39 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "air_quality_enabled" field.</summary>
+        public const int AirQualityEnabledFieldNumber = 6;
+        private bool airQualityEnabled_;
+        /// <summary>
+        ///
+        /// Enable/Disable the air quality metrics
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AirQualityEnabled {
+          get { return airQualityEnabled_; }
+          set {
+            airQualityEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "air_quality_interval" field.</summary>
+        public const int AirQualityIntervalFieldNumber = 7;
+        private uint airQualityInterval_;
+        /// <summary>
+        ///
+        /// Interval in seconds of how often we should try to send our
+        /// air quality metrics to the mesh
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint AirQualityInterval {
+          get { return airQualityInterval_; }
+          set {
+            airQualityInterval_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3907,6 +3944,8 @@ namespace Meshtastic.Protobufs {
           if (EnvironmentMeasurementEnabled != other.EnvironmentMeasurementEnabled) return false;
           if (EnvironmentScreenEnabled != other.EnvironmentScreenEnabled) return false;
           if (EnvironmentDisplayFahrenheit != other.EnvironmentDisplayFahrenheit) return false;
+          if (AirQualityEnabled != other.AirQualityEnabled) return false;
+          if (AirQualityInterval != other.AirQualityInterval) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3919,6 +3958,8 @@ namespace Meshtastic.Protobufs {
           if (EnvironmentMeasurementEnabled != false) hash ^= EnvironmentMeasurementEnabled.GetHashCode();
           if (EnvironmentScreenEnabled != false) hash ^= EnvironmentScreenEnabled.GetHashCode();
           if (EnvironmentDisplayFahrenheit != false) hash ^= EnvironmentDisplayFahrenheit.GetHashCode();
+          if (AirQualityEnabled != false) hash ^= AirQualityEnabled.GetHashCode();
+          if (AirQualityInterval != 0) hash ^= AirQualityInterval.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3957,6 +3998,14 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(40);
             output.WriteBool(EnvironmentDisplayFahrenheit);
           }
+          if (AirQualityEnabled != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(AirQualityEnabled);
+          }
+          if (AirQualityInterval != 0) {
+            output.WriteRawTag(56);
+            output.WriteUInt32(AirQualityInterval);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3987,6 +4036,14 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(40);
             output.WriteBool(EnvironmentDisplayFahrenheit);
           }
+          if (AirQualityEnabled != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(AirQualityEnabled);
+          }
+          if (AirQualityInterval != 0) {
+            output.WriteRawTag(56);
+            output.WriteUInt32(AirQualityInterval);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4011,6 +4068,12 @@ namespace Meshtastic.Protobufs {
           }
           if (EnvironmentDisplayFahrenheit != false) {
             size += 1 + 1;
+          }
+          if (AirQualityEnabled != false) {
+            size += 1 + 1;
+          }
+          if (AirQualityInterval != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AirQualityInterval);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4038,6 +4101,12 @@ namespace Meshtastic.Protobufs {
           }
           if (other.EnvironmentDisplayFahrenheit != false) {
             EnvironmentDisplayFahrenheit = other.EnvironmentDisplayFahrenheit;
+          }
+          if (other.AirQualityEnabled != false) {
+            AirQualityEnabled = other.AirQualityEnabled;
+          }
+          if (other.AirQualityInterval != 0) {
+            AirQualityInterval = other.AirQualityInterval;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -4074,6 +4143,14 @@ namespace Meshtastic.Protobufs {
                 EnvironmentDisplayFahrenheit = input.ReadBool();
                 break;
               }
+              case 48: {
+                AirQualityEnabled = input.ReadBool();
+                break;
+              }
+              case 56: {
+                AirQualityInterval = input.ReadUInt32();
+                break;
+              }
             }
           }
         #endif
@@ -4107,6 +4184,14 @@ namespace Meshtastic.Protobufs {
               }
               case 40: {
                 EnvironmentDisplayFahrenheit = input.ReadBool();
+                break;
+              }
+              case 48: {
+                AirQualityEnabled = input.ReadBool();
+                break;
+              }
+              case 56: {
+                AirQualityInterval = input.ReadUInt32();
                 break;
               }
             }

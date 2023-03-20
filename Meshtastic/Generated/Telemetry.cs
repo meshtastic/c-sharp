@@ -199,7 +199,7 @@ namespace Meshtastic.Protobufs {
     private uint batteryLevel_;
     /// <summary>
     ///
-    /// 1-100 (0 means powered)
+    /// 0-100 (>100 means powered)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

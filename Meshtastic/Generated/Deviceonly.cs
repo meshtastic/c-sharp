@@ -261,7 +261,7 @@ namespace Meshtastic.Protobufs {
     private bool didGpsReset_;
     /// <summary>
     ///
-    /// Some GPSes seem to have bogus settings from the factory, so we always do one factory reset.
+    /// Some GPS receivers seem to have bogus settings from the factory, so we always do one factory reset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -812,7 +812,7 @@ namespace Meshtastic.Protobufs {
   /// <summary>
   ///
   /// This can be used for customizing the firmware distribution. If populated,
-  /// show a secondary bootup screen with cuatom logo and text for 2.5 seconds.
+  /// show a secondary bootup screen with custom logo and text for 2.5 seconds.
   /// </summary>
   public sealed partial class OEMStore : pb::IMessage<OEMStore>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -902,7 +902,7 @@ namespace Meshtastic.Protobufs {
     private pb::ByteString oemIconBits_ = pb::ByteString.Empty;
     /// <summary>
     ///
-    /// The Logo in xbm bytechar format
+    /// The Logo in XBM bytechar format
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

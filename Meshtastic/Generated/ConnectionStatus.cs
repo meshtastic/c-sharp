@@ -483,7 +483,7 @@ namespace Meshtastic.Protobufs {
     private string ssid_ = "";
     /// <summary>
     ///
-    /// WiFi access point ssid 
+    /// WiFi access point SSID 
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -499,7 +499,7 @@ namespace Meshtastic.Protobufs {
     private int rssi_;
     /// <summary>
     ///
-    /// Rssi of wireless connection
+    /// RSSI of wireless connection
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1281,7 +1281,7 @@ namespace Meshtastic.Protobufs {
     private uint pin_;
     /// <summary>
     ///
-    /// The pairing pin for bluetooth
+    /// The pairing PIN for bluetooth
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1297,7 +1297,7 @@ namespace Meshtastic.Protobufs {
     private int rssi_;
     /// <summary>
     ///
-    /// Rssi of bluetooth connection
+    /// RSSI of bluetooth connection
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1559,7 +1559,7 @@ namespace Meshtastic.Protobufs {
     private uint baud_;
     /// <summary>
     ///
-    /// The serial baud rate
+    /// Serial baud rate
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
