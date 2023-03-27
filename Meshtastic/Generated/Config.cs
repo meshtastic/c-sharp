@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyKkGwoGQ29u",
+            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyKcHAoGQ29u",
             "ZmlnEjEKBmRldmljZRgBIAEoCzIfLm1lc2h0YXN0aWMuQ29uZmlnLkRldmlj",
             "ZUNvbmZpZ0gAEjUKCHBvc2l0aW9uGAIgASgLMiEubWVzaHRhc3RpYy5Db25m",
             "aWcuUG9zaXRpb25Db25maWdIABIvCgVwb3dlchgDIAEoCzIeLm1lc2h0YXN0",
@@ -43,76 +43,79 @@ namespace Meshtastic.Protobufs {
             "ARIKCgZST1VURVIQAhIRCg1ST1VURVJfQ0xJRU5UEAMSDAoIUkVQRUFURVIQ",
             "BBILCgdUUkFDS0VSEAUSCgoGU0VOU09SEAYiQQoPUmVicm9hZGNhc3RNb2Rl",
             "EgcKA0FMTBAAEhUKEUFMTF9TS0lQX0RFQ09ESU5HEAESDgoKTE9DQUxfT05M",
-            "WRACGqcDCg5Qb3NpdGlvbkNvbmZpZxIfChdwb3NpdGlvbl9icm9hZGNhc3Rf",
+            "WRACGoAECg5Qb3NpdGlvbkNvbmZpZxIfChdwb3NpdGlvbl9icm9hZGNhc3Rf",
             "c2VjcxgBIAEoDRIoCiBwb3NpdGlvbl9icm9hZGNhc3Rfc21hcnRfZW5hYmxl",
             "ZBgCIAEoCBIWCg5maXhlZF9wb3NpdGlvbhgDIAEoCBITCgtncHNfZW5hYmxl",
             "ZBgEIAEoCBIbChNncHNfdXBkYXRlX2ludGVydmFsGAUgASgNEhgKEGdwc19h",
             "dHRlbXB0X3RpbWUYBiABKA0SFgoOcG9zaXRpb25fZmxhZ3MYByABKA0SDwoH",
-            "cnhfZ3BpbxgIIAEoDRIPCgd0eF9ncGlvGAkgASgNIqsBCg1Qb3NpdGlvbkZs",
-            "YWdzEgkKBVVOU0VUEAASDAoIQUxUSVRVREUQARIQCgxBTFRJVFVERV9NU0wQ",
-            "AhIWChJHRU9JREFMX1NFUEFSQVRJT04QBBIHCgNET1AQCBIJCgVIVkRPUBAQ",
-            "Eg0KCVNBVElOVklFVxAgEgoKBlNFUV9OTxBAEg4KCVRJTUVTVEFNUBCAARIM",
-            "CgdIRUFESU5HEIACEgoKBVNQRUVEEIAEGuUBCgtQb3dlckNvbmZpZxIXCg9p",
-            "c19wb3dlcl9zYXZpbmcYASABKAgSJgoeb25fYmF0dGVyeV9zaHV0ZG93bl9h",
-            "ZnRlcl9zZWNzGAIgASgNEh8KF2FkY19tdWx0aXBsaWVyX292ZXJyaWRlGAMg",
-            "ASgCEhsKE3dhaXRfYmx1ZXRvb3RoX3NlY3MYBCABKA0SHQoVbWVzaF9zZHNf",
-            "dGltZW91dF9zZWNzGAUgASgNEhAKCHNkc19zZWNzGAYgASgNEg8KB2xzX3Nl",
-            "Y3MYByABKA0SFQoNbWluX3dha2Vfc2VjcxgIIAEoDRr+AgoNTmV0d29ya0Nv",
-            "bmZpZxIUCgx3aWZpX2VuYWJsZWQYASABKAgSEQoJd2lmaV9zc2lkGAMgASgJ",
-            "EhAKCHdpZmlfcHNrGAQgASgJEhIKCm50cF9zZXJ2ZXIYBSABKAkSEwoLZXRo",
-            "X2VuYWJsZWQYBiABKAgSQgoMYWRkcmVzc19tb2RlGAcgASgOMiwubWVzaHRh",
-            "c3RpYy5Db25maWcuTmV0d29ya0NvbmZpZy5BZGRyZXNzTW9kZRJACgtpcHY0",
-            "X2NvbmZpZxgIIAEoCzIrLm1lc2h0YXN0aWMuQ29uZmlnLk5ldHdvcmtDb25m",
-            "aWcuSXBWNENvbmZpZxIWCg5yc3lzbG9nX3NlcnZlchgJIAEoCRpGCgpJcFY0",
-            "Q29uZmlnEgoKAmlwGAEgASgHEg8KB2dhdGV3YXkYAiABKAcSDgoGc3VibmV0",
-            "GAMgASgHEgsKA2RucxgEIAEoByIjCgtBZGRyZXNzTW9kZRIICgRESENQEAAS",
-            "CgoGU1RBVElDEAEanwUKDURpc3BsYXlDb25maWcSFgoOc2NyZWVuX29uX3Nl",
-            "Y3MYASABKA0SSAoKZ3BzX2Zvcm1hdBgCIAEoDjI0Lm1lc2h0YXN0aWMuQ29u",
-            "ZmlnLkRpc3BsYXlDb25maWcuR3BzQ29vcmRpbmF0ZUZvcm1hdBIhChlhdXRv",
-            "X3NjcmVlbl9jYXJvdXNlbF9zZWNzGAMgASgNEhkKEWNvbXBhc3Nfbm9ydGhf",
-            "dG9wGAQgASgIEhMKC2ZsaXBfc2NyZWVuGAUgASgIEjwKBXVuaXRzGAYgASgO",
-            "Mi0ubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZy5EaXNwbGF5VW5p",
-            "dHMSNwoEb2xlZBgHIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlD",
-            "b25maWcuT2xlZFR5cGUSQQoLZGlzcGxheW1vZGUYCCABKA4yLC5tZXNodGFz",
-            "dGljLkNvbmZpZy5EaXNwbGF5Q29uZmlnLkRpc3BsYXlNb2RlEhQKDGhlYWRp",
-            "bmdfYm9sZBgJIAEoCCJNChNHcHNDb29yZGluYXRlRm9ybWF0EgcKA0RFQxAA",
-            "EgcKA0RNUxABEgcKA1VUTRACEggKBE1HUlMQAxIHCgNPTEMQBBIICgRPU0dS",
-            "EAUiKAoMRGlzcGxheVVuaXRzEgoKBk1FVFJJQxAAEgwKCElNUEVSSUFMEAEi",
-            "TQoIT2xlZFR5cGUSDQoJT0xFRF9BVVRPEAASEAoMT0xFRF9TU0QxMzA2EAES",
-            "DwoLT0xFRF9TSDExMDYQAhIPCgtPTEVEX1NIMTEwNxADIkEKC0Rpc3BsYXlN",
-            "b2RlEgsKB0RFRkFVTFQQABIMCghUV09DT0xPUhABEgwKCElOVkVSVEVEEAIS",
-            "CQoFQ09MT1IQAxr3BQoKTG9SYUNvbmZpZxISCgp1c2VfcHJlc2V0GAEgASgI",
-            "Ej8KDG1vZGVtX3ByZXNldBgCIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkxv",
-            "UmFDb25maWcuTW9kZW1QcmVzZXQSEQoJYmFuZHdpZHRoGAMgASgNEhUKDXNw",
-            "cmVhZF9mYWN0b3IYBCABKA0SEwoLY29kaW5nX3JhdGUYBSABKA0SGAoQZnJl",
-            "cXVlbmN5X29mZnNldBgGIAEoAhI4CgZyZWdpb24YByABKA4yKC5tZXNodGFz",
-            "dGljLkNvbmZpZy5Mb1JhQ29uZmlnLlJlZ2lvbkNvZGUSEQoJaG9wX2xpbWl0",
-            "GAggASgNEhIKCnR4X2VuYWJsZWQYCSABKAgSEAoIdHhfcG93ZXIYCiABKAUS",
-            "EwoLY2hhbm5lbF9udW0YCyABKA0SGwoTb3ZlcnJpZGVfZHV0eV9jeWNsZRgM",
-            "IAEoCBIeChZzeDEyNnhfcnhfYm9vc3RlZF9nYWluGA0gASgIEhoKEm92ZXJy",
-            "aWRlX2ZyZXF1ZW5jeRgOIAEoAhIXCg9pZ25vcmVfaW5jb21pbmcYZyADKA0i",
-            "qQEKClJlZ2lvbkNvZGUSCQoFVU5TRVQQABIGCgJVUxABEgoKBkVVXzQzMxAC",
-            "EgoKBkVVXzg2OBADEgYKAkNOEAQSBgoCSlAQBRIHCgNBTloQBhIGCgJLUhAH",
-            "EgYKAlRXEAgSBgoCUlUQCRIGCgJJThAKEgoKBk5aXzg2NRALEgYKAlRIEAwS",
-            "CwoHTE9SQV8yNBANEgoKBlVBXzQzMxAOEgoKBlVBXzg2OBAPIpQBCgtNb2Rl",
-            "bVByZXNldBINCglMT05HX0ZBU1QQABINCglMT05HX1NMT1cQARISCg5WRVJZ",
-            "X0xPTkdfU0xPVxACEg8KC01FRElVTV9TTE9XEAMSDwoLTUVESVVNX0ZBU1QQ",
-            "BBIOCgpTSE9SVF9TTE9XEAUSDgoKU0hPUlRfRkFTVBAGEhEKDUxPTkdfTU9E",
-            "RVJBVEUQBxqtAQoPQmx1ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgS",
-            "PAoEbW9kZRgCIAEoDjIuLm1lc2h0YXN0aWMuQ29uZmlnLkJsdWV0b290aENv",
-            "bmZpZy5QYWlyaW5nTW9kZRIRCglmaXhlZF9waW4YAyABKA0iOAoLUGFpcmlu",
-            "Z01vZGUSDgoKUkFORE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJ",
-            "ThACQhEKD3BheWxvYWRfdmFyaWFudEJhChNjb20uZ2Vla3N2aWxsZS5tZXNo",
-            "QgxDb25maWdQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5l",
-            "cmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "cnhfZ3BpbxgIIAEoDRIPCgd0eF9ncGlvGAkgASgNEigKIGJyb2FkY2FzdF9z",
+            "bWFydF9taW5pbXVtX2Rpc3RhbmNlGAogASgNEi0KJWJyb2FkY2FzdF9zbWFy",
+            "dF9taW5pbXVtX2ludGVydmFsX3NlY3MYCyABKA0iqwEKDVBvc2l0aW9uRmxh",
+            "Z3MSCQoFVU5TRVQQABIMCghBTFRJVFVERRABEhAKDEFMVElUVURFX01TTBAC",
+            "EhYKEkdFT0lEQUxfU0VQQVJBVElPThAEEgcKA0RPUBAIEgkKBUhWRE9QEBAS",
+            "DQoJU0FUSU5WSUVXECASCgoGU0VRX05PEEASDgoJVElNRVNUQU1QEIABEgwK",
+            "B0hFQURJTkcQgAISCgoFU1BFRUQQgAQa5QEKC1Bvd2VyQ29uZmlnEhcKD2lz",
+            "X3Bvd2VyX3NhdmluZxgBIAEoCBImCh5vbl9iYXR0ZXJ5X3NodXRkb3duX2Fm",
+            "dGVyX3NlY3MYAiABKA0SHwoXYWRjX211bHRpcGxpZXJfb3ZlcnJpZGUYAyAB",
+            "KAISGwoTd2FpdF9ibHVldG9vdGhfc2VjcxgEIAEoDRIdChVtZXNoX3Nkc190",
+            "aW1lb3V0X3NlY3MYBSABKA0SEAoIc2RzX3NlY3MYBiABKA0SDwoHbHNfc2Vj",
+            "cxgHIAEoDRIVCg1taW5fd2FrZV9zZWNzGAggASgNGv4CCg1OZXR3b3JrQ29u",
+            "ZmlnEhQKDHdpZmlfZW5hYmxlZBgBIAEoCBIRCgl3aWZpX3NzaWQYAyABKAkS",
+            "EAoId2lmaV9wc2sYBCABKAkSEgoKbnRwX3NlcnZlchgFIAEoCRITCgtldGhf",
+            "ZW5hYmxlZBgGIAEoCBJCCgxhZGRyZXNzX21vZGUYByABKA4yLC5tZXNodGFz",
+            "dGljLkNvbmZpZy5OZXR3b3JrQ29uZmlnLkFkZHJlc3NNb2RlEkAKC2lwdjRf",
+            "Y29uZmlnGAggASgLMisubWVzaHRhc3RpYy5Db25maWcuTmV0d29ya0NvbmZp",
+            "Zy5JcFY0Q29uZmlnEhYKDnJzeXNsb2dfc2VydmVyGAkgASgJGkYKCklwVjRD",
+            "b25maWcSCgoCaXAYASABKAcSDwoHZ2F0ZXdheRgCIAEoBxIOCgZzdWJuZXQY",
+            "AyABKAcSCwoDZG5zGAQgASgHIiMKC0FkZHJlc3NNb2RlEggKBERIQ1AQABIK",
+            "CgZTVEFUSUMQARq+BQoNRGlzcGxheUNvbmZpZxIWCg5zY3JlZW5fb25fc2Vj",
+            "cxgBIAEoDRJICgpncHNfZm9ybWF0GAIgASgOMjQubWVzaHRhc3RpYy5Db25m",
+            "aWcuRGlzcGxheUNvbmZpZy5HcHNDb29yZGluYXRlRm9ybWF0EiEKGWF1dG9f",
+            "c2NyZWVuX2Nhcm91c2VsX3NlY3MYAyABKA0SGQoRY29tcGFzc19ub3J0aF90",
+            "b3AYBCABKAgSEwoLZmxpcF9zY3JlZW4YBSABKAgSPAoFdW5pdHMYBiABKA4y",
+            "LS5tZXNodGFzdGljLkNvbmZpZy5EaXNwbGF5Q29uZmlnLkRpc3BsYXlVbml0",
+            "cxI3CgRvbGVkGAcgASgOMikubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNv",
+            "bmZpZy5PbGVkVHlwZRJBCgtkaXNwbGF5bW9kZRgIIAEoDjIsLm1lc2h0YXN0",
+            "aWMuQ29uZmlnLkRpc3BsYXlDb25maWcuRGlzcGxheU1vZGUSFAoMaGVhZGlu",
+            "Z19ib2xkGAkgASgIEh0KFXdha2Vfb25fdGFwX29yX21vdGlvbhgKIAEoCCJN",
+            "ChNHcHNDb29yZGluYXRlRm9ybWF0EgcKA0RFQxAAEgcKA0RNUxABEgcKA1VU",
+            "TRACEggKBE1HUlMQAxIHCgNPTEMQBBIICgRPU0dSEAUiKAoMRGlzcGxheVVu",
+            "aXRzEgoKBk1FVFJJQxAAEgwKCElNUEVSSUFMEAEiTQoIT2xlZFR5cGUSDQoJ",
+            "T0xFRF9BVVRPEAASEAoMT0xFRF9TU0QxMzA2EAESDwoLT0xFRF9TSDExMDYQ",
+            "AhIPCgtPTEVEX1NIMTEwNxADIkEKC0Rpc3BsYXlNb2RlEgsKB0RFRkFVTFQQ",
+            "ABIMCghUV09DT0xPUhABEgwKCElOVkVSVEVEEAISCQoFQ09MT1IQAxr3BQoK",
+            "TG9SYUNvbmZpZxISCgp1c2VfcHJlc2V0GAEgASgIEj8KDG1vZGVtX3ByZXNl",
+            "dBgCIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25maWcuTW9kZW1Q",
+            "cmVzZXQSEQoJYmFuZHdpZHRoGAMgASgNEhUKDXNwcmVhZF9mYWN0b3IYBCAB",
+            "KA0SEwoLY29kaW5nX3JhdGUYBSABKA0SGAoQZnJlcXVlbmN5X29mZnNldBgG",
+            "IAEoAhI4CgZyZWdpb24YByABKA4yKC5tZXNodGFzdGljLkNvbmZpZy5Mb1Jh",
+            "Q29uZmlnLlJlZ2lvbkNvZGUSEQoJaG9wX2xpbWl0GAggASgNEhIKCnR4X2Vu",
+            "YWJsZWQYCSABKAgSEAoIdHhfcG93ZXIYCiABKAUSEwoLY2hhbm5lbF9udW0Y",
+            "CyABKA0SGwoTb3ZlcnJpZGVfZHV0eV9jeWNsZRgMIAEoCBIeChZzeDEyNnhf",
+            "cnhfYm9vc3RlZF9nYWluGA0gASgIEhoKEm92ZXJyaWRlX2ZyZXF1ZW5jeRgO",
+            "IAEoAhIXCg9pZ25vcmVfaW5jb21pbmcYZyADKA0iqQEKClJlZ2lvbkNvZGUS",
+            "CQoFVU5TRVQQABIGCgJVUxABEgoKBkVVXzQzMxACEgoKBkVVXzg2OBADEgYK",
+            "AkNOEAQSBgoCSlAQBRIHCgNBTloQBhIGCgJLUhAHEgYKAlRXEAgSBgoCUlUQ",
+            "CRIGCgJJThAKEgoKBk5aXzg2NRALEgYKAlRIEAwSCwoHTE9SQV8yNBANEgoK",
+            "BlVBXzQzMxAOEgoKBlVBXzg2OBAPIpQBCgtNb2RlbVByZXNldBINCglMT05H",
+            "X0ZBU1QQABINCglMT05HX1NMT1cQARISCg5WRVJZX0xPTkdfU0xPVxACEg8K",
+            "C01FRElVTV9TTE9XEAMSDwoLTUVESVVNX0ZBU1QQBBIOCgpTSE9SVF9TTE9X",
+            "EAUSDgoKU0hPUlRfRkFTVBAGEhEKDUxPTkdfTU9ERVJBVEUQBxqtAQoPQmx1",
+            "ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSPAoEbW9kZRgCIAEoDjIu",
+            "Lm1lc2h0YXN0aWMuQ29uZmlnLkJsdWV0b290aENvbmZpZy5QYWlyaW5nTW9k",
+            "ZRIRCglmaXhlZF9waW4YAyABKA0iOAoLUGFpcmluZ01vZGUSDgoKUkFORE9N",
+            "X1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJThACQhEKD3BheWxvYWRf",
+            "dmFyaWFudEJhChNjb20uZ2Vla3N2aWxsZS5tZXNoQgxDb25maWdQcm90b3Na",
+            "ImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFz",
+            "dGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config), global::Meshtastic.Protobufs.Config.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig), global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Parser, new[]{ "Role", "SerialEnabled", "DebugLogEnabled", "ButtonGpio", "BuzzerGpio", "RebroadcastMode", "NodeInfoBroadcastSecs" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role), typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.RebroadcastMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig), global::Meshtastic.Protobufs.Config.Types.PositionConfig.Parser, new[]{ "PositionBroadcastSecs", "PositionBroadcastSmartEnabled", "FixedPosition", "GpsEnabled", "GpsUpdateInterval", "GpsAttemptTime", "PositionFlags", "RxGpio", "TxGpio" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.PositionFlags) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig), global::Meshtastic.Protobufs.Config.Types.PositionConfig.Parser, new[]{ "PositionBroadcastSecs", "PositionBroadcastSmartEnabled", "FixedPosition", "GpsEnabled", "GpsUpdateInterval", "GpsAttemptTime", "PositionFlags", "RxGpio", "TxGpio", "BroadcastSmartMinimumDistance", "BroadcastSmartMinimumIntervalSecs" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.PositionFlags) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PowerConfig), global::Meshtastic.Protobufs.Config.Types.PowerConfig.Parser, new[]{ "IsPowerSaving", "OnBatteryShutdownAfterSecs", "AdcMultiplierOverride", "WaitBluetoothSecs", "MeshSdsTimeoutSecs", "SdsSecs", "LsSecs", "MinWakeSecs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "AddressMode", "Ipv4Config", "RsyslogServer" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold", "WakeOnTapOrMotion" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "Sx126XRxBoostedGain", "OverrideFrequency", "IgnoreIncoming" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null)})
           }));
@@ -1252,6 +1255,8 @@ namespace Meshtastic.Protobufs {
           positionFlags_ = other.positionFlags_;
           rxGpio_ = other.rxGpio_;
           txGpio_ = other.txGpio_;
+          broadcastSmartMinimumDistance_ = other.broadcastSmartMinimumDistance_;
+          broadcastSmartMinimumIntervalSecs_ = other.broadcastSmartMinimumIntervalSecs_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1414,6 +1419,38 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "broadcast_smart_minimum_distance" field.</summary>
+        public const int BroadcastSmartMinimumDistanceFieldNumber = 10;
+        private uint broadcastSmartMinimumDistance_;
+        /// <summary>
+        ///
+        /// The minimum distance in meters traveled (since the last send) before we can send a position to the mesh if position_broadcast_smart_enabled
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint BroadcastSmartMinimumDistance {
+          get { return broadcastSmartMinimumDistance_; }
+          set {
+            broadcastSmartMinimumDistance_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "broadcast_smart_minimum_interval_secs" field.</summary>
+        public const int BroadcastSmartMinimumIntervalSecsFieldNumber = 11;
+        private uint broadcastSmartMinimumIntervalSecs_;
+        /// <summary>
+        ///
+        /// The minumum number of seconds (since the last send) before we can send a position to the mesh if position_broadcast_smart_enabled
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint BroadcastSmartMinimumIntervalSecs {
+          get { return broadcastSmartMinimumIntervalSecs_; }
+          set {
+            broadcastSmartMinimumIntervalSecs_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1438,6 +1475,8 @@ namespace Meshtastic.Protobufs {
           if (PositionFlags != other.PositionFlags) return false;
           if (RxGpio != other.RxGpio) return false;
           if (TxGpio != other.TxGpio) return false;
+          if (BroadcastSmartMinimumDistance != other.BroadcastSmartMinimumDistance) return false;
+          if (BroadcastSmartMinimumIntervalSecs != other.BroadcastSmartMinimumIntervalSecs) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1454,6 +1493,8 @@ namespace Meshtastic.Protobufs {
           if (PositionFlags != 0) hash ^= PositionFlags.GetHashCode();
           if (RxGpio != 0) hash ^= RxGpio.GetHashCode();
           if (TxGpio != 0) hash ^= TxGpio.GetHashCode();
+          if (BroadcastSmartMinimumDistance != 0) hash ^= BroadcastSmartMinimumDistance.GetHashCode();
+          if (BroadcastSmartMinimumIntervalSecs != 0) hash ^= BroadcastSmartMinimumIntervalSecs.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1508,6 +1549,14 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(72);
             output.WriteUInt32(TxGpio);
           }
+          if (BroadcastSmartMinimumDistance != 0) {
+            output.WriteRawTag(80);
+            output.WriteUInt32(BroadcastSmartMinimumDistance);
+          }
+          if (BroadcastSmartMinimumIntervalSecs != 0) {
+            output.WriteRawTag(88);
+            output.WriteUInt32(BroadcastSmartMinimumIntervalSecs);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1554,6 +1603,14 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(72);
             output.WriteUInt32(TxGpio);
           }
+          if (BroadcastSmartMinimumDistance != 0) {
+            output.WriteRawTag(80);
+            output.WriteUInt32(BroadcastSmartMinimumDistance);
+          }
+          if (BroadcastSmartMinimumIntervalSecs != 0) {
+            output.WriteRawTag(88);
+            output.WriteUInt32(BroadcastSmartMinimumIntervalSecs);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1590,6 +1647,12 @@ namespace Meshtastic.Protobufs {
           }
           if (TxGpio != 0) {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TxGpio);
+          }
+          if (BroadcastSmartMinimumDistance != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BroadcastSmartMinimumDistance);
+          }
+          if (BroadcastSmartMinimumIntervalSecs != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BroadcastSmartMinimumIntervalSecs);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1629,6 +1692,12 @@ namespace Meshtastic.Protobufs {
           }
           if (other.TxGpio != 0) {
             TxGpio = other.TxGpio;
+          }
+          if (other.BroadcastSmartMinimumDistance != 0) {
+            BroadcastSmartMinimumDistance = other.BroadcastSmartMinimumDistance;
+          }
+          if (other.BroadcastSmartMinimumIntervalSecs != 0) {
+            BroadcastSmartMinimumIntervalSecs = other.BroadcastSmartMinimumIntervalSecs;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1681,6 +1750,14 @@ namespace Meshtastic.Protobufs {
                 TxGpio = input.ReadUInt32();
                 break;
               }
+              case 80: {
+                BroadcastSmartMinimumDistance = input.ReadUInt32();
+                break;
+              }
+              case 88: {
+                BroadcastSmartMinimumIntervalSecs = input.ReadUInt32();
+                break;
+              }
             }
           }
         #endif
@@ -1730,6 +1807,14 @@ namespace Meshtastic.Protobufs {
               }
               case 72: {
                 TxGpio = input.ReadUInt32();
+                break;
+              }
+              case 80: {
+                BroadcastSmartMinimumDistance = input.ReadUInt32();
+                break;
+              }
+              case 88: {
+                BroadcastSmartMinimumIntervalSecs = input.ReadUInt32();
                 break;
               }
             }
@@ -3199,6 +3284,7 @@ namespace Meshtastic.Protobufs {
           oled_ = other.oled_;
           displaymode_ = other.displaymode_;
           headingBold_ = other.headingBold_;
+          wakeOnTapOrMotion_ = other.wakeOnTapOrMotion_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3355,6 +3441,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "wake_on_tap_or_motion" field.</summary>
+        public const int WakeOnTapOrMotionFieldNumber = 10;
+        private bool wakeOnTapOrMotion_;
+        /// <summary>
+        ///
+        /// Should we wake the screen up on accelerometer detected motion or tap
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool WakeOnTapOrMotion {
+          get { return wakeOnTapOrMotion_; }
+          set {
+            wakeOnTapOrMotion_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3379,6 +3481,7 @@ namespace Meshtastic.Protobufs {
           if (Oled != other.Oled) return false;
           if (Displaymode != other.Displaymode) return false;
           if (HeadingBold != other.HeadingBold) return false;
+          if (WakeOnTapOrMotion != other.WakeOnTapOrMotion) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3395,6 +3498,7 @@ namespace Meshtastic.Protobufs {
           if (Oled != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType.OledAuto) hash ^= Oled.GetHashCode();
           if (Displaymode != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode.Default) hash ^= Displaymode.GetHashCode();
           if (HeadingBold != false) hash ^= HeadingBold.GetHashCode();
+          if (WakeOnTapOrMotion != false) hash ^= WakeOnTapOrMotion.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3449,6 +3553,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(72);
             output.WriteBool(HeadingBold);
           }
+          if (WakeOnTapOrMotion != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(WakeOnTapOrMotion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3495,6 +3603,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(72);
             output.WriteBool(HeadingBold);
           }
+          if (WakeOnTapOrMotion != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(WakeOnTapOrMotion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3530,6 +3642,9 @@ namespace Meshtastic.Protobufs {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Displaymode);
           }
           if (HeadingBold != false) {
+            size += 1 + 1;
+          }
+          if (WakeOnTapOrMotion != false) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {
@@ -3570,6 +3685,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.HeadingBold != false) {
             HeadingBold = other.HeadingBold;
+          }
+          if (other.WakeOnTapOrMotion != false) {
+            WakeOnTapOrMotion = other.WakeOnTapOrMotion;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3622,6 +3740,10 @@ namespace Meshtastic.Protobufs {
                 HeadingBold = input.ReadBool();
                 break;
               }
+              case 80: {
+                WakeOnTapOrMotion = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -3671,6 +3793,10 @@ namespace Meshtastic.Protobufs {
               }
               case 72: {
                 HeadingBold = input.ReadBool();
+                break;
+              }
+              case 80: {
+                WakeOnTapOrMotion = input.ReadBool();
                 break;
               }
             }
