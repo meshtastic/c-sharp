@@ -50,23 +50,21 @@ public class ProtobufPrinter
         table.Expand();
         table.BorderColor(StyleResources.MESHTASTIC_GREEN);
         table.RoundedBorder();
-        table.AddColumns(nameof(NodeInfo.User.Id), nameof(NodeInfo.User.ShortName),
-            nameof(NodeInfo.User.LongName), nameof(NodeInfo.Position.LatitudeI), nameof(NodeInfo.Position.LongitudeI),
-            nameof(NodeInfo.DeviceMetrics.BatteryLevel), nameof(NodeInfo.DeviceMetrics.AirUtilTx),
-            nameof(NodeInfo.DeviceMetrics.ChannelUtilization), nameof(NodeInfo.Snr), nameof(NodeInfo.LastHeard));
+        table.AddColumns("ID#", "Name", "Latitude", "Longitude",
+            "Battery", "Air Util",
+            "Ch. Util", "SNR", "Last Heard");
 
         foreach (var node in nodeInfos)
         {
             table.AddRow(node.Num.ToString(),
-                node.User.ShortName,
                 node.User.LongName,
-                (node.Position?.LatitudeI * 1e-7).ToString() ?? String.Empty,
-                (node.Position?.LongitudeI * 1e-7).ToString() ?? String.Empty,
-                node.DeviceMetrics?.BatteryLevel.ToString() ?? String.Empty,
-                node.DeviceMetrics?.AirUtilTx.ToString() ?? String.Empty,
-                node.DeviceMetrics?.ChannelUtilization.ToString() ?? String.Empty,
+                (node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
+                (node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
+                $"{node.DeviceMetrics?.BatteryLevel}%",
+                $"{node.DeviceMetrics?.AirUtilTx.ToString("N2")}%" ?? String.Empty,
+                $"{node.DeviceMetrics?.ChannelUtilization.ToString("N2")}%" ?? String.Empty,
                 node.Snr.ToString(),
-                node.LastHeard.ToString());
+                new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard).ToString());
         }
         root.AddNode(table);
         return root;
