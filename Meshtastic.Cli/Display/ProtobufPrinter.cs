@@ -8,9 +8,7 @@ using Meshtastic.Data;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using QRCoder;
-using Spectre.Console;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 
 namespace Meshtastic.Display;
 
@@ -38,41 +36,55 @@ public class ProtobufPrinter
             grid.AddRow(PrintConfig(container.LocalConfig, "[bold]Config[/]"),
                 PrintConfig(container.LocalModuleConfig, "[bold]Module Config[/]"));
             AnsiConsole.Write(grid);
-            AnsiConsole.Write(PrintNodeInfos(container.Nodes));
+            AnsiConsole.Write(PrintNodeInfos());
         }
     }
 
-    public Tree PrintNodeInfos(List<NodeInfo> nodeInfos)
+    public Tree PrintNodeInfos()
     {
         var root = new Tree("[bold]Nodes[/]")
         {
             Style = new Style(StyleResources.MESHTASTIC_GREEN)
         };
-        root.AddNode(PrintNodesTable(nodeInfos));
+        root.AddNode(PrintNodesTable());
         return root;
     }
 
-    private Table PrintNodesTable(List<NodeInfo> nodeInfos)
+    public Table PrintNodesTable(bool compactTable = false)
     {
         var table = new Table();
         table.Expand();
+        table.Border(TableBorder.Rounded);
         table.BorderColor(StyleResources.MESHTASTIC_GREEN);
-        table.RoundedBorder();
-        table.AddColumns("ID#", "Name", "Latitude", "Longitude",
-            "Battery", "Air Util",
-            "Ch. Util", "SNR", "Last Heard");
+        table.Centered();
+        if (compactTable)
+            table.AddColumns("Name", "Latitude", "Longitude", "Battery", "SNR", "Last Heard");
+        else 
+            table.AddColumns("ID#", "Name", "Latitude", "Longitude","Battery", "Air Util", "Ch. Util", "SNR", "Last Heard");
 
-        foreach (var node in nodeInfos)
+        foreach (var node in container.Nodes)
         {
-            table.AddRow(node.Num.ToString(), 
-                container.GetNodeDisplayName(node.Num),
-                (node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
-                (node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
-                $"{node.DeviceMetrics?.BatteryLevel}%",
-                $"{node.DeviceMetrics?.AirUtilTx.ToString("N2")}%" ?? String.Empty,
-                $"{node.DeviceMetrics?.ChannelUtilization.ToString("N2")}%" ?? String.Empty,
-                node.Snr.ToString(),
-                DisplayRelativeTime(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard)));
+            if (compactTable)
+            {
+                table.AddRow(container.GetNodeDisplayName(node.Num),
+                    (node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
+                    (node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
+                    $"{node.DeviceMetrics?.BatteryLevel}%",
+                    node.Snr.ToString(),
+                    DisplayRelativeTime(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard)));
+            }
+            else
+            {
+                table.AddRow(node.Num.ToString(),
+                    container.GetNodeDisplayName(node.Num),
+                    (node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
+                    (node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
+                    $"{node.DeviceMetrics?.BatteryLevel}%",
+                    $"{node.DeviceMetrics?.AirUtilTx.ToString("N2")}%" ?? String.Empty,
+                    $"{node.DeviceMetrics?.ChannelUtilization.ToString("N2")}%" ?? String.Empty,
+                    node.Snr.ToString(),
+                    DisplayRelativeTime(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard)));
+            }
         }
         return table;
     }
@@ -292,19 +304,22 @@ public class ProtobufPrinter
     }
     public BarChart PrintTrafficChart()
     {
+        var myInfo = container.Nodes.FirstOrDefault(n => n.Num == container.MyNodeInfo.MyNodeNum);
+        var airTimeStats = myInfo != null ? $"(Ch. Util {myInfo.DeviceMetrics.ChannelUtilization:N2}% / Airtime {myInfo.DeviceMetrics.AirUtilTx:N2}%)" : String.Empty;
+
         return new BarChart()
-            .Label("[green bold underline]Mesh traffic by port[/]")
+            .Label($"[green bold underline]Mesh traffic by Port {airTimeStats} [/]")
             .CenterLabel()
             .AddItem("Admin", GetMessageCountByPortNum(PortNum.AdminApp), Color.Red)
             .AddItem("Text", GetMessageCountByPortNum(PortNum.TextMessageApp) + GetMessageCountByPortNum(PortNum.TextMessageCompressedApp), Color.Yellow)
             .AddItem("Position", GetMessageCountByPortNum(PortNum.PositionApp), Color.Green)
             .AddItem("Waypoint", GetMessageCountByPortNum(PortNum.WaypointApp), Color.Pink1)
             .AddItem("NodeInfo", GetMessageCountByPortNum(PortNum.NodeinfoApp), Color.White)
-            .AddItem("Telemetry", GetMessageCountByPortNum(PortNum.TelemetryApp), Color.Blue);
+            .AddItem("Telemetry", GetMessageCountByPortNum(PortNum.TelemetryApp, ignoreLocal: true), Color.Blue);
     }
 
-    private int GetMessageCountByPortNum(PortNum portNum)
+    private int GetMessageCountByPortNum(PortNum portNum, bool ignoreLocal = false)
     {
-        return container.FromRadioMessageLog.Count(fr => fr.Packet?.Decoded?.Portnum == portNum);
+        return container.FromRadioMessageLog.Count(fr => fr.Packet?.Decoded?.Portnum == portNum && (!ignoreLocal || fr.Packet?.From == container.MyNodeInfo.MyNodeNum));
     }
 }
