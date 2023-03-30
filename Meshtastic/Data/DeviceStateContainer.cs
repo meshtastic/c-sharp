@@ -79,7 +79,7 @@ public class DeviceStateContainer
         return (uint)(this.LocalConfig.Lora.HopLimit > 0 ? this.LocalConfig.Lora.HopLimit : 3);
     }
 
-    public string GetNodeDisplayName(uint nodeNum, bool shortName = false)
+    public string GetNodeDisplayName(uint nodeNum, bool shortName = false, bool hideNodeNum = false)
     {
         var node = this.Nodes.Find(n => n.Num == nodeNum);
         if (node == null)
@@ -87,6 +87,9 @@ public class DeviceStateContainer
 
         if (shortName)
             return node.User.ShortName;
+
+        if (hideNodeNum)
+            return $"{node.User.LongName} ({node.User.ShortName})";
 
         return $"{node.User.LongName} ({node.User.ShortName}) - {node.Num}";
     }

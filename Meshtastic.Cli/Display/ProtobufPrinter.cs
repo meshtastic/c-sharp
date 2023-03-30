@@ -8,6 +8,7 @@ using Meshtastic.Data;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using QRCoder;
+using Spectre.Console.Rendering;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Display;
@@ -66,7 +67,7 @@ public class ProtobufPrinter
         {
             if (compactTable)
             {
-                table.AddRow(container.GetNodeDisplayName(node.Num),
+                table.AddRow(container.GetNodeDisplayName(node.Num, hideNodeNum: true),
                     (node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
                     (node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
                     $"{node.DeviceMetrics?.BatteryLevel}%",
@@ -316,6 +317,43 @@ public class ProtobufPrinter
             .AddItem("Waypoint", GetMessageCountByPortNum(PortNum.WaypointApp), Color.Pink1)
             .AddItem("NodeInfo", GetMessageCountByPortNum(PortNum.NodeinfoApp), Color.White)
             .AddItem("Telemetry", GetMessageCountByPortNum(PortNum.TelemetryApp, ignoreLocal: true), Color.Blue);
+    }
+
+    public Panel PrintMessagesPanel()
+    {
+        var texts = container.FromRadioMessageLog
+            .Where(fr => fr.Packet?.Decoded?.Portnum == PortNum.TextMessageApp || fr.Packet?.Decoded?.Portnum == PortNum.TextMessageCompressedApp)
+            .Select(fr => new
+            {
+                from = $"[green bold underline]{container.GetNodeDisplayName(fr.Packet.From, hideNodeNum: true)}[/]",
+                message = fr.Packet?.Decoded?.Payload.ToStringUtf8()
+            })
+            .SelectMany(text =>
+            {
+                return new List<IRenderable>() {
+                    new Rule(text.from), 
+                    new Text(text.message!)
+                };
+            });
+
+
+        if (!texts.Any())
+        {
+            return new Panel("Messages")
+            {
+                Expand = true,
+                BorderStyle = new Style(StyleResources.MESHTASTIC_GREEN)
+            };
+        }
+
+        var messages = new Rows(texts);
+        var panel = new Panel(messages)
+        {
+            Header = new PanelHeader("Messages"),
+            Expand = true,
+            BorderStyle = new Style(StyleResources.MESHTASTIC_GREEN)
+        };
+        return panel;
     }
 
     private int GetMessageCountByPortNum(PortNum portNum, bool ignoreLocal = false)

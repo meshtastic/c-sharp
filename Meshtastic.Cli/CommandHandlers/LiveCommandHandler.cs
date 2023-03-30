@@ -24,7 +24,7 @@ public class LiveCommandHandler : DeviceCommandHandler
     {
         var layout = new Layout("Root")
             .SplitColumns(
-                new Layout("Left"),
+                new Layout("Messages"),
                 new Layout("Right")
                     .SplitRows(
                         new Layout("Nodes"),
@@ -33,15 +33,24 @@ public class LiveCommandHandler : DeviceCommandHandler
         await AnsiConsole.Live(layout)
             .StartAsync(async ctx =>
             {
+                var printer = new ProtobufPrinter(container, OutputFormat);
+                UpdateDashboard(layout, printer);
+
                 await Connection.ReadFromRadio((fromRadio, container) =>
                 {
-                    var printer = new ProtobufPrinter(container, OutputFormat);
-                    layout["Nodes"].Update(printer.PrintNodesTable(compactTable: true));
-                    layout["Traffic"].Update(printer.PrintTrafficChart());
-                    ctx.Refresh();
+                    printer = new ProtobufPrinter(container, OutputFormat);
+                    UpdateDashboard(layout, printer);
 
+                    ctx.Refresh();
                     return Task.FromResult(false);
                 });
             });
+    }
+
+    private static void UpdateDashboard(Layout layout, ProtobufPrinter printer)
+    {
+        layout["Nodes"].Update(printer.PrintNodesTable(compactTable: true));
+        layout["Traffic"].Update(printer.PrintTrafficChart());
+        layout["Messages"].Update(printer.PrintMessagesPanel());
     }
 }
