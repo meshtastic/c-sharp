@@ -63,7 +63,7 @@ public class DeviceCommandHandler
             var selection = new SelectionPrompt<uint>()
                     .Title("Please select a destination node")
                     .AddChoices(container.Nodes.Select(n => n.Num));
-            selection.Converter = container.GetNodeDisplayName;
+            selection.Converter = (num) => container.GetNodeDisplayName(num);
             Destination = AnsiConsole.Prompt(selection);
         }
         await Task.Delay(500);

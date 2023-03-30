@@ -1,4 +1,5 @@
 using Meshtastic.Protobufs;
+using System.Linq;
 
 namespace Meshtastic.Data;
 
@@ -11,6 +12,7 @@ public class DeviceStateContainer
     public List<NodeInfo> Nodes;
     public List<FromRadio> FromRadioMessageLog;
     public List<ToRadio> ToRadioMessageLog;
+    public DeviceMetadata Metadata;
 
     public DeviceStateContainer()
     {
@@ -21,6 +23,7 @@ public class DeviceStateContainer
         this.Nodes = new List<NodeInfo>();
         this.ToRadioMessageLog = new List<ToRadio>();
         this.FromRadioMessageLog = new List<FromRadio>();
+        this.Metadata = new DeviceMetadata();
     }
 
     private void SetConfig(Config.PayloadVariantOneofCase variant, Config config)
@@ -52,7 +55,10 @@ public class DeviceStateContainer
             this.MyNodeInfo = fromRadio.MyInfo;
 
         if (fromRadio.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.NodeInfo)
-            this.Nodes.Add(fromRadio.NodeInfo);
+            this.Nodes = this.Nodes.Where(n => n.Num != fromRadio.NodeInfo.Num).Append(fromRadio.NodeInfo).ToList();
+
+        if (fromRadio.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.Metadata)
+            this.Metadata = fromRadio.Metadata;
 
         this.FromRadioMessageLog.Add(fromRadio);
     }
@@ -73,11 +79,14 @@ public class DeviceStateContainer
         return (uint)(this.LocalConfig.Lora.HopLimit > 0 ? this.LocalConfig.Lora.HopLimit : 3);
     }
 
-    public string GetNodeDisplayName(uint nodeNum)
+    public string GetNodeDisplayName(uint nodeNum, bool shortName = false)
     {
         var node = this.Nodes.Find(n => n.Num == nodeNum);
         if (node == null)
             return nodeNum.ToString();
+
+        if (shortName)
+            return node.User.ShortName;
 
         return $"{node.User.LongName} ({node.User.ShortName}) - {node.Num}";
     }

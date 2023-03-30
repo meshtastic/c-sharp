@@ -41,6 +41,7 @@ root.AddGlobalOption(selectDest);
 
 root.AddCommand(new ListCommand("list", "List available serial ports", output, log));
 root.AddCommand(new MonitorCommand("monitor", "Serial monitor for the device", port, host, output, log));
+root.AddCommand(new LiveCommand("live", "Show a live dashboard for the device", port, host, output, log));
 root.AddCommand(new InfoCommand("info", "Dump info about the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new GetCommand("get", "Display one or more settings from the device", setting, port, host, output, log, dest, selectDest));
 root.AddCommand(new SetCommand("set", "Save one or more settings onto the device", setting, port, host, output, log, dest, selectDest));

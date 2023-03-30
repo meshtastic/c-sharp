@@ -1,4 +1,5 @@
-﻿using Meshtastic.Protobufs;
+﻿using Meshtastic.Data.MessageFactories;
+using Meshtastic.Protobufs;
 
 namespace Meshtastic.Extensions;
 
@@ -27,6 +28,21 @@ public static class FromRadioExtensions
 
         else if (typeof(TResult) == typeof(Routing) && fromRadio.Packet?.Decoded?.Portnum == PortNum.RoutingApp)
             return Routing.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
+
+        else if (typeof(TResult) == typeof(Position) && fromRadio.Packet?.Decoded?.Portnum == PortNum.PositionApp)
+            return Routing.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
+
+        else if (typeof(TResult) == typeof(Telemetry) && fromRadio.Packet?.Decoded?.Portnum == PortNum.TelemetryApp)
+            return Routing.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
+
+        else if (typeof(TResult) == typeof(NodeInfo) && fromRadio.Packet?.Decoded?.Portnum == PortNum.NodeinfoApp)
+            return Routing.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
+
+        else if (typeof(TResult) == typeof(string) && fromRadio.Packet?.Decoded?.Portnum == PortNum.TextMessageApp)
+            return fromRadio.Packet?.Decoded?.Payload.ToStringUtf8() as TResult;
+
+        else if (typeof(TResult) == typeof(string) && fromRadio.Packet?.Decoded?.Portnum == PortNum.SerialApp)
+            return fromRadio.Packet?.Decoded?.Payload.ToStringUtf8() as TResult;
 
         return null;
     }

@@ -8,7 +8,9 @@ using Meshtastic.Data;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using QRCoder;
+using Spectre.Console;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace Meshtastic.Display;
 
@@ -46,6 +48,12 @@ public class ProtobufPrinter
         {
             Style = new Style(StyleResources.MESHTASTIC_GREEN)
         };
+        root.AddNode(PrintNodesTable(nodeInfos));
+        return root;
+    }
+
+    private Table PrintNodesTable(List<NodeInfo> nodeInfos)
+    {
         var table = new Table();
         table.Expand();
         table.BorderColor(StyleResources.MESHTASTIC_GREEN);
@@ -56,19 +64,53 @@ public class ProtobufPrinter
 
         foreach (var node in nodeInfos)
         {
-            table.AddRow(node.Num.ToString(),
-                node.User.LongName,
+            table.AddRow(node.Num.ToString(), 
+                container.GetNodeDisplayName(node.Num),
                 (node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
                 (node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
                 $"{node.DeviceMetrics?.BatteryLevel}%",
                 $"{node.DeviceMetrics?.AirUtilTx.ToString("N2")}%" ?? String.Empty,
                 $"{node.DeviceMetrics?.ChannelUtilization.ToString("N2")}%" ?? String.Empty,
                 node.Snr.ToString(),
-                new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard).ToString());
+                DisplayRelativeTime(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard)));
         }
-        root.AddNode(table);
-        return root;
+        return table;
     }
+
+    private static string DisplayRelativeTime(DateTime dateTime)
+    {
+        TimeSpan span = DateTime.Now.Subtract(dateTime);
+
+        int dayDiff = (int)span.TotalDays;
+
+        int secDiff = (int)span.TotalSeconds;
+
+        if (dayDiff >= 31)
+            return "A long time ago";
+
+        if (dayDiff == 0)
+        {
+            if (secDiff < 60)
+                return "just now";
+            if (secDiff < 120)
+                return "1 minute ago";
+            if (secDiff < 3600)
+                return $"{Math.Floor((double)secDiff / 60)} minutes ago";
+            if (secDiff < 7200)
+                return "1 hour ago";
+            if (secDiff < 86400)
+                return $"{Math.Floor((double)secDiff / 3600)} hours ago";
+        }
+        if (dayDiff == 1)
+            return "yesterday";
+        if (dayDiff < 7)
+            return $"{dayDiff} days ago";
+        if (dayDiff < 31)
+            return $"{Math.Ceiling((double)dayDiff / 7)} weeks ago";
+
+        return String.Empty;
+    }
+
 
     public Tree PrintChannels(List<Channel> channels)
     {
@@ -213,12 +255,14 @@ public class ProtobufPrinter
             table.RoundedBorder();
             table.AddColumns("Name", "Value");
 
+            table.AddRow(nameof(metadata.HwModel), metadata.HwModel.ToString());
             table.AddRow(nameof(metadata.FirmwareVersion), metadata.FirmwareVersion.ToString());
             table.AddRow(nameof(metadata.DeviceStateVersion), metadata.DeviceStateVersion.ToString());
             table.AddRow(nameof(metadata.HasBluetooth), metadata.HasBluetooth.ToString());
             table.AddRow(nameof(metadata.HasWifi), metadata.HasWifi.ToString());
             table.AddRow(nameof(metadata.HasEthernet), metadata.HasEthernet.ToString());
             table.AddRow(nameof(metadata.CanShutdown), metadata.CanShutdown.ToString());
+
             AnsiConsole.Write(table);
         }
     }
@@ -245,5 +289,22 @@ public class ProtobufPrinter
             }
             AnsiConsole.Write(root);
         }
+    }
+    public BarChart PrintTrafficChart()
+    {
+        return new BarChart()
+            .Label("[green bold underline]Mesh traffic by port[/]")
+            .CenterLabel()
+            .AddItem("Admin", GetMessageCountByPortNum(PortNum.AdminApp), Color.Red)
+            .AddItem("Text", GetMessageCountByPortNum(PortNum.TextMessageApp) + GetMessageCountByPortNum(PortNum.TextMessageCompressedApp), Color.Yellow)
+            .AddItem("Position", GetMessageCountByPortNum(PortNum.PositionApp), Color.Green)
+            .AddItem("Waypoint", GetMessageCountByPortNum(PortNum.WaypointApp), Color.Pink1)
+            .AddItem("NodeInfo", GetMessageCountByPortNum(PortNum.NodeinfoApp), Color.White)
+            .AddItem("Telemetry", GetMessageCountByPortNum(PortNum.TelemetryApp), Color.Blue);
+    }
+
+    private int GetMessageCountByPortNum(PortNum portNum)
+    {
+        return container.FromRadioMessageLog.Count(fr => fr.Packet?.Decoded?.Portnum == portNum);
     }
 }

@@ -28,9 +28,7 @@ public class UpdateCommandHandler : DeviceCommandHandler
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
         var container = await Connection.WriteToRadio(wantConfig, CompleteOnConfigReceived);
         Connection.Disconnect();
-        var hardwareModel = deviceStateContainer!.Nodes.FirstOrDefault(n => n.Num == deviceStateContainer.MyNodeInfo.MyNodeNum)?.User?.HwModel ??
-            deviceStateContainer!.Nodes.FirstOrDefault()?.User?.HwModel ?? HardwareModel.Unset;
-        await StartInteractiveFlashUpdate(hardwareModel);
+        await StartInteractiveFlashUpdate(deviceStateContainer!.Metadata.HwModel);
         return container;
     }
 
@@ -75,25 +73,25 @@ public class UpdateCommandHandler : DeviceCommandHandler
         AnsiConsole.Status()
             .Spinner(Spinner.Known.Dots)
             .Start("Flashing", (ctx) =>
-        {
-            var info = new ProcessStartInfo()
             {
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                CreateNoWindow = true,
-            };
-            SetEsptoolProcessInfo(info, binPath, port);
-            using var process = Process.Start(info);
-            process!.OutputDataReceived += (sender, args) => AnsiConsole.WriteLine(args.Data ?? String.Empty);
-            process!.ErrorDataReceived += (sender, args) => AnsiConsole.WriteLine(args.Data ?? String.Empty);
-            process.BeginOutputReadLine();
-            process.BeginErrorReadLine();
-            process.WaitForExit();
-            process.Close();
-            File.Delete(binPath);
-            AnsiConsole.Write("Completed device update!");
-        });
+                var info = new ProcessStartInfo()
+                {
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    CreateNoWindow = true,
+                };
+                SetEsptoolProcessInfo(info, binPath, port);
+                using var process = Process.Start(info);
+                process!.OutputDataReceived += (sender, args) => AnsiConsole.WriteLine(args.Data ?? String.Empty);
+                process!.ErrorDataReceived += (sender, args) => AnsiConsole.WriteLine(args.Data ?? String.Empty);
+                process.BeginOutputReadLine();
+                process.BeginErrorReadLine();
+                process.WaitForExit();
+                process.Close();
+                File.Delete(binPath);
+                AnsiConsole.Write("Completed device update!");
+            });
     }
 
     private static void SetEsptoolProcessInfo(ProcessStartInfo processStartInfo, string filePath, string port)

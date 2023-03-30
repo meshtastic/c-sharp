@@ -119,6 +119,10 @@
     "update": {
       "commandName": "Project",
       "commandLineArgs": "update"
+    },
+    "live": {
+      "commandName": "Project",
+      "commandLineArgs": "live"
     }
   }
 }

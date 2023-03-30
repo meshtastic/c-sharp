@@ -22,21 +22,25 @@ public class LiveCommandHandler : DeviceCommandHandler
 
     public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
-        //await AnsiConsole.Live(table)
-        // .StartAsync(async ctx =>
-        // {
-        //     await Connection.ReadFromRadio((fromRadio, container) =>
-        //     {
-        //         var routeDiscovery = fromRadio.GetMessage<RouteDiscovery>();
-        //         var table = new Table().Centered();
+        var layout = new Layout("Root")
+            .SplitColumns(
+                new Layout("Left"),
+                new Layout("Right")
+                    .SplitRows(
+                        new Layout("Top"),
+                        new Layout("Bottom")));
+        await AnsiConsole.Live(layout)
+            .StartAsync(async ctx =>
+            {
+                await Connection.ReadFromRadio((fromRadio, container) =>
+                {
+                    var printer = new ProtobufPrinter(container, OutputFormat);
+                    layout["Bottom"].Update(printer.PrintTrafficChart());
+                    layout["Top"].Update(printer.PrintNodeInfos(container.Nodes));
+                    ctx.Refresh();
 
-        //         return Task.FromResult(false);
-        //     });
-
-        //     table.AddColumn("Bar");
-        //     ctx.Refresh();
-        //     Thread.Sleep(1000);
-        // });
-
+                    return Task.FromResult(false);
+                });
+            });
     }
 }
