@@ -27,16 +27,17 @@ public class LiveCommandHandler : DeviceCommandHandler
                 new Layout("Left"),
                 new Layout("Right")
                     .SplitRows(
-                        new Layout("Top"),
-                        new Layout("Bottom")));
+                        new Layout("Nodes"),
+                        new Layout("Traffic")));
+
         await AnsiConsole.Live(layout)
             .StartAsync(async ctx =>
             {
                 await Connection.ReadFromRadio((fromRadio, container) =>
                 {
                     var printer = new ProtobufPrinter(container, OutputFormat);
-                    layout["Bottom"].Update(printer.PrintTrafficChart());
-                    layout["Top"].Update(printer.PrintNodeInfos(container.Nodes));
+                    layout["Nodes"].Update(printer.PrintNodesTable(compactTable: true));
+                    layout["Traffic"].Update(printer.PrintTrafficChart());
                     ctx.Refresh();
 
                     return Task.FromResult(false);
