@@ -362,7 +362,6 @@ public class ProtobufPrinter
 
     private Color GetColorFromNum(uint num)
     {
-        
         return new Color(BitConverter.GetBytes(num)[0], BitConverter.GetBytes(num)[1], BitConverter.GetBytes(num)[2]);
     }
 
