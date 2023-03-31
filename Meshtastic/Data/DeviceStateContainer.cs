@@ -60,7 +60,7 @@ public class DeviceStateContainer
         if (fromRadio.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.Metadata)
             this.Metadata = fromRadio.Metadata;
 
-        this.FromRadioMessageLog.Add(fromRadio);
+        this.FromRadioMessageLog.Insert(0, fromRadio);
     }
 
     public void AddToRadio(ToRadio toRadio)
