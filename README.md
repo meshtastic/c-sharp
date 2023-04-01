@@ -40,6 +40,7 @@ Options:
 Commands:
   list                                   List available serial ports
   monitor                                Serial monitor for the device
+  live                                   Show a live dashboard for the device
   info                                   Dump info about the device
   get                                    Display one or more settings from the device
   set                                    Save one or more settings onto the device
