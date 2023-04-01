@@ -55,24 +55,25 @@ public class ProtobufPrinter
     {
         var table = new Table();
         table.Expand();
-        table.Border(TableBorder.Rounded);
+        table.Border(compactTable ? TableBorder.Minimal : TableBorder.Rounded);
         table.BorderColor(StyleResources.MESHTASTIC_GREEN);
         table.Centered();
         if (compactTable)
             table.AddColumns("Name", "Latitude", "Longitude", "Battery", "SNR", "Last Heard");
-        else 
-            table.AddColumns("ID#", "Name", "Latitude", "Longitude","Battery", "Air Util", "Ch. Util", "SNR", "Last Heard");
+        else
+            table.AddColumns("ID#", "Name", "Latitude", "Longitude", "Battery", "Air Util", "Ch. Util", "SNR", "Last Heard");
 
         foreach (var node in container.Nodes)
         {
             if (compactTable)
             {
-                table.AddRow(container.GetNodeDisplayName(node.Num, hideNodeNum: true),
-                    (node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
-                    (node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty,
-                    $"{node.DeviceMetrics?.BatteryLevel}%",
-                    node.Snr.ToString(),
-                    DisplayRelativeTime(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard)));
+                table.AddRow(
+                    new Text(container.GetNodeDisplayName(node.Num, hideNodeNum: true), new Style(GetColorFromNum(node.Num))),
+                    new Text((node.Position?.LatitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty),
+                    new Text((node.Position?.LongitudeI * 1e-7 ?? 0).ToString("N6") ?? String.Empty),
+                    new Text($"{node.DeviceMetrics?.BatteryLevel}%"),
+                    new Text(node.Snr.ToString()),
+                    new Text(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard).AsTimeAgo()));
             }
             else
             {
@@ -84,44 +85,20 @@ public class ProtobufPrinter
                     $"{node.DeviceMetrics?.AirUtilTx.ToString("N2")}%" ?? String.Empty,
                     $"{node.DeviceMetrics?.ChannelUtilization.ToString("N2")}%" ?? String.Empty,
                     node.Snr.ToString(),
-                    DisplayRelativeTime(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard)));
+                    new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(node.LastHeard).AsTimeAgo());
             }
         }
         return table;
     }
 
-    private static string DisplayRelativeTime(DateTime dateTime)
+    public Panel PrintNodesPanel()
     {
-        TimeSpan span = DateTime.Now.Subtract(dateTime);
-
-        int dayDiff = (int)span.TotalDays;
-
-        int secDiff = (int)span.TotalSeconds;
-
-        if (dayDiff >= 31)
-            return "A long time ago";
-
-        if (dayDiff == 0)
+        return new Panel(PrintNodesTable(true))
         {
-            if (secDiff < 60)
-                return "just now";
-            if (secDiff < 120)
-                return "1 minute ago";
-            if (secDiff < 3600)
-                return $"{Math.Floor((double)secDiff / 60)} minutes ago";
-            if (secDiff < 7200)
-                return "1 hour ago";
-            if (secDiff < 86400)
-                return $"{Math.Floor((double)secDiff / 3600)} hours ago";
-        }
-        if (dayDiff == 1)
-            return "yesterday";
-        if (dayDiff < 7)
-            return $"{dayDiff} days ago";
-        if (dayDiff < 31)
-            return $"{Math.Ceiling((double)dayDiff / 7)} weeks ago";
-
-        return String.Empty;
+            Header = new PanelHeader("Nodes"),
+            Expand = true,
+            BorderStyle = new Style(StyleResources.MESHTASTIC_GREEN)
+        };
     }
 
 
@@ -303,20 +280,43 @@ public class ProtobufPrinter
             AnsiConsole.Write(root);
         }
     }
-    public BarChart PrintTrafficChart()
+
+    public Panel PrintTrafficCharts()
     {
         var myInfo = container.Nodes.FirstOrDefault(n => n.Num == container.MyNodeInfo.MyNodeNum);
-        var airTimeStats = myInfo != null ? $"(Ch. Util {myInfo.DeviceMetrics.ChannelUtilization:N2}% / Airtime {myInfo.DeviceMetrics.AirUtilTx:N2}%)" : String.Empty;
+        var airTimeStats = myInfo != null ? $"Ch. Util {myInfo.DeviceMetrics.ChannelUtilization:N2}% / Airtime {myInfo.DeviceMetrics.AirUtilTx:N2}%" : String.Empty;
 
-        return new BarChart()
-            .Label($"[green bold underline]Mesh traffic by Port {airTimeStats} [/]")
-            .CenterLabel()
-            .AddItem("Admin", GetMessageCountByPortNum(PortNum.AdminApp), Color.Red)
-            .AddItem("Text", GetMessageCountByPortNum(PortNum.TextMessageApp) + GetMessageCountByPortNum(PortNum.TextMessageCompressedApp), Color.Yellow)
-            .AddItem("Position", GetMessageCountByPortNum(PortNum.PositionApp), Color.Green)
-            .AddItem("Waypoint", GetMessageCountByPortNum(PortNum.WaypointApp), Color.Pink1)
-            .AddItem("NodeInfo", GetMessageCountByPortNum(PortNum.NodeinfoApp), Color.White)
-            .AddItem("Telemetry", GetMessageCountByPortNum(PortNum.TelemetryApp, ignoreLocal: true), Color.Blue);
+        var byNodeChart = new BreakdownChart()
+           .FullSize();
+        
+        foreach(var node in container.Nodes.Select(n => new { n.Num, Name = container.GetNodeDisplayName(n.Num, hideNodeNum: true), Count = container.FromRadioMessageLog.Count(fr => fr.Packet?.From == n.Num) }))
+        {
+            byNodeChart.AddItem(node.Name, node.Count, GetColorFromNum(node.Num));
+        }
+
+        var charts = new Rows(new Text(String.Empty),
+            new Text(airTimeStats).Centered(),
+            new Text(String.Empty),
+            new Text("By Port:").Centered(),
+            new BarChart()
+                .AddItem("Admin", GetMessageCountByPortNum(PortNum.AdminApp), Color.Red)
+                .AddItem("Text", GetMessageCountByPortNum(PortNum.TextMessageApp) + GetMessageCountByPortNum(PortNum.TextMessageCompressedApp), Color.Yellow)
+                .AddItem("Routing", GetMessageCountByPortNum(PortNum.RoutingApp), Color.Grey)
+                .AddItem("Position", GetMessageCountByPortNum(PortNum.PositionApp), Color.Green)
+                .AddItem("Waypoint", GetMessageCountByPortNum(PortNum.WaypointApp), Color.Pink1)
+                .AddItem("NodeInfo", GetMessageCountByPortNum(PortNum.NodeinfoApp), Color.White)
+                .AddItem("Telemetry", GetMessageCountByPortNum(PortNum.TelemetryApp, ignoreLocal: true), Color.Blue),
+            new Text(String.Empty),
+            new Text("By Node:").Centered(),
+            byNodeChart);
+
+        var panel = new Panel(charts)
+        {
+            Header = new PanelHeader($"Mesh traffic"),
+            Expand = true,
+            BorderStyle = new Style(StyleResources.MESHTASTIC_GREEN)
+        };
+        return panel;
     }
 
     public Panel PrintMessagesPanel()
@@ -325,17 +325,21 @@ public class ProtobufPrinter
             .Where(fr => fr.Packet?.Decoded?.Portnum == PortNum.TextMessageApp || fr.Packet?.Decoded?.Portnum == PortNum.TextMessageCompressedApp)
             .Select(fr => new
             {
-                from = $"[green bold underline]{container.GetNodeDisplayName(fr.Packet.From, hideNodeNum: true)}[/]",
+                time = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(fr.Packet.RxTime).AsTimeAgo(),
+                num = fr.Packet.From,
+                from = $"[bold]{container.GetNodeDisplayName(fr.Packet.From, hideNodeNum: true)}[/]",
                 message = fr.Packet?.Decoded?.Payload.ToStringUtf8()
             })
             .SelectMany(text =>
             {
                 return new List<IRenderable>() {
-                    new Rule(text.from), 
+                    new Rule($"{text.from} - {text.time}")
+                    {
+                        Style = new Style(GetColorFromNum(text.num))
+                    }, 
                     new Text(text.message!)
                 };
             });
-
 
         if (!texts.Any())
         {
@@ -356,8 +360,13 @@ public class ProtobufPrinter
         return panel;
     }
 
+    private Color GetColorFromNum(uint num)
+    {
+        return new Color(BitConverter.GetBytes(num)[0], BitConverter.GetBytes(num)[1], BitConverter.GetBytes(num)[2]);
+    }
+
     private int GetMessageCountByPortNum(PortNum portNum, bool ignoreLocal = false)
     {
-        return container.FromRadioMessageLog.Count(fr => fr.Packet?.Decoded?.Portnum == portNum && (!ignoreLocal || fr.Packet?.From == container.MyNodeInfo.MyNodeNum));
+        return container.FromRadioMessageLog.Count(fr => fr.Packet?.Decoded?.Portnum == portNum && (!ignoreLocal || fr.Packet?.From != container.MyNodeInfo.MyNodeNum));
     }
 }

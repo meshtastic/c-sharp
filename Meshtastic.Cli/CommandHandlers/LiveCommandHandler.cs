@@ -1,10 +1,7 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
 using Meshtastic.Display;
-using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
-using Microsoft.Extensions.Logging;
-using Spectre.Console;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
@@ -46,11 +43,12 @@ public class LiveCommandHandler : DeviceCommandHandler
                 });
             });
     }
+    
 
     private static void UpdateDashboard(Layout layout, ProtobufPrinter printer)
     {
-        layout["Nodes"].Update(printer.PrintNodesTable(compactTable: true));
-        layout["Traffic"].Update(printer.PrintTrafficChart());
+        layout["Nodes"].Update(printer.PrintNodesPanel());
+        layout["Traffic"].Update(printer.PrintTrafficCharts());
         layout["Messages"].Update(printer.PrintMessagesPanel());
     }
 }
