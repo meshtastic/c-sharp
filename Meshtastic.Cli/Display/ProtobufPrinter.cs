@@ -308,6 +308,7 @@ public class ProtobufPrinter
                 .AddItem("Telemetry", GetMessageCountByPortNum(PortNum.TelemetryApp, ignoreLocal: true), Color.Blue),
             new Text(String.Empty),
             new Text("By Node:").Centered(),
+            new Text(String.Empty),
             byNodeChart);
 
         var panel = new Panel(charts)
