@@ -360,9 +360,10 @@ public class ProtobufPrinter
         return panel;
     }
 
-    private Color GetColorFromNum(uint num)
+    private static Color GetColorFromNum(uint num)
     {
-        return new Color(BitConverter.GetBytes(num)[0], BitConverter.GetBytes(num)[1], BitConverter.GetBytes(num)[2]);
+        var systemColor = System.Drawing.Color.FromArgb(Convert.ToInt32(num));
+        return new Color(systemColor.R, systemColor.G, systemColor.B);
     }
 
     private int GetMessageCountByPortNum(PortNum portNum, bool ignoreLocal = false)
