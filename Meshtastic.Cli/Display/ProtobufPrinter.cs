@@ -284,7 +284,7 @@ public class ProtobufPrinter
     public Panel PrintTrafficCharts()
     {
         var myInfo = container.Nodes.FirstOrDefault(n => n.Num == container.MyNodeInfo.MyNodeNum);
-        var airTimeStats = myInfo != null ? $"Ch. Util {myInfo.DeviceMetrics.ChannelUtilization:N2}% / Airtime {myInfo.DeviceMetrics.AirUtilTx:N2}%" : String.Empty;
+        var airTimeStats = myInfo != null ? $"Channel Utilization {myInfo.DeviceMetrics.ChannelUtilization:N2}% / Airtime {myInfo.DeviceMetrics.AirUtilTx:N2}%" : String.Empty;
 
         var byNodeChart = new BreakdownChart()
            .FullSize();
@@ -308,6 +308,7 @@ public class ProtobufPrinter
                 .AddItem("Telemetry", GetMessageCountByPortNum(PortNum.TelemetryApp, ignoreLocal: true), Color.Blue),
             new Text(String.Empty),
             new Text("By Node:").Centered(),
+            new Text(String.Empty),
             byNodeChart);
 
         var panel = new Panel(charts)
