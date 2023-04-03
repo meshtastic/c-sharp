@@ -123,6 +123,10 @@
     "live": {
       "commandName": "Project",
       "commandLineArgs": "live"
+    },
+    "live host": {
+      "commandName": "Project",
+      "commandLineArgs": "live --host 192.168.2.216"
     }
   }
 }

@@ -363,8 +363,14 @@ public class ProtobufPrinter
 
     private static Color GetColorFromNum(uint num)
     {
-        var systemColor = System.Drawing.Color.FromArgb(Convert.ToInt32(num));
-        return new Color(systemColor.R, systemColor.G, systemColor.B);
+        var bytes = BitConverter.GetBytes(num);
+        return new Color(WrapAround(bytes[1]), WrapAround(bytes[2]), WrapAround(bytes[0])); 
+    }
+    
+    private static byte WrapAround(byte val)
+    {
+        if (val < 25) return Convert.ToByte(255 - val);
+        return val;
     }
 
     private int GetMessageCountByPortNum(PortNum portNum, bool ignoreLocal = false)
