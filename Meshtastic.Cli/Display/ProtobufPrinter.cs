@@ -9,6 +9,7 @@ using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using QRCoder;
 using Spectre.Console.Rendering;
+using System.Buffers.Binary;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Display;
@@ -363,13 +364,13 @@ public class ProtobufPrinter
 
     private static Color GetColorFromNum(uint num)
     {
-        var bytes = BitConverter.GetBytes(num);
-        return new Color(WrapAround(bytes[1]), WrapAround(bytes[2]), WrapAround(bytes[0])); 
+        var output = new byte[sizeof(int)];
+        BinaryPrimitives.WriteInt32BigEndian(output, (int)num);
+        return new Color(WrapAround(output[2]), WrapAround(output[1]), WrapAround(output[0])); 
     }
     
     private static byte WrapAround(byte val)
     {
-        if (val < 25) return Convert.ToByte(255 - val);
         return val;
     }
 

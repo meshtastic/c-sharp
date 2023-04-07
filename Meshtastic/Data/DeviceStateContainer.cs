@@ -86,11 +86,11 @@ public class DeviceStateContainer
             return nodeNum.ToString();
 
         if (shortName)
-            return node.User.ShortName;
+            return node?.User?.ShortName ?? String.Empty;
 
         if (hideNodeNum)
-            return $"{node.User.LongName} ({node.User.ShortName})";
+            return $"{node?.User?.LongName} ({node?.User?.ShortName})";
 
-        return $"{node.User.LongName} ({node.User.ShortName}) - {node.Num}";
+        return $"{node?.User?.LongName} ({node?.User?.ShortName}) - {node?.Num}";
     }
 }
