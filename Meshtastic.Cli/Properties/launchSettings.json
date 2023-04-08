@@ -127,6 +127,14 @@
     "live host": {
       "commandName": "Project",
       "commandLineArgs": "live --host 192.168.2.186"
+    },
+    "export": {
+      "commandName": "Project",
+      "commandLineArgs": "export"
+    },
+    "export host": {
+      "commandName": "Project",
+      "commandLineArgs": "export --host 192.168.2.186"
     }
   }
 }

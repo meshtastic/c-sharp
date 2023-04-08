@@ -113,6 +113,6 @@ public class DeviceStateContainer
         var serialized = channelSet.ToByteArray();
         var base64 = Convert.ToBase64String(serialized);
         base64 = base64.Replace("-", String.Empty).Replace('+', '-').Replace('/', '_');
-        return $"https://meshtastic.org/e/#{base64}";
+        return $"https://meshtastic.org/e/#{base64}".TrimEnd('=');
     }
 }
