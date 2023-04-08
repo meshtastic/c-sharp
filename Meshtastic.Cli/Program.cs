@@ -58,6 +58,7 @@ root.AddCommand(new CannedMessagesCommand("canned-messages", "Get or set the col
 root.AddCommand(new SendWaypointCommand("waypoint", "Send a waypoint from the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new FileCommand("file", "Get or send a file from the device", port, host, output, log));
 root.AddCommand(new UpdateCommand("update", "Update the firmware of the serial connected device", port, host, output, log));
+root.AddCommand(new ExportCommand("export", "Export the profile of the connected device", port, host, output, log));
 
 var parser = new CommandLineBuilder(root)
     .UseExceptionHandler((ex, context) =>

@@ -214,18 +214,7 @@ public class ProtobufPrinter
     {
         if (outputFormat == OutputFormat.PrettyConsole)
         {
-            var channelSet = new ChannelSet()
-            {
-                LoraConfig = container.LocalConfig.Lora
-            };
-            container.Channels.ForEach(channel =>
-            {
-                channelSet.Settings.Add(channel.Settings);
-            });
-            var serialized = channelSet.ToByteArray();
-            var base64 = Convert.ToBase64String(serialized);
-            base64 = base64.Replace("-", String.Empty).Replace('+', '-').Replace('/', '_');
-            var url = $"https://meshtastic.org/e/#{base64}";
+            var url = container.GetChannelUrl();
             AnsiConsole.MarkupLine(url);
 
             QRCodeGenerator qrGenerator = new();
