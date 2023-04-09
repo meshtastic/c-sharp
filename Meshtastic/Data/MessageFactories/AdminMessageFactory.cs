@@ -120,4 +120,8 @@ public class AdminMessageFactory
     {
         return GetNewMeshPacket(new AdminMessage() { GetCannedMessageModuleMessagesRequest = true });
     }
+    public MeshPacket CreateSetOwnerMessage(User user)
+    {
+        return GetNewMeshPacket(new AdminMessage() { SetOwner = user });
+    }
 }

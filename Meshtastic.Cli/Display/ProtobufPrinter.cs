@@ -9,6 +9,7 @@ using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using QRCoder;
 using Spectre.Console.Rendering;
+using System.Buffers.Binary;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Meshtastic.Display;
@@ -213,18 +214,7 @@ public class ProtobufPrinter
     {
         if (outputFormat == OutputFormat.PrettyConsole)
         {
-            var channelSet = new ChannelSet()
-            {
-                LoraConfig = container.LocalConfig.Lora
-            };
-            container.Channels.ForEach(channel =>
-            {
-                channelSet.Settings.Add(channel.Settings);
-            });
-            var serialized = channelSet.ToByteArray();
-            var base64 = Convert.ToBase64String(serialized);
-            base64 = base64.Replace("-", String.Empty).Replace('+', '-').Replace('/', '_');
-            var url = $"https://meshtastic.org/e/#{base64}";
+            var url = container.GetChannelUrl();
             AnsiConsole.MarkupLine(url);
 
             QRCodeGenerator qrGenerator = new();
@@ -361,9 +351,16 @@ public class ProtobufPrinter
         return panel;
     }
 
-    private Color GetColorFromNum(uint num)
+    private static Color GetColorFromNum(uint num)
     {
-        return new Color(BitConverter.GetBytes(num)[0], BitConverter.GetBytes(num)[1], BitConverter.GetBytes(num)[2]);
+        var output = new byte[sizeof(int)];
+        BinaryPrimitives.WriteInt32BigEndian(output, (int)num);
+        return new Color(WrapAround(output[2]), WrapAround(output[1]), WrapAround(output[0])); 
+    }
+    
+    private static byte WrapAround(byte val)
+    {
+        return val;
     }
 
     private int GetMessageCountByPortNum(PortNum portNum, bool ignoreLocal = false)

@@ -1,3 +1,4 @@
+using Google.Protobuf;
 using Meshtastic.Protobufs;
 using System.Linq;
 
@@ -79,6 +80,11 @@ public class DeviceStateContainer
         return (uint)(this.LocalConfig.Lora.HopLimit > 0 ? this.LocalConfig.Lora.HopLimit : 3);
     }
 
+    public NodeInfo? GetDeviceNodeInfo()
+    {
+        return this.Nodes.Find(n => n.Num == this.MyNodeInfo.MyNodeNum);
+    }
+
     public string GetNodeDisplayName(uint nodeNum, bool shortName = false, bool hideNodeNum = false)
     {
         var node = this.Nodes.Find(n => n.Num == nodeNum);
@@ -86,11 +92,30 @@ public class DeviceStateContainer
             return nodeNum.ToString();
 
         if (shortName)
-            return node.User.ShortName;
+            return node?.User?.ShortName ?? String.Empty;
 
         if (hideNodeNum)
-            return $"{node.User.LongName} ({node.User.ShortName})";
+            return $"{node?.User?.LongName} ({node?.User?.ShortName})";
 
-        return $"{node.User.LongName} ({node.User.ShortName}) - {node.Num}";
+        return $"{node?.User?.LongName} ({node?.User?.ShortName}) - {node?.Num}";
+    }
+
+    public string GetChannelUrl(int[]? selection = null)
+    {
+        var channelSet = new ChannelSet()
+        {
+            LoraConfig = this.LocalConfig.Lora
+        };
+
+        (selection == null ? this.Channels : this.Channels.Where(c => selection.Contains(c.Index)))
+            .ToList()
+            .ForEach(channel =>
+            {
+                channelSet.Settings.Add(channel.Settings);
+            });
+        var serialized = channelSet.ToByteArray();
+        var base64 = Convert.ToBase64String(serialized);
+        base64 = base64.Replace("-", String.Empty).Replace('+', '-').Replace('/', '_');
+        return $"https://meshtastic.org/e/#{base64}".TrimEnd('=');
     }
 }
