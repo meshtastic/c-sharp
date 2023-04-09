@@ -3,6 +3,7 @@ using Meshtastic.Cli.Serialization;
 using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
 using Meshtastic.Protobufs;
+using Microsoft.Extensions.Logging;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -16,8 +17,14 @@ public class ExportCommandHandler : DeviceCommandHandler
         .WithTypeInspector(inner => new FilteredTypeInspector(inner))
         .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitDefaults | DefaultValuesHandling.OmitEmptyCollections)
         .Build();
-    
-    public ExportCommandHandler(DeviceConnectionContext context, CommandContext commandContext) : base(context, commandContext) { }
+
+    private readonly string outputFile;
+
+    public ExportCommandHandler(string file, DeviceConnectionContext context, CommandContext commandContext) : base(context, commandContext)
+    {
+        this.outputFile = file ?? Path.Combine(Directory.GetCurrentDirectory(), "export.yml");
+    }
+
     public async Task<DeviceStateContainer> Handle()
     {
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
@@ -26,7 +33,7 @@ public class ExportCommandHandler : DeviceCommandHandler
         return container;
     }
 
-    public override Task OnCompleted(FromRadio packet, DeviceStateContainer container)
+    public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         var channels = container.Channels.Where(c => c.Role != Channel.Types.Role.Disabled).Select(c => $"{c.Index} ({(c.Role == Channel.Types.Role.Primary ? "PRIMARY" : c.Settings.Name)})");
         var configs = container.LocalConfig.GetProperties().Select(p => p.Name);
@@ -93,8 +100,11 @@ public class ExportCommandHandler : DeviceCommandHandler
         if (selectedChannelIndexes.Any())
             deviceProfile.ChannelUrl = container.GetChannelUrl(selectedChannelIndexes);
 
-        AnsiConsole.WriteLine(yamlSerializer.Serialize(deviceProfile));
+        var serialized = yamlSerializer.Serialize(deviceProfile);
 
-        return Task.CompletedTask;
+        AnsiConsole.WriteLine(serialized);
+
+        await File.WriteAllTextAsync(outputFile, serialized);
+        Logger.LogInformation($"Exported profile written to: {outputFile}");
     }
 }

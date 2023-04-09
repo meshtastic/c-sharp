@@ -60,7 +60,7 @@ public class UrlCommandHandler : DeviceCommandHandler
             await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setChannel), AnyResponseReceived);
             index++;
         }
-        Logger.LogInformation("Sending LoRA config device...");
+        Logger.LogInformation("Sending LoRA config to device...");
 
         var setLoraConfig = adminMessageFactory.CreateSetConfigMessage(channelSet.LoraConfig);
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setLoraConfig), AnyResponseReceived);

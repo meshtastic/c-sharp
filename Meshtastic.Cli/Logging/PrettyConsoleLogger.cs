@@ -56,7 +56,7 @@ public class PrettyConsoleLogger : ILogger
             LogLevel.Critical => "[bold underline white on red]",
             LogLevel.Error => "[bold red]",
             LogLevel.Warning => "[bold orange3]",
-            LogLevel.Information => "[bold dim]",
+            LogLevel.Information => "[bold]",
             LogLevel.Debug => "[dim cyan1]",
             LogLevel.Trace => "[dim grey]",
             (LogLevel.None or _) => String.Empty,
