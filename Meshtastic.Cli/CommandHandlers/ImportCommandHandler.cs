@@ -47,17 +47,14 @@ public class ImportCommandHandler : DeviceCommandHandler
 
         if (deviceProfile.HasLongName) 
         {
-            var myNode = container.GetDeviceNodeInfo();
-            if (myNode != null && myNode.User != null) 
+            Logger.LogInformation("Setting long / short name...");
+            var user = new User()
             {
-                Logger.LogInformation("Setting long / short name...");
-                myNode.User!.LongName = deviceProfile.LongName;
-                myNode.User!.ShortName = deviceProfile.ShortName;
-                var setOwner = adminMessageFactory.CreateSetOwnerMessage(myNode.User);
-                await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setOwner), AnyResponseReceived);
-            }
-            else 
-                Logger.LogError("Could not set long / short name because we were unable to retrieve User from NodeDB");
+                LongName = deviceProfile.LongName,
+                ShortName = deviceProfile.ShortName
+            };
+            var setOwner = adminMessageFactory.CreateSetOwnerMessage(user);
+            await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setOwner), AnyResponseReceived);
         }
         
         if (deviceProfile.HasChannelUrl) 
@@ -69,6 +66,11 @@ public class ImportCommandHandler : DeviceCommandHandler
             await SetConfigs(container, deviceProfile, adminMessageFactory);
         else 
             Logger.LogDebug("No Config profile specified. Skipping...");
+
+        if (deviceProfile.ModuleConfig != null)
+            await SetModuleConfigs(container, deviceProfile, adminMessageFactory);
+        else
+            Logger.LogDebug("No ModuleConfig profile specified. Skipping...");
 
 
         await CommitEditSettings(adminMessageFactory);
@@ -86,6 +88,21 @@ public class ImportCommandHandler : DeviceCommandHandler
             Logger.LogInformation($"Sending {section.Name} config to device...");
             //container.LocalConfig.Bluetooth.MergeFrom()
             var adminMessage = adminMessageFactory.CreateSetConfigMessage(instance);
+            await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AnyResponseReceived);
+        }
+    }
+
+    private async Task SetModuleConfigs(DeviceStateContainer container, DeviceProfile deviceProfile, AdminMessageFactory adminMessageFactory)
+    {
+        foreach(var section in deviceProfile.ModuleConfig.GetProperties())
+        {
+            var instance = section.GetValue(deviceProfile.ModuleConfig);
+            if (instance == null) {
+                Logger.LogDebug($"No {section.Name} profile specified. Skipping...");
+                continue;
+            }
+            Logger.LogInformation($"Sending {section.Name} config to device...");
+            var adminMessage = adminMessageFactory.CreateSetModuleConfigMessage(instance);
             await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AnyResponseReceived);
         }
     }

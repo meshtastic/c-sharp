@@ -28,7 +28,7 @@ public class GetCannedMessagesCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage),
             (fromRadio, container) =>
             {
-                var adminMessage = fromRadio.GetMessage<AdminMessage>();
+                var adminMessage = fromRadio.GetPayload<AdminMessage>();
                 if (adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse)
                 {
                     Logger.LogInformation($"Canned messages: {adminMessage?.GetCannedMessageModuleMessagesResponse}");

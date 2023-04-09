@@ -33,7 +33,7 @@ public class FileCommandHandler : DeviceCommandHandler
         fileRequest.XmodemPacket.Buffer = ByteString.CopyFromUtf8(path);
         await Connection.WriteToRadio(fileRequest, async (fromRadio, container) =>
         {
-            var xmodem = fromRadio.GetMessage<XModem>();
+            var xmodem = fromRadio.GetPayload<XModem>();
             if (xmodem == null)
                 return false;
 

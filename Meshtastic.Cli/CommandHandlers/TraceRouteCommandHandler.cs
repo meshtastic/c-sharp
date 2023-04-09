@@ -27,7 +27,7 @@ public class TraceRouteCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message),
             (fromRadio, container) =>
             {
-                var routeDiscovery = fromRadio.GetMessage<RouteDiscovery>();
+                var routeDiscovery = fromRadio.GetPayload<RouteDiscovery>();
                 if (routeDiscovery != null)
                 {
                     if (routeDiscovery.Route.Count > 0)

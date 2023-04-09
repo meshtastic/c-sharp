@@ -27,7 +27,7 @@ public class MetadataCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage),
             (fromRadio, container) =>
             {
-                var adminMessage = fromRadio.GetMessage<AdminMessage>();
+                var adminMessage = fromRadio.GetPayload<AdminMessage>();
                 if (adminMessage?.PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.GetDeviceMetadataResponse)
                 {
                     var printer = new ProtobufPrinter(container, OutputFormat);

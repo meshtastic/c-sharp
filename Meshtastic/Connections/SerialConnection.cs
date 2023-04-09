@@ -3,7 +3,6 @@ using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 using System.IO.Ports;
-using System;
 
 namespace Meshtastic.Connections;
 
@@ -57,7 +56,7 @@ public class SerialConnection : DeviceConnection
             serialPort.Open();
         await serialPort.BaseStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE.AsMemory(0, PacketFraming.SERIAL_PREAMBLE.Length));
         await serialPort.BaseStream.WriteAsync(toRadio);
-        Logger.LogDebug($"Sent: {packet}");
+        VerboseLogPacket(packet);
         await ReadFromRadio(isComplete);
         return DeviceStateContainer;
     }
@@ -73,7 +72,7 @@ public class SerialConnection : DeviceConnection
         var toRadio = PacketFraming.CreatePacket(packet.ToByteArray());
         await serialPort.BaseStream.WriteAsync(toRadio);
         await serialPort.BaseStream.FlushAsync();
-        Logger.LogDebug($"Sent: {packet}");
+        VerboseLogPacket(packet);
     }
 
     public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)

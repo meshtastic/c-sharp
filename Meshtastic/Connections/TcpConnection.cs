@@ -27,7 +27,7 @@ public class TcpConnection : DeviceConnection, IDisposable
         var toRadio = PacketFraming.CreatePacket(packet.ToByteArray());
         networkStream = client.GetStream();
         await networkStream.WriteAsync(toRadio);
-        Logger.LogDebug($"Sent: {packet}");
+        VerboseLogPacket(packet);
         await ReadFromRadio(isComplete);
         return DeviceStateContainer;
     }
@@ -38,7 +38,7 @@ public class TcpConnection : DeviceConnection, IDisposable
         var toRadio = PacketFraming.CreatePacket(packet.ToByteArray());
         await networkStream!.WriteAsync(toRadio);
         await networkStream.FlushAsync();
-        Logger.LogDebug($"Sent: {packet}");
+        VerboseLogPacket(packet);
     }
 
     public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)

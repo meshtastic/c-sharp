@@ -57,7 +57,7 @@ public class FixedPositionCommandHandler : DeviceCommandHandler
 
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), (fromRadio, container) =>
         {
-            return Task.FromResult(fromRadio.GetMessage<Routing>() != null);
+            return Task.FromResult(fromRadio.GetPayload<Routing>() != null);
         });
 
         await CommitEditSettings(adminMessageFactory);

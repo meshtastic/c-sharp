@@ -44,8 +44,8 @@ public class CommandHandlerTests : CommandHandlerTestBase
         ReceivedWantConfigPayloads();
         InformationLogsContain("Getting device metadata");
         container.FromRadioMessageLog.Should()
-            .Contain(fromRadio => fromRadio.GetMessage<AdminMessage>() != null && 
-                fromRadio.GetMessage<AdminMessage>()!.GetDeviceMetadataResponse != null);
+            .Contain(fromRadio => fromRadio.GetPayload<AdminMessage>() != null && 
+                fromRadio.GetPayload<AdminMessage>()!.GetDeviceMetadataResponse != null);
     }
 
     [Test]
@@ -97,8 +97,8 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var container = await handler.Handle();
         InformationLogsContain("Sending position to device");
         InformationLogsContain("Setting Position.FixedPosition to True");
-        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
-        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
     }
 
     [Test]
@@ -109,8 +109,8 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
         var container = await handler.Handle();
         InformationLogsContain("Writing channel");
-        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
-        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
         var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
         adminMessages.Should().Contain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
@@ -124,8 +124,8 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
         var container = await handler.Handle();
         InformationLogsContain("Writing channel");
-        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
-        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
         var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
         adminMessages.Should().Contain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
@@ -139,8 +139,8 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
         var container = await handler.Handle();
         InformationLogsContain("Writing channel");
-        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
-        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
         var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
         adminMessages.Should().Contain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
@@ -154,8 +154,8 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
         var container = await handler.Handle();
         InformationLogsContain("Writing channel");
-        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetMessage<Routing>() != null);
-        routingPacket.GetMessage<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
         var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
         adminMessages.Should().Contain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
