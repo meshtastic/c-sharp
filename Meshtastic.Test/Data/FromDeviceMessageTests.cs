@@ -47,6 +47,6 @@ public class FromDeviceMessageTests
             }
         };
         var result = fromDeviceMessage.ParsedFromRadio(fromRadio.ToByteArray());
-        result!.GetMessage<AdminMessage>()!.BeginEditSettings.Should().BeTrue();
+        result!.GetPayload<AdminMessage>()!.BeginEditSettings.Should().BeTrue();
     }
 }

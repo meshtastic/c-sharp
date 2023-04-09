@@ -32,7 +32,7 @@ public class SendTextCommandHandler : DeviceCommandHandler
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(textMessage),
              (fromRadio, container) =>
              {
-                 var routingResult = fromRadio.GetMessage<Routing>();
+                 var routingResult = fromRadio.GetPayload<Routing>();
                  if (routingResult != null && fromRadio.Packet.Priority == MeshPacket.Types.Priority.Ack)
                  {
                      if (routingResult.ErrorReason == Routing.Types.Error.None)

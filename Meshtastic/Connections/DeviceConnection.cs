@@ -1,4 +1,5 @@
 using Meshtastic.Data;
+using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
@@ -71,5 +72,24 @@ public abstract class DeviceConnection
             }
         }
         return false;
+    }
+
+    protected void VerboseLogPacket(ToRadio toRadio)
+    {
+        Logger.LogDebug($"Sent: {toRadio}");
+        var payload = toRadio.GetPayload<AdminMessage>()?.ToString() ??
+            toRadio.GetPayload<XModem>()?.ToString() ??
+            toRadio.GetPayload<NodeInfo>()?.ToString() ??
+            toRadio.GetPayload<Position>()?.ToString() ??
+            toRadio.GetPayload<Waypoint>()?.ToString() ??
+            toRadio.GetPayload<Telemetry>()?.ToString() ??
+            toRadio.GetPayload<Routing>()?.ToString() ??
+            toRadio.GetPayload<RouteDiscovery>()?.ToString() ??
+            toRadio.GetPayload<string>()?.ToString();
+
+        if (!String.IsNullOrWhiteSpace(payload))
+        {
+            Logger.LogDebug($"Payload decoded: {payload}");
+        }
     }
 }

@@ -61,7 +61,7 @@ public class ChannelCommandHandler : DeviceCommandHandler
         var adminMessage = adminMessageFactory.CreateSetChannelMessage(channel!);
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), (fromRadio, container) =>
         {
-            return Task.FromResult(fromRadio.GetMessage<Routing>()?.ErrorReason == Routing.Types.Error.None);
+            return Task.FromResult(fromRadio.GetPayload<Routing>()?.ErrorReason == Routing.Types.Error.None);
         });
 
         await CommitEditSettings(adminMessageFactory);

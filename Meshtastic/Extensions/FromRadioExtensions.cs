@@ -12,7 +12,7 @@ public static class FromRadioExtensions
             fromRadio.Packet?.Decoded?.Payload != null;
     }
 
-    public static TResult? GetMessage<TResult>(this FromRadio fromRadio) where TResult : class
+    public static TResult? GetPayload<TResult>(this FromRadio fromRadio) where TResult : class
     {
         if (typeof(TResult) == typeof(XModem) && fromRadio.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.XmodemPacket)
             return fromRadio.XmodemPacket as TResult;
@@ -30,13 +30,16 @@ public static class FromRadioExtensions
             return Routing.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
 
         else if (typeof(TResult) == typeof(Position) && fromRadio.Packet?.Decoded?.Portnum == PortNum.PositionApp)
-            return Routing.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
+            return Position.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
 
         else if (typeof(TResult) == typeof(Telemetry) && fromRadio.Packet?.Decoded?.Portnum == PortNum.TelemetryApp)
-            return Routing.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
+            return Telemetry.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
 
         else if (typeof(TResult) == typeof(NodeInfo) && fromRadio.Packet?.Decoded?.Portnum == PortNum.NodeinfoApp)
-            return Routing.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
+            return NodeInfo.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
+
+        else if (typeof(TResult) == typeof(Waypoint) && fromRadio.Packet?.Decoded?.Portnum == PortNum.WaypointApp)
+            return NodeInfo.Parser.ParseFrom(fromRadio.Packet?.Decoded?.Payload) as TResult;
 
         else if (typeof(TResult) == typeof(string) && fromRadio.Packet?.Decoded?.Portnum == PortNum.TextMessageApp)
             return fromRadio.Packet?.Decoded?.Payload.ToStringUtf8() as TResult;

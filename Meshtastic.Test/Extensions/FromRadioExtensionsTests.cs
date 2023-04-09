@@ -11,16 +11,16 @@ namespace Meshtastic.Test.Extensions
         public void GetMessage_Should_ReturnNullForBadPackets()
         {
             FromRadio fromRadio = new();
-            var result = fromRadio.GetMessage<AdminMessage>();
+            var result = fromRadio.GetPayload<AdminMessage>();
             result.Should().BeNull();
             fromRadio.Packet = new MeshPacket();
-            result = fromRadio.GetMessage<AdminMessage>();
+            result = fromRadio.GetPayload<AdminMessage>();
             result.Should().BeNull();
             fromRadio.Packet = new MeshPacket
             {
                 Decoded = new Protobufs.Data()
             };
-            result = fromRadio.GetMessage<AdminMessage>();
+            result = fromRadio.GetPayload<AdminMessage>();
             result.Should().BeNull();
         }
 
@@ -28,7 +28,7 @@ namespace Meshtastic.Test.Extensions
         public void GetMessage_Should_ReturnValidAdminMessage()
         {
             FromRadio fromRadio = new();
-            var result = fromRadio.GetMessage<AdminMessage>();
+            var result = fromRadio.GetPayload<AdminMessage>();
             fromRadio.Packet = new MeshPacket
             {
                 Decoded = new Protobufs.Data()
@@ -37,7 +37,7 @@ namespace Meshtastic.Test.Extensions
                     Payload = new AdminMessage().ToByteString()
                 }
             };
-            result = fromRadio.GetMessage<AdminMessage>();
+            result = fromRadio.GetPayload<AdminMessage>();
             result.Should().NotBeNull();
             result.Should().BeOfType<AdminMessage>();
         }
@@ -46,7 +46,7 @@ namespace Meshtastic.Test.Extensions
         public void GetMessage_Should_ReturnValidRouteDiscovery()
         {
             FromRadio fromRadio = new();
-            var result = fromRadio.GetMessage<RouteDiscovery>();
+            var result = fromRadio.GetPayload<RouteDiscovery>();
             fromRadio.Packet = new MeshPacket
             {
                 Decoded = new Protobufs.Data()
@@ -55,7 +55,7 @@ namespace Meshtastic.Test.Extensions
                     Payload = new RouteDiscovery().ToByteString()
                 }
             };
-            result = fromRadio.GetMessage<RouteDiscovery>();
+            result = fromRadio.GetPayload<RouteDiscovery>();
             result.Should().NotBeNull();
             result.Should().BeOfType<RouteDiscovery>();
         }
@@ -64,7 +64,7 @@ namespace Meshtastic.Test.Extensions
         public void GetMessage_Should_ReturnValidRouting()
         {
             FromRadio fromRadio = new();
-            var result = fromRadio.GetMessage<Routing>();
+            var result = fromRadio.GetPayload<Routing>();
             fromRadio.Packet = new MeshPacket
             {
                 Decoded = new Protobufs.Data()
@@ -73,7 +73,7 @@ namespace Meshtastic.Test.Extensions
                     Payload = new Routing().ToByteString()
                 }
             };
-            result = fromRadio.GetMessage<Routing>();
+            result = fromRadio.GetPayload<Routing>();
             result.Should().NotBeNull();
             result.Should().BeOfType<Routing>();
         }
@@ -89,7 +89,7 @@ namespace Meshtastic.Test.Extensions
                     Control = XModem.Types.Control.Stx
                 }
             };
-            var result = fromRadio.GetMessage<XModem>();
+            var result = fromRadio.GetPayload<XModem>();
             result.Should().NotBeNull();
             result.Should().BeOfType<XModem>();
             result!.Control.Should().Be(XModem.Types.Control.Stx);
