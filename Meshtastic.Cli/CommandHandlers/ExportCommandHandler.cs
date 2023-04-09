@@ -28,15 +28,30 @@ public class ExportCommandHandler : DeviceCommandHandler
 
     public override Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
-        var selection = AnsiConsole.Prompt(new MultiSelectionPrompt<string>()
+        var channels = container.Channels.Where(c => c.Role != Channel.Types.Role.Disabled).Select(c => $"{c.Index} ({(c.Role == Channel.Types.Role.Primary ? "PRIMARY" : c.Settings.Name)})");
+        var configs = container.LocalConfig.GetProperties().Select(p => p.Name);
+        var moduleConfigs = container.LocalModuleConfig.GetProperties().Select(p => p.Name);
+
+        var prompt = new MultiSelectionPrompt<string>()
             .Required(true)
             .PageSize(100)
             .Title("What would you like to export?")
             .InstructionsText("[grey](Press [blue]<space>[/] to toggle selection and [green]<enter>[/] to accept)[/]")
             .AddChoices("Name")
-            .AddChoiceGroup("Channels", container.Channels.Where(c => c.Role != Channel.Types.Role.Disabled).Select(c => $"{c.Index} ({(c.Role == Channel.Types.Role.Primary ? "PRIMARY" : c.Settings.Name)})"))
-            .AddChoiceGroup("Config", container.LocalConfig.GetProperties().Select(p => p.Name))
-            .AddChoiceGroup("Module Config", container.LocalModuleConfig.GetProperties().Select(p => p.Name)));
+            .AddChoiceGroup("Channels", channels)
+            .AddChoiceGroup("Config", configs)
+            .AddChoiceGroup("Module Config", moduleConfigs)
+            .Select("Name")
+            .Select("Channels")
+            .Select("Config")
+            .Select("Module Config");
+
+        foreach(var option in channels.Union(configs).Union(moduleConfigs))
+        {
+            prompt = prompt.Select(option);
+        }
+
+        var selection = AnsiConsole.Prompt(prompt);
 
         var deviceProfile = new DeviceProfile();
 
@@ -70,9 +85,14 @@ public class ExportCommandHandler : DeviceCommandHandler
             deviceProfile.LongName = me.User.LongName;
             deviceProfile.ShortName = me.User.ShortName;
         }
+        var selectedChannelIndexes = selection.Select(s => s.First())
+                .Where(s => Char.IsDigit(s))
+                .Select(s => Int32.Parse(s.ToString()))
+                .ToArray();
 
-        deviceProfile.ChannelUrl = container.GetChannelUrl();
-        
+        if (selectedChannelIndexes.Any())
+            deviceProfile.ChannelUrl = container.GetChannelUrl(selectedChannelIndexes);
+
         AnsiConsole.WriteLine(yamlSerializer.Serialize(deviceProfile));
 
         return Task.CompletedTask;

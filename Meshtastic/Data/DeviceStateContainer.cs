@@ -100,16 +100,19 @@ public class DeviceStateContainer
         return $"{node?.User?.LongName} ({node?.User?.ShortName}) - {node?.Num}";
     }
 
-    public string GetChannelUrl()
+    public string GetChannelUrl(int[]? selection = null)
     {
         var channelSet = new ChannelSet()
         {
             LoraConfig = this.LocalConfig.Lora
         };
-        this.Channels.ForEach(channel =>
-        {
-            channelSet.Settings.Add(channel.Settings);
-        });
+
+        (selection == null ? this.Channels : this.Channels.Where(c => selection.Contains(c.Index)))
+            .ToList()
+            .ForEach(channel =>
+            {
+                channelSet.Settings.Add(channel.Settings);
+            });
         var serialized = channelSet.ToByteArray();
         var base64 = Convert.ToBase64String(serialized);
         base64 = base64.Replace("-", String.Empty).Replace('+', '-').Replace('/', '_');
