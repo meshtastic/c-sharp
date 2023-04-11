@@ -34,6 +34,7 @@
 
 
   <ItemGroup>
+    <PackageReference Include="dpp.takclient" Version="1.0.0" />
     <PackageReference Include="Google.Protobuf" Version="3.22.1" />
     <PackageReference Include="Google.Protobuf.Tools" Version="3.22.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
