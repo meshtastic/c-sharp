@@ -77,7 +77,7 @@ public class DeviceStateContainer
 
     public uint GetHopLimitOrDefault()
     {
-        return (uint)(this.LocalConfig.Lora.HopLimit > 0 ? this.LocalConfig.Lora.HopLimit : 3);
+        return (uint)(this.LocalConfig.Lora?.HopLimit > 0 ? this.LocalConfig.Lora.HopLimit : 3);
     }
 
     public NodeInfo? GetDeviceNodeInfo()
@@ -91,11 +91,15 @@ public class DeviceStateContainer
         if (node == null)
             return nodeNum.ToString();
 
+        if (!shortName && hideNodeNum)
+            return node?.User?.LongName ?? $"Meshtastic {nodeNum}";
+
         if (shortName)
             return node?.User?.ShortName ?? String.Empty;
 
         if (hideNodeNum)
             return $"{node?.User?.LongName} ({node?.User?.ShortName})";
+
 
         return $"{node?.User?.LongName} ({node?.User?.ShortName}) - {node?.Num}";
     }
