@@ -483,7 +483,7 @@ namespace Meshtastic.Protobufs {
     private string ssid_ = "";
     /// <summary>
     ///
-    /// WiFi access point SSID 
+    /// WiFi access point SSID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

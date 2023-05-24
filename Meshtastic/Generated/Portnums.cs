@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static PortnumsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKqQDCgdQ",
+            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKroDCgdQ",
             "b3J0TnVtEg8KC1VOS05PV05fQVBQEAASFAoQVEVYVF9NRVNTQUdFX0FQUBAB",
             "EhcKE1JFTU9URV9IQVJEV0FSRV9BUFAQAhIQCgxQT1NJVElPTl9BUFAQAxIQ",
             "CgxOT0RFSU5GT19BUFAQBBIPCgtST1VUSU5HX0FQUBAFEg0KCUFETUlOX0FQ",
@@ -33,10 +33,11 @@ namespace Meshtastic.Protobufs {
             "X1RVTk5FTF9BUFAQIRIOCgpTRVJJQUxfQVBQEEASFQoRU1RPUkVfRk9SV0FS",
             "RF9BUFAQQRISCg5SQU5HRV9URVNUX0FQUBBCEhEKDVRFTEVNRVRSWV9BUFAQ",
             "QxILCgdaUFNfQVBQEEQSEQoNU0lNVUxBVE9SX0FQUBBFEhIKDlRSQUNFUk9V",
-            "VEVfQVBQEEYSEAoLUFJJVkFURV9BUFAQgAISEwoOQVRBS19GT1JXQVJERVIQ",
-            "gQISCAoDTUFYEP8DQl0KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCFBvcnRudW1z",
-            "WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRh",
-            "c3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "VEVfQVBQEEYSFAoQTkVJR0hCT1JJTkZPX0FQUBBHEhAKC1BSSVZBVEVfQVBQ",
+            "EIACEhMKDkFUQUtfRk9SV0FSREVSEIECEggKA01BWBD/A0JdChNjb20uZ2Vl",
+            "a3N2aWxsZS5tZXNoQghQb3J0bnVtc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
+            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.PortNum), }, null, null));
@@ -167,10 +168,10 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("ZPS_APP")] ZpsApp = 68,
     /// <summary>
     ///
-    /// Used to let multiple instances of Linux native applications communicate 
+    /// Used to let multiple instances of Linux native applications communicate
     /// as if they did using their LoRa chip.
-    /// Maintained by GitHub user GUVWAF. 
-    /// Project files at https://github.com/GUVWAF/Meshtasticator 
+    /// Maintained by GitHub user GUVWAF.
+    /// Project files at https://github.com/GUVWAF/Meshtasticator
     /// </summary>
     [pbr::OriginalName("SIMULATOR_APP")] SimulatorApp = 69,
     /// <summary>
@@ -179,6 +180,11 @@ namespace Meshtastic.Protobufs {
     /// a certain destination would take on the mesh.
     /// </summary>
     [pbr::OriginalName("TRACEROUTE_APP")] TracerouteApp = 70,
+    /// <summary>
+    ///
+    /// Aggregates edge info for the network by sending out a list of each node's neighbors
+    /// </summary>
+    [pbr::OriginalName("NEIGHBORINFO_APP")] NeighborinfoApp = 71,
     /// <summary>
     ///
     /// Private applications should use portnums >= 256.

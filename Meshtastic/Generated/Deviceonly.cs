@@ -26,31 +26,37 @@ namespace Meshtastic.Protobufs {
           string.Concat(
             "ChttZXNodGFzdGljL2RldmljZW9ubHkucHJvdG8SCm1lc2h0YXN0aWMaGG1l",
             "c2h0YXN0aWMvY2hhbm5lbC5wcm90bxoabWVzaHRhc3RpYy9sb2NhbG9ubHku",
-            "cHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90byKXAgoLRGV2aWNlU3RhdGUS",
-            "JwoHbXlfbm9kZRgCIAEoCzIWLm1lc2h0YXN0aWMuTXlOb2RlSW5mbxIfCgVv",
-            "d25lchgDIAEoCzIQLm1lc2h0YXN0aWMuVXNlchIlCgdub2RlX2RiGAQgAygL",
-            "MhQubWVzaHRhc3RpYy5Ob2RlSW5mbxItCg1yZWNlaXZlX3F1ZXVlGAUgAygL",
-            "MhYubWVzaHRhc3RpYy5NZXNoUGFja2V0Eg8KB3ZlcnNpb24YCCABKA0SLwoP",
-            "cnhfdGV4dF9tZXNzYWdlGAcgASgLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0",
-            "Eg8KB25vX3NhdmUYCSABKAgSFQoNZGlkX2dwc19yZXNldBgLIAEoCCJFCgtD",
-            "aGFubmVsRmlsZRIlCghjaGFubmVscxgBIAMoCzITLm1lc2h0YXN0aWMuQ2hh",
-            "bm5lbBIPCgd2ZXJzaW9uGAIgASgNIpcCCghPRU1TdG9yZRIWCg5vZW1faWNv",
-            "bl93aWR0aBgBIAEoDRIXCg9vZW1faWNvbl9oZWlnaHQYAiABKA0SFQoNb2Vt",
-            "X2ljb25fYml0cxgDIAEoDBIpCghvZW1fZm9udBgEIAEoDjIXLm1lc2h0YXN0",
-            "aWMuU2NyZWVuRm9udHMSEAoIb2VtX3RleHQYBSABKAkSEwoLb2VtX2Flc19r",
-            "ZXkYBiABKAwSMQoQb2VtX2xvY2FsX2NvbmZpZxgHIAEoCzIXLm1lc2h0YXN0",
-            "aWMuTG9jYWxDb25maWcSPgoXb2VtX2xvY2FsX21vZHVsZV9jb25maWcYCCAB",
-            "KAsyHS5tZXNodGFzdGljLkxvY2FsTW9kdWxlQ29uZmlnKj4KC1NjcmVlbkZv",
-            "bnRzEg4KCkZPTlRfU01BTEwQABIPCgtGT05UX01FRElVTRABEg4KCkZPTlRf",
-            "TEFSR0UQAkJfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpEZXZpY2VPbmx5WiJn",
-            "aXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3Rp",
-            "Yy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "cHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90bxoebWVzaHRhc3RpYy9tb2R1",
+            "bGVfY29uZmlnLnByb3RvIooDCgtEZXZpY2VTdGF0ZRInCgdteV9ub2RlGAIg",
+            "ASgLMhYubWVzaHRhc3RpYy5NeU5vZGVJbmZvEh8KBW93bmVyGAMgASgLMhAu",
+            "bWVzaHRhc3RpYy5Vc2VyEiUKB25vZGVfZGIYBCADKAsyFC5tZXNodGFzdGlj",
+            "Lk5vZGVJbmZvEi0KDXJlY2VpdmVfcXVldWUYBSADKAsyFi5tZXNodGFzdGlj",
+            "Lk1lc2hQYWNrZXQSDwoHdmVyc2lvbhgIIAEoDRIvCg9yeF90ZXh0X21lc3Nh",
+            "Z2UYByABKAsyFi5tZXNodGFzdGljLk1lc2hQYWNrZXQSDwoHbm9fc2F2ZRgJ",
+            "IAEoCBIVCg1kaWRfZ3BzX3Jlc2V0GAsgASgIEisKC3J4X3dheXBvaW50GAwg",
+            "ASgLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0EkQKGW5vZGVfcmVtb3RlX2hh",
+            "cmR3YXJlX3BpbnMYDSADKAsyIS5tZXNodGFzdGljLk5vZGVSZW1vdGVIYXJk",
+            "d2FyZVBpbiJFCgtDaGFubmVsRmlsZRIlCghjaGFubmVscxgBIAMoCzITLm1l",
+            "c2h0YXN0aWMuQ2hhbm5lbBIPCgd2ZXJzaW9uGAIgASgNIpcCCghPRU1TdG9y",
+            "ZRIWCg5vZW1faWNvbl93aWR0aBgBIAEoDRIXCg9vZW1faWNvbl9oZWlnaHQY",
+            "AiABKA0SFQoNb2VtX2ljb25fYml0cxgDIAEoDBIpCghvZW1fZm9udBgEIAEo",
+            "DjIXLm1lc2h0YXN0aWMuU2NyZWVuRm9udHMSEAoIb2VtX3RleHQYBSABKAkS",
+            "EwoLb2VtX2Flc19rZXkYBiABKAwSMQoQb2VtX2xvY2FsX2NvbmZpZxgHIAEo",
+            "CzIXLm1lc2h0YXN0aWMuTG9jYWxDb25maWcSPgoXb2VtX2xvY2FsX21vZHVs",
+            "ZV9jb25maWcYCCABKAsyHS5tZXNodGFzdGljLkxvY2FsTW9kdWxlQ29uZmln",
+            "IlUKFU5vZGVSZW1vdGVIYXJkd2FyZVBpbhIQCghub2RlX251bRgBIAEoDRIq",
+            "CgNwaW4YAiABKAsyHS5tZXNodGFzdGljLlJlbW90ZUhhcmR3YXJlUGluKj4K",
+            "C1NjcmVlbkZvbnRzEg4KCkZPTlRfU01BTEwQABIPCgtGT05UX01FRElVTRAB",
+            "Eg4KCkZPTlRfTEFSR0UQAkJfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpEZXZp",
+            "Y2VPbmx5WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
+            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.ScreenFonts), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceState), global::Meshtastic.Protobufs.DeviceState.Parser, new[]{ "MyNode", "Owner", "NodeDb", "ReceiveQueue", "Version", "RxTextMessage", "NoSave", "DidGpsReset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceState), global::Meshtastic.Protobufs.DeviceState.Parser, new[]{ "MyNode", "Owner", "NodeDb", "ReceiveQueue", "Version", "RxTextMessage", "NoSave", "DidGpsReset", "RxWaypoint", "NodeRemoteHardwarePins" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ChannelFile), global::Meshtastic.Protobufs.ChannelFile.Parser, new[]{ "Channels", "Version" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.OEMStore), global::Meshtastic.Protobufs.OEMStore.Parser, new[]{ "OemIconWidth", "OemIconHeight", "OemIconBits", "OemFont", "OemText", "OemAesKey", "OemLocalConfig", "OemLocalModuleConfig" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.OEMStore), global::Meshtastic.Protobufs.OEMStore.Parser, new[]{ "OemIconWidth", "OemIconHeight", "OemIconBits", "OemFont", "OemText", "OemAesKey", "OemLocalConfig", "OemLocalModuleConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePin), global::Meshtastic.Protobufs.NodeRemoteHardwarePin.Parser, new[]{ "NodeNum", "Pin" }, null, null, null, null)
           }));
     }
     #endregion
@@ -132,6 +138,8 @@ namespace Meshtastic.Protobufs {
       rxTextMessage_ = other.rxTextMessage_ != null ? other.rxTextMessage_.Clone() : null;
       noSave_ = other.noSave_;
       didGpsReset_ = other.didGpsReset_;
+      rxWaypoint_ = other.rxWaypoint_ != null ? other.rxWaypoint_.Clone() : null;
+      nodeRemoteHardwarePins_ = other.nodeRemoteHardwarePins_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -272,6 +280,39 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "rx_waypoint" field.</summary>
+    public const int RxWaypointFieldNumber = 12;
+    private global::Meshtastic.Protobufs.MeshPacket rxWaypoint_;
+    /// <summary>
+    ///
+    /// We keep the last received waypoint stored in the device flash,
+    /// so we can show it on the screen.
+    /// Might be null
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.MeshPacket RxWaypoint {
+      get { return rxWaypoint_; }
+      set {
+        rxWaypoint_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "node_remote_hardware_pins" field.</summary>
+    public const int NodeRemoteHardwarePinsFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Meshtastic.Protobufs.NodeRemoteHardwarePin> _repeated_nodeRemoteHardwarePins_codec
+        = pb::FieldCodec.ForMessage(106, global::Meshtastic.Protobufs.NodeRemoteHardwarePin.Parser);
+    private readonly pbc::RepeatedField<global::Meshtastic.Protobufs.NodeRemoteHardwarePin> nodeRemoteHardwarePins_ = new pbc::RepeatedField<global::Meshtastic.Protobufs.NodeRemoteHardwarePin>();
+    /// <summary>
+    ///
+    /// The mesh's nodes with their available gpio pins for RemoteHardware module
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Meshtastic.Protobufs.NodeRemoteHardwarePin> NodeRemoteHardwarePins {
+      get { return nodeRemoteHardwarePins_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -295,6 +336,8 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(RxTextMessage, other.RxTextMessage)) return false;
       if (NoSave != other.NoSave) return false;
       if (DidGpsReset != other.DidGpsReset) return false;
+      if (!object.Equals(RxWaypoint, other.RxWaypoint)) return false;
+      if(!nodeRemoteHardwarePins_.Equals(other.nodeRemoteHardwarePins_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -310,6 +353,8 @@ namespace Meshtastic.Protobufs {
       if (rxTextMessage_ != null) hash ^= RxTextMessage.GetHashCode();
       if (NoSave != false) hash ^= NoSave.GetHashCode();
       if (DidGpsReset != false) hash ^= DidGpsReset.GetHashCode();
+      if (rxWaypoint_ != null) hash ^= RxWaypoint.GetHashCode();
+      hash ^= nodeRemoteHardwarePins_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -354,6 +399,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(88);
         output.WriteBool(DidGpsReset);
       }
+      if (rxWaypoint_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(RxWaypoint);
+      }
+      nodeRemoteHardwarePins_.WriteTo(output, _repeated_nodeRemoteHardwarePins_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -390,6 +440,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(88);
         output.WriteBool(DidGpsReset);
       }
+      if (rxWaypoint_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(RxWaypoint);
+      }
+      nodeRemoteHardwarePins_.WriteTo(ref output, _repeated_nodeRemoteHardwarePins_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -420,6 +475,10 @@ namespace Meshtastic.Protobufs {
       if (DidGpsReset != false) {
         size += 1 + 1;
       }
+      if (rxWaypoint_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RxWaypoint);
+      }
+      size += nodeRemoteHardwarePins_.CalculateSize(_repeated_nodeRemoteHardwarePins_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -461,6 +520,13 @@ namespace Meshtastic.Protobufs {
       if (other.DidGpsReset != false) {
         DidGpsReset = other.DidGpsReset;
       }
+      if (other.rxWaypoint_ != null) {
+        if (rxWaypoint_ == null) {
+          RxWaypoint = new global::Meshtastic.Protobufs.MeshPacket();
+        }
+        RxWaypoint.MergeFrom(other.RxWaypoint);
+      }
+      nodeRemoteHardwarePins_.Add(other.nodeRemoteHardwarePins_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -517,6 +583,17 @@ namespace Meshtastic.Protobufs {
             DidGpsReset = input.ReadBool();
             break;
           }
+          case 98: {
+            if (rxWaypoint_ == null) {
+              RxWaypoint = new global::Meshtastic.Protobufs.MeshPacket();
+            }
+            input.ReadMessage(RxWaypoint);
+            break;
+          }
+          case 106: {
+            nodeRemoteHardwarePins_.AddEntriesFrom(input, _repeated_nodeRemoteHardwarePins_codec);
+            break;
+          }
         }
       }
     #endif
@@ -571,6 +648,17 @@ namespace Meshtastic.Protobufs {
           }
           case 88: {
             DidGpsReset = input.ReadBool();
+            break;
+          }
+          case 98: {
+            if (rxWaypoint_ == null) {
+              RxWaypoint = new global::Meshtastic.Protobufs.MeshPacket();
+            }
+            input.ReadMessage(RxWaypoint);
+            break;
+          }
+          case 106: {
+            nodeRemoteHardwarePins_.AddEntriesFrom(ref input, _repeated_nodeRemoteHardwarePins_codec);
             break;
           }
         }
@@ -1303,6 +1391,253 @@ namespace Meshtastic.Protobufs {
               OemLocalModuleConfig = new global::Meshtastic.Protobufs.LocalModuleConfig();
             }
             input.ReadMessage(OemLocalModuleConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// RemoteHardwarePins associated with a node
+  /// </summary>
+  public sealed partial class NodeRemoteHardwarePin : pb::IMessage<NodeRemoteHardwarePin>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NodeRemoteHardwarePin> _parser = new pb::MessageParser<NodeRemoteHardwarePin>(() => new NodeRemoteHardwarePin());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NodeRemoteHardwarePin> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeRemoteHardwarePin() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeRemoteHardwarePin(NodeRemoteHardwarePin other) : this() {
+      nodeNum_ = other.nodeNum_;
+      pin_ = other.pin_ != null ? other.pin_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeRemoteHardwarePin Clone() {
+      return new NodeRemoteHardwarePin(this);
+    }
+
+    /// <summary>Field number for the "node_num" field.</summary>
+    public const int NodeNumFieldNumber = 1;
+    private uint nodeNum_;
+    /// <summary>
+    ///
+    /// The node_num exposing the available gpio pin
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NodeNum {
+      get { return nodeNum_; }
+      set {
+        nodeNum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pin" field.</summary>
+    public const int PinFieldNumber = 2;
+    private global::Meshtastic.Protobufs.RemoteHardwarePin pin_;
+    /// <summary>
+    ///
+    /// The the available gpio pin for usage with RemoteHardware module
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.RemoteHardwarePin Pin {
+      get { return pin_; }
+      set {
+        pin_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NodeRemoteHardwarePin);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NodeRemoteHardwarePin other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodeNum != other.NodeNum) return false;
+      if (!object.Equals(Pin, other.Pin)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodeNum != 0) hash ^= NodeNum.GetHashCode();
+      if (pin_ != null) hash ^= Pin.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (NodeNum != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(NodeNum);
+      }
+      if (pin_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Pin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeNum != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(NodeNum);
+      }
+      if (pin_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Pin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodeNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NodeNum);
+      }
+      if (pin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pin);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NodeRemoteHardwarePin other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodeNum != 0) {
+        NodeNum = other.NodeNum;
+      }
+      if (other.pin_ != null) {
+        if (pin_ == null) {
+          Pin = new global::Meshtastic.Protobufs.RemoteHardwarePin();
+        }
+        Pin.MergeFrom(other.Pin);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            NodeNum = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (pin_ == null) {
+              Pin = new global::Meshtastic.Protobufs.RemoteHardwarePin();
+            }
+            input.ReadMessage(Pin);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            NodeNum = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (pin_ == null) {
+              Pin = new global::Meshtastic.Protobufs.RemoteHardwarePin();
+            }
+            input.ReadMessage(Pin);
             break;
           }
         }
