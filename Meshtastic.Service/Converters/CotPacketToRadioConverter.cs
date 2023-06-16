@@ -10,38 +10,6 @@ using TheBentern.Tak.Client;
 
 namespace Meshtastic.Service.Converters;
 
-/*
-<event version="2.0" type="a-f-G-E-V-C" uid="8EC57F43-7765-433B-B050-2CBC6372CC89"
-  time="2023-04-14T11:34:28Z" start="2023-04-14T11:34:28Z" stale="2023-04-14T11:36:28Z" how="m-g">
-  <point lat="34.805606" lon="-92.481731" ce="9999999" hae="106.9" le="9999999" />
-  <detail>
-    <contact endpoint="*:-1:stcp" callsign="Echo Mike" />
-    <__group name="Cyan" role="RTO" />
-    <precisionlocation geopointsrc="GPS" altsrc="???" />
-    <status battery="56" />
-    <takv device="iPhone" platform="iTAK" os="16.4.1" version="2.5.0.604" />
-    <track />
-  </detail>
-</event>
-<event version="2.0"
-  uid="GeoChat.8EC57F43-7765-433B-B050-2CBC6372CC89.All Chat Rooms.6AFFCE82-FA4B-407B-93FB-65562F5DD324"
-  type="b-t-f" how="h-g-i-g-o" time="2023-04-14T12:48:11.000Z" start="2023-04-14T12:48:11.000Z"
-  stale="2023-04-14T12:50:11.000Z">
-  <point lat="34.805622" lon="-92.481746" hae="9999999.0" ce="9999999.0" le="9999999.0" />
-  <detail>
-    <__chat parent="RootContactGroup" groupOwner="false"
-      messageId="6AFFCE82-FA4B-407B-93FB-65562F5DD324" chatroom="All Chat Rooms" id="All Chat Rooms"
-      senderCallsign="Echo Mike">
-      <chatgrp uid0="8EC57F43-7765-433B-B050-2CBC6372CC89" uid1="All Chat Rooms" id="All Chat Rooms" />
-    </__chat>
-    <link uid="8EC57F43-7765-433B-B050-2CBC6372CC89" type="a-f-G-E-V-C" relation="p-p" />
-    <remarks source="BAO.F.ATAK.8EC57F43-7765-433B-B050-2CBC6372CC89" to="All Chat Rooms"
-      time="2023-04-14T12:48:11Z">Test results </remarks>
-    <__serverdestination destinations="192.168.1.168:4242:tcp:8EC57F43-7765-433B-B050-2CBC6372CC89" />
-    <_flow-tags_ TAK-Server-dd4055d128d5416e826423948c66e412="2023-04-14T12:48:11Z" />
-  </detail>
-</event>
- */
 public class CotPacketToRadioConverter
 {
     private readonly Event cotEvent;
