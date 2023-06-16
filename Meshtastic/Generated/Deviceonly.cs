@@ -26,34 +26,46 @@ namespace Meshtastic.Protobufs {
           string.Concat(
             "ChttZXNodGFzdGljL2RldmljZW9ubHkucHJvdG8SCm1lc2h0YXN0aWMaGG1l",
             "c2h0YXN0aWMvY2hhbm5lbC5wcm90bxoabWVzaHRhc3RpYy9sb2NhbG9ubHku",
-            "cHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90bxoebWVzaHRhc3RpYy9tb2R1",
-            "bGVfY29uZmlnLnByb3RvIooDCgtEZXZpY2VTdGF0ZRInCgdteV9ub2RlGAIg",
-            "ASgLMhYubWVzaHRhc3RpYy5NeU5vZGVJbmZvEh8KBW93bmVyGAMgASgLMhAu",
-            "bWVzaHRhc3RpYy5Vc2VyEiUKB25vZGVfZGIYBCADKAsyFC5tZXNodGFzdGlj",
-            "Lk5vZGVJbmZvEi0KDXJlY2VpdmVfcXVldWUYBSADKAsyFi5tZXNodGFzdGlj",
-            "Lk1lc2hQYWNrZXQSDwoHdmVyc2lvbhgIIAEoDRIvCg9yeF90ZXh0X21lc3Nh",
-            "Z2UYByABKAsyFi5tZXNodGFzdGljLk1lc2hQYWNrZXQSDwoHbm9fc2F2ZRgJ",
-            "IAEoCBIVCg1kaWRfZ3BzX3Jlc2V0GAsgASgIEisKC3J4X3dheXBvaW50GAwg",
-            "ASgLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0EkQKGW5vZGVfcmVtb3RlX2hh",
-            "cmR3YXJlX3BpbnMYDSADKAsyIS5tZXNodGFzdGljLk5vZGVSZW1vdGVIYXJk",
-            "d2FyZVBpbiJFCgtDaGFubmVsRmlsZRIlCghjaGFubmVscxgBIAMoCzITLm1l",
-            "c2h0YXN0aWMuQ2hhbm5lbBIPCgd2ZXJzaW9uGAIgASgNIpcCCghPRU1TdG9y",
-            "ZRIWCg5vZW1faWNvbl93aWR0aBgBIAEoDRIXCg9vZW1faWNvbl9oZWlnaHQY",
-            "AiABKA0SFQoNb2VtX2ljb25fYml0cxgDIAEoDBIpCghvZW1fZm9udBgEIAEo",
-            "DjIXLm1lc2h0YXN0aWMuU2NyZWVuRm9udHMSEAoIb2VtX3RleHQYBSABKAkS",
-            "EwoLb2VtX2Flc19rZXkYBiABKAwSMQoQb2VtX2xvY2FsX2NvbmZpZxgHIAEo",
-            "CzIXLm1lc2h0YXN0aWMuTG9jYWxDb25maWcSPgoXb2VtX2xvY2FsX21vZHVs",
-            "ZV9jb25maWcYCCABKAsyHS5tZXNodGFzdGljLkxvY2FsTW9kdWxlQ29uZmln",
-            "IlUKFU5vZGVSZW1vdGVIYXJkd2FyZVBpbhIQCghub2RlX251bRgBIAEoDRIq",
-            "CgNwaW4YAiABKAsyHS5tZXNodGFzdGljLlJlbW90ZUhhcmR3YXJlUGluKj4K",
-            "C1NjcmVlbkZvbnRzEg4KCkZPTlRfU01BTEwQABIPCgtGT05UX01FRElVTRAB",
-            "Eg4KCkZPTlRfTEFSR0UQAkJfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpEZXZp",
-            "Y2VPbmx5WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
-            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "cHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90bxoabWVzaHRhc3RpYy90ZWxl",
+            "bWV0cnkucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90byK+",
+            "AwoLRGV2aWNlU3RhdGUSJwoHbXlfbm9kZRgCIAEoCzIWLm1lc2h0YXN0aWMu",
+            "TXlOb2RlSW5mbxIfCgVvd25lchgDIAEoCzIQLm1lc2h0YXN0aWMuVXNlchIp",
+            "Cgdub2RlX2RiGAQgAygLMhQubWVzaHRhc3RpYy5Ob2RlSW5mb0ICGAESLQoN",
+            "cmVjZWl2ZV9xdWV1ZRgFIAMoCzIWLm1lc2h0YXN0aWMuTWVzaFBhY2tldBIP",
+            "Cgd2ZXJzaW9uGAggASgNEi8KD3J4X3RleHRfbWVzc2FnZRgHIAEoCzIWLm1l",
+            "c2h0YXN0aWMuTWVzaFBhY2tldBIPCgdub19zYXZlGAkgASgIEhUKDWRpZF9n",
+            "cHNfcmVzZXQYCyABKAgSKwoLcnhfd2F5cG9pbnQYDCABKAsyFi5tZXNodGFz",
+            "dGljLk1lc2hQYWNrZXQSRAoZbm9kZV9yZW1vdGVfaGFyZHdhcmVfcGlucxgN",
+            "IAMoCzIhLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhhcmR3YXJlUGluEi4KDG5v",
+            "ZGVfZGJfbGl0ZRgOIAMoCzIYLm1lc2h0YXN0aWMuTm9kZUluZm9MaXRlIswB",
+            "CgxOb2RlSW5mb0xpdGUSCwoDbnVtGAEgASgNEh4KBHVzZXIYAiABKAsyEC5t",
+            "ZXNodGFzdGljLlVzZXISKgoIcG9zaXRpb24YAyABKAsyGC5tZXNodGFzdGlj",
+            "LlBvc2l0aW9uTGl0ZRILCgNzbnIYBCABKAISEgoKbGFzdF9oZWFyZBgFIAEo",
+            "BxIxCg5kZXZpY2VfbWV0cmljcxgGIAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNl",
+            "TWV0cmljcxIPCgdjaGFubmVsGAcgASgNIpABCgxQb3NpdGlvbkxpdGUSEgoK",
+            "bGF0aXR1ZGVfaRgBIAEoDxITCgtsb25naXR1ZGVfaRgCIAEoDxIQCghhbHRp",
+            "dHVkZRgDIAEoBRIMCgR0aW1lGAQgASgHEjcKD2xvY2F0aW9uX3NvdXJjZRgF",
+            "IAEoDjIeLm1lc2h0YXN0aWMuUG9zaXRpb24uTG9jU291cmNlIkUKC0NoYW5u",
+            "ZWxGaWxlEiUKCGNoYW5uZWxzGAEgAygLMhMubWVzaHRhc3RpYy5DaGFubmVs",
+            "Eg8KB3ZlcnNpb24YAiABKA0ilwIKCE9FTVN0b3JlEhYKDm9lbV9pY29uX3dp",
+            "ZHRoGAEgASgNEhcKD29lbV9pY29uX2hlaWdodBgCIAEoDRIVCg1vZW1faWNv",
+            "bl9iaXRzGAMgASgMEikKCG9lbV9mb250GAQgASgOMhcubWVzaHRhc3RpYy5T",
+            "Y3JlZW5Gb250cxIQCghvZW1fdGV4dBgFIAEoCRITCgtvZW1fYWVzX2tleRgG",
+            "IAEoDBIxChBvZW1fbG9jYWxfY29uZmlnGAcgASgLMhcubWVzaHRhc3RpYy5M",
+            "b2NhbENvbmZpZxI+ChdvZW1fbG9jYWxfbW9kdWxlX2NvbmZpZxgIIAEoCzId",
+            "Lm1lc2h0YXN0aWMuTG9jYWxNb2R1bGVDb25maWciVQoVTm9kZVJlbW90ZUhh",
+            "cmR3YXJlUGluEhAKCG5vZGVfbnVtGAEgASgNEioKA3BpbhgCIAEoCzIdLm1l",
+            "c2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW4qPgoLU2NyZWVuRm9udHMSDgoK",
+            "Rk9OVF9TTUFMTBAAEg8KC0ZPTlRfTUVESVVNEAESDgoKRk9OVF9MQVJHRRAC",
+            "Ql8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCkRldmljZU9ubHlaImdpdGh1Yi5j",
+            "b20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3Rv",
+            "YnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.ScreenFonts), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceState), global::Meshtastic.Protobufs.DeviceState.Parser, new[]{ "MyNode", "Owner", "NodeDb", "ReceiveQueue", "Version", "RxTextMessage", "NoSave", "DidGpsReset", "RxWaypoint", "NodeRemoteHardwarePins" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceState), global::Meshtastic.Protobufs.DeviceState.Parser, new[]{ "MyNode", "Owner", "NodeDb", "ReceiveQueue", "Version", "RxTextMessage", "NoSave", "DidGpsReset", "RxWaypoint", "NodeRemoteHardwarePins", "NodeDbLite" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfoLite), global::Meshtastic.Protobufs.NodeInfoLite.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics", "Channel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PositionLite), global::Meshtastic.Protobufs.PositionLite.Parser, new[]{ "LatitudeI", "LongitudeI", "Altitude", "Time", "LocationSource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ChannelFile), global::Meshtastic.Protobufs.ChannelFile.Parser, new[]{ "Channels", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.OEMStore), global::Meshtastic.Protobufs.OEMStore.Parser, new[]{ "OemIconWidth", "OemIconHeight", "OemIconBits", "OemFont", "OemText", "OemAesKey", "OemLocalConfig", "OemLocalModuleConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePin), global::Meshtastic.Protobufs.NodeRemoteHardwarePin.Parser, new[]{ "NodeNum", "Pin" }, null, null, null, null)
@@ -140,6 +152,7 @@ namespace Meshtastic.Protobufs {
       didGpsReset_ = other.didGpsReset_;
       rxWaypoint_ = other.rxWaypoint_ != null ? other.rxWaypoint_.Clone() : null;
       nodeRemoteHardwarePins_ = other.nodeRemoteHardwarePins_.Clone();
+      nodeDbLite_ = other.nodeDbLite_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -188,8 +201,10 @@ namespace Meshtastic.Protobufs {
     private readonly pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfo> nodeDb_ = new pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfo>();
     /// <summary>
     ///
-    /// TODO: REPLACE
+    /// Deprecated in 2.1.x
+    /// Old node_db. See NodeInfoLite node_db_lite
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfo> NodeDb {
@@ -313,6 +328,21 @@ namespace Meshtastic.Protobufs {
       get { return nodeRemoteHardwarePins_; }
     }
 
+    /// <summary>Field number for the "node_db_lite" field.</summary>
+    public const int NodeDbLiteFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Meshtastic.Protobufs.NodeInfoLite> _repeated_nodeDbLite_codec
+        = pb::FieldCodec.ForMessage(114, global::Meshtastic.Protobufs.NodeInfoLite.Parser);
+    private readonly pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfoLite> nodeDbLite_ = new pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfoLite>();
+    /// <summary>
+    ///
+    /// New lite version of NodeDB to decrease
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfoLite> NodeDbLite {
+      get { return nodeDbLite_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -338,6 +368,7 @@ namespace Meshtastic.Protobufs {
       if (DidGpsReset != other.DidGpsReset) return false;
       if (!object.Equals(RxWaypoint, other.RxWaypoint)) return false;
       if(!nodeRemoteHardwarePins_.Equals(other.nodeRemoteHardwarePins_)) return false;
+      if(!nodeDbLite_.Equals(other.nodeDbLite_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -355,6 +386,7 @@ namespace Meshtastic.Protobufs {
       if (DidGpsReset != false) hash ^= DidGpsReset.GetHashCode();
       if (rxWaypoint_ != null) hash ^= RxWaypoint.GetHashCode();
       hash ^= nodeRemoteHardwarePins_.GetHashCode();
+      hash ^= nodeDbLite_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -404,6 +436,7 @@ namespace Meshtastic.Protobufs {
         output.WriteMessage(RxWaypoint);
       }
       nodeRemoteHardwarePins_.WriteTo(output, _repeated_nodeRemoteHardwarePins_codec);
+      nodeDbLite_.WriteTo(output, _repeated_nodeDbLite_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -445,6 +478,7 @@ namespace Meshtastic.Protobufs {
         output.WriteMessage(RxWaypoint);
       }
       nodeRemoteHardwarePins_.WriteTo(ref output, _repeated_nodeRemoteHardwarePins_codec);
+      nodeDbLite_.WriteTo(ref output, _repeated_nodeDbLite_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -479,6 +513,7 @@ namespace Meshtastic.Protobufs {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RxWaypoint);
       }
       size += nodeRemoteHardwarePins_.CalculateSize(_repeated_nodeRemoteHardwarePins_codec);
+      size += nodeDbLite_.CalculateSize(_repeated_nodeDbLite_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -527,6 +562,7 @@ namespace Meshtastic.Protobufs {
         RxWaypoint.MergeFrom(other.RxWaypoint);
       }
       nodeRemoteHardwarePins_.Add(other.nodeRemoteHardwarePins_);
+      nodeDbLite_.Add(other.nodeDbLite_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -592,6 +628,10 @@ namespace Meshtastic.Protobufs {
           }
           case 106: {
             nodeRemoteHardwarePins_.AddEntriesFrom(input, _repeated_nodeRemoteHardwarePins_codec);
+            break;
+          }
+          case 114: {
+            nodeDbLite_.AddEntriesFrom(input, _repeated_nodeDbLite_codec);
             break;
           }
         }
@@ -661,6 +701,844 @@ namespace Meshtastic.Protobufs {
             nodeRemoteHardwarePins_.AddEntriesFrom(ref input, _repeated_nodeRemoteHardwarePins_codec);
             break;
           }
+          case 114: {
+            nodeDbLite_.AddEntriesFrom(ref input, _repeated_nodeDbLite_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class NodeInfoLite : pb::IMessage<NodeInfoLite>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NodeInfoLite> _parser = new pb::MessageParser<NodeInfoLite>(() => new NodeInfoLite());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NodeInfoLite> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeInfoLite() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeInfoLite(NodeInfoLite other) : this() {
+      num_ = other.num_;
+      user_ = other.user_ != null ? other.user_.Clone() : null;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
+      snr_ = other.snr_;
+      lastHeard_ = other.lastHeard_;
+      deviceMetrics_ = other.deviceMetrics_ != null ? other.deviceMetrics_.Clone() : null;
+      channel_ = other.channel_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeInfoLite Clone() {
+      return new NodeInfoLite(this);
+    }
+
+    /// <summary>Field number for the "num" field.</summary>
+    public const int NumFieldNumber = 1;
+    private uint num_;
+    /// <summary>
+    ///
+    /// The node number
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Num {
+      get { return num_; }
+      set {
+        num_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user" field.</summary>
+    public const int UserFieldNumber = 2;
+    private global::Meshtastic.Protobufs.User user_;
+    /// <summary>
+    ///
+    /// The user info for this node
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.User User {
+      get { return user_; }
+      set {
+        user_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 3;
+    private global::Meshtastic.Protobufs.PositionLite position_;
+    /// <summary>
+    ///
+    /// This position data. Note: before 1.2.14 we would also store the last time we've heard from this node in position.time, that is no longer true.
+    /// Position.time now indicates the last time we received a POSITION from that node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.PositionLite Position {
+      get { return position_; }
+      set {
+        position_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "snr" field.</summary>
+    public const int SnrFieldNumber = 4;
+    private float snr_;
+    /// <summary>
+    ///
+    /// Returns the Signal-to-noise ratio (SNR) of the last received message,
+    /// as measured by the receiver. Return SNR of the last received message in dB
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Snr {
+      get { return snr_; }
+      set {
+        snr_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_heard" field.</summary>
+    public const int LastHeardFieldNumber = 5;
+    private uint lastHeard_;
+    /// <summary>
+    ///
+    /// Set to indicate the last time we received a packet from this node
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LastHeard {
+      get { return lastHeard_; }
+      set {
+        lastHeard_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "device_metrics" field.</summary>
+    public const int DeviceMetricsFieldNumber = 6;
+    private global::Meshtastic.Protobufs.DeviceMetrics deviceMetrics_;
+    /// <summary>
+    ///
+    /// The latest device metrics for the node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.DeviceMetrics DeviceMetrics {
+      get { return deviceMetrics_; }
+      set {
+        deviceMetrics_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "channel" field.</summary>
+    public const int ChannelFieldNumber = 7;
+    private uint channel_;
+    /// <summary>
+    ///
+    /// local channel index we heard that node on. Only populated if its not the default channel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Channel {
+      get { return channel_; }
+      set {
+        channel_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NodeInfoLite);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NodeInfoLite other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Num != other.Num) return false;
+      if (!object.Equals(User, other.User)) return false;
+      if (!object.Equals(Position, other.Position)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Snr, other.Snr)) return false;
+      if (LastHeard != other.LastHeard) return false;
+      if (!object.Equals(DeviceMetrics, other.DeviceMetrics)) return false;
+      if (Channel != other.Channel) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Num != 0) hash ^= Num.GetHashCode();
+      if (user_ != null) hash ^= User.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
+      if (Snr != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Snr);
+      if (LastHeard != 0) hash ^= LastHeard.GetHashCode();
+      if (deviceMetrics_ != null) hash ^= DeviceMetrics.GetHashCode();
+      if (Channel != 0) hash ^= Channel.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Num != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Num);
+      }
+      if (user_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(User);
+      }
+      if (position_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Position);
+      }
+      if (Snr != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Snr);
+      }
+      if (LastHeard != 0) {
+        output.WriteRawTag(45);
+        output.WriteFixed32(LastHeard);
+      }
+      if (deviceMetrics_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(DeviceMetrics);
+      }
+      if (Channel != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Channel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Num != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Num);
+      }
+      if (user_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(User);
+      }
+      if (position_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Position);
+      }
+      if (Snr != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Snr);
+      }
+      if (LastHeard != 0) {
+        output.WriteRawTag(45);
+        output.WriteFixed32(LastHeard);
+      }
+      if (deviceMetrics_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(DeviceMetrics);
+      }
+      if (Channel != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Channel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Num != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Num);
+      }
+      if (user_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
+      }
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+      }
+      if (Snr != 0F) {
+        size += 1 + 4;
+      }
+      if (LastHeard != 0) {
+        size += 1 + 4;
+      }
+      if (deviceMetrics_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeviceMetrics);
+      }
+      if (Channel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Channel);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NodeInfoLite other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Num != 0) {
+        Num = other.Num;
+      }
+      if (other.user_ != null) {
+        if (user_ == null) {
+          User = new global::Meshtastic.Protobufs.User();
+        }
+        User.MergeFrom(other.User);
+      }
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::Meshtastic.Protobufs.PositionLite();
+        }
+        Position.MergeFrom(other.Position);
+      }
+      if (other.Snr != 0F) {
+        Snr = other.Snr;
+      }
+      if (other.LastHeard != 0) {
+        LastHeard = other.LastHeard;
+      }
+      if (other.deviceMetrics_ != null) {
+        if (deviceMetrics_ == null) {
+          DeviceMetrics = new global::Meshtastic.Protobufs.DeviceMetrics();
+        }
+        DeviceMetrics.MergeFrom(other.DeviceMetrics);
+      }
+      if (other.Channel != 0) {
+        Channel = other.Channel;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Num = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (user_ == null) {
+              User = new global::Meshtastic.Protobufs.User();
+            }
+            input.ReadMessage(User);
+            break;
+          }
+          case 26: {
+            if (position_ == null) {
+              Position = new global::Meshtastic.Protobufs.PositionLite();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 37: {
+            Snr = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            LastHeard = input.ReadFixed32();
+            break;
+          }
+          case 50: {
+            if (deviceMetrics_ == null) {
+              DeviceMetrics = new global::Meshtastic.Protobufs.DeviceMetrics();
+            }
+            input.ReadMessage(DeviceMetrics);
+            break;
+          }
+          case 56: {
+            Channel = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Num = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (user_ == null) {
+              User = new global::Meshtastic.Protobufs.User();
+            }
+            input.ReadMessage(User);
+            break;
+          }
+          case 26: {
+            if (position_ == null) {
+              Position = new global::Meshtastic.Protobufs.PositionLite();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 37: {
+            Snr = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            LastHeard = input.ReadFixed32();
+            break;
+          }
+          case 50: {
+            if (deviceMetrics_ == null) {
+              DeviceMetrics = new global::Meshtastic.Protobufs.DeviceMetrics();
+            }
+            input.ReadMessage(DeviceMetrics);
+            break;
+          }
+          case 56: {
+            Channel = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// Position with static location information only for NodeDBLite
+  /// </summary>
+  public sealed partial class PositionLite : pb::IMessage<PositionLite>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PositionLite> _parser = new pb::MessageParser<PositionLite>(() => new PositionLite());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PositionLite> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PositionLite() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PositionLite(PositionLite other) : this() {
+      latitudeI_ = other.latitudeI_;
+      longitudeI_ = other.longitudeI_;
+      altitude_ = other.altitude_;
+      time_ = other.time_;
+      locationSource_ = other.locationSource_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PositionLite Clone() {
+      return new PositionLite(this);
+    }
+
+    /// <summary>Field number for the "latitude_i" field.</summary>
+    public const int LatitudeIFieldNumber = 1;
+    private int latitudeI_;
+    /// <summary>
+    ///
+    /// The new preferred location encoding, multiply by 1e-7 to get degrees
+    /// in floating point
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LatitudeI {
+      get { return latitudeI_; }
+      set {
+        latitudeI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "longitude_i" field.</summary>
+    public const int LongitudeIFieldNumber = 2;
+    private int longitudeI_;
+    /// <summary>
+    ///
+    /// TODO: REPLACE
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LongitudeI {
+      get { return longitudeI_; }
+      set {
+        longitudeI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "altitude" field.</summary>
+    public const int AltitudeFieldNumber = 3;
+    private int altitude_;
+    /// <summary>
+    ///
+    /// In meters above MSL (but see issue #359)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Altitude {
+      get { return altitude_; }
+      set {
+        altitude_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 4;
+    private uint time_;
+    /// <summary>
+    ///
+    /// This is usually not sent over the mesh (to save space), but it is sent
+    /// from the phone so that the local device can set its RTC If it is sent over
+    /// the mesh (because there are devices on the mesh without GPS), it will only
+    /// be sent by devices which has a hardware GPS clock.
+    /// seconds since 1970
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Time {
+      get { return time_; }
+      set {
+        time_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "location_source" field.</summary>
+    public const int LocationSourceFieldNumber = 5;
+    private global::Meshtastic.Protobufs.Position.Types.LocSource locationSource_ = global::Meshtastic.Protobufs.Position.Types.LocSource.LocUnset;
+    /// <summary>
+    ///
+    /// TODO: REPLACE
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Position.Types.LocSource LocationSource {
+      get { return locationSource_; }
+      set {
+        locationSource_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PositionLite);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PositionLite other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LatitudeI != other.LatitudeI) return false;
+      if (LongitudeI != other.LongitudeI) return false;
+      if (Altitude != other.Altitude) return false;
+      if (Time != other.Time) return false;
+      if (LocationSource != other.LocationSource) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (LatitudeI != 0) hash ^= LatitudeI.GetHashCode();
+      if (LongitudeI != 0) hash ^= LongitudeI.GetHashCode();
+      if (Altitude != 0) hash ^= Altitude.GetHashCode();
+      if (Time != 0) hash ^= Time.GetHashCode();
+      if (LocationSource != global::Meshtastic.Protobufs.Position.Types.LocSource.LocUnset) hash ^= LocationSource.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (LatitudeI != 0) {
+        output.WriteRawTag(13);
+        output.WriteSFixed32(LatitudeI);
+      }
+      if (LongitudeI != 0) {
+        output.WriteRawTag(21);
+        output.WriteSFixed32(LongitudeI);
+      }
+      if (Altitude != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Altitude);
+      }
+      if (Time != 0) {
+        output.WriteRawTag(37);
+        output.WriteFixed32(Time);
+      }
+      if (LocationSource != global::Meshtastic.Protobufs.Position.Types.LocSource.LocUnset) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) LocationSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LatitudeI != 0) {
+        output.WriteRawTag(13);
+        output.WriteSFixed32(LatitudeI);
+      }
+      if (LongitudeI != 0) {
+        output.WriteRawTag(21);
+        output.WriteSFixed32(LongitudeI);
+      }
+      if (Altitude != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Altitude);
+      }
+      if (Time != 0) {
+        output.WriteRawTag(37);
+        output.WriteFixed32(Time);
+      }
+      if (LocationSource != global::Meshtastic.Protobufs.Position.Types.LocSource.LocUnset) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) LocationSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (LatitudeI != 0) {
+        size += 1 + 4;
+      }
+      if (LongitudeI != 0) {
+        size += 1 + 4;
+      }
+      if (Altitude != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Altitude);
+      }
+      if (Time != 0) {
+        size += 1 + 4;
+      }
+      if (LocationSource != global::Meshtastic.Protobufs.Position.Types.LocSource.LocUnset) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LocationSource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PositionLite other) {
+      if (other == null) {
+        return;
+      }
+      if (other.LatitudeI != 0) {
+        LatitudeI = other.LatitudeI;
+      }
+      if (other.LongitudeI != 0) {
+        LongitudeI = other.LongitudeI;
+      }
+      if (other.Altitude != 0) {
+        Altitude = other.Altitude;
+      }
+      if (other.Time != 0) {
+        Time = other.Time;
+      }
+      if (other.LocationSource != global::Meshtastic.Protobufs.Position.Types.LocSource.LocUnset) {
+        LocationSource = other.LocationSource;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            LatitudeI = input.ReadSFixed32();
+            break;
+          }
+          case 21: {
+            LongitudeI = input.ReadSFixed32();
+            break;
+          }
+          case 24: {
+            Altitude = input.ReadInt32();
+            break;
+          }
+          case 37: {
+            Time = input.ReadFixed32();
+            break;
+          }
+          case 40: {
+            LocationSource = (global::Meshtastic.Protobufs.Position.Types.LocSource) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            LatitudeI = input.ReadSFixed32();
+            break;
+          }
+          case 21: {
+            LongitudeI = input.ReadSFixed32();
+            break;
+          }
+          case 24: {
+            Altitude = input.ReadInt32();
+            break;
+          }
+          case 37: {
+            Time = input.ReadFixed32();
+            break;
+          }
+          case 40: {
+            LocationSource = (global::Meshtastic.Protobufs.Position.Types.LocSource) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -686,7 +1564,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -916,7 +1794,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1418,7 +2296,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
