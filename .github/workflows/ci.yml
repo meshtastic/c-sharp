@@ -26,7 +26,7 @@ jobs:
       run: dotnet restore
       
     - name: Build
-      run: dotnet build --project ./Meshtastic.Cli/Meshtastic.Cli.csproj --no-restore
+      run: dotnet build ./Meshtastic.Cli/Meshtastic.Cli.csproj --no-restore
       
   test:
     if: ${{ github.event_name != 'workflow_dispatch' }}
@@ -95,8 +95,8 @@ jobs:
       run: dotnet restore
     - name: Build solution and generate NuGet package
       run: | 
-        dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} --project ./Meshtastic.Cli/Meshtastic.Cli.csproj
-        dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} --project ./Meshtastic.Cli/Meshtastic.Cli.csproj
+        dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} ./Meshtastic.Cli/Meshtastic.Cli.csproj
+        dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} ./Meshtastic.Cli/Meshtastic.Cli.csproj
           
     - name: Publish package to nuget
       run: dotnet nuget push ./**/Meshtastic.Cli.*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
