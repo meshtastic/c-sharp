@@ -89,6 +89,7 @@ public class AdminMessageFactory
             SerialConfig => new ModuleConfig() { Serial = instance as SerialConfig },
             StoreForwardConfig => new ModuleConfig() { StoreForward = instance as StoreForwardConfig },
             TelemetryConfig => new ModuleConfig() { Telemetry = instance as TelemetryConfig },
+            RemoteHardwareConfig => new ModuleConfig() { RemoteHardware = instance as RemoteHardwareConfig },
             _ => throw new ArgumentException("Could not determine ModuleConfig type", nameof(instance)),
         };
         return GetNewMeshPacket(new AdminMessage() { SetModuleConfig = moduleConfig! });
