@@ -1,0 +1,29 @@
+{
+  "name": "meshtastic-service",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.1",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.2",
+    "vue-tsc": "^1.4.4"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.0.17",
+    "@microsoft/signalr": "^7.0.5",
+    "axios": "^1.4.0",
+    "chart.js": "^4.2.1",
+    "pinia": "^2.0.35",
+    "vue": "^3.2.47",
+    "vue-chart-3": "^3.1.8"
+  }
+}

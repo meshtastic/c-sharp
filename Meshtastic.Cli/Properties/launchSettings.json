@@ -135,6 +135,10 @@
     "export host": {
       "commandName": "Project",
       "commandLineArgs": "export --host 192.168.2.186"
+    },
+    "import": {
+      "commandName": "Project",
+      "commandLineArgs": "import"
     }
   }
 }

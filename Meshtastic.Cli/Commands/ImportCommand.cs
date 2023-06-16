@@ -10,6 +10,7 @@ public class ImportCommand : Command
         Option<OutputFormat> output, Option<LogLevel> log) : base(name, description)
     {
         var fileOption = new Option<string>("file", "Path to export yaml");
+        AddOption(fileOption);
 
         this.SetHandler(async (file, context, commandContext) =>
             {
