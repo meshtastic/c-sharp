@@ -335,7 +335,7 @@ namespace Meshtastic.Protobufs {
     private readonly pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfoLite> nodeDbLite_ = new pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfoLite>();
     /// <summary>
     ///
-    /// New lite version of NodeDB to decrease
+    /// New lite version of NodeDB to decrease memory footprint
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

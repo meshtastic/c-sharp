@@ -25,7 +25,7 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8SCm1lc2h0YXN0aWMi",
-            "8hoKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
+            "kxsKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
             "b2R1bGVDb25maWcuTVFUVENvbmZpZ0gAEjcKBnNlcmlhbBgCIAEoCzIlLm1l",
             "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZ0gAElQKFWV4dGVy",
             "bmFsX25vdGlmaWNhdGlvbhgDIAEoCzIzLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
@@ -40,78 +40,79 @@ namespace Meshtastic.Protobufs {
             "cmVtb3RlX2hhcmR3YXJlGAkgASgLMi0ubWVzaHRhc3RpYy5Nb2R1bGVDb25m",
             "aWcuUmVtb3RlSGFyZHdhcmVDb25maWdIABJECg1uZWlnaGJvcl9pbmZvGAog",
             "ASgLMisubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuTmVpZ2hib3JJbmZvQ29u",
-            "ZmlnSAAapwEKCk1RVFRDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIPCgdhZGRy",
+            "ZmlnSAAayAEKCk1RVFRDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIPCgdhZGRy",
             "ZXNzGAIgASgJEhAKCHVzZXJuYW1lGAMgASgJEhAKCHBhc3N3b3JkGAQgASgJ",
             "EhoKEmVuY3J5cHRpb25fZW5hYmxlZBgFIAEoCBIUCgxqc29uX2VuYWJsZWQY",
-            "BiABKAgSEwoLdGxzX2VuYWJsZWQYByABKAgSDAoEcm9vdBgIIAEoCRqCAQoU",
-            "UmVtb3RlSGFyZHdhcmVDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIiChphbGxv",
-            "d191bmRlZmluZWRfcGluX2FjY2VzcxgCIAEoCBI1Cg5hdmFpbGFibGVfcGlu",
-            "cxgDIAMoCzIdLm1lc2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW4aPgoSTmVp",
-            "Z2hib3JJbmZvQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSFwoPdXBkYXRlX2lu",
-            "dGVydmFsGAIgASgNGuQCCgtBdWRpb0NvbmZpZxIWCg5jb2RlYzJfZW5hYmxl",
-            "ZBgBIAEoCBIPCgdwdHRfcGluGAIgASgNEkAKB2JpdHJhdGUYAyABKA4yLy5t",
-            "ZXNodGFzdGljLk1vZHVsZUNvbmZpZy5BdWRpb0NvbmZpZy5BdWRpb19CYXVk",
-            "Eg4KBmkyc193cxgEIAEoDRIOCgZpMnNfc2QYBSABKA0SDwoHaTJzX2RpbhgG",
-            "IAEoDRIPCgdpMnNfc2NrGAcgASgNIqcBCgpBdWRpb19CYXVkEhIKDkNPREVD",
-            "Ml9ERUZBVUxUEAASDwoLQ09ERUMyXzMyMDAQARIPCgtDT0RFQzJfMjQwMBAC",
-            "Eg8KC0NPREVDMl8xNjAwEAMSDwoLQ09ERUMyXzE0MDAQBBIPCgtDT0RFQzJf",
-            "MTMwMBAFEg8KC0NPREVDMl8xMjAwEAYSDgoKQ09ERUMyXzcwMBAHEg8KC0NP",
-            "REVDMl83MDBCEAga5AQKDFNlcmlhbENvbmZpZxIPCgdlbmFibGVkGAEgASgI",
-            "EgwKBGVjaG8YAiABKAgSCwoDcnhkGAMgASgNEgsKA3R4ZBgEIAEoDRI/CgRi",
-            "YXVkGAUgASgOMjEubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuU2VyaWFsQ29u",
-            "ZmlnLlNlcmlhbF9CYXVkEg8KB3RpbWVvdXQYBiABKA0SPwoEbW9kZRgHIAEo",
-            "DjIxLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZy5TZXJp",
-            "YWxfTW9kZRIkChxvdmVycmlkZV9jb25zb2xlX3NlcmlhbF9wb3J0GAggASgI",
-            "IooCCgtTZXJpYWxfQmF1ZBIQCgxCQVVEX0RFRkFVTFQQABIMCghCQVVEXzEx",
-            "MBABEgwKCEJBVURfMzAwEAISDAoIQkFVRF82MDAQAxINCglCQVVEXzEyMDAQ",
-            "BBINCglCQVVEXzI0MDAQBRINCglCQVVEXzQ4MDAQBhINCglCQVVEXzk2MDAQ",
-            "BxIOCgpCQVVEXzE5MjAwEAgSDgoKQkFVRF8zODQwMBAJEg4KCkJBVURfNTc2",
-            "MDAQChIPCgtCQVVEXzExNTIwMBALEg8KC0JBVURfMjMwNDAwEAwSDwoLQkFV",
-            "RF80NjA4MDAQDRIPCgtCQVVEXzU3NjAwMBAOEg8KC0JBVURfOTIxNjAwEA8i",
-            "VQoLU2VyaWFsX01vZGUSCwoHREVGQVVMVBAAEgoKBlNJTVBMRRABEgkKBVBS",
-            "T1RPEAISCwoHVEVYVE1TRxADEggKBE5NRUEQBBILCgdDQUxUT1BPEAUazgIK",
-            "GkV4dGVybmFsTm90aWZpY2F0aW9uQ29uZmlnEg8KB2VuYWJsZWQYASABKAgS",
-            "EQoJb3V0cHV0X21zGAIgASgNEg4KBm91dHB1dBgDIAEoDRIUCgxvdXRwdXRf",
-            "dmlicmEYCCABKA0SFQoNb3V0cHV0X2J1enplchgJIAEoDRIOCgZhY3RpdmUY",
-            "BCABKAgSFQoNYWxlcnRfbWVzc2FnZRgFIAEoCBIbChNhbGVydF9tZXNzYWdl",
-            "X3ZpYnJhGAogASgIEhwKFGFsZXJ0X21lc3NhZ2VfYnV6emVyGAsgASgIEhIK",
-            "CmFsZXJ0X2JlbGwYBiABKAgSGAoQYWxlcnRfYmVsbF92aWJyYRgMIAEoCBIZ",
-            "ChFhbGVydF9iZWxsX2J1enplchgNIAEoCBIPCgd1c2VfcHdtGAcgASgIEhMK",
-            "C25hZ190aW1lb3V0GA4gASgNGoQBChJTdG9yZUZvcndhcmRDb25maWcSDwoH",
-            "ZW5hYmxlZBgBIAEoCBIRCgloZWFydGJlYXQYAiABKAgSDwoHcmVjb3JkcxgD",
-            "IAEoDRIaChJoaXN0b3J5X3JldHVybl9tYXgYBCABKA0SHQoVaGlzdG9yeV9y",
-            "ZXR1cm5fd2luZG93GAUgASgNGkAKD1JhbmdlVGVzdENvbmZpZxIPCgdlbmFi",
-            "bGVkGAEgASgIEg4KBnNlbmRlchgCIAEoDRIMCgRzYXZlGAMgASgIGoYCCg9U",
-            "ZWxlbWV0cnlDb25maWcSHgoWZGV2aWNlX3VwZGF0ZV9pbnRlcnZhbBgBIAEo",
-            "DRIjChtlbnZpcm9ubWVudF91cGRhdGVfaW50ZXJ2YWwYAiABKA0SJwofZW52",
-            "aXJvbm1lbnRfbWVhc3VyZW1lbnRfZW5hYmxlZBgDIAEoCBIiChplbnZpcm9u",
-            "bWVudF9zY3JlZW5fZW5hYmxlZBgEIAEoCBImCh5lbnZpcm9ubWVudF9kaXNw",
-            "bGF5X2ZhaHJlbmhlaXQYBSABKAgSGwoTYWlyX3F1YWxpdHlfZW5hYmxlZBgG",
-            "IAEoCBIcChRhaXJfcXVhbGl0eV9pbnRlcnZhbBgHIAEoDRrWBAoTQ2FubmVk",
-            "TWVzc2FnZUNvbmZpZxIXCg9yb3RhcnkxX2VuYWJsZWQYASABKAgSGQoRaW5w",
-            "dXRicm9rZXJfcGluX2EYAiABKA0SGQoRaW5wdXRicm9rZXJfcGluX2IYAyAB",
-            "KA0SHQoVaW5wdXRicm9rZXJfcGluX3ByZXNzGAQgASgNElkKFGlucHV0YnJv",
-            "a2VyX2V2ZW50X2N3GAUgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcu",
-            "Q2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJaChVpbnB1dGJy",
-            "b2tlcl9ldmVudF9jY3cYBiABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNvbmZp",
-            "Zy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0RXZlbnRDaGFyElwKF2lucHV0",
-            "YnJva2VyX2V2ZW50X3ByZXNzGAcgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVD",
-            "b25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchIXCg91",
-            "cGRvd24xX2VuYWJsZWQYCCABKAgSDwoHZW5hYmxlZBgJIAEoCBIaChJhbGxv",
-            "d19pbnB1dF9zb3VyY2UYCiABKAkSEQoJc2VuZF9iZWxsGAsgASgIImMKDklu",
-            "cHV0RXZlbnRDaGFyEggKBE5PTkUQABIGCgJVUBAREggKBERPV04QEhIICgRM",
-            "RUZUEBMSCQoFUklHSFQQFBIKCgZTRUxFQ1QQChIICgRCQUNLEBsSCgoGQ0FO",
-            "Q0VMEBhCEQoPcGF5bG9hZF92YXJpYW50ImQKEVJlbW90ZUhhcmR3YXJlUGlu",
-            "EhAKCGdwaW9fcGluGAEgASgNEgwKBG5hbWUYAiABKAkSLwoEdHlwZRgDIAEo",
-            "DjIhLm1lc2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW5UeXBlKkkKFVJlbW90",
-            "ZUhhcmR3YXJlUGluVHlwZRILCgdVTktOT1dOEAASEAoMRElHSVRBTF9SRUFE",
-            "EAESEQoNRElHSVRBTF9XUklURRACQmcKE2NvbS5nZWVrc3ZpbGxlLm1lc2hC",
-            "Ek1vZHVsZUNvbmZpZ1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dv",
-            "L2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "BiABKAgSEwoLdGxzX2VuYWJsZWQYByABKAgSDAoEcm9vdBgIIAEoCRIfChdw",
+            "cm94eV90b19jbGllbnRfZW5hYmxlZBgJIAEoCBqCAQoUUmVtb3RlSGFyZHdh",
+            "cmVDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIiChphbGxvd191bmRlZmluZWRf",
+            "cGluX2FjY2VzcxgCIAEoCBI1Cg5hdmFpbGFibGVfcGlucxgDIAMoCzIdLm1l",
+            "c2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW4aPgoSTmVpZ2hib3JJbmZvQ29u",
+            "ZmlnEg8KB2VuYWJsZWQYASABKAgSFwoPdXBkYXRlX2ludGVydmFsGAIgASgN",
+            "GuQCCgtBdWRpb0NvbmZpZxIWCg5jb2RlYzJfZW5hYmxlZBgBIAEoCBIPCgdw",
+            "dHRfcGluGAIgASgNEkAKB2JpdHJhdGUYAyABKA4yLy5tZXNodGFzdGljLk1v",
+            "ZHVsZUNvbmZpZy5BdWRpb0NvbmZpZy5BdWRpb19CYXVkEg4KBmkyc193cxgE",
+            "IAEoDRIOCgZpMnNfc2QYBSABKA0SDwoHaTJzX2RpbhgGIAEoDRIPCgdpMnNf",
+            "c2NrGAcgASgNIqcBCgpBdWRpb19CYXVkEhIKDkNPREVDMl9ERUZBVUxUEAAS",
+            "DwoLQ09ERUMyXzMyMDAQARIPCgtDT0RFQzJfMjQwMBACEg8KC0NPREVDMl8x",
+            "NjAwEAMSDwoLQ09ERUMyXzE0MDAQBBIPCgtDT0RFQzJfMTMwMBAFEg8KC0NP",
+            "REVDMl8xMjAwEAYSDgoKQ09ERUMyXzcwMBAHEg8KC0NPREVDMl83MDBCEAga",
+            "5AQKDFNlcmlhbENvbmZpZxIPCgdlbmFibGVkGAEgASgIEgwKBGVjaG8YAiAB",
+            "KAgSCwoDcnhkGAMgASgNEgsKA3R4ZBgEIAEoDRI/CgRiYXVkGAUgASgOMjEu",
+            "bWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuU2VyaWFsQ29uZmlnLlNlcmlhbF9C",
+            "YXVkEg8KB3RpbWVvdXQYBiABKA0SPwoEbW9kZRgHIAEoDjIxLm1lc2h0YXN0",
+            "aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZy5TZXJpYWxfTW9kZRIkChxv",
+            "dmVycmlkZV9jb25zb2xlX3NlcmlhbF9wb3J0GAggASgIIooCCgtTZXJpYWxf",
+            "QmF1ZBIQCgxCQVVEX0RFRkFVTFQQABIMCghCQVVEXzExMBABEgwKCEJBVURf",
+            "MzAwEAISDAoIQkFVRF82MDAQAxINCglCQVVEXzEyMDAQBBINCglCQVVEXzI0",
+            "MDAQBRINCglCQVVEXzQ4MDAQBhINCglCQVVEXzk2MDAQBxIOCgpCQVVEXzE5",
+            "MjAwEAgSDgoKQkFVRF8zODQwMBAJEg4KCkJBVURfNTc2MDAQChIPCgtCQVVE",
+            "XzExNTIwMBALEg8KC0JBVURfMjMwNDAwEAwSDwoLQkFVRF80NjA4MDAQDRIP",
+            "CgtCQVVEXzU3NjAwMBAOEg8KC0JBVURfOTIxNjAwEA8iVQoLU2VyaWFsX01v",
+            "ZGUSCwoHREVGQVVMVBAAEgoKBlNJTVBMRRABEgkKBVBST1RPEAISCwoHVEVY",
+            "VE1TRxADEggKBE5NRUEQBBILCgdDQUxUT1BPEAUazgIKGkV4dGVybmFsTm90",
+            "aWZpY2F0aW9uQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSEQoJb3V0cHV0X21z",
+            "GAIgASgNEg4KBm91dHB1dBgDIAEoDRIUCgxvdXRwdXRfdmlicmEYCCABKA0S",
+            "FQoNb3V0cHV0X2J1enplchgJIAEoDRIOCgZhY3RpdmUYBCABKAgSFQoNYWxl",
+            "cnRfbWVzc2FnZRgFIAEoCBIbChNhbGVydF9tZXNzYWdlX3ZpYnJhGAogASgI",
+            "EhwKFGFsZXJ0X21lc3NhZ2VfYnV6emVyGAsgASgIEhIKCmFsZXJ0X2JlbGwY",
+            "BiABKAgSGAoQYWxlcnRfYmVsbF92aWJyYRgMIAEoCBIZChFhbGVydF9iZWxs",
+            "X2J1enplchgNIAEoCBIPCgd1c2VfcHdtGAcgASgIEhMKC25hZ190aW1lb3V0",
+            "GA4gASgNGoQBChJTdG9yZUZvcndhcmRDb25maWcSDwoHZW5hYmxlZBgBIAEo",
+            "CBIRCgloZWFydGJlYXQYAiABKAgSDwoHcmVjb3JkcxgDIAEoDRIaChJoaXN0",
+            "b3J5X3JldHVybl9tYXgYBCABKA0SHQoVaGlzdG9yeV9yZXR1cm5fd2luZG93",
+            "GAUgASgNGkAKD1JhbmdlVGVzdENvbmZpZxIPCgdlbmFibGVkGAEgASgIEg4K",
+            "BnNlbmRlchgCIAEoDRIMCgRzYXZlGAMgASgIGoYCCg9UZWxlbWV0cnlDb25m",
+            "aWcSHgoWZGV2aWNlX3VwZGF0ZV9pbnRlcnZhbBgBIAEoDRIjChtlbnZpcm9u",
+            "bWVudF91cGRhdGVfaW50ZXJ2YWwYAiABKA0SJwofZW52aXJvbm1lbnRfbWVh",
+            "c3VyZW1lbnRfZW5hYmxlZBgDIAEoCBIiChplbnZpcm9ubWVudF9zY3JlZW5f",
+            "ZW5hYmxlZBgEIAEoCBImCh5lbnZpcm9ubWVudF9kaXNwbGF5X2ZhaHJlbmhl",
+            "aXQYBSABKAgSGwoTYWlyX3F1YWxpdHlfZW5hYmxlZBgGIAEoCBIcChRhaXJf",
+            "cXVhbGl0eV9pbnRlcnZhbBgHIAEoDRrWBAoTQ2FubmVkTWVzc2FnZUNvbmZp",
+            "ZxIXCg9yb3RhcnkxX2VuYWJsZWQYASABKAgSGQoRaW5wdXRicm9rZXJfcGlu",
+            "X2EYAiABKA0SGQoRaW5wdXRicm9rZXJfcGluX2IYAyABKA0SHQoVaW5wdXRi",
+            "cm9rZXJfcGluX3ByZXNzGAQgASgNElkKFGlucHV0YnJva2VyX2V2ZW50X2N3",
+            "GAUgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQ2FubmVkTWVzc2Fn",
+            "ZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJaChVpbnB1dGJyb2tlcl9ldmVudF9j",
+            "Y3cYBiABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5DYW5uZWRNZXNz",
+            "YWdlQ29uZmlnLklucHV0RXZlbnRDaGFyElwKF2lucHV0YnJva2VyX2V2ZW50",
+            "X3ByZXNzGAcgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQ2FubmVk",
+            "TWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchIXCg91cGRvd24xX2VuYWJs",
+            "ZWQYCCABKAgSDwoHZW5hYmxlZBgJIAEoCBIaChJhbGxvd19pbnB1dF9zb3Vy",
+            "Y2UYCiABKAkSEQoJc2VuZF9iZWxsGAsgASgIImMKDklucHV0RXZlbnRDaGFy",
+            "EggKBE5PTkUQABIGCgJVUBAREggKBERPV04QEhIICgRMRUZUEBMSCQoFUklH",
+            "SFQQFBIKCgZTRUxFQ1QQChIICgRCQUNLEBsSCgoGQ0FOQ0VMEBhCEQoPcGF5",
+            "bG9hZF92YXJpYW50ImQKEVJlbW90ZUhhcmR3YXJlUGluEhAKCGdwaW9fcGlu",
+            "GAEgASgNEgwKBG5hbWUYAiABKAkSLwoEdHlwZRgDIAEoDjIhLm1lc2h0YXN0",
+            "aWMuUmVtb3RlSGFyZHdhcmVQaW5UeXBlKkkKFVJlbW90ZUhhcmR3YXJlUGlu",
+            "VHlwZRILCgdVTktOT1dOEAASEAoMRElHSVRBTF9SRUFEEAESEQoNRElHSVRB",
+            "TF9XUklURRACQmcKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCEk1vZHVsZUNvbmZp",
+            "Z1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoC",
+            "FE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.RemoteHardwarePinType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig), global::Meshtastic.Protobufs.ModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig.Parser, new[]{ "Enabled", "Address", "Username", "Password", "EncryptionEnabled", "JsonEnabled", "TlsEnabled", "Root" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig), global::Meshtastic.Protobufs.ModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig.Parser, new[]{ "Enabled", "Address", "Username", "Password", "EncryptionEnabled", "JsonEnabled", "TlsEnabled", "Root", "ProxyToClientEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig.Parser, new[]{ "Enabled", "AllowUndefinedPinAccess", "AvailablePins" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig.Parser, new[]{ "Enabled", "UpdateInterval" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Parser, new[]{ "Codec2Enabled", "PttPin", "Bitrate", "I2SWs", "I2SSd", "I2SDin", "I2SSck" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Types.Audio_Baud) }, null, null),
@@ -951,6 +952,7 @@ namespace Meshtastic.Protobufs {
           jsonEnabled_ = other.jsonEnabled_;
           tlsEnabled_ = other.tlsEnabled_;
           root_ = other.root_;
+          proxyToClientEnabled_ = other.proxyToClientEnabled_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1098,6 +1100,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "proxy_to_client_enabled" field.</summary>
+        public const int ProxyToClientEnabledFieldNumber = 9;
+        private bool proxyToClientEnabled_;
+        /// <summary>
+        ///
+        /// If true, we can use the connected phone / client to proxy messages to MQTT instead of a direct connection
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ProxyToClientEnabled {
+          get { return proxyToClientEnabled_; }
+          set {
+            proxyToClientEnabled_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1121,6 +1139,7 @@ namespace Meshtastic.Protobufs {
           if (JsonEnabled != other.JsonEnabled) return false;
           if (TlsEnabled != other.TlsEnabled) return false;
           if (Root != other.Root) return false;
+          if (ProxyToClientEnabled != other.ProxyToClientEnabled) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1136,6 +1155,7 @@ namespace Meshtastic.Protobufs {
           if (JsonEnabled != false) hash ^= JsonEnabled.GetHashCode();
           if (TlsEnabled != false) hash ^= TlsEnabled.GetHashCode();
           if (Root.Length != 0) hash ^= Root.GetHashCode();
+          if (ProxyToClientEnabled != false) hash ^= ProxyToClientEnabled.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1186,6 +1206,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(66);
             output.WriteString(Root);
           }
+          if (ProxyToClientEnabled != false) {
+            output.WriteRawTag(72);
+            output.WriteBool(ProxyToClientEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1228,6 +1252,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(66);
             output.WriteString(Root);
           }
+          if (ProxyToClientEnabled != false) {
+            output.WriteRawTag(72);
+            output.WriteBool(ProxyToClientEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1261,6 +1289,9 @@ namespace Meshtastic.Protobufs {
           }
           if (Root.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Root);
+          }
+          if (ProxyToClientEnabled != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1297,6 +1328,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.Root.Length != 0) {
             Root = other.Root;
+          }
+          if (other.ProxyToClientEnabled != false) {
+            ProxyToClientEnabled = other.ProxyToClientEnabled;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1345,6 +1379,10 @@ namespace Meshtastic.Protobufs {
                 Root = input.ReadString();
                 break;
               }
+              case 72: {
+                ProxyToClientEnabled = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1390,6 +1428,10 @@ namespace Meshtastic.Protobufs {
               }
               case 66: {
                 Root = input.ReadString();
+                break;
+              }
+              case 72: {
+                ProxyToClientEnabled = input.ReadBool();
                 break;
               }
             }

@@ -24,20 +24,20 @@ namespace Meshtastic.Protobufs {
     static PortnumsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKroDCgdQ",
+            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKtUDCgdQ",
             "b3J0TnVtEg8KC1VOS05PV05fQVBQEAASFAoQVEVYVF9NRVNTQUdFX0FQUBAB",
             "EhcKE1JFTU9URV9IQVJEV0FSRV9BUFAQAhIQCgxQT1NJVElPTl9BUFAQAxIQ",
             "CgxOT0RFSU5GT19BUFAQBBIPCgtST1VUSU5HX0FQUBAFEg0KCUFETUlOX0FQ",
             "UBAGEh8KG1RFWFRfTUVTU0FHRV9DT01QUkVTU0VEX0FQUBAHEhAKDFdBWVBP",
-            "SU5UX0FQUBAIEg0KCUFVRElPX0FQUBAJEg0KCVJFUExZX0FQUBAgEhEKDUlQ",
-            "X1RVTk5FTF9BUFAQIRIOCgpTRVJJQUxfQVBQEEASFQoRU1RPUkVfRk9SV0FS",
-            "RF9BUFAQQRISCg5SQU5HRV9URVNUX0FQUBBCEhEKDVRFTEVNRVRSWV9BUFAQ",
-            "QxILCgdaUFNfQVBQEEQSEQoNU0lNVUxBVE9SX0FQUBBFEhIKDlRSQUNFUk9V",
-            "VEVfQVBQEEYSFAoQTkVJR0hCT1JJTkZPX0FQUBBHEhAKC1BSSVZBVEVfQVBQ",
-            "EIACEhMKDkFUQUtfRk9SV0FSREVSEIECEggKA01BWBD/A0JdChNjb20uZ2Vl",
-            "a3N2aWxsZS5tZXNoQghQb3J0bnVtc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
-            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
-            "bzM="));
+            "SU5UX0FQUBAIEg0KCUFVRElPX0FQUBAJEhkKFU1RVFRfQ0xJRU5UX1BST1hZ",
+            "X0FQUBAKEg0KCVJFUExZX0FQUBAgEhEKDUlQX1RVTk5FTF9BUFAQIRIOCgpT",
+            "RVJJQUxfQVBQEEASFQoRU1RPUkVfRk9SV0FSRF9BUFAQQRISCg5SQU5HRV9U",
+            "RVNUX0FQUBBCEhEKDVRFTEVNRVRSWV9BUFAQQxILCgdaUFNfQVBQEEQSEQoN",
+            "U0lNVUxBVE9SX0FQUBBFEhIKDlRSQUNFUk9VVEVfQVBQEEYSFAoQTkVJR0hC",
+            "T1JJTkZPX0FQUBBHEhAKC1BSSVZBVEVfQVBQEIACEhMKDkFUQUtfRk9SV0FS",
+            "REVSEIECEggKA01BWBD/A0JdChNjb20uZ2Vla3N2aWxsZS5tZXNoQghQb3J0",
+            "bnVtc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1l",
+            "c2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.PortNum), }, null, null));
@@ -118,10 +118,16 @@ namespace Meshtastic.Protobufs {
     /// </summary>
     [pbr::OriginalName("WAYPOINT_APP")] WaypointApp = 8,
     /// <summary>
+    ///
     /// Audio Payloads.
     /// Encapsulated codec2 packets. On 2.4 GHZ Bandwidths only for now
     /// </summary>
     [pbr::OriginalName("AUDIO_APP")] AudioApp = 9,
+    /// <summary>
+    ///
+    /// Payloads for clients with a network connection proxying MQTT pub/sub to the device
+    /// </summary>
+    [pbr::OriginalName("MQTT_CLIENT_PROXY_APP")] MqttClientProxyApp = 10,
     /// <summary>
     ///
     /// Provides a 'ping' service that replies to any packet it receives.
