@@ -40,6 +40,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+    <PackageReference Include="MQTTnet" Version="4.2.1.781" />
     <PackageReference Include="QRCoder" Version="1.4.3" />
     <PackageReference Include="SimpleExec" Version="11.0.0" />
     <PackageReference Include="Spectre.Console" Version="0.46.0" />

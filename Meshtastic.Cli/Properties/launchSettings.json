@@ -139,6 +139,10 @@
     "import": {
       "commandName": "Project",
       "commandLineArgs": "import"
+    },
+    "mqtt": {
+      "commandName": "Project",
+      "commandLineArgs": "mqtt-proxy"
     }
   }
 }

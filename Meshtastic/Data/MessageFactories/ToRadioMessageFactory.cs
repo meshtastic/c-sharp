@@ -1,3 +1,4 @@
+using Google.Protobuf;
 using Meshtastic.Protobufs;
 using static Meshtastic.Protobufs.XModem.Types;
 
@@ -27,6 +28,16 @@ public class ToRadioMessageFactory
             XmodemPacket = new XModem()
             {
                 Control = control
+            }
+        };
+
+    public ToRadio CreateMqttClientProxyMessage(string topic, byte[] payload) =>
+        new()
+        {
+            MqttClientProxyMessage = new MqttClientProxyMessage()
+            {
+                Topic = topic,
+                Data = ByteString.CopyFrom(payload)
             }
         };
 }

@@ -1,7 +1,9 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
-using Meshtastic.Display;
+using MQTTnet;
 using Meshtastic.Protobufs;
+using MQTTnet.Client;
+using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
@@ -19,18 +21,74 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
 
     public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
-        await Connection.ReadFromRadio((fromRadio, container) =>
+        // connect to mqtt server with mqttnet
+        var factory = new MqttFactory();
+        using var mqttClient = factory.CreateMqttClient();
+        MqttClientOptions options = GetMqttClientOptions(container);
+        await mqttClient.ConnectAsync(options, CancellationToken.None);
+        var root = container.LocalModuleConfig.Mqtt.Root ?? "msh";
+        await mqttClient.SubscribeAsync(new MqttTopicFilterBuilder()
+            .WithTopic($"{root}/{container.Metadata.FirmwareVersion.First()}/#")
+            .Build());
+
+        mqttClient.ApplicationMessageReceivedAsync += async e =>
+        {
+            Logger.LogInformation($"Received MQTT from host on topic: {e.ApplicationMessage.Topic}");
+            // Get bytes from utf8 string
+            var bytes = System.Text.Encoding.UTF8.GetBytes(e.ApplicationMessage.ConvertPayloadToString());
+            var toRadio = new ToRadioMessageFactory().CreateMqttClientProxyMessage(e.ApplicationMessage.Topic, bytes);
+            await Connection.WriteToRadio(toRadio);
+        };
+
+        await Connection.ReadFromRadio(async (fromRadio, container) =>
         {
             if (fromRadio?.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.MqttClientProxyMessage &&
                 fromRadio.MqttClientProxyMessage is not null)
             {
                 var message = fromRadio.MqttClientProxyMessage;
-                var topic = message.Topic;
-                AnsiConsole.MarkupLine($"[green]Topic:[/] {topic}");
-                AnsiConsole.MarkupLine($"[green]Text:[/] {message.Text}");
-                AnsiConsole.MarkupLine($"[green]Data:[/] {ServiceEnvelope.Parser.ParseFrom(message.Data)}");
+                Logger.LogInformation($"Received MQTT message from device to proxy on topic: {message.Topic}");
+                if (message.PayloadVariantCase == MqttClientProxyMessage.PayloadVariantOneofCase.Data)
+                {
+                    Logger.LogDebug(ServiceEnvelope.Parser.ParseFrom(message.Data).ToString());
+                    await mqttClient.PublishAsync(new MqttApplicationMessageBuilder()
+                        .WithTopic(message.Topic)
+                        .WithPayload(message.Data.ToByteArray())
+                        .Build());
+                }
+                else if (message.PayloadVariantCase == MqttClientProxyMessage.PayloadVariantOneofCase.Text)
+                {
+                    Logger.LogDebug(message.Text);
+                    await mqttClient.PublishAsync(new MqttApplicationMessageBuilder()
+                        .WithTopic(message.Topic)
+                        .WithPayload(message.Text)
+                        .Build());
+                }
             }
-            return Task.FromResult(false);
+            return false;
         });
+    }
+
+    private MqttClientOptions GetMqttClientOptions(DeviceStateContainer container)
+    {
+        var builder = new MqttClientOptionsBuilder()
+            .WithClientId(container.GetDeviceNodeInfo()?.User?.Id ?? container.MyNodeInfo.MyNodeNum.ToString());
+
+        var address = container.LocalModuleConfig.Mqtt.Address;
+        var host = address.Split(':').FirstOrDefault() ?? container.LocalModuleConfig.Mqtt.Address;
+        var port = address.Contains(":") ? address.Split(':').LastOrDefault() : null;
+
+        if (container.LocalModuleConfig.Mqtt.TlsEnabled)
+        {
+            builder = builder.WithTls()
+                .WithTcpServer(host, Int32.Parse(port ?? "8883"));
+        }
+        else {
+            builder = builder.WithTcpServer(host, Int32.Parse(port ?? "1883"));
+        }
+
+        if (container.LocalModuleConfig.Mqtt.Username is not null)
+            builder = builder.WithCredentials(container.LocalModuleConfig.Mqtt.Username, container.LocalModuleConfig.Mqtt.Password);
+
+        return builder.Build();
     }
 }
