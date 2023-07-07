@@ -27,7 +27,8 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
         MqttClientOptions options = GetMqttClientOptions(container);
         await mqttClient.ConnectAsync(options, CancellationToken.None);
         var root = String.IsNullOrWhiteSpace(container.LocalModuleConfig.Mqtt.Root) ? "msh" : container.LocalModuleConfig.Mqtt.Root;
-        var subscriptionTopic = $"{root}/{container.Metadata.FirmwareVersion.First()}/#";
+        var prefix = $"{root}/{container.Metadata.FirmwareVersion.First()}";
+        var subscriptionTopic = $"{prefix}/#";
         Logger.LogInformation($"Subscribing to topic: {subscriptionTopic}");
         await mqttClient.SubscribeAsync(new MqttTopicFilterBuilder()
             .WithTopic(subscriptionTopic)
@@ -35,10 +36,13 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
 
         mqttClient.ApplicationMessageReceivedAsync += async e =>
         {
+            if (e.ApplicationMessage.Topic.StartsWith($"{prefix}/stat/"))
+                return;
+
             Logger.LogInformation($"Received MQTT from host on topic: {e.ApplicationMessage.Topic}");
             // Get bytes from utf8 string
-            var bytes = System.Text.Encoding.UTF8.GetBytes(e.ApplicationMessage.ConvertPayloadToString());
-            var toRadio = new ToRadioMessageFactory().CreateMqttClientProxyMessage(e.ApplicationMessage.Topic, bytes);
+            var toRadio = new ToRadioMessageFactory().CreateMqttClientProxyMessage(e.ApplicationMessage.Topic, e.ApplicationMessage.PayloadSegment.ToArray());
+            Logger.LogDebug(toRadio.ToString());
             await Connection.WriteToRadio(toRadio);
         };
 
