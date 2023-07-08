@@ -26,9 +26,11 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
         using var mqttClient = factory.CreateMqttClient();
         MqttClientOptions options = GetMqttClientOptions(container);
         await mqttClient.ConnectAsync(options, CancellationToken.None);
+
         var root = String.IsNullOrWhiteSpace(container.LocalModuleConfig.Mqtt.Root) ? "msh" : container.LocalModuleConfig.Mqtt.Root;
         var prefix = $"{root}/{container.Metadata.FirmwareVersion.First()}";
         var subscriptionTopic = $"{prefix}/#";
+
         Logger.LogInformation($"Subscribing to topic: {subscriptionTopic}");
         await mqttClient.SubscribeAsync(new MqttTopicFilterBuilder()
             .WithTopic(subscriptionTopic)
