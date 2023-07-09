@@ -128,7 +128,7 @@ namespace Meshtastic.Protobufs {
             "BHJvbGUYByABKA4yJC5tZXNodGFzdGljLkNvbmZpZy5EZXZpY2VDb25maWcu",
             "Um9sZRIWCg5wb3NpdGlvbl9mbGFncxgIIAEoDRIrCghod19tb2RlbBgJIAEo",
             "DjIZLm1lc2h0YXN0aWMuSGFyZHdhcmVNb2RlbBIZChFoYXNSZW1vdGVIYXJk",
-            "d2FyZRgKIAEoCCrqBAoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRM",
+            "d2FyZRgKIAEoCCq+BQoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRM",
             "T1JBX1YyEAESDAoIVExPUkFfVjEQAhISCg5UTE9SQV9WMl8xXzFQNhADEgkK",
             "BVRCRUFNEAQSDwoLSEVMVEVDX1YyXzAQBRIOCgpUQkVBTV9WMFA3EAYSCgoG",
             "VF9FQ0hPEAcSEAoMVExPUkFfVjFfMVAzEAgSCwoHUkFLNDYzMRAJEg8KC0hF",
@@ -141,16 +141,18 @@ namespace Meshtastic.Protobufs {
             "Uk9JRF9TSU0QJhIKCgZESVlfVjEQJxIVChFOUkY1Mjg0MF9QQ0ExMDA1ORAo",
             "EgoKBkRSX0RFVhApEgsKB001U1RBQ0sQKhINCglIRUxURUNfVjMQKxIRCg1I",
             "RUxURUNfV1NMX1YzECwSEwoPQkVUQUZQVl8yNDAwX1RYEC0SFwoTQkVUQUZQ",
-            "Vl85MDBfTkFOT19UWBAuEgwKCFJQSV9QSUNPEC8SDwoKUFJJVkFURV9IVxD/",
-            "ASosCglDb25zdGFudHMSCAoEWkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q",
-            "7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRD",
-            "SERPRxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8K",
-            "C1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19B",
-            "WFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01J",
-            "VF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoS",
-            "EQoNUkFESU9fU1BJX0JVRxALQl8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1l",
-            "c2hQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSq",
-            "AhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "Vl85MDBfTkFOT19UWBAuEgwKCFJQSV9QSUNPEC8SGwoXSEVMVEVDX1dJUkVM",
+            "RVNTX1RSQUNLRVIQMBIZChVIRUxURUNfV0lSRUxFU1NfUEFQRVIQMRIKCgZU",
+            "X0RFQ0sQMhIOCgpUX1dBVENIX1MzEDMSDwoKUFJJVkFURV9IVxD/ASosCglD",
+            "b25zdGFudHMSCAoEWkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEK",
+            "EUNyaXRpY2FsRXJyb3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxAB",
+            "EhQKEFNMRUVQX0VOVEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BF",
+            "Q0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQ",
+            "BhIZChVJTlZBTElEX1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlM",
+            "RUQQCBIMCghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFE",
+            "SU9fU1BJX0JVRxALQl8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90",
+            "b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNo",
+            "dGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -370,6 +372,26 @@ namespace Meshtastic.Protobufs {
     /// Raspberry Pi Pico (W) with Waveshare SX1262 LoRa Node Module
     /// </summary>
     [pbr::OriginalName("RPI_PICO")] RpiPico = 47,
+    /// <summary>
+    ///
+    /// Heltec Wireless Tracker with ESP32-S3 CPU, built-in GPS, and TFT
+    /// </summary>
+    [pbr::OriginalName("HELTEC_WIRELESS_TRACKER")] HeltecWirelessTracker = 48,
+    /// <summary>
+    ///
+    /// Heltec Wireless Paper with ESP32-S3 CPU and E-Ink display
+    /// </summary>
+    [pbr::OriginalName("HELTEC_WIRELESS_PAPER")] HeltecWirelessPaper = 49,
+    /// <summary>
+    ///
+    /// LilyGo T-Deck with ESP32-S3 CPU, Keyboard, and IPS display
+    /// </summary>
+    [pbr::OriginalName("T_DECK")] TDeck = 50,
+    /// <summary>
+    ///
+    /// LilyGo T-Watch S3 with ESP32-S3 CPU and IPS display
+    /// </summary>
+    [pbr::OriginalName("T_WATCH_S3")] TWatchS3 = 51,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -3646,7 +3668,7 @@ namespace Meshtastic.Protobufs {
 
   /// <summary>
   ///
-  /// This message will be proxied over the PhoneAPI for client to deliver to the MQTT server
+  /// This message will be proxied over the PhoneAPI for the client to deliver to the MQTT server
   /// </summary>
   public sealed partial class MqttClientProxyMessage : pb::IMessage<MqttClientProxyMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
