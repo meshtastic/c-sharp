@@ -25,7 +25,7 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8SCm1lc2h0YXN0aWMi",
-            "8hoKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
+            "xhwKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
             "b2R1bGVDb25maWcuTVFUVENvbmZpZ0gAEjcKBnNlcmlhbBgCIAEoCzIlLm1l",
             "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZ0gAElQKFWV4dGVy",
             "bmFsX25vdGlmaWNhdGlvbhgDIAEoCzIzLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
@@ -40,78 +40,83 @@ namespace Meshtastic.Protobufs {
             "cmVtb3RlX2hhcmR3YXJlGAkgASgLMi0ubWVzaHRhc3RpYy5Nb2R1bGVDb25m",
             "aWcuUmVtb3RlSGFyZHdhcmVDb25maWdIABJECg1uZWlnaGJvcl9pbmZvGAog",
             "ASgLMisubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuTmVpZ2hib3JJbmZvQ29u",
-            "ZmlnSAAapwEKCk1RVFRDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIPCgdhZGRy",
-            "ZXNzGAIgASgJEhAKCHVzZXJuYW1lGAMgASgJEhAKCHBhc3N3b3JkGAQgASgJ",
-            "EhoKEmVuY3J5cHRpb25fZW5hYmxlZBgFIAEoCBIUCgxqc29uX2VuYWJsZWQY",
-            "BiABKAgSEwoLdGxzX2VuYWJsZWQYByABKAgSDAoEcm9vdBgIIAEoCRqCAQoU",
-            "UmVtb3RlSGFyZHdhcmVDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIiChphbGxv",
-            "d191bmRlZmluZWRfcGluX2FjY2VzcxgCIAEoCBI1Cg5hdmFpbGFibGVfcGlu",
-            "cxgDIAMoCzIdLm1lc2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW4aPgoSTmVp",
-            "Z2hib3JJbmZvQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSFwoPdXBkYXRlX2lu",
-            "dGVydmFsGAIgASgNGuQCCgtBdWRpb0NvbmZpZxIWCg5jb2RlYzJfZW5hYmxl",
-            "ZBgBIAEoCBIPCgdwdHRfcGluGAIgASgNEkAKB2JpdHJhdGUYAyABKA4yLy5t",
-            "ZXNodGFzdGljLk1vZHVsZUNvbmZpZy5BdWRpb0NvbmZpZy5BdWRpb19CYXVk",
-            "Eg4KBmkyc193cxgEIAEoDRIOCgZpMnNfc2QYBSABKA0SDwoHaTJzX2RpbhgG",
-            "IAEoDRIPCgdpMnNfc2NrGAcgASgNIqcBCgpBdWRpb19CYXVkEhIKDkNPREVD",
-            "Ml9ERUZBVUxUEAASDwoLQ09ERUMyXzMyMDAQARIPCgtDT0RFQzJfMjQwMBAC",
-            "Eg8KC0NPREVDMl8xNjAwEAMSDwoLQ09ERUMyXzE0MDAQBBIPCgtDT0RFQzJf",
-            "MTMwMBAFEg8KC0NPREVDMl8xMjAwEAYSDgoKQ09ERUMyXzcwMBAHEg8KC0NP",
-            "REVDMl83MDBCEAga5AQKDFNlcmlhbENvbmZpZxIPCgdlbmFibGVkGAEgASgI",
-            "EgwKBGVjaG8YAiABKAgSCwoDcnhkGAMgASgNEgsKA3R4ZBgEIAEoDRI/CgRi",
-            "YXVkGAUgASgOMjEubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuU2VyaWFsQ29u",
-            "ZmlnLlNlcmlhbF9CYXVkEg8KB3RpbWVvdXQYBiABKA0SPwoEbW9kZRgHIAEo",
-            "DjIxLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZy5TZXJp",
-            "YWxfTW9kZRIkChxvdmVycmlkZV9jb25zb2xlX3NlcmlhbF9wb3J0GAggASgI",
-            "IooCCgtTZXJpYWxfQmF1ZBIQCgxCQVVEX0RFRkFVTFQQABIMCghCQVVEXzEx",
-            "MBABEgwKCEJBVURfMzAwEAISDAoIQkFVRF82MDAQAxINCglCQVVEXzEyMDAQ",
-            "BBINCglCQVVEXzI0MDAQBRINCglCQVVEXzQ4MDAQBhINCglCQVVEXzk2MDAQ",
-            "BxIOCgpCQVVEXzE5MjAwEAgSDgoKQkFVRF8zODQwMBAJEg4KCkJBVURfNTc2",
-            "MDAQChIPCgtCQVVEXzExNTIwMBALEg8KC0JBVURfMjMwNDAwEAwSDwoLQkFV",
-            "RF80NjA4MDAQDRIPCgtCQVVEXzU3NjAwMBAOEg8KC0JBVURfOTIxNjAwEA8i",
-            "VQoLU2VyaWFsX01vZGUSCwoHREVGQVVMVBAAEgoKBlNJTVBMRRABEgkKBVBS",
-            "T1RPEAISCwoHVEVYVE1TRxADEggKBE5NRUEQBBILCgdDQUxUT1BPEAUazgIK",
-            "GkV4dGVybmFsTm90aWZpY2F0aW9uQ29uZmlnEg8KB2VuYWJsZWQYASABKAgS",
-            "EQoJb3V0cHV0X21zGAIgASgNEg4KBm91dHB1dBgDIAEoDRIUCgxvdXRwdXRf",
-            "dmlicmEYCCABKA0SFQoNb3V0cHV0X2J1enplchgJIAEoDRIOCgZhY3RpdmUY",
-            "BCABKAgSFQoNYWxlcnRfbWVzc2FnZRgFIAEoCBIbChNhbGVydF9tZXNzYWdl",
-            "X3ZpYnJhGAogASgIEhwKFGFsZXJ0X21lc3NhZ2VfYnV6emVyGAsgASgIEhIK",
-            "CmFsZXJ0X2JlbGwYBiABKAgSGAoQYWxlcnRfYmVsbF92aWJyYRgMIAEoCBIZ",
-            "ChFhbGVydF9iZWxsX2J1enplchgNIAEoCBIPCgd1c2VfcHdtGAcgASgIEhMK",
-            "C25hZ190aW1lb3V0GA4gASgNGoQBChJTdG9yZUZvcndhcmRDb25maWcSDwoH",
-            "ZW5hYmxlZBgBIAEoCBIRCgloZWFydGJlYXQYAiABKAgSDwoHcmVjb3JkcxgD",
-            "IAEoDRIaChJoaXN0b3J5X3JldHVybl9tYXgYBCABKA0SHQoVaGlzdG9yeV9y",
-            "ZXR1cm5fd2luZG93GAUgASgNGkAKD1JhbmdlVGVzdENvbmZpZxIPCgdlbmFi",
-            "bGVkGAEgASgIEg4KBnNlbmRlchgCIAEoDRIMCgRzYXZlGAMgASgIGoYCCg9U",
-            "ZWxlbWV0cnlDb25maWcSHgoWZGV2aWNlX3VwZGF0ZV9pbnRlcnZhbBgBIAEo",
-            "DRIjChtlbnZpcm9ubWVudF91cGRhdGVfaW50ZXJ2YWwYAiABKA0SJwofZW52",
-            "aXJvbm1lbnRfbWVhc3VyZW1lbnRfZW5hYmxlZBgDIAEoCBIiChplbnZpcm9u",
-            "bWVudF9zY3JlZW5fZW5hYmxlZBgEIAEoCBImCh5lbnZpcm9ubWVudF9kaXNw",
-            "bGF5X2ZhaHJlbmhlaXQYBSABKAgSGwoTYWlyX3F1YWxpdHlfZW5hYmxlZBgG",
-            "IAEoCBIcChRhaXJfcXVhbGl0eV9pbnRlcnZhbBgHIAEoDRrWBAoTQ2FubmVk",
-            "TWVzc2FnZUNvbmZpZxIXCg9yb3RhcnkxX2VuYWJsZWQYASABKAgSGQoRaW5w",
-            "dXRicm9rZXJfcGluX2EYAiABKA0SGQoRaW5wdXRicm9rZXJfcGluX2IYAyAB",
-            "KA0SHQoVaW5wdXRicm9rZXJfcGluX3ByZXNzGAQgASgNElkKFGlucHV0YnJv",
-            "a2VyX2V2ZW50X2N3GAUgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcu",
-            "Q2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJaChVpbnB1dGJy",
-            "b2tlcl9ldmVudF9jY3cYBiABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNvbmZp",
-            "Zy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0RXZlbnRDaGFyElwKF2lucHV0",
-            "YnJva2VyX2V2ZW50X3ByZXNzGAcgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVD",
-            "b25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchIXCg91",
-            "cGRvd24xX2VuYWJsZWQYCCABKAgSDwoHZW5hYmxlZBgJIAEoCBIaChJhbGxv",
-            "d19pbnB1dF9zb3VyY2UYCiABKAkSEQoJc2VuZF9iZWxsGAsgASgIImMKDklu",
-            "cHV0RXZlbnRDaGFyEggKBE5PTkUQABIGCgJVUBAREggKBERPV04QEhIICgRM",
-            "RUZUEBMSCQoFUklHSFQQFBIKCgZTRUxFQ1QQChIICgRCQUNLEBsSCgoGQ0FO",
-            "Q0VMEBhCEQoPcGF5bG9hZF92YXJpYW50ImQKEVJlbW90ZUhhcmR3YXJlUGlu",
-            "EhAKCGdwaW9fcGluGAEgASgNEgwKBG5hbWUYAiABKAkSLwoEdHlwZRgDIAEo",
-            "DjIhLm1lc2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW5UeXBlKkkKFVJlbW90",
-            "ZUhhcmR3YXJlUGluVHlwZRILCgdVTktOT1dOEAASEAoMRElHSVRBTF9SRUFE",
-            "EAESEQoNRElHSVRBTF9XUklURRACQmcKE2NvbS5nZWVrc3ZpbGxlLm1lc2hC",
-            "Ek1vZHVsZUNvbmZpZ1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dv",
-            "L2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "ZmlnSAASSgoQYW1iaWVudF9saWdodGluZxgLIAEoCzIuLm1lc2h0YXN0aWMu",
+            "TW9kdWxlQ29uZmlnLkFtYmllbnRMaWdodGluZ0NvbmZpZ0gAGsgBCgpNUVRU",
+            "Q29uZmlnEg8KB2VuYWJsZWQYASABKAgSDwoHYWRkcmVzcxgCIAEoCRIQCgh1",
+            "c2VybmFtZRgDIAEoCRIQCghwYXNzd29yZBgEIAEoCRIaChJlbmNyeXB0aW9u",
+            "X2VuYWJsZWQYBSABKAgSFAoManNvbl9lbmFibGVkGAYgASgIEhMKC3Rsc19l",
+            "bmFibGVkGAcgASgIEgwKBHJvb3QYCCABKAkSHwoXcHJveHlfdG9fY2xpZW50",
+            "X2VuYWJsZWQYCSABKAgaggEKFFJlbW90ZUhhcmR3YXJlQ29uZmlnEg8KB2Vu",
+            "YWJsZWQYASABKAgSIgoaYWxsb3dfdW5kZWZpbmVkX3Bpbl9hY2Nlc3MYAiAB",
+            "KAgSNQoOYXZhaWxhYmxlX3BpbnMYAyADKAsyHS5tZXNodGFzdGljLlJlbW90",
+            "ZUhhcmR3YXJlUGluGj4KEk5laWdoYm9ySW5mb0NvbmZpZxIPCgdlbmFibGVk",
+            "GAEgASgIEhcKD3VwZGF0ZV9pbnRlcnZhbBgCIAEoDRrkAgoLQXVkaW9Db25m",
+            "aWcSFgoOY29kZWMyX2VuYWJsZWQYASABKAgSDwoHcHR0X3BpbhgCIAEoDRJA",
+            "CgdiaXRyYXRlGAMgASgOMi8ubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQXVk",
+            "aW9Db25maWcuQXVkaW9fQmF1ZBIOCgZpMnNfd3MYBCABKA0SDgoGaTJzX3Nk",
+            "GAUgASgNEg8KB2kyc19kaW4YBiABKA0SDwoHaTJzX3NjaxgHIAEoDSKnAQoK",
+            "QXVkaW9fQmF1ZBISCg5DT0RFQzJfREVGQVVMVBAAEg8KC0NPREVDMl8zMjAw",
+            "EAESDwoLQ09ERUMyXzI0MDAQAhIPCgtDT0RFQzJfMTYwMBADEg8KC0NPREVD",
+            "Ml8xNDAwEAQSDwoLQ09ERUMyXzEzMDAQBRIPCgtDT0RFQzJfMTIwMBAGEg4K",
+            "CkNPREVDMl83MDAQBxIPCgtDT0RFQzJfNzAwQhAIGuQECgxTZXJpYWxDb25m",
+            "aWcSDwoHZW5hYmxlZBgBIAEoCBIMCgRlY2hvGAIgASgIEgsKA3J4ZBgDIAEo",
+            "DRILCgN0eGQYBCABKA0SPwoEYmF1ZBgFIAEoDjIxLm1lc2h0YXN0aWMuTW9k",
+            "dWxlQ29uZmlnLlNlcmlhbENvbmZpZy5TZXJpYWxfQmF1ZBIPCgd0aW1lb3V0",
+            "GAYgASgNEj8KBG1vZGUYByABKA4yMS5tZXNodGFzdGljLk1vZHVsZUNvbmZp",
+            "Zy5TZXJpYWxDb25maWcuU2VyaWFsX01vZGUSJAocb3ZlcnJpZGVfY29uc29s",
+            "ZV9zZXJpYWxfcG9ydBgIIAEoCCKKAgoLU2VyaWFsX0JhdWQSEAoMQkFVRF9E",
+            "RUZBVUxUEAASDAoIQkFVRF8xMTAQARIMCghCQVVEXzMwMBACEgwKCEJBVURf",
+            "NjAwEAMSDQoJQkFVRF8xMjAwEAQSDQoJQkFVRF8yNDAwEAUSDQoJQkFVRF80",
+            "ODAwEAYSDQoJQkFVRF85NjAwEAcSDgoKQkFVRF8xOTIwMBAIEg4KCkJBVURf",
+            "Mzg0MDAQCRIOCgpCQVVEXzU3NjAwEAoSDwoLQkFVRF8xMTUyMDAQCxIPCgtC",
+            "QVVEXzIzMDQwMBAMEg8KC0JBVURfNDYwODAwEA0SDwoLQkFVRF81NzYwMDAQ",
+            "DhIPCgtCQVVEXzkyMTYwMBAPIlUKC1NlcmlhbF9Nb2RlEgsKB0RFRkFVTFQQ",
+            "ABIKCgZTSU1QTEUQARIJCgVQUk9UTxACEgsKB1RFWFRNU0cQAxIICgROTUVB",
+            "EAQSCwoHQ0FMVE9QTxAFGs4CChpFeHRlcm5hbE5vdGlmaWNhdGlvbkNvbmZp",
+            "ZxIPCgdlbmFibGVkGAEgASgIEhEKCW91dHB1dF9tcxgCIAEoDRIOCgZvdXRw",
+            "dXQYAyABKA0SFAoMb3V0cHV0X3ZpYnJhGAggASgNEhUKDW91dHB1dF9idXp6",
+            "ZXIYCSABKA0SDgoGYWN0aXZlGAQgASgIEhUKDWFsZXJ0X21lc3NhZ2UYBSAB",
+            "KAgSGwoTYWxlcnRfbWVzc2FnZV92aWJyYRgKIAEoCBIcChRhbGVydF9tZXNz",
+            "YWdlX2J1enplchgLIAEoCBISCgphbGVydF9iZWxsGAYgASgIEhgKEGFsZXJ0",
+            "X2JlbGxfdmlicmEYDCABKAgSGQoRYWxlcnRfYmVsbF9idXp6ZXIYDSABKAgS",
+            "DwoHdXNlX3B3bRgHIAEoCBITCgtuYWdfdGltZW91dBgOIAEoDRqEAQoSU3Rv",
+            "cmVGb3J3YXJkQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSEQoJaGVhcnRiZWF0",
+            "GAIgASgIEg8KB3JlY29yZHMYAyABKA0SGgoSaGlzdG9yeV9yZXR1cm5fbWF4",
+            "GAQgASgNEh0KFWhpc3RvcnlfcmV0dXJuX3dpbmRvdxgFIAEoDRpACg9SYW5n",
+            "ZVRlc3RDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIOCgZzZW5kZXIYAiABKA0S",
+            "DAoEc2F2ZRgDIAEoCBqGAgoPVGVsZW1ldHJ5Q29uZmlnEh4KFmRldmljZV91",
+            "cGRhdGVfaW50ZXJ2YWwYASABKA0SIwobZW52aXJvbm1lbnRfdXBkYXRlX2lu",
+            "dGVydmFsGAIgASgNEicKH2Vudmlyb25tZW50X21lYXN1cmVtZW50X2VuYWJs",
+            "ZWQYAyABKAgSIgoaZW52aXJvbm1lbnRfc2NyZWVuX2VuYWJsZWQYBCABKAgS",
+            "JgoeZW52aXJvbm1lbnRfZGlzcGxheV9mYWhyZW5oZWl0GAUgASgIEhsKE2Fp",
+            "cl9xdWFsaXR5X2VuYWJsZWQYBiABKAgSHAoUYWlyX3F1YWxpdHlfaW50ZXJ2",
+            "YWwYByABKA0a1gQKE0Nhbm5lZE1lc3NhZ2VDb25maWcSFwoPcm90YXJ5MV9l",
+            "bmFibGVkGAEgASgIEhkKEWlucHV0YnJva2VyX3Bpbl9hGAIgASgNEhkKEWlu",
+            "cHV0YnJva2VyX3Bpbl9iGAMgASgNEh0KFWlucHV0YnJva2VyX3Bpbl9wcmVz",
+            "cxgEIAEoDRJZChRpbnB1dGJyb2tlcl9ldmVudF9jdxgFIAEoDjI7Lm1lc2h0",
+            "YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcuSW5wdXRF",
+            "dmVudENoYXISWgoVaW5wdXRicm9rZXJfZXZlbnRfY2N3GAYgASgOMjsubWVz",
+            "aHRhc3RpYy5Nb2R1bGVDb25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1",
+            "dEV2ZW50Q2hhchJcChdpbnB1dGJyb2tlcl9ldmVudF9wcmVzcxgHIAEoDjI7",
+            "Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcu",
+            "SW5wdXRFdmVudENoYXISFwoPdXBkb3duMV9lbmFibGVkGAggASgIEg8KB2Vu",
+            "YWJsZWQYCSABKAgSGgoSYWxsb3dfaW5wdXRfc291cmNlGAogASgJEhEKCXNl",
+            "bmRfYmVsbBgLIAEoCCJjCg5JbnB1dEV2ZW50Q2hhchIICgROT05FEAASBgoC",
+            "VVAQERIICgRET1dOEBISCAoETEVGVBATEgkKBVJJR0hUEBQSCgoGU0VMRUNU",
+            "EAoSCAoEQkFDSxAbEgoKBkNBTkNFTBAYGmUKFUFtYmllbnRMaWdodGluZ0Nv",
+            "bmZpZxIRCglsZWRfc3RhdGUYASABKAgSDwoHY3VycmVudBgCIAEoDRILCgNy",
+            "ZWQYAyABKA0SDQoFZ3JlZW4YBCABKA0SDAoEYmx1ZRgFIAEoDUIRCg9wYXls",
+            "b2FkX3ZhcmlhbnQiZAoRUmVtb3RlSGFyZHdhcmVQaW4SEAoIZ3Bpb19waW4Y",
+            "ASABKA0SDAoEbmFtZRgCIAEoCRIvCgR0eXBlGAMgASgOMiEubWVzaHRhc3Rp",
+            "Yy5SZW1vdGVIYXJkd2FyZVBpblR5cGUqSQoVUmVtb3RlSGFyZHdhcmVQaW5U",
+            "eXBlEgsKB1VOS05PV04QABIQCgxESUdJVEFMX1JFQUQQARIRCg1ESUdJVEFM",
+            "X1dSSVRFEAJCZwoTY29tLmdlZWtzdmlsbGUubWVzaEISTW9kdWxlQ29uZmln",
+            "UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
+            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.RemoteHardwarePinType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig), global::Meshtastic.Protobufs.ModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig.Parser, new[]{ "Enabled", "Address", "Username", "Password", "EncryptionEnabled", "JsonEnabled", "TlsEnabled", "Root" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig), global::Meshtastic.Protobufs.ModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo", "AmbientLighting" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig.Parser, new[]{ "Enabled", "Address", "Username", "Password", "EncryptionEnabled", "JsonEnabled", "TlsEnabled", "Root", "ProxyToClientEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig.Parser, new[]{ "Enabled", "AllowUndefinedPinAccess", "AvailablePins" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig.Parser, new[]{ "Enabled", "UpdateInterval" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Parser, new[]{ "Codec2Enabled", "PttPin", "Bitrate", "I2SWs", "I2SSd", "I2SDin", "I2SSck" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Types.Audio_Baud) }, null, null),
@@ -120,7 +125,8 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig.Parser, new[]{ "Enabled", "Heartbeat", "Records", "HistoryReturnMax", "HistoryReturnWindow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig.Parser, new[]{ "Enabled", "Sender", "Save" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit", "AirQualityEnabled", "AirQualityInterval" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Parser, new[]{ "Rotary1Enabled", "InputbrokerPinA", "InputbrokerPinB", "InputbrokerPinPress", "InputbrokerEventCw", "InputbrokerEventCcw", "InputbrokerEventPress", "Updown1Enabled", "Enabled", "AllowInputSource", "SendBell" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Types.InputEventChar) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Parser, new[]{ "Rotary1Enabled", "InputbrokerPinA", "InputbrokerPinB", "InputbrokerPinPress", "InputbrokerEventCw", "InputbrokerEventCcw", "InputbrokerEventPress", "Updown1Enabled", "Enabled", "AllowInputSource", "SendBell" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Types.InputEventChar) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig.Parser, new[]{ "LedState", "Current", "Red", "Green", "Blue" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.RemoteHardwarePin), global::Meshtastic.Protobufs.RemoteHardwarePin.Parser, new[]{ "GpioPin", "Name", "Type" }, null, null, null, null)
           }));
     }
@@ -217,6 +223,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.NeighborInfo:
           NeighborInfo = other.NeighborInfo.Clone();
+          break;
+        case PayloadVariantOneofCase.AmbientLighting:
+          AmbientLighting = other.AmbientLighting.Clone();
           break;
       }
 
@@ -389,6 +398,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "ambient_lighting" field.</summary>
+    public const int AmbientLightingFieldNumber = 11;
+    /// <summary>
+    ///
+    /// TODO: REPLACE
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig AmbientLighting {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.AmbientLighting ? (global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.AmbientLighting;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -403,6 +428,7 @@ namespace Meshtastic.Protobufs {
       Audio = 8,
       RemoteHardware = 9,
       NeighborInfo = 10,
+      AmbientLighting = 11,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -443,6 +469,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Audio, other.Audio)) return false;
       if (!object.Equals(RemoteHardware, other.RemoteHardware)) return false;
       if (!object.Equals(NeighborInfo, other.NeighborInfo)) return false;
+      if (!object.Equals(AmbientLighting, other.AmbientLighting)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -461,6 +488,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Audio) hash ^= Audio.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.RemoteHardware) hash ^= RemoteHardware.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.NeighborInfo) hash ^= NeighborInfo.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AmbientLighting) hash ^= AmbientLighting.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -520,6 +548,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(82);
         output.WriteMessage(NeighborInfo);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AmbientLighting) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AmbientLighting);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -570,6 +602,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(82);
         output.WriteMessage(NeighborInfo);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AmbientLighting) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AmbientLighting);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -609,6 +645,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.NeighborInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NeighborInfo);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AmbientLighting) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AmbientLighting);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -682,6 +721,12 @@ namespace Meshtastic.Protobufs {
             NeighborInfo = new global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig();
           }
           NeighborInfo.MergeFrom(other.NeighborInfo);
+          break;
+        case PayloadVariantOneofCase.AmbientLighting:
+          if (AmbientLighting == null) {
+            AmbientLighting = new global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig();
+          }
+          AmbientLighting.MergeFrom(other.AmbientLighting);
           break;
       }
 
@@ -790,6 +835,15 @@ namespace Meshtastic.Protobufs {
             NeighborInfo = subBuilder;
             break;
           }
+          case 90: {
+            global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig subBuilder = new global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.AmbientLighting) {
+              subBuilder.MergeFrom(AmbientLighting);
+            }
+            input.ReadMessage(subBuilder);
+            AmbientLighting = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -895,6 +949,15 @@ namespace Meshtastic.Protobufs {
             NeighborInfo = subBuilder;
             break;
           }
+          case 90: {
+            global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig subBuilder = new global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.AmbientLighting) {
+              subBuilder.MergeFrom(AmbientLighting);
+            }
+            input.ReadMessage(subBuilder);
+            AmbientLighting = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -951,6 +1014,7 @@ namespace Meshtastic.Protobufs {
           jsonEnabled_ = other.jsonEnabled_;
           tlsEnabled_ = other.tlsEnabled_;
           root_ = other.root_;
+          proxyToClientEnabled_ = other.proxyToClientEnabled_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1098,6 +1162,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "proxy_to_client_enabled" field.</summary>
+        public const int ProxyToClientEnabledFieldNumber = 9;
+        private bool proxyToClientEnabled_;
+        /// <summary>
+        ///
+        /// If true, we can use the connected phone / client to proxy messages to MQTT instead of a direct connection
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ProxyToClientEnabled {
+          get { return proxyToClientEnabled_; }
+          set {
+            proxyToClientEnabled_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1121,6 +1201,7 @@ namespace Meshtastic.Protobufs {
           if (JsonEnabled != other.JsonEnabled) return false;
           if (TlsEnabled != other.TlsEnabled) return false;
           if (Root != other.Root) return false;
+          if (ProxyToClientEnabled != other.ProxyToClientEnabled) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1136,6 +1217,7 @@ namespace Meshtastic.Protobufs {
           if (JsonEnabled != false) hash ^= JsonEnabled.GetHashCode();
           if (TlsEnabled != false) hash ^= TlsEnabled.GetHashCode();
           if (Root.Length != 0) hash ^= Root.GetHashCode();
+          if (ProxyToClientEnabled != false) hash ^= ProxyToClientEnabled.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1186,6 +1268,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(66);
             output.WriteString(Root);
           }
+          if (ProxyToClientEnabled != false) {
+            output.WriteRawTag(72);
+            output.WriteBool(ProxyToClientEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1228,6 +1314,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(66);
             output.WriteString(Root);
           }
+          if (ProxyToClientEnabled != false) {
+            output.WriteRawTag(72);
+            output.WriteBool(ProxyToClientEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1261,6 +1351,9 @@ namespace Meshtastic.Protobufs {
           }
           if (Root.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Root);
+          }
+          if (ProxyToClientEnabled != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1297,6 +1390,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.Root.Length != 0) {
             Root = other.Root;
+          }
+          if (other.ProxyToClientEnabled != false) {
+            ProxyToClientEnabled = other.ProxyToClientEnabled;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1345,6 +1441,10 @@ namespace Meshtastic.Protobufs {
                 Root = input.ReadString();
                 break;
               }
+              case 72: {
+                ProxyToClientEnabled = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1390,6 +1490,10 @@ namespace Meshtastic.Protobufs {
               }
               case 66: {
                 Root = input.ReadString();
+                break;
+              }
+              case 72: {
+                ProxyToClientEnabled = input.ReadBool();
                 break;
               }
             }
@@ -5391,6 +5495,362 @@ namespace Meshtastic.Protobufs {
 
         }
         #endregion
+
+      }
+
+      /// <summary>
+      ///Ambient Lighting Module - Settings for control of onboard LEDs to allow users to adjust the brightness levels and respective color levels.
+      ///Initially created for the RAK14001 RGB LED module.
+      /// </summary>
+      public sealed partial class AmbientLightingConfig : pb::IMessage<AmbientLightingConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AmbientLightingConfig> _parser = new pb::MessageParser<AmbientLightingConfig>(() => new AmbientLightingConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AmbientLightingConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[10]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AmbientLightingConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AmbientLightingConfig(AmbientLightingConfig other) : this() {
+          ledState_ = other.ledState_;
+          current_ = other.current_;
+          red_ = other.red_;
+          green_ = other.green_;
+          blue_ = other.blue_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AmbientLightingConfig Clone() {
+          return new AmbientLightingConfig(this);
+        }
+
+        /// <summary>Field number for the "led_state" field.</summary>
+        public const int LedStateFieldNumber = 1;
+        private bool ledState_;
+        /// <summary>
+        ///Sets LED to on or off.  
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool LedState {
+          get { return ledState_; }
+          set {
+            ledState_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "current" field.</summary>
+        public const int CurrentFieldNumber = 2;
+        private uint current_;
+        /// <summary>
+        ///Sets the overall current for the LED, firmware side range for the RAK14001 is 1-31, but users should be given a range of 0-100%  
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint Current {
+          get { return current_; }
+          set {
+            current_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "red" field.</summary>
+        public const int RedFieldNumber = 3;
+        private uint red_;
+        /// <summary>
+        /// Red level
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint Red {
+          get { return red_; }
+          set {
+            red_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "green" field.</summary>
+        public const int GreenFieldNumber = 4;
+        private uint green_;
+        /// <summary>
+        ///Sets the green level of the LED, firmware side values are 0-255, but users should be given a range of 0-100%   
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint Green {
+          get { return green_; }
+          set {
+            green_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "blue" field.</summary>
+        public const int BlueFieldNumber = 5;
+        private uint blue_;
+        /// <summary>
+        ///Sets the blue level of the LED, firmware side values are 0-255, but users should be given a range of 0-100%   
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint Blue {
+          get { return blue_; }
+          set {
+            blue_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AmbientLightingConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AmbientLightingConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (LedState != other.LedState) return false;
+          if (Current != other.Current) return false;
+          if (Red != other.Red) return false;
+          if (Green != other.Green) return false;
+          if (Blue != other.Blue) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (LedState != false) hash ^= LedState.GetHashCode();
+          if (Current != 0) hash ^= Current.GetHashCode();
+          if (Red != 0) hash ^= Red.GetHashCode();
+          if (Green != 0) hash ^= Green.GetHashCode();
+          if (Blue != 0) hash ^= Blue.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (LedState != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(LedState);
+          }
+          if (Current != 0) {
+            output.WriteRawTag(16);
+            output.WriteUInt32(Current);
+          }
+          if (Red != 0) {
+            output.WriteRawTag(24);
+            output.WriteUInt32(Red);
+          }
+          if (Green != 0) {
+            output.WriteRawTag(32);
+            output.WriteUInt32(Green);
+          }
+          if (Blue != 0) {
+            output.WriteRawTag(40);
+            output.WriteUInt32(Blue);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (LedState != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(LedState);
+          }
+          if (Current != 0) {
+            output.WriteRawTag(16);
+            output.WriteUInt32(Current);
+          }
+          if (Red != 0) {
+            output.WriteRawTag(24);
+            output.WriteUInt32(Red);
+          }
+          if (Green != 0) {
+            output.WriteRawTag(32);
+            output.WriteUInt32(Green);
+          }
+          if (Blue != 0) {
+            output.WriteRawTag(40);
+            output.WriteUInt32(Blue);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (LedState != false) {
+            size += 1 + 1;
+          }
+          if (Current != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Current);
+          }
+          if (Red != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Red);
+          }
+          if (Green != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Green);
+          }
+          if (Blue != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Blue);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AmbientLightingConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.LedState != false) {
+            LedState = other.LedState;
+          }
+          if (other.Current != 0) {
+            Current = other.Current;
+          }
+          if (other.Red != 0) {
+            Red = other.Red;
+          }
+          if (other.Green != 0) {
+            Green = other.Green;
+          }
+          if (other.Blue != 0) {
+            Blue = other.Blue;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                LedState = input.ReadBool();
+                break;
+              }
+              case 16: {
+                Current = input.ReadUInt32();
+                break;
+              }
+              case 24: {
+                Red = input.ReadUInt32();
+                break;
+              }
+              case 32: {
+                Green = input.ReadUInt32();
+                break;
+              }
+              case 40: {
+                Blue = input.ReadUInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                LedState = input.ReadBool();
+                break;
+              }
+              case 16: {
+                Current = input.ReadUInt32();
+                break;
+              }
+              case 24: {
+                Red = input.ReadUInt32();
+                break;
+              }
+              case 32: {
+                Green = input.ReadUInt32();
+                break;
+              }
+              case 40: {
+                Blue = input.ReadUInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
