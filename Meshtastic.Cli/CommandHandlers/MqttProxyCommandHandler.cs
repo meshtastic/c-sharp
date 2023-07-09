@@ -42,8 +42,10 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
                 return;
 
             Logger.LogInformation($"Received MQTT from host on topic: {e.ApplicationMessage.Topic}");
+
             // Get bytes from utf8 string
-            var toRadio = new ToRadioMessageFactory().CreateMqttClientProxyMessage(e.ApplicationMessage.Topic, e.ApplicationMessage.PayloadSegment.ToArray());
+            var toRadio = new ToRadioMessageFactory()
+                .CreateMqttClientProxyMessage(e.ApplicationMessage.Topic, e.ApplicationMessage.PayloadSegment.ToArray(), e.ApplicationMessage.Retain);
             Logger.LogDebug(toRadio.ToString());
             await Connection.WriteToRadio(toRadio);
         };
@@ -61,6 +63,7 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
                     await mqttClient.PublishAsync(new MqttApplicationMessageBuilder()
                         .WithTopic(message.Topic)
                         .WithPayload(message.Data.ToByteArray())
+                        .WithRetainFlag(message.Retained)
                         .Build());
                 }
                 else if (message.PayloadVariantCase == MqttClientProxyMessage.PayloadVariantOneofCase.Text)
@@ -69,6 +72,7 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
                     await mqttClient.PublishAsync(new MqttApplicationMessageBuilder()
                         .WithTopic(message.Topic)
                         .WithPayload(message.Text)
+                        .WithRetainFlag(message.Retained)
                         .Build());
                 }
             }

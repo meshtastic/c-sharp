@@ -31,13 +31,14 @@ public class ToRadioMessageFactory
             }
         };
 
-    public ToRadio CreateMqttClientProxyMessage(string topic, byte[] payload) =>
+    public ToRadio CreateMqttClientProxyMessage(string topic, byte[] payload, bool retain = false) =>
         new()
         {
             MqttClientProxyMessage = new MqttClientProxyMessage()
             {
                 Topic = topic,
-                Data = ByteString.CopyFrom(payload)
+                Data = ByteString.CopyFrom(payload),
+                Retained = retain,
             }
         };
 }
