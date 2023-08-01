@@ -61,6 +61,7 @@ root.AddCommand(new UpdateCommand("update", "Update the firmware of the serial c
 root.AddCommand(new ExportCommand("export", "Export the profile of the connected device as yaml", port, host, output, log));
 root.AddCommand(new ImportCommand("import", "Import the profile export from a yaml file and set the connected device", port, host, output, log));
 root.AddCommand(new MqttProxyCommand("mqtt-proxy", "Proxy to the MQTT server referenced in the MQTT module config of the connected device", port, host, output, log));
+root.AddCommand(new RequestTelemetryCommand("request-telemetry", "Request a telemetry packet from a repeater by nodenum", port, host, output, log, dest, selectDest));
 
 var parser = new CommandLineBuilder(root)
     .UseExceptionHandler((ex, context) =>
