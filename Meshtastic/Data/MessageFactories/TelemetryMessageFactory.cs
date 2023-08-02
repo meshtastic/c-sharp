@@ -17,9 +17,10 @@ public class TelemetryMessageFactory
 
     public MeshPacket CreateTelemetryPacket(uint channel = 0)
     {
-        var telemetry = container!.FromRadioMessageLog
-            .Where(fromRadio => fromRadio.Packet.From == container.MyNodeInfo.MyNodeNum)
-            .First(fromRadio => fromRadio.GetPayload<Telemetry>()?.DeviceMetrics != null)?.GetPayload<Telemetry>()?.DeviceMetrics;
+        var telemetry = container?.FromRadioMessageLog
+            .Where(fromRadio => fromRadio.Packet?.From == container.MyNodeInfo?.MyNodeNum)
+            .FirstOrDefault(fromRadio => fromRadio.GetPayload<Telemetry>()?.DeviceMetrics != null)?.GetPayload<Telemetry>()?.DeviceMetrics;
+
         return new MeshPacket()
         {
             Channel = channel,

@@ -1,6 +1,7 @@
 ﻿using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
 using Meshtastic.Protobufs;
+using Meshtastic.Extensions;
 using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.CommandHandlers;
@@ -31,8 +32,9 @@ public class RequestTelemetryCommandHandler : DeviceCommandHandler
         {
             // if (packet?.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.Packet &&
             //     packet.MeshPacket is not null)
-            Logger.LogInformation($"Received telemetry from device: {packet}");
-            return await Task.FromResult(true);
+            Logger.LogInformation($"Received packet from device: {packet}");
+            Logger.LogInformation(packet.GetPayload<Telemetry>()?.DeviceMetrics?.ToString() ?? "No telemetry data received");
+            return await Task.FromResult(false);
         });
     }
 }
