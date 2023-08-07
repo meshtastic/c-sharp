@@ -569,7 +569,7 @@ namespace Meshtastic.Protobufs {
     private float gasResistance_;
     /// <summary>
     ///
-    /// Gas resistance in mOhm measured
+    /// Gas resistance in MOhm measured
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
