@@ -128,31 +128,32 @@ namespace Meshtastic.Protobufs {
             "BHJvbGUYByABKA4yJC5tZXNodGFzdGljLkNvbmZpZy5EZXZpY2VDb25maWcu",
             "Um9sZRIWCg5wb3NpdGlvbl9mbGFncxgIIAEoDRIrCghod19tb2RlbBgJIAEo",
             "DjIZLm1lc2h0YXN0aWMuSGFyZHdhcmVNb2RlbBIZChFoYXNSZW1vdGVIYXJk",
-            "d2FyZRgKIAEoCCq+BQoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRM",
+            "d2FyZRgKIAEoCCrRBQoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRM",
             "T1JBX1YyEAESDAoIVExPUkFfVjEQAhISCg5UTE9SQV9WMl8xXzFQNhADEgkK",
             "BVRCRUFNEAQSDwoLSEVMVEVDX1YyXzAQBRIOCgpUQkVBTV9WMFA3EAYSCgoG",
             "VF9FQ0hPEAcSEAoMVExPUkFfVjFfMVAzEAgSCwoHUkFLNDYzMRAJEg8KC0hF",
             "TFRFQ19WMl8xEAoSDQoJSEVMVEVDX1YxEAsSGAoUTElMWUdPX1RCRUFNX1Mz",
             "X0NPUkUQDBIMCghSQUsxMTIwMBANEgsKB05BTk9fRzEQDhISCg5UTE9SQV9W",
             "Ml8xXzFQOBAPEg8KC1RMT1JBX1QzX1MzEBASFAoQTkFOT19HMV9FWFBMT1JF",
-            "UhAREg4KClNUQVRJT05fRzEQGRIMCghSQUsxMTMxMBAaEhEKDUxPUkFfUkVM",
-            "QVlfVjEQIBIOCgpOUkY1Mjg0MERLECESBwoDUFBSECISDwoLR0VOSUVCTE9D",
-            "S1MQIxIRCg1OUkY1Ml9VTktOT1dOECQSDQoJUE9SVERVSU5PECUSDwoLQU5E",
-            "Uk9JRF9TSU0QJhIKCgZESVlfVjEQJxIVChFOUkY1Mjg0MF9QQ0ExMDA1ORAo",
-            "EgoKBkRSX0RFVhApEgsKB001U1RBQ0sQKhINCglIRUxURUNfVjMQKxIRCg1I",
-            "RUxURUNfV1NMX1YzECwSEwoPQkVUQUZQVl8yNDAwX1RYEC0SFwoTQkVUQUZQ",
-            "Vl85MDBfTkFOT19UWBAuEgwKCFJQSV9QSUNPEC8SGwoXSEVMVEVDX1dJUkVM",
-            "RVNTX1RSQUNLRVIQMBIZChVIRUxURUNfV0lSRUxFU1NfUEFQRVIQMRIKCgZU",
-            "X0RFQ0sQMhIOCgpUX1dBVENIX1MzEDMSDwoKUFJJVkFURV9IVxD/ASosCglD",
-            "b25zdGFudHMSCAoEWkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEK",
-            "EUNyaXRpY2FsRXJyb3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxAB",
-            "EhQKEFNMRUVQX0VOVEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BF",
-            "Q0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQ",
-            "BhIZChVJTlZBTElEX1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlM",
-            "RUQQCBIMCghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFE",
-            "SU9fU1BJX0JVRxALQl8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90",
-            "b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNo",
-            "dGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "UhAREhEKDU5BTk9fRzJfVUxUUkEQEhIOCgpTVEFUSU9OX0cxEBkSDAoIUkFL",
+            "MTEzMTAQGhIRCg1MT1JBX1JFTEFZX1YxECASDgoKTlJGNTI4NDBESxAhEgcK",
+            "A1BQUhAiEg8KC0dFTklFQkxPQ0tTECMSEQoNTlJGNTJfVU5LTk9XThAkEg0K",
+            "CVBPUlREVUlOTxAlEg8KC0FORFJPSURfU0lNECYSCgoGRElZX1YxECcSFQoR",
+            "TlJGNTI4NDBfUENBMTAwNTkQKBIKCgZEUl9ERVYQKRILCgdNNVNUQUNLECoS",
+            "DQoJSEVMVEVDX1YzECsSEQoNSEVMVEVDX1dTTF9WMxAsEhMKD0JFVEFGUFZf",
+            "MjQwMF9UWBAtEhcKE0JFVEFGUFZfOTAwX05BTk9fVFgQLhIMCghSUElfUElD",
+            "TxAvEhsKF0hFTFRFQ19XSVJFTEVTU19UUkFDS0VSEDASGQoVSEVMVEVDX1dJ",
+            "UkVMRVNTX1BBUEVSEDESCgoGVF9ERUNLEDISDgoKVF9XQVRDSF9TMxAzEg8K",
+            "ClBSSVZBVEVfSFcQ/wEqLAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRB",
+            "X1BBWUxPQURfTEVOEO0BKu4BChFDcml0aWNhbEVycm9yQ29kZRIICgROT05F",
+            "EAASDwoLVFhfV0FUQ0hET0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoI",
+            "Tk9fUkFESU8QAxIPCgtVTlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJ",
+            "TEVEEAUSDQoJTk9fQVhQMTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5H",
+            "EAcSEwoPVFJBTlNNSVRfRkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEy",
+            "NjJfRkFJTFVSRRAKEhEKDVJBRElPX1NQSV9CVUcQC0JfChNjb20uZ2Vla3N2",
+            "aWxsZS5tZXNoQgpNZXNoUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMv",
+            "Z28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -280,6 +281,11 @@ namespace Meshtastic.Protobufs {
     /// B&amp;Q Consulting Nano G1 Explorer: https://wiki.uniteng.com/en/meshtastic/nano-g1-explorer
     /// </summary>
     [pbr::OriginalName("NANO_G1_EXPLORER")] NanoG1Explorer = 17,
+    /// <summary>
+    ///
+    /// B&amp;Q Consulting Nano G2 Ultra: https://wiki.uniteng.com/en/meshtastic/nano-g2-ultra
+    /// </summary>
+    [pbr::OriginalName("NANO_G2_ULTRA")] NanoG2Ultra = 18,
     /// <summary>
     ///
     /// B&amp;Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
@@ -4811,9 +4817,9 @@ namespace Meshtastic.Protobufs {
       /// to make sure that critical packets are sent ASAP.
       /// In the case of meshtastic that means we want to send protocol acks as soon as possible
       /// (to prevent unneeded retransmissions), we want routing messages to be sent next,
-      /// then messages marked as reliable and finally ‘background’ packets like periodic position updates.
+      /// then messages marked as reliable and finally 'background' packets like periodic position updates.
       /// So I bit the bullet and implemented a new (internal - not sent over the air)
-      /// field in MeshPacket called ‘priority’.
+      /// field in MeshPacket called 'priority'.
       /// And the transmission queue in the router object is now a priority queue.
       /// </summary>
       public enum Priority {
@@ -7203,7 +7209,7 @@ namespace Meshtastic.Protobufs {
     public const int MqttClientProxyMessageFieldNumber = 14;
     /// <summary>
     ///
-    /// MQTT Client Proxy Message
+    /// MQTT Client Proxy Message (device sending to client / phone for publishing to MQTT)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7979,7 +7985,7 @@ namespace Meshtastic.Protobufs {
     public const int MqttClientProxyMessageFieldNumber = 6;
     /// <summary>
     ///
-    /// MQTT Client Proxy Message
+    /// MQTT Client Proxy Message (for client / phone subscribed to MQTT sending to device)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

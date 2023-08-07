@@ -30,10 +30,10 @@ public class RequestTelemetryCommandHandler : DeviceCommandHandler
         var message = telemetryMessageFactory.CreateTelemetryPacket();
         await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(message), async (packet, container) =>
         {
-            // if (packet?.PayloadVariantCase == FromRadio.PayloadVariantOneofCase.Packet &&
-            //     packet.MeshPacket is not null)
-            Logger.LogInformation($"Received packet from device: {packet}");
-            Logger.LogInformation(packet.GetPayload<Telemetry>()?.DeviceMetrics?.ToString() ?? "No telemetry data received");
+            if (packet.Packet.Decoded.RequestId > 0 && packet.Packet.From == Destination!.Value && packet.GetPayload<Telemetry>()?.DeviceMetrics is not null) {
+                var metrics = packet.GetPayload<Telemetry>()?.DeviceMetrics;
+                Logger.LogInformation($"Received telemetry from destination ({Destination.Value}): \n{metrics}");
+            }
             return await Task.FromResult(false);
         });
     }
