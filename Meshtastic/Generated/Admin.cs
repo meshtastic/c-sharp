@@ -28,7 +28,7 @@ namespace Meshtastic.Protobufs {
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
             "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhttZXNodGFzdGlj",
             "L2RldmljZW9ubHkucHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90bxoebWVz",
-            "aHRhc3RpYy9tb2R1bGVfY29uZmlnLnByb3RvIpIPCgxBZG1pbk1lc3NhZ2US",
+            "aHRhc3RpYy9tb2R1bGVfY29uZmlnLnByb3RvIqsPCgxBZG1pbk1lc3NhZ2US",
             "HQoTZ2V0X2NoYW5uZWxfcmVxdWVzdBgBIAEoDUgAEjMKFGdldF9jaGFubmVs",
             "X3Jlc3BvbnNlGAIgASgLMhMubWVzaHRhc3RpYy5DaGFubmVsSAASGwoRZ2V0",
             "X293bmVyX3JlcXVlc3QYAyABKAhIABIuChJnZXRfb3duZXJfcmVzcG9uc2UY",
@@ -65,20 +65,21 @@ namespace Meshtastic.Protobufs {
             "ABIWCgxub2RlZGJfcmVzZXQYZCABKAVIACKVAQoKQ29uZmlnVHlwZRIRCg1E",
             "RVZJQ0VfQ09ORklHEAASEwoPUE9TSVRJT05fQ09ORklHEAESEAoMUE9XRVJf",
             "Q09ORklHEAISEgoOTkVUV09SS19DT05GSUcQAxISCg5ESVNQTEFZX0NPTkZJ",
-            "RxAEEg8KC0xPUkFfQ09ORklHEAUSFAoQQkxVRVRPT1RIX0NPTkZJRxAGIu8B",
+            "RxAEEg8KC0xPUkFfQ09ORklHEAUSFAoQQkxVRVRPT1RIX0NPTkZJRxAGIogC",
             "ChBNb2R1bGVDb25maWdUeXBlEg8KC01RVFRfQ09ORklHEAASEQoNU0VSSUFM",
             "X0NPTkZJRxABEhMKD0VYVE5PVElGX0NPTkZJRxACEhcKE1NUT1JFRk9SV0FS",
             "RF9DT05GSUcQAxIUChBSQU5HRVRFU1RfQ09ORklHEAQSFAoQVEVMRU1FVFJZ",
             "X0NPTkZJRxAFEhQKEENBTk5FRE1TR19DT05GSUcQBhIQCgxBVURJT19DT05G",
-            "SUcQBxIZChVSRU1PVEVIQVJEV0FSRV9DT05GSUcQCBIaChZBTUJJRU5UTElH",
-            "SFRJTkdfQ09ORklHEApCEQoPcGF5bG9hZF92YXJpYW50IlsKDUhhbVBhcmFt",
-            "ZXRlcnMSEQoJY2FsbF9zaWduGAEgASgJEhAKCHR4X3Bvd2VyGAIgASgFEhEK",
-            "CWZyZXF1ZW5jeRgDIAEoAhISCgpzaG9ydF9uYW1lGAQgASgJImYKHk5vZGVS",
-            "ZW1vdGVIYXJkd2FyZVBpbnNSZXNwb25zZRJEChlub2RlX3JlbW90ZV9oYXJk",
-            "d2FyZV9waW5zGAEgAygLMiEubWVzaHRhc3RpYy5Ob2RlUmVtb3RlSGFyZHdh",
-            "cmVQaW5CYAoTY29tLmdlZWtzdmlsbGUubWVzaEILQWRtaW5Qcm90b3NaImdp",
-            "dGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGlj",
-            "LlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "SUcQBxIZChVSRU1PVEVIQVJEV0FSRV9DT05GSUcQCBIXChNORUlHSEJPUklO",
+            "Rk9fQ09ORklHEAkSGgoWQU1CSUVOVExJR0hUSU5HX0NPTkZJRxAKQhEKD3Bh",
+            "eWxvYWRfdmFyaWFudCJbCg1IYW1QYXJhbWV0ZXJzEhEKCWNhbGxfc2lnbhgB",
+            "IAEoCRIQCgh0eF9wb3dlchgCIAEoBRIRCglmcmVxdWVuY3kYAyABKAISEgoK",
+            "c2hvcnRfbmFtZRgEIAEoCSJmCh5Ob2RlUmVtb3RlSGFyZHdhcmVQaW5zUmVz",
+            "cG9uc2USRAoZbm9kZV9yZW1vdGVfaGFyZHdhcmVfcGlucxgBIAMoCzIhLm1l",
+            "c2h0YXN0aWMuTm9kZVJlbW90ZUhhcmR3YXJlUGluQmAKE2NvbS5nZWVrc3Zp",
+            "bGxlLm1lc2hCC0FkbWluUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMv",
+            "Z28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1991,6 +1992,11 @@ namespace Meshtastic.Protobufs {
         /// TODO: REPLACE
         /// </summary>
         [pbr::OriginalName("REMOTEHARDWARE_CONFIG")] RemotehardwareConfig = 8,
+        /// <summary>
+        ///
+        /// TODO: REPLACE
+        /// </summary>
+        [pbr::OriginalName("NEIGHBORINFO_CONFIG")] NeighborinfoConfig = 9,
         /// <summary>
         ///
         /// TODO: REPLACE
