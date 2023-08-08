@@ -74,11 +74,11 @@ public class DeviceStateContainerTests
         {
             MyInfo = new MyNodeInfo()
             {
-                FirmwareVersion = "420"
+                RebootCount = 1234
             }
         };
         deviceStateContainer.AddFromRadio(fromRadio);
-        deviceStateContainer.MyNodeInfo.FirmwareVersion.Should().Be("420");
+        deviceStateContainer.MyNodeInfo.RebootCount.Should().Be(1234);
     }
 
     [Test]

@@ -81,79 +81,73 @@ namespace Meshtastic.Protobufs {
             "KA0SHgoEdXNlchgCIAEoCzIQLm1lc2h0YXN0aWMuVXNlchImCghwb3NpdGlv",
             "bhgDIAEoCzIULm1lc2h0YXN0aWMuUG9zaXRpb24SCwoDc25yGAQgASgCEhIK",
             "Cmxhc3RfaGVhcmQYBSABKAcSMQoOZGV2aWNlX21ldHJpY3MYBiABKAsyGS5t",
-            "ZXNodGFzdGljLkRldmljZU1ldHJpY3MSDwoHY2hhbm5lbBgHIAEoDSLFAwoK",
-            "TXlOb2RlSW5mbxITCgtteV9ub2RlX251bRgBIAEoDRITCgdoYXNfZ3BzGAIg",
-            "ASgIQgIYARIYCgxtYXhfY2hhbm5lbHMYAyABKA1CAhgBEhwKEGZpcm13YXJl",
-            "X3ZlcnNpb24YBCABKAlCAhgBEjUKCmVycm9yX2NvZGUYBSABKA4yHS5tZXNo",
-            "dGFzdGljLkNyaXRpY2FsRXJyb3JDb2RlQgIYARIZCg1lcnJvcl9hZGRyZXNz",
-            "GAYgASgNQgIYARIXCgtlcnJvcl9jb3VudBgHIAEoDUICGAESFAoMcmVib290",
-            "X2NvdW50GAggASgNEhMKB2JpdHJhdGUYCSABKAJCAhgBEiAKFG1lc3NhZ2Vf",
-            "dGltZW91dF9tc2VjGAogASgNQgIYARIXCg9taW5fYXBwX3ZlcnNpb24YCyAB",
-            "KA0SGQoNYWlyX3BlcmlvZF90eBgMIAMoDUICGAESGQoNYWlyX3BlcmlvZF9y",
-            "eBgNIAMoDUICGAESFAoIaGFzX3dpZmkYDiABKAhCAhgBEh8KE2NoYW5uZWxf",
-            "dXRpbGl6YXRpb24YDyABKAJCAhgBEhcKC2Fpcl91dGlsX3R4GBAgASgCQgIY",
-            "ASLAAQoJTG9nUmVjb3JkEg8KB21lc3NhZ2UYASABKAkSDAoEdGltZRgCIAEo",
-            "BxIOCgZzb3VyY2UYAyABKAkSKgoFbGV2ZWwYBCABKA4yGy5tZXNodGFzdGlj",
-            "LkxvZ1JlY29yZC5MZXZlbCJYCgVMZXZlbBIJCgVVTlNFVBAAEgwKCENSSVRJ",
-            "Q0FMEDISCQoFRVJST1IQKBILCgdXQVJOSU5HEB4SCAoESU5GTxAUEgkKBURF",
-            "QlVHEAoSCQoFVFJBQ0UQBSJQCgtRdWV1ZVN0YXR1cxILCgNyZXMYASABKAUS",
-            "DAoEZnJlZRgCIAEoDRIOCgZtYXhsZW4YAyABKA0SFgoObWVzaF9wYWNrZXRf",
-            "aWQYBCABKA0i2wQKCUZyb21SYWRpbxIKCgJpZBgBIAEoDRIoCgZwYWNrZXQY",
-            "AiABKAsyFi5tZXNodGFzdGljLk1lc2hQYWNrZXRIABIpCgdteV9pbmZvGAMg",
-            "ASgLMhYubWVzaHRhc3RpYy5NeU5vZGVJbmZvSAASKQoJbm9kZV9pbmZvGAQg",
-            "ASgLMhQubWVzaHRhc3RpYy5Ob2RlSW5mb0gAEiQKBmNvbmZpZxgFIAEoCzIS",
-            "Lm1lc2h0YXN0aWMuQ29uZmlnSAASKwoKbG9nX3JlY29yZBgGIAEoCzIVLm1l",
-            "c2h0YXN0aWMuTG9nUmVjb3JkSAASHAoSY29uZmlnX2NvbXBsZXRlX2lkGAcg",
-            "ASgNSAASEgoIcmVib290ZWQYCCABKAhIABIwCgxtb2R1bGVDb25maWcYCSAB",
-            "KAsyGC5tZXNodGFzdGljLk1vZHVsZUNvbmZpZ0gAEiYKB2NoYW5uZWwYCiAB",
-            "KAsyEy5tZXNodGFzdGljLkNoYW5uZWxIABIuCgtxdWV1ZVN0YXR1cxgLIAEo",
-            "CzIXLm1lc2h0YXN0aWMuUXVldWVTdGF0dXNIABIqCgx4bW9kZW1QYWNrZXQY",
-            "DCABKAsyEi5tZXNodGFzdGljLlhNb2RlbUgAEi4KCG1ldGFkYXRhGA0gASgL",
-            "MhoubWVzaHRhc3RpYy5EZXZpY2VNZXRhZGF0YUgAEkQKFm1xdHRDbGllbnRQ",
-            "cm94eU1lc3NhZ2UYDiABKAsyIi5tZXNodGFzdGljLk1xdHRDbGllbnRQcm94",
-            "eU1lc3NhZ2VIAEIRCg9wYXlsb2FkX3ZhcmlhbnQi6AEKB1RvUmFkaW8SKAoG",
-            "cGFja2V0GAEgASgLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0SAASGAoOd2Fu",
-            "dF9jb25maWdfaWQYAyABKA1IABIUCgpkaXNjb25uZWN0GAQgASgISAASKgoM",
-            "eG1vZGVtUGFja2V0GAUgASgLMhIubWVzaHRhc3RpYy5YTW9kZW1IABJEChZt",
-            "cXR0Q2xpZW50UHJveHlNZXNzYWdlGAYgASgLMiIubWVzaHRhc3RpYy5NcXR0",
-            "Q2xpZW50UHJveHlNZXNzYWdlSABCEQoPcGF5bG9hZF92YXJpYW50IkAKCkNv",
-            "bXByZXNzZWQSJAoHcG9ydG51bRgBIAEoDjITLm1lc2h0YXN0aWMuUG9ydE51",
-            "bRIMCgRkYXRhGAIgASgMImEKDE5laWdoYm9ySW5mbxIPCgdub2RlX2lkGAEg",
-            "ASgNEhcKD2xhc3Rfc2VudF9ieV9pZBgCIAEoDRInCgluZWlnaGJvcnMYAyAD",
-            "KAsyFC5tZXNodGFzdGljLk5laWdoYm9yIigKCE5laWdoYm9yEg8KB25vZGVf",
-            "aWQYASABKA0SCwoDc25yGAIgASgCIq0CCg5EZXZpY2VNZXRhZGF0YRIYChBm",
-            "aXJtd2FyZV92ZXJzaW9uGAEgASgJEhwKFGRldmljZV9zdGF0ZV92ZXJzaW9u",
-            "GAIgASgNEhMKC2NhblNodXRkb3duGAMgASgIEg8KB2hhc1dpZmkYBCABKAgS",
-            "FAoMaGFzQmx1ZXRvb3RoGAUgASgIEhMKC2hhc0V0aGVybmV0GAYgASgIEjIK",
-            "BHJvbGUYByABKA4yJC5tZXNodGFzdGljLkNvbmZpZy5EZXZpY2VDb25maWcu",
-            "Um9sZRIWCg5wb3NpdGlvbl9mbGFncxgIIAEoDRIrCghod19tb2RlbBgJIAEo",
-            "DjIZLm1lc2h0YXN0aWMuSGFyZHdhcmVNb2RlbBIZChFoYXNSZW1vdGVIYXJk",
-            "d2FyZRgKIAEoCCrRBQoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRM",
-            "T1JBX1YyEAESDAoIVExPUkFfVjEQAhISCg5UTE9SQV9WMl8xXzFQNhADEgkK",
-            "BVRCRUFNEAQSDwoLSEVMVEVDX1YyXzAQBRIOCgpUQkVBTV9WMFA3EAYSCgoG",
-            "VF9FQ0hPEAcSEAoMVExPUkFfVjFfMVAzEAgSCwoHUkFLNDYzMRAJEg8KC0hF",
-            "TFRFQ19WMl8xEAoSDQoJSEVMVEVDX1YxEAsSGAoUTElMWUdPX1RCRUFNX1Mz",
-            "X0NPUkUQDBIMCghSQUsxMTIwMBANEgsKB05BTk9fRzEQDhISCg5UTE9SQV9W",
-            "Ml8xXzFQOBAPEg8KC1RMT1JBX1QzX1MzEBASFAoQTkFOT19HMV9FWFBMT1JF",
-            "UhAREhEKDU5BTk9fRzJfVUxUUkEQEhIOCgpTVEFUSU9OX0cxEBkSDAoIUkFL",
-            "MTEzMTAQGhIRCg1MT1JBX1JFTEFZX1YxECASDgoKTlJGNTI4NDBESxAhEgcK",
-            "A1BQUhAiEg8KC0dFTklFQkxPQ0tTECMSEQoNTlJGNTJfVU5LTk9XThAkEg0K",
-            "CVBPUlREVUlOTxAlEg8KC0FORFJPSURfU0lNECYSCgoGRElZX1YxECcSFQoR",
-            "TlJGNTI4NDBfUENBMTAwNTkQKBIKCgZEUl9ERVYQKRILCgdNNVNUQUNLECoS",
-            "DQoJSEVMVEVDX1YzECsSEQoNSEVMVEVDX1dTTF9WMxAsEhMKD0JFVEFGUFZf",
-            "MjQwMF9UWBAtEhcKE0JFVEFGUFZfOTAwX05BTk9fVFgQLhIMCghSUElfUElD",
-            "TxAvEhsKF0hFTFRFQ19XSVJFTEVTU19UUkFDS0VSEDASGQoVSEVMVEVDX1dJ",
-            "UkVMRVNTX1BBUEVSEDESCgoGVF9ERUNLEDISDgoKVF9XQVRDSF9TMxAzEg8K",
-            "ClBSSVZBVEVfSFcQ/wEqLAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRB",
-            "X1BBWUxPQURfTEVOEO0BKu4BChFDcml0aWNhbEVycm9yQ29kZRIICgROT05F",
-            "EAASDwoLVFhfV0FUQ0hET0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoI",
-            "Tk9fUkFESU8QAxIPCgtVTlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJ",
-            "TEVEEAUSDQoJTk9fQVhQMTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5H",
-            "EAcSEwoPVFJBTlNNSVRfRkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEy",
-            "NjJfRkFJTFVSRRAKEhEKDVJBRElPX1NQSV9CVUcQC0JfChNjb20uZ2Vla3N2",
-            "aWxsZS5tZXNoQgpNZXNoUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMv",
-            "Z28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3Rv",
-            "Mw=="));
+            "ZXNodGFzdGljLkRldmljZU1ldHJpY3MSDwoHY2hhbm5lbBgHIAEoDSJQCgpN",
+            "eU5vZGVJbmZvEhMKC215X25vZGVfbnVtGAEgASgNEhQKDHJlYm9vdF9jb3Vu",
+            "dBgIIAEoDRIXCg9taW5fYXBwX3ZlcnNpb24YCyABKA0iwAEKCUxvZ1JlY29y",
+            "ZBIPCgdtZXNzYWdlGAEgASgJEgwKBHRpbWUYAiABKAcSDgoGc291cmNlGAMg",
+            "ASgJEioKBWxldmVsGAQgASgOMhsubWVzaHRhc3RpYy5Mb2dSZWNvcmQuTGV2",
+            "ZWwiWAoFTGV2ZWwSCQoFVU5TRVQQABIMCghDUklUSUNBTBAyEgkKBUVSUk9S",
+            "ECgSCwoHV0FSTklORxAeEggKBElORk8QFBIJCgVERUJVRxAKEgkKBVRSQUNF",
+            "EAUiUAoLUXVldWVTdGF0dXMSCwoDcmVzGAEgASgFEgwKBGZyZWUYAiABKA0S",
+            "DgoGbWF4bGVuGAMgASgNEhYKDm1lc2hfcGFja2V0X2lkGAQgASgNItsECglG",
+            "cm9tUmFkaW8SCgoCaWQYASABKA0SKAoGcGFja2V0GAIgASgLMhYubWVzaHRh",
+            "c3RpYy5NZXNoUGFja2V0SAASKQoHbXlfaW5mbxgDIAEoCzIWLm1lc2h0YXN0",
+            "aWMuTXlOb2RlSW5mb0gAEikKCW5vZGVfaW5mbxgEIAEoCzIULm1lc2h0YXN0",
+            "aWMuTm9kZUluZm9IABIkCgZjb25maWcYBSABKAsyEi5tZXNodGFzdGljLkNv",
+            "bmZpZ0gAEisKCmxvZ19yZWNvcmQYBiABKAsyFS5tZXNodGFzdGljLkxvZ1Jl",
+            "Y29yZEgAEhwKEmNvbmZpZ19jb21wbGV0ZV9pZBgHIAEoDUgAEhIKCHJlYm9v",
+            "dGVkGAggASgISAASMAoMbW9kdWxlQ29uZmlnGAkgASgLMhgubWVzaHRhc3Rp",
+            "Yy5Nb2R1bGVDb25maWdIABImCgdjaGFubmVsGAogASgLMhMubWVzaHRhc3Rp",
+            "Yy5DaGFubmVsSAASLgoLcXVldWVTdGF0dXMYCyABKAsyFy5tZXNodGFzdGlj",
+            "LlF1ZXVlU3RhdHVzSAASKgoMeG1vZGVtUGFja2V0GAwgASgLMhIubWVzaHRh",
+            "c3RpYy5YTW9kZW1IABIuCghtZXRhZGF0YRgNIAEoCzIaLm1lc2h0YXN0aWMu",
+            "RGV2aWNlTWV0YWRhdGFIABJEChZtcXR0Q2xpZW50UHJveHlNZXNzYWdlGA4g",
+            "ASgLMiIubWVzaHRhc3RpYy5NcXR0Q2xpZW50UHJveHlNZXNzYWdlSABCEQoP",
+            "cGF5bG9hZF92YXJpYW50IugBCgdUb1JhZGlvEigKBnBhY2tldBgBIAEoCzIW",
+            "Lm1lc2h0YXN0aWMuTWVzaFBhY2tldEgAEhgKDndhbnRfY29uZmlnX2lkGAMg",
+            "ASgNSAASFAoKZGlzY29ubmVjdBgEIAEoCEgAEioKDHhtb2RlbVBhY2tldBgF",
+            "IAEoCzISLm1lc2h0YXN0aWMuWE1vZGVtSAASRAoWbXF0dENsaWVudFByb3h5",
+            "TWVzc2FnZRgGIAEoCzIiLm1lc2h0YXN0aWMuTXF0dENsaWVudFByb3h5TWVz",
+            "c2FnZUgAQhEKD3BheWxvYWRfdmFyaWFudCJACgpDb21wcmVzc2VkEiQKB3Bv",
+            "cnRudW0YASABKA4yEy5tZXNodGFzdGljLlBvcnROdW0SDAoEZGF0YRgCIAEo",
+            "DCKHAQoMTmVpZ2hib3JJbmZvEg8KB25vZGVfaWQYASABKA0SFwoPbGFzdF9z",
+            "ZW50X2J5X2lkGAIgASgNEiQKHG5vZGVfYnJvYWRjYXN0X2ludGVydmFsX3Nl",
+            "Y3MYAyABKA0SJwoJbmVpZ2hib3JzGAQgAygLMhQubWVzaHRhc3RpYy5OZWln",
+            "aGJvciJkCghOZWlnaGJvchIPCgdub2RlX2lkGAEgASgNEgsKA3NuchgCIAEo",
+            "AhIUCgxsYXN0X3J4X3RpbWUYAyABKAcSJAocbm9kZV9icm9hZGNhc3RfaW50",
+            "ZXJ2YWxfc2VjcxgEIAEoDSKtAgoORGV2aWNlTWV0YWRhdGESGAoQZmlybXdh",
+            "cmVfdmVyc2lvbhgBIAEoCRIcChRkZXZpY2Vfc3RhdGVfdmVyc2lvbhgCIAEo",
+            "DRITCgtjYW5TaHV0ZG93bhgDIAEoCBIPCgdoYXNXaWZpGAQgASgIEhQKDGhh",
+            "c0JsdWV0b290aBgFIAEoCBITCgtoYXNFdGhlcm5ldBgGIAEoCBIyCgRyb2xl",
+            "GAcgASgOMiQubWVzaHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnLlJvbGUS",
+            "FgoOcG9zaXRpb25fZmxhZ3MYCCABKA0SKwoIaHdfbW9kZWwYCSABKA4yGS5t",
+            "ZXNodGFzdGljLkhhcmR3YXJlTW9kZWwSGQoRaGFzUmVtb3RlSGFyZHdhcmUY",
+            "CiABKAgq5AUKDUhhcmR3YXJlTW9kZWwSCQoFVU5TRVQQABIMCghUTE9SQV9W",
+            "MhABEgwKCFRMT1JBX1YxEAISEgoOVExPUkFfVjJfMV8xUDYQAxIJCgVUQkVB",
+            "TRAEEg8KC0hFTFRFQ19WMl8wEAUSDgoKVEJFQU1fVjBQNxAGEgoKBlRfRUNI",
+            "TxAHEhAKDFRMT1JBX1YxXzFQMxAIEgsKB1JBSzQ2MzEQCRIPCgtIRUxURUNf",
+            "VjJfMRAKEg0KCUhFTFRFQ19WMRALEhgKFExJTFlHT19UQkVBTV9TM19DT1JF",
+            "EAwSDAoIUkFLMTEyMDAQDRILCgdOQU5PX0cxEA4SEgoOVExPUkFfVjJfMV8x",
+            "UDgQDxIPCgtUTE9SQV9UM19TMxAQEhQKEE5BTk9fRzFfRVhQTE9SRVIQERIR",
+            "Cg1OQU5PX0cyX1VMVFJBEBISDgoKU1RBVElPTl9HMRAZEgwKCFJBSzExMzEw",
+            "EBoSEQoNTE9SQV9SRUxBWV9WMRAgEg4KCk5SRjUyODQwREsQIRIHCgNQUFIQ",
+            "IhIPCgtHRU5JRUJMT0NLUxAjEhEKDU5SRjUyX1VOS05PV04QJBINCglQT1JU",
+            "RFVJTk8QJRIPCgtBTkRST0lEX1NJTRAmEgoKBkRJWV9WMRAnEhUKEU5SRjUy",
+            "ODQwX1BDQTEwMDU5ECgSCgoGRFJfREVWECkSCwoHTTVTVEFDSxAqEg0KCUhF",
+            "TFRFQ19WMxArEhEKDUhFTFRFQ19XU0xfVjMQLBITCg9CRVRBRlBWXzI0MDBf",
+            "VFgQLRIXChNCRVRBRlBWXzkwMF9OQU5PX1RYEC4SDAoIUlBJX1BJQ08QLxIb",
+            "ChdIRUxURUNfV0lSRUxFU1NfVFJBQ0tFUhAwEhkKFUhFTFRFQ19XSVJFTEVT",
+            "U19QQVBFUhAxEgoKBlRfREVDSxAyEg4KClRfV0FUQ0hfUzMQMxIRCg1QSUNP",
+            "TVBVVEVSX1MzEDQSDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoE",
+            "WkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJy",
+            "b3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VO",
+            "VEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoR",
+            "VUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElE",
+            "X1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9X",
+            "Tk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxAL",
+            "Ql8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5j",
+            "b20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3Rv",
+            "YnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -166,14 +160,14 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MqttClientProxyMessage), global::Meshtastic.Protobufs.MqttClientProxyMessage.Parser, new[]{ "Topic", "Data", "Text", "Retained" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MeshPacket), global::Meshtastic.Protobufs.MeshPacket.Parser, new[]{ "From", "To", "Channel", "Decoded", "Encrypted", "Id", "RxTime", "RxSnr", "HopLimit", "WantAck", "Priority", "RxRssi", "Delayed" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Priority), typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Delayed) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfo), global::Meshtastic.Protobufs.NodeInfo.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics", "Channel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MyNodeInfo), global::Meshtastic.Protobufs.MyNodeInfo.Parser, new[]{ "MyNodeNum", "HasGps", "MaxChannels", "FirmwareVersion", "ErrorCode", "ErrorAddress", "ErrorCount", "RebootCount", "Bitrate", "MessageTimeoutMsec", "MinAppVersion", "AirPeriodTx", "AirPeriodRx", "HasWifi", "ChannelUtilization", "AirUtilTx" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MyNodeInfo), global::Meshtastic.Protobufs.MyNodeInfo.Parser, new[]{ "MyNodeNum", "RebootCount", "MinAppVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LogRecord), global::Meshtastic.Protobufs.LogRecord.Parser, new[]{ "Message", "Time", "Source", "Level" }, null, new[]{ typeof(global::Meshtastic.Protobufs.LogRecord.Types.Level) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.QueueStatus), global::Meshtastic.Protobufs.QueueStatus.Parser, new[]{ "Res", "Free", "Maxlen", "MeshPacketId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel", "QueueStatus", "XmodemPacket", "Metadata", "MqttClientProxyMessage" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ToRadio), global::Meshtastic.Protobufs.ToRadio.Parser, new[]{ "Packet", "WantConfigId", "Disconnect", "XmodemPacket", "MqttClientProxyMessage" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Compressed), global::Meshtastic.Protobufs.Compressed.Parser, new[]{ "Portnum", "Data" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NeighborInfo), global::Meshtastic.Protobufs.NeighborInfo.Parser, new[]{ "NodeId", "LastSentById", "Neighbors" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Neighbor), global::Meshtastic.Protobufs.Neighbor.Parser, new[]{ "NodeId", "Snr" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NeighborInfo), global::Meshtastic.Protobufs.NeighborInfo.Parser, new[]{ "NodeId", "LastSentById", "NodeBroadcastIntervalSecs", "Neighbors" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Neighbor), global::Meshtastic.Protobufs.Neighbor.Parser, new[]{ "NodeId", "Snr", "LastRxTime", "NodeBroadcastIntervalSecs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetadata), global::Meshtastic.Protobufs.DeviceMetadata.Parser, new[]{ "FirmwareVersion", "DeviceStateVersion", "CanShutdown", "HasWifi", "HasBluetooth", "HasEthernet", "Role", "PositionFlags", "HwModel", "HasRemoteHardware" }, null, null, null, null)
           }));
     }
@@ -390,7 +384,7 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("HELTEC_WIRELESS_PAPER")] HeltecWirelessPaper = 49,
     /// <summary>
     ///
-    /// LilyGo T-Deck with ESP32-S3 CPU, Keyboard, and IPS display
+    /// LilyGo T-Deck with ESP32-S3 CPU, Keyboard and IPS display
     /// </summary>
     [pbr::OriginalName("T_DECK")] TDeck = 50,
     /// <summary>
@@ -398,6 +392,11 @@ namespace Meshtastic.Protobufs {
     /// LilyGo T-Watch S3 with ESP32-S3 CPU and IPS display
     /// </summary>
     [pbr::OriginalName("T_WATCH_S3")] TWatchS3 = 51,
+    /// <summary>
+    ///
+    /// Bobricius Picomputer with ESP32-S3 CPU, Keyboard and IPS display
+    /// </summary>
+    [pbr::OriginalName("PICOMPUTER_S3")] PicomputerS3 = 52,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -5418,21 +5417,8 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MyNodeInfo(MyNodeInfo other) : this() {
       myNodeNum_ = other.myNodeNum_;
-      hasGps_ = other.hasGps_;
-      maxChannels_ = other.maxChannels_;
-      firmwareVersion_ = other.firmwareVersion_;
-      errorCode_ = other.errorCode_;
-      errorAddress_ = other.errorAddress_;
-      errorCount_ = other.errorCount_;
       rebootCount_ = other.rebootCount_;
-      bitrate_ = other.bitrate_;
-      messageTimeoutMsec_ = other.messageTimeoutMsec_;
       minAppVersion_ = other.minAppVersion_;
-      airPeriodTx_ = other.airPeriodTx_.Clone();
-      airPeriodRx_ = other.airPeriodRx_.Clone();
-      hasWifi_ = other.hasWifi_;
-      channelUtilization_ = other.channelUtilization_;
-      airUtilTx_ = other.airUtilTx_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5459,118 +5445,6 @@ namespace Meshtastic.Protobufs {
       }
     }
 
-    /// <summary>Field number for the "has_gps" field.</summary>
-    public const int HasGpsFieldNumber = 2;
-    private bool hasGps_;
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x (Source from device_metadata)
-    /// Note: This flag merely means we detected a hardware GPS in our node.
-    /// Not the same as UserPreferences.location_sharing
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasGps {
-      get { return hasGps_; }
-      set {
-        hasGps_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "max_channels" field.</summary>
-    public const int MaxChannelsFieldNumber = 3;
-    private uint maxChannels_;
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x
-    /// The maximum number of 'software' channels that can be set on this node.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxChannels {
-      get { return maxChannels_; }
-      set {
-        maxChannels_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "firmware_version" field.</summary>
-    public const int FirmwareVersionFieldNumber = 4;
-    private string firmwareVersion_ = "";
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x (Source from device_metadata)
-    /// 0.0.5 etc...
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FirmwareVersion {
-      get { return firmwareVersion_; }
-      set {
-        firmwareVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "error_code" field.</summary>
-    public const int ErrorCodeFieldNumber = 5;
-    private global::Meshtastic.Protobufs.CriticalErrorCode errorCode_ = global::Meshtastic.Protobufs.CriticalErrorCode.None;
-    /// <summary>
-    ///
-    /// An error message we'd like to report back to the mothership through analytics.
-    /// It indicates a serious bug occurred on the device, the device coped with it,
-    /// but we still want to tell the devs about the bug.
-    /// This field will be cleared after the phone reads MyNodeInfo
-    /// (i.e. it will only be reported once)
-    /// a numeric error code to go with error message, zero means no error
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Meshtastic.Protobufs.CriticalErrorCode ErrorCode {
-      get { return errorCode_; }
-      set {
-        errorCode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "error_address" field.</summary>
-    public const int ErrorAddressFieldNumber = 6;
-    private uint errorAddress_;
-    /// <summary>
-    ///
-    /// A numeric error address (nonzero if available)
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ErrorAddress {
-      get { return errorAddress_; }
-      set {
-        errorAddress_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "error_count" field.</summary>
-    public const int ErrorCountFieldNumber = 7;
-    private uint errorCount_;
-    /// <summary>
-    ///
-    /// The total number of errors this node has ever encountered
-    /// (well - since the last time we discarded preferences)
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ErrorCount {
-      get { return errorCount_; }
-      set {
-        errorCount_ = value;
-      }
-    }
-
     /// <summary>Field number for the "reboot_count" field.</summary>
     public const int RebootCountFieldNumber = 8;
     private uint rebootCount_;
@@ -5585,45 +5459,6 @@ namespace Meshtastic.Protobufs {
       get { return rebootCount_; }
       set {
         rebootCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "bitrate" field.</summary>
-    public const int BitrateFieldNumber = 9;
-    private float bitrate_;
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x
-    /// Calculated bitrate of the current channel (in Bytes Per Second)
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float Bitrate {
-      get { return bitrate_; }
-      set {
-        bitrate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "message_timeout_msec" field.</summary>
-    public const int MessageTimeoutMsecFieldNumber = 10;
-    private uint messageTimeoutMsec_;
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x
-    /// How long before we consider a message abandoned and we can clear our
-    /// caches of any messages in flight Normally quite large to handle the worst case
-    /// message delivery time, 5 minutes.
-    /// Formerly called FLOOD_EXPIRE_TIME in the device code
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MessageTimeoutMsec {
-      get { return messageTimeoutMsec_; }
-      set {
-        messageTimeoutMsec_ = value;
       }
     }
 
@@ -5644,94 +5479,6 @@ namespace Meshtastic.Protobufs {
       }
     }
 
-    /// <summary>Field number for the "air_period_tx" field.</summary>
-    public const int AirPeriodTxFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_airPeriodTx_codec
-        = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> airPeriodTx_ = new pbc::RepeatedField<uint>();
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x (Only used on device to keep track of utilization)
-    /// 24 time windows of 1hr each with the airtime transmitted out of the device per hour.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AirPeriodTx {
-      get { return airPeriodTx_; }
-    }
-
-    /// <summary>Field number for the "air_period_rx" field.</summary>
-    public const int AirPeriodRxFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_airPeriodRx_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> airPeriodRx_ = new pbc::RepeatedField<uint>();
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x (Only used on device to keep track of utilization)
-    /// 24 time windows of 1hr each with the airtime of valid packets for your mesh.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AirPeriodRx {
-      get { return airPeriodRx_; }
-    }
-
-    /// <summary>Field number for the "has_wifi" field.</summary>
-    public const int HasWifiFieldNumber = 14;
-    private bool hasWifi_;
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x (Source from DeviceMetadata instead)
-    /// Is the device wifi capable?
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasWifi {
-      get { return hasWifi_; }
-      set {
-        hasWifi_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "channel_utilization" field.</summary>
-    public const int ChannelUtilizationFieldNumber = 15;
-    private float channelUtilization_;
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x (Source from DeviceMetrics telemetry payloads)
-    /// Utilization for the current channel, including well formed TX, RX and malformed RX (aka noise).
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float ChannelUtilization {
-      get { return channelUtilization_; }
-      set {
-        channelUtilization_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "air_util_tx" field.</summary>
-    public const int AirUtilTxFieldNumber = 16;
-    private float airUtilTx_;
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x (Source from DeviceMetrics telemetry payloads)
-    /// Percent of airtime for transmission used within the last hour.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float AirUtilTx {
-      get { return airUtilTx_; }
-      set {
-        airUtilTx_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5748,21 +5495,8 @@ namespace Meshtastic.Protobufs {
         return true;
       }
       if (MyNodeNum != other.MyNodeNum) return false;
-      if (HasGps != other.HasGps) return false;
-      if (MaxChannels != other.MaxChannels) return false;
-      if (FirmwareVersion != other.FirmwareVersion) return false;
-      if (ErrorCode != other.ErrorCode) return false;
-      if (ErrorAddress != other.ErrorAddress) return false;
-      if (ErrorCount != other.ErrorCount) return false;
       if (RebootCount != other.RebootCount) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Bitrate, other.Bitrate)) return false;
-      if (MessageTimeoutMsec != other.MessageTimeoutMsec) return false;
       if (MinAppVersion != other.MinAppVersion) return false;
-      if(!airPeriodTx_.Equals(other.airPeriodTx_)) return false;
-      if(!airPeriodRx_.Equals(other.airPeriodRx_)) return false;
-      if (HasWifi != other.HasWifi) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ChannelUtilization, other.ChannelUtilization)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AirUtilTx, other.AirUtilTx)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5771,21 +5505,8 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       if (MyNodeNum != 0) hash ^= MyNodeNum.GetHashCode();
-      if (HasGps != false) hash ^= HasGps.GetHashCode();
-      if (MaxChannels != 0) hash ^= MaxChannels.GetHashCode();
-      if (FirmwareVersion.Length != 0) hash ^= FirmwareVersion.GetHashCode();
-      if (ErrorCode != global::Meshtastic.Protobufs.CriticalErrorCode.None) hash ^= ErrorCode.GetHashCode();
-      if (ErrorAddress != 0) hash ^= ErrorAddress.GetHashCode();
-      if (ErrorCount != 0) hash ^= ErrorCount.GetHashCode();
       if (RebootCount != 0) hash ^= RebootCount.GetHashCode();
-      if (Bitrate != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Bitrate);
-      if (MessageTimeoutMsec != 0) hash ^= MessageTimeoutMsec.GetHashCode();
       if (MinAppVersion != 0) hash ^= MinAppVersion.GetHashCode();
-      hash ^= airPeriodTx_.GetHashCode();
-      hash ^= airPeriodRx_.GetHashCode();
-      if (HasWifi != false) hash ^= HasWifi.GetHashCode();
-      if (ChannelUtilization != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ChannelUtilization);
-      if (AirUtilTx != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AirUtilTx);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5808,59 +5529,13 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteUInt32(MyNodeNum);
       }
-      if (HasGps != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(HasGps);
-      }
-      if (MaxChannels != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MaxChannels);
-      }
-      if (FirmwareVersion.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(FirmwareVersion);
-      }
-      if (ErrorCode != global::Meshtastic.Protobufs.CriticalErrorCode.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) ErrorCode);
-      }
-      if (ErrorAddress != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ErrorAddress);
-      }
-      if (ErrorCount != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(ErrorCount);
-      }
       if (RebootCount != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(RebootCount);
       }
-      if (Bitrate != 0F) {
-        output.WriteRawTag(77);
-        output.WriteFloat(Bitrate);
-      }
-      if (MessageTimeoutMsec != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MessageTimeoutMsec);
-      }
       if (MinAppVersion != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(MinAppVersion);
-      }
-      airPeriodTx_.WriteTo(output, _repeated_airPeriodTx_codec);
-      airPeriodRx_.WriteTo(output, _repeated_airPeriodRx_codec);
-      if (HasWifi != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(HasWifi);
-      }
-      if (ChannelUtilization != 0F) {
-        output.WriteRawTag(125);
-        output.WriteFloat(ChannelUtilization);
-      }
-      if (AirUtilTx != 0F) {
-        output.WriteRawTag(133, 1);
-        output.WriteFloat(AirUtilTx);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5876,59 +5551,13 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteUInt32(MyNodeNum);
       }
-      if (HasGps != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(HasGps);
-      }
-      if (MaxChannels != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MaxChannels);
-      }
-      if (FirmwareVersion.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(FirmwareVersion);
-      }
-      if (ErrorCode != global::Meshtastic.Protobufs.CriticalErrorCode.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) ErrorCode);
-      }
-      if (ErrorAddress != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ErrorAddress);
-      }
-      if (ErrorCount != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(ErrorCount);
-      }
       if (RebootCount != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(RebootCount);
       }
-      if (Bitrate != 0F) {
-        output.WriteRawTag(77);
-        output.WriteFloat(Bitrate);
-      }
-      if (MessageTimeoutMsec != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MessageTimeoutMsec);
-      }
       if (MinAppVersion != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(MinAppVersion);
-      }
-      airPeriodTx_.WriteTo(ref output, _repeated_airPeriodTx_codec);
-      airPeriodRx_.WriteTo(ref output, _repeated_airPeriodRx_codec);
-      if (HasWifi != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(HasWifi);
-      }
-      if (ChannelUtilization != 0F) {
-        output.WriteRawTag(125);
-        output.WriteFloat(ChannelUtilization);
-      }
-      if (AirUtilTx != 0F) {
-        output.WriteRawTag(133, 1);
-        output.WriteFloat(AirUtilTx);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5943,46 +5572,11 @@ namespace Meshtastic.Protobufs {
       if (MyNodeNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MyNodeNum);
       }
-      if (HasGps != false) {
-        size += 1 + 1;
-      }
-      if (MaxChannels != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxChannels);
-      }
-      if (FirmwareVersion.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareVersion);
-      }
-      if (ErrorCode != global::Meshtastic.Protobufs.CriticalErrorCode.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ErrorCode);
-      }
-      if (ErrorAddress != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ErrorAddress);
-      }
-      if (ErrorCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ErrorCount);
-      }
       if (RebootCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RebootCount);
       }
-      if (Bitrate != 0F) {
-        size += 1 + 4;
-      }
-      if (MessageTimeoutMsec != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MessageTimeoutMsec);
-      }
       if (MinAppVersion != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MinAppVersion);
-      }
-      size += airPeriodTx_.CalculateSize(_repeated_airPeriodTx_codec);
-      size += airPeriodRx_.CalculateSize(_repeated_airPeriodRx_codec);
-      if (HasWifi != false) {
-        size += 1 + 1;
-      }
-      if (ChannelUtilization != 0F) {
-        size += 1 + 4;
-      }
-      if (AirUtilTx != 0F) {
-        size += 2 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5999,46 +5593,11 @@ namespace Meshtastic.Protobufs {
       if (other.MyNodeNum != 0) {
         MyNodeNum = other.MyNodeNum;
       }
-      if (other.HasGps != false) {
-        HasGps = other.HasGps;
-      }
-      if (other.MaxChannels != 0) {
-        MaxChannels = other.MaxChannels;
-      }
-      if (other.FirmwareVersion.Length != 0) {
-        FirmwareVersion = other.FirmwareVersion;
-      }
-      if (other.ErrorCode != global::Meshtastic.Protobufs.CriticalErrorCode.None) {
-        ErrorCode = other.ErrorCode;
-      }
-      if (other.ErrorAddress != 0) {
-        ErrorAddress = other.ErrorAddress;
-      }
-      if (other.ErrorCount != 0) {
-        ErrorCount = other.ErrorCount;
-      }
       if (other.RebootCount != 0) {
         RebootCount = other.RebootCount;
       }
-      if (other.Bitrate != 0F) {
-        Bitrate = other.Bitrate;
-      }
-      if (other.MessageTimeoutMsec != 0) {
-        MessageTimeoutMsec = other.MessageTimeoutMsec;
-      }
       if (other.MinAppVersion != 0) {
         MinAppVersion = other.MinAppVersion;
-      }
-      airPeriodTx_.Add(other.airPeriodTx_);
-      airPeriodRx_.Add(other.airPeriodRx_);
-      if (other.HasWifi != false) {
-        HasWifi = other.HasWifi;
-      }
-      if (other.ChannelUtilization != 0F) {
-        ChannelUtilization = other.ChannelUtilization;
-      }
-      if (other.AirUtilTx != 0F) {
-        AirUtilTx = other.AirUtilTx;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6059,66 +5618,12 @@ namespace Meshtastic.Protobufs {
             MyNodeNum = input.ReadUInt32();
             break;
           }
-          case 16: {
-            HasGps = input.ReadBool();
-            break;
-          }
-          case 24: {
-            MaxChannels = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            FirmwareVersion = input.ReadString();
-            break;
-          }
-          case 40: {
-            ErrorCode = (global::Meshtastic.Protobufs.CriticalErrorCode) input.ReadEnum();
-            break;
-          }
-          case 48: {
-            ErrorAddress = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            ErrorCount = input.ReadUInt32();
-            break;
-          }
           case 64: {
             RebootCount = input.ReadUInt32();
             break;
           }
-          case 77: {
-            Bitrate = input.ReadFloat();
-            break;
-          }
-          case 80: {
-            MessageTimeoutMsec = input.ReadUInt32();
-            break;
-          }
           case 88: {
             MinAppVersion = input.ReadUInt32();
-            break;
-          }
-          case 98:
-          case 96: {
-            airPeriodTx_.AddEntriesFrom(input, _repeated_airPeriodTx_codec);
-            break;
-          }
-          case 106:
-          case 104: {
-            airPeriodRx_.AddEntriesFrom(input, _repeated_airPeriodRx_codec);
-            break;
-          }
-          case 112: {
-            HasWifi = input.ReadBool();
-            break;
-          }
-          case 125: {
-            ChannelUtilization = input.ReadFloat();
-            break;
-          }
-          case 133: {
-            AirUtilTx = input.ReadFloat();
             break;
           }
         }
@@ -6140,66 +5645,12 @@ namespace Meshtastic.Protobufs {
             MyNodeNum = input.ReadUInt32();
             break;
           }
-          case 16: {
-            HasGps = input.ReadBool();
-            break;
-          }
-          case 24: {
-            MaxChannels = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            FirmwareVersion = input.ReadString();
-            break;
-          }
-          case 40: {
-            ErrorCode = (global::Meshtastic.Protobufs.CriticalErrorCode) input.ReadEnum();
-            break;
-          }
-          case 48: {
-            ErrorAddress = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            ErrorCount = input.ReadUInt32();
-            break;
-          }
           case 64: {
             RebootCount = input.ReadUInt32();
             break;
           }
-          case 77: {
-            Bitrate = input.ReadFloat();
-            break;
-          }
-          case 80: {
-            MessageTimeoutMsec = input.ReadUInt32();
-            break;
-          }
           case 88: {
             MinAppVersion = input.ReadUInt32();
-            break;
-          }
-          case 98:
-          case 96: {
-            airPeriodTx_.AddEntriesFrom(ref input, _repeated_airPeriodTx_codec);
-            break;
-          }
-          case 106:
-          case 104: {
-            airPeriodRx_.AddEntriesFrom(ref input, _repeated_airPeriodRx_codec);
-            break;
-          }
-          case 112: {
-            HasWifi = input.ReadBool();
-            break;
-          }
-          case 125: {
-            ChannelUtilization = input.ReadFloat();
-            break;
-          }
-          case 133: {
-            AirUtilTx = input.ReadFloat();
             break;
           }
         }
@@ -8572,6 +8023,7 @@ namespace Meshtastic.Protobufs {
     public NeighborInfo(NeighborInfo other) : this() {
       nodeId_ = other.nodeId_;
       lastSentById_ = other.lastSentById_;
+      nodeBroadcastIntervalSecs_ = other.nodeBroadcastIntervalSecs_;
       neighbors_ = other.neighbors_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -8614,10 +8066,26 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "node_broadcast_interval_secs" field.</summary>
+    public const int NodeBroadcastIntervalSecsFieldNumber = 3;
+    private uint nodeBroadcastIntervalSecs_;
+    /// <summary>
+    ///
+    /// Broadcast interval of the represented node (in seconds)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NodeBroadcastIntervalSecs {
+      get { return nodeBroadcastIntervalSecs_; }
+      set {
+        nodeBroadcastIntervalSecs_ = value;
+      }
+    }
+
     /// <summary>Field number for the "neighbors" field.</summary>
-    public const int NeighborsFieldNumber = 3;
+    public const int NeighborsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Meshtastic.Protobufs.Neighbor> _repeated_neighbors_codec
-        = pb::FieldCodec.ForMessage(26, global::Meshtastic.Protobufs.Neighbor.Parser);
+        = pb::FieldCodec.ForMessage(34, global::Meshtastic.Protobufs.Neighbor.Parser);
     private readonly pbc::RepeatedField<global::Meshtastic.Protobufs.Neighbor> neighbors_ = new pbc::RepeatedField<global::Meshtastic.Protobufs.Neighbor>();
     /// <summary>
     ///
@@ -8646,6 +8114,7 @@ namespace Meshtastic.Protobufs {
       }
       if (NodeId != other.NodeId) return false;
       if (LastSentById != other.LastSentById) return false;
+      if (NodeBroadcastIntervalSecs != other.NodeBroadcastIntervalSecs) return false;
       if(!neighbors_.Equals(other.neighbors_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8656,6 +8125,7 @@ namespace Meshtastic.Protobufs {
       int hash = 1;
       if (NodeId != 0) hash ^= NodeId.GetHashCode();
       if (LastSentById != 0) hash ^= LastSentById.GetHashCode();
+      if (NodeBroadcastIntervalSecs != 0) hash ^= NodeBroadcastIntervalSecs.GetHashCode();
       hash ^= neighbors_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8683,6 +8153,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(16);
         output.WriteUInt32(LastSentById);
       }
+      if (NodeBroadcastIntervalSecs != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(NodeBroadcastIntervalSecs);
+      }
       neighbors_.WriteTo(output, _repeated_neighbors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -8702,6 +8176,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(16);
         output.WriteUInt32(LastSentById);
       }
+      if (NodeBroadcastIntervalSecs != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(NodeBroadcastIntervalSecs);
+      }
       neighbors_.WriteTo(ref output, _repeated_neighbors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -8718,6 +8196,9 @@ namespace Meshtastic.Protobufs {
       }
       if (LastSentById != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LastSentById);
+      }
+      if (NodeBroadcastIntervalSecs != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NodeBroadcastIntervalSecs);
       }
       size += neighbors_.CalculateSize(_repeated_neighbors_codec);
       if (_unknownFields != null) {
@@ -8737,6 +8218,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.LastSentById != 0) {
         LastSentById = other.LastSentById;
+      }
+      if (other.NodeBroadcastIntervalSecs != 0) {
+        NodeBroadcastIntervalSecs = other.NodeBroadcastIntervalSecs;
       }
       neighbors_.Add(other.neighbors_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -8762,7 +8246,11 @@ namespace Meshtastic.Protobufs {
             LastSentById = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 24: {
+            NodeBroadcastIntervalSecs = input.ReadUInt32();
+            break;
+          }
+          case 34: {
             neighbors_.AddEntriesFrom(input, _repeated_neighbors_codec);
             break;
           }
@@ -8789,7 +8277,11 @@ namespace Meshtastic.Protobufs {
             LastSentById = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 24: {
+            NodeBroadcastIntervalSecs = input.ReadUInt32();
+            break;
+          }
+          case 34: {
             neighbors_.AddEntriesFrom(ref input, _repeated_neighbors_codec);
             break;
           }
@@ -8840,6 +8332,8 @@ namespace Meshtastic.Protobufs {
     public Neighbor(Neighbor other) : this() {
       nodeId_ = other.nodeId_;
       snr_ = other.snr_;
+      lastRxTime_ = other.lastRxTime_;
+      nodeBroadcastIntervalSecs_ = other.nodeBroadcastIntervalSecs_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8881,6 +8375,40 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "last_rx_time" field.</summary>
+    public const int LastRxTimeFieldNumber = 3;
+    private uint lastRxTime_;
+    /// <summary>
+    ///
+    /// Reception time (in secs since 1970) of last message that was last sent by this ID.
+    /// Note: this is for local storage only and will not be sent out over the mesh.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LastRxTime {
+      get { return lastRxTime_; }
+      set {
+        lastRxTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "node_broadcast_interval_secs" field.</summary>
+    public const int NodeBroadcastIntervalSecsFieldNumber = 4;
+    private uint nodeBroadcastIntervalSecs_;
+    /// <summary>
+    ///
+    /// Broadcast interval of this neighbor (in seconds).
+    /// Note: this is for local storage only and will not be sent out over the mesh.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NodeBroadcastIntervalSecs {
+      get { return nodeBroadcastIntervalSecs_; }
+      set {
+        nodeBroadcastIntervalSecs_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8898,6 +8426,8 @@ namespace Meshtastic.Protobufs {
       }
       if (NodeId != other.NodeId) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Snr, other.Snr)) return false;
+      if (LastRxTime != other.LastRxTime) return false;
+      if (NodeBroadcastIntervalSecs != other.NodeBroadcastIntervalSecs) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8907,6 +8437,8 @@ namespace Meshtastic.Protobufs {
       int hash = 1;
       if (NodeId != 0) hash ^= NodeId.GetHashCode();
       if (Snr != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Snr);
+      if (LastRxTime != 0) hash ^= LastRxTime.GetHashCode();
+      if (NodeBroadcastIntervalSecs != 0) hash ^= NodeBroadcastIntervalSecs.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8933,6 +8465,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(21);
         output.WriteFloat(Snr);
       }
+      if (LastRxTime != 0) {
+        output.WriteRawTag(29);
+        output.WriteFixed32(LastRxTime);
+      }
+      if (NodeBroadcastIntervalSecs != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(NodeBroadcastIntervalSecs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8951,6 +8491,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(21);
         output.WriteFloat(Snr);
       }
+      if (LastRxTime != 0) {
+        output.WriteRawTag(29);
+        output.WriteFixed32(LastRxTime);
+      }
+      if (NodeBroadcastIntervalSecs != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(NodeBroadcastIntervalSecs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8966,6 +8514,12 @@ namespace Meshtastic.Protobufs {
       }
       if (Snr != 0F) {
         size += 1 + 4;
+      }
+      if (LastRxTime != 0) {
+        size += 1 + 4;
+      }
+      if (NodeBroadcastIntervalSecs != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NodeBroadcastIntervalSecs);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8984,6 +8538,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.Snr != 0F) {
         Snr = other.Snr;
+      }
+      if (other.LastRxTime != 0) {
+        LastRxTime = other.LastRxTime;
+      }
+      if (other.NodeBroadcastIntervalSecs != 0) {
+        NodeBroadcastIntervalSecs = other.NodeBroadcastIntervalSecs;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9008,6 +8568,14 @@ namespace Meshtastic.Protobufs {
             Snr = input.ReadFloat();
             break;
           }
+          case 29: {
+            LastRxTime = input.ReadFixed32();
+            break;
+          }
+          case 32: {
+            NodeBroadcastIntervalSecs = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -9029,6 +8597,14 @@ namespace Meshtastic.Protobufs {
           }
           case 21: {
             Snr = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            LastRxTime = input.ReadFixed32();
+            break;
+          }
+          case 32: {
+            NodeBroadcastIntervalSecs = input.ReadUInt32();
             break;
           }
         }

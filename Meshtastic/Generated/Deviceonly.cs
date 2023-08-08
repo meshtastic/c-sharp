@@ -27,43 +27,42 @@ namespace Meshtastic.Protobufs {
             "ChttZXNodGFzdGljL2RldmljZW9ubHkucHJvdG8SCm1lc2h0YXN0aWMaGG1l",
             "c2h0YXN0aWMvY2hhbm5lbC5wcm90bxoabWVzaHRhc3RpYy9sb2NhbG9ubHku",
             "cHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90bxoabWVzaHRhc3RpYy90ZWxl",
-            "bWV0cnkucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90byK+",
+            "bWV0cnkucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90byKT",
             "AwoLRGV2aWNlU3RhdGUSJwoHbXlfbm9kZRgCIAEoCzIWLm1lc2h0YXN0aWMu",
-            "TXlOb2RlSW5mbxIfCgVvd25lchgDIAEoCzIQLm1lc2h0YXN0aWMuVXNlchIp",
-            "Cgdub2RlX2RiGAQgAygLMhQubWVzaHRhc3RpYy5Ob2RlSW5mb0ICGAESLQoN",
-            "cmVjZWl2ZV9xdWV1ZRgFIAMoCzIWLm1lc2h0YXN0aWMuTWVzaFBhY2tldBIP",
-            "Cgd2ZXJzaW9uGAggASgNEi8KD3J4X3RleHRfbWVzc2FnZRgHIAEoCzIWLm1l",
-            "c2h0YXN0aWMuTWVzaFBhY2tldBIPCgdub19zYXZlGAkgASgIEhUKDWRpZF9n",
-            "cHNfcmVzZXQYCyABKAgSKwoLcnhfd2F5cG9pbnQYDCABKAsyFi5tZXNodGFz",
-            "dGljLk1lc2hQYWNrZXQSRAoZbm9kZV9yZW1vdGVfaGFyZHdhcmVfcGlucxgN",
-            "IAMoCzIhLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhhcmR3YXJlUGluEi4KDG5v",
-            "ZGVfZGJfbGl0ZRgOIAMoCzIYLm1lc2h0YXN0aWMuTm9kZUluZm9MaXRlIswB",
-            "CgxOb2RlSW5mb0xpdGUSCwoDbnVtGAEgASgNEh4KBHVzZXIYAiABKAsyEC5t",
-            "ZXNodGFzdGljLlVzZXISKgoIcG9zaXRpb24YAyABKAsyGC5tZXNodGFzdGlj",
-            "LlBvc2l0aW9uTGl0ZRILCgNzbnIYBCABKAISEgoKbGFzdF9oZWFyZBgFIAEo",
-            "BxIxCg5kZXZpY2VfbWV0cmljcxgGIAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNl",
-            "TWV0cmljcxIPCgdjaGFubmVsGAcgASgNIpABCgxQb3NpdGlvbkxpdGUSEgoK",
-            "bGF0aXR1ZGVfaRgBIAEoDxITCgtsb25naXR1ZGVfaRgCIAEoDxIQCghhbHRp",
-            "dHVkZRgDIAEoBRIMCgR0aW1lGAQgASgHEjcKD2xvY2F0aW9uX3NvdXJjZRgF",
-            "IAEoDjIeLm1lc2h0YXN0aWMuUG9zaXRpb24uTG9jU291cmNlIkUKC0NoYW5u",
-            "ZWxGaWxlEiUKCGNoYW5uZWxzGAEgAygLMhMubWVzaHRhc3RpYy5DaGFubmVs",
-            "Eg8KB3ZlcnNpb24YAiABKA0ilwIKCE9FTVN0b3JlEhYKDm9lbV9pY29uX3dp",
-            "ZHRoGAEgASgNEhcKD29lbV9pY29uX2hlaWdodBgCIAEoDRIVCg1vZW1faWNv",
-            "bl9iaXRzGAMgASgMEikKCG9lbV9mb250GAQgASgOMhcubWVzaHRhc3RpYy5T",
-            "Y3JlZW5Gb250cxIQCghvZW1fdGV4dBgFIAEoCRITCgtvZW1fYWVzX2tleRgG",
-            "IAEoDBIxChBvZW1fbG9jYWxfY29uZmlnGAcgASgLMhcubWVzaHRhc3RpYy5M",
-            "b2NhbENvbmZpZxI+ChdvZW1fbG9jYWxfbW9kdWxlX2NvbmZpZxgIIAEoCzId",
-            "Lm1lc2h0YXN0aWMuTG9jYWxNb2R1bGVDb25maWciVQoVTm9kZVJlbW90ZUhh",
-            "cmR3YXJlUGluEhAKCG5vZGVfbnVtGAEgASgNEioKA3BpbhgCIAEoCzIdLm1l",
-            "c2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW4qPgoLU2NyZWVuRm9udHMSDgoK",
-            "Rk9OVF9TTUFMTBAAEg8KC0ZPTlRfTUVESVVNEAESDgoKRk9OVF9MQVJHRRAC",
-            "Ql8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCkRldmljZU9ubHlaImdpdGh1Yi5j",
-            "b20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3Rv",
-            "YnVmc7oCAGIGcHJvdG8z"));
+            "TXlOb2RlSW5mbxIfCgVvd25lchgDIAEoCzIQLm1lc2h0YXN0aWMuVXNlchIt",
+            "Cg1yZWNlaXZlX3F1ZXVlGAUgAygLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0",
+            "Eg8KB3ZlcnNpb24YCCABKA0SLwoPcnhfdGV4dF9tZXNzYWdlGAcgASgLMhYu",
+            "bWVzaHRhc3RpYy5NZXNoUGFja2V0Eg8KB25vX3NhdmUYCSABKAgSFQoNZGlk",
+            "X2dwc19yZXNldBgLIAEoCBIrCgtyeF93YXlwb2ludBgMIAEoCzIWLm1lc2h0",
+            "YXN0aWMuTWVzaFBhY2tldBJEChlub2RlX3JlbW90ZV9oYXJkd2FyZV9waW5z",
+            "GA0gAygLMiEubWVzaHRhc3RpYy5Ob2RlUmVtb3RlSGFyZHdhcmVQaW4SLgoM",
+            "bm9kZV9kYl9saXRlGA4gAygLMhgubWVzaHRhc3RpYy5Ob2RlSW5mb0xpdGUi",
+            "zAEKDE5vZGVJbmZvTGl0ZRILCgNudW0YASABKA0SHgoEdXNlchgCIAEoCzIQ",
+            "Lm1lc2h0YXN0aWMuVXNlchIqCghwb3NpdGlvbhgDIAEoCzIYLm1lc2h0YXN0",
+            "aWMuUG9zaXRpb25MaXRlEgsKA3NuchgEIAEoAhISCgpsYXN0X2hlYXJkGAUg",
+            "ASgHEjEKDmRldmljZV9tZXRyaWNzGAYgASgLMhkubWVzaHRhc3RpYy5EZXZp",
+            "Y2VNZXRyaWNzEg8KB2NoYW5uZWwYByABKA0ikAEKDFBvc2l0aW9uTGl0ZRIS",
+            "CgpsYXRpdHVkZV9pGAEgASgPEhMKC2xvbmdpdHVkZV9pGAIgASgPEhAKCGFs",
+            "dGl0dWRlGAMgASgFEgwKBHRpbWUYBCABKAcSNwoPbG9jYXRpb25fc291cmNl",
+            "GAUgASgOMh4ubWVzaHRhc3RpYy5Qb3NpdGlvbi5Mb2NTb3VyY2UiRQoLQ2hh",
+            "bm5lbEZpbGUSJQoIY2hhbm5lbHMYASADKAsyEy5tZXNodGFzdGljLkNoYW5u",
+            "ZWwSDwoHdmVyc2lvbhgCIAEoDSKXAgoIT0VNU3RvcmUSFgoOb2VtX2ljb25f",
+            "d2lkdGgYASABKA0SFwoPb2VtX2ljb25faGVpZ2h0GAIgASgNEhUKDW9lbV9p",
+            "Y29uX2JpdHMYAyABKAwSKQoIb2VtX2ZvbnQYBCABKA4yFy5tZXNodGFzdGlj",
+            "LlNjcmVlbkZvbnRzEhAKCG9lbV90ZXh0GAUgASgJEhMKC29lbV9hZXNfa2V5",
+            "GAYgASgMEjEKEG9lbV9sb2NhbF9jb25maWcYByABKAsyFy5tZXNodGFzdGlj",
+            "LkxvY2FsQ29uZmlnEj4KF29lbV9sb2NhbF9tb2R1bGVfY29uZmlnGAggASgL",
+            "Mh0ubWVzaHRhc3RpYy5Mb2NhbE1vZHVsZUNvbmZpZyJVChVOb2RlUmVtb3Rl",
+            "SGFyZHdhcmVQaW4SEAoIbm9kZV9udW0YASABKA0SKgoDcGluGAIgASgLMh0u",
+            "bWVzaHRhc3RpYy5SZW1vdGVIYXJkd2FyZVBpbio+CgtTY3JlZW5Gb250cxIO",
+            "CgpGT05UX1NNQUxMEAASDwoLRk9OVF9NRURJVU0QARIOCgpGT05UX0xBUkdF",
+            "EAJCXwoTY29tLmdlZWtzdmlsbGUubWVzaEIKRGV2aWNlT25seVoiZ2l0aHVi",
+            "LmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJv",
+            "dG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.ScreenFonts), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceState), global::Meshtastic.Protobufs.DeviceState.Parser, new[]{ "MyNode", "Owner", "NodeDb", "ReceiveQueue", "Version", "RxTextMessage", "NoSave", "DidGpsReset", "RxWaypoint", "NodeRemoteHardwarePins", "NodeDbLite" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceState), global::Meshtastic.Protobufs.DeviceState.Parser, new[]{ "MyNode", "Owner", "ReceiveQueue", "Version", "RxTextMessage", "NoSave", "DidGpsReset", "RxWaypoint", "NodeRemoteHardwarePins", "NodeDbLite" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfoLite), global::Meshtastic.Protobufs.NodeInfoLite.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics", "Channel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PositionLite), global::Meshtastic.Protobufs.PositionLite.Parser, new[]{ "LatitudeI", "LongitudeI", "Altitude", "Time", "LocationSource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ChannelFile), global::Meshtastic.Protobufs.ChannelFile.Parser, new[]{ "Channels", "Version" }, null, null, null, null),
@@ -144,7 +143,6 @@ namespace Meshtastic.Protobufs {
     public DeviceState(DeviceState other) : this() {
       myNode_ = other.myNode_ != null ? other.myNode_.Clone() : null;
       owner_ = other.owner_ != null ? other.owner_.Clone() : null;
-      nodeDb_ = other.nodeDb_.Clone();
       receiveQueue_ = other.receiveQueue_.Clone();
       version_ = other.version_;
       rxTextMessage_ = other.rxTextMessage_ != null ? other.rxTextMessage_.Clone() : null;
@@ -192,23 +190,6 @@ namespace Meshtastic.Protobufs {
       set {
         owner_ = value;
       }
-    }
-
-    /// <summary>Field number for the "node_db" field.</summary>
-    public const int NodeDbFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Meshtastic.Protobufs.NodeInfo> _repeated_nodeDb_codec
-        = pb::FieldCodec.ForMessage(34, global::Meshtastic.Protobufs.NodeInfo.Parser);
-    private readonly pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfo> nodeDb_ = new pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfo>();
-    /// <summary>
-    ///
-    /// Deprecated in 2.1.x
-    /// Old node_db. See NodeInfoLite node_db_lite
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Meshtastic.Protobufs.NodeInfo> NodeDb {
-      get { return nodeDb_; }
     }
 
     /// <summary>Field number for the "receive_queue" field.</summary>
@@ -360,7 +341,6 @@ namespace Meshtastic.Protobufs {
       }
       if (!object.Equals(MyNode, other.MyNode)) return false;
       if (!object.Equals(Owner, other.Owner)) return false;
-      if(!nodeDb_.Equals(other.nodeDb_)) return false;
       if(!receiveQueue_.Equals(other.receiveQueue_)) return false;
       if (Version != other.Version) return false;
       if (!object.Equals(RxTextMessage, other.RxTextMessage)) return false;
@@ -378,7 +358,6 @@ namespace Meshtastic.Protobufs {
       int hash = 1;
       if (myNode_ != null) hash ^= MyNode.GetHashCode();
       if (owner_ != null) hash ^= Owner.GetHashCode();
-      hash ^= nodeDb_.GetHashCode();
       hash ^= receiveQueue_.GetHashCode();
       if (Version != 0) hash ^= Version.GetHashCode();
       if (rxTextMessage_ != null) hash ^= RxTextMessage.GetHashCode();
@@ -413,7 +392,6 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(26);
         output.WriteMessage(Owner);
       }
-      nodeDb_.WriteTo(output, _repeated_nodeDb_codec);
       receiveQueue_.WriteTo(output, _repeated_receiveQueue_codec);
       if (rxTextMessage_ != null) {
         output.WriteRawTag(58);
@@ -455,7 +433,6 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(26);
         output.WriteMessage(Owner);
       }
-      nodeDb_.WriteTo(ref output, _repeated_nodeDb_codec);
       receiveQueue_.WriteTo(ref output, _repeated_receiveQueue_codec);
       if (rxTextMessage_ != null) {
         output.WriteRawTag(58);
@@ -495,7 +472,6 @@ namespace Meshtastic.Protobufs {
       if (owner_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Owner);
       }
-      size += nodeDb_.CalculateSize(_repeated_nodeDb_codec);
       size += receiveQueue_.CalculateSize(_repeated_receiveQueue_codec);
       if (Version != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
@@ -538,7 +514,6 @@ namespace Meshtastic.Protobufs {
         }
         Owner.MergeFrom(other.Owner);
       }
-      nodeDb_.Add(other.nodeDb_);
       receiveQueue_.Add(other.receiveQueue_);
       if (other.Version != 0) {
         Version = other.Version;
@@ -590,10 +565,6 @@ namespace Meshtastic.Protobufs {
               Owner = new global::Meshtastic.Protobufs.User();
             }
             input.ReadMessage(Owner);
-            break;
-          }
-          case 34: {
-            nodeDb_.AddEntriesFrom(input, _repeated_nodeDb_codec);
             break;
           }
           case 42: {
@@ -661,10 +632,6 @@ namespace Meshtastic.Protobufs {
               Owner = new global::Meshtastic.Protobufs.User();
             }
             input.ReadMessage(Owner);
-            break;
-          }
-          case 34: {
-            nodeDb_.AddEntriesFrom(ref input, _repeated_nodeDb_codec);
             break;
           }
           case 42: {
