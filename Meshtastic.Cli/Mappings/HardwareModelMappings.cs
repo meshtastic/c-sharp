@@ -6,7 +6,10 @@ internal static class HardwareModelMappings
 {
     public static readonly IEnumerable<HardwareModel> NrfHardwareModels = new[]
     {
-        HardwareModel.TEcho, HardwareModel.Rak4631
+        HardwareModel.TEcho,
+        HardwareModel.Rak4631,
+        HardwareModel.NanoG2Ultra,
+        HardwareModel.Nrf52Unknown
     };
 
     public static readonly Dictionary<HardwareModel, string> FileNameMappings = new()
