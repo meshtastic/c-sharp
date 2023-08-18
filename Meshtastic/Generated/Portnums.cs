@@ -24,20 +24,20 @@ namespace Meshtastic.Protobufs {
     static PortnumsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKroDCgdQ",
+            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKtQDCgdQ",
             "b3J0TnVtEg8KC1VOS05PV05fQVBQEAASFAoQVEVYVF9NRVNTQUdFX0FQUBAB",
             "EhcKE1JFTU9URV9IQVJEV0FSRV9BUFAQAhIQCgxQT1NJVElPTl9BUFAQAxIQ",
             "CgxOT0RFSU5GT19BUFAQBBIPCgtST1VUSU5HX0FQUBAFEg0KCUFETUlOX0FQ",
             "UBAGEh8KG1RFWFRfTUVTU0FHRV9DT01QUkVTU0VEX0FQUBAHEhAKDFdBWVBP",
-            "SU5UX0FQUBAIEg0KCUFVRElPX0FQUBAJEg0KCVJFUExZX0FQUBAgEhEKDUlQ",
-            "X1RVTk5FTF9BUFAQIRIOCgpTRVJJQUxfQVBQEEASFQoRU1RPUkVfRk9SV0FS",
-            "RF9BUFAQQRISCg5SQU5HRV9URVNUX0FQUBBCEhEKDVRFTEVNRVRSWV9BUFAQ",
-            "QxILCgdaUFNfQVBQEEQSEQoNU0lNVUxBVE9SX0FQUBBFEhIKDlRSQUNFUk9V",
-            "VEVfQVBQEEYSFAoQTkVJR0hCT1JJTkZPX0FQUBBHEhAKC1BSSVZBVEVfQVBQ",
-            "EIACEhMKDkFUQUtfRk9SV0FSREVSEIECEggKA01BWBD/A0JdChNjb20uZ2Vl",
-            "a3N2aWxsZS5tZXNoQghQb3J0bnVtc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
-            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
-            "bzM="));
+            "SU5UX0FQUBAIEg0KCUFVRElPX0FQUBAJEhgKFERFVEVDVElPTl9TRU5TT1Jf",
+            "QVBQEAoSDQoJUkVQTFlfQVBQECASEQoNSVBfVFVOTkVMX0FQUBAhEg4KClNF",
+            "UklBTF9BUFAQQBIVChFTVE9SRV9GT1JXQVJEX0FQUBBBEhIKDlJBTkdFX1RF",
+            "U1RfQVBQEEISEQoNVEVMRU1FVFJZX0FQUBBDEgsKB1pQU19BUFAQRBIRCg1T",
+            "SU1VTEFUT1JfQVBQEEUSEgoOVFJBQ0VST1VURV9BUFAQRhIUChBORUlHSEJP",
+            "UklORk9fQVBQEEcSEAoLUFJJVkFURV9BUFAQgAISEwoOQVRBS19GT1JXQVJE",
+            "RVIQgQISCAoDTUFYEP8DQl0KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCFBvcnRu",
+            "dW1zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVz",
+            "aHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.PortNum), }, null, null));
@@ -138,6 +138,11 @@ namespace Meshtastic.Protobufs {
     /// This marker comes from the 'moduleConfig.audio.bitrate' enum minus one.
     /// </summary>
     [pbr::OriginalName("AUDIO_APP")] AudioApp = 9,
+    /// <summary>
+    ///
+    /// Same as Text Message but originating from Detection Sensor Module.
+    /// </summary>
+    [pbr::OriginalName("DETECTION_SENSOR_APP")] DetectionSensorApp = 10,
     /// <summary>
     ///
     /// Provides a 'ping' service that replies to any packet it receives.
