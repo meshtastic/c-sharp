@@ -34,7 +34,7 @@ namespace Meshtastic.Protobufs {
             "CgdkaXNwbGF5GAUgASgLMiAubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNv",
             "bmZpZxIrCgRsb3JhGAYgASgLMh0ubWVzaHRhc3RpYy5Db25maWcuTG9SYUNv",
             "bmZpZxI1CglibHVldG9vdGgYByABKAsyIi5tZXNodGFzdGljLkNvbmZpZy5C",
-            "bHVldG9vdGhDb25maWcSDwoHdmVyc2lvbhgIIAEoDSKoBQoRTG9jYWxNb2R1",
+            "bHVldG9vdGhDb25maWcSDwoHdmVyc2lvbhgIIAEoDSK8BgoRTG9jYWxNb2R1",
             "bGVDb25maWcSMQoEbXF0dBgBIAEoCzIjLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
             "ZmlnLk1RVFRDb25maWcSNQoGc2VyaWFsGAIgASgLMiUubWVzaHRhc3RpYy5N",
             "b2R1bGVDb25maWcuU2VyaWFsQ29uZmlnElIKFWV4dGVybmFsX25vdGlmaWNh",
@@ -49,15 +49,18 @@ namespace Meshtastic.Protobufs {
             "b25maWcuQXVkaW9Db25maWcSRgoPcmVtb3RlX2hhcmR3YXJlGAogASgLMi0u",
             "bWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuUmVtb3RlSGFyZHdhcmVDb25maWcS",
             "QgoNbmVpZ2hib3JfaW5mbxgLIAEoCzIrLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
-            "ZmlnLk5laWdoYm9ySW5mb0NvbmZpZxIPCgd2ZXJzaW9uGAggASgNQmQKE2Nv",
-            "bS5nZWVrc3ZpbGxlLm1lc2hCD0xvY2FsT25seVByb3Rvc1oiZ2l0aHViLmNv",
-            "bS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9i",
-            "dWZzugIAYgZwcm90bzM="));
+            "ZmlnLk5laWdoYm9ySW5mb0NvbmZpZxJIChBhbWJpZW50X2xpZ2h0aW5nGAwg",
+            "ASgLMi4ubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQW1iaWVudExpZ2h0aW5n",
+            "Q29uZmlnEkgKEGRldGVjdGlvbl9zZW5zb3IYDSABKAsyLi5tZXNodGFzdGlj",
+            "Lk1vZHVsZUNvbmZpZy5EZXRlY3Rpb25TZW5zb3JDb25maWcSDwoHdmVyc2lv",
+            "bhgIIAEoDUJkChNjb20uZ2Vla3N2aWxsZS5tZXNoQg9Mb2NhbE9ubHlQcm90",
+            "b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNo",
+            "dGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalConfig), global::Meshtastic.Protobufs.LocalConfig.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth", "Version" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalModuleConfig), global::Meshtastic.Protobufs.LocalModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo", "Version" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalModuleConfig), global::Meshtastic.Protobufs.LocalModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo", "AmbientLighting", "DetectionSensor", "Version" }, null, null, null, null)
           }));
     }
     #endregion
@@ -653,6 +656,8 @@ namespace Meshtastic.Protobufs {
       audio_ = other.audio_ != null ? other.audio_.Clone() : null;
       remoteHardware_ = other.remoteHardware_ != null ? other.remoteHardware_.Clone() : null;
       neighborInfo_ = other.neighborInfo_ != null ? other.neighborInfo_.Clone() : null;
+      ambientLighting_ = other.ambientLighting_ != null ? other.ambientLighting_.Clone() : null;
+      detectionSensor_ = other.detectionSensor_ != null ? other.detectionSensor_.Clone() : null;
       version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -823,6 +828,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "ambient_lighting" field.</summary>
+    public const int AmbientLightingFieldNumber = 12;
+    private global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig ambientLighting_;
+    /// <summary>
+    ///
+    /// The part of the config that is specific to the Ambient Lighting module
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig AmbientLighting {
+      get { return ambientLighting_; }
+      set {
+        ambientLighting_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "detection_sensor" field.</summary>
+    public const int DetectionSensorFieldNumber = 13;
+    private global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig detectionSensor_;
+    /// <summary>
+    ///
+    /// The part of the config that is specific to the Detection Sensor module
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig DetectionSensor {
+      get { return detectionSensor_; }
+      set {
+        detectionSensor_ = value;
+      }
+    }
+
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 8;
     private uint version_;
@@ -866,6 +903,8 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Audio, other.Audio)) return false;
       if (!object.Equals(RemoteHardware, other.RemoteHardware)) return false;
       if (!object.Equals(NeighborInfo, other.NeighborInfo)) return false;
+      if (!object.Equals(AmbientLighting, other.AmbientLighting)) return false;
+      if (!object.Equals(DetectionSensor, other.DetectionSensor)) return false;
       if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -884,6 +923,8 @@ namespace Meshtastic.Protobufs {
       if (audio_ != null) hash ^= Audio.GetHashCode();
       if (remoteHardware_ != null) hash ^= RemoteHardware.GetHashCode();
       if (neighborInfo_ != null) hash ^= NeighborInfo.GetHashCode();
+      if (ambientLighting_ != null) hash ^= AmbientLighting.GetHashCode();
+      if (detectionSensor_ != null) hash ^= DetectionSensor.GetHashCode();
       if (Version != 0) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -947,6 +988,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(90);
         output.WriteMessage(NeighborInfo);
       }
+      if (ambientLighting_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(AmbientLighting);
+      }
+      if (detectionSensor_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(DetectionSensor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1001,6 +1050,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(90);
         output.WriteMessage(NeighborInfo);
       }
+      if (ambientLighting_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(AmbientLighting);
+      }
+      if (detectionSensor_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(DetectionSensor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1040,6 +1097,12 @@ namespace Meshtastic.Protobufs {
       }
       if (neighborInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NeighborInfo);
+      }
+      if (ambientLighting_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AmbientLighting);
+      }
+      if (detectionSensor_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DetectionSensor);
       }
       if (Version != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
@@ -1115,6 +1178,18 @@ namespace Meshtastic.Protobufs {
           NeighborInfo = new global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig();
         }
         NeighborInfo.MergeFrom(other.NeighborInfo);
+      }
+      if (other.ambientLighting_ != null) {
+        if (ambientLighting_ == null) {
+          AmbientLighting = new global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig();
+        }
+        AmbientLighting.MergeFrom(other.AmbientLighting);
+      }
+      if (other.detectionSensor_ != null) {
+        if (detectionSensor_ == null) {
+          DetectionSensor = new global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig();
+        }
+        DetectionSensor.MergeFrom(other.DetectionSensor);
       }
       if (other.Version != 0) {
         Version = other.Version;
@@ -1208,6 +1283,20 @@ namespace Meshtastic.Protobufs {
             input.ReadMessage(NeighborInfo);
             break;
           }
+          case 98: {
+            if (ambientLighting_ == null) {
+              AmbientLighting = new global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig();
+            }
+            input.ReadMessage(AmbientLighting);
+            break;
+          }
+          case 106: {
+            if (detectionSensor_ == null) {
+              DetectionSensor = new global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig();
+            }
+            input.ReadMessage(DetectionSensor);
+            break;
+          }
         }
       }
     #endif
@@ -1295,6 +1384,20 @@ namespace Meshtastic.Protobufs {
               NeighborInfo = new global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig();
             }
             input.ReadMessage(NeighborInfo);
+            break;
+          }
+          case 98: {
+            if (ambientLighting_ == null) {
+              AmbientLighting = new global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig();
+            }
+            input.ReadMessage(AmbientLighting);
+            break;
+          }
+          case 106: {
+            if (detectionSensor_ == null) {
+              DetectionSensor = new global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig();
+            }
+            input.ReadMessage(DetectionSensor);
             break;
           }
         }
