@@ -91,6 +91,9 @@ public class AdminMessageFactory
             TelemetryConfig => new ModuleConfig() { Telemetry = instance as TelemetryConfig },
             RemoteHardwareConfig => new ModuleConfig() { RemoteHardware = instance as RemoteHardwareConfig },
             NeighborInfoConfig => new ModuleConfig() { NeighborInfo = instance as NeighborInfoConfig },
+            AmbientLightingConfig => new ModuleConfig() { AmbientLighting = instance as AmbientLightingConfig },
+            DetectionSensorConfig => new ModuleConfig() { DetectionSensor = instance as DetectionSensorConfig },
+
             _ => throw new ArgumentException("Could not determine ModuleConfig type", nameof(instance)),
         };
         return GetNewMeshPacket(new AdminMessage() { SetModuleConfig = moduleConfig! });
