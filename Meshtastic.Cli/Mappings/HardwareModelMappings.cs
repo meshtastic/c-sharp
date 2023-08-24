@@ -16,10 +16,12 @@ internal static class HardwareModelMappings
         { HardwareModel.HeltecV21, "heltec-v2.1" },
         { HardwareModel.HeltecV3, "heltec-v3" },
         { HardwareModel.HeltecWslV3, "heltec-wsl-v3" },
+        { HardwareModel.HeltecWirelessTracker, "heltec-wireless-tracker"},
         { HardwareModel.M5Stack, "m5stack-core" },
         { HardwareModel.DiyV1, "meshtastic-diy-v1" },
         { HardwareModel.DrDev, "meshtastic-dr-dev" },
         { HardwareModel.NanoG1, "nano-g1" },
+        { HardwareModel.NanoG2Ultra, "nano-g2-ultra"},
         { HardwareModel.Rak11200, "rak11200" },
         { HardwareModel.Rak4631, "rak4631" },
         { HardwareModel.StationG1, "station-g1" },
@@ -32,5 +34,6 @@ internal static class HardwareModelMappings
         { HardwareModel.TloraV211P6, "tlora-v2-1-1.6" },
         { HardwareModel.TloraV211P8, "tlora-v2-1-1.8" },
         { HardwareModel.TEcho, "t-echo" },
+        { HardwareModel.Pico, "pico"},
     };
 }
