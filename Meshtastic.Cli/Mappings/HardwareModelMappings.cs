@@ -34,6 +34,5 @@ internal static class HardwareModelMappings
         { HardwareModel.TloraV211P6, "tlora-v2-1-1.6" },
         { HardwareModel.TloraV211P8, "tlora-v2-1-1.8" },
         { HardwareModel.TEcho, "t-echo" },
-        { HardwareModel.RPiPico, "pico"},
     };
 }
