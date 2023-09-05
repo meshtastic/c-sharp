@@ -122,7 +122,7 @@ namespace Meshtastic.Protobufs {
             "GAcgASgOMiQubWVzaHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnLlJvbGUS",
             "FgoOcG9zaXRpb25fZmxhZ3MYCCABKA0SKwoIaHdfbW9kZWwYCSABKA4yGS5t",
             "ZXNodGFzdGljLkhhcmR3YXJlTW9kZWwSGQoRaGFzUmVtb3RlSGFyZHdhcmUY",
-            "CiABKAgq8wUKDUhhcmR3YXJlTW9kZWwSCQoFVU5TRVQQABIMCghUTE9SQV9W",
+            "CiABKAgqhAYKDUhhcmR3YXJlTW9kZWwSCQoFVU5TRVQQABIMCghUTE9SQV9W",
             "MhABEgwKCFRMT1JBX1YxEAISEgoOVExPUkFfVjJfMV8xUDYQAxIJCgVUQkVB",
             "TRAEEg8KC0hFTFRFQ19WMl8wEAUSDgoKVEJFQU1fVjBQNxAGEgoKBlRfRUNI",
             "TxAHEhAKDFRMT1JBX1YxXzFQMxAIEgsKB1JBSzQ2MzEQCRIPCgtIRUxURUNf",
@@ -138,16 +138,17 @@ namespace Meshtastic.Protobufs {
             "Cg9CRVRBRlBWXzI0MDBfVFgQLRIXChNCRVRBRlBWXzkwMF9OQU5PX1RYEC4S",
             "DAoIUlBJX1BJQ08QLxIbChdIRUxURUNfV0lSRUxFU1NfVFJBQ0tFUhAwEhkK",
             "FUhFTFRFQ19XSVJFTEVTU19QQVBFUhAxEgoKBlRfREVDSxAyEg4KClRfV0FU",
-            "Q0hfUzMQMxIRCg1QSUNPTVBVVEVSX1MzEDQSDwoKUFJJVkFURV9IVxD/ASos",
-            "CglDb25zdGFudHMSCAoEWkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq",
-            "7gEKEUNyaXRpY2FsRXJyb3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRDSERP",
-            "RxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8KC1VO",
-            "U1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19BWFAx",
-            "OTIQBhIZChVJTlZBTElEX1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01JVF9G",
-            "QUlMRUQQCBIMCghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoN",
-            "UkFESU9fU1BJX0JVRxALQl8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQ",
-            "cm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRN",
-            "ZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "Q0hfUzMQMxIRCg1QSUNPTVBVVEVSX1MzEDQSDwoLSEVMVEVDX0hUNjIQNRIP",
+            "CgpQUklWQVRFX0hXEP8BKiwKCUNvbnN0YW50cxIICgRaRVJPEAASFQoQREFU",
+            "QV9QQVlMT0FEX0xFThDtASruAQoRQ3JpdGljYWxFcnJvckNvZGUSCAoETk9O",
+            "RRAAEg8KC1RYX1dBVENIRE9HEAESFAoQU0xFRVBfRU5URVJfV0FJVBACEgwK",
+            "CE5PX1JBRElPEAMSDwoLVU5TUEVDSUZJRUQQBBIVChFVQkxPWF9VTklUX0ZB",
+            "SUxFRBAFEg0KCU5PX0FYUDE5MhAGEhkKFUlOVkFMSURfUkFESU9fU0VUVElO",
+            "RxAHEhMKD1RSQU5TTUlUX0ZBSUxFRBAIEgwKCEJST1dOT1VUEAkSEgoOU1gx",
+            "MjYyX0ZBSUxVUkUQChIRCg1SQURJT19TUElfQlVHEAtCXwoTY29tLmdlZWtz",
+            "dmlsbGUubWVzaEIKTWVzaFByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
+            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -402,6 +403,11 @@ namespace Meshtastic.Protobufs {
     /// Bobricius Picomputer with ESP32-S3 CPU, Keyboard and IPS display
     /// </summary>
     [pbr::OriginalName("PICOMPUTER_S3")] PicomputerS3 = 52,
+    /// <summary>
+    ///
+    /// Heltec HT-CT62 with ESP32-C3 CPU and SX1262 LoRa
+    /// </summary>
+    [pbr::OriginalName("HELTEC_HT62")] HeltecHt62 = 53,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
