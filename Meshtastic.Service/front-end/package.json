@@ -20,7 +20,7 @@
   "dependencies": {
     "@heroicons/vue": "^2.0.17",
     "@microsoft/signalr": "^7.0.5",
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "chart.js": "^4.2.1",
     "pinia": "^2.0.35",
     "vue": "^3.2.47",
