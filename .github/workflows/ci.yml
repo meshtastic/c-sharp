@@ -93,17 +93,23 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build solution and generate NuGet package
+
+    - name: Build Meshtastic.Cli and generate NuGet package
       run: | 
         dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} ./Meshtastic.Cli/Meshtastic.Cli.csproj
         dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} ./Meshtastic.Cli/Meshtastic.Cli.csproj
     
-    - name: Publish Meshtastic library package to nuget
-      run: dotnet nuget push ./**/Meshtastic.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
-    
     - name: Publish Meshtastic.Cli package to nuget
       run: dotnet nuget push ./**/Meshtastic.Cli.*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
 
+    - name: Build Meshtastic and generate NuGet package
+      run: | 
+        dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} ./Meshtastic/Meshtastic.csproj
+        dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} ./Meshtastic/Meshtastic.csproj
+          
+    - name: Publish Meshtastic library package to nuget
+      run: dotnet nuget push ./Meshtastic/**/Meshtastic.*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
+  
     - name: Publish self-contained win-x64
       run: dotnet publish ./Meshtastic.Cli/Meshtastic.Cli.csproj -c Release -r win-x64 -o win-x64 --self-contained true -p:IncludeAllContentForSelfExtract=True -p:PublishSingleFile=True -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
     
