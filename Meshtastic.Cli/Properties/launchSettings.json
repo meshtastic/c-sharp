@@ -143,6 +143,10 @@
     "mqtt": {
       "commandName": "Project",
       "commandLineArgs": "mqtt-proxy"
+    },
+    "remove-node": {
+      "commandName": "Project",
+      "commandLineArgs": "remove-node 123456"
     }
   }
 }

@@ -11,13 +11,15 @@ public class RemoveNodeCommand : Command
         Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) :
         base(name, description)
     {
-        var nodeNum = new Argument<uint>("nodenum", "Nodenum of the node to remove from the device NodeDB");
+        var nodeNumArgument = new Argument<uint>("nodenum", "Nodenum of the node to remove from the device NodeDB");
+        AddArgument(nodeNumArgument);
 
-        this.SetHandler(async (context, commandContext) =>
+        this.SetHandler(async (nodeNum, context, commandContext) =>
             {
                 var handler = new RemoveNodeCommandHandler(nodeNum, context, commandContext);
                 await handler.Handle();
             },
+            nodeNumArgument,
             new DeviceConnectionBinder(port, host),
             new CommandContextBinder(log, output, dest, selectDest));
     }
