@@ -113,9 +113,13 @@ public class AdminMessageFactory
     {
         return GetNewMeshPacket(new AdminMessage() { FactoryReset = 1 });
     }
-    public MeshPacket CreateNodeDbResetMessage()
+    public MeshPacket CreateRemoveByNodenumMessage(uint nodeNum)
     {
-        return GetNewMeshPacket(new AdminMessage() { NodedbReset = 1 });
+        return GetNewMeshPacket(new AdminMessage() { RemoveByNodenum = nodeNum });
+    }
+    public MeshPacket CreateSetOwnerMessage()
+    {
+        return GetNewMeshPacket(new AdminMessage() { SetOwner = container.MyNodeInfo });
     }
     public MeshPacket CreateSetCannedMessage(string message)
     {

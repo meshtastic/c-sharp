@@ -52,6 +52,7 @@ root.AddCommand(new MetadataCommand("metadata", "Get device metadata from the de
 root.AddCommand(new FactoryResetCommand("factory-reset", "Factory reset configuration of the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new FixedPositionCommand("fixed-position", "Set the device to a fixed position", port, host, output, log, dest, selectDest));
 root.AddCommand(new SendTextCommand("text", "Send a text message from the device", port, host, output, log, dest, selectDest));
+root.AddCommand(new RemoveNodeCommand("remove-node", "Remove single node by nodenum from node db of the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new ResetNodeDbCommand("reset-nodedb", "Reset the node db of the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new TraceRouteCommand("trace-route", "Trace the sequence of nodes routing to the destination", port, host, output, log, dest, selectDest));
 root.AddCommand(new CannedMessagesCommand("canned-messages", "Get or set the collection of canned messages on the device", port, host, output, log, dest, selectDest));
