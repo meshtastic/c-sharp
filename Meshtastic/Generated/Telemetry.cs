@@ -30,33 +30,39 @@ namespace Meshtastic.Protobufs {
             "dGlsX3R4GAQgASgCIpsBChJFbnZpcm9ubWVudE1ldHJpY3MSEwoLdGVtcGVy",
             "YXR1cmUYASABKAISGQoRcmVsYXRpdmVfaHVtaWRpdHkYAiABKAISGwoTYmFy",
             "b21ldHJpY19wcmVzc3VyZRgDIAEoAhIWCg5nYXNfcmVzaXN0YW5jZRgEIAEo",
-            "AhIPCgd2b2x0YWdlGAUgASgCEg8KB2N1cnJlbnQYBiABKAIivwIKEUFpclF1",
-            "YWxpdHlNZXRyaWNzEhUKDXBtMTBfc3RhbmRhcmQYASABKA0SFQoNcG0yNV9z",
-            "dGFuZGFyZBgCIAEoDRIWCg5wbTEwMF9zdGFuZGFyZBgDIAEoDRIaChJwbTEw",
-            "X2Vudmlyb25tZW50YWwYBCABKA0SGgoScG0yNV9lbnZpcm9ubWVudGFsGAUg",
-            "ASgNEhsKE3BtMTAwX2Vudmlyb25tZW50YWwYBiABKA0SFgoOcGFydGljbGVz",
-            "XzAzdW0YByABKA0SFgoOcGFydGljbGVzXzA1dW0YCCABKA0SFgoOcGFydGlj",
-            "bGVzXzEwdW0YCSABKA0SFgoOcGFydGljbGVzXzI1dW0YCiABKA0SFgoOcGFy",
-            "dGljbGVzXzUwdW0YCyABKA0SFwoPcGFydGljbGVzXzEwMHVtGAwgASgNItYB",
-            "CglUZWxlbWV0cnkSDAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0cmljcxgC",
-            "IAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vudmlyb25t",
-            "ZW50X21ldHJpY3MYAyABKAsyHi5tZXNodGFzdGljLkVudmlyb25tZW50TWV0",
-            "cmljc0gAEjwKE2Fpcl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5tZXNodGFz",
-            "dGljLkFpclF1YWxpdHlNZXRyaWNzSABCCQoHdmFyaWFudCrHAQoTVGVsZW1l",
-            "dHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIK",
-            "CgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5",
-            "EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYz",
-            "MTAQCRILCgdRTUk4NjU4EAoSDAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwK",
-            "CFBNU0EwMDNJEA1CZAoTY29tLmdlZWtzdmlsbGUubWVzaEIPVGVsZW1ldHJ5",
-            "UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
-            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "AhIPCgd2b2x0YWdlGAUgASgCEg8KB2N1cnJlbnQYBiABKAIijAEKDFBvd2Vy",
+            "TWV0cmljcxITCgtjaDFfdm9sdGFnZRgBIAEoAhITCgtjaDFfY3VycmVudBgC",
+            "IAEoAhITCgtjaDJfdm9sdGFnZRgDIAEoAhITCgtjaDJfY3VycmVudBgEIAEo",
+            "AhITCgtjaDNfdm9sdGFnZRgFIAEoAhITCgtjaDNfY3VycmVudBgGIAEoAiK/",
+            "AgoRQWlyUXVhbGl0eU1ldHJpY3MSFQoNcG0xMF9zdGFuZGFyZBgBIAEoDRIV",
+            "Cg1wbTI1X3N0YW5kYXJkGAIgASgNEhYKDnBtMTAwX3N0YW5kYXJkGAMgASgN",
+            "EhoKEnBtMTBfZW52aXJvbm1lbnRhbBgEIAEoDRIaChJwbTI1X2Vudmlyb25t",
+            "ZW50YWwYBSABKA0SGwoTcG0xMDBfZW52aXJvbm1lbnRhbBgGIAEoDRIWCg5w",
+            "YXJ0aWNsZXNfMDN1bRgHIAEoDRIWCg5wYXJ0aWNsZXNfMDV1bRgIIAEoDRIW",
+            "Cg5wYXJ0aWNsZXNfMTB1bRgJIAEoDRIWCg5wYXJ0aWNsZXNfMjV1bRgKIAEo",
+            "DRIWCg5wYXJ0aWNsZXNfNTB1bRgLIAEoDRIXCg9wYXJ0aWNsZXNfMTAwdW0Y",
+            "DCABKA0iiQIKCVRlbGVtZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRldmljZV9t",
+            "ZXRyaWNzGAIgASgLMhkubWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNzSAASPQoT",
+            "ZW52aXJvbm1lbnRfbWV0cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMuRW52aXJv",
+            "bm1lbnRNZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgEIAEoCzId",
+            "Lm1lc2h0YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dlcl9tZXRy",
+            "aWNzGAUgASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIAEIJCgd2YXJp",
+            "YW50KtQBChNUZWxlbWV0cnlTZW5zb3JUeXBlEhAKDFNFTlNPUl9VTlNFVBAA",
+            "EgoKBkJNRTI4MBABEgoKBkJNRTY4MBACEgsKB01DUDk4MDgQAxIKCgZJTkEy",
+            "NjAQBBIKCgZJTkEyMTkQBRIKCgZCTVAyODAQBhIJCgVTSFRDMxAHEgkKBUxQ",
+            "UzIyEAgSCwoHUU1DNjMxMBAJEgsKB1FNSTg2NTgQChIMCghRTUM1ODgzTBAL",
+            "EgkKBVNIVDMxEAwSDAoIUE1TQTAwM0kQDRILCgdJTkEzMjIxEA5CZAoTY29t",
+            "LmdlZWtzdmlsbGUubWVzaEIPVGVsZW1ldHJ5UHJvdG9zWiJnaXRodWIuY29t",
+            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
+            "ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics" }, new[]{ "Variant" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics" }, new[]{ "Variant" }, null, null, null)
           }));
     }
     #endregion
@@ -138,6 +144,11 @@ namespace Meshtastic.Protobufs {
     /// PM2.5 air quality sensor
     /// </summary>
     [pbr::OriginalName("PMSA003I")] Pmsa003I = 13,
+    /// <summary>
+    ///
+    /// INA3221 3 Channel Voltage / Current Sensor
+    /// </summary>
+    [pbr::OriginalName("INA3221")] Ina3221 = 14,
   }
 
   #endregion
@@ -585,7 +596,7 @@ namespace Meshtastic.Protobufs {
     private float voltage_;
     /// <summary>
     ///
-    /// Voltage measured
+    /// Voltage measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -601,7 +612,7 @@ namespace Meshtastic.Protobufs {
     private float current_;
     /// <summary>
     ///
-    /// Current measured
+    /// Current measured (To be depreciated in favor of PowerMetrics in Meshtastic 3.x)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -867,6 +878,408 @@ namespace Meshtastic.Protobufs {
 
   /// <summary>
   ///
+  /// Power Metrics (voltage / current / etc)
+  /// </summary>
+  public sealed partial class PowerMetrics : pb::IMessage<PowerMetrics>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PowerMetrics> _parser = new pb::MessageParser<PowerMetrics>(() => new PowerMetrics());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PowerMetrics> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PowerMetrics() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PowerMetrics(PowerMetrics other) : this() {
+      ch1Voltage_ = other.ch1Voltage_;
+      ch1Current_ = other.ch1Current_;
+      ch2Voltage_ = other.ch2Voltage_;
+      ch2Current_ = other.ch2Current_;
+      ch3Voltage_ = other.ch3Voltage_;
+      ch3Current_ = other.ch3Current_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PowerMetrics Clone() {
+      return new PowerMetrics(this);
+    }
+
+    /// <summary>Field number for the "ch1_voltage" field.</summary>
+    public const int Ch1VoltageFieldNumber = 1;
+    private float ch1Voltage_;
+    /// <summary>
+    ///
+    /// Voltage (Ch1)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch1Voltage {
+      get { return ch1Voltage_; }
+      set {
+        ch1Voltage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ch1_current" field.</summary>
+    public const int Ch1CurrentFieldNumber = 2;
+    private float ch1Current_;
+    /// <summary>
+    ///
+    /// Current (Ch1)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch1Current {
+      get { return ch1Current_; }
+      set {
+        ch1Current_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ch2_voltage" field.</summary>
+    public const int Ch2VoltageFieldNumber = 3;
+    private float ch2Voltage_;
+    /// <summary>
+    ///
+    /// Voltage (Ch2)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch2Voltage {
+      get { return ch2Voltage_; }
+      set {
+        ch2Voltage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ch2_current" field.</summary>
+    public const int Ch2CurrentFieldNumber = 4;
+    private float ch2Current_;
+    /// <summary>
+    ///
+    /// Current (Ch2)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch2Current {
+      get { return ch2Current_; }
+      set {
+        ch2Current_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ch3_voltage" field.</summary>
+    public const int Ch3VoltageFieldNumber = 5;
+    private float ch3Voltage_;
+    /// <summary>
+    ///
+    /// Voltage (Ch3)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch3Voltage {
+      get { return ch3Voltage_; }
+      set {
+        ch3Voltage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ch3_current" field.</summary>
+    public const int Ch3CurrentFieldNumber = 6;
+    private float ch3Current_;
+    /// <summary>
+    ///
+    /// Current (Ch3)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch3Current {
+      get { return ch3Current_; }
+      set {
+        ch3Current_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PowerMetrics);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PowerMetrics other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch1Voltage, other.Ch1Voltage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch1Current, other.Ch1Current)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch2Voltage, other.Ch2Voltage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch2Current, other.Ch2Current)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch3Voltage, other.Ch3Voltage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch3Current, other.Ch3Current)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ch1Voltage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch1Voltage);
+      if (Ch1Current != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch1Current);
+      if (Ch2Voltage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch2Voltage);
+      if (Ch2Current != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch2Current);
+      if (Ch3Voltage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch3Voltage);
+      if (Ch3Current != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch3Current);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Ch1Voltage != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Ch1Voltage);
+      }
+      if (Ch1Current != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Ch1Current);
+      }
+      if (Ch2Voltage != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Ch2Voltage);
+      }
+      if (Ch2Current != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Ch2Current);
+      }
+      if (Ch3Voltage != 0F) {
+        output.WriteRawTag(45);
+        output.WriteFloat(Ch3Voltage);
+      }
+      if (Ch3Current != 0F) {
+        output.WriteRawTag(53);
+        output.WriteFloat(Ch3Current);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Ch1Voltage != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Ch1Voltage);
+      }
+      if (Ch1Current != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Ch1Current);
+      }
+      if (Ch2Voltage != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Ch2Voltage);
+      }
+      if (Ch2Current != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Ch2Current);
+      }
+      if (Ch3Voltage != 0F) {
+        output.WriteRawTag(45);
+        output.WriteFloat(Ch3Voltage);
+      }
+      if (Ch3Current != 0F) {
+        output.WriteRawTag(53);
+        output.WriteFloat(Ch3Current);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ch1Voltage != 0F) {
+        size += 1 + 4;
+      }
+      if (Ch1Current != 0F) {
+        size += 1 + 4;
+      }
+      if (Ch2Voltage != 0F) {
+        size += 1 + 4;
+      }
+      if (Ch2Current != 0F) {
+        size += 1 + 4;
+      }
+      if (Ch3Voltage != 0F) {
+        size += 1 + 4;
+      }
+      if (Ch3Current != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PowerMetrics other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ch1Voltage != 0F) {
+        Ch1Voltage = other.Ch1Voltage;
+      }
+      if (other.Ch1Current != 0F) {
+        Ch1Current = other.Ch1Current;
+      }
+      if (other.Ch2Voltage != 0F) {
+        Ch2Voltage = other.Ch2Voltage;
+      }
+      if (other.Ch2Current != 0F) {
+        Ch2Current = other.Ch2Current;
+      }
+      if (other.Ch3Voltage != 0F) {
+        Ch3Voltage = other.Ch3Voltage;
+      }
+      if (other.Ch3Current != 0F) {
+        Ch3Current = other.Ch3Current;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            Ch1Voltage = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Ch1Current = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Ch2Voltage = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            Ch2Current = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            Ch3Voltage = input.ReadFloat();
+            break;
+          }
+          case 53: {
+            Ch3Current = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            Ch1Voltage = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Ch1Current = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Ch2Voltage = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            Ch2Current = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            Ch3Voltage = input.ReadFloat();
+            break;
+          }
+          case 53: {
+            Ch3Current = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
   /// Air quality metrics
   /// </summary>
   public sealed partial class AirQualityMetrics : pb::IMessage<AirQualityMetrics>
@@ -883,7 +1296,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1531,7 +1944,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1562,6 +1975,9 @@ namespace Meshtastic.Protobufs {
         case VariantOneofCase.AirQualityMetrics:
           AirQualityMetrics = other.AirQualityMetrics.Clone();
           break;
+        case VariantOneofCase.PowerMetrics:
+          PowerMetrics = other.PowerMetrics.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1578,11 +1994,7 @@ namespace Meshtastic.Protobufs {
     private uint time_;
     /// <summary>
     ///
-    /// This is usually not sent over the mesh (to save space), but it is sent
-    /// from the phone so that the local device can set its RTC If it is sent over
-    /// the mesh (because there are devices on the mesh without GPS), it will only
-    /// be sent by devices which has a hardware GPS clock (IE Mobile Phone).
-    /// seconds since 1970
+    /// Seconds since 1970 - or 0 for unknown/unset
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1641,6 +2053,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "power_metrics" field.</summary>
+    public const int PowerMetricsFieldNumber = 5;
+    /// <summary>
+    ///
+    /// Power Metrics 
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.PowerMetrics PowerMetrics {
+      get { return variantCase_ == VariantOneofCase.PowerMetrics ? (global::Meshtastic.Protobufs.PowerMetrics) variant_ : null; }
+      set {
+        variant_ = value;
+        variantCase_ = value == null ? VariantOneofCase.None : VariantOneofCase.PowerMetrics;
+      }
+    }
+
     private object variant_;
     /// <summary>Enum of possible cases for the "variant" oneof.</summary>
     public enum VariantOneofCase {
@@ -1648,6 +2076,7 @@ namespace Meshtastic.Protobufs {
       DeviceMetrics = 2,
       EnvironmentMetrics = 3,
       AirQualityMetrics = 4,
+      PowerMetrics = 5,
     }
     private VariantOneofCase variantCase_ = VariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1682,6 +2111,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(DeviceMetrics, other.DeviceMetrics)) return false;
       if (!object.Equals(EnvironmentMetrics, other.EnvironmentMetrics)) return false;
       if (!object.Equals(AirQualityMetrics, other.AirQualityMetrics)) return false;
+      if (!object.Equals(PowerMetrics, other.PowerMetrics)) return false;
       if (VariantCase != other.VariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1694,6 +2124,7 @@ namespace Meshtastic.Protobufs {
       if (variantCase_ == VariantOneofCase.DeviceMetrics) hash ^= DeviceMetrics.GetHashCode();
       if (variantCase_ == VariantOneofCase.EnvironmentMetrics) hash ^= EnvironmentMetrics.GetHashCode();
       if (variantCase_ == VariantOneofCase.AirQualityMetrics) hash ^= AirQualityMetrics.GetHashCode();
+      if (variantCase_ == VariantOneofCase.PowerMetrics) hash ^= PowerMetrics.GetHashCode();
       hash ^= (int) variantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1729,6 +2160,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(AirQualityMetrics);
       }
+      if (variantCase_ == VariantOneofCase.PowerMetrics) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PowerMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1755,6 +2190,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(AirQualityMetrics);
       }
+      if (variantCase_ == VariantOneofCase.PowerMetrics) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PowerMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1776,6 +2215,9 @@ namespace Meshtastic.Protobufs {
       }
       if (variantCase_ == VariantOneofCase.AirQualityMetrics) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AirQualityMetrics);
+      }
+      if (variantCase_ == VariantOneofCase.PowerMetrics) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PowerMetrics);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1810,6 +2252,12 @@ namespace Meshtastic.Protobufs {
             AirQualityMetrics = new global::Meshtastic.Protobufs.AirQualityMetrics();
           }
           AirQualityMetrics.MergeFrom(other.AirQualityMetrics);
+          break;
+        case VariantOneofCase.PowerMetrics:
+          if (PowerMetrics == null) {
+            PowerMetrics = new global::Meshtastic.Protobufs.PowerMetrics();
+          }
+          PowerMetrics.MergeFrom(other.PowerMetrics);
           break;
       }
 
@@ -1859,6 +2307,15 @@ namespace Meshtastic.Protobufs {
             AirQualityMetrics = subBuilder;
             break;
           }
+          case 42: {
+            global::Meshtastic.Protobufs.PowerMetrics subBuilder = new global::Meshtastic.Protobufs.PowerMetrics();
+            if (variantCase_ == VariantOneofCase.PowerMetrics) {
+              subBuilder.MergeFrom(PowerMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            PowerMetrics = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1903,6 +2360,15 @@ namespace Meshtastic.Protobufs {
             }
             input.ReadMessage(subBuilder);
             AirQualityMetrics = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Meshtastic.Protobufs.PowerMetrics subBuilder = new global::Meshtastic.Protobufs.PowerMetrics();
+            if (variantCase_ == VariantOneofCase.PowerMetrics) {
+              subBuilder.MergeFrom(PowerMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            PowerMetrics = subBuilder;
             break;
           }
         }

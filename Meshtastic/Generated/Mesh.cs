@@ -122,7 +122,7 @@ namespace Meshtastic.Protobufs {
             "GAcgASgOMiQubWVzaHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnLlJvbGUS",
             "FgoOcG9zaXRpb25fZmxhZ3MYCCABKA0SKwoIaHdfbW9kZWwYCSABKA4yGS5t",
             "ZXNodGFzdGljLkhhcmR3YXJlTW9kZWwSGQoRaGFzUmVtb3RlSGFyZHdhcmUY",
-            "CiABKAgq8wUKDUhhcmR3YXJlTW9kZWwSCQoFVU5TRVQQABIMCghUTE9SQV9W",
+            "CiABKAgqmAYKDUhhcmR3YXJlTW9kZWwSCQoFVU5TRVQQABIMCghUTE9SQV9W",
             "MhABEgwKCFRMT1JBX1YxEAISEgoOVExPUkFfVjJfMV8xUDYQAxIJCgVUQkVB",
             "TRAEEg8KC0hFTFRFQ19WMl8wEAUSDgoKVEJFQU1fVjBQNxAGEgoKBlRfRUNI",
             "TxAHEhAKDFRMT1JBX1YxXzFQMxAIEgsKB1JBSzQ2MzEQCRIPCgtIRUxURUNf",
@@ -138,16 +138,17 @@ namespace Meshtastic.Protobufs {
             "Cg9CRVRBRlBWXzI0MDBfVFgQLRIXChNCRVRBRlBWXzkwMF9OQU5PX1RYEC4S",
             "DAoIUlBJX1BJQ08QLxIbChdIRUxURUNfV0lSRUxFU1NfVFJBQ0tFUhAwEhkK",
             "FUhFTFRFQ19XSVJFTEVTU19QQVBFUhAxEgoKBlRfREVDSxAyEg4KClRfV0FU",
-            "Q0hfUzMQMxIRCg1QSUNPTVBVVEVSX1MzEDQSDwoKUFJJVkFURV9IVxD/ASos",
-            "CglDb25zdGFudHMSCAoEWkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq",
-            "7gEKEUNyaXRpY2FsRXJyb3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRDSERP",
-            "RxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8KC1VO",
-            "U1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19BWFAx",
-            "OTIQBhIZChVJTlZBTElEX1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01JVF9G",
-            "QUlMRUQQCBIMCghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoN",
-            "UkFESU9fU1BJX0JVRxALQl8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQ",
-            "cm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRN",
-            "ZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "Q0hfUzMQMxIRCg1QSUNPTVBVVEVSX1MzEDQSDwoLSEVMVEVDX0hUNjIQNRIS",
+            "Cg5FQllURV9FU1AzMl9TMxA2Eg8KClBSSVZBVEVfSFcQ/wEqLAoJQ29uc3Rh",
+            "bnRzEggKBFpFUk8QABIVChBEQVRBX1BBWUxPQURfTEVOEO0BKu4BChFDcml0",
+            "aWNhbEVycm9yQ29kZRIICgROT05FEAASDwoLVFhfV0FUQ0hET0cQARIUChBT",
+            "TEVFUF9FTlRFUl9XQUlUEAISDAoITk9fUkFESU8QAxIPCgtVTlNQRUNJRklF",
+            "RBAEEhUKEVVCTE9YX1VOSVRfRkFJTEVEEAUSDQoJTk9fQVhQMTkyEAYSGQoV",
+            "SU5WQUxJRF9SQURJT19TRVRUSU5HEAcSEwoPVFJBTlNNSVRfRkFJTEVEEAgS",
+            "DAoIQlJPV05PVVQQCRISCg5TWDEyNjJfRkFJTFVSRRAKEhEKDVJBRElPX1NQ",
+            "SV9CVUcQC0JfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpNZXNoUHJvdG9zWiJn",
+            "aXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3Rp",
+            "Yy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -404,6 +405,16 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("PICOMPUTER_S3")] PicomputerS3 = 52,
     /// <summary>
     ///
+    /// Heltec HT-CT62 with ESP32-C3 CPU and SX1262 LoRa
+    /// </summary>
+    [pbr::OriginalName("HELTEC_HT62")] HeltecHt62 = 53,
+    /// <summary>
+    ///
+    /// EBYTE SPI LoRa module and ESP32-S3
+    /// </summary>
+    [pbr::OriginalName("EBYTE_ESP32_S3")] EbyteEsp32S3 = 54,
+    /// <summary>
+    ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
     /// Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -630,9 +641,8 @@ namespace Meshtastic.Protobufs {
     /// <summary>
     ///
     /// This is usually not sent over the mesh (to save space), but it is sent
-    /// from the phone so that the local device can set its RTC If it is sent over
-    /// the mesh (because there are devices on the mesh without GPS), it will only
-    /// be sent by devices which has a hardware GPS clock.
+    /// from the phone so that the local device can set its time if it is sent over
+    /// the mesh (because there are devices on the mesh without GPS or RTC).
     /// seconds since 1970
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

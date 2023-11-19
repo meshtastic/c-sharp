@@ -28,7 +28,7 @@ namespace Meshtastic.Protobufs {
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
             "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhttZXNodGFzdGlj",
             "L2RldmljZW9ubHkucHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90bxoebWVz",
-            "aHRhc3RpYy9tb2R1bGVfY29uZmlnLnByb3RvIscPCgxBZG1pbk1lc3NhZ2US",
+            "aHRhc3RpYy9tb2R1bGVfY29uZmlnLnByb3RvIuQPCgxBZG1pbk1lc3NhZ2US",
             "HQoTZ2V0X2NoYW5uZWxfcmVxdWVzdBgBIAEoDUgAEjMKFGdldF9jaGFubmVs",
             "X3Jlc3BvbnNlGAIgASgLMhMubWVzaHRhc3RpYy5DaGFubmVsSAASGwoRZ2V0",
             "X293bmVyX3JlcXVlc3QYAyABKAhIABIuChJnZXRfb3duZXJfcmVzcG9uc2UY",
@@ -57,33 +57,34 @@ namespace Meshtastic.Protobufs {
             "aWcYIiABKAsyEi5tZXNodGFzdGljLkNvbmZpZ0gAEjUKEXNldF9tb2R1bGVf",
             "Y29uZmlnGCMgASgLMhgubWVzaHRhc3RpYy5Nb2R1bGVDb25maWdIABIsCiJz",
             "ZXRfY2FubmVkX21lc3NhZ2VfbW9kdWxlX21lc3NhZ2VzGCQgASgJSAASHgoU",
-            "c2V0X3Jpbmd0b25lX21lc3NhZ2UYJSABKAlIABIdChNiZWdpbl9lZGl0X3Nl",
-            "dHRpbmdzGEAgASgISAASHgoUY29tbWl0X2VkaXRfc2V0dGluZ3MYQSABKAhI",
-            "ABIcChJyZWJvb3Rfb3RhX3NlY29uZHMYXyABKAVIABIYCg5leGl0X3NpbXVs",
-            "YXRvchhgIAEoCEgAEhgKDnJlYm9vdF9zZWNvbmRzGGEgASgFSAASGgoQc2h1",
-            "dGRvd25fc2Vjb25kcxhiIAEoBUgAEhcKDWZhY3RvcnlfcmVzZXQYYyABKAVI",
-            "ABIWCgxub2RlZGJfcmVzZXQYZCABKAVIACKVAQoKQ29uZmlnVHlwZRIRCg1E",
-            "RVZJQ0VfQ09ORklHEAASEwoPUE9TSVRJT05fQ09ORklHEAESEAoMUE9XRVJf",
-            "Q09ORklHEAISEgoOTkVUV09SS19DT05GSUcQAxISCg5ESVNQTEFZX0NPTkZJ",
-            "RxAEEg8KC0xPUkFfQ09ORklHEAUSFAoQQkxVRVRPT1RIX0NPTkZJRxAGIqQC",
-            "ChBNb2R1bGVDb25maWdUeXBlEg8KC01RVFRfQ09ORklHEAASEQoNU0VSSUFM",
-            "X0NPTkZJRxABEhMKD0VYVE5PVElGX0NPTkZJRxACEhcKE1NUT1JFRk9SV0FS",
-            "RF9DT05GSUcQAxIUChBSQU5HRVRFU1RfQ09ORklHEAQSFAoQVEVMRU1FVFJZ",
-            "X0NPTkZJRxAFEhQKEENBTk5FRE1TR19DT05GSUcQBhIQCgxBVURJT19DT05G",
-            "SUcQBxIZChVSRU1PVEVIQVJEV0FSRV9DT05GSUcQCBIXChNORUlHSEJPUklO",
-            "Rk9fQ09ORklHEAkSGgoWQU1CSUVOVExJR0hUSU5HX0NPTkZJRxAKEhoKFkRF",
-            "VEVDVElPTlNFTlNPUl9DT05GSUcQC0IRCg9wYXlsb2FkX3ZhcmlhbnQiWwoN",
-            "SGFtUGFyYW1ldGVycxIRCgljYWxsX3NpZ24YASABKAkSEAoIdHhfcG93ZXIY",
-            "AiABKAUSEQoJZnJlcXVlbmN5GAMgASgCEhIKCnNob3J0X25hbWUYBCABKAki",
-            "ZgoeTm9kZVJlbW90ZUhhcmR3YXJlUGluc1Jlc3BvbnNlEkQKGW5vZGVfcmVt",
-            "b3RlX2hhcmR3YXJlX3BpbnMYASADKAsyIS5tZXNodGFzdGljLk5vZGVSZW1v",
-            "dGVIYXJkd2FyZVBpbkJgChNjb20uZ2Vla3N2aWxsZS5tZXNoQgtBZG1pblBy",
-            "b3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1l",
-            "c2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "c2V0X3Jpbmd0b25lX21lc3NhZ2UYJSABKAlIABIbChFyZW1vdmVfYnlfbm9k",
+            "ZW51bRgmIAEoDUgAEh0KE2JlZ2luX2VkaXRfc2V0dGluZ3MYQCABKAhIABIe",
+            "ChRjb21taXRfZWRpdF9zZXR0aW5ncxhBIAEoCEgAEhwKEnJlYm9vdF9vdGFf",
+            "c2Vjb25kcxhfIAEoBUgAEhgKDmV4aXRfc2ltdWxhdG9yGGAgASgISAASGAoO",
+            "cmVib290X3NlY29uZHMYYSABKAVIABIaChBzaHV0ZG93bl9zZWNvbmRzGGIg",
+            "ASgFSAASFwoNZmFjdG9yeV9yZXNldBhjIAEoBUgAEhYKDG5vZGVkYl9yZXNl",
+            "dBhkIAEoBUgAIpUBCgpDb25maWdUeXBlEhEKDURFVklDRV9DT05GSUcQABIT",
+            "Cg9QT1NJVElPTl9DT05GSUcQARIQCgxQT1dFUl9DT05GSUcQAhISCg5ORVRX",
+            "T1JLX0NPTkZJRxADEhIKDkRJU1BMQVlfQ09ORklHEAQSDwoLTE9SQV9DT05G",
+            "SUcQBRIUChBCTFVFVE9PVEhfQ09ORklHEAYipAIKEE1vZHVsZUNvbmZpZ1R5",
+            "cGUSDwoLTVFUVF9DT05GSUcQABIRCg1TRVJJQUxfQ09ORklHEAESEwoPRVhU",
+            "Tk9USUZfQ09ORklHEAISFwoTU1RPUkVGT1JXQVJEX0NPTkZJRxADEhQKEFJB",
+            "TkdFVEVTVF9DT05GSUcQBBIUChBURUxFTUVUUllfQ09ORklHEAUSFAoQQ0FO",
+            "TkVETVNHX0NPTkZJRxAGEhAKDEFVRElPX0NPTkZJRxAHEhkKFVJFTU9URUhB",
+            "UkRXQVJFX0NPTkZJRxAIEhcKE05FSUdIQk9SSU5GT19DT05GSUcQCRIaChZB",
+            "TUJJRU5UTElHSFRJTkdfQ09ORklHEAoSGgoWREVURUNUSU9OU0VOU09SX0NP",
+            "TkZJRxALQhEKD3BheWxvYWRfdmFyaWFudCJbCg1IYW1QYXJhbWV0ZXJzEhEK",
+            "CWNhbGxfc2lnbhgBIAEoCRIQCgh0eF9wb3dlchgCIAEoBRIRCglmcmVxdWVu",
+            "Y3kYAyABKAISEgoKc2hvcnRfbmFtZRgEIAEoCSJmCh5Ob2RlUmVtb3RlSGFy",
+            "ZHdhcmVQaW5zUmVzcG9uc2USRAoZbm9kZV9yZW1vdGVfaGFyZHdhcmVfcGlu",
+            "cxgBIAMoCzIhLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhhcmR3YXJlUGluQmAK",
+            "E2NvbS5nZWVrc3ZpbGxlLm1lc2hCC0FkbWluUHJvdG9zWiJnaXRodWIuY29t",
+            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
+            "ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null)
           }));
@@ -207,6 +208,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.SetRingtoneMessage:
           SetRingtoneMessage = other.SetRingtoneMessage;
+          break;
+        case PayloadVariantOneofCase.RemoveByNodenum:
+          RemoveByNodenum = other.RemoveByNodenum;
           break;
         case PayloadVariantOneofCase.BeginEditSettings:
           BeginEditSettings = other.BeginEditSettings;
@@ -648,6 +652,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "remove_by_nodenum" field.</summary>
+    public const int RemoveByNodenumFieldNumber = 38;
+    /// <summary>
+    ///
+    /// Remove the node by the specified node-num from the NodeDB on the device
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RemoveByNodenum {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum ? (uint) payloadVariant_ : 0; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.RemoveByNodenum;
+      }
+    }
+
     /// <summary>Field number for the "begin_edit_settings" field.</summary>
     public const int BeginEditSettingsFieldNumber = 64;
     /// <summary>
@@ -808,6 +828,7 @@ namespace Meshtastic.Protobufs {
       SetModuleConfig = 35,
       SetCannedMessageModuleMessages = 36,
       SetRingtoneMessage = 37,
+      RemoveByNodenum = 38,
       BeginEditSettings = 64,
       CommitEditSettings = 65,
       RebootOtaSeconds = 95,
@@ -871,6 +892,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(SetModuleConfig, other.SetModuleConfig)) return false;
       if (SetCannedMessageModuleMessages != other.SetCannedMessageModuleMessages) return false;
       if (SetRingtoneMessage != other.SetRingtoneMessage) return false;
+      if (RemoveByNodenum != other.RemoveByNodenum) return false;
       if (BeginEditSettings != other.BeginEditSettings) return false;
       if (CommitEditSettings != other.CommitEditSettings) return false;
       if (RebootOtaSeconds != other.RebootOtaSeconds) return false;
@@ -912,6 +934,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetModuleConfig) hash ^= SetModuleConfig.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) hash ^= SetCannedMessageModuleMessages.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) hash ^= SetRingtoneMessage.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum) hash ^= RemoveByNodenum.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) hash ^= RebootOtaSeconds.GetHashCode();
@@ -1038,6 +1061,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) {
         output.WriteRawTag(170, 2);
         output.WriteString(SetRingtoneMessage);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum) {
+        output.WriteRawTag(176, 2);
+        output.WriteUInt32(RemoveByNodenum);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         output.WriteRawTag(128, 4);
@@ -1181,6 +1208,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(170, 2);
         output.WriteString(SetRingtoneMessage);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum) {
+        output.WriteRawTag(176, 2);
+        output.WriteUInt32(RemoveByNodenum);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         output.WriteRawTag(128, 4);
         output.WriteBool(BeginEditSettings);
@@ -1297,6 +1328,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SetRingtoneMessage);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RemoveByNodenum);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         size += 2 + 1;
@@ -1445,6 +1479,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.SetRingtoneMessage:
           SetRingtoneMessage = other.SetRingtoneMessage;
+          break;
+        case PayloadVariantOneofCase.RemoveByNodenum:
+          RemoveByNodenum = other.RemoveByNodenum;
           break;
         case PayloadVariantOneofCase.BeginEditSettings:
           BeginEditSettings = other.BeginEditSettings;
@@ -1647,6 +1684,10 @@ namespace Meshtastic.Protobufs {
           }
           case 298: {
             SetRingtoneMessage = input.ReadString();
+            break;
+          }
+          case 304: {
+            RemoveByNodenum = input.ReadUInt32();
             break;
           }
           case 512: {
@@ -1856,6 +1897,10 @@ namespace Meshtastic.Protobufs {
           }
           case 298: {
             SetRingtoneMessage = input.ReadString();
+            break;
+          }
+          case 304: {
+            RemoveByNodenum = input.ReadUInt32();
             break;
           }
           case 512: {

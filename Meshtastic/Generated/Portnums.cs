@@ -141,6 +141,7 @@ namespace Meshtastic.Protobufs {
     /// <summary>
     ///
     /// Same as Text Message but originating from Detection Sensor Module.
+    /// NOTE: This portnum traffic is not sent to the public MQTT starting at firmware version 2.2.9
     /// </summary>
     [pbr::OriginalName("DETECTION_SENSOR_APP")] DetectionSensorApp = 10,
     /// <summary>
@@ -177,6 +178,7 @@ namespace Meshtastic.Protobufs {
     ///
     /// Optional port for messages for the range test module.
     /// ENCODING: ASCII Plaintext
+    /// NOTE: This portnum traffic is not sent to the public MQTT starting at firmware version 2.2.9
     /// </summary>
     [pbr::OriginalName("RANGE_TEST_APP")] RangeTestApp = 66,
     /// <summary>

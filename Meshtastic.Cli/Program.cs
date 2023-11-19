@@ -52,6 +52,7 @@ root.AddCommand(new MetadataCommand("metadata", "Get device metadata from the de
 root.AddCommand(new FactoryResetCommand("factory-reset", "Factory reset configuration of the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new FixedPositionCommand("fixed-position", "Set the device to a fixed position", port, host, output, log, dest, selectDest));
 root.AddCommand(new SendTextCommand("text", "Send a text message from the device", port, host, output, log, dest, selectDest));
+root.AddCommand(new RemoveNodeCommand("remove-node", "Remove single node by nodenum from node db of the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new ResetNodeDbCommand("reset-nodedb", "Reset the node db of the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new TraceRouteCommand("trace-route", "Trace the sequence of nodes routing to the destination", port, host, output, log, dest, selectDest));
 root.AddCommand(new CannedMessagesCommand("canned-messages", "Get or set the collection of canned messages on the device", port, host, output, log, dest, selectDest));
@@ -62,6 +63,7 @@ root.AddCommand(new ExportCommand("export", "Export the profile of the connected
 root.AddCommand(new ImportCommand("import", "Import the profile export from a yaml file and set the connected device", port, host, output, log));
 root.AddCommand(new MqttProxyCommand("mqtt-proxy", "Proxy to the MQTT server referenced in the MQTT module config of the connected device", port, host, output, log));
 root.AddCommand(new RequestTelemetryCommand("request-telemetry", "Request a telemetry packet from a repeater by nodenum", port, host, output, log, dest, selectDest));
+root.AddCommand(new CaptureCommand("capture", "Capture all of the FromRadio messages for the device and store in MongoDB instance", port, host, output, log));
 
 var parser = new CommandLineBuilder(root)
     .UseExceptionHandler((ex, context) =>

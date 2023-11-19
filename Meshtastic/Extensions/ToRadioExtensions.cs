@@ -40,10 +40,8 @@ public static class ToRadioExtensions
         else if (typeof(TResult) == typeof(Waypoint) && toRadio.Packet?.Decoded?.Portnum == PortNum.WaypointApp)
             return NodeInfo.Parser.ParseFrom(toRadio.Packet?.Decoded?.Payload) as TResult;
 
-        else if (typeof(TResult) == typeof(string) && toRadio.Packet?.Decoded?.Portnum == PortNum.TextMessageApp)
-            return toRadio.Packet?.Decoded?.Payload.ToStringUtf8() as TResult;
-
-        else if (typeof(TResult) == typeof(string) && toRadio.Packet?.Decoded?.Portnum == PortNum.SerialApp)
+        else if (typeof(TResult) == typeof(string) &&
+            (toRadio.Packet?.Decoded?.Portnum == PortNum.TextMessageApp || toRadio.Packet?.Decoded?.Portnum == PortNum.DetectionSensorApp || toRadio.Packet?.Decoded?.Portnum == PortNum.RangeTestApp))
             return toRadio.Packet?.Decoded?.Payload.ToStringUtf8() as TResult;
 
         return null;

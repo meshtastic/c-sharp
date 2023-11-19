@@ -1,6 +1,5 @@
 using Google.Protobuf;
 using Meshtastic.Protobufs;
-using System.Linq;
 
 namespace Meshtastic.Data;
 
