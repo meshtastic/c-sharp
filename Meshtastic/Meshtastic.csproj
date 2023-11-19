@@ -1,10 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Meshtastic</RootNamespace>
+		<PackageIcon>logo.png</PackageIcon>
+		<RepositoryUrl>http://github.com/meshtastic/c-sharp</RepositoryUrl>
+		<Company>Meshtastic LLC</Company>
+		<Title>Meshtastic C#</Title>
+		<IncludeSymbols>True</IncludeSymbols>
+		<DebugType>embedded</DebugType>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 
 	<ItemGroup>
@@ -19,7 +42,7 @@
 
 
 	<ItemGroup>
-	  <Folder Include="Generated\" />
+		<Folder Include="Generated\" />
 	</ItemGroup>
 
 </Project>
