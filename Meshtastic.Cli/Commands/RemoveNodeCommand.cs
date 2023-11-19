@@ -11,7 +11,6 @@ public class RemoveNodeCommand : Command
         Option<OutputFormat> output, Option<LogLevel> log, Option<uint?> dest, Option<bool> selectDest) :
         base(name, description)
     {
-
         var nodeNum = new Argument<uint>("nodenum", "Nodenum of the node to remove from the device NodeDB");
 
         this.SetHandler(async (context, commandContext) =>
