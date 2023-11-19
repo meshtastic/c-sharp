@@ -97,8 +97,11 @@ jobs:
       run: | 
         dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} ./Meshtastic.Cli/Meshtastic.Cli.csproj
         dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} ./Meshtastic.Cli/Meshtastic.Cli.csproj
-          
-    - name: Publish package to nuget
+    
+    - name: Publish Meshtastic library package to nuget
+      run: dotnet nuget push ./**/Meshtastic.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
+    
+    - name: Publish Meshtastic.Cli package to nuget
       run: dotnet nuget push ./**/Meshtastic.Cli.*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
 
     - name: Publish self-contained win-x64

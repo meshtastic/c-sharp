@@ -9,7 +9,7 @@
     <PackAsTool>True</PackAsTool>
     <PackageIcon>logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>htt</RepositoryUrl>
+    <RepositoryUrl>http://github.com/meshtastic/c-sharp</RepositoryUrl>
     <Company>Meshtastic LLC</Company>
     <Title>Meshtastic CLI</Title>
     <IncludeSymbols>True</IncludeSymbols>
