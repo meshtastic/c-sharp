@@ -21,6 +21,17 @@ public class TcpConnection : DeviceConnection, IDisposable
         };
     }
 
+
+    public TcpConnection(ILogger logger, string host, DeviceStateContainer container, int port = Resources.DEFAULT_TCP_PORT) : base(logger)
+    {
+        client = new TcpClient(host, port)
+        {
+            ReceiveBufferSize = DEFAULT_BUFFER_SIZE,
+            NoDelay = true
+        };
+        DeviceStateContainer = container;
+    }
+
     public override async Task<DeviceStateContainer> WriteToRadio(ToRadio packet, Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete)
     {
         DeviceStateContainer.AddToRadio(packet);
