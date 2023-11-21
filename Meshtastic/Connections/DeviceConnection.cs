@@ -17,6 +17,12 @@ public abstract class DeviceConnection
         Logger = logger;
     }
 
+    public DeviceConnection(ILogger logger, DeviceStateContainer container)
+    {
+        Logger = logger;
+        DeviceStateContainer = container;
+    }
+
     public virtual Task Monitor()
     {
         throw new NotImplementedException();

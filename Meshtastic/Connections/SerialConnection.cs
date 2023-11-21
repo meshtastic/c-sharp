@@ -20,6 +20,22 @@ public class SerialConnection : DeviceConnection
         };
     }
 
+    public SerialConnection(ILogger logger, 
+        string port, 
+        DeviceStateContainer container, 
+        bool dtrEnable = true, 
+        Handshake handshake = Handshake.XOnXOff, 
+        int baudRate = Resources.DEFAULT_BAUD_RATE) : base(logger)
+    {
+        serialPort = new SerialPort(port, baudRate)
+        {
+            DtrEnable = dtrEnable,
+            Handshake = handshake,
+            WriteBufferSize = 8,
+        };
+        DeviceStateContainer = container;
+    }
+
     public static string[] ListPorts() => SerialPort.GetPortNames();
 
     public override async Task Monitor()
