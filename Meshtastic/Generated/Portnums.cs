@@ -24,20 +24,21 @@ namespace Meshtastic.Protobufs {
     static PortnumsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKtQDCgdQ",
+            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKugDCgdQ",
             "b3J0TnVtEg8KC1VOS05PV05fQVBQEAASFAoQVEVYVF9NRVNTQUdFX0FQUBAB",
             "EhcKE1JFTU9URV9IQVJEV0FSRV9BUFAQAhIQCgxQT1NJVElPTl9BUFAQAxIQ",
             "CgxOT0RFSU5GT19BUFAQBBIPCgtST1VUSU5HX0FQUBAFEg0KCUFETUlOX0FQ",
             "UBAGEh8KG1RFWFRfTUVTU0FHRV9DT01QUkVTU0VEX0FQUBAHEhAKDFdBWVBP",
             "SU5UX0FQUBAIEg0KCUFVRElPX0FQUBAJEhgKFERFVEVDVElPTl9TRU5TT1Jf",
-            "QVBQEAoSDQoJUkVQTFlfQVBQECASEQoNSVBfVFVOTkVMX0FQUBAhEg4KClNF",
-            "UklBTF9BUFAQQBIVChFTVE9SRV9GT1JXQVJEX0FQUBBBEhIKDlJBTkdFX1RF",
-            "U1RfQVBQEEISEQoNVEVMRU1FVFJZX0FQUBBDEgsKB1pQU19BUFAQRBIRCg1T",
-            "SU1VTEFUT1JfQVBQEEUSEgoOVFJBQ0VST1VURV9BUFAQRhIUChBORUlHSEJP",
-            "UklORk9fQVBQEEcSEAoLUFJJVkFURV9BUFAQgAISEwoOQVRBS19GT1JXQVJE",
-            "RVIQgQISCAoDTUFYEP8DQl0KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCFBvcnRu",
-            "dW1zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVz",
-            "aHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "QVBQEAoSDQoJUkVQTFlfQVBQECASEQoNSVBfVFVOTkVMX0FQUBAhEhIKDlBB",
+            "WENPVU5URVJfQVBQECISDgoKU0VSSUFMX0FQUBBAEhUKEVNUT1JFX0ZPUldB",
+            "UkRfQVBQEEESEgoOUkFOR0VfVEVTVF9BUFAQQhIRCg1URUxFTUVUUllfQVBQ",
+            "EEMSCwoHWlBTX0FQUBBEEhEKDVNJTVVMQVRPUl9BUFAQRRISCg5UUkFDRVJP",
+            "VVRFX0FQUBBGEhQKEE5FSUdIQk9SSU5GT19BUFAQRxIQCgtQUklWQVRFX0FQ",
+            "UBCAAhITCg5BVEFLX0ZPUldBUkRFUhCBAhIICgNNQVgQ/wNCXQoTY29tLmdl",
+            "ZWtzdmlsbGUubWVzaEIIUG9ydG51bXNaImdpdGh1Yi5jb20vbWVzaHRhc3Rp",
+            "Yy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.PortNum), }, null, null));
@@ -157,6 +158,12 @@ namespace Meshtastic.Protobufs {
     /// ENCODING: IP Packet. Handled by the python API, firmware ignores this one and pases on.
     /// </summary>
     [pbr::OriginalName("IP_TUNNEL_APP")] IpTunnelApp = 33,
+    /// <summary>
+    ///
+    /// Paxcounter lib included in the firmware
+    /// ENCODING: protobuf
+    /// </summary>
+    [pbr::OriginalName("PAXCOUNTER_APP")] PaxcounterApp = 34,
     /// <summary>
     ///
     /// Provides a hardware serial interface to send and receive from the Meshtastic network.
