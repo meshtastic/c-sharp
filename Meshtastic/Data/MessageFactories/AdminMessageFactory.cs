@@ -61,6 +61,14 @@ public class AdminMessageFactory
         });
     }
 
+    public MeshPacket CreateEnterDfuMessage()
+    {
+        return GetNewMeshPacket(new AdminMessage()
+        {
+            EnterDfuModeRequest = true,
+        });
+    }
+
     public MeshPacket CreateSetConfigMessage(object instance)
     {
         var config = instance switch
