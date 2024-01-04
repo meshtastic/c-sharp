@@ -2,6 +2,7 @@ using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 using System.IO.Ports;
 
 namespace Meshtastic.Connections;
@@ -93,7 +94,9 @@ public class SerialConnection : DeviceConnection
 
     public override async Task ReadFromRadio(Func<FromRadio, DeviceStateContainer, Task<bool>> isComplete, int readTimeoutMs = Resources.DEFAULT_READ_TIMEOUT)
     {
-        while (serialPort.IsOpen)
+        var sw = new Stopwatch();
+
+        while (serialPort.IsOpen && sw.ElapsedMilliseconds < readTimeoutMs)
         {
             if (serialPort.BytesToRead == 0)
             {
