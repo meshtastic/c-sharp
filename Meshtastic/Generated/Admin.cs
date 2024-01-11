@@ -560,7 +560,7 @@ namespace Meshtastic.Protobufs {
     public const int EnterDfuModeRequestFieldNumber = 21;
     /// <summary>
     ///
-    /// Enter (serial) DFU mode
+    /// Enter (UF2) DFU mode
     /// Only implemented on NRF52 currently
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
