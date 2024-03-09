@@ -47,14 +47,14 @@ namespace Meshtastic.Protobufs {
             "bm1lbnRNZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgEIAEoCzId",
             "Lm1lc2h0YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dlcl9tZXRy",
             "aWNzGAUgASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIAEIJCgd2YXJp",
-            "YW50KtQBChNUZWxlbWV0cnlTZW5zb3JUeXBlEhAKDFNFTlNPUl9VTlNFVBAA",
+            "YW50KuABChNUZWxlbWV0cnlTZW5zb3JUeXBlEhAKDFNFTlNPUl9VTlNFVBAA",
             "EgoKBkJNRTI4MBABEgoKBkJNRTY4MBACEgsKB01DUDk4MDgQAxIKCgZJTkEy",
             "NjAQBBIKCgZJTkEyMTkQBRIKCgZCTVAyODAQBhIJCgVTSFRDMxAHEgkKBUxQ",
             "UzIyEAgSCwoHUU1DNjMxMBAJEgsKB1FNSTg2NTgQChIMCghRTUM1ODgzTBAL",
-            "EgkKBVNIVDMxEAwSDAoIUE1TQTAwM0kQDRILCgdJTkEzMjIxEA5CZAoTY29t",
-            "LmdlZWtzdmlsbGUubWVzaEIPVGVsZW1ldHJ5UHJvdG9zWiJnaXRodWIuY29t",
-            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
-            "ZnO6AgBiBnByb3RvMw=="));
+            "EgkKBVNIVDMxEAwSDAoIUE1TQTAwM0kQDRILCgdJTkEzMjIxEA4SCgoGQk1Q",
+            "MDg1EA9CZAoTY29tLmdlZWtzdmlsbGUubWVzaEIPVGVsZW1ldHJ5UHJvdG9z",
+            "WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRh",
+            "c3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -149,6 +149,11 @@ namespace Meshtastic.Protobufs {
     /// INA3221 3 Channel Voltage / Current Sensor
     /// </summary>
     [pbr::OriginalName("INA3221")] Ina3221 = 14,
+    /// <summary>
+    ///
+    /// BMP085/BMP180 High accuracy temperature and pressure (older Version of BMP280)
+    /// </summary>
+    [pbr::OriginalName("BMP085")] Bmp085 = 15,
   }
 
   #endregion

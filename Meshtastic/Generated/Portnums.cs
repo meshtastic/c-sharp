@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static PortnumsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKugDCgdQ",
+            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKvkDCgdQ",
             "b3J0TnVtEg8KC1VOS05PV05fQVBQEAASFAoQVEVYVF9NRVNTQUdFX0FQUBAB",
             "EhcKE1JFTU9URV9IQVJEV0FSRV9BUFAQAhIQCgxQT1NJVElPTl9BUFAQAxIQ",
             "CgxOT0RFSU5GT19BUFAQBBIPCgtST1VUSU5HX0FQUBAFEg0KCUFETUlOX0FQ",
@@ -34,11 +34,11 @@ namespace Meshtastic.Protobufs {
             "WENPVU5URVJfQVBQECISDgoKU0VSSUFMX0FQUBBAEhUKEVNUT1JFX0ZPUldB",
             "UkRfQVBQEEESEgoOUkFOR0VfVEVTVF9BUFAQQhIRCg1URUxFTUVUUllfQVBQ",
             "EEMSCwoHWlBTX0FQUBBEEhEKDVNJTVVMQVRPUl9BUFAQRRISCg5UUkFDRVJP",
-            "VVRFX0FQUBBGEhQKEE5FSUdIQk9SSU5GT19BUFAQRxIQCgtQUklWQVRFX0FQ",
-            "UBCAAhITCg5BVEFLX0ZPUldBUkRFUhCBAhIICgNNQVgQ/wNCXQoTY29tLmdl",
-            "ZWtzdmlsbGUubWVzaEIIUG9ydG51bXNaImdpdGh1Yi5jb20vbWVzaHRhc3Rp",
-            "Yy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJv",
-            "dG8z"));
+            "VVRFX0FQUBBGEhQKEE5FSUdIQk9SSU5GT19BUFAQRxIPCgtBVEFLX1BMVUdJ",
+            "ThBIEhAKC1BSSVZBVEVfQVBQEIACEhMKDkFUQUtfRk9SV0FSREVSEIECEggK",
+            "A01BWBD/A0JdChNjb20uZ2Vla3N2aWxsZS5tZXNoQghQb3J0bnVtc1oiZ2l0",
+            "aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMu",
+            "UHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.PortNum), }, null, null));
@@ -89,28 +89,28 @@ namespace Meshtastic.Protobufs {
     /// <summary>
     ///
     /// The built-in position messaging app.
-    /// Payload is a [Position](/docs/developers/protobufs/api#position) message
+    /// Payload is a Position message.
     /// ENCODING: Protobuf
     /// </summary>
     [pbr::OriginalName("POSITION_APP")] PositionApp = 3,
     /// <summary>
     ///
     /// The built-in user info app.
-    /// Payload is a [User](/docs/developers/protobufs/api#user) message
+    /// Payload is a User message.
     /// ENCODING: Protobuf
     /// </summary>
     [pbr::OriginalName("NODEINFO_APP")] NodeinfoApp = 4,
     /// <summary>
     ///
     /// Protocol control packets for mesh protocol use.
-    /// Payload is a [Routing](/docs/developers/protobufs/api#routing) message
+    /// Payload is a Routing message.
     /// ENCODING: Protobuf
     /// </summary>
     [pbr::OriginalName("ROUTING_APP")] RoutingApp = 5,
     /// <summary>
     ///
     /// Admin control packets.
-    /// Payload is a [AdminMessage](/docs/developers/protobufs/api#adminmessage) message
+    /// Payload is a AdminMessage message.
     /// ENCODING: Protobuf
     /// </summary>
     [pbr::OriginalName("ADMIN_APP")] AdminApp = 6,
@@ -126,7 +126,7 @@ namespace Meshtastic.Protobufs {
     /// <summary>
     ///
     /// Waypoint payloads.
-    /// Payload is a [Waypoint](/docs/developers/protobufs/api#waypoint) message
+    /// Payload is a Waypoint message.
     /// ENCODING: Protobuf
     /// </summary>
     [pbr::OriginalName("WAYPOINT_APP")] WaypointApp = 8,
@@ -225,6 +225,12 @@ namespace Meshtastic.Protobufs {
     /// ENCODING: Protobuf
     /// </summary>
     [pbr::OriginalName("NEIGHBORINFO_APP")] NeighborinfoApp = 71,
+    /// <summary>
+    ///
+    /// ATAK Plugin
+    /// Portnum for payloads from the official Meshtastic ATAK plugin
+    /// </summary>
+    [pbr::OriginalName("ATAK_PLUGIN")] AtakPlugin = 72,
     /// <summary>
     ///
     /// Private applications should use portnums >= 256.

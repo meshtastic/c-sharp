@@ -28,7 +28,7 @@ namespace Meshtastic.Protobufs {
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
             "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhttZXNodGFzdGlj",
             "L2RldmljZW9ubHkucHJvdG8aFW1lc2h0YXN0aWMvbWVzaC5wcm90bxoebWVz",
-            "aHRhc3RpYy9tb2R1bGVfY29uZmlnLnByb3RvIp0QCgxBZG1pbk1lc3NhZ2US",
+            "aHRhc3RpYy9tb2R1bGVfY29uZmlnLnByb3RvIrwQCgxBZG1pbk1lc3NhZ2US",
             "HQoTZ2V0X2NoYW5uZWxfcmVxdWVzdBgBIAEoDUgAEjMKFGdldF9jaGFubmVs",
             "X3Jlc3BvbnNlGAIgASgLMhMubWVzaHRhc3RpYy5DaGFubmVsSAASGwoRZ2V0",
             "X293bmVyX3JlcXVlc3QYAyABKAhIABIuChJnZXRfb3duZXJfcmVzcG9uc2UY",
@@ -52,40 +52,41 @@ namespace Meshtastic.Protobufs {
             "cmVtb3RlX2hhcmR3YXJlX3BpbnNfcmVxdWVzdBgTIAEoCEgAElwKJmdldF9u",
             "b2RlX3JlbW90ZV9oYXJkd2FyZV9waW5zX3Jlc3BvbnNlGBQgASgLMioubWVz",
             "aHRhc3RpYy5Ob2RlUmVtb3RlSGFyZHdhcmVQaW5zUmVzcG9uc2VIABIgChZl",
-            "bnRlcl9kZnVfbW9kZV9yZXF1ZXN0GBUgASgISAASJQoJc2V0X293bmVyGCAg",
-            "ASgLMhAubWVzaHRhc3RpYy5Vc2VySAASKgoLc2V0X2NoYW5uZWwYISABKAsy",
-            "Ey5tZXNodGFzdGljLkNoYW5uZWxIABIoCgpzZXRfY29uZmlnGCIgASgLMhIu",
-            "bWVzaHRhc3RpYy5Db25maWdIABI1ChFzZXRfbW9kdWxlX2NvbmZpZxgjIAEo",
-            "CzIYLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnSAASLAoic2V0X2Nhbm5lZF9t",
-            "ZXNzYWdlX21vZHVsZV9tZXNzYWdlcxgkIAEoCUgAEh4KFHNldF9yaW5ndG9u",
-            "ZV9tZXNzYWdlGCUgASgJSAASGwoRcmVtb3ZlX2J5X25vZGVudW0YJiABKA1I",
-            "ABIdChNiZWdpbl9lZGl0X3NldHRpbmdzGEAgASgISAASHgoUY29tbWl0X2Vk",
-            "aXRfc2V0dGluZ3MYQSABKAhIABIcChJyZWJvb3Rfb3RhX3NlY29uZHMYXyAB",
-            "KAVIABIYCg5leGl0X3NpbXVsYXRvchhgIAEoCEgAEhgKDnJlYm9vdF9zZWNv",
-            "bmRzGGEgASgFSAASGgoQc2h1dGRvd25fc2Vjb25kcxhiIAEoBUgAEhcKDWZh",
-            "Y3RvcnlfcmVzZXQYYyABKAVIABIWCgxub2RlZGJfcmVzZXQYZCABKAVIACKV",
-            "AQoKQ29uZmlnVHlwZRIRCg1ERVZJQ0VfQ09ORklHEAASEwoPUE9TSVRJT05f",
-            "Q09ORklHEAESEAoMUE9XRVJfQ09ORklHEAISEgoOTkVUV09SS19DT05GSUcQ",
-            "AxISCg5ESVNQTEFZX0NPTkZJRxAEEg8KC0xPUkFfQ09ORklHEAUSFAoQQkxV",
-            "RVRPT1RIX0NPTkZJRxAGIrsCChBNb2R1bGVDb25maWdUeXBlEg8KC01RVFRf",
-            "Q09ORklHEAASEQoNU0VSSUFMX0NPTkZJRxABEhMKD0VYVE5PVElGX0NPTkZJ",
-            "RxACEhcKE1NUT1JFRk9SV0FSRF9DT05GSUcQAxIUChBSQU5HRVRFU1RfQ09O",
-            "RklHEAQSFAoQVEVMRU1FVFJZX0NPTkZJRxAFEhQKEENBTk5FRE1TR19DT05G",
-            "SUcQBhIQCgxBVURJT19DT05GSUcQBxIZChVSRU1PVEVIQVJEV0FSRV9DT05G",
-            "SUcQCBIXChNORUlHSEJPUklORk9fQ09ORklHEAkSGgoWQU1CSUVOVExJR0hU",
-            "SU5HX0NPTkZJRxAKEhoKFkRFVEVDVElPTlNFTlNPUl9DT05GSUcQCxIVChFQ",
-            "QVhDT1VOVEVSX0NPTkZJRxAMQhEKD3BheWxvYWRfdmFyaWFudCJbCg1IYW1Q",
-            "YXJhbWV0ZXJzEhEKCWNhbGxfc2lnbhgBIAEoCRIQCgh0eF9wb3dlchgCIAEo",
-            "BRIRCglmcmVxdWVuY3kYAyABKAISEgoKc2hvcnRfbmFtZRgEIAEoCSJmCh5O",
-            "b2RlUmVtb3RlSGFyZHdhcmVQaW5zUmVzcG9uc2USRAoZbm9kZV9yZW1vdGVf",
-            "aGFyZHdhcmVfcGlucxgBIAMoCzIhLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhh",
-            "cmR3YXJlUGluQmAKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCC0FkbWluUHJvdG9z",
-            "WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRh",
-            "c3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "bnRlcl9kZnVfbW9kZV9yZXF1ZXN0GBUgASgISAASHQoTZGVsZXRlX2ZpbGVf",
+            "cmVxdWVzdBgWIAEoCUgAEiUKCXNldF9vd25lchggIAEoCzIQLm1lc2h0YXN0",
+            "aWMuVXNlckgAEioKC3NldF9jaGFubmVsGCEgASgLMhMubWVzaHRhc3RpYy5D",
+            "aGFubmVsSAASKAoKc2V0X2NvbmZpZxgiIAEoCzISLm1lc2h0YXN0aWMuQ29u",
+            "ZmlnSAASNQoRc2V0X21vZHVsZV9jb25maWcYIyABKAsyGC5tZXNodGFzdGlj",
+            "Lk1vZHVsZUNvbmZpZ0gAEiwKInNldF9jYW5uZWRfbWVzc2FnZV9tb2R1bGVf",
+            "bWVzc2FnZXMYJCABKAlIABIeChRzZXRfcmluZ3RvbmVfbWVzc2FnZRglIAEo",
+            "CUgAEhsKEXJlbW92ZV9ieV9ub2RlbnVtGCYgASgNSAASHQoTYmVnaW5fZWRp",
+            "dF9zZXR0aW5ncxhAIAEoCEgAEh4KFGNvbW1pdF9lZGl0X3NldHRpbmdzGEEg",
+            "ASgISAASHAoScmVib290X290YV9zZWNvbmRzGF8gASgFSAASGAoOZXhpdF9z",
+            "aW11bGF0b3IYYCABKAhIABIYCg5yZWJvb3Rfc2Vjb25kcxhhIAEoBUgAEhoK",
+            "EHNodXRkb3duX3NlY29uZHMYYiABKAVIABIXCg1mYWN0b3J5X3Jlc2V0GGMg",
+            "ASgFSAASFgoMbm9kZWRiX3Jlc2V0GGQgASgFSAAilQEKCkNvbmZpZ1R5cGUS",
+            "EQoNREVWSUNFX0NPTkZJRxAAEhMKD1BPU0lUSU9OX0NPTkZJRxABEhAKDFBP",
+            "V0VSX0NPTkZJRxACEhIKDk5FVFdPUktfQ09ORklHEAMSEgoORElTUExBWV9D",
+            "T05GSUcQBBIPCgtMT1JBX0NPTkZJRxAFEhQKEEJMVUVUT09USF9DT05GSUcQ",
+            "BiK7AgoQTW9kdWxlQ29uZmlnVHlwZRIPCgtNUVRUX0NPTkZJRxAAEhEKDVNF",
+            "UklBTF9DT05GSUcQARITCg9FWFROT1RJRl9DT05GSUcQAhIXChNTVE9SRUZP",
+            "UldBUkRfQ09ORklHEAMSFAoQUkFOR0VURVNUX0NPTkZJRxAEEhQKEFRFTEVN",
+            "RVRSWV9DT05GSUcQBRIUChBDQU5ORURNU0dfQ09ORklHEAYSEAoMQVVESU9f",
+            "Q09ORklHEAcSGQoVUkVNT1RFSEFSRFdBUkVfQ09ORklHEAgSFwoTTkVJR0hC",
+            "T1JJTkZPX0NPTkZJRxAJEhoKFkFNQklFTlRMSUdIVElOR19DT05GSUcQChIa",
+            "ChZERVRFQ1RJT05TRU5TT1JfQ09ORklHEAsSFQoRUEFYQ09VTlRFUl9DT05G",
+            "SUcQDEIRCg9wYXlsb2FkX3ZhcmlhbnQiWwoNSGFtUGFyYW1ldGVycxIRCglj",
+            "YWxsX3NpZ24YASABKAkSEAoIdHhfcG93ZXIYAiABKAUSEQoJZnJlcXVlbmN5",
+            "GAMgASgCEhIKCnNob3J0X25hbWUYBCABKAkiZgoeTm9kZVJlbW90ZUhhcmR3",
+            "YXJlUGluc1Jlc3BvbnNlEkQKGW5vZGVfcmVtb3RlX2hhcmR3YXJlX3BpbnMY",
+            "ASADKAsyIS5tZXNodGFzdGljLk5vZGVSZW1vdGVIYXJkd2FyZVBpbkJgChNj",
+            "b20uZ2Vla3N2aWxsZS5tZXNoQgtBZG1pblByb3Rvc1oiZ2l0aHViLmNvbS9t",
+            "ZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZz",
+            "ugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.DeviceonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null)
           }));
@@ -194,6 +195,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.EnterDfuModeRequest:
           EnterDfuModeRequest = other.EnterDfuModeRequest;
+          break;
+        case PayloadVariantOneofCase.DeleteFileRequest:
+          DeleteFileRequest = other.DeleteFileRequest;
           break;
         case PayloadVariantOneofCase.SetOwner:
           SetOwner = other.SetOwner.Clone();
@@ -573,6 +577,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "delete_file_request" field.</summary>
+    public const int DeleteFileRequestFieldNumber = 22;
+    /// <summary>
+    ///
+    /// Delete the file by the specified path from the device
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DeleteFileRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest ? (string) payloadVariant_ : ""; }
+      set {
+        payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        payloadVariantCase_ = PayloadVariantOneofCase.DeleteFileRequest;
+      }
+    }
+
     /// <summary>Field number for the "set_owner" field.</summary>
     public const int SetOwnerFieldNumber = 32;
     /// <summary>
@@ -844,6 +864,7 @@ namespace Meshtastic.Protobufs {
       GetNodeRemoteHardwarePinsRequest = 19,
       GetNodeRemoteHardwarePinsResponse = 20,
       EnterDfuModeRequest = 21,
+      DeleteFileRequest = 22,
       SetOwner = 32,
       SetChannel = 33,
       SetConfig = 34,
@@ -909,6 +930,7 @@ namespace Meshtastic.Protobufs {
       if (GetNodeRemoteHardwarePinsRequest != other.GetNodeRemoteHardwarePinsRequest) return false;
       if (!object.Equals(GetNodeRemoteHardwarePinsResponse, other.GetNodeRemoteHardwarePinsResponse)) return false;
       if (EnterDfuModeRequest != other.EnterDfuModeRequest) return false;
+      if (DeleteFileRequest != other.DeleteFileRequest) return false;
       if (!object.Equals(SetOwner, other.SetOwner)) return false;
       if (!object.Equals(SetChannel, other.SetChannel)) return false;
       if (!object.Equals(SetConfig, other.SetConfig)) return false;
@@ -952,6 +974,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsRequest) hash ^= GetNodeRemoteHardwarePinsRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsResponse) hash ^= GetNodeRemoteHardwarePinsResponse.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest) hash ^= EnterDfuModeRequest.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) hash ^= DeleteFileRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) hash ^= SetOwner.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetChannel) hash ^= SetChannel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetConfig) hash ^= SetConfig.GetHashCode();
@@ -1065,6 +1088,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest) {
         output.WriteRawTag(168, 1);
         output.WriteBool(EnterDfuModeRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(DeleteFileRequest);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
@@ -1216,6 +1243,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(168, 1);
         output.WriteBool(EnterDfuModeRequest);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(DeleteFileRequest);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -1345,6 +1376,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest) {
         size += 2 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DeleteFileRequest);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetOwner);
@@ -1487,6 +1521,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.EnterDfuModeRequest:
           EnterDfuModeRequest = other.EnterDfuModeRequest;
+          break;
+        case PayloadVariantOneofCase.DeleteFileRequest:
+          DeleteFileRequest = other.DeleteFileRequest;
           break;
         case PayloadVariantOneofCase.SetOwner:
           if (SetOwner == null) {
@@ -1682,6 +1719,10 @@ namespace Meshtastic.Protobufs {
           }
           case 168: {
             EnterDfuModeRequest = input.ReadBool();
+            break;
+          }
+          case 178: {
+            DeleteFileRequest = input.ReadString();
             break;
           }
           case 258: {
@@ -1899,6 +1940,10 @@ namespace Meshtastic.Protobufs {
           }
           case 168: {
             EnterDfuModeRequest = input.ReadBool();
+            break;
+          }
+          case 178: {
+            DeleteFileRequest = input.ReadString();
             break;
           }
           case 258: {

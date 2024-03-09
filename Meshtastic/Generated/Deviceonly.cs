@@ -37,33 +37,34 @@ namespace Meshtastic.Protobufs {
             "YXN0aWMuTWVzaFBhY2tldBJEChlub2RlX3JlbW90ZV9oYXJkd2FyZV9waW5z",
             "GA0gAygLMiEubWVzaHRhc3RpYy5Ob2RlUmVtb3RlSGFyZHdhcmVQaW4SLgoM",
             "bm9kZV9kYl9saXRlGA4gAygLMhgubWVzaHRhc3RpYy5Ob2RlSW5mb0xpdGUi",
-            "zAEKDE5vZGVJbmZvTGl0ZRILCgNudW0YASABKA0SHgoEdXNlchgCIAEoCzIQ",
+            "8QEKDE5vZGVJbmZvTGl0ZRILCgNudW0YASABKA0SHgoEdXNlchgCIAEoCzIQ",
             "Lm1lc2h0YXN0aWMuVXNlchIqCghwb3NpdGlvbhgDIAEoCzIYLm1lc2h0YXN0",
             "aWMuUG9zaXRpb25MaXRlEgsKA3NuchgEIAEoAhISCgpsYXN0X2hlYXJkGAUg",
             "ASgHEjEKDmRldmljZV9tZXRyaWNzGAYgASgLMhkubWVzaHRhc3RpYy5EZXZp",
-            "Y2VNZXRyaWNzEg8KB2NoYW5uZWwYByABKA0ikAEKDFBvc2l0aW9uTGl0ZRIS",
-            "CgpsYXRpdHVkZV9pGAEgASgPEhMKC2xvbmdpdHVkZV9pGAIgASgPEhAKCGFs",
-            "dGl0dWRlGAMgASgFEgwKBHRpbWUYBCABKAcSNwoPbG9jYXRpb25fc291cmNl",
-            "GAUgASgOMh4ubWVzaHRhc3RpYy5Qb3NpdGlvbi5Mb2NTb3VyY2UiRQoLQ2hh",
-            "bm5lbEZpbGUSJQoIY2hhbm5lbHMYASADKAsyEy5tZXNodGFzdGljLkNoYW5u",
-            "ZWwSDwoHdmVyc2lvbhgCIAEoDSKXAgoIT0VNU3RvcmUSFgoOb2VtX2ljb25f",
-            "d2lkdGgYASABKA0SFwoPb2VtX2ljb25faGVpZ2h0GAIgASgNEhUKDW9lbV9p",
-            "Y29uX2JpdHMYAyABKAwSKQoIb2VtX2ZvbnQYBCABKA4yFy5tZXNodGFzdGlj",
-            "LlNjcmVlbkZvbnRzEhAKCG9lbV90ZXh0GAUgASgJEhMKC29lbV9hZXNfa2V5",
-            "GAYgASgMEjEKEG9lbV9sb2NhbF9jb25maWcYByABKAsyFy5tZXNodGFzdGlj",
-            "LkxvY2FsQ29uZmlnEj4KF29lbV9sb2NhbF9tb2R1bGVfY29uZmlnGAggASgL",
-            "Mh0ubWVzaHRhc3RpYy5Mb2NhbE1vZHVsZUNvbmZpZyJVChVOb2RlUmVtb3Rl",
-            "SGFyZHdhcmVQaW4SEAoIbm9kZV9udW0YASABKA0SKgoDcGluGAIgASgLMh0u",
-            "bWVzaHRhc3RpYy5SZW1vdGVIYXJkd2FyZVBpbio+CgtTY3JlZW5Gb250cxIO",
-            "CgpGT05UX1NNQUxMEAASDwoLRk9OVF9NRURJVU0QARIOCgpGT05UX0xBUkdF",
-            "EAJCXwoTY29tLmdlZWtzdmlsbGUubWVzaEIKRGV2aWNlT25seVoiZ2l0aHVi",
-            "LmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJv",
-            "dG9idWZzugIAYgZwcm90bzM="));
+            "Y2VNZXRyaWNzEg8KB2NoYW5uZWwYByABKA0SEAoIdmlhX21xdHQYCCABKAgS",
+            "EQoJaG9wc19hd2F5GAkgASgNIpABCgxQb3NpdGlvbkxpdGUSEgoKbGF0aXR1",
+            "ZGVfaRgBIAEoDxITCgtsb25naXR1ZGVfaRgCIAEoDxIQCghhbHRpdHVkZRgD",
+            "IAEoBRIMCgR0aW1lGAQgASgHEjcKD2xvY2F0aW9uX3NvdXJjZRgFIAEoDjIe",
+            "Lm1lc2h0YXN0aWMuUG9zaXRpb24uTG9jU291cmNlIkUKC0NoYW5uZWxGaWxl",
+            "EiUKCGNoYW5uZWxzGAEgAygLMhMubWVzaHRhc3RpYy5DaGFubmVsEg8KB3Zl",
+            "cnNpb24YAiABKA0ilwIKCE9FTVN0b3JlEhYKDm9lbV9pY29uX3dpZHRoGAEg",
+            "ASgNEhcKD29lbV9pY29uX2hlaWdodBgCIAEoDRIVCg1vZW1faWNvbl9iaXRz",
+            "GAMgASgMEikKCG9lbV9mb250GAQgASgOMhcubWVzaHRhc3RpYy5TY3JlZW5G",
+            "b250cxIQCghvZW1fdGV4dBgFIAEoCRITCgtvZW1fYWVzX2tleRgGIAEoDBIx",
+            "ChBvZW1fbG9jYWxfY29uZmlnGAcgASgLMhcubWVzaHRhc3RpYy5Mb2NhbENv",
+            "bmZpZxI+ChdvZW1fbG9jYWxfbW9kdWxlX2NvbmZpZxgIIAEoCzIdLm1lc2h0",
+            "YXN0aWMuTG9jYWxNb2R1bGVDb25maWciVQoVTm9kZVJlbW90ZUhhcmR3YXJl",
+            "UGluEhAKCG5vZGVfbnVtGAEgASgNEioKA3BpbhgCIAEoCzIdLm1lc2h0YXN0",
+            "aWMuUmVtb3RlSGFyZHdhcmVQaW4qPgoLU2NyZWVuRm9udHMSDgoKRk9OVF9T",
+            "TUFMTBAAEg8KC0ZPTlRfTUVESVVNEAESDgoKRk9OVF9MQVJHRRACQl8KE2Nv",
+            "bS5nZWVrc3ZpbGxlLm1lc2hCCkRldmljZU9ubHlaImdpdGh1Yi5jb20vbWVz",
+            "aHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oC",
+            "AGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.ScreenFonts), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceState), global::Meshtastic.Protobufs.DeviceState.Parser, new[]{ "MyNode", "Owner", "ReceiveQueue", "Version", "RxTextMessage", "NoSave", "DidGpsReset", "RxWaypoint", "NodeRemoteHardwarePins", "NodeDbLite" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfoLite), global::Meshtastic.Protobufs.NodeInfoLite.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics", "Channel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfoLite), global::Meshtastic.Protobufs.NodeInfoLite.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics", "Channel", "ViaMqtt", "HopsAway" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PositionLite), global::Meshtastic.Protobufs.PositionLite.Parser, new[]{ "LatitudeI", "LongitudeI", "Altitude", "Time", "LocationSource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ChannelFile), global::Meshtastic.Protobufs.ChannelFile.Parser, new[]{ "Channels", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.OEMStore), global::Meshtastic.Protobufs.OEMStore.Parser, new[]{ "OemIconWidth", "OemIconHeight", "OemIconBits", "OemFont", "OemText", "OemAesKey", "OemLocalConfig", "OemLocalModuleConfig" }, null, null, null, null),
@@ -720,6 +721,8 @@ namespace Meshtastic.Protobufs {
       lastHeard_ = other.lastHeard_;
       deviceMetrics_ = other.deviceMetrics_ != null ? other.deviceMetrics_.Clone() : null;
       channel_ = other.channel_;
+      viaMqtt_ = other.viaMqtt_;
+      hopsAway_ = other.hopsAway_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -843,6 +846,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "via_mqtt" field.</summary>
+    public const int ViaMqttFieldNumber = 8;
+    private bool viaMqtt_;
+    /// <summary>
+    ///
+    /// True if we witnessed the node over MQTT instead of LoRA transport
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ViaMqtt {
+      get { return viaMqtt_; }
+      set {
+        viaMqtt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hops_away" field.</summary>
+    public const int HopsAwayFieldNumber = 9;
+    private uint hopsAway_;
+    /// <summary>
+    ///
+    /// Number of hops away from us this node is (0 if adjacent)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HopsAway {
+      get { return hopsAway_; }
+      set {
+        hopsAway_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -865,6 +900,8 @@ namespace Meshtastic.Protobufs {
       if (LastHeard != other.LastHeard) return false;
       if (!object.Equals(DeviceMetrics, other.DeviceMetrics)) return false;
       if (Channel != other.Channel) return false;
+      if (ViaMqtt != other.ViaMqtt) return false;
+      if (HopsAway != other.HopsAway) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -879,6 +916,8 @@ namespace Meshtastic.Protobufs {
       if (LastHeard != 0) hash ^= LastHeard.GetHashCode();
       if (deviceMetrics_ != null) hash ^= DeviceMetrics.GetHashCode();
       if (Channel != 0) hash ^= Channel.GetHashCode();
+      if (ViaMqtt != false) hash ^= ViaMqtt.GetHashCode();
+      if (HopsAway != 0) hash ^= HopsAway.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -925,6 +964,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(56);
         output.WriteUInt32(Channel);
       }
+      if (ViaMqtt != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ViaMqtt);
+      }
+      if (HopsAway != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(HopsAway);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -963,6 +1010,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(56);
         output.WriteUInt32(Channel);
       }
+      if (ViaMqtt != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ViaMqtt);
+      }
+      if (HopsAway != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(HopsAway);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -993,6 +1048,12 @@ namespace Meshtastic.Protobufs {
       }
       if (Channel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Channel);
+      }
+      if (ViaMqtt != false) {
+        size += 1 + 1;
+      }
+      if (HopsAway != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HopsAway);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1035,6 +1096,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.Channel != 0) {
         Channel = other.Channel;
+      }
+      if (other.ViaMqtt != false) {
+        ViaMqtt = other.ViaMqtt;
+      }
+      if (other.HopsAway != 0) {
+        HopsAway = other.HopsAway;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1088,6 +1155,14 @@ namespace Meshtastic.Protobufs {
             Channel = input.ReadUInt32();
             break;
           }
+          case 64: {
+            ViaMqtt = input.ReadBool();
+            break;
+          }
+          case 72: {
+            HopsAway = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1138,6 +1213,14 @@ namespace Meshtastic.Protobufs {
           }
           case 56: {
             Channel = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            ViaMqtt = input.ReadBool();
+            break;
+          }
+          case 72: {
+            HopsAway = input.ReadUInt32();
             break;
           }
         }
