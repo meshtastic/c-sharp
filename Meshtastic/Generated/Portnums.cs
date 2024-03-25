@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static PortnumsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKvkDCgdQ",
+            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKo0ECgdQ",
             "b3J0TnVtEg8KC1VOS05PV05fQVBQEAASFAoQVEVYVF9NRVNTQUdFX0FQUBAB",
             "EhcKE1JFTU9URV9IQVJEV0FSRV9BUFAQAhIQCgxQT1NJVElPTl9BUFAQAxIQ",
             "CgxOT0RFSU5GT19BUFAQBBIPCgtST1VUSU5HX0FQUBAFEg0KCUFETUlOX0FQ",
@@ -35,10 +35,10 @@ namespace Meshtastic.Protobufs {
             "UkRfQVBQEEESEgoOUkFOR0VfVEVTVF9BUFAQQhIRCg1URUxFTUVUUllfQVBQ",
             "EEMSCwoHWlBTX0FQUBBEEhEKDVNJTVVMQVRPUl9BUFAQRRISCg5UUkFDRVJP",
             "VVRFX0FQUBBGEhQKEE5FSUdIQk9SSU5GT19BUFAQRxIPCgtBVEFLX1BMVUdJ",
-            "ThBIEhAKC1BSSVZBVEVfQVBQEIACEhMKDkFUQUtfRk9SV0FSREVSEIECEggK",
-            "A01BWBD/A0JdChNjb20uZ2Vla3N2aWxsZS5tZXNoQghQb3J0bnVtc1oiZ2l0",
-            "aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMu",
-            "UHJvdG9idWZzugIAYgZwcm90bzM="));
+            "ThBIEhIKDk1BUF9SRVBPUlRfQVBQEEkSEAoLUFJJVkFURV9BUFAQgAISEwoO",
+            "QVRBS19GT1JXQVJERVIQgQISCAoDTUFYEP8DQl0KE2NvbS5nZWVrc3ZpbGxl",
+            "Lm1lc2hCCFBvcnRudW1zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
+            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.PortNum), }, null, null));
@@ -231,6 +231,11 @@ namespace Meshtastic.Protobufs {
     /// Portnum for payloads from the official Meshtastic ATAK plugin
     /// </summary>
     [pbr::OriginalName("ATAK_PLUGIN")] AtakPlugin = 72,
+    /// <summary>
+    ///
+    /// Provides unencrypted information about a node for consumption by a map via MQTT
+    /// </summary>
+    [pbr::OriginalName("MAP_REPORT_APP")] MapReportApp = 73,
     /// <summary>
     ///
     /// Private applications should use portnums >= 256.

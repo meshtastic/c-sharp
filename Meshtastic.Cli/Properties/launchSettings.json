@@ -78,7 +78,7 @@
     },
     "fixed-position": {
       "commandName": "Project",
-      "commandLineArgs": "fixed-position 34.000 -90.023 123 --log debug"
+      "commandLineArgs": "fixed-position 34.000 -90.023 123 --log debug --port COM3"
     },
     "text": {
       "commandName": "Project",
@@ -122,7 +122,7 @@
     },
     "live": {
       "commandName": "Project",
-      "commandLineArgs": "live"
+      "commandLineArgs": "live --port COM3"
     },
     "live host": {
       "commandName": "Project",

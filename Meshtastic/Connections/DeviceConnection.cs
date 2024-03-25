@@ -1,25 +1,21 @@
 using Meshtastic.Data;
+using Meshtastic.Data.MessageFactories;
 using Meshtastic.Extensions;
 using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Connections;
 
-public abstract class DeviceConnection
+public abstract class DeviceConnection(ILogger logger)
 {
-    protected ILogger Logger { get; set; }
+    protected ILogger Logger { get; set; } = logger;
+    public ToRadioMessageFactory ToRadioFactory { get; private set; } = new ToRadioMessageFactory();
     public DeviceStateContainer DeviceStateContainer { get; set; } = new DeviceStateContainer();
-    protected List<byte> Buffer { get; set; } = new List<byte>();
+    protected List<byte> Buffer { get; set; } = [];
     protected int PacketLength { get; set; }
 
-    public DeviceConnection(ILogger logger)
+    public DeviceConnection(ILogger logger, DeviceStateContainer container) : this(logger)
     {
-        Logger = logger;
-    }
-
-    public DeviceConnection(ILogger logger, DeviceStateContainer container)
-    {
-        Logger = logger;
         DeviceStateContainer = container;
     }
 
@@ -64,6 +60,13 @@ public abstract class DeviceConnection
                 {
                     DeviceStateContainer.AddFromRadio(fromRadio);
                     Logger.LogDebug($"Received: {fromRadio}");
+                    // Use telemetry packets as a cue to keep the connection alive
+                    if (fromRadio.GetPayload<Telemetry>() != null)
+                    {
+                        Logger.LogDebug($"Sending heartbeat");
+                        await WriteToRadio(ToRadioFactory.CreateKeepAliveMessage());
+                    }
+
                     if (await isComplete(fromRadio, DeviceStateContainer))
                     {
                         Buffer.Clear();
@@ -91,6 +94,8 @@ public abstract class DeviceConnection
             toRadio.GetPayload<Telemetry>()?.ToString() ??
             toRadio.GetPayload<Routing>()?.ToString() ??
             toRadio.GetPayload<RouteDiscovery>()?.ToString() ??
+            toRadio.GetPayload<TAKPacket>()?.ToString() ??
+            toRadio.GetPayload<Neighbor>()?.ToString() ??
             toRadio.GetPayload<string>()?.ToString();
 
         if (!String.IsNullOrWhiteSpace(payload))
