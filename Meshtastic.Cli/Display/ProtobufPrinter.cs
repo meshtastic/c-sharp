@@ -274,7 +274,7 @@ public class ProtobufPrinter
     public Panel PrintTrafficCharts()
     {
         var myInfo = container.Nodes.FirstOrDefault(n => n.Num == container.MyNodeInfo.MyNodeNum);
-        var airTimeStats = myInfo != null ? $"Channel Utilization {myInfo.DeviceMetrics.ChannelUtilization:N2}% / Airtime {myInfo.DeviceMetrics.AirUtilTx:N2}%" : String.Empty;
+        var airTimeStats = myInfo?.DeviceMetrics != null ? $"Channel Utilization {myInfo.DeviceMetrics.ChannelUtilization:N2}% / Airtime {myInfo.DeviceMetrics.AirUtilTx:N2}%" : String.Empty;
 
         var byNodeChart = new BreakdownChart()
            .FullSize();

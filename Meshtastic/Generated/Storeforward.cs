@@ -24,34 +24,35 @@ namespace Meshtastic.Protobufs {
     static StoreforwardReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1tZXNodGFzdGljL3N0b3JlZm9yd2FyZC5wcm90bxIKbWVzaHRhc3RpYyLq",
-            "BgoPU3RvcmVBbmRGb3J3YXJkEjcKAnJyGAEgASgOMisubWVzaHRhc3RpYy5T",
+            "Ch1tZXNodGFzdGljL3N0b3JlZm9yd2FyZC5wcm90bxIKbWVzaHRhc3RpYyKc",
+            "BwoPU3RvcmVBbmRGb3J3YXJkEjcKAnJyGAEgASgOMisubWVzaHRhc3RpYy5T",
             "dG9yZUFuZEZvcndhcmQuUmVxdWVzdFJlc3BvbnNlEjcKBXN0YXRzGAIgASgL",
             "MiYubWVzaHRhc3RpYy5TdG9yZUFuZEZvcndhcmQuU3RhdGlzdGljc0gAEjYK",
             "B2hpc3RvcnkYAyABKAsyIy5tZXNodGFzdGljLlN0b3JlQW5kRm9yd2FyZC5I",
             "aXN0b3J5SAASOgoJaGVhcnRiZWF0GAQgASgLMiUubWVzaHRhc3RpYy5TdG9y",
-            "ZUFuZEZvcndhcmQuSGVhcnRiZWF0SAASDwoFZW1wdHkYBSABKAhIABrNAQoK",
-            "U3RhdGlzdGljcxIWCg5tZXNzYWdlc190b3RhbBgBIAEoDRIWCg5tZXNzYWdl",
-            "c19zYXZlZBgCIAEoDRIUCgxtZXNzYWdlc19tYXgYAyABKA0SDwoHdXBfdGlt",
-            "ZRgEIAEoDRIQCghyZXF1ZXN0cxgFIAEoDRIYChByZXF1ZXN0c19oaXN0b3J5",
-            "GAYgASgNEhEKCWhlYXJ0YmVhdBgHIAEoCBISCgpyZXR1cm5fbWF4GAggASgN",
-            "EhUKDXJldHVybl93aW5kb3cYCSABKA0aSQoHSGlzdG9yeRIYChBoaXN0b3J5",
-            "X21lc3NhZ2VzGAEgASgNEg4KBndpbmRvdxgCIAEoDRIUCgxsYXN0X3JlcXVl",
-            "c3QYAyABKA0aLgoJSGVhcnRiZWF0Eg4KBnBlcmlvZBgBIAEoDRIRCglzZWNv",
-            "bmRhcnkYAiABKA0iiQIKD1JlcXVlc3RSZXNwb25zZRIJCgVVTlNFVBAAEhAK",
-            "DFJPVVRFUl9FUlJPUhABEhQKEFJPVVRFUl9IRUFSVEJFQVQQAhIPCgtST1VU",
-            "RVJfUElORxADEg8KC1JPVVRFUl9QT05HEAQSDwoLUk9VVEVSX0JVU1kQBRIS",
-            "Cg5ST1VURVJfSElTVE9SWRAGEhAKDFJPVVRFUl9TVEFUUxAHEhAKDENMSUVO",
-            "VF9FUlJPUhBAEhIKDkNMSUVOVF9ISVNUT1JZEEESEAoMQ0xJRU5UX1NUQVRT",
-            "EEISDwoLQ0xJRU5UX1BJTkcQQxIPCgtDTElFTlRfUE9ORxBEEhAKDENMSUVO",
-            "VF9BQk9SVBBqQgkKB3ZhcmlhbnRCagoTY29tLmdlZWtzdmlsbGUubWVzaEIV",
-            "U3RvcmVBbmRGb3J3YXJkUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMv",
-            "Z28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3Rv",
-            "Mw=="));
+            "ZUFuZEZvcndhcmQuSGVhcnRiZWF0SAASDgoEdGV4dBgFIAEoDEgAGs0BCgpT",
+            "dGF0aXN0aWNzEhYKDm1lc3NhZ2VzX3RvdGFsGAEgASgNEhYKDm1lc3NhZ2Vz",
+            "X3NhdmVkGAIgASgNEhQKDG1lc3NhZ2VzX21heBgDIAEoDRIPCgd1cF90aW1l",
+            "GAQgASgNEhAKCHJlcXVlc3RzGAUgASgNEhgKEHJlcXVlc3RzX2hpc3RvcnkY",
+            "BiABKA0SEQoJaGVhcnRiZWF0GAcgASgIEhIKCnJldHVybl9tYXgYCCABKA0S",
+            "FQoNcmV0dXJuX3dpbmRvdxgJIAEoDRpJCgdIaXN0b3J5EhgKEGhpc3Rvcnlf",
+            "bWVzc2FnZXMYASABKA0SDgoGd2luZG93GAIgASgNEhQKDGxhc3RfcmVxdWVz",
+            "dBgDIAEoDRouCglIZWFydGJlYXQSDgoGcGVyaW9kGAEgASgNEhEKCXNlY29u",
+            "ZGFyeRgCIAEoDSK8AgoPUmVxdWVzdFJlc3BvbnNlEgkKBVVOU0VUEAASEAoM",
+            "Uk9VVEVSX0VSUk9SEAESFAoQUk9VVEVSX0hFQVJUQkVBVBACEg8KC1JPVVRF",
+            "Ul9QSU5HEAMSDwoLUk9VVEVSX1BPTkcQBBIPCgtST1VURVJfQlVTWRAFEhIK",
+            "DlJPVVRFUl9ISVNUT1JZEAYSEAoMUk9VVEVSX1NUQVRTEAcSFgoSUk9VVEVS",
+            "X1RFWFRfRElSRUNUEAgSGQoVUk9VVEVSX1RFWFRfQlJPQURDQVNUEAkSEAoM",
+            "Q0xJRU5UX0VSUk9SEEASEgoOQ0xJRU5UX0hJU1RPUlkQQRIQCgxDTElFTlRf",
+            "U1RBVFMQQhIPCgtDTElFTlRfUElORxBDEg8KC0NMSUVOVF9QT05HEEQSEAoM",
+            "Q0xJRU5UX0FCT1JUEGpCCQoHdmFyaWFudEJqChNjb20uZ2Vla3N2aWxsZS5t",
+            "ZXNoQhVTdG9yZUFuZEZvcndhcmRQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRh",
+            "c3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward), global::Meshtastic.Protobufs.StoreAndForward.Parser, new[]{ "Rr", "Stats", "History", "Heartbeat", "Empty" }, new[]{ "Variant" }, new[]{ typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.RequestResponse) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics), global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics.Parser, new[]{ "MessagesTotal", "MessagesSaved", "MessagesMax", "UpTime", "Requests", "RequestsHistory", "Heartbeat", "ReturnMax", "ReturnWindow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward), global::Meshtastic.Protobufs.StoreAndForward.Parser, new[]{ "Rr", "Stats", "History", "Heartbeat", "Text" }, new[]{ "Variant" }, new[]{ typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.RequestResponse) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics), global::Meshtastic.Protobufs.StoreAndForward.Types.Statistics.Parser, new[]{ "MessagesTotal", "MessagesSaved", "MessagesMax", "UpTime", "Requests", "RequestsHistory", "Heartbeat", "ReturnMax", "ReturnWindow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.History), global::Meshtastic.Protobufs.StoreAndForward.Types.History.Parser, new[]{ "HistoryMessages", "Window", "LastRequest" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat), global::Meshtastic.Protobufs.StoreAndForward.Types.Heartbeat.Parser, new[]{ "Period", "Secondary" }, null, null, null, null)})
           }));
@@ -109,8 +110,8 @@ namespace Meshtastic.Protobufs {
         case VariantOneofCase.Heartbeat:
           Heartbeat = other.Heartbeat.Clone();
           break;
-        case VariantOneofCase.Empty:
-          Empty = other.Empty;
+        case VariantOneofCase.Text:
+          Text = other.Text;
           break;
       }
 
@@ -187,19 +188,19 @@ namespace Meshtastic.Protobufs {
       }
     }
 
-    /// <summary>Field number for the "empty" field.</summary>
-    public const int EmptyFieldNumber = 5;
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 5;
     /// <summary>
     ///
-    /// Empty Payload
+    /// Text from history message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Empty {
-      get { return variantCase_ == VariantOneofCase.Empty ? (bool) variant_ : false; }
+    public pb::ByteString Text {
+      get { return variantCase_ == VariantOneofCase.Text ? (pb::ByteString) variant_ : pb::ByteString.Empty; }
       set {
-        variant_ = value;
-        variantCase_ = VariantOneofCase.Empty;
+        variant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        variantCase_ = VariantOneofCase.Text;
       }
     }
 
@@ -210,7 +211,7 @@ namespace Meshtastic.Protobufs {
       Stats = 2,
       History = 3,
       Heartbeat = 4,
-      Empty = 5,
+      Text = 5,
     }
     private VariantOneofCase variantCase_ = VariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -245,7 +246,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Stats, other.Stats)) return false;
       if (!object.Equals(History, other.History)) return false;
       if (!object.Equals(Heartbeat, other.Heartbeat)) return false;
-      if (Empty != other.Empty) return false;
+      if (Text != other.Text) return false;
       if (VariantCase != other.VariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -258,7 +259,7 @@ namespace Meshtastic.Protobufs {
       if (variantCase_ == VariantOneofCase.Stats) hash ^= Stats.GetHashCode();
       if (variantCase_ == VariantOneofCase.History) hash ^= History.GetHashCode();
       if (variantCase_ == VariantOneofCase.Heartbeat) hash ^= Heartbeat.GetHashCode();
-      if (variantCase_ == VariantOneofCase.Empty) hash ^= Empty.GetHashCode();
+      if (variantCase_ == VariantOneofCase.Text) hash ^= Text.GetHashCode();
       hash ^= (int) variantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -294,9 +295,9 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(Heartbeat);
       }
-      if (variantCase_ == VariantOneofCase.Empty) {
-        output.WriteRawTag(40);
-        output.WriteBool(Empty);
+      if (variantCase_ == VariantOneofCase.Text) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Text);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -324,9 +325,9 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(Heartbeat);
       }
-      if (variantCase_ == VariantOneofCase.Empty) {
-        output.WriteRawTag(40);
-        output.WriteBool(Empty);
+      if (variantCase_ == VariantOneofCase.Text) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Text);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -350,8 +351,8 @@ namespace Meshtastic.Protobufs {
       if (variantCase_ == VariantOneofCase.Heartbeat) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Heartbeat);
       }
-      if (variantCase_ == VariantOneofCase.Empty) {
-        size += 1 + 1;
+      if (variantCase_ == VariantOneofCase.Text) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Text);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -387,8 +388,8 @@ namespace Meshtastic.Protobufs {
           }
           Heartbeat.MergeFrom(other.Heartbeat);
           break;
-        case VariantOneofCase.Empty:
-          Empty = other.Empty;
+        case VariantOneofCase.Text:
+          Text = other.Text;
           break;
       }
 
@@ -438,8 +439,8 @@ namespace Meshtastic.Protobufs {
             Heartbeat = subBuilder;
             break;
           }
-          case 40: {
-            Empty = input.ReadBool();
+          case 42: {
+            Text = input.ReadBytes();
             break;
           }
         }
@@ -488,8 +489,8 @@ namespace Meshtastic.Protobufs {
             Heartbeat = subBuilder;
             break;
           }
-          case 40: {
-            Empty = input.ReadBool();
+          case 42: {
+            Text = input.ReadBytes();
             break;
           }
         }
@@ -549,6 +550,16 @@ namespace Meshtastic.Protobufs {
         /// Router is responding to a request for stats.
         /// </summary>
         [pbr::OriginalName("ROUTER_STATS")] RouterStats = 7,
+        /// <summary>
+        ///
+        /// Router sends a text message from its history that was a direct message.
+        /// </summary>
+        [pbr::OriginalName("ROUTER_TEXT_DIRECT")] RouterTextDirect = 8,
+        /// <summary>
+        ///
+        /// Router sends a text message from its history that was a broadcast.
+        /// </summary>
+        [pbr::OriginalName("ROUTER_TEXT_BROADCAST")] RouterTextBroadcast = 9,
         /// <summary>
         ///
         /// Client is an in error state.
@@ -755,7 +766,7 @@ namespace Meshtastic.Protobufs {
         private uint returnMax_;
         /// <summary>
         ///
-        /// Is the heartbeat enabled on the server?
+        /// Maximum number of messages the server will return.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -771,7 +782,7 @@ namespace Meshtastic.Protobufs {
         private uint returnWindow_;
         /// <summary>
         ///
-        /// Is the heartbeat enabled on the server?
+        /// Maximum history window in minutes the server will return messages from.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1194,7 +1205,8 @@ namespace Meshtastic.Protobufs {
         private uint lastRequest_;
         /// <summary>
         ///
-        /// The window of messages that was used to filter the history client requested
+        /// Index in the packet history of the last message sent in a previous request to the server.
+        /// Will be sent to the client before sending the history and can be set in a subsequent request to avoid getting packets the server already sent to the client.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1440,7 +1452,7 @@ namespace Meshtastic.Protobufs {
         private uint period_;
         /// <summary>
         ///
-        /// Number of that will be sent to the client
+        /// Period in seconds that the heartbeat is sent out that will be sent to the client
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

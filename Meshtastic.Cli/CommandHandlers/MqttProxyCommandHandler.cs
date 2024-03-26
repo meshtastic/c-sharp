@@ -80,14 +80,14 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
         });
     }
 
-    private MqttClientOptions GetMqttClientOptions(DeviceStateContainer container)
+    private static MqttClientOptions GetMqttClientOptions(DeviceStateContainer container)
     {
         var builder = new MqttClientOptionsBuilder()
             .WithClientId(container.GetDeviceNodeInfo()?.User?.Id ?? container.MyNodeInfo.MyNodeNum.ToString());
 
         var address = container.LocalModuleConfig.Mqtt.Address;
         var host = address.Split(':').FirstOrDefault() ?? container.LocalModuleConfig.Mqtt.Address;
-        var port = address.Contains(":") ? address.Split(':').LastOrDefault() : null;
+        var port = address.Contains(':') ? address.Split(':').LastOrDefault() : null;
 
         if (container.LocalModuleConfig.Mqtt.TlsEnabled)
         {

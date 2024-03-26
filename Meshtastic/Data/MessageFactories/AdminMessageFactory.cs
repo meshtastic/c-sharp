@@ -141,4 +141,14 @@ public class AdminMessageFactory
     {
         return GetNewMeshPacket(new AdminMessage() { SetOwner = user });
     }
+
+    public MeshPacket CreateFixedPositionMessage(Position position)
+    {
+        return GetNewMeshPacket(new AdminMessage() { SetFixedPosition = position });
+    }
+
+    public MeshPacket RemovedFixedPositionMessage()
+    {
+        return GetNewMeshPacket(new AdminMessage() { RemoveFixedPosition = true });
+    }
 }

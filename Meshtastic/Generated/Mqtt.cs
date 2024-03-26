@@ -25,15 +25,27 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVtZXNodGFzdGljL21xdHQucHJvdG8SCm1lc2h0YXN0aWMaFW1lc2h0YXN0",
-            "aWMvbWVzaC5wcm90byJhCg9TZXJ2aWNlRW52ZWxvcGUSJgoGcGFja2V0GAEg",
-            "ASgLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0EhIKCmNoYW5uZWxfaWQYAiAB",
-            "KAkSEgoKZ2F0ZXdheV9pZBgDIAEoCUJfChNjb20uZ2Vla3N2aWxsZS5tZXNo",
-            "QgpNUVRUUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJh",
-            "dGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "aWMvbWVzaC5wcm90bxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8iYQoPU2Vy",
+            "dmljZUVudmVsb3BlEiYKBnBhY2tldBgBIAEoCzIWLm1lc2h0YXN0aWMuTWVz",
+            "aFBhY2tldBISCgpjaGFubmVsX2lkGAIgASgJEhIKCmdhdGV3YXlfaWQYAyAB",
+            "KAkivAMKCU1hcFJlcG9ydBIRCglsb25nX25hbWUYASABKAkSEgoKc2hvcnRf",
+            "bmFtZRgCIAEoCRIyCgRyb2xlGAMgASgOMiQubWVzaHRhc3RpYy5Db25maWcu",
+            "RGV2aWNlQ29uZmlnLlJvbGUSKwoIaHdfbW9kZWwYBCABKA4yGS5tZXNodGFz",
+            "dGljLkhhcmR3YXJlTW9kZWwSGAoQZmlybXdhcmVfdmVyc2lvbhgFIAEoCRI4",
+            "CgZyZWdpb24YBiABKA4yKC5tZXNodGFzdGljLkNvbmZpZy5Mb1JhQ29uZmln",
+            "LlJlZ2lvbkNvZGUSPwoMbW9kZW1fcHJlc2V0GAcgASgOMikubWVzaHRhc3Rp",
+            "Yy5Db25maWcuTG9SYUNvbmZpZy5Nb2RlbVByZXNldBIbChNoYXNfZGVmYXVs",
+            "dF9jaGFubmVsGAggASgIEhIKCmxhdGl0dWRlX2kYCSABKA8SEwoLbG9uZ2l0",
+            "dWRlX2kYCiABKA8SEAoIYWx0aXR1ZGUYCyABKAUSGgoScG9zaXRpb25fcHJl",
+            "Y2lzaW9uGAwgASgNEh4KFm51bV9vbmxpbmVfbG9jYWxfbm9kZXMYDSABKA1C",
+            "XwoTY29tLmdlZWtzdmlsbGUubWVzaEIKTVFUVFByb3Rvc1oiZ2l0aHViLmNv",
+            "bS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9i",
+            "dWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ServiceEnvelope), global::Meshtastic.Protobufs.ServiceEnvelope.Parser, new[]{ "Packet", "ChannelId", "GatewayId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ServiceEnvelope), global::Meshtastic.Protobufs.ServiceEnvelope.Parser, new[]{ "Packet", "ChannelId", "GatewayId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MapReport), global::Meshtastic.Protobufs.MapReport.Parser, new[]{ "LongName", "ShortName", "Role", "HwModel", "FirmwareVersion", "Region", "ModemPreset", "HasDefaultChannel", "LatitudeI", "LongitudeI", "Altitude", "PositionPrecision", "NumOnlineLocalNodes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -321,6 +333,697 @@ namespace Meshtastic.Protobufs {
           }
           case 26: {
             GatewayId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// Information about a node intended to be reported unencrypted to a map using MQTT.
+  /// </summary>
+  public sealed partial class MapReport : pb::IMessage<MapReport>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MapReport> _parser = new pb::MessageParser<MapReport>(() => new MapReport());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MapReport> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.MqttReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MapReport() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MapReport(MapReport other) : this() {
+      longName_ = other.longName_;
+      shortName_ = other.shortName_;
+      role_ = other.role_;
+      hwModel_ = other.hwModel_;
+      firmwareVersion_ = other.firmwareVersion_;
+      region_ = other.region_;
+      modemPreset_ = other.modemPreset_;
+      hasDefaultChannel_ = other.hasDefaultChannel_;
+      latitudeI_ = other.latitudeI_;
+      longitudeI_ = other.longitudeI_;
+      altitude_ = other.altitude_;
+      positionPrecision_ = other.positionPrecision_;
+      numOnlineLocalNodes_ = other.numOnlineLocalNodes_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MapReport Clone() {
+      return new MapReport(this);
+    }
+
+    /// <summary>Field number for the "long_name" field.</summary>
+    public const int LongNameFieldNumber = 1;
+    private string longName_ = "";
+    /// <summary>
+    ///
+    /// A full name for this user, i.e. "Kevin Hester"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LongName {
+      get { return longName_; }
+      set {
+        longName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "short_name" field.</summary>
+    public const int ShortNameFieldNumber = 2;
+    private string shortName_ = "";
+    /// <summary>
+    ///
+    /// A VERY short name, ideally two characters.
+    /// Suitable for a tiny OLED screen
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ShortName {
+      get { return shortName_; }
+      set {
+        shortName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "role" field.</summary>
+    public const int RoleFieldNumber = 3;
+    private global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role role_ = global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client;
+    /// <summary>
+    ///
+    /// Role of the node that applies specific settings for a particular use-case
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role Role {
+      get { return role_; }
+      set {
+        role_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hw_model" field.</summary>
+    public const int HwModelFieldNumber = 4;
+    private global::Meshtastic.Protobufs.HardwareModel hwModel_ = global::Meshtastic.Protobufs.HardwareModel.Unset;
+    /// <summary>
+    ///
+    /// Hardware model of the node, i.e. T-Beam, Heltec V3, etc...
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.HardwareModel HwModel {
+      get { return hwModel_; }
+      set {
+        hwModel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "firmware_version" field.</summary>
+    public const int FirmwareVersionFieldNumber = 5;
+    private string firmwareVersion_ = "";
+    /// <summary>
+    ///
+    /// Device firmware version string
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FirmwareVersion {
+      get { return firmwareVersion_; }
+      set {
+        firmwareVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "region" field.</summary>
+    public const int RegionFieldNumber = 6;
+    private global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode region_ = global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode.Unset;
+    /// <summary>
+    ///
+    /// The region code for the radio (US, CN, EU433, etc...)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode Region {
+      get { return region_; }
+      set {
+        region_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "modem_preset" field.</summary>
+    public const int ModemPresetFieldNumber = 7;
+    private global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset modemPreset_ = global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset.LongFast;
+    /// <summary>
+    ///
+    /// Modem preset used by the radio (LongFast, MediumSlow, etc...)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset ModemPreset {
+      get { return modemPreset_; }
+      set {
+        modemPreset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "has_default_channel" field.</summary>
+    public const int HasDefaultChannelFieldNumber = 8;
+    private bool hasDefaultChannel_;
+    /// <summary>
+    ///
+    /// Whether the node has a channel with default PSK and name (LongFast, MediumSlow, etc...)
+    /// and it uses the default frequency slot given the region and modem preset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDefaultChannel {
+      get { return hasDefaultChannel_; }
+      set {
+        hasDefaultChannel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "latitude_i" field.</summary>
+    public const int LatitudeIFieldNumber = 9;
+    private int latitudeI_;
+    /// <summary>
+    ///
+    /// Latitude: multiply by 1e-7 to get degrees in floating point
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LatitudeI {
+      get { return latitudeI_; }
+      set {
+        latitudeI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "longitude_i" field.</summary>
+    public const int LongitudeIFieldNumber = 10;
+    private int longitudeI_;
+    /// <summary>
+    ///
+    /// Longitude: multiply by 1e-7 to get degrees in floating point
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LongitudeI {
+      get { return longitudeI_; }
+      set {
+        longitudeI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "altitude" field.</summary>
+    public const int AltitudeFieldNumber = 11;
+    private int altitude_;
+    /// <summary>
+    ///
+    /// Altitude in meters above MSL
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Altitude {
+      get { return altitude_; }
+      set {
+        altitude_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "position_precision" field.</summary>
+    public const int PositionPrecisionFieldNumber = 12;
+    private uint positionPrecision_;
+    /// <summary>
+    ///
+    /// Indicates the bits of precision for latitude and longitude set by the sending node
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PositionPrecision {
+      get { return positionPrecision_; }
+      set {
+        positionPrecision_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "num_online_local_nodes" field.</summary>
+    public const int NumOnlineLocalNodesFieldNumber = 13;
+    private uint numOnlineLocalNodes_;
+    /// <summary>
+    ///
+    /// Number of online nodes (heard in the last 2 hours) this node has in its list that were received locally (not via MQTT)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NumOnlineLocalNodes {
+      get { return numOnlineLocalNodes_; }
+      set {
+        numOnlineLocalNodes_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MapReport);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MapReport other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LongName != other.LongName) return false;
+      if (ShortName != other.ShortName) return false;
+      if (Role != other.Role) return false;
+      if (HwModel != other.HwModel) return false;
+      if (FirmwareVersion != other.FirmwareVersion) return false;
+      if (Region != other.Region) return false;
+      if (ModemPreset != other.ModemPreset) return false;
+      if (HasDefaultChannel != other.HasDefaultChannel) return false;
+      if (LatitudeI != other.LatitudeI) return false;
+      if (LongitudeI != other.LongitudeI) return false;
+      if (Altitude != other.Altitude) return false;
+      if (PositionPrecision != other.PositionPrecision) return false;
+      if (NumOnlineLocalNodes != other.NumOnlineLocalNodes) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (LongName.Length != 0) hash ^= LongName.GetHashCode();
+      if (ShortName.Length != 0) hash ^= ShortName.GetHashCode();
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) hash ^= Role.GetHashCode();
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) hash ^= HwModel.GetHashCode();
+      if (FirmwareVersion.Length != 0) hash ^= FirmwareVersion.GetHashCode();
+      if (Region != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode.Unset) hash ^= Region.GetHashCode();
+      if (ModemPreset != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset.LongFast) hash ^= ModemPreset.GetHashCode();
+      if (HasDefaultChannel != false) hash ^= HasDefaultChannel.GetHashCode();
+      if (LatitudeI != 0) hash ^= LatitudeI.GetHashCode();
+      if (LongitudeI != 0) hash ^= LongitudeI.GetHashCode();
+      if (Altitude != 0) hash ^= Altitude.GetHashCode();
+      if (PositionPrecision != 0) hash ^= PositionPrecision.GetHashCode();
+      if (NumOnlineLocalNodes != 0) hash ^= NumOnlineLocalNodes.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (LongName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LongName);
+      }
+      if (ShortName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ShortName);
+      }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Role);
+      }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) HwModel);
+      }
+      if (FirmwareVersion.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(FirmwareVersion);
+      }
+      if (Region != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode.Unset) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Region);
+      }
+      if (ModemPreset != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset.LongFast) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ModemPreset);
+      }
+      if (HasDefaultChannel != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(HasDefaultChannel);
+      }
+      if (LatitudeI != 0) {
+        output.WriteRawTag(77);
+        output.WriteSFixed32(LatitudeI);
+      }
+      if (LongitudeI != 0) {
+        output.WriteRawTag(85);
+        output.WriteSFixed32(LongitudeI);
+      }
+      if (Altitude != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(Altitude);
+      }
+      if (PositionPrecision != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(PositionPrecision);
+      }
+      if (NumOnlineLocalNodes != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(NumOnlineLocalNodes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LongName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LongName);
+      }
+      if (ShortName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ShortName);
+      }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Role);
+      }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) HwModel);
+      }
+      if (FirmwareVersion.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(FirmwareVersion);
+      }
+      if (Region != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode.Unset) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Region);
+      }
+      if (ModemPreset != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset.LongFast) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ModemPreset);
+      }
+      if (HasDefaultChannel != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(HasDefaultChannel);
+      }
+      if (LatitudeI != 0) {
+        output.WriteRawTag(77);
+        output.WriteSFixed32(LatitudeI);
+      }
+      if (LongitudeI != 0) {
+        output.WriteRawTag(85);
+        output.WriteSFixed32(LongitudeI);
+      }
+      if (Altitude != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(Altitude);
+      }
+      if (PositionPrecision != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(PositionPrecision);
+      }
+      if (NumOnlineLocalNodes != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(NumOnlineLocalNodes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (LongName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LongName);
+      }
+      if (ShortName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ShortName);
+      }
+      if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Role);
+      }
+      if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HwModel);
+      }
+      if (FirmwareVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareVersion);
+      }
+      if (Region != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode.Unset) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Region);
+      }
+      if (ModemPreset != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset.LongFast) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModemPreset);
+      }
+      if (HasDefaultChannel != false) {
+        size += 1 + 1;
+      }
+      if (LatitudeI != 0) {
+        size += 1 + 4;
+      }
+      if (LongitudeI != 0) {
+        size += 1 + 4;
+      }
+      if (Altitude != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Altitude);
+      }
+      if (PositionPrecision != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PositionPrecision);
+      }
+      if (NumOnlineLocalNodes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumOnlineLocalNodes);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MapReport other) {
+      if (other == null) {
+        return;
+      }
+      if (other.LongName.Length != 0) {
+        LongName = other.LongName;
+      }
+      if (other.ShortName.Length != 0) {
+        ShortName = other.ShortName;
+      }
+      if (other.Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
+        Role = other.Role;
+      }
+      if (other.HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) {
+        HwModel = other.HwModel;
+      }
+      if (other.FirmwareVersion.Length != 0) {
+        FirmwareVersion = other.FirmwareVersion;
+      }
+      if (other.Region != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode.Unset) {
+        Region = other.Region;
+      }
+      if (other.ModemPreset != global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset.LongFast) {
+        ModemPreset = other.ModemPreset;
+      }
+      if (other.HasDefaultChannel != false) {
+        HasDefaultChannel = other.HasDefaultChannel;
+      }
+      if (other.LatitudeI != 0) {
+        LatitudeI = other.LatitudeI;
+      }
+      if (other.LongitudeI != 0) {
+        LongitudeI = other.LongitudeI;
+      }
+      if (other.Altitude != 0) {
+        Altitude = other.Altitude;
+      }
+      if (other.PositionPrecision != 0) {
+        PositionPrecision = other.PositionPrecision;
+      }
+      if (other.NumOnlineLocalNodes != 0) {
+        NumOnlineLocalNodes = other.NumOnlineLocalNodes;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            LongName = input.ReadString();
+            break;
+          }
+          case 18: {
+            ShortName = input.ReadString();
+            break;
+          }
+          case 24: {
+            Role = (global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            HwModel = (global::Meshtastic.Protobufs.HardwareModel) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            FirmwareVersion = input.ReadString();
+            break;
+          }
+          case 48: {
+            Region = (global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            ModemPreset = (global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            HasDefaultChannel = input.ReadBool();
+            break;
+          }
+          case 77: {
+            LatitudeI = input.ReadSFixed32();
+            break;
+          }
+          case 85: {
+            LongitudeI = input.ReadSFixed32();
+            break;
+          }
+          case 88: {
+            Altitude = input.ReadInt32();
+            break;
+          }
+          case 96: {
+            PositionPrecision = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            NumOnlineLocalNodes = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            LongName = input.ReadString();
+            break;
+          }
+          case 18: {
+            ShortName = input.ReadString();
+            break;
+          }
+          case 24: {
+            Role = (global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            HwModel = (global::Meshtastic.Protobufs.HardwareModel) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            FirmwareVersion = input.ReadString();
+            break;
+          }
+          case 48: {
+            Region = (global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            ModemPreset = (global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            HasDefaultChannel = input.ReadBool();
+            break;
+          }
+          case 77: {
+            LatitudeI = input.ReadSFixed32();
+            break;
+          }
+          case 85: {
+            LongitudeI = input.ReadSFixed32();
+            break;
+          }
+          case 88: {
+            Altitude = input.ReadInt32();
+            break;
+          }
+          case 96: {
+            PositionPrecision = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            NumOnlineLocalNodes = input.ReadUInt32();
             break;
           }
         }

@@ -10,6 +10,13 @@ public class ToRadioMessageFactory
     {
     }
 
+    // Create a ToRadio message with a empty payload
+    public ToRadio CreateKeepAliveMessage() =>
+       new()
+       {
+           Heartbeat = new Heartbeat()
+       };
+
     public ToRadio CreateWantConfigMessage() =>
         new()
         {

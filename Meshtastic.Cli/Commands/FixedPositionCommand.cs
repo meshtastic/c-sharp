@@ -30,14 +30,19 @@ public class FixedPositionCommand : Command
         altArg.SetDefaultValue(0);
         AddArgument(altArg);
 
-        this.SetHandler(async (lat, lon, alt, context, commandContext) =>
+        var clearOption = new Option<bool>("clear", description: "Clear fixed position");
+        clearOption.SetDefaultValue(false);
+        AddOption(clearOption);
+
+        this.SetHandler(async (lat, lon, alt, clear, context, commandContext) =>
             {
-                var handler = new FixedPositionCommandHandler(lat, lon, alt, context, commandContext);
+                var handler = new FixedPositionCommandHandler(lat, lon, alt, clear, context, commandContext);
                 await handler.Handle();
             },
             latArg,
             lonArg,
             altArg,
+            clearOption,
             new DeviceConnectionBinder(port, host),
             new CommandContextBinder(log, output, dest, selectDest));
     }
