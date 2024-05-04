@@ -197,7 +197,7 @@ namespace Meshtastic.Protobufs {
   #region Messages
   /// <summary>
   ///
-  /// Packets for the official ATAK Plugin 
+  /// Packets for the official ATAK Plugin
   /// </summary>
   public sealed partial class TAKPacket : pb::IMessage<TAKPacket>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

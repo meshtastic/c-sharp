@@ -24,8 +24,8 @@ namespace Meshtastic.Protobufs {
     static MqttReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVtZXNodGFzdGljL21xdHQucHJvdG8SCm1lc2h0YXN0aWMaFW1lc2h0YXN0",
-            "aWMvbWVzaC5wcm90bxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8iYQoPU2Vy",
+            "ChVtZXNodGFzdGljL21xdHQucHJvdG8SCm1lc2h0YXN0aWMaF21lc2h0YXN0",
+            "aWMvY29uZmlnLnByb3RvGhVtZXNodGFzdGljL21lc2gucHJvdG8iYQoPU2Vy",
             "dmljZUVudmVsb3BlEiYKBnBhY2tldBgBIAEoCzIWLm1lc2h0YXN0aWMuTWVz",
             "aFBhY2tldBISCgpjaGFubmVsX2lkGAIgASgJEhIKCmdhdGV3YXlfaWQYAyAB",
             "KAkivAMKCU1hcFJlcG9ydBIRCglsb25nX25hbWUYASABKAkSEgoKc2hvcnRf",
@@ -42,7 +42,7 @@ namespace Meshtastic.Protobufs {
             "bS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9i",
             "dWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ServiceEnvelope), global::Meshtastic.Protobufs.ServiceEnvelope.Parser, new[]{ "Packet", "ChannelId", "GatewayId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MapReport), global::Meshtastic.Protobufs.MapReport.Parser, new[]{ "LongName", "ShortName", "Role", "HwModel", "FirmwareVersion", "Region", "ModemPreset", "HasDefaultChannel", "LatitudeI", "LongitudeI", "Altitude", "PositionPrecision", "NumOnlineLocalNodes" }, null, null, null, null)

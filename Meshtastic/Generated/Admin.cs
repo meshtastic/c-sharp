@@ -775,7 +775,7 @@ namespace Meshtastic.Protobufs {
     public const int RemoveFixedPositionFieldNumber = 42;
     /// <summary>
     ///
-    /// Clear fixed position coordinates and then set position.fixed_position = false 
+    /// Clear fixed position coordinates and then set position.fixed_position = false
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
