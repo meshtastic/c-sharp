@@ -129,7 +129,7 @@ namespace Meshtastic.Protobufs {
             "dGljLkhhcmR3YXJlTW9kZWwSGQoRaGFzUmVtb3RlSGFyZHdhcmUYCiABKAgi",
             "CwoJSGVhcnRiZWF0IlUKFU5vZGVSZW1vdGVIYXJkd2FyZVBpbhIQCghub2Rl",
             "X251bRgBIAEoDRIqCgNwaW4YAiABKAsyHS5tZXNodGFzdGljLlJlbW90ZUhh",
-            "cmR3YXJlUGluKtQHCg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExP",
+            "cmR3YXJlUGluKpUICg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExP",
             "UkFfVjIQARIMCghUTE9SQV9WMRACEhIKDlRMT1JBX1YyXzFfMVA2EAMSCQoF",
             "VEJFQU0QBBIPCgtIRUxURUNfVjJfMBAFEg4KClRCRUFNX1YwUDcQBhIKCgZU",
             "X0VDSE8QBxIQCgxUTE9SQV9WMV8xUDMQCBILCgdSQUs0NjMxEAkSDwoLSEVM",
@@ -150,16 +150,18 @@ namespace Meshtastic.Protobufs {
             "QVRDSF9TMxAzEhEKDVBJQ09NUFVURVJfUzMQNBIPCgtIRUxURUNfSFQ2MhA1",
             "EhIKDkVCWVRFX0VTUDMyX1MzEDYSEQoNRVNQMzJfUzNfUElDTxA3Eg0KCUNI",
             "QVRURVJfMhA4Eh4KGkhFTFRFQ19XSVJFTEVTU19QQVBFUl9WMV8wEDkSIAoc",
-            "SEVMVEVDX1dJUkVMRVNTX1RSQUNLRVJfVjFfMBA6Eg8KClBSSVZBVEVfSFcQ",
-            "/wEqLAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRBX1BBWUxPQURfTEVO",
-            "EO0BKu4BChFDcml0aWNhbEVycm9yQ29kZRIICgROT05FEAASDwoLVFhfV0FU",
-            "Q0hET0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoITk9fUkFESU8QAxIP",
-            "CgtVTlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJTEVEEAUSDQoJTk9f",
-            "QVhQMTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5HEAcSEwoPVFJBTlNN",
-            "SVRfRkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEyNjJfRkFJTFVSRRAK",
-            "EhEKDVJBRElPX1NQSV9CVUcQC0JfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpN",
-            "ZXNoUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVk",
-            "qgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "SEVMVEVDX1dJUkVMRVNTX1RSQUNLRVJfVjFfMBA6EgsKB1VOUEhPTkUQOxIM",
+            "CghURF9MT1JBQxA8EhMKD0NERUJZVEVfRU9SQV9TMxA9Eg8KC1RXQ19NRVNI",
+            "X1Y0ED4SDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAA",
+            "EhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2Rl",
+            "EggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dB",
+            "SVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hf",
+            "VU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElP",
+            "X1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJ",
+            "EhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl8KE2Nv",
+            "bS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5jb20vbWVz",
+            "aHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oC",
+            "AGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -479,6 +481,28 @@ namespace Meshtastic.Protobufs {
     /// Older "V1.0" Variant
     /// </summary>
     [pbr::OriginalName("HELTEC_WIRELESS_TRACKER_V1_0")] HeltecWirelessTrackerV10 = 58,
+    /// <summary>
+    ///
+    /// unPhone with ESP32-S3, TFT touchscreen,  LSM6DS3TR-C accelerometer and gyroscope
+    /// </summary>
+    [pbr::OriginalName("UNPHONE")] Unphone = 59,
+    /// <summary>
+    ///
+    /// Teledatics TD-LORAC NRF52840 based M.2 LoRA module
+    /// Compatible with the TD-WRLS development board
+    /// </summary>
+    [pbr::OriginalName("TD_LORAC")] TdLorac = 60,
+    /// <summary>
+    ///
+    /// CDEBYTE EoRa-S3 board using their own MM modules, clone of LILYGO T3S3
+    /// </summary>
+    [pbr::OriginalName("CDEBYTE_EORA_S3")] CdebyteEoraS3 = 61,
+    /// <summary>
+    ///
+    /// TWC_MESH_V4 
+    /// Adafruit NRF52840 feather express with SX1262, SSD1306 OLED and NEO6M GPS
+    /// </summary>
+    [pbr::OriginalName("TWC_MESH_V4")] TwcMeshV4 = 62,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -4519,8 +4543,8 @@ namespace Meshtastic.Protobufs {
     public const int HopStartFieldNumber = 15;
     private uint hopStart_;
     /// <summary>
-    /// 
-    /// Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header. 
+    ///
+    /// Hop limit with which the original packet started. Sent via LoRa using three bits in the unencrypted header.
     /// When receiving a packet, the difference between hop_start and hop_limit gives how many hops it traveled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9605,7 +9629,7 @@ namespace Meshtastic.Protobufs {
   }
 
   /// <summary>
-  /// 
+  ///
   /// A heartbeat message is sent to the node from the client to keep the connection alive.
   /// This is currently only needed to keep serial connections alive, but can be used by any PhoneAPI.
   /// </summary>

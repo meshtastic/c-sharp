@@ -10,22 +10,24 @@ namespace Meshtastic.Connections;
 public class SerialConnection : DeviceConnection
 {
     private readonly SerialPort serialPort;
+    private const Handshake DEFAULT_HANDSHAKE = Handshake.None;
+    private const bool DEFAULT_DTR_ENABLE = true;
 
     public SerialConnection(ILogger logger, string port, int baudRate = Resources.DEFAULT_BAUD_RATE) : base(logger)
     {
         serialPort = new SerialPort(port, baudRate)
         {
-            DtrEnable = true,
-            Handshake = Handshake.XOnXOff,
-            WriteBufferSize = 8,
+            DtrEnable = DEFAULT_DTR_ENABLE,
+            Handshake = DEFAULT_HANDSHAKE,
+            WriteBufferSize = 256,
         };
     }
 
     public SerialConnection(ILogger logger, 
         string port, 
         DeviceStateContainer container, 
-        bool dtrEnable = true, 
-        Handshake handshake = Handshake.XOnXOff, 
+        bool dtrEnable = DEFAULT_DTR_ENABLE, 
+        Handshake handshake = DEFAULT_HANDSHAKE, 
         int baudRate = Resources.DEFAULT_BAUD_RATE) : base(logger)
     {
         serialPort = new SerialPort(port, baudRate)

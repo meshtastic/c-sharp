@@ -24,42 +24,44 @@ namespace Meshtastic.Protobufs {
     static TelemetryReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChptZXNodGFzdGljL3RlbGVtZXRyeS5wcm90bxIKbWVzaHRhc3RpYyJpCg1E",
-            "ZXZpY2VNZXRyaWNzEhUKDWJhdHRlcnlfbGV2ZWwYASABKA0SDwoHdm9sdGFn",
-            "ZRgCIAEoAhIbChNjaGFubmVsX3V0aWxpemF0aW9uGAMgASgCEhMKC2Fpcl91",
-            "dGlsX3R4GAQgASgCIpsBChJFbnZpcm9ubWVudE1ldHJpY3MSEwoLdGVtcGVy",
-            "YXR1cmUYASABKAISGQoRcmVsYXRpdmVfaHVtaWRpdHkYAiABKAISGwoTYmFy",
-            "b21ldHJpY19wcmVzc3VyZRgDIAEoAhIWCg5nYXNfcmVzaXN0YW5jZRgEIAEo",
-            "AhIPCgd2b2x0YWdlGAUgASgCEg8KB2N1cnJlbnQYBiABKAIijAEKDFBvd2Vy",
-            "TWV0cmljcxITCgtjaDFfdm9sdGFnZRgBIAEoAhITCgtjaDFfY3VycmVudBgC",
-            "IAEoAhITCgtjaDJfdm9sdGFnZRgDIAEoAhITCgtjaDJfY3VycmVudBgEIAEo",
-            "AhITCgtjaDNfdm9sdGFnZRgFIAEoAhITCgtjaDNfY3VycmVudBgGIAEoAiK/",
-            "AgoRQWlyUXVhbGl0eU1ldHJpY3MSFQoNcG0xMF9zdGFuZGFyZBgBIAEoDRIV",
-            "Cg1wbTI1X3N0YW5kYXJkGAIgASgNEhYKDnBtMTAwX3N0YW5kYXJkGAMgASgN",
-            "EhoKEnBtMTBfZW52aXJvbm1lbnRhbBgEIAEoDRIaChJwbTI1X2Vudmlyb25t",
-            "ZW50YWwYBSABKA0SGwoTcG0xMDBfZW52aXJvbm1lbnRhbBgGIAEoDRIWCg5w",
-            "YXJ0aWNsZXNfMDN1bRgHIAEoDRIWCg5wYXJ0aWNsZXNfMDV1bRgIIAEoDRIW",
-            "Cg5wYXJ0aWNsZXNfMTB1bRgJIAEoDRIWCg5wYXJ0aWNsZXNfMjV1bRgKIAEo",
-            "DRIWCg5wYXJ0aWNsZXNfNTB1bRgLIAEoDRIXCg9wYXJ0aWNsZXNfMTAwdW0Y",
-            "DCABKA0iiQIKCVRlbGVtZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRldmljZV9t",
-            "ZXRyaWNzGAIgASgLMhkubWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNzSAASPQoT",
-            "ZW52aXJvbm1lbnRfbWV0cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMuRW52aXJv",
-            "bm1lbnRNZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgEIAEoCzId",
-            "Lm1lc2h0YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dlcl9tZXRy",
-            "aWNzGAUgASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIAEIJCgd2YXJp",
-            "YW50KuABChNUZWxlbWV0cnlTZW5zb3JUeXBlEhAKDFNFTlNPUl9VTlNFVBAA",
-            "EgoKBkJNRTI4MBABEgoKBkJNRTY4MBACEgsKB01DUDk4MDgQAxIKCgZJTkEy",
-            "NjAQBBIKCgZJTkEyMTkQBRIKCgZCTVAyODAQBhIJCgVTSFRDMxAHEgkKBUxQ",
-            "UzIyEAgSCwoHUU1DNjMxMBAJEgsKB1FNSTg2NTgQChIMCghRTUM1ODgzTBAL",
-            "EgkKBVNIVDMxEAwSDAoIUE1TQTAwM0kQDRILCgdJTkEzMjIxEA4SCgoGQk1Q",
-            "MDg1EA9CZAoTY29tLmdlZWtzdmlsbGUubWVzaEIPVGVsZW1ldHJ5UHJvdG9z",
-            "WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRh",
-            "c3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "ChptZXNodGFzdGljL3RlbGVtZXRyeS5wcm90bxIKbWVzaHRhc3RpYyKBAQoN",
+            "RGV2aWNlTWV0cmljcxIVCg1iYXR0ZXJ5X2xldmVsGAEgASgNEg8KB3ZvbHRh",
+            "Z2UYAiABKAISGwoTY2hhbm5lbF91dGlsaXphdGlvbhgDIAEoAhITCgthaXJf",
+            "dXRpbF90eBgEIAEoAhIWCg51cHRpbWVfc2Vjb25kcxgFIAEoDSK6AQoSRW52",
+            "aXJvbm1lbnRNZXRyaWNzEhMKC3RlbXBlcmF0dXJlGAEgASgCEhkKEXJlbGF0",
+            "aXZlX2h1bWlkaXR5GAIgASgCEhsKE2Jhcm9tZXRyaWNfcHJlc3N1cmUYAyAB",
+            "KAISFgoOZ2FzX3Jlc2lzdGFuY2UYBCABKAISDwoHdm9sdGFnZRgFIAEoAhIP",
+            "CgdjdXJyZW50GAYgASgCEgsKA2lhcRgHIAEoDRIQCghkaXN0YW5jZRgIIAEo",
+            "AiKMAQoMUG93ZXJNZXRyaWNzEhMKC2NoMV92b2x0YWdlGAEgASgCEhMKC2No",
+            "MV9jdXJyZW50GAIgASgCEhMKC2NoMl92b2x0YWdlGAMgASgCEhMKC2NoMl9j",
+            "dXJyZW50GAQgASgCEhMKC2NoM192b2x0YWdlGAUgASgCEhMKC2NoM19jdXJy",
+            "ZW50GAYgASgCIr8CChFBaXJRdWFsaXR5TWV0cmljcxIVCg1wbTEwX3N0YW5k",
+            "YXJkGAEgASgNEhUKDXBtMjVfc3RhbmRhcmQYAiABKA0SFgoOcG0xMDBfc3Rh",
+            "bmRhcmQYAyABKA0SGgoScG0xMF9lbnZpcm9ubWVudGFsGAQgASgNEhoKEnBt",
+            "MjVfZW52aXJvbm1lbnRhbBgFIAEoDRIbChNwbTEwMF9lbnZpcm9ubWVudGFs",
+            "GAYgASgNEhYKDnBhcnRpY2xlc18wM3VtGAcgASgNEhYKDnBhcnRpY2xlc18w",
+            "NXVtGAggASgNEhYKDnBhcnRpY2xlc18xMHVtGAkgASgNEhYKDnBhcnRpY2xl",
+            "c18yNXVtGAogASgNEhYKDnBhcnRpY2xlc181MHVtGAsgASgNEhcKD3BhcnRp",
+            "Y2xlc18xMDB1bRgMIAEoDSKJAgoJVGVsZW1ldHJ5EgwKBHRpbWUYASABKAcS",
+            "MwoOZGV2aWNlX21ldHJpY3MYAiABKAsyGS5tZXNodGFzdGljLkRldmljZU1l",
+            "dHJpY3NIABI9ChNlbnZpcm9ubWVudF9tZXRyaWNzGAMgASgLMh4ubWVzaHRh",
+            "c3RpYy5FbnZpcm9ubWVudE1ldHJpY3NIABI8ChNhaXJfcXVhbGl0eV9tZXRy",
+            "aWNzGAQgASgLMh0ubWVzaHRhc3RpYy5BaXJRdWFsaXR5TWV0cmljc0gAEjEK",
+            "DXBvd2VyX21ldHJpY3MYBSABKAsyGC5tZXNodGFzdGljLlBvd2VyTWV0cmlj",
+            "c0gAQgkKB3ZhcmlhbnQq7gEKE1RlbGVtZXRyeVNlbnNvclR5cGUSEAoMU0VO",
+            "U09SX1VOU0VUEAASCgoGQk1FMjgwEAESCgoGQk1FNjgwEAISCwoHTUNQOTgw",
+            "OBADEgoKBklOQTI2MBAEEgoKBklOQTIxORAFEgoKBkJNUDI4MBAGEgkKBVNI",
+            "VEMzEAcSCQoFTFBTMjIQCBILCgdRTUM2MzEwEAkSCwoHUU1JODY1OBAKEgwK",
+            "CFFNQzU4ODNMEAsSCQoFU0hUMzEQDBIMCghQTVNBMDAzSRANEgsKB0lOQTMy",
+            "MjEQDhIKCgZCTVAwODUQDxIMCghSQ1dMOTYyMBAQQmQKE2NvbS5nZWVrc3Zp",
+            "bGxlLm1lc2hCD1RlbGVtZXRyeVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFz",
+            "dGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics" }, new[]{ "Variant" }, null, null, null)
@@ -154,6 +156,11 @@ namespace Meshtastic.Protobufs {
     /// BMP085/BMP180 High accuracy temperature and pressure (older Version of BMP280)
     /// </summary>
     [pbr::OriginalName("BMP085")] Bmp085 = 15,
+    /// <summary>
+    ///
+    /// RCWL-9620 Doppler Radar Distance Sensor, used for water level detection
+    /// </summary>
+    [pbr::OriginalName("RCWL9620")] Rcwl9620 = 16,
   }
 
   #endregion
@@ -201,6 +208,7 @@ namespace Meshtastic.Protobufs {
       voltage_ = other.voltage_;
       channelUtilization_ = other.channelUtilization_;
       airUtilTx_ = other.airUtilTx_;
+      uptimeSeconds_ = other.uptimeSeconds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -274,6 +282,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "uptime_seconds" field.</summary>
+    public const int UptimeSecondsFieldNumber = 5;
+    private uint uptimeSeconds_;
+    /// <summary>
+    ///
+    /// How long the device has been running since the last reboot (in seconds)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UptimeSeconds {
+      get { return uptimeSeconds_; }
+      set {
+        uptimeSeconds_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -293,6 +317,7 @@ namespace Meshtastic.Protobufs {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Voltage, other.Voltage)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ChannelUtilization, other.ChannelUtilization)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AirUtilTx, other.AirUtilTx)) return false;
+      if (UptimeSeconds != other.UptimeSeconds) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -304,6 +329,7 @@ namespace Meshtastic.Protobufs {
       if (Voltage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Voltage);
       if (ChannelUtilization != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ChannelUtilization);
       if (AirUtilTx != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AirUtilTx);
+      if (UptimeSeconds != 0) hash ^= UptimeSeconds.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -338,6 +364,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(37);
         output.WriteFloat(AirUtilTx);
       }
+      if (UptimeSeconds != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(UptimeSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -364,6 +394,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(37);
         output.WriteFloat(AirUtilTx);
       }
+      if (UptimeSeconds != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(UptimeSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -385,6 +419,9 @@ namespace Meshtastic.Protobufs {
       }
       if (AirUtilTx != 0F) {
         size += 1 + 4;
+      }
+      if (UptimeSeconds != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UptimeSeconds);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -409,6 +446,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.AirUtilTx != 0F) {
         AirUtilTx = other.AirUtilTx;
+      }
+      if (other.UptimeSeconds != 0) {
+        UptimeSeconds = other.UptimeSeconds;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -441,6 +481,10 @@ namespace Meshtastic.Protobufs {
             AirUtilTx = input.ReadFloat();
             break;
           }
+          case 40: {
+            UptimeSeconds = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -470,6 +514,10 @@ namespace Meshtastic.Protobufs {
           }
           case 37: {
             AirUtilTx = input.ReadFloat();
+            break;
+          }
+          case 40: {
+            UptimeSeconds = input.ReadUInt32();
             break;
           }
         }
@@ -523,6 +571,8 @@ namespace Meshtastic.Protobufs {
       gasResistance_ = other.gasResistance_;
       voltage_ = other.voltage_;
       current_ = other.current_;
+      iaq_ = other.iaq_;
+      distance_ = other.distance_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -628,6 +678,39 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "iaq" field.</summary>
+    public const int IaqFieldNumber = 7;
+    private uint iaq_;
+    /// <summary>
+    /// 
+    /// relative scale IAQ value as measured by Bosch BME680 . value 0-500.
+    /// Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Iaq {
+      get { return iaq_; }
+      set {
+        iaq_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "distance" field.</summary>
+    public const int DistanceFieldNumber = 8;
+    private float distance_;
+    /// <summary>
+    ///
+    /// RCWL9620 Doppler Radar Distance Sensor, used for water level detection. Float value in mm.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Distance {
+      get { return distance_; }
+      set {
+        distance_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -649,6 +732,8 @@ namespace Meshtastic.Protobufs {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(GasResistance, other.GasResistance)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Voltage, other.Voltage)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Current, other.Current)) return false;
+      if (Iaq != other.Iaq) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Distance, other.Distance)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -662,6 +747,8 @@ namespace Meshtastic.Protobufs {
       if (GasResistance != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(GasResistance);
       if (Voltage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Voltage);
       if (Current != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Current);
+      if (Iaq != 0) hash ^= Iaq.GetHashCode();
+      if (Distance != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Distance);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -704,6 +791,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(53);
         output.WriteFloat(Current);
       }
+      if (Iaq != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Iaq);
+      }
+      if (Distance != 0F) {
+        output.WriteRawTag(69);
+        output.WriteFloat(Distance);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -738,6 +833,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(53);
         output.WriteFloat(Current);
       }
+      if (Iaq != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Iaq);
+      }
+      if (Distance != 0F) {
+        output.WriteRawTag(69);
+        output.WriteFloat(Distance);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -764,6 +867,12 @@ namespace Meshtastic.Protobufs {
         size += 1 + 4;
       }
       if (Current != 0F) {
+        size += 1 + 4;
+      }
+      if (Iaq != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Iaq);
+      }
+      if (Distance != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -795,6 +904,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.Current != 0F) {
         Current = other.Current;
+      }
+      if (other.Iaq != 0) {
+        Iaq = other.Iaq;
+      }
+      if (other.Distance != 0F) {
+        Distance = other.Distance;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -835,6 +950,14 @@ namespace Meshtastic.Protobufs {
             Current = input.ReadFloat();
             break;
           }
+          case 56: {
+            Iaq = input.ReadUInt32();
+            break;
+          }
+          case 69: {
+            Distance = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -872,6 +995,14 @@ namespace Meshtastic.Protobufs {
           }
           case 53: {
             Current = input.ReadFloat();
+            break;
+          }
+          case 56: {
+            Iaq = input.ReadUInt32();
+            break;
+          }
+          case 69: {
+            Distance = input.ReadFloat();
             break;
           }
         }
@@ -2062,7 +2193,7 @@ namespace Meshtastic.Protobufs {
     public const int PowerMetricsFieldNumber = 5;
     /// <summary>
     ///
-    /// Power Metrics 
+    /// Power Metrics
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

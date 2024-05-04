@@ -29,19 +29,19 @@ namespace Meshtastic.Protobufs {
             "GAIgASgMEgwKBG5hbWUYAyABKAkSCgoCaWQYBCABKAcSFgoOdXBsaW5rX2Vu",
             "YWJsZWQYBSABKAgSGAoQZG93bmxpbmtfZW5hYmxlZBgGIAEoCBIzCg9tb2R1",
             "bGVfc2V0dGluZ3MYByABKAsyGi5tZXNodGFzdGljLk1vZHVsZVNldHRpbmdz",
-            "IiwKDk1vZHVsZVNldHRpbmdzEhoKEnBvc2l0aW9uX3ByZWNpc2lvbhgBIAEo",
-            "DSKhAQoHQ2hhbm5lbBINCgVpbmRleBgBIAEoBRItCghzZXR0aW5ncxgCIAEo",
-            "CzIbLm1lc2h0YXN0aWMuQ2hhbm5lbFNldHRpbmdzEiYKBHJvbGUYAyABKA4y",
-            "GC5tZXNodGFzdGljLkNoYW5uZWwuUm9sZSIwCgRSb2xlEgwKCERJU0FCTEVE",
-            "EAASCwoHUFJJTUFSWRABEg0KCVNFQ09OREFSWRACQmIKE2NvbS5nZWVrc3Zp",
-            "bGxlLm1lc2hCDUNoYW5uZWxQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3Rp",
-            "Yy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJv",
-            "dG8z"));
+            "IkUKDk1vZHVsZVNldHRpbmdzEhoKEnBvc2l0aW9uX3ByZWNpc2lvbhgBIAEo",
+            "DRIXCg9pc19jbGllbnRfbXV0ZWQYAiABKAgioQEKB0NoYW5uZWwSDQoFaW5k",
+            "ZXgYASABKAUSLQoIc2V0dGluZ3MYAiABKAsyGy5tZXNodGFzdGljLkNoYW5u",
+            "ZWxTZXR0aW5ncxImCgRyb2xlGAMgASgOMhgubWVzaHRhc3RpYy5DaGFubmVs",
+            "LlJvbGUiMAoEUm9sZRIMCghESVNBQkxFRBAAEgsKB1BSSU1BUlkQARINCglT",
+            "RUNPTkRBUlkQAkJiChNjb20uZ2Vla3N2aWxsZS5tZXNoQg1DaGFubmVsUHJv",
+            "dG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVz",
+            "aHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ChannelSettings), global::Meshtastic.Protobufs.ChannelSettings.Parser, new[]{ "ChannelNum", "Psk", "Name", "Id", "UplinkEnabled", "DownlinkEnabled", "ModuleSettings" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleSettings), global::Meshtastic.Protobufs.ModuleSettings.Parser, new[]{ "PositionPrecision" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleSettings), global::Meshtastic.Protobufs.ModuleSettings.Parser, new[]{ "PositionPrecision", "IsClientMuted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Channel), global::Meshtastic.Protobufs.Channel.Parser, new[]{ "Index", "Settings", "Role" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Channel.Types.Role) }, null, null)
           }));
     }
@@ -581,6 +581,7 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModuleSettings(ModuleSettings other) : this() {
       positionPrecision_ = other.positionPrecision_;
+      isClientMuted_ = other.isClientMuted_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -606,6 +607,23 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "is_client_muted" field.</summary>
+    public const int IsClientMutedFieldNumber = 2;
+    private bool isClientMuted_;
+    /// <summary>
+    ///
+    /// Controls whether or not the phone / clients should mute the current channel
+    /// Useful for noisy public channels you don't necessarily want to disable
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsClientMuted {
+      get { return isClientMuted_; }
+      set {
+        isClientMuted_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -622,6 +640,7 @@ namespace Meshtastic.Protobufs {
         return true;
       }
       if (PositionPrecision != other.PositionPrecision) return false;
+      if (IsClientMuted != other.IsClientMuted) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -630,6 +649,7 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       if (PositionPrecision != 0) hash ^= PositionPrecision.GetHashCode();
+      if (IsClientMuted != false) hash ^= IsClientMuted.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -652,6 +672,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteUInt32(PositionPrecision);
       }
+      if (IsClientMuted != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsClientMuted);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -666,6 +690,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteUInt32(PositionPrecision);
       }
+      if (IsClientMuted != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsClientMuted);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -678,6 +706,9 @@ namespace Meshtastic.Protobufs {
       int size = 0;
       if (PositionPrecision != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PositionPrecision);
+      }
+      if (IsClientMuted != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -693,6 +724,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.PositionPrecision != 0) {
         PositionPrecision = other.PositionPrecision;
+      }
+      if (other.IsClientMuted != false) {
+        IsClientMuted = other.IsClientMuted;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -713,6 +747,10 @@ namespace Meshtastic.Protobufs {
             PositionPrecision = input.ReadUInt32();
             break;
           }
+          case 16: {
+            IsClientMuted = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -730,6 +768,10 @@ namespace Meshtastic.Protobufs {
             break;
           case 8: {
             PositionPrecision = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            IsClientMuted = input.ReadBool();
             break;
           }
         }
