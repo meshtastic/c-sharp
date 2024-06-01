@@ -29,29 +29,30 @@ namespace Meshtastic.Protobufs {
             "Ey5tZXNodGFzdGljLkNvbnRhY3QSIAoFZ3JvdXAYAyABKAsyES5tZXNodGFz",
             "dGljLkdyb3VwEiIKBnN0YXR1cxgEIAEoCzISLm1lc2h0YXN0aWMuU3RhdHVz",
             "Eh4KA3BsaRgFIAEoCzIPLm1lc2h0YXN0aWMuUExJSAASIwoEY2hhdBgGIAEo",
-            "CzITLm1lc2h0YXN0aWMuR2VvQ2hhdEgAQhEKD3BheWxvYWRfdmFyaWFudCIy",
-            "CgdHZW9DaGF0Eg8KB21lc3NhZ2UYASABKAkSDwoCdG8YAiABKAlIAIgBAUIF",
-            "CgNfdG8iTQoFR3JvdXASJAoEcm9sZRgBIAEoDjIWLm1lc2h0YXN0aWMuTWVt",
-            "YmVyUm9sZRIeCgR0ZWFtGAIgASgOMhAubWVzaHRhc3RpYy5UZWFtIhkKBlN0",
-            "YXR1cxIPCgdiYXR0ZXJ5GAEgASgNIjQKB0NvbnRhY3QSEAoIY2FsbHNpZ24Y",
-            "ASABKAkSFwoPZGV2aWNlX2NhbGxzaWduGAIgASgJIl8KA1BMSRISCgpsYXRp",
-            "dHVkZV9pGAEgASgPEhMKC2xvbmdpdHVkZV9pGAIgASgPEhAKCGFsdGl0dWRl",
-            "GAMgASgFEg0KBXNwZWVkGAQgASgNEg4KBmNvdXJzZRgFIAEoDSrAAQoEVGVh",
-            "bRIUChBVbnNwZWNpZmVkX0NvbG9yEAASCQoFV2hpdGUQARIKCgZZZWxsb3cQ",
-            "AhIKCgZPcmFuZ2UQAxILCgdNYWdlbnRhEAQSBwoDUmVkEAUSCgoGTWFyb29u",
-            "EAYSCgoGUHVycGxlEAcSDQoJRGFya19CbHVlEAgSCAoEQmx1ZRAJEggKBEN5",
-            "YW4QChIICgRUZWFsEAsSCQoFR3JlZW4QDBIOCgpEYXJrX0dyZWVuEA0SCQoF",
-            "QnJvd24QDip/CgpNZW1iZXJSb2xlEg4KClVuc3BlY2lmZWQQABIOCgpUZWFt",
-            "TWVtYmVyEAESDAoIVGVhbUxlYWQQAhIGCgJIURADEgoKBlNuaXBlchAEEgkK",
-            "BU1lZGljEAUSEwoPRm9yd2FyZE9ic2VydmVyEAYSBwoDUlRPEAcSBgoCSzkQ",
-            "CEJfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpBVEFLUHJvdG9zWiJnaXRodWIu",
-            "Y29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90",
-            "b2J1ZnO6AgBiBnByb3RvMw=="));
+            "CzITLm1lc2h0YXN0aWMuR2VvQ2hhdEgAQhEKD3BheWxvYWRfdmFyaWFudCJc",
+            "CgdHZW9DaGF0Eg8KB21lc3NhZ2UYASABKAkSDwoCdG8YAiABKAlIAIgBARIY",
+            "Cgt0b19jYWxsc2lnbhgDIAEoCUgBiAEBQgUKA190b0IOCgxfdG9fY2FsbHNp",
+            "Z24iTQoFR3JvdXASJAoEcm9sZRgBIAEoDjIWLm1lc2h0YXN0aWMuTWVtYmVy",
+            "Um9sZRIeCgR0ZWFtGAIgASgOMhAubWVzaHRhc3RpYy5UZWFtIhkKBlN0YXR1",
+            "cxIPCgdiYXR0ZXJ5GAEgASgNIjQKB0NvbnRhY3QSEAoIY2FsbHNpZ24YASAB",
+            "KAkSFwoPZGV2aWNlX2NhbGxzaWduGAIgASgJIl8KA1BMSRISCgpsYXRpdHVk",
+            "ZV9pGAEgASgPEhMKC2xvbmdpdHVkZV9pGAIgASgPEhAKCGFsdGl0dWRlGAMg",
+            "ASgFEg0KBXNwZWVkGAQgASgNEg4KBmNvdXJzZRgFIAEoDSrAAQoEVGVhbRIU",
+            "ChBVbnNwZWNpZmVkX0NvbG9yEAASCQoFV2hpdGUQARIKCgZZZWxsb3cQAhIK",
+            "CgZPcmFuZ2UQAxILCgdNYWdlbnRhEAQSBwoDUmVkEAUSCgoGTWFyb29uEAYS",
+            "CgoGUHVycGxlEAcSDQoJRGFya19CbHVlEAgSCAoEQmx1ZRAJEggKBEN5YW4Q",
+            "ChIICgRUZWFsEAsSCQoFR3JlZW4QDBIOCgpEYXJrX0dyZWVuEA0SCQoFQnJv",
+            "d24QDip/CgpNZW1iZXJSb2xlEg4KClVuc3BlY2lmZWQQABIOCgpUZWFtTWVt",
+            "YmVyEAESDAoIVGVhbUxlYWQQAhIGCgJIURADEgoKBlNuaXBlchAEEgkKBU1l",
+            "ZGljEAUSEwoPRm9yd2FyZE9ic2VydmVyEAYSBwoDUlRPEAcSBgoCSzkQCEJf",
+            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpBVEFLUHJvdG9zWiJnaXRodWIuY29t",
+            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
+            "ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Team), typeof(global::Meshtastic.Protobufs.MemberRole), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.TAKPacket), global::Meshtastic.Protobufs.TAKPacket.Parser, new[]{ "IsCompressed", "Contact", "Group", "Status", "Pli", "Chat" }, new[]{ "PayloadVariant" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.GeoChat), global::Meshtastic.Protobufs.GeoChat.Parser, new[]{ "Message", "To" }, new[]{ "To" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.GeoChat), global::Meshtastic.Protobufs.GeoChat.Parser, new[]{ "Message", "To", "ToCallsign" }, new[]{ "To", "ToCallsign" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Group), global::Meshtastic.Protobufs.Group.Parser, new[]{ "Role", "Team" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Status), global::Meshtastic.Protobufs.Status.Parser, new[]{ "Battery" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Contact), global::Meshtastic.Protobufs.Contact.Parser, new[]{ "Callsign", "DeviceCallsign" }, null, null, null, null),
@@ -723,6 +724,7 @@ namespace Meshtastic.Protobufs {
     public GeoChat(GeoChat other) : this() {
       message_ = other.message_;
       to_ = other.to_;
+      toCallsign_ = other.toCallsign_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -776,6 +778,34 @@ namespace Meshtastic.Protobufs {
       to_ = null;
     }
 
+    /// <summary>Field number for the "to_callsign" field.</summary>
+    public const int ToCallsignFieldNumber = 3;
+    private string toCallsign_;
+    /// <summary>
+    ///
+    /// Callsign of the recipient for the message
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ToCallsign {
+      get { return toCallsign_ ?? ""; }
+      set {
+        toCallsign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "to_callsign" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasToCallsign {
+      get { return toCallsign_ != null; }
+    }
+    /// <summary>Clears the value of the "to_callsign" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearToCallsign() {
+      toCallsign_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -793,6 +823,7 @@ namespace Meshtastic.Protobufs {
       }
       if (Message != other.Message) return false;
       if (To != other.To) return false;
+      if (ToCallsign != other.ToCallsign) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -802,6 +833,7 @@ namespace Meshtastic.Protobufs {
       int hash = 1;
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (HasTo) hash ^= To.GetHashCode();
+      if (HasToCallsign) hash ^= ToCallsign.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -828,6 +860,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(18);
         output.WriteString(To);
       }
+      if (HasToCallsign) {
+        output.WriteRawTag(26);
+        output.WriteString(ToCallsign);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -846,6 +882,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(18);
         output.WriteString(To);
       }
+      if (HasToCallsign) {
+        output.WriteRawTag(26);
+        output.WriteString(ToCallsign);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -861,6 +901,9 @@ namespace Meshtastic.Protobufs {
       }
       if (HasTo) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(To);
+      }
+      if (HasToCallsign) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ToCallsign);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -879,6 +922,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.HasTo) {
         To = other.To;
+      }
+      if (other.HasToCallsign) {
+        ToCallsign = other.ToCallsign;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -903,6 +949,10 @@ namespace Meshtastic.Protobufs {
             To = input.ReadString();
             break;
           }
+          case 26: {
+            ToCallsign = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -924,6 +974,10 @@ namespace Meshtastic.Protobufs {
           }
           case 18: {
             To = input.ReadString();
+            break;
+          }
+          case 26: {
+            ToCallsign = input.ReadString();
             break;
           }
         }
