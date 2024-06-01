@@ -129,39 +129,40 @@ namespace Meshtastic.Protobufs {
             "dGljLkhhcmR3YXJlTW9kZWwSGQoRaGFzUmVtb3RlSGFyZHdhcmUYCiABKAgi",
             "CwoJSGVhcnRiZWF0IlUKFU5vZGVSZW1vdGVIYXJkd2FyZVBpbhIQCghub2Rl",
             "X251bRgBIAEoDRIqCgNwaW4YAiABKAsyHS5tZXNodGFzdGljLlJlbW90ZUhh",
-            "cmR3YXJlUGluKpUICg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExP",
+            "cmR3YXJlUGluKtsICg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExP",
             "UkFfVjIQARIMCghUTE9SQV9WMRACEhIKDlRMT1JBX1YyXzFfMVA2EAMSCQoF",
             "VEJFQU0QBBIPCgtIRUxURUNfVjJfMBAFEg4KClRCRUFNX1YwUDcQBhIKCgZU",
             "X0VDSE8QBxIQCgxUTE9SQV9WMV8xUDMQCBILCgdSQUs0NjMxEAkSDwoLSEVM",
             "VEVDX1YyXzEQChINCglIRUxURUNfVjEQCxIYChRMSUxZR09fVEJFQU1fUzNf",
             "Q09SRRAMEgwKCFJBSzExMjAwEA0SCwoHTkFOT19HMRAOEhIKDlRMT1JBX1Yy",
             "XzFfMVA4EA8SDwoLVExPUkFfVDNfUzMQEBIUChBOQU5PX0cxX0VYUExPUkVS",
-            "EBESEQoNTkFOT19HMl9VTFRSQRASEg0KCUxPUkFfVFlQRRATEg4KClNUQVRJ",
-            "T05fRzEQGRIMCghSQUsxMTMxMBAaEhQKEFNFTlNFTE9SQV9SUDIwNDAQGxIQ",
-            "CgxTRU5TRUxPUkFfUzMQHBINCglDQU5BUllPTkUQHRIPCgtSUDIwNDBfTE9S",
-            "QRAeEg4KClNUQVRJT05fRzIQHxIRCg1MT1JBX1JFTEFZX1YxECASDgoKTlJG",
-            "NTI4NDBESxAhEgcKA1BQUhAiEg8KC0dFTklFQkxPQ0tTECMSEQoNTlJGNTJf",
-            "VU5LTk9XThAkEg0KCVBPUlREVUlOTxAlEg8KC0FORFJPSURfU0lNECYSCgoG",
-            "RElZX1YxECcSFQoRTlJGNTI4NDBfUENBMTAwNTkQKBIKCgZEUl9ERVYQKRIL",
-            "CgdNNVNUQUNLECoSDQoJSEVMVEVDX1YzECsSEQoNSEVMVEVDX1dTTF9WMxAs",
-            "EhMKD0JFVEFGUFZfMjQwMF9UWBAtEhcKE0JFVEFGUFZfOTAwX05BTk9fVFgQ",
-            "LhIMCghSUElfUElDTxAvEhsKF0hFTFRFQ19XSVJFTEVTU19UUkFDS0VSEDAS",
-            "GQoVSEVMVEVDX1dJUkVMRVNTX1BBUEVSEDESCgoGVF9ERUNLEDISDgoKVF9X",
-            "QVRDSF9TMxAzEhEKDVBJQ09NUFVURVJfUzMQNBIPCgtIRUxURUNfSFQ2MhA1",
-            "EhIKDkVCWVRFX0VTUDMyX1MzEDYSEQoNRVNQMzJfUzNfUElDTxA3Eg0KCUNI",
-            "QVRURVJfMhA4Eh4KGkhFTFRFQ19XSVJFTEVTU19QQVBFUl9WMV8wEDkSIAoc",
-            "SEVMVEVDX1dJUkVMRVNTX1RSQUNLRVJfVjFfMBA6EgsKB1VOUEhPTkUQOxIM",
-            "CghURF9MT1JBQxA8EhMKD0NERUJZVEVfRU9SQV9TMxA9Eg8KC1RXQ19NRVNI",
-            "X1Y0ED4SDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAA",
-            "EhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2Rl",
-            "EggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dB",
-            "SVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hf",
-            "VU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElP",
-            "X1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJ",
-            "EhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl8KE2Nv",
-            "bS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5jb20vbWVz",
-            "aHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oC",
-            "AGIGcHJvdG8z"));
+            "EBESEQoNTkFOT19HMl9VTFRSQRASEg0KCUxPUkFfVFlQRRATEgsKB1dJUEhP",
+            "TkUQFBIOCgpTVEFUSU9OX0cxEBkSDAoIUkFLMTEzMTAQGhIUChBTRU5TRUxP",
+            "UkFfUlAyMDQwEBsSEAoMU0VOU0VMT1JBX1MzEBwSDQoJQ0FOQVJZT05FEB0S",
+            "DwoLUlAyMDQwX0xPUkEQHhIOCgpTVEFUSU9OX0cyEB8SEQoNTE9SQV9SRUxB",
+            "WV9WMRAgEg4KCk5SRjUyODQwREsQIRIHCgNQUFIQIhIPCgtHRU5JRUJMT0NL",
+            "UxAjEhEKDU5SRjUyX1VOS05PV04QJBINCglQT1JURFVJTk8QJRIPCgtBTkRS",
+            "T0lEX1NJTRAmEgoKBkRJWV9WMRAnEhUKEU5SRjUyODQwX1BDQTEwMDU5ECgS",
+            "CgoGRFJfREVWECkSCwoHTTVTVEFDSxAqEg0KCUhFTFRFQ19WMxArEhEKDUhF",
+            "TFRFQ19XU0xfVjMQLBITCg9CRVRBRlBWXzI0MDBfVFgQLRIXChNCRVRBRlBW",
+            "XzkwMF9OQU5PX1RYEC4SDAoIUlBJX1BJQ08QLxIbChdIRUxURUNfV0lSRUxF",
+            "U1NfVFJBQ0tFUhAwEhkKFUhFTFRFQ19XSVJFTEVTU19QQVBFUhAxEgoKBlRf",
+            "REVDSxAyEg4KClRfV0FUQ0hfUzMQMxIRCg1QSUNPTVBVVEVSX1MzEDQSDwoL",
+            "SEVMVEVDX0hUNjIQNRISCg5FQllURV9FU1AzMl9TMxA2EhEKDUVTUDMyX1Mz",
+            "X1BJQ08QNxINCglDSEFUVEVSXzIQOBIeChpIRUxURUNfV0lSRUxFU1NfUEFQ",
+            "RVJfVjFfMBA5EiAKHEhFTFRFQ19XSVJFTEVTU19UUkFDS0VSX1YxXzAQOhIL",
+            "CgdVTlBIT05FEDsSDAoIVERfTE9SQUMQPBITCg9DREVCWVRFX0VPUkFfUzMQ",
+            "PRIPCgtUV0NfTUVTSF9WNBA+EhYKEk5SRjUyX1BST01JQ1JPX0RJWRA/Eh8K",
+            "G1JBRElPTUFTVEVSXzkwMF9CQU5ESVRfTkFOTxBAEg8KClBSSVZBVEVfSFcQ",
+            "/wEqLAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRBX1BBWUxPQURfTEVO",
+            "EO0BKu4BChFDcml0aWNhbEVycm9yQ29kZRIICgROT05FEAASDwoLVFhfV0FU",
+            "Q0hET0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoITk9fUkFESU8QAxIP",
+            "CgtVTlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJTEVEEAUSDQoJTk9f",
+            "QVhQMTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5HEAcSEwoPVFJBTlNN",
+            "SVRfRkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEyNjJfRkFJTFVSRRAK",
+            "EhEKDVJBRElPX1NQSV9CVUcQC0JfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpN",
+            "ZXNoUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVk",
+            "qgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -301,6 +302,11 @@ namespace Meshtastic.Protobufs {
     /// LoRAType device: https://loratype.org/
     /// </summary>
     [pbr::OriginalName("LORA_TYPE")] LoraType = 19,
+    /// <summary>
+    ///
+    /// wiphone https://www.wiphone.io/
+    /// </summary>
+    [pbr::OriginalName("WIPHONE")] Wiphone = 20,
     /// <summary>
     ///
     /// B&amp;Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
@@ -503,6 +509,18 @@ namespace Meshtastic.Protobufs {
     /// Adafruit NRF52840 feather express with SX1262, SSD1306 OLED and NEO6M GPS
     /// </summary>
     [pbr::OriginalName("TWC_MESH_V4")] TwcMeshV4 = 62,
+    /// <summary>
+    ///
+    /// NRF52_PROMICRO_DIY
+    /// Promicro NRF52840 with SX1262/LLCC68, SSD1306 OLED and NEO6M GPS
+    /// </summary>
+    [pbr::OriginalName("NRF52_PROMICRO_DIY")] Nrf52PromicroDiy = 63,
+    /// <summary>
+    ///
+    /// RadioMaster 900 Bandit Nano, https://www.radiomasterrc.com/products/bandit-nano-expresslrs-rf-module
+    /// ESP32-D0WDQ6 With SX1276/SKY66122, SSD1306 OLED and No GPS
+    /// </summary>
+    [pbr::OriginalName("RADIOMASTER_900_BANDIT_NANO")] Radiomaster900BanditNano = 64,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------

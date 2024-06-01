@@ -27,41 +27,43 @@ namespace Meshtastic.Protobufs {
             "ChptZXNodGFzdGljL3RlbGVtZXRyeS5wcm90bxIKbWVzaHRhc3RpYyKBAQoN",
             "RGV2aWNlTWV0cmljcxIVCg1iYXR0ZXJ5X2xldmVsGAEgASgNEg8KB3ZvbHRh",
             "Z2UYAiABKAISGwoTY2hhbm5lbF91dGlsaXphdGlvbhgDIAEoAhITCgthaXJf",
-            "dXRpbF90eBgEIAEoAhIWCg51cHRpbWVfc2Vjb25kcxgFIAEoDSK6AQoSRW52",
+            "dXRpbF90eBgEIAEoAhIWCg51cHRpbWVfc2Vjb25kcxgFIAEoDSLaAQoSRW52",
             "aXJvbm1lbnRNZXRyaWNzEhMKC3RlbXBlcmF0dXJlGAEgASgCEhkKEXJlbGF0",
             "aXZlX2h1bWlkaXR5GAIgASgCEhsKE2Jhcm9tZXRyaWNfcHJlc3N1cmUYAyAB",
             "KAISFgoOZ2FzX3Jlc2lzdGFuY2UYBCABKAISDwoHdm9sdGFnZRgFIAEoAhIP",
             "CgdjdXJyZW50GAYgASgCEgsKA2lhcRgHIAEoDRIQCghkaXN0YW5jZRgIIAEo",
-            "AiKMAQoMUG93ZXJNZXRyaWNzEhMKC2NoMV92b2x0YWdlGAEgASgCEhMKC2No",
-            "MV9jdXJyZW50GAIgASgCEhMKC2NoMl92b2x0YWdlGAMgASgCEhMKC2NoMl9j",
-            "dXJyZW50GAQgASgCEhMKC2NoM192b2x0YWdlGAUgASgCEhMKC2NoM19jdXJy",
-            "ZW50GAYgASgCIr8CChFBaXJRdWFsaXR5TWV0cmljcxIVCg1wbTEwX3N0YW5k",
-            "YXJkGAEgASgNEhUKDXBtMjVfc3RhbmRhcmQYAiABKA0SFgoOcG0xMDBfc3Rh",
-            "bmRhcmQYAyABKA0SGgoScG0xMF9lbnZpcm9ubWVudGFsGAQgASgNEhoKEnBt",
-            "MjVfZW52aXJvbm1lbnRhbBgFIAEoDRIbChNwbTEwMF9lbnZpcm9ubWVudGFs",
-            "GAYgASgNEhYKDnBhcnRpY2xlc18wM3VtGAcgASgNEhYKDnBhcnRpY2xlc18w",
-            "NXVtGAggASgNEhYKDnBhcnRpY2xlc18xMHVtGAkgASgNEhYKDnBhcnRpY2xl",
-            "c18yNXVtGAogASgNEhYKDnBhcnRpY2xlc181MHVtGAsgASgNEhcKD3BhcnRp",
-            "Y2xlc18xMDB1bRgMIAEoDSKJAgoJVGVsZW1ldHJ5EgwKBHRpbWUYASABKAcS",
-            "MwoOZGV2aWNlX21ldHJpY3MYAiABKAsyGS5tZXNodGFzdGljLkRldmljZU1l",
-            "dHJpY3NIABI9ChNlbnZpcm9ubWVudF9tZXRyaWNzGAMgASgLMh4ubWVzaHRh",
-            "c3RpYy5FbnZpcm9ubWVudE1ldHJpY3NIABI8ChNhaXJfcXVhbGl0eV9tZXRy",
-            "aWNzGAQgASgLMh0ubWVzaHRhc3RpYy5BaXJRdWFsaXR5TWV0cmljc0gAEjEK",
-            "DXBvd2VyX21ldHJpY3MYBSABKAsyGC5tZXNodGFzdGljLlBvd2VyTWV0cmlj",
-            "c0gAQgkKB3ZhcmlhbnQq7gEKE1RlbGVtZXRyeVNlbnNvclR5cGUSEAoMU0VO",
-            "U09SX1VOU0VUEAASCgoGQk1FMjgwEAESCgoGQk1FNjgwEAISCwoHTUNQOTgw",
-            "OBADEgoKBklOQTI2MBAEEgoKBklOQTIxORAFEgoKBkJNUDI4MBAGEgkKBVNI",
-            "VEMzEAcSCQoFTFBTMjIQCBILCgdRTUM2MzEwEAkSCwoHUU1JODY1OBAKEgwK",
-            "CFFNQzU4ODNMEAsSCQoFU0hUMzEQDBIMCghQTVNBMDAzSRANEgsKB0lOQTMy",
-            "MjEQDhIKCgZCTVAwODUQDxIMCghSQ1dMOTYyMBAQQmQKE2NvbS5nZWVrc3Zp",
-            "bGxlLm1lc2hCD1RlbGVtZXRyeVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFz",
-            "dGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZw",
-            "cm90bzM="));
+            "AhILCgNsdXgYCSABKAISEQoJd2hpdGVfbHV4GAogASgCIowBCgxQb3dlck1l",
+            "dHJpY3MSEwoLY2gxX3ZvbHRhZ2UYASABKAISEwoLY2gxX2N1cnJlbnQYAiAB",
+            "KAISEwoLY2gyX3ZvbHRhZ2UYAyABKAISEwoLY2gyX2N1cnJlbnQYBCABKAIS",
+            "EwoLY2gzX3ZvbHRhZ2UYBSABKAISEwoLY2gzX2N1cnJlbnQYBiABKAIivwIK",
+            "EUFpclF1YWxpdHlNZXRyaWNzEhUKDXBtMTBfc3RhbmRhcmQYASABKA0SFQoN",
+            "cG0yNV9zdGFuZGFyZBgCIAEoDRIWCg5wbTEwMF9zdGFuZGFyZBgDIAEoDRIa",
+            "ChJwbTEwX2Vudmlyb25tZW50YWwYBCABKA0SGgoScG0yNV9lbnZpcm9ubWVu",
+            "dGFsGAUgASgNEhsKE3BtMTAwX2Vudmlyb25tZW50YWwYBiABKA0SFgoOcGFy",
+            "dGljbGVzXzAzdW0YByABKA0SFgoOcGFydGljbGVzXzA1dW0YCCABKA0SFgoO",
+            "cGFydGljbGVzXzEwdW0YCSABKA0SFgoOcGFydGljbGVzXzI1dW0YCiABKA0S",
+            "FgoOcGFydGljbGVzXzUwdW0YCyABKA0SFwoPcGFydGljbGVzXzEwMHVtGAwg",
+            "ASgNIokCCglUZWxlbWV0cnkSDAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0",
+            "cmljcxgCIAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vu",
+            "dmlyb25tZW50X21ldHJpY3MYAyABKAsyHi5tZXNodGFzdGljLkVudmlyb25t",
+            "ZW50TWV0cmljc0gAEjwKE2Fpcl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5t",
+            "ZXNodGFzdGljLkFpclF1YWxpdHlNZXRyaWNzSAASMQoNcG93ZXJfbWV0cmlj",
+            "cxgFIAEoCzIYLm1lc2h0YXN0aWMuUG93ZXJNZXRyaWNzSABCCQoHdmFyaWFu",
+            "dCrLAgoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1JfVU5TRVQQABIK",
+            "CgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMSCgoGSU5BMjYw",
+            "EAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQBxIJCgVMUFMy",
+            "MhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoSDAoIUU1DNTg4M0wQCxIJ",
+            "CgVTSFQzMRAMEgwKCFBNU0EwMDNJEA0SCwoHSU5BMzIyMRAOEgoKBkJNUDA4",
+            "NRAPEgwKCFJDV0w5NjIwEBASCQoFU0hUNFgQERIMCghWRU1MNzcwMBASEgwK",
+            "CE1MWDkwNjMyEBMSCwoHT1BUMzAwMRAUEgwKCExUUjM5MFVWEBUSDgoKVFNM",
+            "MjU5MTFGThAWEgkKBUFIVDEwEBdCZAoTY29tLmdlZWtzdmlsbGUubWVzaEIP",
+            "VGVsZW1ldHJ5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
+            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics" }, new[]{ "Variant" }, null, null, null)
@@ -161,6 +163,41 @@ namespace Meshtastic.Protobufs {
     /// RCWL-9620 Doppler Radar Distance Sensor, used for water level detection
     /// </summary>
     [pbr::OriginalName("RCWL9620")] Rcwl9620 = 16,
+    /// <summary>
+    ///
+    /// Sensirion High accuracy temperature and humidity
+    /// </summary>
+    [pbr::OriginalName("SHT4X")] Sht4X = 17,
+    /// <summary>
+    ///
+    /// VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
+    /// </summary>
+    [pbr::OriginalName("VEML7700")] Veml7700 = 18,
+    /// <summary>
+    ///
+    /// MLX90632 non-contact IR temperature sensor.
+    /// </summary>
+    [pbr::OriginalName("MLX90632")] Mlx90632 = 19,
+    /// <summary>
+    ///
+    /// TI OPT3001 Ambient Light Sensor
+    /// </summary>
+    [pbr::OriginalName("OPT3001")] Opt3001 = 20,
+    /// <summary>
+    ///
+    /// Lite On LTR-390UV-01 UV Light Sensor
+    /// </summary>
+    [pbr::OriginalName("LTR390UV")] Ltr390Uv = 21,
+    /// <summary>
+    ///
+    /// AMS TSL25911FN RGB Light Sensor
+    /// </summary>
+    [pbr::OriginalName("TSL25911FN")] Tsl25911Fn = 22,
+    /// <summary>
+    ///
+    /// AHT10 Integrated temperature and humidity sensor
+    /// </summary>
+    [pbr::OriginalName("AHT10")] Aht10 = 23,
   }
 
   #endregion
@@ -573,6 +610,8 @@ namespace Meshtastic.Protobufs {
       current_ = other.current_;
       iaq_ = other.iaq_;
       distance_ = other.distance_;
+      lux_ = other.lux_;
+      whiteLux_ = other.whiteLux_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -711,6 +750,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "lux" field.</summary>
+    public const int LuxFieldNumber = 9;
+    private float lux_;
+    /// <summary>
+    ///
+    /// VEML7700 high accuracy ambient light(Lux) digital 16-bit resolution sensor.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Lux {
+      get { return lux_; }
+      set {
+        lux_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "white_lux" field.</summary>
+    public const int WhiteLuxFieldNumber = 10;
+    private float whiteLux_;
+    /// <summary>
+    ///
+    /// VEML7700 high accuracy white light(irradiance) not calibrated digital 16-bit resolution sensor.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float WhiteLux {
+      get { return whiteLux_; }
+      set {
+        whiteLux_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -734,6 +805,8 @@ namespace Meshtastic.Protobufs {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Current, other.Current)) return false;
       if (Iaq != other.Iaq) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Distance, other.Distance)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Lux, other.Lux)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(WhiteLux, other.WhiteLux)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -749,6 +822,8 @@ namespace Meshtastic.Protobufs {
       if (Current != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Current);
       if (Iaq != 0) hash ^= Iaq.GetHashCode();
       if (Distance != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Distance);
+      if (Lux != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Lux);
+      if (WhiteLux != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(WhiteLux);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -799,6 +874,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(69);
         output.WriteFloat(Distance);
       }
+      if (Lux != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(Lux);
+      }
+      if (WhiteLux != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(WhiteLux);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -841,6 +924,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(69);
         output.WriteFloat(Distance);
       }
+      if (Lux != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(Lux);
+      }
+      if (WhiteLux != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(WhiteLux);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -873,6 +964,12 @@ namespace Meshtastic.Protobufs {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Iaq);
       }
       if (Distance != 0F) {
+        size += 1 + 4;
+      }
+      if (Lux != 0F) {
+        size += 1 + 4;
+      }
+      if (WhiteLux != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -910,6 +1007,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.Distance != 0F) {
         Distance = other.Distance;
+      }
+      if (other.Lux != 0F) {
+        Lux = other.Lux;
+      }
+      if (other.WhiteLux != 0F) {
+        WhiteLux = other.WhiteLux;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -958,6 +1061,14 @@ namespace Meshtastic.Protobufs {
             Distance = input.ReadFloat();
             break;
           }
+          case 77: {
+            Lux = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            WhiteLux = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -1003,6 +1114,14 @@ namespace Meshtastic.Protobufs {
           }
           case 69: {
             Distance = input.ReadFloat();
+            break;
+          }
+          case 77: {
+            Lux = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            WhiteLux = input.ReadFloat();
             break;
           }
         }
