@@ -27,7 +27,7 @@ namespace Meshtastic.Protobufs {
             "ChZtZXNodGFzdGljL2FkbWluLnByb3RvEgptZXNodGFzdGljGhhtZXNodGFz",
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
             "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhVtZXNodGFzdGlj",
-            "L21lc2gucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90byLO",
+            "L21lc2gucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90byLj",
             "EQoMQWRtaW5NZXNzYWdlEh0KE2dldF9jaGFubmVsX3JlcXVlc3QYASABKA1I",
             "ABIzChRnZXRfY2hhbm5lbF9yZXNwb25zZRgCIAEoCzITLm1lc2h0YXN0aWMu",
             "Q2hhbm5lbEgAEhsKEWdldF9vd25lcl9yZXF1ZXN0GAMgASgISAASLgoSZ2V0",
@@ -52,43 +52,44 @@ namespace Meshtastic.Protobufs {
             "EyABKAhIABJcCiZnZXRfbm9kZV9yZW1vdGVfaGFyZHdhcmVfcGluc19yZXNw",
             "b25zZRgUIAEoCzIqLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhhcmR3YXJlUGlu",
             "c1Jlc3BvbnNlSAASIAoWZW50ZXJfZGZ1X21vZGVfcmVxdWVzdBgVIAEoCEgA",
-            "Eh0KE2RlbGV0ZV9maWxlX3JlcXVlc3QYFiABKAlIABIlCglzZXRfb3duZXIY",
-            "ICABKAsyEC5tZXNodGFzdGljLlVzZXJIABIqCgtzZXRfY2hhbm5lbBghIAEo",
-            "CzITLm1lc2h0YXN0aWMuQ2hhbm5lbEgAEigKCnNldF9jb25maWcYIiABKAsy",
-            "Ei5tZXNodGFzdGljLkNvbmZpZ0gAEjUKEXNldF9tb2R1bGVfY29uZmlnGCMg",
-            "ASgLMhgubWVzaHRhc3RpYy5Nb2R1bGVDb25maWdIABIsCiJzZXRfY2FubmVk",
-            "X21lc3NhZ2VfbW9kdWxlX21lc3NhZ2VzGCQgASgJSAASHgoUc2V0X3Jpbmd0",
-            "b25lX21lc3NhZ2UYJSABKAlIABIbChFyZW1vdmVfYnlfbm9kZW51bRgmIAEo",
-            "DUgAEhsKEXNldF9mYXZvcml0ZV9ub2RlGCcgASgNSAASHgoUcmVtb3ZlX2Zh",
-            "dm9yaXRlX25vZGUYKCABKA1IABIyChJzZXRfZml4ZWRfcG9zaXRpb24YKSAB",
-            "KAsyFC5tZXNodGFzdGljLlBvc2l0aW9uSAASHwoVcmVtb3ZlX2ZpeGVkX3Bv",
-            "c2l0aW9uGCogASgISAASHQoTYmVnaW5fZWRpdF9zZXR0aW5ncxhAIAEoCEgA",
-            "Eh4KFGNvbW1pdF9lZGl0X3NldHRpbmdzGEEgASgISAASHAoScmVib290X290",
-            "YV9zZWNvbmRzGF8gASgFSAASGAoOZXhpdF9zaW11bGF0b3IYYCABKAhIABIY",
-            "Cg5yZWJvb3Rfc2Vjb25kcxhhIAEoBUgAEhoKEHNodXRkb3duX3NlY29uZHMY",
-            "YiABKAVIABIXCg1mYWN0b3J5X3Jlc2V0GGMgASgFSAASFgoMbm9kZWRiX3Jl",
-            "c2V0GGQgASgFSAAilQEKCkNvbmZpZ1R5cGUSEQoNREVWSUNFX0NPTkZJRxAA",
-            "EhMKD1BPU0lUSU9OX0NPTkZJRxABEhAKDFBPV0VSX0NPTkZJRxACEhIKDk5F",
-            "VFdPUktfQ09ORklHEAMSEgoORElTUExBWV9DT05GSUcQBBIPCgtMT1JBX0NP",
-            "TkZJRxAFEhQKEEJMVUVUT09USF9DT05GSUcQBiK7AgoQTW9kdWxlQ29uZmln",
-            "VHlwZRIPCgtNUVRUX0NPTkZJRxAAEhEKDVNFUklBTF9DT05GSUcQARITCg9F",
-            "WFROT1RJRl9DT05GSUcQAhIXChNTVE9SRUZPUldBUkRfQ09ORklHEAMSFAoQ",
-            "UkFOR0VURVNUX0NPTkZJRxAEEhQKEFRFTEVNRVRSWV9DT05GSUcQBRIUChBD",
-            "QU5ORURNU0dfQ09ORklHEAYSEAoMQVVESU9fQ09ORklHEAcSGQoVUkVNT1RF",
-            "SEFSRFdBUkVfQ09ORklHEAgSFwoTTkVJR0hCT1JJTkZPX0NPTkZJRxAJEhoK",
-            "FkFNQklFTlRMSUdIVElOR19DT05GSUcQChIaChZERVRFQ1RJT05TRU5TT1Jf",
-            "Q09ORklHEAsSFQoRUEFYQ09VTlRFUl9DT05GSUcQDEIRCg9wYXlsb2FkX3Zh",
-            "cmlhbnQiWwoNSGFtUGFyYW1ldGVycxIRCgljYWxsX3NpZ24YASABKAkSEAoI",
-            "dHhfcG93ZXIYAiABKAUSEQoJZnJlcXVlbmN5GAMgASgCEhIKCnNob3J0X25h",
-            "bWUYBCABKAkiZgoeTm9kZVJlbW90ZUhhcmR3YXJlUGluc1Jlc3BvbnNlEkQK",
-            "GW5vZGVfcmVtb3RlX2hhcmR3YXJlX3BpbnMYASADKAsyIS5tZXNodGFzdGlj",
-            "Lk5vZGVSZW1vdGVIYXJkd2FyZVBpbkJgChNjb20uZ2Vla3N2aWxsZS5tZXNo",
-            "QgtBZG1pblByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVy",
-            "YXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "Eh0KE2RlbGV0ZV9maWxlX3JlcXVlc3QYFiABKAlIABITCglzZXRfc2NhbGUY",
+            "FyABKA1IABIlCglzZXRfb3duZXIYICABKAsyEC5tZXNodGFzdGljLlVzZXJI",
+            "ABIqCgtzZXRfY2hhbm5lbBghIAEoCzITLm1lc2h0YXN0aWMuQ2hhbm5lbEgA",
+            "EigKCnNldF9jb25maWcYIiABKAsyEi5tZXNodGFzdGljLkNvbmZpZ0gAEjUK",
+            "EXNldF9tb2R1bGVfY29uZmlnGCMgASgLMhgubWVzaHRhc3RpYy5Nb2R1bGVD",
+            "b25maWdIABIsCiJzZXRfY2FubmVkX21lc3NhZ2VfbW9kdWxlX21lc3NhZ2Vz",
+            "GCQgASgJSAASHgoUc2V0X3Jpbmd0b25lX21lc3NhZ2UYJSABKAlIABIbChFy",
+            "ZW1vdmVfYnlfbm9kZW51bRgmIAEoDUgAEhsKEXNldF9mYXZvcml0ZV9ub2Rl",
+            "GCcgASgNSAASHgoUcmVtb3ZlX2Zhdm9yaXRlX25vZGUYKCABKA1IABIyChJz",
+            "ZXRfZml4ZWRfcG9zaXRpb24YKSABKAsyFC5tZXNodGFzdGljLlBvc2l0aW9u",
+            "SAASHwoVcmVtb3ZlX2ZpeGVkX3Bvc2l0aW9uGCogASgISAASHQoTYmVnaW5f",
+            "ZWRpdF9zZXR0aW5ncxhAIAEoCEgAEh4KFGNvbW1pdF9lZGl0X3NldHRpbmdz",
+            "GEEgASgISAASHAoScmVib290X290YV9zZWNvbmRzGF8gASgFSAASGAoOZXhp",
+            "dF9zaW11bGF0b3IYYCABKAhIABIYCg5yZWJvb3Rfc2Vjb25kcxhhIAEoBUgA",
+            "EhoKEHNodXRkb3duX3NlY29uZHMYYiABKAVIABIXCg1mYWN0b3J5X3Jlc2V0",
+            "GGMgASgFSAASFgoMbm9kZWRiX3Jlc2V0GGQgASgFSAAilQEKCkNvbmZpZ1R5",
+            "cGUSEQoNREVWSUNFX0NPTkZJRxAAEhMKD1BPU0lUSU9OX0NPTkZJRxABEhAK",
+            "DFBPV0VSX0NPTkZJRxACEhIKDk5FVFdPUktfQ09ORklHEAMSEgoORElTUExB",
+            "WV9DT05GSUcQBBIPCgtMT1JBX0NPTkZJRxAFEhQKEEJMVUVUT09USF9DT05G",
+            "SUcQBiK7AgoQTW9kdWxlQ29uZmlnVHlwZRIPCgtNUVRUX0NPTkZJRxAAEhEK",
+            "DVNFUklBTF9DT05GSUcQARITCg9FWFROT1RJRl9DT05GSUcQAhIXChNTVE9S",
+            "RUZPUldBUkRfQ09ORklHEAMSFAoQUkFOR0VURVNUX0NPTkZJRxAEEhQKEFRF",
+            "TEVNRVRSWV9DT05GSUcQBRIUChBDQU5ORURNU0dfQ09ORklHEAYSEAoMQVVE",
+            "SU9fQ09ORklHEAcSGQoVUkVNT1RFSEFSRFdBUkVfQ09ORklHEAgSFwoTTkVJ",
+            "R0hCT1JJTkZPX0NPTkZJRxAJEhoKFkFNQklFTlRMSUdIVElOR19DT05GSUcQ",
+            "ChIaChZERVRFQ1RJT05TRU5TT1JfQ09ORklHEAsSFQoRUEFYQ09VTlRFUl9D",
+            "T05GSUcQDEIRCg9wYXlsb2FkX3ZhcmlhbnQiWwoNSGFtUGFyYW1ldGVycxIR",
+            "CgljYWxsX3NpZ24YASABKAkSEAoIdHhfcG93ZXIYAiABKAUSEQoJZnJlcXVl",
+            "bmN5GAMgASgCEhIKCnNob3J0X25hbWUYBCABKAkiZgoeTm9kZVJlbW90ZUhh",
+            "cmR3YXJlUGluc1Jlc3BvbnNlEkQKGW5vZGVfcmVtb3RlX2hhcmR3YXJlX3Bp",
+            "bnMYASADKAsyIS5tZXNodGFzdGljLk5vZGVSZW1vdGVIYXJkd2FyZVBpbkJg",
+            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQgtBZG1pblByb3Rvc1oiZ2l0aHViLmNv",
+            "bS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9i",
+            "dWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null)
           }));
@@ -200,6 +201,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.DeleteFileRequest:
           DeleteFileRequest = other.DeleteFileRequest;
+          break;
+        case PayloadVariantOneofCase.SetScale:
+          SetScale = other.SetScale;
           break;
         case PayloadVariantOneofCase.SetOwner:
           SetOwner = other.SetOwner.Clone();
@@ -607,6 +611,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "set_scale" field.</summary>
+    public const int SetScaleFieldNumber = 23;
+    /// <summary>
+    ///
+    /// Set zero and offset for scale chips
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SetScale {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetScale ? (uint) payloadVariant_ : 0; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.SetScale;
+      }
+    }
+
     /// <summary>Field number for the "set_owner" field.</summary>
     public const int SetOwnerFieldNumber = 32;
     /// <summary>
@@ -943,6 +963,7 @@ namespace Meshtastic.Protobufs {
       GetNodeRemoteHardwarePinsResponse = 20,
       EnterDfuModeRequest = 21,
       DeleteFileRequest = 22,
+      SetScale = 23,
       SetOwner = 32,
       SetChannel = 33,
       SetConfig = 34,
@@ -1013,6 +1034,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(GetNodeRemoteHardwarePinsResponse, other.GetNodeRemoteHardwarePinsResponse)) return false;
       if (EnterDfuModeRequest != other.EnterDfuModeRequest) return false;
       if (DeleteFileRequest != other.DeleteFileRequest) return false;
+      if (SetScale != other.SetScale) return false;
       if (!object.Equals(SetOwner, other.SetOwner)) return false;
       if (!object.Equals(SetChannel, other.SetChannel)) return false;
       if (!object.Equals(SetConfig, other.SetConfig)) return false;
@@ -1061,6 +1083,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsResponse) hash ^= GetNodeRemoteHardwarePinsResponse.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest) hash ^= EnterDfuModeRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) hash ^= DeleteFileRequest.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetScale) hash ^= SetScale.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) hash ^= SetOwner.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetChannel) hash ^= SetChannel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetConfig) hash ^= SetConfig.GetHashCode();
@@ -1182,6 +1205,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) {
         output.WriteRawTag(178, 1);
         output.WriteString(DeleteFileRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetScale) {
+        output.WriteRawTag(184, 1);
+        output.WriteUInt32(SetScale);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
@@ -1353,6 +1380,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(178, 1);
         output.WriteString(DeleteFileRequest);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetScale) {
+        output.WriteRawTag(184, 1);
+        output.WriteUInt32(SetScale);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -1501,6 +1532,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(DeleteFileRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetScale) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SetScale);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetOwner);
@@ -1658,6 +1692,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.DeleteFileRequest:
           DeleteFileRequest = other.DeleteFileRequest;
+          break;
+        case PayloadVariantOneofCase.SetScale:
+          SetScale = other.SetScale;
           break;
         case PayloadVariantOneofCase.SetOwner:
           if (SetOwner == null) {
@@ -1872,6 +1909,10 @@ namespace Meshtastic.Protobufs {
           }
           case 178: {
             DeleteFileRequest = input.ReadString();
+            break;
+          }
+          case 184: {
+            SetScale = input.ReadUInt32();
             break;
           }
           case 258: {
@@ -2114,6 +2155,10 @@ namespace Meshtastic.Protobufs {
           }
           case 178: {
             DeleteFileRequest = input.ReadString();
+            break;
+          }
+          case 184: {
+            SetScale = input.ReadUInt32();
             break;
           }
           case 258: {
