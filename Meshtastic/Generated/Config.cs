@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyLCHwoGQ29u",
+            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyLxIQoGQ29u",
             "ZmlnEjEKBmRldmljZRgBIAEoCzIfLm1lc2h0YXN0aWMuQ29uZmlnLkRldmlj",
             "ZUNvbmZpZ0gAEjUKCHBvc2l0aW9uGAIgASgLMiEubWVzaHRhc3RpYy5Db25m",
             "aWcuUG9zaXRpb25Db25maWdIABIvCgVwb3dlchgDIAEoCzIeLm1lc2h0YXN0",
@@ -76,7 +76,7 @@ namespace Meshtastic.Protobufs {
             "Q29uZmlnLklwVjRDb25maWcSFgoOcnN5c2xvZ19zZXJ2ZXIYCSABKAkaRgoK",
             "SXBWNENvbmZpZxIKCgJpcBgBIAEoBxIPCgdnYXRld2F5GAIgASgHEg4KBnN1",
             "Ym5ldBgDIAEoBxILCgNkbnMYBCABKAciIwoLQWRkcmVzc01vZGUSCAoEREhD",
-            "UBAAEgoKBlNUQVRJQxABGr4FCg1EaXNwbGF5Q29uZmlnEhYKDnNjcmVlbl9v",
+            "UBAAEgoKBlNUQVRJQxABGs0HCg1EaXNwbGF5Q29uZmlnEhYKDnNjcmVlbl9v",
             "bl9zZWNzGAEgASgNEkgKCmdwc19mb3JtYXQYAiABKA4yNC5tZXNodGFzdGlj",
             "LkNvbmZpZy5EaXNwbGF5Q29uZmlnLkdwc0Nvb3JkaW5hdGVGb3JtYXQSIQoZ",
             "YXV0b19zY3JlZW5fY2Fyb3VzZWxfc2VjcxgDIAEoDRIZChFjb21wYXNzX25v",
@@ -86,37 +86,44 @@ namespace Meshtastic.Protobufs {
             "bGF5Q29uZmlnLk9sZWRUeXBlEkEKC2Rpc3BsYXltb2RlGAggASgOMiwubWVz",
             "aHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZy5EaXNwbGF5TW9kZRIUCgxo",
             "ZWFkaW5nX2JvbGQYCSABKAgSHQoVd2FrZV9vbl90YXBfb3JfbW90aW9uGAog",
-            "ASgIIk0KE0dwc0Nvb3JkaW5hdGVGb3JtYXQSBwoDREVDEAASBwoDRE1TEAES",
-            "BwoDVVRNEAISCAoETUdSUxADEgcKA09MQxAEEggKBE9TR1IQBSIoCgxEaXNw",
-            "bGF5VW5pdHMSCgoGTUVUUklDEAASDAoISU1QRVJJQUwQASJNCghPbGVkVHlw",
-            "ZRINCglPTEVEX0FVVE8QABIQCgxPTEVEX1NTRDEzMDYQARIPCgtPTEVEX1NI",
-            "MTEwNhACEg8KC09MRURfU0gxMTA3EAMiQQoLRGlzcGxheU1vZGUSCwoHREVG",
-            "QVVMVBAAEgwKCFRXT0NPTE9SEAESDAoISU5WRVJURUQQAhIJCgVDT0xPUhAD",
-            "GrAGCgpMb1JhQ29uZmlnEhIKCnVzZV9wcmVzZXQYASABKAgSPwoMbW9kZW1f",
-            "cHJlc2V0GAIgASgOMikubWVzaHRhc3RpYy5Db25maWcuTG9SYUNvbmZpZy5N",
-            "b2RlbVByZXNldBIRCgliYW5kd2lkdGgYAyABKA0SFQoNc3ByZWFkX2ZhY3Rv",
-            "chgEIAEoDRITCgtjb2RpbmdfcmF0ZRgFIAEoDRIYChBmcmVxdWVuY3lfb2Zm",
-            "c2V0GAYgASgCEjgKBnJlZ2lvbhgHIAEoDjIoLm1lc2h0YXN0aWMuQ29uZmln",
-            "LkxvUmFDb25maWcuUmVnaW9uQ29kZRIRCglob3BfbGltaXQYCCABKA0SEgoK",
-            "dHhfZW5hYmxlZBgJIAEoCBIQCgh0eF9wb3dlchgKIAEoBRITCgtjaGFubmVs",
-            "X251bRgLIAEoDRIbChNvdmVycmlkZV9kdXR5X2N5Y2xlGAwgASgIEh4KFnN4",
-            "MTI2eF9yeF9ib29zdGVkX2dhaW4YDSABKAgSGgoSb3ZlcnJpZGVfZnJlcXVl",
-            "bmN5GA4gASgCEhcKD2lnbm9yZV9pbmNvbWluZxhnIAMoDRITCgtpZ25vcmVf",
-            "bXF0dBhoIAEoCCLNAQoKUmVnaW9uQ29kZRIJCgVVTlNFVBAAEgYKAlVTEAES",
-            "CgoGRVVfNDMzEAISCgoGRVVfODY4EAMSBgoCQ04QBBIGCgJKUBAFEgcKA0FO",
-            "WhAGEgYKAktSEAcSBgoCVFcQCBIGCgJSVRAJEgYKAklOEAoSCgoGTlpfODY1",
-            "EAsSBgoCVEgQDBILCgdMT1JBXzI0EA0SCgoGVUFfNDMzEA4SCgoGVUFfODY4",
-            "EA8SCgoGTVlfNDMzEBASCgoGTVlfOTE5EBESCgoGU0dfOTIzEBIilAEKC01v",
-            "ZGVtUHJlc2V0Eg0KCUxPTkdfRkFTVBAAEg0KCUxPTkdfU0xPVxABEhIKDlZF",
-            "UllfTE9OR19TTE9XEAISDwoLTUVESVVNX1NMT1cQAxIPCgtNRURJVU1fRkFT",
-            "VBAEEg4KClNIT1JUX1NMT1cQBRIOCgpTSE9SVF9GQVNUEAYSEQoNTE9OR19N",
-            "T0RFUkFURRAHGq0BCg9CbHVldG9vdGhDb25maWcSDwoHZW5hYmxlZBgBIAEo",
-            "CBI8CgRtb2RlGAIgASgOMi4ubWVzaHRhc3RpYy5Db25maWcuQmx1ZXRvb3Ro",
-            "Q29uZmlnLlBhaXJpbmdNb2RlEhEKCWZpeGVkX3BpbhgDIAEoDSI4CgtQYWly",
-            "aW5nTW9kZRIOCgpSQU5ET01fUElOEAASDQoJRklYRURfUElOEAESCgoGTk9f",
-            "UElOEAJCEQoPcGF5bG9hZF92YXJpYW50QmEKE2NvbS5nZWVrc3ZpbGxlLm1l",
-            "c2hCDENvbmZpZ1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dl",
-            "bmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "ASgIElAKE2NvbXBhc3Nfb3JpZW50YXRpb24YCyABKA4yMy5tZXNodGFzdGlj",
+            "LkNvbmZpZy5EaXNwbGF5Q29uZmlnLkNvbXBhc3NPcmllbnRhdGlvbiJNChNH",
+            "cHNDb29yZGluYXRlRm9ybWF0EgcKA0RFQxAAEgcKA0RNUxABEgcKA1VUTRAC",
+            "EggKBE1HUlMQAxIHCgNPTEMQBBIICgRPU0dSEAUiKAoMRGlzcGxheVVuaXRz",
+            "EgoKBk1FVFJJQxAAEgwKCElNUEVSSUFMEAEiTQoIT2xlZFR5cGUSDQoJT0xF",
+            "RF9BVVRPEAASEAoMT0xFRF9TU0QxMzA2EAESDwoLT0xFRF9TSDExMDYQAhIP",
+            "CgtPTEVEX1NIMTEwNxADIkEKC0Rpc3BsYXlNb2RlEgsKB0RFRkFVTFQQABIM",
+            "CghUV09DT0xPUhABEgwKCElOVkVSVEVEEAISCQoFQ09MT1IQAyK6AQoSQ29t",
+            "cGFzc09yaWVudGF0aW9uEg0KCURFR1JFRVNfMBAAEg4KCkRFR1JFRVNfOTAQ",
+            "ARIPCgtERUdSRUVTXzE4MBACEg8KC0RFR1JFRVNfMjcwEAMSFgoSREVHUkVF",
+            "U18wX0lOVkVSVEVEEAQSFwoTREVHUkVFU185MF9JTlZFUlRFRBAFEhgKFERF",
+            "R1JFRVNfMTgwX0lOVkVSVEVEEAYSGAoUREVHUkVFU18yNzBfSU5WRVJURUQQ",
+            "BxqwBgoKTG9SYUNvbmZpZxISCgp1c2VfcHJlc2V0GAEgASgIEj8KDG1vZGVt",
+            "X3ByZXNldBgCIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25maWcu",
+            "TW9kZW1QcmVzZXQSEQoJYmFuZHdpZHRoGAMgASgNEhUKDXNwcmVhZF9mYWN0",
+            "b3IYBCABKA0SEwoLY29kaW5nX3JhdGUYBSABKA0SGAoQZnJlcXVlbmN5X29m",
+            "ZnNldBgGIAEoAhI4CgZyZWdpb24YByABKA4yKC5tZXNodGFzdGljLkNvbmZp",
+            "Zy5Mb1JhQ29uZmlnLlJlZ2lvbkNvZGUSEQoJaG9wX2xpbWl0GAggASgNEhIK",
+            "CnR4X2VuYWJsZWQYCSABKAgSEAoIdHhfcG93ZXIYCiABKAUSEwoLY2hhbm5l",
+            "bF9udW0YCyABKA0SGwoTb3ZlcnJpZGVfZHV0eV9jeWNsZRgMIAEoCBIeChZz",
+            "eDEyNnhfcnhfYm9vc3RlZF9nYWluGA0gASgIEhoKEm92ZXJyaWRlX2ZyZXF1",
+            "ZW5jeRgOIAEoAhIXCg9pZ25vcmVfaW5jb21pbmcYZyADKA0SEwoLaWdub3Jl",
+            "X21xdHQYaCABKAgizQEKClJlZ2lvbkNvZGUSCQoFVU5TRVQQABIGCgJVUxAB",
+            "EgoKBkVVXzQzMxACEgoKBkVVXzg2OBADEgYKAkNOEAQSBgoCSlAQBRIHCgNB",
+            "TloQBhIGCgJLUhAHEgYKAlRXEAgSBgoCUlUQCRIGCgJJThAKEgoKBk5aXzg2",
+            "NRALEgYKAlRIEAwSCwoHTE9SQV8yNBANEgoKBlVBXzQzMxAOEgoKBlVBXzg2",
+            "OBAPEgoKBk1ZXzQzMxAQEgoKBk1ZXzkxORAREgoKBlNHXzkyMxASIpQBCgtN",
+            "b2RlbVByZXNldBINCglMT05HX0ZBU1QQABINCglMT05HX1NMT1cQARISCg5W",
+            "RVJZX0xPTkdfU0xPVxACEg8KC01FRElVTV9TTE9XEAMSDwoLTUVESVVNX0ZB",
+            "U1QQBBIOCgpTSE9SVF9TTE9XEAUSDgoKU0hPUlRfRkFTVBAGEhEKDUxPTkdf",
+            "TU9ERVJBVEUQBxrNAQoPQmx1ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQYASAB",
+            "KAgSPAoEbW9kZRgCIAEoDjIuLm1lc2h0YXN0aWMuQ29uZmlnLkJsdWV0b290",
+            "aENvbmZpZy5QYWlyaW5nTW9kZRIRCglmaXhlZF9waW4YAyABKA0SHgoWZGV2",
+            "aWNlX2xvZ2dpbmdfZW5hYmxlZBgEIAEoCCI4CgtQYWlyaW5nTW9kZRIOCgpS",
+            "QU5ET01fUElOEAASDQoJRklYRURfUElOEAESCgoGTk9fUElOEAJCEQoPcGF5",
+            "bG9hZF92YXJpYW50QmEKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCDENvbmZpZ1By",
+            "b3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1l",
+            "c2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -124,9 +131,9 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig), global::Meshtastic.Protobufs.Config.Types.PositionConfig.Parser, new[]{ "PositionBroadcastSecs", "PositionBroadcastSmartEnabled", "FixedPosition", "GpsEnabled", "GpsUpdateInterval", "GpsAttemptTime", "PositionFlags", "RxGpio", "TxGpio", "BroadcastSmartMinimumDistance", "BroadcastSmartMinimumIntervalSecs", "GpsEnGpio", "GpsMode" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.PositionFlags), typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.GpsMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PowerConfig), global::Meshtastic.Protobufs.Config.Types.PowerConfig.Parser, new[]{ "IsPowerSaving", "OnBatteryShutdownAfterSecs", "AdcMultiplierOverride", "WaitBluetoothSecs", "SdsSecs", "LsSecs", "MinWakeSecs", "DeviceBatteryInaAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "AddressMode", "Ipv4Config", "RsyslogServer" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold", "WakeOnTapOrMotion" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold", "WakeOnTapOrMotion", "CompassOrientation" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "Sx126XRxBoostedGain", "OverrideFrequency", "IgnoreIncoming", "IgnoreMqtt" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin", "DeviceLoggingEnabled" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null)})
           }));
     }
     #endregion
@@ -3634,6 +3641,7 @@ namespace Meshtastic.Protobufs {
           displaymode_ = other.displaymode_;
           headingBold_ = other.headingBold_;
           wakeOnTapOrMotion_ = other.wakeOnTapOrMotion_;
+          compassOrientation_ = other.compassOrientation_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3806,6 +3814,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "compass_orientation" field.</summary>
+        public const int CompassOrientationFieldNumber = 11;
+        private global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation compassOrientation_ = global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0;
+        /// <summary>
+        ///
+        /// Indicates how to rotate or invert the compass output to accurate display on the display.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation CompassOrientation {
+          get { return compassOrientation_; }
+          set {
+            compassOrientation_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3831,6 +3855,7 @@ namespace Meshtastic.Protobufs {
           if (Displaymode != other.Displaymode) return false;
           if (HeadingBold != other.HeadingBold) return false;
           if (WakeOnTapOrMotion != other.WakeOnTapOrMotion) return false;
+          if (CompassOrientation != other.CompassOrientation) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3848,6 +3873,7 @@ namespace Meshtastic.Protobufs {
           if (Displaymode != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode.Default) hash ^= Displaymode.GetHashCode();
           if (HeadingBold != false) hash ^= HeadingBold.GetHashCode();
           if (WakeOnTapOrMotion != false) hash ^= WakeOnTapOrMotion.GetHashCode();
+          if (CompassOrientation != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0) hash ^= CompassOrientation.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3906,6 +3932,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(80);
             output.WriteBool(WakeOnTapOrMotion);
           }
+          if (CompassOrientation != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0) {
+            output.WriteRawTag(88);
+            output.WriteEnum((int) CompassOrientation);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3956,6 +3986,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(80);
             output.WriteBool(WakeOnTapOrMotion);
           }
+          if (CompassOrientation != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0) {
+            output.WriteRawTag(88);
+            output.WriteEnum((int) CompassOrientation);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3995,6 +4029,9 @@ namespace Meshtastic.Protobufs {
           }
           if (WakeOnTapOrMotion != false) {
             size += 1 + 1;
+          }
+          if (CompassOrientation != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CompassOrientation);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4037,6 +4074,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.WakeOnTapOrMotion != false) {
             WakeOnTapOrMotion = other.WakeOnTapOrMotion;
+          }
+          if (other.CompassOrientation != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0) {
+            CompassOrientation = other.CompassOrientation;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -4093,6 +4133,10 @@ namespace Meshtastic.Protobufs {
                 WakeOnTapOrMotion = input.ReadBool();
                 break;
               }
+              case 88: {
+                CompassOrientation = (global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -4146,6 +4190,10 @@ namespace Meshtastic.Protobufs {
               }
               case 80: {
                 WakeOnTapOrMotion = input.ReadBool();
+                break;
+              }
+              case 88: {
+                CompassOrientation = (global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) input.ReadEnum();
                 break;
               }
             }
@@ -4267,6 +4315,49 @@ namespace Meshtastic.Protobufs {
             /// TFT Full Color Displays (not implemented yet)
             /// </summary>
             [pbr::OriginalName("COLOR")] Color = 3,
+          }
+
+          public enum CompassOrientation {
+            /// <summary>
+            ///
+            /// The compass and the display are in the same orientation.
+            /// </summary>
+            [pbr::OriginalName("DEGREES_0")] Degrees0 = 0,
+            /// <summary>
+            ///
+            /// Rotate the compass by 90 degrees.
+            /// </summary>
+            [pbr::OriginalName("DEGREES_90")] Degrees90 = 1,
+            /// <summary>
+            ///
+            /// Rotate the compass by 180 degrees.
+            /// </summary>
+            [pbr::OriginalName("DEGREES_180")] Degrees180 = 2,
+            /// <summary>
+            ///
+            /// Rotate the compass by 270 degrees.
+            /// </summary>
+            [pbr::OriginalName("DEGREES_270")] Degrees270 = 3,
+            /// <summary>
+            ///
+            /// Don't rotate the compass, but invert the result.
+            /// </summary>
+            [pbr::OriginalName("DEGREES_0_INVERTED")] Degrees0Inverted = 4,
+            /// <summary>
+            ///
+            /// Rotate the compass by 90 degrees and invert.
+            /// </summary>
+            [pbr::OriginalName("DEGREES_90_INVERTED")] Degrees90Inverted = 5,
+            /// <summary>
+            ///
+            /// Rotate the compass by 180 degrees and invert.
+            /// </summary>
+            [pbr::OriginalName("DEGREES_180_INVERTED")] Degrees180Inverted = 6,
+            /// <summary>
+            ///
+            /// Rotate the compass by 270 degrees and invert.
+            /// </summary>
+            [pbr::OriginalName("DEGREES_270_INVERTED")] Degrees270Inverted = 7,
           }
 
         }
@@ -5299,6 +5390,7 @@ namespace Meshtastic.Protobufs {
           enabled_ = other.enabled_;
           mode_ = other.mode_;
           fixedPin_ = other.fixedPin_;
+          deviceLoggingEnabled_ = other.deviceLoggingEnabled_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5356,6 +5448,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "device_logging_enabled" field.</summary>
+        public const int DeviceLoggingEnabledFieldNumber = 4;
+        private bool deviceLoggingEnabled_;
+        /// <summary>
+        ///
+        /// Enables device (serial style logs) over Bluetooth
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DeviceLoggingEnabled {
+          get { return deviceLoggingEnabled_; }
+          set {
+            deviceLoggingEnabled_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5374,6 +5482,7 @@ namespace Meshtastic.Protobufs {
           if (Enabled != other.Enabled) return false;
           if (Mode != other.Mode) return false;
           if (FixedPin != other.FixedPin) return false;
+          if (DeviceLoggingEnabled != other.DeviceLoggingEnabled) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5384,6 +5493,7 @@ namespace Meshtastic.Protobufs {
           if (Enabled != false) hash ^= Enabled.GetHashCode();
           if (Mode != global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode.RandomPin) hash ^= Mode.GetHashCode();
           if (FixedPin != 0) hash ^= FixedPin.GetHashCode();
+          if (DeviceLoggingEnabled != false) hash ^= DeviceLoggingEnabled.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5414,6 +5524,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(24);
             output.WriteUInt32(FixedPin);
           }
+          if (DeviceLoggingEnabled != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(DeviceLoggingEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5436,6 +5550,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(24);
             output.WriteUInt32(FixedPin);
           }
+          if (DeviceLoggingEnabled != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(DeviceLoggingEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5454,6 +5572,9 @@ namespace Meshtastic.Protobufs {
           }
           if (FixedPin != 0) {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FixedPin);
+          }
+          if (DeviceLoggingEnabled != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5475,6 +5596,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.FixedPin != 0) {
             FixedPin = other.FixedPin;
+          }
+          if (other.DeviceLoggingEnabled != false) {
+            DeviceLoggingEnabled = other.DeviceLoggingEnabled;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5503,6 +5627,10 @@ namespace Meshtastic.Protobufs {
                 FixedPin = input.ReadUInt32();
                 break;
               }
+              case 32: {
+                DeviceLoggingEnabled = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -5528,6 +5656,10 @@ namespace Meshtastic.Protobufs {
               }
               case 24: {
                 FixedPin = input.ReadUInt32();
+                break;
+              }
+              case 32: {
+                DeviceLoggingEnabled = input.ReadBool();
                 break;
               }
             }

@@ -27,46 +27,52 @@ namespace Meshtastic.Protobufs {
             "ChptZXNodGFzdGljL3RlbGVtZXRyeS5wcm90bxIKbWVzaHRhc3RpYyKBAQoN",
             "RGV2aWNlTWV0cmljcxIVCg1iYXR0ZXJ5X2xldmVsGAEgASgNEg8KB3ZvbHRh",
             "Z2UYAiABKAISGwoTY2hhbm5lbF91dGlsaXphdGlvbhgDIAEoAhITCgthaXJf",
-            "dXRpbF90eBgEIAEoAhIWCg51cHRpbWVfc2Vjb25kcxgFIAEoDSLaAQoSRW52",
+            "dXRpbF90eBgEIAEoAhIWCg51cHRpbWVfc2Vjb25kcxgFIAEoDSK2AgoSRW52",
             "aXJvbm1lbnRNZXRyaWNzEhMKC3RlbXBlcmF0dXJlGAEgASgCEhkKEXJlbGF0",
             "aXZlX2h1bWlkaXR5GAIgASgCEhsKE2Jhcm9tZXRyaWNfcHJlc3N1cmUYAyAB",
             "KAISFgoOZ2FzX3Jlc2lzdGFuY2UYBCABKAISDwoHdm9sdGFnZRgFIAEoAhIP",
             "CgdjdXJyZW50GAYgASgCEgsKA2lhcRgHIAEoDRIQCghkaXN0YW5jZRgIIAEo",
-            "AhILCgNsdXgYCSABKAISEQoJd2hpdGVfbHV4GAogASgCIowBCgxQb3dlck1l",
-            "dHJpY3MSEwoLY2gxX3ZvbHRhZ2UYASABKAISEwoLY2gxX2N1cnJlbnQYAiAB",
-            "KAISEwoLY2gyX3ZvbHRhZ2UYAyABKAISEwoLY2gyX2N1cnJlbnQYBCABKAIS",
-            "EwoLY2gzX3ZvbHRhZ2UYBSABKAISEwoLY2gzX2N1cnJlbnQYBiABKAIivwIK",
-            "EUFpclF1YWxpdHlNZXRyaWNzEhUKDXBtMTBfc3RhbmRhcmQYASABKA0SFQoN",
-            "cG0yNV9zdGFuZGFyZBgCIAEoDRIWCg5wbTEwMF9zdGFuZGFyZBgDIAEoDRIa",
-            "ChJwbTEwX2Vudmlyb25tZW50YWwYBCABKA0SGgoScG0yNV9lbnZpcm9ubWVu",
-            "dGFsGAUgASgNEhsKE3BtMTAwX2Vudmlyb25tZW50YWwYBiABKA0SFgoOcGFy",
-            "dGljbGVzXzAzdW0YByABKA0SFgoOcGFydGljbGVzXzA1dW0YCCABKA0SFgoO",
-            "cGFydGljbGVzXzEwdW0YCSABKA0SFgoOcGFydGljbGVzXzI1dW0YCiABKA0S",
-            "FgoOcGFydGljbGVzXzUwdW0YCyABKA0SFwoPcGFydGljbGVzXzEwMHVtGAwg",
-            "ASgNIokCCglUZWxlbWV0cnkSDAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0",
-            "cmljcxgCIAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vu",
-            "dmlyb25tZW50X21ldHJpY3MYAyABKAsyHi5tZXNodGFzdGljLkVudmlyb25t",
-            "ZW50TWV0cmljc0gAEjwKE2Fpcl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5t",
-            "ZXNodGFzdGljLkFpclF1YWxpdHlNZXRyaWNzSAASMQoNcG93ZXJfbWV0cmlj",
-            "cxgFIAEoCzIYLm1lc2h0YXN0aWMuUG93ZXJNZXRyaWNzSABCCQoHdmFyaWFu",
-            "dCrLAgoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1JfVU5TRVQQABIK",
-            "CgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMSCgoGSU5BMjYw",
-            "EAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQBxIJCgVMUFMy",
-            "MhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoSDAoIUU1DNTg4M0wQCxIJ",
-            "CgVTSFQzMRAMEgwKCFBNU0EwMDNJEA0SCwoHSU5BMzIyMRAOEgoKBkJNUDA4",
-            "NRAPEgwKCFJDV0w5NjIwEBASCQoFU0hUNFgQERIMCghWRU1MNzcwMBASEgwK",
-            "CE1MWDkwNjMyEBMSCwoHT1BUMzAwMRAUEgwKCExUUjM5MFVWEBUSDgoKVFNM",
-            "MjU5MTFGThAWEgkKBUFIVDEwEBdCZAoTY29tLmdlZWtzdmlsbGUubWVzaEIP",
-            "VGVsZW1ldHJ5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
-            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "AhILCgNsdXgYCSABKAISEQoJd2hpdGVfbHV4GAogASgCEg4KBmlyX2x1eBgL",
+            "IAEoAhIOCgZ1dl9sdXgYDCABKAISFgoOd2luZF9kaXJlY3Rpb24YDSABKA0S",
+            "EgoKd2luZF9zcGVlZBgOIAEoAhIOCgZ3ZWlnaHQYDyABKAIijAEKDFBvd2Vy",
+            "TWV0cmljcxITCgtjaDFfdm9sdGFnZRgBIAEoAhITCgtjaDFfY3VycmVudBgC",
+            "IAEoAhITCgtjaDJfdm9sdGFnZRgDIAEoAhITCgtjaDJfY3VycmVudBgEIAEo",
+            "AhITCgtjaDNfdm9sdGFnZRgFIAEoAhITCgtjaDNfY3VycmVudBgGIAEoAiK/",
+            "AgoRQWlyUXVhbGl0eU1ldHJpY3MSFQoNcG0xMF9zdGFuZGFyZBgBIAEoDRIV",
+            "Cg1wbTI1X3N0YW5kYXJkGAIgASgNEhYKDnBtMTAwX3N0YW5kYXJkGAMgASgN",
+            "EhoKEnBtMTBfZW52aXJvbm1lbnRhbBgEIAEoDRIaChJwbTI1X2Vudmlyb25t",
+            "ZW50YWwYBSABKA0SGwoTcG0xMDBfZW52aXJvbm1lbnRhbBgGIAEoDRIWCg5w",
+            "YXJ0aWNsZXNfMDN1bRgHIAEoDRIWCg5wYXJ0aWNsZXNfMDV1bRgIIAEoDRIW",
+            "Cg5wYXJ0aWNsZXNfMTB1bRgJIAEoDRIWCg5wYXJ0aWNsZXNfMjV1bRgKIAEo",
+            "DRIWCg5wYXJ0aWNsZXNfNTB1bRgLIAEoDRIXCg9wYXJ0aWNsZXNfMTAwdW0Y",
+            "DCABKA0iiQIKCVRlbGVtZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRldmljZV9t",
+            "ZXRyaWNzGAIgASgLMhkubWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNzSAASPQoT",
+            "ZW52aXJvbm1lbnRfbWV0cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMuRW52aXJv",
+            "bm1lbnRNZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgEIAEoCzId",
+            "Lm1lc2h0YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dlcl9tZXRy",
+            "aWNzGAUgASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIAEIJCgd2YXJp",
+            "YW50Ij4KDU5hdTc4MDJDb25maWcSEgoKemVyb09mZnNldBgBIAEoBRIZChFj",
+            "YWxpYnJhdGlvbkZhY3RvchgCIAEoAirqAgoTVGVsZW1ldHJ5U2Vuc29yVHlw",
+            "ZRIQCgxTRU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhIL",
+            "CgdNQ1A5ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgw",
+            "EAYSCQoFU0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4",
+            "NjU4EAoSDAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwKCFBNU0EwMDNJEA0S",
+            "CwoHSU5BMzIyMRAOEgoKBkJNUDA4NRAPEgwKCFJDV0w5NjIwEBASCQoFU0hU",
+            "NFgQERIMCghWRU1MNzcwMBASEgwKCE1MWDkwNjMyEBMSCwoHT1BUMzAwMRAU",
+            "EgwKCExUUjM5MFVWEBUSDgoKVFNMMjU5MTFGThAWEgkKBUFIVDEwEBcSEAoM",
+            "REZST0JPVF9MQVJLEBgSCwoHTkFVNzgwMhAZQmQKE2NvbS5nZWVrc3ZpbGxl",
+            "Lm1lc2hCD1RlbGVtZXRyeVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
+            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics" }, new[]{ "Variant" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics" }, new[]{ "Variant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Nau7802Config), global::Meshtastic.Protobufs.Nau7802Config.Parser, new[]{ "ZeroOffset", "CalibrationFactor" }, null, null, null, null)
           }));
     }
     #endregion
@@ -198,6 +204,16 @@ namespace Meshtastic.Protobufs {
     /// AHT10 Integrated temperature and humidity sensor
     /// </summary>
     [pbr::OriginalName("AHT10")] Aht10 = 23,
+    /// <summary>
+    ///
+    /// DFRobot Lark Weather station (temperature, humidity, pressure, wind speed and direction) 
+    /// </summary>
+    [pbr::OriginalName("DFROBOT_LARK")] DfrobotLark = 24,
+    /// <summary>
+    ///
+    /// NAU7802 Scale Chip or compatible
+    /// </summary>
+    [pbr::OriginalName("NAU7802")] Nau7802 = 25,
   }
 
   #endregion
@@ -612,6 +628,11 @@ namespace Meshtastic.Protobufs {
       distance_ = other.distance_;
       lux_ = other.lux_;
       whiteLux_ = other.whiteLux_;
+      irLux_ = other.irLux_;
+      uvLux_ = other.uvLux_;
+      windDirection_ = other.windDirection_;
+      windSpeed_ = other.windSpeed_;
+      weight_ = other.weight_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -782,6 +803,87 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "ir_lux" field.</summary>
+    public const int IrLuxFieldNumber = 11;
+    private float irLux_;
+    /// <summary>
+    ///
+    /// Infrared lux
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float IrLux {
+      get { return irLux_; }
+      set {
+        irLux_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uv_lux" field.</summary>
+    public const int UvLuxFieldNumber = 12;
+    private float uvLux_;
+    /// <summary>
+    ///
+    /// Ultraviolet lux
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float UvLux {
+      get { return uvLux_; }
+      set {
+        uvLux_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "wind_direction" field.</summary>
+    public const int WindDirectionFieldNumber = 13;
+    private uint windDirection_;
+    /// <summary>
+    ///
+    /// Wind direction in degrees
+    /// 0 degrees = North, 90 = East, etc...
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint WindDirection {
+      get { return windDirection_; }
+      set {
+        windDirection_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "wind_speed" field.</summary>
+    public const int WindSpeedFieldNumber = 14;
+    private float windSpeed_;
+    /// <summary>
+    ///
+    /// Wind speed in m/s
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float WindSpeed {
+      get { return windSpeed_; }
+      set {
+        windSpeed_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "weight" field.</summary>
+    public const int WeightFieldNumber = 15;
+    private float weight_;
+    /// <summary>
+    ///
+    /// Weight in KG
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Weight {
+      get { return weight_; }
+      set {
+        weight_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -807,6 +909,11 @@ namespace Meshtastic.Protobufs {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Distance, other.Distance)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Lux, other.Lux)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(WhiteLux, other.WhiteLux)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(IrLux, other.IrLux)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(UvLux, other.UvLux)) return false;
+      if (WindDirection != other.WindDirection) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(WindSpeed, other.WindSpeed)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Weight, other.Weight)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -824,6 +931,11 @@ namespace Meshtastic.Protobufs {
       if (Distance != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Distance);
       if (Lux != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Lux);
       if (WhiteLux != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(WhiteLux);
+      if (IrLux != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(IrLux);
+      if (UvLux != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(UvLux);
+      if (WindDirection != 0) hash ^= WindDirection.GetHashCode();
+      if (WindSpeed != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(WindSpeed);
+      if (Weight != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Weight);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -882,6 +994,26 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(85);
         output.WriteFloat(WhiteLux);
       }
+      if (IrLux != 0F) {
+        output.WriteRawTag(93);
+        output.WriteFloat(IrLux);
+      }
+      if (UvLux != 0F) {
+        output.WriteRawTag(101);
+        output.WriteFloat(UvLux);
+      }
+      if (WindDirection != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(WindDirection);
+      }
+      if (WindSpeed != 0F) {
+        output.WriteRawTag(117);
+        output.WriteFloat(WindSpeed);
+      }
+      if (Weight != 0F) {
+        output.WriteRawTag(125);
+        output.WriteFloat(Weight);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -932,6 +1064,26 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(85);
         output.WriteFloat(WhiteLux);
       }
+      if (IrLux != 0F) {
+        output.WriteRawTag(93);
+        output.WriteFloat(IrLux);
+      }
+      if (UvLux != 0F) {
+        output.WriteRawTag(101);
+        output.WriteFloat(UvLux);
+      }
+      if (WindDirection != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(WindDirection);
+      }
+      if (WindSpeed != 0F) {
+        output.WriteRawTag(117);
+        output.WriteFloat(WindSpeed);
+      }
+      if (Weight != 0F) {
+        output.WriteRawTag(125);
+        output.WriteFloat(Weight);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -970,6 +1122,21 @@ namespace Meshtastic.Protobufs {
         size += 1 + 4;
       }
       if (WhiteLux != 0F) {
+        size += 1 + 4;
+      }
+      if (IrLux != 0F) {
+        size += 1 + 4;
+      }
+      if (UvLux != 0F) {
+        size += 1 + 4;
+      }
+      if (WindDirection != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WindDirection);
+      }
+      if (WindSpeed != 0F) {
+        size += 1 + 4;
+      }
+      if (Weight != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -1013,6 +1180,21 @@ namespace Meshtastic.Protobufs {
       }
       if (other.WhiteLux != 0F) {
         WhiteLux = other.WhiteLux;
+      }
+      if (other.IrLux != 0F) {
+        IrLux = other.IrLux;
+      }
+      if (other.UvLux != 0F) {
+        UvLux = other.UvLux;
+      }
+      if (other.WindDirection != 0) {
+        WindDirection = other.WindDirection;
+      }
+      if (other.WindSpeed != 0F) {
+        WindSpeed = other.WindSpeed;
+      }
+      if (other.Weight != 0F) {
+        Weight = other.Weight;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1069,6 +1251,26 @@ namespace Meshtastic.Protobufs {
             WhiteLux = input.ReadFloat();
             break;
           }
+          case 93: {
+            IrLux = input.ReadFloat();
+            break;
+          }
+          case 101: {
+            UvLux = input.ReadFloat();
+            break;
+          }
+          case 104: {
+            WindDirection = input.ReadUInt32();
+            break;
+          }
+          case 117: {
+            WindSpeed = input.ReadFloat();
+            break;
+          }
+          case 125: {
+            Weight = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -1122,6 +1324,26 @@ namespace Meshtastic.Protobufs {
           }
           case 85: {
             WhiteLux = input.ReadFloat();
+            break;
+          }
+          case 93: {
+            IrLux = input.ReadFloat();
+            break;
+          }
+          case 101: {
+            UvLux = input.ReadFloat();
+            break;
+          }
+          case 104: {
+            WindDirection = input.ReadUInt32();
+            break;
+          }
+          case 117: {
+            WindSpeed = input.ReadFloat();
+            break;
+          }
+          case 125: {
+            Weight = input.ReadFloat();
             break;
           }
         }
@@ -2624,6 +2846,244 @@ namespace Meshtastic.Protobufs {
             }
             input.ReadMessage(subBuilder);
             PowerMetrics = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// NAU7802 Telemetry configuration, for saving to flash
+  /// </summary>
+  public sealed partial class Nau7802Config : pb::IMessage<Nau7802Config>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Nau7802Config> _parser = new pb::MessageParser<Nau7802Config>(() => new Nau7802Config());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Nau7802Config> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Nau7802Config() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Nau7802Config(Nau7802Config other) : this() {
+      zeroOffset_ = other.zeroOffset_;
+      calibrationFactor_ = other.calibrationFactor_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Nau7802Config Clone() {
+      return new Nau7802Config(this);
+    }
+
+    /// <summary>Field number for the "zeroOffset" field.</summary>
+    public const int ZeroOffsetFieldNumber = 1;
+    private int zeroOffset_;
+    /// <summary>
+    ///
+    /// The offset setting for the NAU7802
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ZeroOffset {
+      get { return zeroOffset_; }
+      set {
+        zeroOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "calibrationFactor" field.</summary>
+    public const int CalibrationFactorFieldNumber = 2;
+    private float calibrationFactor_;
+    /// <summary>
+    ///
+    /// The calibration factor for the NAU7802
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float CalibrationFactor {
+      get { return calibrationFactor_; }
+      set {
+        calibrationFactor_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Nau7802Config);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Nau7802Config other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ZeroOffset != other.ZeroOffset) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(CalibrationFactor, other.CalibrationFactor)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ZeroOffset != 0) hash ^= ZeroOffset.GetHashCode();
+      if (CalibrationFactor != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(CalibrationFactor);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ZeroOffset != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ZeroOffset);
+      }
+      if (CalibrationFactor != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(CalibrationFactor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ZeroOffset != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ZeroOffset);
+      }
+      if (CalibrationFactor != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(CalibrationFactor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ZeroOffset != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ZeroOffset);
+      }
+      if (CalibrationFactor != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Nau7802Config other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ZeroOffset != 0) {
+        ZeroOffset = other.ZeroOffset;
+      }
+      if (other.CalibrationFactor != 0F) {
+        CalibrationFactor = other.CalibrationFactor;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ZeroOffset = input.ReadInt32();
+            break;
+          }
+          case 21: {
+            CalibrationFactor = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ZeroOffset = input.ReadInt32();
+            break;
+          }
+          case 21: {
+            CalibrationFactor = input.ReadFloat();
             break;
           }
         }

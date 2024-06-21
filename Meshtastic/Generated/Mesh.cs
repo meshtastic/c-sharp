@@ -129,40 +129,49 @@ namespace Meshtastic.Protobufs {
             "dGljLkhhcmR3YXJlTW9kZWwSGQoRaGFzUmVtb3RlSGFyZHdhcmUYCiABKAgi",
             "CwoJSGVhcnRiZWF0IlUKFU5vZGVSZW1vdGVIYXJkd2FyZVBpbhIQCghub2Rl",
             "X251bRgBIAEoDRIqCgNwaW4YAiABKAsyHS5tZXNodGFzdGljLlJlbW90ZUhh",
-            "cmR3YXJlUGluKtsICg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExP",
-            "UkFfVjIQARIMCghUTE9SQV9WMRACEhIKDlRMT1JBX1YyXzFfMVA2EAMSCQoF",
-            "VEJFQU0QBBIPCgtIRUxURUNfVjJfMBAFEg4KClRCRUFNX1YwUDcQBhIKCgZU",
-            "X0VDSE8QBxIQCgxUTE9SQV9WMV8xUDMQCBILCgdSQUs0NjMxEAkSDwoLSEVM",
-            "VEVDX1YyXzEQChINCglIRUxURUNfVjEQCxIYChRMSUxZR09fVEJFQU1fUzNf",
-            "Q09SRRAMEgwKCFJBSzExMjAwEA0SCwoHTkFOT19HMRAOEhIKDlRMT1JBX1Yy",
-            "XzFfMVA4EA8SDwoLVExPUkFfVDNfUzMQEBIUChBOQU5PX0cxX0VYUExPUkVS",
-            "EBESEQoNTkFOT19HMl9VTFRSQRASEg0KCUxPUkFfVFlQRRATEgsKB1dJUEhP",
-            "TkUQFBIOCgpTVEFUSU9OX0cxEBkSDAoIUkFLMTEzMTAQGhIUChBTRU5TRUxP",
-            "UkFfUlAyMDQwEBsSEAoMU0VOU0VMT1JBX1MzEBwSDQoJQ0FOQVJZT05FEB0S",
-            "DwoLUlAyMDQwX0xPUkEQHhIOCgpTVEFUSU9OX0cyEB8SEQoNTE9SQV9SRUxB",
-            "WV9WMRAgEg4KCk5SRjUyODQwREsQIRIHCgNQUFIQIhIPCgtHRU5JRUJMT0NL",
-            "UxAjEhEKDU5SRjUyX1VOS05PV04QJBINCglQT1JURFVJTk8QJRIPCgtBTkRS",
-            "T0lEX1NJTRAmEgoKBkRJWV9WMRAnEhUKEU5SRjUyODQwX1BDQTEwMDU5ECgS",
-            "CgoGRFJfREVWECkSCwoHTTVTVEFDSxAqEg0KCUhFTFRFQ19WMxArEhEKDUhF",
-            "TFRFQ19XU0xfVjMQLBITCg9CRVRBRlBWXzI0MDBfVFgQLRIXChNCRVRBRlBW",
-            "XzkwMF9OQU5PX1RYEC4SDAoIUlBJX1BJQ08QLxIbChdIRUxURUNfV0lSRUxF",
-            "U1NfVFJBQ0tFUhAwEhkKFUhFTFRFQ19XSVJFTEVTU19QQVBFUhAxEgoKBlRf",
-            "REVDSxAyEg4KClRfV0FUQ0hfUzMQMxIRCg1QSUNPTVBVVEVSX1MzEDQSDwoL",
-            "SEVMVEVDX0hUNjIQNRISCg5FQllURV9FU1AzMl9TMxA2EhEKDUVTUDMyX1Mz",
-            "X1BJQ08QNxINCglDSEFUVEVSXzIQOBIeChpIRUxURUNfV0lSRUxFU1NfUEFQ",
-            "RVJfVjFfMBA5EiAKHEhFTFRFQ19XSVJFTEVTU19UUkFDS0VSX1YxXzAQOhIL",
-            "CgdVTlBIT05FEDsSDAoIVERfTE9SQUMQPBITCg9DREVCWVRFX0VPUkFfUzMQ",
-            "PRIPCgtUV0NfTUVTSF9WNBA+EhYKEk5SRjUyX1BST01JQ1JPX0RJWRA/Eh8K",
-            "G1JBRElPTUFTVEVSXzkwMF9CQU5ESVRfTkFOTxBAEg8KClBSSVZBVEVfSFcQ",
-            "/wEqLAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRBX1BBWUxPQURfTEVO",
-            "EO0BKu4BChFDcml0aWNhbEVycm9yQ29kZRIICgROT05FEAASDwoLVFhfV0FU",
-            "Q0hET0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoITk9fUkFESU8QAxIP",
-            "CgtVTlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJTEVEEAUSDQoJTk9f",
-            "QVhQMTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5HEAcSEwoPVFJBTlNN",
-            "SVRfRkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEyNjJfRkFJTFVSRRAK",
-            "EhEKDVJBRElPX1NQSV9CVUcQC0JfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpN",
-            "ZXNoUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVk",
-            "qgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "cmR3YXJlUGluImUKDkNodW5rZWRQYXlsb2FkEhIKCnBheWxvYWRfaWQYASAB",
+            "KA0SEwoLY2h1bmtfY291bnQYAiABKA0SEwoLY2h1bmtfaW5kZXgYAyABKA0S",
+            "FQoNcGF5bG9hZF9jaHVuaxgEIAEoDCIfCg1yZXNlbmRfY2h1bmtzEg4KBmNo",
+            "dW5rcxgBIAMoDSKqAQoWQ2h1bmtlZFBheWxvYWRSZXNwb25zZRISCgpwYXls",
+            "b2FkX2lkGAEgASgNEhoKEHJlcXVlc3RfdHJhbnNmZXIYAiABKAhIABIZCg9h",
+            "Y2NlcHRfdHJhbnNmZXIYAyABKAhIABIyCg1yZXNlbmRfY2h1bmtzGAQgASgL",
+            "MhkubWVzaHRhc3RpYy5yZXNlbmRfY2h1bmtzSABCEQoPcGF5bG9hZF92YXJp",
+            "YW50KqsJCg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExPUkFfVjIQ",
+            "ARIMCghUTE9SQV9WMRACEhIKDlRMT1JBX1YyXzFfMVA2EAMSCQoFVEJFQU0Q",
+            "BBIPCgtIRUxURUNfVjJfMBAFEg4KClRCRUFNX1YwUDcQBhIKCgZUX0VDSE8Q",
+            "BxIQCgxUTE9SQV9WMV8xUDMQCBILCgdSQUs0NjMxEAkSDwoLSEVMVEVDX1Yy",
+            "XzEQChINCglIRUxURUNfVjEQCxIYChRMSUxZR09fVEJFQU1fUzNfQ09SRRAM",
+            "EgwKCFJBSzExMjAwEA0SCwoHTkFOT19HMRAOEhIKDlRMT1JBX1YyXzFfMVA4",
+            "EA8SDwoLVExPUkFfVDNfUzMQEBIUChBOQU5PX0cxX0VYUExPUkVSEBESEQoN",
+            "TkFOT19HMl9VTFRSQRASEg0KCUxPUkFfVFlQRRATEgsKB1dJUEhPTkUQFBIO",
+            "CgpXSU9fV00xMTEwEBUSCwoHUkFLMjU2MBAWEhMKD0hFTFRFQ19IUlVfMzYw",
+            "MRAXEg4KClNUQVRJT05fRzEQGRIMCghSQUsxMTMxMBAaEhQKEFNFTlNFTE9S",
+            "QV9SUDIwNDAQGxIQCgxTRU5TRUxPUkFfUzMQHBINCglDQU5BUllPTkUQHRIP",
+            "CgtSUDIwNDBfTE9SQRAeEg4KClNUQVRJT05fRzIQHxIRCg1MT1JBX1JFTEFZ",
+            "X1YxECASDgoKTlJGNTI4NDBESxAhEgcKA1BQUhAiEg8KC0dFTklFQkxPQ0tT",
+            "ECMSEQoNTlJGNTJfVU5LTk9XThAkEg0KCVBPUlREVUlOTxAlEg8KC0FORFJP",
+            "SURfU0lNECYSCgoGRElZX1YxECcSFQoRTlJGNTI4NDBfUENBMTAwNTkQKBIK",
+            "CgZEUl9ERVYQKRILCgdNNVNUQUNLECoSDQoJSEVMVEVDX1YzECsSEQoNSEVM",
+            "VEVDX1dTTF9WMxAsEhMKD0JFVEFGUFZfMjQwMF9UWBAtEhcKE0JFVEFGUFZf",
+            "OTAwX05BTk9fVFgQLhIMCghSUElfUElDTxAvEhsKF0hFTFRFQ19XSVJFTEVT",
+            "U19UUkFDS0VSEDASGQoVSEVMVEVDX1dJUkVMRVNTX1BBUEVSEDESCgoGVF9E",
+            "RUNLEDISDgoKVF9XQVRDSF9TMxAzEhEKDVBJQ09NUFVURVJfUzMQNBIPCgtI",
+            "RUxURUNfSFQ2MhA1EhIKDkVCWVRFX0VTUDMyX1MzEDYSEQoNRVNQMzJfUzNf",
+            "UElDTxA3Eg0KCUNIQVRURVJfMhA4Eh4KGkhFTFRFQ19XSVJFTEVTU19QQVBF",
+            "Ul9WMV8wEDkSIAocSEVMVEVDX1dJUkVMRVNTX1RSQUNLRVJfVjFfMBA6EgsK",
+            "B1VOUEhPTkUQOxIMCghURF9MT1JBQxA8EhMKD0NERUJZVEVfRU9SQV9TMxA9",
+            "Eg8KC1RXQ19NRVNIX1Y0ED4SFgoSTlJGNTJfUFJPTUlDUk9fRElZED8SHwob",
+            "UkFESU9NQVNURVJfOTAwX0JBTkRJVF9OQU5PEEASHAoYSEVMVEVDX0NBUFNV",
+            "TEVfU0VOU09SX1YzEEESDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMS",
+            "CAoEWkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2Fs",
+            "RXJyb3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQ",
+            "X0VOVEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQS",
+            "FQoRVUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZB",
+            "TElEX1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghC",
+            "Uk9XTk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JV",
+            "RxALQl8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1",
+            "Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlBy",
+            "b3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -185,7 +194,10 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Neighbor), global::Meshtastic.Protobufs.Neighbor.Parser, new[]{ "NodeId", "Snr", "LastRxTime", "NodeBroadcastIntervalSecs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetadata), global::Meshtastic.Protobufs.DeviceMetadata.Parser, new[]{ "FirmwareVersion", "DeviceStateVersion", "CanShutdown", "HasWifi", "HasBluetooth", "HasEthernet", "Role", "PositionFlags", "HwModel", "HasRemoteHardware" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Heartbeat), global::Meshtastic.Protobufs.Heartbeat.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePin), global::Meshtastic.Protobufs.NodeRemoteHardwarePin.Parser, new[]{ "NodeNum", "Pin" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePin), global::Meshtastic.Protobufs.NodeRemoteHardwarePin.Parser, new[]{ "NodeNum", "Pin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ChunkedPayload), global::Meshtastic.Protobufs.ChunkedPayload.Parser, new[]{ "PayloadId", "ChunkCount", "ChunkIndex", "PayloadChunk" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.resend_chunks), global::Meshtastic.Protobufs.resend_chunks.Parser, new[]{ "Chunks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ChunkedPayloadResponse), global::Meshtastic.Protobufs.ChunkedPayloadResponse.Parser, new[]{ "PayloadId", "RequestTransfer", "AcceptTransfer", "ResendChunks" }, new[]{ "PayloadVariant" }, null, null, null)
           }));
     }
     #endregion
@@ -307,6 +319,21 @@ namespace Meshtastic.Protobufs {
     /// wiphone https://www.wiphone.io/
     /// </summary>
     [pbr::OriginalName("WIPHONE")] Wiphone = 20,
+    /// <summary>
+    ///
+    /// WIO Tracker WM1110 family from Seeed Studio. Includes wio-1110-tracker and wio-1110-sdk
+    /// </summary>
+    [pbr::OriginalName("WIO_WM1110")] WioWm1110 = 21,
+    /// <summary>
+    ///
+    /// RAK2560 Solar base station based on RAK4630
+    /// </summary>
+    [pbr::OriginalName("RAK2560")] Rak2560 = 22,
+    /// <summary>
+    ///
+    /// Heltec HRU-3601: https://heltec.org/project/hru-3601/
+    /// </summary>
+    [pbr::OriginalName("HELTEC_HRU_3601")] HeltecHru3601 = 23,
     /// <summary>
     ///
     /// B&amp;Q Consulting Station Edition G1: https://uniteng.com/wiki/doku.php?id=meshtastic:station
@@ -521,6 +548,11 @@ namespace Meshtastic.Protobufs {
     /// ESP32-D0WDQ6 With SX1276/SKY66122, SSD1306 OLED and No GPS
     /// </summary>
     [pbr::OriginalName("RADIOMASTER_900_BANDIT_NANO")] Radiomaster900BanditNano = 64,
+    /// <summary>
+    ///
+    /// Heltec Capsule Sensor V3 with ESP32-S3 CPU, Portable LoRa device that can replace GNSS modules or sensors
+    /// </summary>
+    [pbr::OriginalName("HELTEC_CAPSULE_SENSOR_V3")] HeltecCapsuleSensorV3 = 65,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -10041,6 +10073,875 @@ namespace Meshtastic.Protobufs {
               Pin = new global::Meshtastic.Protobufs.RemoteHardwarePin();
             }
             input.ReadMessage(Pin);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class ChunkedPayload : pb::IMessage<ChunkedPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChunkedPayload> _parser = new pb::MessageParser<ChunkedPayload>(() => new ChunkedPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ChunkedPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChunkedPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChunkedPayload(ChunkedPayload other) : this() {
+      payloadId_ = other.payloadId_;
+      chunkCount_ = other.chunkCount_;
+      chunkIndex_ = other.chunkIndex_;
+      payloadChunk_ = other.payloadChunk_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChunkedPayload Clone() {
+      return new ChunkedPayload(this);
+    }
+
+    /// <summary>Field number for the "payload_id" field.</summary>
+    public const int PayloadIdFieldNumber = 1;
+    private uint payloadId_;
+    /// <summary>
+    ///
+    /// The ID of the entire payload
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PayloadId {
+      get { return payloadId_; }
+      set {
+        payloadId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "chunk_count" field.</summary>
+    public const int ChunkCountFieldNumber = 2;
+    private uint chunkCount_;
+    /// <summary>
+    ///
+    /// The total number of chunks in the payload
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ChunkCount {
+      get { return chunkCount_; }
+      set {
+        chunkCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "chunk_index" field.</summary>
+    public const int ChunkIndexFieldNumber = 3;
+    private uint chunkIndex_;
+    /// <summary>
+    ///
+    /// The current chunk index in the total
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ChunkIndex {
+      get { return chunkIndex_; }
+      set {
+        chunkIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "payload_chunk" field.</summary>
+    public const int PayloadChunkFieldNumber = 4;
+    private pb::ByteString payloadChunk_ = pb::ByteString.Empty;
+    /// <summary>
+    ///
+    /// The binary data of the current chunk
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString PayloadChunk {
+      get { return payloadChunk_; }
+      set {
+        payloadChunk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ChunkedPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ChunkedPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PayloadId != other.PayloadId) return false;
+      if (ChunkCount != other.ChunkCount) return false;
+      if (ChunkIndex != other.ChunkIndex) return false;
+      if (PayloadChunk != other.PayloadChunk) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PayloadId != 0) hash ^= PayloadId.GetHashCode();
+      if (ChunkCount != 0) hash ^= ChunkCount.GetHashCode();
+      if (ChunkIndex != 0) hash ^= ChunkIndex.GetHashCode();
+      if (PayloadChunk.Length != 0) hash ^= PayloadChunk.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PayloadId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PayloadId);
+      }
+      if (ChunkCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(ChunkCount);
+      }
+      if (ChunkIndex != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(ChunkIndex);
+      }
+      if (PayloadChunk.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(PayloadChunk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PayloadId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PayloadId);
+      }
+      if (ChunkCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(ChunkCount);
+      }
+      if (ChunkIndex != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(ChunkIndex);
+      }
+      if (PayloadChunk.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(PayloadChunk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PayloadId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PayloadId);
+      }
+      if (ChunkCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChunkCount);
+      }
+      if (ChunkIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChunkIndex);
+      }
+      if (PayloadChunk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PayloadChunk);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ChunkedPayload other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PayloadId != 0) {
+        PayloadId = other.PayloadId;
+      }
+      if (other.ChunkCount != 0) {
+        ChunkCount = other.ChunkCount;
+      }
+      if (other.ChunkIndex != 0) {
+        ChunkIndex = other.ChunkIndex;
+      }
+      if (other.PayloadChunk.Length != 0) {
+        PayloadChunk = other.PayloadChunk;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PayloadId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            ChunkCount = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            ChunkIndex = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            PayloadChunk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PayloadId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            ChunkCount = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            ChunkIndex = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            PayloadChunk = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// Wrapper message for broken repeated oneof support
+  /// </summary>
+  public sealed partial class resend_chunks : pb::IMessage<resend_chunks>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<resend_chunks> _parser = new pb::MessageParser<resend_chunks>(() => new resend_chunks());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<resend_chunks> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public resend_chunks() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public resend_chunks(resend_chunks other) : this() {
+      chunks_ = other.chunks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public resend_chunks Clone() {
+      return new resend_chunks(this);
+    }
+
+    /// <summary>Field number for the "chunks" field.</summary>
+    public const int ChunksFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_chunks_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> chunks_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> Chunks {
+      get { return chunks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as resend_chunks);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(resend_chunks other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!chunks_.Equals(other.chunks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= chunks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      chunks_.WriteTo(output, _repeated_chunks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      chunks_.WriteTo(ref output, _repeated_chunks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += chunks_.CalculateSize(_repeated_chunks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(resend_chunks other) {
+      if (other == null) {
+        return;
+      }
+      chunks_.Add(other.chunks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10:
+          case 8: {
+            chunks_.AddEntriesFrom(input, _repeated_chunks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            chunks_.AddEntriesFrom(ref input, _repeated_chunks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// Responses to a ChunkedPayload request
+  /// </summary>
+  public sealed partial class ChunkedPayloadResponse : pb::IMessage<ChunkedPayloadResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChunkedPayloadResponse> _parser = new pb::MessageParser<ChunkedPayloadResponse>(() => new ChunkedPayloadResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ChunkedPayloadResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChunkedPayloadResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChunkedPayloadResponse(ChunkedPayloadResponse other) : this() {
+      payloadId_ = other.payloadId_;
+      switch (other.PayloadVariantCase) {
+        case PayloadVariantOneofCase.RequestTransfer:
+          RequestTransfer = other.RequestTransfer;
+          break;
+        case PayloadVariantOneofCase.AcceptTransfer:
+          AcceptTransfer = other.AcceptTransfer;
+          break;
+        case PayloadVariantOneofCase.ResendChunks:
+          ResendChunks = other.ResendChunks.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChunkedPayloadResponse Clone() {
+      return new ChunkedPayloadResponse(this);
+    }
+
+    /// <summary>Field number for the "payload_id" field.</summary>
+    public const int PayloadIdFieldNumber = 1;
+    private uint payloadId_;
+    /// <summary>
+    ///
+    /// The ID of the entire payload
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PayloadId {
+      get { return payloadId_; }
+      set {
+        payloadId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_transfer" field.</summary>
+    public const int RequestTransferFieldNumber = 2;
+    /// <summary>
+    ///
+    /// Request to transfer chunked payload
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RequestTransfer {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer ? (bool) payloadVariant_ : false; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.RequestTransfer;
+      }
+    }
+
+    /// <summary>Field number for the "accept_transfer" field.</summary>
+    public const int AcceptTransferFieldNumber = 3;
+    /// <summary>
+    ///
+    /// Accept the transfer chunked payload
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AcceptTransfer {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer ? (bool) payloadVariant_ : false; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.AcceptTransfer;
+      }
+    }
+
+    /// <summary>Field number for the "resend_chunks" field.</summary>
+    public const int ResendChunksFieldNumber = 4;
+    /// <summary>
+    ///
+    /// Request missing indexes in the chunked payload
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.resend_chunks ResendChunks {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks ? (global::Meshtastic.Protobufs.resend_chunks) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.ResendChunks;
+      }
+    }
+
+    private object payloadVariant_;
+    /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
+    public enum PayloadVariantOneofCase {
+      None = 0,
+      RequestTransfer = 2,
+      AcceptTransfer = 3,
+      ResendChunks = 4,
+    }
+    private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PayloadVariantOneofCase PayloadVariantCase {
+      get { return payloadVariantCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPayloadVariant() {
+      payloadVariantCase_ = PayloadVariantOneofCase.None;
+      payloadVariant_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ChunkedPayloadResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ChunkedPayloadResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PayloadId != other.PayloadId) return false;
+      if (RequestTransfer != other.RequestTransfer) return false;
+      if (AcceptTransfer != other.AcceptTransfer) return false;
+      if (!object.Equals(ResendChunks, other.ResendChunks)) return false;
+      if (PayloadVariantCase != other.PayloadVariantCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PayloadId != 0) hash ^= PayloadId.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer) hash ^= RequestTransfer.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer) hash ^= AcceptTransfer.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks) hash ^= ResendChunks.GetHashCode();
+      hash ^= (int) payloadVariantCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PayloadId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PayloadId);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer) {
+        output.WriteRawTag(16);
+        output.WriteBool(RequestTransfer);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer) {
+        output.WriteRawTag(24);
+        output.WriteBool(AcceptTransfer);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ResendChunks);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PayloadId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PayloadId);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer) {
+        output.WriteRawTag(16);
+        output.WriteBool(RequestTransfer);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer) {
+        output.WriteRawTag(24);
+        output.WriteBool(AcceptTransfer);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ResendChunks);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PayloadId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PayloadId);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer) {
+        size += 1 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer) {
+        size += 1 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResendChunks);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ChunkedPayloadResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PayloadId != 0) {
+        PayloadId = other.PayloadId;
+      }
+      switch (other.PayloadVariantCase) {
+        case PayloadVariantOneofCase.RequestTransfer:
+          RequestTransfer = other.RequestTransfer;
+          break;
+        case PayloadVariantOneofCase.AcceptTransfer:
+          AcceptTransfer = other.AcceptTransfer;
+          break;
+        case PayloadVariantOneofCase.ResendChunks:
+          if (ResendChunks == null) {
+            ResendChunks = new global::Meshtastic.Protobufs.resend_chunks();
+          }
+          ResendChunks.MergeFrom(other.ResendChunks);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PayloadId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            RequestTransfer = input.ReadBool();
+            break;
+          }
+          case 24: {
+            AcceptTransfer = input.ReadBool();
+            break;
+          }
+          case 34: {
+            global::Meshtastic.Protobufs.resend_chunks subBuilder = new global::Meshtastic.Protobufs.resend_chunks();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks) {
+              subBuilder.MergeFrom(ResendChunks);
+            }
+            input.ReadMessage(subBuilder);
+            ResendChunks = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PayloadId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            RequestTransfer = input.ReadBool();
+            break;
+          }
+          case 24: {
+            AcceptTransfer = input.ReadBool();
+            break;
+          }
+          case 34: {
+            global::Meshtastic.Protobufs.resend_chunks subBuilder = new global::Meshtastic.Protobufs.resend_chunks();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks) {
+              subBuilder.MergeFrom(ResendChunks);
+            }
+            input.ReadMessage(subBuilder);
+            ResendChunks = subBuilder;
             break;
           }
         }
