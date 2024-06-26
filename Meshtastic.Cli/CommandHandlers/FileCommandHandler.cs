@@ -7,17 +7,10 @@ using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
-public class FileCommandHandler : DeviceCommandHandler
+public class FileCommandHandler(string path, DeviceConnectionContext context, CommandContext commandContext) : DeviceCommandHandler(context, commandContext)
 {
-    private readonly string path;
+    private readonly string path = path;
     private readonly MemoryStream memoryStream = new();
-
-
-    public FileCommandHandler(string path, DeviceConnectionContext context, CommandContext commandContext) :
-        base(context, commandContext)
-    {
-        this.path = path;
-    }
 
     public async Task<DeviceStateContainer> Handle()
     {
