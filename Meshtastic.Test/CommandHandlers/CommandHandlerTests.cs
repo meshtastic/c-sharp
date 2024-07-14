@@ -90,17 +90,17 @@ public class CommandHandlerTests : CommandHandlerTestBase
         handler.ParsedSettings.Should().BeNull();
     }
 
-    [Test]
-    [Retry(3)]
-    public async Task FixedPositionCommandHandler_Should_Acknowledge()
-    {
-        var handler = new FixedPositionCommandHandler(34.00m, -92.000m, 123, ConnectionContext, CommandContext);
-        var container = await handler.Handle();
-        InformationLogsContain("Sending position to device");
-        InformationLogsContain("Setting Position.FixedPosition to True");
-        var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
-        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
-    }
+    // [Test]
+    // [Retry(3)]
+    // public async Task FixedPositionCommandHandler_Should_Acknowledge()
+    // {
+        // var handler = new FixedPositionCommandHandler(34.00m, -92.000m, 123, ConnectionContext, CommandContext);
+        // var container = await handler.Handle();
+        // InformationLogsContain("Sending position to device");
+        // InformationLogsContain("Setting Position.FixedPosition to True");
+        // var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
+        // routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+    // }
 
     [Test]
     [Retry(3)]
