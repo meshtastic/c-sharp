@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyKLIgoGQ29u",
+            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyKoIgoGQ29u",
             "ZmlnEjEKBmRldmljZRgBIAEoCzIfLm1lc2h0YXN0aWMuQ29uZmlnLkRldmlj",
             "ZUNvbmZpZ0gAEjUKCHBvc2l0aW9uGAIgASgLMiEubWVzaHRhc3RpYy5Db25m",
             "aWcuUG9zaXRpb25Db25maWdIABIvCgVwb3dlchgDIAEoCzIeLm1lc2h0YXN0",
@@ -33,7 +33,7 @@ namespace Meshtastic.Protobufs {
             "ASgLMiAubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZ0gAEi0KBGxv",
             "cmEYBiABKAsyHS5tZXNodGFzdGljLkNvbmZpZy5Mb1JhQ29uZmlnSAASNwoJ",
             "Ymx1ZXRvb3RoGAcgASgLMiIubWVzaHRhc3RpYy5Db25maWcuQmx1ZXRvb3Ro",
-            "Q29uZmlnSAAakQUKDERldmljZUNvbmZpZxIyCgRyb2xlGAEgASgOMiQubWVz",
+            "Q29uZmlnSAAalQUKDERldmljZUNvbmZpZxIyCgRyb2xlGAEgASgOMiQubWVz",
             "aHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnLlJvbGUSFgoOc2VyaWFsX2Vu",
             "YWJsZWQYAiABKAgSGQoRZGVidWdfbG9nX2VuYWJsZWQYAyABKAgSEwoLYnV0",
             "dG9uX2dwaW8YBCABKA0SEwoLYnV6emVyX2dwaW8YBSABKA0SSQoQcmVicm9h",
@@ -42,89 +42,89 @@ namespace Meshtastic.Protobufs {
             "ZWNzGAcgASgNEiIKGmRvdWJsZV90YXBfYXNfYnV0dG9uX3ByZXNzGAggASgI",
             "EhIKCmlzX21hbmFnZWQYCSABKAgSHAoUZGlzYWJsZV90cmlwbGVfY2xpY2sY",
             "CiABKAgSDQoFdHpkZWYYCyABKAkSHgoWbGVkX2hlYXJ0YmVhdF9kaXNhYmxl",
-            "ZBgMIAEoCCKqAQoEUm9sZRIKCgZDTElFTlQQABIPCgtDTElFTlRfTVVURRAB",
-            "EgoKBlJPVVRFUhACEhEKDVJPVVRFUl9DTElFTlQQAxIMCghSRVBFQVRFUhAE",
-            "EgsKB1RSQUNLRVIQBRIKCgZTRU5TT1IQBhIHCgNUQUsQBxIRCg1DTElFTlRf",
-            "SElEREVOEAgSEgoOTE9TVF9BTkRfRk9VTkQQCRIPCgtUQUtfVFJBQ0tFUhAK",
-            "IlEKD1JlYnJvYWRjYXN0TW9kZRIHCgNBTEwQABIVChFBTExfU0tJUF9ERUNP",
-            "RElORxABEg4KCkxPQ0FMX09OTFkQAhIOCgpLTk9XTl9PTkxZEAMakQUKDlBv",
-            "c2l0aW9uQ29uZmlnEh8KF3Bvc2l0aW9uX2Jyb2FkY2FzdF9zZWNzGAEgASgN",
-            "EigKIHBvc2l0aW9uX2Jyb2FkY2FzdF9zbWFydF9lbmFibGVkGAIgASgIEhYK",
-            "DmZpeGVkX3Bvc2l0aW9uGAMgASgIEhcKC2dwc19lbmFibGVkGAQgASgIQgIY",
-            "ARIbChNncHNfdXBkYXRlX2ludGVydmFsGAUgASgNEhwKEGdwc19hdHRlbXB0",
-            "X3RpbWUYBiABKA1CAhgBEhYKDnBvc2l0aW9uX2ZsYWdzGAcgASgNEg8KB3J4",
-            "X2dwaW8YCCABKA0SDwoHdHhfZ3BpbxgJIAEoDRIoCiBicm9hZGNhc3Rfc21h",
-            "cnRfbWluaW11bV9kaXN0YW5jZRgKIAEoDRItCiVicm9hZGNhc3Rfc21hcnRf",
-            "bWluaW11bV9pbnRlcnZhbF9zZWNzGAsgASgNEhMKC2dwc19lbl9ncGlvGAwg",
-            "ASgNEjsKCGdwc19tb2RlGA0gASgOMikubWVzaHRhc3RpYy5Db25maWcuUG9z",
-            "aXRpb25Db25maWcuR3BzTW9kZSKrAQoNUG9zaXRpb25GbGFncxIJCgVVTlNF",
-            "VBAAEgwKCEFMVElUVURFEAESEAoMQUxUSVRVREVfTVNMEAISFgoSR0VPSURB",
-            "TF9TRVBBUkFUSU9OEAQSBwoDRE9QEAgSCQoFSFZET1AQEBINCglTQVRJTlZJ",
-            "RVcQIBIKCgZTRVFfTk8QQBIOCglUSU1FU1RBTVAQgAESDAoHSEVBRElORxCA",
-            "AhIKCgVTUEVFRBCABCI1CgdHcHNNb2RlEgwKCERJU0FCTEVEEAASCwoHRU5B",
-            "QkxFRBABEg8KC05PVF9QUkVTRU5UEAIahAIKC1Bvd2VyQ29uZmlnEhcKD2lz",
-            "X3Bvd2VyX3NhdmluZxgBIAEoCBImCh5vbl9iYXR0ZXJ5X3NodXRkb3duX2Fm",
-            "dGVyX3NlY3MYAiABKA0SHwoXYWRjX211bHRpcGxpZXJfb3ZlcnJpZGUYAyAB",
-            "KAISGwoTd2FpdF9ibHVldG9vdGhfc2VjcxgEIAEoDRIQCghzZHNfc2VjcxgG",
-            "IAEoDRIPCgdsc19zZWNzGAcgASgNEhUKDW1pbl93YWtlX3NlY3MYCCABKA0S",
-            "IgoaZGV2aWNlX2JhdHRlcnlfaW5hX2FkZHJlc3MYCSABKA0SGAoQcG93ZXJt",
-            "b25fZW5hYmxlcxggIAEoBBr+AgoNTmV0d29ya0NvbmZpZxIUCgx3aWZpX2Vu",
-            "YWJsZWQYASABKAgSEQoJd2lmaV9zc2lkGAMgASgJEhAKCHdpZmlfcHNrGAQg",
-            "ASgJEhIKCm50cF9zZXJ2ZXIYBSABKAkSEwoLZXRoX2VuYWJsZWQYBiABKAgS",
-            "QgoMYWRkcmVzc19tb2RlGAcgASgOMiwubWVzaHRhc3RpYy5Db25maWcuTmV0",
-            "d29ya0NvbmZpZy5BZGRyZXNzTW9kZRJACgtpcHY0X2NvbmZpZxgIIAEoCzIr",
-            "Lm1lc2h0YXN0aWMuQ29uZmlnLk5ldHdvcmtDb25maWcuSXBWNENvbmZpZxIW",
-            "Cg5yc3lzbG9nX3NlcnZlchgJIAEoCRpGCgpJcFY0Q29uZmlnEgoKAmlwGAEg",
-            "ASgHEg8KB2dhdGV3YXkYAiABKAcSDgoGc3VibmV0GAMgASgHEgsKA2RucxgE",
-            "IAEoByIjCgtBZGRyZXNzTW9kZRIICgRESENQEAASCgoGU1RBVElDEAEazQcK",
-            "DURpc3BsYXlDb25maWcSFgoOc2NyZWVuX29uX3NlY3MYASABKA0SSAoKZ3Bz",
-            "X2Zvcm1hdBgCIAEoDjI0Lm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlDb25m",
-            "aWcuR3BzQ29vcmRpbmF0ZUZvcm1hdBIhChlhdXRvX3NjcmVlbl9jYXJvdXNl",
-            "bF9zZWNzGAMgASgNEhkKEWNvbXBhc3Nfbm9ydGhfdG9wGAQgASgIEhMKC2Zs",
-            "aXBfc2NyZWVuGAUgASgIEjwKBXVuaXRzGAYgASgOMi0ubWVzaHRhc3RpYy5D",
-            "b25maWcuRGlzcGxheUNvbmZpZy5EaXNwbGF5VW5pdHMSNwoEb2xlZBgHIAEo",
-            "DjIpLm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlDb25maWcuT2xlZFR5cGUS",
-            "QQoLZGlzcGxheW1vZGUYCCABKA4yLC5tZXNodGFzdGljLkNvbmZpZy5EaXNw",
-            "bGF5Q29uZmlnLkRpc3BsYXlNb2RlEhQKDGhlYWRpbmdfYm9sZBgJIAEoCBId",
-            "ChV3YWtlX29uX3RhcF9vcl9tb3Rpb24YCiABKAgSUAoTY29tcGFzc19vcmll",
-            "bnRhdGlvbhgLIAEoDjIzLm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlDb25m",
-            "aWcuQ29tcGFzc09yaWVudGF0aW9uIk0KE0dwc0Nvb3JkaW5hdGVGb3JtYXQS",
-            "BwoDREVDEAASBwoDRE1TEAESBwoDVVRNEAISCAoETUdSUxADEgcKA09MQxAE",
-            "EggKBE9TR1IQBSIoCgxEaXNwbGF5VW5pdHMSCgoGTUVUUklDEAASDAoISU1Q",
-            "RVJJQUwQASJNCghPbGVkVHlwZRINCglPTEVEX0FVVE8QABIQCgxPTEVEX1NT",
-            "RDEzMDYQARIPCgtPTEVEX1NIMTEwNhACEg8KC09MRURfU0gxMTA3EAMiQQoL",
-            "RGlzcGxheU1vZGUSCwoHREVGQVVMVBAAEgwKCFRXT0NPTE9SEAESDAoISU5W",
-            "RVJURUQQAhIJCgVDT0xPUhADIroBChJDb21wYXNzT3JpZW50YXRpb24SDQoJ",
-            "REVHUkVFU18wEAASDgoKREVHUkVFU185MBABEg8KC0RFR1JFRVNfMTgwEAIS",
-            "DwoLREVHUkVFU18yNzAQAxIWChJERUdSRUVTXzBfSU5WRVJURUQQBBIXChNE",
-            "RUdSRUVTXzkwX0lOVkVSVEVEEAUSGAoUREVHUkVFU18xODBfSU5WRVJURUQQ",
-            "BhIYChRERUdSRUVTXzI3MF9JTlZFUlRFRBAHGrAGCgpMb1JhQ29uZmlnEhIK",
-            "CnVzZV9wcmVzZXQYASABKAgSPwoMbW9kZW1fcHJlc2V0GAIgASgOMikubWVz",
-            "aHRhc3RpYy5Db25maWcuTG9SYUNvbmZpZy5Nb2RlbVByZXNldBIRCgliYW5k",
-            "d2lkdGgYAyABKA0SFQoNc3ByZWFkX2ZhY3RvchgEIAEoDRITCgtjb2Rpbmdf",
-            "cmF0ZRgFIAEoDRIYChBmcmVxdWVuY3lfb2Zmc2V0GAYgASgCEjgKBnJlZ2lv",
-            "bhgHIAEoDjIoLm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25maWcuUmVnaW9u",
-            "Q29kZRIRCglob3BfbGltaXQYCCABKA0SEgoKdHhfZW5hYmxlZBgJIAEoCBIQ",
-            "Cgh0eF9wb3dlchgKIAEoBRITCgtjaGFubmVsX251bRgLIAEoDRIbChNvdmVy",
-            "cmlkZV9kdXR5X2N5Y2xlGAwgASgIEh4KFnN4MTI2eF9yeF9ib29zdGVkX2dh",
-            "aW4YDSABKAgSGgoSb3ZlcnJpZGVfZnJlcXVlbmN5GA4gASgCEhcKD2lnbm9y",
-            "ZV9pbmNvbWluZxhnIAMoDRITCgtpZ25vcmVfbXF0dBhoIAEoCCLNAQoKUmVn",
-            "aW9uQ29kZRIJCgVVTlNFVBAAEgYKAlVTEAESCgoGRVVfNDMzEAISCgoGRVVf",
-            "ODY4EAMSBgoCQ04QBBIGCgJKUBAFEgcKA0FOWhAGEgYKAktSEAcSBgoCVFcQ",
-            "CBIGCgJSVRAJEgYKAklOEAoSCgoGTlpfODY1EAsSBgoCVEgQDBILCgdMT1JB",
-            "XzI0EA0SCgoGVUFfNDMzEA4SCgoGVUFfODY4EA8SCgoGTVlfNDMzEBASCgoG",
-            "TVlfOTE5EBESCgoGU0dfOTIzEBIilAEKC01vZGVtUHJlc2V0Eg0KCUxPTkdf",
-            "RkFTVBAAEg0KCUxPTkdfU0xPVxABEhIKDlZFUllfTE9OR19TTE9XEAISDwoL",
-            "TUVESVVNX1NMT1cQAxIPCgtNRURJVU1fRkFTVBAEEg4KClNIT1JUX1NMT1cQ",
-            "BRIOCgpTSE9SVF9GQVNUEAYSEQoNTE9OR19NT0RFUkFURRAHGs0BCg9CbHVl",
-            "dG9vdGhDb25maWcSDwoHZW5hYmxlZBgBIAEoCBI8CgRtb2RlGAIgASgOMi4u",
-            "bWVzaHRhc3RpYy5Db25maWcuQmx1ZXRvb3RoQ29uZmlnLlBhaXJpbmdNb2Rl",
-            "EhEKCWZpeGVkX3BpbhgDIAEoDRIeChZkZXZpY2VfbG9nZ2luZ19lbmFibGVk",
-            "GAQgASgIIjgKC1BhaXJpbmdNb2RlEg4KClJBTkRPTV9QSU4QABINCglGSVhF",
-            "RF9QSU4QARIKCgZOT19QSU4QAkIRCg9wYXlsb2FkX3ZhcmlhbnRCYQoTY29t",
-            "LmdlZWtzdmlsbGUubWVzaEIMQ29uZmlnUHJvdG9zWiJnaXRodWIuY29tL21l",
-            "c2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6",
-            "AgBiBnByb3RvMw=="));
+            "ZBgMIAEoCCKuAQoEUm9sZRIKCgZDTElFTlQQABIPCgtDTElFTlRfTVVURRAB",
+            "EgoKBlJPVVRFUhACEhUKDVJPVVRFUl9DTElFTlQQAxoCCAESDAoIUkVQRUFU",
+            "RVIQBBILCgdUUkFDS0VSEAUSCgoGU0VOU09SEAYSBwoDVEFLEAcSEQoNQ0xJ",
+            "RU5UX0hJRERFThAIEhIKDkxPU1RfQU5EX0ZPVU5EEAkSDwoLVEFLX1RSQUNL",
+            "RVIQCiJRCg9SZWJyb2FkY2FzdE1vZGUSBwoDQUxMEAASFQoRQUxMX1NLSVBf",
+            "REVDT0RJTkcQARIOCgpMT0NBTF9PTkxZEAISDgoKS05PV05fT05MWRADGpEF",
+            "Cg5Qb3NpdGlvbkNvbmZpZxIfChdwb3NpdGlvbl9icm9hZGNhc3Rfc2VjcxgB",
+            "IAEoDRIoCiBwb3NpdGlvbl9icm9hZGNhc3Rfc21hcnRfZW5hYmxlZBgCIAEo",
+            "CBIWCg5maXhlZF9wb3NpdGlvbhgDIAEoCBIXCgtncHNfZW5hYmxlZBgEIAEo",
+            "CEICGAESGwoTZ3BzX3VwZGF0ZV9pbnRlcnZhbBgFIAEoDRIcChBncHNfYXR0",
+            "ZW1wdF90aW1lGAYgASgNQgIYARIWCg5wb3NpdGlvbl9mbGFncxgHIAEoDRIP",
+            "CgdyeF9ncGlvGAggASgNEg8KB3R4X2dwaW8YCSABKA0SKAogYnJvYWRjYXN0",
+            "X3NtYXJ0X21pbmltdW1fZGlzdGFuY2UYCiABKA0SLQolYnJvYWRjYXN0X3Nt",
+            "YXJ0X21pbmltdW1faW50ZXJ2YWxfc2VjcxgLIAEoDRITCgtncHNfZW5fZ3Bp",
+            "bxgMIAEoDRI7CghncHNfbW9kZRgNIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmln",
+            "LlBvc2l0aW9uQ29uZmlnLkdwc01vZGUiqwEKDVBvc2l0aW9uRmxhZ3MSCQoF",
+            "VU5TRVQQABIMCghBTFRJVFVERRABEhAKDEFMVElUVURFX01TTBACEhYKEkdF",
+            "T0lEQUxfU0VQQVJBVElPThAEEgcKA0RPUBAIEgkKBUhWRE9QEBASDQoJU0FU",
+            "SU5WSUVXECASCgoGU0VRX05PEEASDgoJVElNRVNUQU1QEIABEgwKB0hFQURJ",
+            "TkcQgAISCgoFU1BFRUQQgAQiNQoHR3BzTW9kZRIMCghESVNBQkxFRBAAEgsK",
+            "B0VOQUJMRUQQARIPCgtOT1RfUFJFU0VOVBACGoQCCgtQb3dlckNvbmZpZxIX",
+            "Cg9pc19wb3dlcl9zYXZpbmcYASABKAgSJgoeb25fYmF0dGVyeV9zaHV0ZG93",
+            "bl9hZnRlcl9zZWNzGAIgASgNEh8KF2FkY19tdWx0aXBsaWVyX292ZXJyaWRl",
+            "GAMgASgCEhsKE3dhaXRfYmx1ZXRvb3RoX3NlY3MYBCABKA0SEAoIc2RzX3Nl",
+            "Y3MYBiABKA0SDwoHbHNfc2VjcxgHIAEoDRIVCg1taW5fd2FrZV9zZWNzGAgg",
+            "ASgNEiIKGmRldmljZV9iYXR0ZXJ5X2luYV9hZGRyZXNzGAkgASgNEhgKEHBv",
+            "d2VybW9uX2VuYWJsZXMYICABKAQa/gIKDU5ldHdvcmtDb25maWcSFAoMd2lm",
+            "aV9lbmFibGVkGAEgASgIEhEKCXdpZmlfc3NpZBgDIAEoCRIQCgh3aWZpX3Bz",
+            "axgEIAEoCRISCgpudHBfc2VydmVyGAUgASgJEhMKC2V0aF9lbmFibGVkGAYg",
+            "ASgIEkIKDGFkZHJlc3NfbW9kZRgHIAEoDjIsLm1lc2h0YXN0aWMuQ29uZmln",
+            "Lk5ldHdvcmtDb25maWcuQWRkcmVzc01vZGUSQAoLaXB2NF9jb25maWcYCCAB",
+            "KAsyKy5tZXNodGFzdGljLkNvbmZpZy5OZXR3b3JrQ29uZmlnLklwVjRDb25m",
+            "aWcSFgoOcnN5c2xvZ19zZXJ2ZXIYCSABKAkaRgoKSXBWNENvbmZpZxIKCgJp",
+            "cBgBIAEoBxIPCgdnYXRld2F5GAIgASgHEg4KBnN1Ym5ldBgDIAEoBxILCgNk",
+            "bnMYBCABKAciIwoLQWRkcmVzc01vZGUSCAoEREhDUBAAEgoKBlNUQVRJQxAB",
+            "Gs0HCg1EaXNwbGF5Q29uZmlnEhYKDnNjcmVlbl9vbl9zZWNzGAEgASgNEkgK",
+            "Cmdwc19mb3JtYXQYAiABKA4yNC5tZXNodGFzdGljLkNvbmZpZy5EaXNwbGF5",
+            "Q29uZmlnLkdwc0Nvb3JkaW5hdGVGb3JtYXQSIQoZYXV0b19zY3JlZW5fY2Fy",
+            "b3VzZWxfc2VjcxgDIAEoDRIZChFjb21wYXNzX25vcnRoX3RvcBgEIAEoCBIT",
+            "CgtmbGlwX3NjcmVlbhgFIAEoCBI8CgV1bml0cxgGIAEoDjItLm1lc2h0YXN0",
+            "aWMuQ29uZmlnLkRpc3BsYXlDb25maWcuRGlzcGxheVVuaXRzEjcKBG9sZWQY",
+            "ByABKA4yKS5tZXNodGFzdGljLkNvbmZpZy5EaXNwbGF5Q29uZmlnLk9sZWRU",
+            "eXBlEkEKC2Rpc3BsYXltb2RlGAggASgOMiwubWVzaHRhc3RpYy5Db25maWcu",
+            "RGlzcGxheUNvbmZpZy5EaXNwbGF5TW9kZRIUCgxoZWFkaW5nX2JvbGQYCSAB",
+            "KAgSHQoVd2FrZV9vbl90YXBfb3JfbW90aW9uGAogASgIElAKE2NvbXBhc3Nf",
+            "b3JpZW50YXRpb24YCyABKA4yMy5tZXNodGFzdGljLkNvbmZpZy5EaXNwbGF5",
+            "Q29uZmlnLkNvbXBhc3NPcmllbnRhdGlvbiJNChNHcHNDb29yZGluYXRlRm9y",
+            "bWF0EgcKA0RFQxAAEgcKA0RNUxABEgcKA1VUTRACEggKBE1HUlMQAxIHCgNP",
+            "TEMQBBIICgRPU0dSEAUiKAoMRGlzcGxheVVuaXRzEgoKBk1FVFJJQxAAEgwK",
+            "CElNUEVSSUFMEAEiTQoIT2xlZFR5cGUSDQoJT0xFRF9BVVRPEAASEAoMT0xF",
+            "RF9TU0QxMzA2EAESDwoLT0xFRF9TSDExMDYQAhIPCgtPTEVEX1NIMTEwNxAD",
+            "IkEKC0Rpc3BsYXlNb2RlEgsKB0RFRkFVTFQQABIMCghUV09DT0xPUhABEgwK",
+            "CElOVkVSVEVEEAISCQoFQ09MT1IQAyK6AQoSQ29tcGFzc09yaWVudGF0aW9u",
+            "Eg0KCURFR1JFRVNfMBAAEg4KCkRFR1JFRVNfOTAQARIPCgtERUdSRUVTXzE4",
+            "MBACEg8KC0RFR1JFRVNfMjcwEAMSFgoSREVHUkVFU18wX0lOVkVSVEVEEAQS",
+            "FwoTREVHUkVFU185MF9JTlZFUlRFRBAFEhgKFERFR1JFRVNfMTgwX0lOVkVS",
+            "VEVEEAYSGAoUREVHUkVFU18yNzBfSU5WRVJURUQQBxrJBgoKTG9SYUNvbmZp",
+            "ZxISCgp1c2VfcHJlc2V0GAEgASgIEj8KDG1vZGVtX3ByZXNldBgCIAEoDjIp",
+            "Lm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25maWcuTW9kZW1QcmVzZXQSEQoJ",
+            "YmFuZHdpZHRoGAMgASgNEhUKDXNwcmVhZF9mYWN0b3IYBCABKA0SEwoLY29k",
+            "aW5nX3JhdGUYBSABKA0SGAoQZnJlcXVlbmN5X29mZnNldBgGIAEoAhI4CgZy",
+            "ZWdpb24YByABKA4yKC5tZXNodGFzdGljLkNvbmZpZy5Mb1JhQ29uZmlnLlJl",
+            "Z2lvbkNvZGUSEQoJaG9wX2xpbWl0GAggASgNEhIKCnR4X2VuYWJsZWQYCSAB",
+            "KAgSEAoIdHhfcG93ZXIYCiABKAUSEwoLY2hhbm5lbF9udW0YCyABKA0SGwoT",
+            "b3ZlcnJpZGVfZHV0eV9jeWNsZRgMIAEoCBIeChZzeDEyNnhfcnhfYm9vc3Rl",
+            "ZF9nYWluGA0gASgIEhoKEm92ZXJyaWRlX2ZyZXF1ZW5jeRgOIAEoAhIXCg9w",
+            "YV9mYW5fZGlzYWJsZWQYDyABKAgSFwoPaWdub3JlX2luY29taW5nGGcgAygN",
+            "EhMKC2lnbm9yZV9tcXR0GGggASgIIs0BCgpSZWdpb25Db2RlEgkKBVVOU0VU",
+            "EAASBgoCVVMQARIKCgZFVV80MzMQAhIKCgZFVV84NjgQAxIGCgJDThAEEgYK",
+            "AkpQEAUSBwoDQU5aEAYSBgoCS1IQBxIGCgJUVxAIEgYKAlJVEAkSBgoCSU4Q",
+            "ChIKCgZOWl84NjUQCxIGCgJUSBAMEgsKB0xPUkFfMjQQDRIKCgZVQV80MzMQ",
+            "DhIKCgZVQV84NjgQDxIKCgZNWV80MzMQEBIKCgZNWV85MTkQERIKCgZTR185",
+            "MjMQEiKUAQoLTW9kZW1QcmVzZXQSDQoJTE9OR19GQVNUEAASDQoJTE9OR19T",
+            "TE9XEAESEgoOVkVSWV9MT05HX1NMT1cQAhIPCgtNRURJVU1fU0xPVxADEg8K",
+            "C01FRElVTV9GQVNUEAQSDgoKU0hPUlRfU0xPVxAFEg4KClNIT1JUX0ZBU1QQ",
+            "BhIRCg1MT05HX01PREVSQVRFEAcazQEKD0JsdWV0b290aENvbmZpZxIPCgdl",
+            "bmFibGVkGAEgASgIEjwKBG1vZGUYAiABKA4yLi5tZXNodGFzdGljLkNvbmZp",
+            "Zy5CbHVldG9vdGhDb25maWcuUGFpcmluZ01vZGUSEQoJZml4ZWRfcGluGAMg",
+            "ASgNEh4KFmRldmljZV9sb2dnaW5nX2VuYWJsZWQYBCABKAgiOAoLUGFpcmlu",
+            "Z01vZGUSDgoKUkFORE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJ",
+            "ThACQhEKD3BheWxvYWRfdmFyaWFudEJhChNjb20uZ2Vla3N2aWxsZS5tZXNo",
+            "QgxDb25maWdQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5l",
+            "cmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -133,7 +133,7 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PowerConfig), global::Meshtastic.Protobufs.Config.Types.PowerConfig.Parser, new[]{ "IsPowerSaving", "OnBatteryShutdownAfterSecs", "AdcMultiplierOverride", "WaitBluetoothSecs", "SdsSecs", "LsSecs", "MinWakeSecs", "DeviceBatteryInaAddress", "PowermonEnables" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "AddressMode", "Ipv4Config", "RsyslogServer" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold", "WakeOnTapOrMotion", "CompassOrientation" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "Sx126XRxBoostedGain", "OverrideFrequency", "IgnoreIncoming", "IgnoreMqtt" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "Sx126XRxBoostedGain", "OverrideFrequency", "PaFanDisabled", "IgnoreIncoming", "IgnoreMqtt" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin", "DeviceLoggingEnabled" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null)})
           }));
     }
@@ -1374,10 +1374,6 @@ namespace Meshtastic.Protobufs {
             ///   This mode may still potentially have higher power usage due to it's preference in message rebroadcasting on the mesh.
             /// </summary>
             [pbr::OriginalName("ROUTER")] Router = 2,
-            /// <summary>
-            ///
-            /// Description: Combination of both ROUTER and CLIENT. Not for mobile devices.
-            /// </summary>
             [pbr::OriginalName("ROUTER_CLIENT")] RouterClient = 3,
             /// <summary>
             ///
@@ -4460,6 +4456,7 @@ namespace Meshtastic.Protobufs {
           overrideDutyCycle_ = other.overrideDutyCycle_;
           sx126XRxBoostedGain_ = other.sx126XRxBoostedGain_;
           overrideFrequency_ = other.overrideFrequency_;
+          paFanDisabled_ = other.paFanDisabled_;
           ignoreIncoming_ = other.ignoreIncoming_.Clone();
           ignoreMqtt_ = other.ignoreMqtt_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4724,6 +4721,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "pa_fan_disabled" field.</summary>
+        public const int PaFanDisabledFieldNumber = 15;
+        private bool paFanDisabled_;
+        /// <summary>
+        ///
+        /// If true, disable the build-in PA FAN using pin define in RF95_FAN_EN.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PaFanDisabled {
+          get { return paFanDisabled_; }
+          set {
+            paFanDisabled_ = value;
+          }
+        }
+
         /// <summary>Field number for the "ignore_incoming" field.</summary>
         public const int IgnoreIncomingFieldNumber = 103;
         private static readonly pb::FieldCodec<uint> _repeated_ignoreIncoming_codec
@@ -4786,6 +4799,7 @@ namespace Meshtastic.Protobufs {
           if (OverrideDutyCycle != other.OverrideDutyCycle) return false;
           if (Sx126XRxBoostedGain != other.Sx126XRxBoostedGain) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(OverrideFrequency, other.OverrideFrequency)) return false;
+          if (PaFanDisabled != other.PaFanDisabled) return false;
           if(!ignoreIncoming_.Equals(other.ignoreIncoming_)) return false;
           if (IgnoreMqtt != other.IgnoreMqtt) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -4809,6 +4823,7 @@ namespace Meshtastic.Protobufs {
           if (OverrideDutyCycle != false) hash ^= OverrideDutyCycle.GetHashCode();
           if (Sx126XRxBoostedGain != false) hash ^= Sx126XRxBoostedGain.GetHashCode();
           if (OverrideFrequency != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OverrideFrequency);
+          if (PaFanDisabled != false) hash ^= PaFanDisabled.GetHashCode();
           hash ^= ignoreIncoming_.GetHashCode();
           if (IgnoreMqtt != false) hash ^= IgnoreMqtt.GetHashCode();
           if (_unknownFields != null) {
@@ -4885,6 +4900,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(117);
             output.WriteFloat(OverrideFrequency);
           }
+          if (PaFanDisabled != false) {
+            output.WriteRawTag(120);
+            output.WriteBool(PaFanDisabled);
+          }
           ignoreIncoming_.WriteTo(output, _repeated_ignoreIncoming_codec);
           if (IgnoreMqtt != false) {
             output.WriteRawTag(192, 6);
@@ -4956,6 +4975,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(117);
             output.WriteFloat(OverrideFrequency);
           }
+          if (PaFanDisabled != false) {
+            output.WriteRawTag(120);
+            output.WriteBool(PaFanDisabled);
+          }
           ignoreIncoming_.WriteTo(ref output, _repeated_ignoreIncoming_codec);
           if (IgnoreMqtt != false) {
             output.WriteRawTag(192, 6);
@@ -5012,6 +5035,9 @@ namespace Meshtastic.Protobufs {
           }
           if (OverrideFrequency != 0F) {
             size += 1 + 4;
+          }
+          if (PaFanDisabled != false) {
+            size += 1 + 1;
           }
           size += ignoreIncoming_.CalculateSize(_repeated_ignoreIncoming_codec);
           if (IgnoreMqtt != false) {
@@ -5070,6 +5096,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.OverrideFrequency != 0F) {
             OverrideFrequency = other.OverrideFrequency;
+          }
+          if (other.PaFanDisabled != false) {
+            PaFanDisabled = other.PaFanDisabled;
           }
           ignoreIncoming_.Add(other.ignoreIncoming_);
           if (other.IgnoreMqtt != false) {
@@ -5144,6 +5173,10 @@ namespace Meshtastic.Protobufs {
               }
               case 117: {
                 OverrideFrequency = input.ReadFloat();
+                break;
+              }
+              case 120: {
+                PaFanDisabled = input.ReadBool();
                 break;
               }
               case 826:
@@ -5224,6 +5257,10 @@ namespace Meshtastic.Protobufs {
               }
               case 117: {
                 OverrideFrequency = input.ReadFloat();
+                break;
+              }
+              case 120: {
+                PaFanDisabled = input.ReadBool();
                 break;
               }
               case 826:

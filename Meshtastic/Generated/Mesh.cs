@@ -138,7 +138,7 @@ namespace Meshtastic.Protobufs {
             "YXlsb2FkX2lkGAEgASgNEhoKEHJlcXVlc3RfdHJhbnNmZXIYAiABKAhIABIZ",
             "Cg9hY2NlcHRfdHJhbnNmZXIYAyABKAhIABIyCg1yZXNlbmRfY2h1bmtzGAQg",
             "ASgLMhkubWVzaHRhc3RpYy5yZXNlbmRfY2h1bmtzSABCEQoPcGF5bG9hZF92",
-            "YXJpYW50KqsJCg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExPUkFf",
+            "YXJpYW50KqMKCg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExPUkFf",
             "VjIQARIMCghUTE9SQV9WMRACEhIKDlRMT1JBX1YyXzFfMVA2EAMSCQoFVEJF",
             "QU0QBBIPCgtIRUxURUNfVjJfMBAFEg4KClRCRUFNX1YwUDcQBhIKCgZUX0VD",
             "SE8QBxIQCgxUTE9SQV9WMV8xUDMQCBILCgdSQUs0NjMxEAkSDwoLSEVMVEVD",
@@ -164,16 +164,19 @@ namespace Meshtastic.Protobufs {
             "EgsKB1VOUEhPTkUQOxIMCghURF9MT1JBQxA8EhMKD0NERUJZVEVfRU9SQV9T",
             "MxA9Eg8KC1RXQ19NRVNIX1Y0ED4SFgoSTlJGNTJfUFJPTUlDUk9fRElZED8S",
             "HwobUkFESU9NQVNURVJfOTAwX0JBTkRJVF9OQU5PEEASHAoYSEVMVEVDX0NB",
-            "UFNVTEVfU0VOU09SX1YzEEESDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFu",
-            "dHMSCAoEWkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRp",
-            "Y2FsRXJyb3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNM",
-            "RUVQX0VOVEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVE",
-            "EAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJ",
-            "TlZBTElEX1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIM",
-            "CghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJ",
-            "X0JVRxALQl8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdp",
-            "dGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGlj",
-            "LlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "UFNVTEVfU0VOU09SX1YzEEESHQoZSEVMVEVDX1ZJU0lPTl9NQVNURVJfVDE5",
+            "MBBCEh0KGUhFTFRFQ19WSVNJT05fTUFTVEVSX0UyMTMQQxIdChlIRUxURUNf",
+            "VklTSU9OX01BU1RFUl9FMjkwEEQSGQoVSEVMVEVDX01FU0hfTk9ERV9UMTE0",
+            "EEUSDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAAEhUK",
+            "EERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2RlEggK",
+            "BE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQ",
+            "AhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5J",
+            "VF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NF",
+            "VFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIK",
+            "DlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl8KE2NvbS5n",
+            "ZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRh",
+            "c3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -556,6 +559,27 @@ namespace Meshtastic.Protobufs {
     /// Heltec Capsule Sensor V3 with ESP32-S3 CPU, Portable LoRa device that can replace GNSS modules or sensors
     /// </summary>
     [pbr::OriginalName("HELTEC_CAPSULE_SENSOR_V3")] HeltecCapsuleSensorV3 = 65,
+    /// <summary>
+    ///
+    /// Heltec Vision Master T190 with ESP32-S3 CPU, and a 1.90 inch TFT display
+    /// </summary>
+    [pbr::OriginalName("HELTEC_VISION_MASTER_T190")] HeltecVisionMasterT190 = 66,
+    /// <summary>
+    ///
+    /// Heltec Vision Master E213 with ESP32-S3 CPU, and a 2.13 inch E-Ink display
+    /// </summary>
+    [pbr::OriginalName("HELTEC_VISION_MASTER_E213")] HeltecVisionMasterE213 = 67,
+    /// <summary>
+    ///
+    /// Heltec Vision Master E290 with ESP32-S3 CPU, and a 2.9 inch E-Ink display
+    /// </summary>
+    [pbr::OriginalName("HELTEC_VISION_MASTER_E290")] HeltecVisionMasterE290 = 68,
+    /// <summary>
+    ///
+    /// Heltec Mesh Node T114 board with nRF52840 CPU, and a 1.14 inch TFT display, Ultimate low-power design,
+    /// specifically adapted for the Meshtatic project
+    /// </summary>
+    [pbr::OriginalName("HELTEC_MESH_NODE_T114")] HeltecMeshNodeT114 = 69,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
