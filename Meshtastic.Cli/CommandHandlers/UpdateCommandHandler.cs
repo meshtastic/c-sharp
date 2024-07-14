@@ -61,7 +61,7 @@ public class UpdateCommandHandler : DeviceCommandHandler
             .StartAsync("Flashing", async (ctx) =>
             {
                 AnsiConsole.WriteLine($"Copying uf2 file to {drive}");
-                File.Copy(uf2Path, Path.Combine(drive, new FileInfo(uf2Path).Name));
+                File.Copy(uf2Path, Path.Combine(drive, new System.IO.FileInfo(uf2Path).Name));
                 await Task.Delay(2000);
                 File.Delete(uf2Path);
                 AnsiConsole.Write("Completed device update!");

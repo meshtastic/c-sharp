@@ -27,48 +27,48 @@ namespace Meshtastic.Protobufs {
             "ChptZXNodGFzdGljL3RlbGVtZXRyeS5wcm90bxIKbWVzaHRhc3RpYyKBAQoN",
             "RGV2aWNlTWV0cmljcxIVCg1iYXR0ZXJ5X2xldmVsGAEgASgNEg8KB3ZvbHRh",
             "Z2UYAiABKAISGwoTY2hhbm5lbF91dGlsaXphdGlvbhgDIAEoAhITCgthaXJf",
-            "dXRpbF90eBgEIAEoAhIWCg51cHRpbWVfc2Vjb25kcxgFIAEoDSK2AgoSRW52",
+            "dXRpbF90eBgEIAEoAhIWCg51cHRpbWVfc2Vjb25kcxgFIAEoDSLcAgoSRW52",
             "aXJvbm1lbnRNZXRyaWNzEhMKC3RlbXBlcmF0dXJlGAEgASgCEhkKEXJlbGF0",
             "aXZlX2h1bWlkaXR5GAIgASgCEhsKE2Jhcm9tZXRyaWNfcHJlc3N1cmUYAyAB",
             "KAISFgoOZ2FzX3Jlc2lzdGFuY2UYBCABKAISDwoHdm9sdGFnZRgFIAEoAhIP",
             "CgdjdXJyZW50GAYgASgCEgsKA2lhcRgHIAEoDRIQCghkaXN0YW5jZRgIIAEo",
             "AhILCgNsdXgYCSABKAISEQoJd2hpdGVfbHV4GAogASgCEg4KBmlyX2x1eBgL",
             "IAEoAhIOCgZ1dl9sdXgYDCABKAISFgoOd2luZF9kaXJlY3Rpb24YDSABKA0S",
-            "EgoKd2luZF9zcGVlZBgOIAEoAhIOCgZ3ZWlnaHQYDyABKAIijAEKDFBvd2Vy",
-            "TWV0cmljcxITCgtjaDFfdm9sdGFnZRgBIAEoAhITCgtjaDFfY3VycmVudBgC",
-            "IAEoAhITCgtjaDJfdm9sdGFnZRgDIAEoAhITCgtjaDJfY3VycmVudBgEIAEo",
-            "AhITCgtjaDNfdm9sdGFnZRgFIAEoAhITCgtjaDNfY3VycmVudBgGIAEoAiK/",
-            "AgoRQWlyUXVhbGl0eU1ldHJpY3MSFQoNcG0xMF9zdGFuZGFyZBgBIAEoDRIV",
-            "Cg1wbTI1X3N0YW5kYXJkGAIgASgNEhYKDnBtMTAwX3N0YW5kYXJkGAMgASgN",
-            "EhoKEnBtMTBfZW52aXJvbm1lbnRhbBgEIAEoDRIaChJwbTI1X2Vudmlyb25t",
-            "ZW50YWwYBSABKA0SGwoTcG0xMDBfZW52aXJvbm1lbnRhbBgGIAEoDRIWCg5w",
-            "YXJ0aWNsZXNfMDN1bRgHIAEoDRIWCg5wYXJ0aWNsZXNfMDV1bRgIIAEoDRIW",
-            "Cg5wYXJ0aWNsZXNfMTB1bRgJIAEoDRIWCg5wYXJ0aWNsZXNfMjV1bRgKIAEo",
-            "DRIWCg5wYXJ0aWNsZXNfNTB1bRgLIAEoDRIXCg9wYXJ0aWNsZXNfMTAwdW0Y",
-            "DCABKA0iiQIKCVRlbGVtZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRldmljZV9t",
-            "ZXRyaWNzGAIgASgLMhkubWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNzSAASPQoT",
-            "ZW52aXJvbm1lbnRfbWV0cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMuRW52aXJv",
-            "bm1lbnRNZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgEIAEoCzId",
-            "Lm1lc2h0YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dlcl9tZXRy",
-            "aWNzGAUgASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIAEIJCgd2YXJp",
-            "YW50Ij4KDU5hdTc4MDJDb25maWcSEgoKemVyb09mZnNldBgBIAEoBRIZChFj",
-            "YWxpYnJhdGlvbkZhY3RvchgCIAEoAirqAgoTVGVsZW1ldHJ5U2Vuc29yVHlw",
-            "ZRIQCgxTRU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhIL",
-            "CgdNQ1A5ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgw",
-            "EAYSCQoFU0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4",
-            "NjU4EAoSDAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwKCFBNU0EwMDNJEA0S",
-            "CwoHSU5BMzIyMRAOEgoKBkJNUDA4NRAPEgwKCFJDV0w5NjIwEBASCQoFU0hU",
-            "NFgQERIMCghWRU1MNzcwMBASEgwKCE1MWDkwNjMyEBMSCwoHT1BUMzAwMRAU",
-            "EgwKCExUUjM5MFVWEBUSDgoKVFNMMjU5MTFGThAWEgkKBUFIVDEwEBcSEAoM",
-            "REZST0JPVF9MQVJLEBgSCwoHTkFVNzgwMhAZQmQKE2NvbS5nZWVrc3ZpbGxl",
-            "Lm1lc2hCD1RlbGVtZXRyeVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
-            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
-            "bzM="));
+            "EgoKd2luZF9zcGVlZBgOIAEoAhIOCgZ3ZWlnaHQYDyABKAISEQoJd2luZF9n",
+            "dXN0GBAgASgCEhEKCXdpbmRfbHVsbBgRIAEoAiKMAQoMUG93ZXJNZXRyaWNz",
+            "EhMKC2NoMV92b2x0YWdlGAEgASgCEhMKC2NoMV9jdXJyZW50GAIgASgCEhMK",
+            "C2NoMl92b2x0YWdlGAMgASgCEhMKC2NoMl9jdXJyZW50GAQgASgCEhMKC2No",
+            "M192b2x0YWdlGAUgASgCEhMKC2NoM19jdXJyZW50GAYgASgCIr8CChFBaXJR",
+            "dWFsaXR5TWV0cmljcxIVCg1wbTEwX3N0YW5kYXJkGAEgASgNEhUKDXBtMjVf",
+            "c3RhbmRhcmQYAiABKA0SFgoOcG0xMDBfc3RhbmRhcmQYAyABKA0SGgoScG0x",
+            "MF9lbnZpcm9ubWVudGFsGAQgASgNEhoKEnBtMjVfZW52aXJvbm1lbnRhbBgF",
+            "IAEoDRIbChNwbTEwMF9lbnZpcm9ubWVudGFsGAYgASgNEhYKDnBhcnRpY2xl",
+            "c18wM3VtGAcgASgNEhYKDnBhcnRpY2xlc18wNXVtGAggASgNEhYKDnBhcnRp",
+            "Y2xlc18xMHVtGAkgASgNEhYKDnBhcnRpY2xlc18yNXVtGAogASgNEhYKDnBh",
+            "cnRpY2xlc181MHVtGAsgASgNEhcKD3BhcnRpY2xlc18xMDB1bRgMIAEoDSKJ",
+            "AgoJVGVsZW1ldHJ5EgwKBHRpbWUYASABKAcSMwoOZGV2aWNlX21ldHJpY3MY",
+            "AiABKAsyGS5tZXNodGFzdGljLkRldmljZU1ldHJpY3NIABI9ChNlbnZpcm9u",
+            "bWVudF9tZXRyaWNzGAMgASgLMh4ubWVzaHRhc3RpYy5FbnZpcm9ubWVudE1l",
+            "dHJpY3NIABI8ChNhaXJfcXVhbGl0eV9tZXRyaWNzGAQgASgLMh0ubWVzaHRh",
+            "c3RpYy5BaXJRdWFsaXR5TWV0cmljc0gAEjEKDXBvd2VyX21ldHJpY3MYBSAB",
+            "KAsyGC5tZXNodGFzdGljLlBvd2VyTWV0cmljc0gAQgkKB3ZhcmlhbnQiPgoN",
+            "TmF1NzgwMkNvbmZpZxISCgp6ZXJvT2Zmc2V0GAEgASgFEhkKEWNhbGlicmF0",
+            "aW9uRmFjdG9yGAIgASgCKuoCChNUZWxlbWV0cnlTZW5zb3JUeXBlEhAKDFNF",
+            "TlNPUl9VTlNFVBAAEgoKBkJNRTI4MBABEgoKBkJNRTY4MBACEgsKB01DUDk4",
+            "MDgQAxIKCgZJTkEyNjAQBBIKCgZJTkEyMTkQBRIKCgZCTVAyODAQBhIJCgVT",
+            "SFRDMxAHEgkKBUxQUzIyEAgSCwoHUU1DNjMxMBAJEgsKB1FNSTg2NTgQChIM",
+            "CghRTUM1ODgzTBALEgkKBVNIVDMxEAwSDAoIUE1TQTAwM0kQDRILCgdJTkEz",
+            "MjIxEA4SCgoGQk1QMDg1EA8SDAoIUkNXTDk2MjAQEBIJCgVTSFQ0WBAREgwK",
+            "CFZFTUw3NzAwEBISDAoITUxYOTA2MzIQExILCgdPUFQzMDAxEBQSDAoITFRS",
+            "MzkwVVYQFRIOCgpUU0wyNTkxMUZOEBYSCQoFQUhUMTAQFxIQCgxERlJPQk9U",
+            "X0xBUksQGBILCgdOQVU3ODAyEBlCZAoTY29tLmdlZWtzdmlsbGUubWVzaEIP",
+            "VGVsZW1ldHJ5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
+            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics" }, new[]{ "Variant" }, null, null, null),
@@ -633,6 +633,8 @@ namespace Meshtastic.Protobufs {
       windDirection_ = other.windDirection_;
       windSpeed_ = other.windSpeed_;
       weight_ = other.weight_;
+      windGust_ = other.windGust_;
+      windLull_ = other.windLull_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -884,6 +886,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "wind_gust" field.</summary>
+    public const int WindGustFieldNumber = 16;
+    private float windGust_;
+    /// <summary>
+    ///
+    /// Wind gust in m/s
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float WindGust {
+      get { return windGust_; }
+      set {
+        windGust_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "wind_lull" field.</summary>
+    public const int WindLullFieldNumber = 17;
+    private float windLull_;
+    /// <summary>
+    ///
+    /// Wind lull in m/s
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float WindLull {
+      get { return windLull_; }
+      set {
+        windLull_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -914,6 +948,8 @@ namespace Meshtastic.Protobufs {
       if (WindDirection != other.WindDirection) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(WindSpeed, other.WindSpeed)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Weight, other.Weight)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(WindGust, other.WindGust)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(WindLull, other.WindLull)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -936,6 +972,8 @@ namespace Meshtastic.Protobufs {
       if (WindDirection != 0) hash ^= WindDirection.GetHashCode();
       if (WindSpeed != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(WindSpeed);
       if (Weight != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Weight);
+      if (WindGust != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(WindGust);
+      if (WindLull != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(WindLull);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1014,6 +1052,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(125);
         output.WriteFloat(Weight);
       }
+      if (WindGust != 0F) {
+        output.WriteRawTag(133, 1);
+        output.WriteFloat(WindGust);
+      }
+      if (WindLull != 0F) {
+        output.WriteRawTag(141, 1);
+        output.WriteFloat(WindLull);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1084,6 +1130,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(125);
         output.WriteFloat(Weight);
       }
+      if (WindGust != 0F) {
+        output.WriteRawTag(133, 1);
+        output.WriteFloat(WindGust);
+      }
+      if (WindLull != 0F) {
+        output.WriteRawTag(141, 1);
+        output.WriteFloat(WindLull);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1138,6 +1192,12 @@ namespace Meshtastic.Protobufs {
       }
       if (Weight != 0F) {
         size += 1 + 4;
+      }
+      if (WindGust != 0F) {
+        size += 2 + 4;
+      }
+      if (WindLull != 0F) {
+        size += 2 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1195,6 +1255,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.Weight != 0F) {
         Weight = other.Weight;
+      }
+      if (other.WindGust != 0F) {
+        WindGust = other.WindGust;
+      }
+      if (other.WindLull != 0F) {
+        WindLull = other.WindLull;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1271,6 +1337,14 @@ namespace Meshtastic.Protobufs {
             Weight = input.ReadFloat();
             break;
           }
+          case 133: {
+            WindGust = input.ReadFloat();
+            break;
+          }
+          case 141: {
+            WindLull = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -1344,6 +1418,14 @@ namespace Meshtastic.Protobufs {
           }
           case 125: {
             Weight = input.ReadFloat();
+            break;
+          }
+          case 133: {
+            WindGust = input.ReadFloat();
+            break;
+          }
+          case 141: {
+            WindLull = input.ReadFloat();
             break;
           }
         }

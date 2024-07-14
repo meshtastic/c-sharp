@@ -25,7 +25,7 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8SCm1lc2h0YXN0aWMi",
-            "0yIKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
+            "8CIKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
             "b2R1bGVDb25maWcuTVFUVENvbmZpZ0gAEjcKBnNlcmlhbBgCIAEoCzIlLm1l",
             "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZ0gAElQKFWV4dGVy",
             "bmFsX25vdGlmaWNhdGlvbhgDIAEoCzIzLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
@@ -73,7 +73,7 @@ namespace Meshtastic.Protobufs {
             "T0RFQzJfNzAwEAcSDwoLQ09ERUMyXzcwMEIQCBp2ChBQYXhjb3VudGVyQ29u",
             "ZmlnEg8KB2VuYWJsZWQYASABKAgSIgoacGF4Y291bnRlcl91cGRhdGVfaW50",
             "ZXJ2YWwYAiABKA0SFgoOd2lmaV90aHJlc2hvbGQYAyABKAUSFQoNYmxlX3Ro",
-            "cmVzaG9sZBgEIAEoBRrkBAoMU2VyaWFsQ29uZmlnEg8KB2VuYWJsZWQYASAB",
+            "cmVzaG9sZBgEIAEoBRruBAoMU2VyaWFsQ29uZmlnEg8KB2VuYWJsZWQYASAB",
             "KAgSDAoEZWNobxgCIAEoCBILCgNyeGQYAyABKA0SCwoDdHhkGAQgASgNEj8K",
             "BGJhdWQYBSABKA4yMS5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5TZXJpYWxD",
             "b25maWcuU2VyaWFsX0JhdWQSDwoHdGltZW91dBgGIAEoDRI/CgRtb2RlGAcg",
@@ -85,52 +85,52 @@ namespace Meshtastic.Protobufs {
             "MBAHEg4KCkJBVURfMTkyMDAQCBIOCgpCQVVEXzM4NDAwEAkSDgoKQkFVRF81",
             "NzYwMBAKEg8KC0JBVURfMTE1MjAwEAsSDwoLQkFVRF8yMzA0MDAQDBIPCgtC",
             "QVVEXzQ2MDgwMBANEg8KC0JBVURfNTc2MDAwEA4SDwoLQkFVRF85MjE2MDAQ",
-            "DyJVCgtTZXJpYWxfTW9kZRILCgdERUZBVUxUEAASCgoGU0lNUExFEAESCQoF",
-            "UFJPVE8QAhILCgdURVhUTVNHEAMSCAoETk1FQRAEEgsKB0NBTFRPUE8QBRrp",
-            "AgoaRXh0ZXJuYWxOb3RpZmljYXRpb25Db25maWcSDwoHZW5hYmxlZBgBIAEo",
-            "CBIRCglvdXRwdXRfbXMYAiABKA0SDgoGb3V0cHV0GAMgASgNEhQKDG91dHB1",
-            "dF92aWJyYRgIIAEoDRIVCg1vdXRwdXRfYnV6emVyGAkgASgNEg4KBmFjdGl2",
-            "ZRgEIAEoCBIVCg1hbGVydF9tZXNzYWdlGAUgASgIEhsKE2FsZXJ0X21lc3Nh",
-            "Z2VfdmlicmEYCiABKAgSHAoUYWxlcnRfbWVzc2FnZV9idXp6ZXIYCyABKAgS",
-            "EgoKYWxlcnRfYmVsbBgGIAEoCBIYChBhbGVydF9iZWxsX3ZpYnJhGAwgASgI",
-            "EhkKEWFsZXJ0X2JlbGxfYnV6emVyGA0gASgIEg8KB3VzZV9wd20YByABKAgS",
-            "EwoLbmFnX3RpbWVvdXQYDiABKA0SGQoRdXNlX2kyc19hc19idXp6ZXIYDyAB",
-            "KAgahAEKElN0b3JlRm9yd2FyZENvbmZpZxIPCgdlbmFibGVkGAEgASgIEhEK",
-            "CWhlYXJ0YmVhdBgCIAEoCBIPCgdyZWNvcmRzGAMgASgNEhoKEmhpc3Rvcnlf",
-            "cmV0dXJuX21heBgEIAEoDRIdChVoaXN0b3J5X3JldHVybl93aW5kb3cYBSAB",
-            "KA0aQAoPUmFuZ2VUZXN0Q29uZmlnEg8KB2VuYWJsZWQYASABKAgSDgoGc2Vu",
-            "ZGVyGAIgASgNEgwKBHNhdmUYAyABKAga5gIKD1RlbGVtZXRyeUNvbmZpZxIe",
-            "ChZkZXZpY2VfdXBkYXRlX2ludGVydmFsGAEgASgNEiMKG2Vudmlyb25tZW50",
-            "X3VwZGF0ZV9pbnRlcnZhbBgCIAEoDRInCh9lbnZpcm9ubWVudF9tZWFzdXJl",
-            "bWVudF9lbmFibGVkGAMgASgIEiIKGmVudmlyb25tZW50X3NjcmVlbl9lbmFi",
-            "bGVkGAQgASgIEiYKHmVudmlyb25tZW50X2Rpc3BsYXlfZmFocmVuaGVpdBgF",
-            "IAEoCBIbChNhaXJfcXVhbGl0eV9lbmFibGVkGAYgASgIEhwKFGFpcl9xdWFs",
-            "aXR5X2ludGVydmFsGAcgASgNEiEKGXBvd2VyX21lYXN1cmVtZW50X2VuYWJs",
-            "ZWQYCCABKAgSHQoVcG93ZXJfdXBkYXRlX2ludGVydmFsGAkgASgNEhwKFHBv",
-            "d2VyX3NjcmVlbl9lbmFibGVkGAogASgIGtYEChNDYW5uZWRNZXNzYWdlQ29u",
-            "ZmlnEhcKD3JvdGFyeTFfZW5hYmxlZBgBIAEoCBIZChFpbnB1dGJyb2tlcl9w",
-            "aW5fYRgCIAEoDRIZChFpbnB1dGJyb2tlcl9waW5fYhgDIAEoDRIdChVpbnB1",
-            "dGJyb2tlcl9waW5fcHJlc3MYBCABKA0SWQoUaW5wdXRicm9rZXJfZXZlbnRf",
-            "Y3cYBSABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5DYW5uZWRNZXNz",
-            "YWdlQ29uZmlnLklucHV0RXZlbnRDaGFyEloKFWlucHV0YnJva2VyX2V2ZW50",
-            "X2NjdxgGIAEoDjI7Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1l",
-            "c3NhZ2VDb25maWcuSW5wdXRFdmVudENoYXISXAoXaW5wdXRicm9rZXJfZXZl",
-            "bnRfcHJlc3MYByABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5DYW5u",
-            "ZWRNZXNzYWdlQ29uZmlnLklucHV0RXZlbnRDaGFyEhcKD3VwZG93bjFfZW5h",
-            "YmxlZBgIIAEoCBIPCgdlbmFibGVkGAkgASgIEhoKEmFsbG93X2lucHV0X3Nv",
-            "dXJjZRgKIAEoCRIRCglzZW5kX2JlbGwYCyABKAgiYwoOSW5wdXRFdmVudENo",
-            "YXISCAoETk9ORRAAEgYKAlVQEBESCAoERE9XThASEggKBExFRlQQExIJCgVS",
-            "SUdIVBAUEgoKBlNFTEVDVBAKEggKBEJBQ0sQGxIKCgZDQU5DRUwQGBplChVB",
-            "bWJpZW50TGlnaHRpbmdDb25maWcSEQoJbGVkX3N0YXRlGAEgASgIEg8KB2N1",
-            "cnJlbnQYAiABKA0SCwoDcmVkGAMgASgNEg0KBWdyZWVuGAQgASgNEgwKBGJs",
-            "dWUYBSABKA1CEQoPcGF5bG9hZF92YXJpYW50ImQKEVJlbW90ZUhhcmR3YXJl",
-            "UGluEhAKCGdwaW9fcGluGAEgASgNEgwKBG5hbWUYAiABKAkSLwoEdHlwZRgD",
-            "IAEoDjIhLm1lc2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW5UeXBlKkkKFVJl",
-            "bW90ZUhhcmR3YXJlUGluVHlwZRILCgdVTktOT1dOEAASEAoMRElHSVRBTF9S",
-            "RUFEEAESEQoNRElHSVRBTF9XUklURRACQmcKE2NvbS5nZWVrc3ZpbGxlLm1l",
-            "c2hCEk1vZHVsZUNvbmZpZ1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
-            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
-            "bzM="));
+            "DyJfCgtTZXJpYWxfTW9kZRILCgdERUZBVUxUEAASCgoGU0lNUExFEAESCQoF",
+            "UFJPVE8QAhILCgdURVhUTVNHEAMSCAoETk1FQRAEEgsKB0NBTFRPUE8QBRII",
+            "CgRXUzg1EAYa6QIKGkV4dGVybmFsTm90aWZpY2F0aW9uQ29uZmlnEg8KB2Vu",
+            "YWJsZWQYASABKAgSEQoJb3V0cHV0X21zGAIgASgNEg4KBm91dHB1dBgDIAEo",
+            "DRIUCgxvdXRwdXRfdmlicmEYCCABKA0SFQoNb3V0cHV0X2J1enplchgJIAEo",
+            "DRIOCgZhY3RpdmUYBCABKAgSFQoNYWxlcnRfbWVzc2FnZRgFIAEoCBIbChNh",
+            "bGVydF9tZXNzYWdlX3ZpYnJhGAogASgIEhwKFGFsZXJ0X21lc3NhZ2VfYnV6",
+            "emVyGAsgASgIEhIKCmFsZXJ0X2JlbGwYBiABKAgSGAoQYWxlcnRfYmVsbF92",
+            "aWJyYRgMIAEoCBIZChFhbGVydF9iZWxsX2J1enplchgNIAEoCBIPCgd1c2Vf",
+            "cHdtGAcgASgIEhMKC25hZ190aW1lb3V0GA4gASgNEhkKEXVzZV9pMnNfYXNf",
+            "YnV6emVyGA8gASgIGpcBChJTdG9yZUZvcndhcmRDb25maWcSDwoHZW5hYmxl",
+            "ZBgBIAEoCBIRCgloZWFydGJlYXQYAiABKAgSDwoHcmVjb3JkcxgDIAEoDRIa",
+            "ChJoaXN0b3J5X3JldHVybl9tYXgYBCABKA0SHQoVaGlzdG9yeV9yZXR1cm5f",
+            "d2luZG93GAUgASgNEhEKCWlzX3NlcnZlchgGIAEoCBpACg9SYW5nZVRlc3RD",
+            "b25maWcSDwoHZW5hYmxlZBgBIAEoCBIOCgZzZW5kZXIYAiABKA0SDAoEc2F2",
+            "ZRgDIAEoCBrmAgoPVGVsZW1ldHJ5Q29uZmlnEh4KFmRldmljZV91cGRhdGVf",
+            "aW50ZXJ2YWwYASABKA0SIwobZW52aXJvbm1lbnRfdXBkYXRlX2ludGVydmFs",
+            "GAIgASgNEicKH2Vudmlyb25tZW50X21lYXN1cmVtZW50X2VuYWJsZWQYAyAB",
+            "KAgSIgoaZW52aXJvbm1lbnRfc2NyZWVuX2VuYWJsZWQYBCABKAgSJgoeZW52",
+            "aXJvbm1lbnRfZGlzcGxheV9mYWhyZW5oZWl0GAUgASgIEhsKE2Fpcl9xdWFs",
+            "aXR5X2VuYWJsZWQYBiABKAgSHAoUYWlyX3F1YWxpdHlfaW50ZXJ2YWwYByAB",
+            "KA0SIQoZcG93ZXJfbWVhc3VyZW1lbnRfZW5hYmxlZBgIIAEoCBIdChVwb3dl",
+            "cl91cGRhdGVfaW50ZXJ2YWwYCSABKA0SHAoUcG93ZXJfc2NyZWVuX2VuYWJs",
+            "ZWQYCiABKAga1gQKE0Nhbm5lZE1lc3NhZ2VDb25maWcSFwoPcm90YXJ5MV9l",
+            "bmFibGVkGAEgASgIEhkKEWlucHV0YnJva2VyX3Bpbl9hGAIgASgNEhkKEWlu",
+            "cHV0YnJva2VyX3Bpbl9iGAMgASgNEh0KFWlucHV0YnJva2VyX3Bpbl9wcmVz",
+            "cxgEIAEoDRJZChRpbnB1dGJyb2tlcl9ldmVudF9jdxgFIAEoDjI7Lm1lc2h0",
+            "YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcuSW5wdXRF",
+            "dmVudENoYXISWgoVaW5wdXRicm9rZXJfZXZlbnRfY2N3GAYgASgOMjsubWVz",
+            "aHRhc3RpYy5Nb2R1bGVDb25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1",
+            "dEV2ZW50Q2hhchJcChdpbnB1dGJyb2tlcl9ldmVudF9wcmVzcxgHIAEoDjI7",
+            "Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcu",
+            "SW5wdXRFdmVudENoYXISFwoPdXBkb3duMV9lbmFibGVkGAggASgIEg8KB2Vu",
+            "YWJsZWQYCSABKAgSGgoSYWxsb3dfaW5wdXRfc291cmNlGAogASgJEhEKCXNl",
+            "bmRfYmVsbBgLIAEoCCJjCg5JbnB1dEV2ZW50Q2hhchIICgROT05FEAASBgoC",
+            "VVAQERIICgRET1dOEBISCAoETEVGVBATEgkKBVJJR0hUEBQSCgoGU0VMRUNU",
+            "EAoSCAoEQkFDSxAbEgoKBkNBTkNFTBAYGmUKFUFtYmllbnRMaWdodGluZ0Nv",
+            "bmZpZxIRCglsZWRfc3RhdGUYASABKAgSDwoHY3VycmVudBgCIAEoDRILCgNy",
+            "ZWQYAyABKA0SDQoFZ3JlZW4YBCABKA0SDAoEYmx1ZRgFIAEoDUIRCg9wYXls",
+            "b2FkX3ZhcmlhbnQiZAoRUmVtb3RlSGFyZHdhcmVQaW4SEAoIZ3Bpb19waW4Y",
+            "ASABKA0SDAoEbmFtZRgCIAEoCRIvCgR0eXBlGAMgASgOMiEubWVzaHRhc3Rp",
+            "Yy5SZW1vdGVIYXJkd2FyZVBpblR5cGUqSQoVUmVtb3RlSGFyZHdhcmVQaW5U",
+            "eXBlEgsKB1VOS05PV04QABIQCgxESUdJVEFMX1JFQUQQARIRCg1ESUdJVEFM",
+            "X1dSSVRFEAJCZwoTY29tLmdlZWtzdmlsbGUubWVzaEISTW9kdWxlQ29uZmln",
+            "UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
+            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.RemoteHardwarePinType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -143,7 +143,7 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig.Parser, new[]{ "Enabled", "PaxcounterUpdateInterval", "WifiThreshold", "BleThreshold" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Parser, new[]{ "Enabled", "Echo", "Rxd", "Txd", "Baud", "Timeout", "Mode", "OverrideConsoleSerialPort" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types.Serial_Baud), typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types.Serial_Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig.Parser, new[]{ "Enabled", "OutputMs", "Output", "OutputVibra", "OutputBuzzer", "Active", "AlertMessage", "AlertMessageVibra", "AlertMessageBuzzer", "AlertBell", "AlertBellVibra", "AlertBellBuzzer", "UsePwm", "NagTimeout", "UseI2SAsBuzzer" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig.Parser, new[]{ "Enabled", "Heartbeat", "Records", "HistoryReturnMax", "HistoryReturnWindow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig.Parser, new[]{ "Enabled", "Heartbeat", "Records", "HistoryReturnMax", "HistoryReturnWindow", "IsServer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig.Parser, new[]{ "Enabled", "Sender", "Save" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit", "AirQualityEnabled", "AirQualityInterval", "PowerMeasurementEnabled", "PowerUpdateInterval", "PowerScreenEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Parser, new[]{ "Rotary1Enabled", "InputbrokerPinA", "InputbrokerPinB", "InputbrokerPinPress", "InputbrokerEventCw", "InputbrokerEventCcw", "InputbrokerEventPress", "Updown1Enabled", "Enabled", "AllowInputSource", "SendBell" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Types.InputEventChar) }, null, null),
@@ -4274,6 +4274,10 @@ namespace Meshtastic.Protobufs {
             /// NMEA messages specifically tailored for CalTopo
             /// </summary>
             [pbr::OriginalName("CALTOPO")] Caltopo = 5,
+            /// <summary>
+            /// Ecowitt WS85 weather station
+            /// </summary>
+            [pbr::OriginalName("WS85")] Ws85 = 6,
           }
 
         }
@@ -5106,6 +5110,7 @@ namespace Meshtastic.Protobufs {
           records_ = other.records_;
           historyReturnMax_ = other.historyReturnMax_;
           historyReturnWindow_ = other.historyReturnWindow_;
+          isServer_ = other.isServer_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5195,6 +5200,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "is_server" field.</summary>
+        public const int IsServerFieldNumber = 6;
+        private bool isServer_;
+        /// <summary>
+        ///
+        /// Set to true to let this node act as a server that stores received messages and resends them upon request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool IsServer {
+          get { return isServer_; }
+          set {
+            isServer_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5215,6 +5236,7 @@ namespace Meshtastic.Protobufs {
           if (Records != other.Records) return false;
           if (HistoryReturnMax != other.HistoryReturnMax) return false;
           if (HistoryReturnWindow != other.HistoryReturnWindow) return false;
+          if (IsServer != other.IsServer) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5227,6 +5249,7 @@ namespace Meshtastic.Protobufs {
           if (Records != 0) hash ^= Records.GetHashCode();
           if (HistoryReturnMax != 0) hash ^= HistoryReturnMax.GetHashCode();
           if (HistoryReturnWindow != 0) hash ^= HistoryReturnWindow.GetHashCode();
+          if (IsServer != false) hash ^= IsServer.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5265,6 +5288,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(40);
             output.WriteUInt32(HistoryReturnWindow);
           }
+          if (IsServer != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(IsServer);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5295,6 +5322,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(40);
             output.WriteUInt32(HistoryReturnWindow);
           }
+          if (IsServer != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(IsServer);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5319,6 +5350,9 @@ namespace Meshtastic.Protobufs {
           }
           if (HistoryReturnWindow != 0) {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HistoryReturnWindow);
+          }
+          if (IsServer != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5346,6 +5380,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.HistoryReturnWindow != 0) {
             HistoryReturnWindow = other.HistoryReturnWindow;
+          }
+          if (other.IsServer != false) {
+            IsServer = other.IsServer;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5382,6 +5419,10 @@ namespace Meshtastic.Protobufs {
                 HistoryReturnWindow = input.ReadUInt32();
                 break;
               }
+              case 48: {
+                IsServer = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -5415,6 +5456,10 @@ namespace Meshtastic.Protobufs {
               }
               case 40: {
                 HistoryReturnWindow = input.ReadUInt32();
+                break;
+              }
+              case 48: {
+                IsServer = input.ReadBool();
                 break;
               }
             }
