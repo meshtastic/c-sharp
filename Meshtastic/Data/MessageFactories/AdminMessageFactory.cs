@@ -119,7 +119,7 @@ public class AdminMessageFactory
 
     public MeshPacket CreateFactoryResetMessage()
     {
-        return GetNewMeshPacket(new AdminMessage() { FactoryReset = 1 });
+        return GetNewMeshPacket(new AdminMessage() { FactoryResetConfig = 1 });
     }
     public MeshPacket CreateNodeDbResetMessage()
     {
