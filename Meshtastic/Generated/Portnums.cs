@@ -216,7 +216,7 @@ namespace Meshtastic.Protobufs {
     /// <summary>
     ///
     /// Provides a traceroute functionality to show the route a packet towards
-    /// a certain destination would take on the mesh.
+    /// a certain destination would take on the mesh. Contains a RouteDiscovery message as payload.
     /// ENCODING: Protobuf
     /// </summary>
     [pbr::OriginalName("TRACEROUTE_APP")] TracerouteApp = 70,

@@ -27,69 +27,72 @@ namespace Meshtastic.Protobufs {
             "ChZtZXNodGFzdGljL2FkbWluLnByb3RvEgptZXNodGFzdGljGhhtZXNodGFz",
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
             "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhVtZXNodGFzdGlj",
-            "L21lc2gucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90byLj",
-            "EQoMQWRtaW5NZXNzYWdlEh0KE2dldF9jaGFubmVsX3JlcXVlc3QYASABKA1I",
-            "ABIzChRnZXRfY2hhbm5lbF9yZXNwb25zZRgCIAEoCzITLm1lc2h0YXN0aWMu",
-            "Q2hhbm5lbEgAEhsKEWdldF9vd25lcl9yZXF1ZXN0GAMgASgISAASLgoSZ2V0",
-            "X293bmVyX3Jlc3BvbnNlGAQgASgLMhAubWVzaHRhc3RpYy5Vc2VySAASQQoS",
-            "Z2V0X2NvbmZpZ19yZXF1ZXN0GAUgASgOMiMubWVzaHRhc3RpYy5BZG1pbk1l",
-            "c3NhZ2UuQ29uZmlnVHlwZUgAEjEKE2dldF9jb25maWdfcmVzcG9uc2UYBiAB",
-            "KAsyEi5tZXNodGFzdGljLkNvbmZpZ0gAEk4KGWdldF9tb2R1bGVfY29uZmln",
-            "X3JlcXVlc3QYByABKA4yKS5tZXNodGFzdGljLkFkbWluTWVzc2FnZS5Nb2R1",
-            "bGVDb25maWdUeXBlSAASPgoaZ2V0X21vZHVsZV9jb25maWdfcmVzcG9uc2UY",
-            "CCABKAsyGC5tZXNodGFzdGljLk1vZHVsZUNvbmZpZ0gAEjQKKmdldF9jYW5u",
-            "ZWRfbWVzc2FnZV9tb2R1bGVfbWVzc2FnZXNfcmVxdWVzdBgKIAEoCEgAEjUK",
-            "K2dldF9jYW5uZWRfbWVzc2FnZV9tb2R1bGVfbWVzc2FnZXNfcmVzcG9uc2UY",
-            "CyABKAlIABIlChtnZXRfZGV2aWNlX21ldGFkYXRhX3JlcXVlc3QYDCABKAhI",
-            "ABJCChxnZXRfZGV2aWNlX21ldGFkYXRhX3Jlc3BvbnNlGA0gASgLMhoubWVz",
-            "aHRhc3RpYy5EZXZpY2VNZXRhZGF0YUgAEh4KFGdldF9yaW5ndG9uZV9yZXF1",
-            "ZXN0GA4gASgISAASHwoVZ2V0X3Jpbmd0b25lX3Jlc3BvbnNlGA8gASgJSAAS",
-            "LgokZ2V0X2RldmljZV9jb25uZWN0aW9uX3N0YXR1c19yZXF1ZXN0GBAgASgI",
-            "SAASUwolZ2V0X2RldmljZV9jb25uZWN0aW9uX3N0YXR1c19yZXNwb25zZRgR",
-            "IAEoCzIiLm1lc2h0YXN0aWMuRGV2aWNlQ29ubmVjdGlvblN0YXR1c0gAEjEK",
-            "DHNldF9oYW1fbW9kZRgSIAEoCzIZLm1lc2h0YXN0aWMuSGFtUGFyYW1ldGVy",
-            "c0gAEi8KJWdldF9ub2RlX3JlbW90ZV9oYXJkd2FyZV9waW5zX3JlcXVlc3QY",
-            "EyABKAhIABJcCiZnZXRfbm9kZV9yZW1vdGVfaGFyZHdhcmVfcGluc19yZXNw",
-            "b25zZRgUIAEoCzIqLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhhcmR3YXJlUGlu",
-            "c1Jlc3BvbnNlSAASIAoWZW50ZXJfZGZ1X21vZGVfcmVxdWVzdBgVIAEoCEgA",
-            "Eh0KE2RlbGV0ZV9maWxlX3JlcXVlc3QYFiABKAlIABITCglzZXRfc2NhbGUY",
-            "FyABKA1IABIlCglzZXRfb3duZXIYICABKAsyEC5tZXNodGFzdGljLlVzZXJI",
-            "ABIqCgtzZXRfY2hhbm5lbBghIAEoCzITLm1lc2h0YXN0aWMuQ2hhbm5lbEgA",
-            "EigKCnNldF9jb25maWcYIiABKAsyEi5tZXNodGFzdGljLkNvbmZpZ0gAEjUK",
-            "EXNldF9tb2R1bGVfY29uZmlnGCMgASgLMhgubWVzaHRhc3RpYy5Nb2R1bGVD",
-            "b25maWdIABIsCiJzZXRfY2FubmVkX21lc3NhZ2VfbW9kdWxlX21lc3NhZ2Vz",
-            "GCQgASgJSAASHgoUc2V0X3Jpbmd0b25lX21lc3NhZ2UYJSABKAlIABIbChFy",
-            "ZW1vdmVfYnlfbm9kZW51bRgmIAEoDUgAEhsKEXNldF9mYXZvcml0ZV9ub2Rl",
-            "GCcgASgNSAASHgoUcmVtb3ZlX2Zhdm9yaXRlX25vZGUYKCABKA1IABIyChJz",
-            "ZXRfZml4ZWRfcG9zaXRpb24YKSABKAsyFC5tZXNodGFzdGljLlBvc2l0aW9u",
-            "SAASHwoVcmVtb3ZlX2ZpeGVkX3Bvc2l0aW9uGCogASgISAASHQoTYmVnaW5f",
-            "ZWRpdF9zZXR0aW5ncxhAIAEoCEgAEh4KFGNvbW1pdF9lZGl0X3NldHRpbmdz",
-            "GEEgASgISAASHAoScmVib290X290YV9zZWNvbmRzGF8gASgFSAASGAoOZXhp",
-            "dF9zaW11bGF0b3IYYCABKAhIABIYCg5yZWJvb3Rfc2Vjb25kcxhhIAEoBUgA",
-            "EhoKEHNodXRkb3duX3NlY29uZHMYYiABKAVIABIXCg1mYWN0b3J5X3Jlc2V0",
-            "GGMgASgFSAASFgoMbm9kZWRiX3Jlc2V0GGQgASgFSAAilQEKCkNvbmZpZ1R5",
-            "cGUSEQoNREVWSUNFX0NPTkZJRxAAEhMKD1BPU0lUSU9OX0NPTkZJRxABEhAK",
-            "DFBPV0VSX0NPTkZJRxACEhIKDk5FVFdPUktfQ09ORklHEAMSEgoORElTUExB",
-            "WV9DT05GSUcQBBIPCgtMT1JBX0NPTkZJRxAFEhQKEEJMVUVUT09USF9DT05G",
-            "SUcQBiK7AgoQTW9kdWxlQ29uZmlnVHlwZRIPCgtNUVRUX0NPTkZJRxAAEhEK",
-            "DVNFUklBTF9DT05GSUcQARITCg9FWFROT1RJRl9DT05GSUcQAhIXChNTVE9S",
-            "RUZPUldBUkRfQ09ORklHEAMSFAoQUkFOR0VURVNUX0NPTkZJRxAEEhQKEFRF",
-            "TEVNRVRSWV9DT05GSUcQBRIUChBDQU5ORURNU0dfQ09ORklHEAYSEAoMQVVE",
-            "SU9fQ09ORklHEAcSGQoVUkVNT1RFSEFSRFdBUkVfQ09ORklHEAgSFwoTTkVJ",
-            "R0hCT1JJTkZPX0NPTkZJRxAJEhoKFkFNQklFTlRMSUdIVElOR19DT05GSUcQ",
-            "ChIaChZERVRFQ1RJT05TRU5TT1JfQ09ORklHEAsSFQoRUEFYQ09VTlRFUl9D",
-            "T05GSUcQDEIRCg9wYXlsb2FkX3ZhcmlhbnQiWwoNSGFtUGFyYW1ldGVycxIR",
-            "CgljYWxsX3NpZ24YASABKAkSEAoIdHhfcG93ZXIYAiABKAUSEQoJZnJlcXVl",
-            "bmN5GAMgASgCEhIKCnNob3J0X25hbWUYBCABKAkiZgoeTm9kZVJlbW90ZUhh",
-            "cmR3YXJlUGluc1Jlc3BvbnNlEkQKGW5vZGVfcmVtb3RlX2hhcmR3YXJlX3Bp",
-            "bnMYASADKAsyIS5tZXNodGFzdGljLk5vZGVSZW1vdGVIYXJkd2FyZVBpbkJg",
-            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQgtBZG1pblByb3Rvc1oiZ2l0aHViLmNv",
-            "bS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9i",
-            "dWZzugIAYgZwcm90bzM="));
+            "L21lc2gucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90byLo",
+            "EgoMQWRtaW5NZXNzYWdlEhcKD3Nlc3Npb25fcGFzc2tleRhlIAEoDBIdChNn",
+            "ZXRfY2hhbm5lbF9yZXF1ZXN0GAEgASgNSAASMwoUZ2V0X2NoYW5uZWxfcmVz",
+            "cG9uc2UYAiABKAsyEy5tZXNodGFzdGljLkNoYW5uZWxIABIbChFnZXRfb3du",
+            "ZXJfcmVxdWVzdBgDIAEoCEgAEi4KEmdldF9vd25lcl9yZXNwb25zZRgEIAEo",
+            "CzIQLm1lc2h0YXN0aWMuVXNlckgAEkEKEmdldF9jb25maWdfcmVxdWVzdBgF",
+            "IAEoDjIjLm1lc2h0YXN0aWMuQWRtaW5NZXNzYWdlLkNvbmZpZ1R5cGVIABIx",
+            "ChNnZXRfY29uZmlnX3Jlc3BvbnNlGAYgASgLMhIubWVzaHRhc3RpYy5Db25m",
+            "aWdIABJOChlnZXRfbW9kdWxlX2NvbmZpZ19yZXF1ZXN0GAcgASgOMikubWVz",
+            "aHRhc3RpYy5BZG1pbk1lc3NhZ2UuTW9kdWxlQ29uZmlnVHlwZUgAEj4KGmdl",
+            "dF9tb2R1bGVfY29uZmlnX3Jlc3BvbnNlGAggASgLMhgubWVzaHRhc3RpYy5N",
+            "b2R1bGVDb25maWdIABI0CipnZXRfY2FubmVkX21lc3NhZ2VfbW9kdWxlX21l",
+            "c3NhZ2VzX3JlcXVlc3QYCiABKAhIABI1CitnZXRfY2FubmVkX21lc3NhZ2Vf",
+            "bW9kdWxlX21lc3NhZ2VzX3Jlc3BvbnNlGAsgASgJSAASJQobZ2V0X2Rldmlj",
+            "ZV9tZXRhZGF0YV9yZXF1ZXN0GAwgASgISAASQgocZ2V0X2RldmljZV9tZXRh",
+            "ZGF0YV9yZXNwb25zZRgNIAEoCzIaLm1lc2h0YXN0aWMuRGV2aWNlTWV0YWRh",
+            "dGFIABIeChRnZXRfcmluZ3RvbmVfcmVxdWVzdBgOIAEoCEgAEh8KFWdldF9y",
+            "aW5ndG9uZV9yZXNwb25zZRgPIAEoCUgAEi4KJGdldF9kZXZpY2VfY29ubmVj",
+            "dGlvbl9zdGF0dXNfcmVxdWVzdBgQIAEoCEgAElMKJWdldF9kZXZpY2VfY29u",
+            "bmVjdGlvbl9zdGF0dXNfcmVzcG9uc2UYESABKAsyIi5tZXNodGFzdGljLkRl",
+            "dmljZUNvbm5lY3Rpb25TdGF0dXNIABIxCgxzZXRfaGFtX21vZGUYEiABKAsy",
+            "GS5tZXNodGFzdGljLkhhbVBhcmFtZXRlcnNIABIvCiVnZXRfbm9kZV9yZW1v",
+            "dGVfaGFyZHdhcmVfcGluc19yZXF1ZXN0GBMgASgISAASXAomZ2V0X25vZGVf",
+            "cmVtb3RlX2hhcmR3YXJlX3BpbnNfcmVzcG9uc2UYFCABKAsyKi5tZXNodGFz",
+            "dGljLk5vZGVSZW1vdGVIYXJkd2FyZVBpbnNSZXNwb25zZUgAEiAKFmVudGVy",
+            "X2RmdV9tb2RlX3JlcXVlc3QYFSABKAhIABIdChNkZWxldGVfZmlsZV9yZXF1",
+            "ZXN0GBYgASgJSAASEwoJc2V0X3NjYWxlGBcgASgNSAASJQoJc2V0X293bmVy",
+            "GCAgASgLMhAubWVzaHRhc3RpYy5Vc2VySAASKgoLc2V0X2NoYW5uZWwYISAB",
+            "KAsyEy5tZXNodGFzdGljLkNoYW5uZWxIABIoCgpzZXRfY29uZmlnGCIgASgL",
+            "MhIubWVzaHRhc3RpYy5Db25maWdIABI1ChFzZXRfbW9kdWxlX2NvbmZpZxgj",
+            "IAEoCzIYLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnSAASLAoic2V0X2Nhbm5l",
+            "ZF9tZXNzYWdlX21vZHVsZV9tZXNzYWdlcxgkIAEoCUgAEh4KFHNldF9yaW5n",
+            "dG9uZV9tZXNzYWdlGCUgASgJSAASGwoRcmVtb3ZlX2J5X25vZGVudW0YJiAB",
+            "KA1IABIbChFzZXRfZmF2b3JpdGVfbm9kZRgnIAEoDUgAEh4KFHJlbW92ZV9m",
+            "YXZvcml0ZV9ub2RlGCggASgNSAASMgoSc2V0X2ZpeGVkX3Bvc2l0aW9uGCkg",
+            "ASgLMhQubWVzaHRhc3RpYy5Qb3NpdGlvbkgAEh8KFXJlbW92ZV9maXhlZF9w",
+            "b3NpdGlvbhgqIAEoCEgAEhcKDXNldF90aW1lX29ubHkYKyABKAdIABIdChNi",
+            "ZWdpbl9lZGl0X3NldHRpbmdzGEAgASgISAASHgoUY29tbWl0X2VkaXRfc2V0",
+            "dGluZ3MYQSABKAhIABIeChRmYWN0b3J5X3Jlc2V0X2RldmljZRheIAEoBUgA",
+            "EhwKEnJlYm9vdF9vdGFfc2Vjb25kcxhfIAEoBUgAEhgKDmV4aXRfc2ltdWxh",
+            "dG9yGGAgASgISAASGAoOcmVib290X3NlY29uZHMYYSABKAVIABIaChBzaHV0",
+            "ZG93bl9zZWNvbmRzGGIgASgFSAASHgoUZmFjdG9yeV9yZXNldF9jb25maWcY",
+            "YyABKAVIABIWCgxub2RlZGJfcmVzZXQYZCABKAVIACLBAQoKQ29uZmlnVHlw",
+            "ZRIRCg1ERVZJQ0VfQ09ORklHEAASEwoPUE9TSVRJT05fQ09ORklHEAESEAoM",
+            "UE9XRVJfQ09ORklHEAISEgoOTkVUV09SS19DT05GSUcQAxISCg5ESVNQTEFZ",
+            "X0NPTkZJRxAEEg8KC0xPUkFfQ09ORklHEAUSFAoQQkxVRVRPT1RIX0NPTkZJ",
+            "RxAGEhMKD1NFQ1VSSVRZX0NPTkZJRxAHEhUKEVNFU1NJT05LRVlfQ09ORklH",
+            "EAgiuwIKEE1vZHVsZUNvbmZpZ1R5cGUSDwoLTVFUVF9DT05GSUcQABIRCg1T",
+            "RVJJQUxfQ09ORklHEAESEwoPRVhUTk9USUZfQ09ORklHEAISFwoTU1RPUkVG",
+            "T1JXQVJEX0NPTkZJRxADEhQKEFJBTkdFVEVTVF9DT05GSUcQBBIUChBURUxF",
+            "TUVUUllfQ09ORklHEAUSFAoQQ0FOTkVETVNHX0NPTkZJRxAGEhAKDEFVRElP",
+            "X0NPTkZJRxAHEhkKFVJFTU9URUhBUkRXQVJFX0NPTkZJRxAIEhcKE05FSUdI",
+            "Qk9SSU5GT19DT05GSUcQCRIaChZBTUJJRU5UTElHSFRJTkdfQ09ORklHEAoS",
+            "GgoWREVURUNUSU9OU0VOU09SX0NPTkZJRxALEhUKEVBBWENPVU5URVJfQ09O",
+            "RklHEAxCEQoPcGF5bG9hZF92YXJpYW50IlsKDUhhbVBhcmFtZXRlcnMSEQoJ",
+            "Y2FsbF9zaWduGAEgASgJEhAKCHR4X3Bvd2VyGAIgASgFEhEKCWZyZXF1ZW5j",
+            "eRgDIAEoAhISCgpzaG9ydF9uYW1lGAQgASgJImYKHk5vZGVSZW1vdGVIYXJk",
+            "d2FyZVBpbnNSZXNwb25zZRJEChlub2RlX3JlbW90ZV9oYXJkd2FyZV9waW5z",
+            "GAEgAygLMiEubWVzaHRhc3RpYy5Ob2RlUmVtb3RlSGFyZHdhcmVQaW5CYAoT",
+            "Y29tLmdlZWtzdmlsbGUubWVzaEILQWRtaW5Qcm90b3NaImdpdGh1Yi5jb20v",
+            "bWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVm",
+            "c7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "BeginEditSettings", "CommitEditSettings", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryReset", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "SessionPasskey", "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "SetTimeOnly", "BeginEditSettings", "CommitEditSettings", "FactoryResetDevice", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryResetConfig", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null)
           }));
@@ -138,6 +141,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdminMessage(AdminMessage other) : this() {
+      sessionPasskey_ = other.sessionPasskey_;
       switch (other.PayloadVariantCase) {
         case PayloadVariantOneofCase.GetChannelRequest:
           GetChannelRequest = other.GetChannelRequest;
@@ -238,11 +242,17 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.RemoveFixedPosition:
           RemoveFixedPosition = other.RemoveFixedPosition;
           break;
+        case PayloadVariantOneofCase.SetTimeOnly:
+          SetTimeOnly = other.SetTimeOnly;
+          break;
         case PayloadVariantOneofCase.BeginEditSettings:
           BeginEditSettings = other.BeginEditSettings;
           break;
         case PayloadVariantOneofCase.CommitEditSettings:
           CommitEditSettings = other.CommitEditSettings;
+          break;
+        case PayloadVariantOneofCase.FactoryResetDevice:
+          FactoryResetDevice = other.FactoryResetDevice;
           break;
         case PayloadVariantOneofCase.RebootOtaSeconds:
           RebootOtaSeconds = other.RebootOtaSeconds;
@@ -256,8 +266,8 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.ShutdownSeconds:
           ShutdownSeconds = other.ShutdownSeconds;
           break;
-        case PayloadVariantOneofCase.FactoryReset:
-          FactoryReset = other.FactoryReset;
+        case PayloadVariantOneofCase.FactoryResetConfig:
+          FactoryResetConfig = other.FactoryResetConfig;
           break;
         case PayloadVariantOneofCase.NodedbReset:
           NodedbReset = other.NodedbReset;
@@ -271,6 +281,24 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdminMessage Clone() {
       return new AdminMessage(this);
+    }
+
+    /// <summary>Field number for the "session_passkey" field.</summary>
+    public const int SessionPasskeyFieldNumber = 101;
+    private pb::ByteString sessionPasskey_ = pb::ByteString.Empty;
+    /// <summary>
+    ///
+    /// The node generates this key and sends it with any get_x_response packets.
+    /// The client MUST include the same key with any set_x commands. Key expires after 300 seconds.
+    /// Prevents replay attacks for admin messages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString SessionPasskey {
+      get { return sessionPasskey_; }
+      set {
+        sessionPasskey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "get_channel_request" field.</summary>
@@ -807,6 +835,23 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "set_time_only" field.</summary>
+    public const int SetTimeOnlyFieldNumber = 43;
+    /// <summary>
+    ///
+    /// Set time only on the node
+    /// Convenience method to set the time on the node (as Net quality) without any other position data
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SetTimeOnly {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly ? (uint) payloadVariant_ : 0; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.SetTimeOnly;
+      }
+    }
+
     /// <summary>Field number for the "begin_edit_settings" field.</summary>
     public const int BeginEditSettingsFieldNumber = 64;
     /// <summary>
@@ -837,6 +882,22 @@ namespace Meshtastic.Protobufs {
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.CommitEditSettings;
+      }
+    }
+
+    /// <summary>Field number for the "factory_reset_device" field.</summary>
+    public const int FactoryResetDeviceFieldNumber = 94;
+    /// <summary>
+    ///
+    /// Tell the node to factory reset config everything; all device state and configuration will be returned to factory defaults and BLE bonds will be cleared.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int FactoryResetDevice {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice ? (int) payloadVariant_ : 0; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.FactoryResetDevice;
       }
     }
 
@@ -906,19 +967,19 @@ namespace Meshtastic.Protobufs {
       }
     }
 
-    /// <summary>Field number for the "factory_reset" field.</summary>
-    public const int FactoryResetFieldNumber = 99;
+    /// <summary>Field number for the "factory_reset_config" field.</summary>
+    public const int FactoryResetConfigFieldNumber = 99;
     /// <summary>
     ///
-    /// Tell the node to factory reset, all device settings will be returned to factory defaults.
+    /// Tell the node to factory reset config; all device state and configuration will be returned to factory defaults; BLE bonds will be preserved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int FactoryReset {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.FactoryReset ? (int) payloadVariant_ : 0; }
+    public int FactoryResetConfig {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig ? (int) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
-        payloadVariantCase_ = PayloadVariantOneofCase.FactoryReset;
+        payloadVariantCase_ = PayloadVariantOneofCase.FactoryResetConfig;
       }
     }
 
@@ -975,13 +1036,15 @@ namespace Meshtastic.Protobufs {
       RemoveFavoriteNode = 40,
       SetFixedPosition = 41,
       RemoveFixedPosition = 42,
+      SetTimeOnly = 43,
       BeginEditSettings = 64,
       CommitEditSettings = 65,
+      FactoryResetDevice = 94,
       RebootOtaSeconds = 95,
       ExitSimulator = 96,
       RebootSeconds = 97,
       ShutdownSeconds = 98,
-      FactoryReset = 99,
+      FactoryResetConfig = 99,
       NodedbReset = 100,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
@@ -1013,6 +1076,7 @@ namespace Meshtastic.Protobufs {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (SessionPasskey != other.SessionPasskey) return false;
       if (GetChannelRequest != other.GetChannelRequest) return false;
       if (!object.Equals(GetChannelResponse, other.GetChannelResponse)) return false;
       if (GetOwnerRequest != other.GetOwnerRequest) return false;
@@ -1046,13 +1110,15 @@ namespace Meshtastic.Protobufs {
       if (RemoveFavoriteNode != other.RemoveFavoriteNode) return false;
       if (!object.Equals(SetFixedPosition, other.SetFixedPosition)) return false;
       if (RemoveFixedPosition != other.RemoveFixedPosition) return false;
+      if (SetTimeOnly != other.SetTimeOnly) return false;
       if (BeginEditSettings != other.BeginEditSettings) return false;
       if (CommitEditSettings != other.CommitEditSettings) return false;
+      if (FactoryResetDevice != other.FactoryResetDevice) return false;
       if (RebootOtaSeconds != other.RebootOtaSeconds) return false;
       if (ExitSimulator != other.ExitSimulator) return false;
       if (RebootSeconds != other.RebootSeconds) return false;
       if (ShutdownSeconds != other.ShutdownSeconds) return false;
-      if (FactoryReset != other.FactoryReset) return false;
+      if (FactoryResetConfig != other.FactoryResetConfig) return false;
       if (NodedbReset != other.NodedbReset) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1062,6 +1128,7 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (SessionPasskey.Length != 0) hash ^= SessionPasskey.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelRequest) hash ^= GetChannelRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelResponse) hash ^= GetChannelResponse.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerRequest) hash ^= GetOwnerRequest.GetHashCode();
@@ -1095,13 +1162,15 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFavoriteNode) hash ^= RemoveFavoriteNode.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetFixedPosition) hash ^= SetFixedPosition.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFixedPosition) hash ^= RemoveFixedPosition.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly) hash ^= SetTimeOnly.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice) hash ^= FactoryResetDevice.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) hash ^= RebootOtaSeconds.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.ExitSimulator) hash ^= ExitSimulator.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootSeconds) hash ^= RebootSeconds.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.ShutdownSeconds) hash ^= ShutdownSeconds.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryReset) hash ^= FactoryReset.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig) hash ^= FactoryResetConfig.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset) hash ^= NodedbReset.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
@@ -1254,6 +1323,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(208, 2);
         output.WriteBool(RemoveFixedPosition);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly) {
+        output.WriteRawTag(221, 2);
+        output.WriteFixed32(SetTimeOnly);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         output.WriteRawTag(128, 4);
         output.WriteBool(BeginEditSettings);
@@ -1261,6 +1334,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) {
         output.WriteRawTag(136, 4);
         output.WriteBool(CommitEditSettings);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice) {
+        output.WriteRawTag(240, 5);
+        output.WriteInt32(FactoryResetDevice);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
         output.WriteRawTag(248, 5);
@@ -1278,13 +1355,17 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(144, 6);
         output.WriteInt32(ShutdownSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryReset) {
+      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig) {
         output.WriteRawTag(152, 6);
-        output.WriteInt32(FactoryReset);
+        output.WriteInt32(FactoryResetConfig);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset) {
         output.WriteRawTag(160, 6);
         output.WriteInt32(NodedbReset);
+      }
+      if (SessionPasskey.Length != 0) {
+        output.WriteRawTag(170, 6);
+        output.WriteBytes(SessionPasskey);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1428,6 +1509,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(208, 2);
         output.WriteBool(RemoveFixedPosition);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly) {
+        output.WriteRawTag(221, 2);
+        output.WriteFixed32(SetTimeOnly);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         output.WriteRawTag(128, 4);
         output.WriteBool(BeginEditSettings);
@@ -1435,6 +1520,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) {
         output.WriteRawTag(136, 4);
         output.WriteBool(CommitEditSettings);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice) {
+        output.WriteRawTag(240, 5);
+        output.WriteInt32(FactoryResetDevice);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
         output.WriteRawTag(248, 5);
@@ -1452,13 +1541,17 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(144, 6);
         output.WriteInt32(ShutdownSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryReset) {
+      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig) {
         output.WriteRawTag(152, 6);
-        output.WriteInt32(FactoryReset);
+        output.WriteInt32(FactoryResetConfig);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset) {
         output.WriteRawTag(160, 6);
         output.WriteInt32(NodedbReset);
+      }
+      if (SessionPasskey.Length != 0) {
+        output.WriteRawTag(170, 6);
+        output.WriteBytes(SessionPasskey);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1470,6 +1563,9 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (SessionPasskey.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeBytesSize(SessionPasskey);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelRequest) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GetChannelRequest);
       }
@@ -1569,11 +1665,17 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFixedPosition) {
         size += 2 + 1;
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly) {
+        size += 2 + 4;
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
         size += 2 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) {
         size += 2 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(FactoryResetDevice);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RebootOtaSeconds);
@@ -1587,8 +1689,8 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.ShutdownSeconds) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(ShutdownSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryReset) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(FactoryReset);
+      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(FactoryResetConfig);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(NodedbReset);
@@ -1604,6 +1706,9 @@ namespace Meshtastic.Protobufs {
     public void MergeFrom(AdminMessage other) {
       if (other == null) {
         return;
+      }
+      if (other.SessionPasskey.Length != 0) {
+        SessionPasskey = other.SessionPasskey;
       }
       switch (other.PayloadVariantCase) {
         case PayloadVariantOneofCase.GetChannelRequest:
@@ -1744,11 +1849,17 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.RemoveFixedPosition:
           RemoveFixedPosition = other.RemoveFixedPosition;
           break;
+        case PayloadVariantOneofCase.SetTimeOnly:
+          SetTimeOnly = other.SetTimeOnly;
+          break;
         case PayloadVariantOneofCase.BeginEditSettings:
           BeginEditSettings = other.BeginEditSettings;
           break;
         case PayloadVariantOneofCase.CommitEditSettings:
           CommitEditSettings = other.CommitEditSettings;
+          break;
+        case PayloadVariantOneofCase.FactoryResetDevice:
+          FactoryResetDevice = other.FactoryResetDevice;
           break;
         case PayloadVariantOneofCase.RebootOtaSeconds:
           RebootOtaSeconds = other.RebootOtaSeconds;
@@ -1762,8 +1873,8 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.ShutdownSeconds:
           ShutdownSeconds = other.ShutdownSeconds;
           break;
-        case PayloadVariantOneofCase.FactoryReset:
-          FactoryReset = other.FactoryReset;
+        case PayloadVariantOneofCase.FactoryResetConfig:
+          FactoryResetConfig = other.FactoryResetConfig;
           break;
         case PayloadVariantOneofCase.NodedbReset:
           NodedbReset = other.NodedbReset;
@@ -1984,12 +2095,20 @@ namespace Meshtastic.Protobufs {
             RemoveFixedPosition = input.ReadBool();
             break;
           }
+          case 349: {
+            SetTimeOnly = input.ReadFixed32();
+            break;
+          }
           case 512: {
             BeginEditSettings = input.ReadBool();
             break;
           }
           case 520: {
             CommitEditSettings = input.ReadBool();
+            break;
+          }
+          case 752: {
+            FactoryResetDevice = input.ReadInt32();
             break;
           }
           case 760: {
@@ -2009,11 +2128,15 @@ namespace Meshtastic.Protobufs {
             break;
           }
           case 792: {
-            FactoryReset = input.ReadInt32();
+            FactoryResetConfig = input.ReadInt32();
             break;
           }
           case 800: {
             NodedbReset = input.ReadInt32();
+            break;
+          }
+          case 810: {
+            SessionPasskey = input.ReadBytes();
             break;
           }
         }
@@ -2230,12 +2353,20 @@ namespace Meshtastic.Protobufs {
             RemoveFixedPosition = input.ReadBool();
             break;
           }
+          case 349: {
+            SetTimeOnly = input.ReadFixed32();
+            break;
+          }
           case 512: {
             BeginEditSettings = input.ReadBool();
             break;
           }
           case 520: {
             CommitEditSettings = input.ReadBool();
+            break;
+          }
+          case 752: {
+            FactoryResetDevice = input.ReadInt32();
             break;
           }
           case 760: {
@@ -2255,11 +2386,15 @@ namespace Meshtastic.Protobufs {
             break;
           }
           case 792: {
-            FactoryReset = input.ReadInt32();
+            FactoryResetConfig = input.ReadInt32();
             break;
           }
           case 800: {
             NodedbReset = input.ReadInt32();
+            break;
+          }
+          case 810: {
+            SessionPasskey = input.ReadBytes();
             break;
           }
         }
@@ -2312,6 +2447,14 @@ namespace Meshtastic.Protobufs {
         /// TODO: REPLACE
         /// </summary>
         [pbr::OriginalName("BLUETOOTH_CONFIG")] BluetoothConfig = 6,
+        /// <summary>
+        ///
+        /// TODO: REPLACE
+        /// </summary>
+        [pbr::OriginalName("SECURITY_CONFIG")] SecurityConfig = 7,
+        /// <summary>
+        /// </summary>
+        [pbr::OriginalName("SESSIONKEY_CONFIG")] SessionkeyConfig = 8,
       }
 
       /// <summary>
