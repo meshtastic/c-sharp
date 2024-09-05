@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyKoIgoGQ29u",
+            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyLJJAoGQ29u",
             "ZmlnEjEKBmRldmljZRgBIAEoCzIfLm1lc2h0YXN0aWMuQ29uZmlnLkRldmlj",
             "ZUNvbmZpZ0gAEjUKCHBvc2l0aW9uGAIgASgLMiEubWVzaHRhc3RpYy5Db25m",
             "aWcuUG9zaXRpb25Db25maWdIABIvCgVwb3dlchgDIAEoCzIeLm1lc2h0YXN0",
@@ -33,108 +33,117 @@ namespace Meshtastic.Protobufs {
             "ASgLMiAubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZ0gAEi0KBGxv",
             "cmEYBiABKAsyHS5tZXNodGFzdGljLkNvbmZpZy5Mb1JhQ29uZmlnSAASNwoJ",
             "Ymx1ZXRvb3RoGAcgASgLMiIubWVzaHRhc3RpYy5Db25maWcuQmx1ZXRvb3Ro",
-            "Q29uZmlnSAAalQUKDERldmljZUNvbmZpZxIyCgRyb2xlGAEgASgOMiQubWVz",
-            "aHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnLlJvbGUSFgoOc2VyaWFsX2Vu",
-            "YWJsZWQYAiABKAgSGQoRZGVidWdfbG9nX2VuYWJsZWQYAyABKAgSEwoLYnV0",
-            "dG9uX2dwaW8YBCABKA0SEwoLYnV6emVyX2dwaW8YBSABKA0SSQoQcmVicm9h",
-            "ZGNhc3RfbW9kZRgGIAEoDjIvLm1lc2h0YXN0aWMuQ29uZmlnLkRldmljZUNv",
-            "bmZpZy5SZWJyb2FkY2FzdE1vZGUSIAoYbm9kZV9pbmZvX2Jyb2FkY2FzdF9z",
-            "ZWNzGAcgASgNEiIKGmRvdWJsZV90YXBfYXNfYnV0dG9uX3ByZXNzGAggASgI",
-            "EhIKCmlzX21hbmFnZWQYCSABKAgSHAoUZGlzYWJsZV90cmlwbGVfY2xpY2sY",
-            "CiABKAgSDQoFdHpkZWYYCyABKAkSHgoWbGVkX2hlYXJ0YmVhdF9kaXNhYmxl",
-            "ZBgMIAEoCCKuAQoEUm9sZRIKCgZDTElFTlQQABIPCgtDTElFTlRfTVVURRAB",
-            "EgoKBlJPVVRFUhACEhUKDVJPVVRFUl9DTElFTlQQAxoCCAESDAoIUkVQRUFU",
-            "RVIQBBILCgdUUkFDS0VSEAUSCgoGU0VOU09SEAYSBwoDVEFLEAcSEQoNQ0xJ",
-            "RU5UX0hJRERFThAIEhIKDkxPU1RfQU5EX0ZPVU5EEAkSDwoLVEFLX1RSQUNL",
-            "RVIQCiJRCg9SZWJyb2FkY2FzdE1vZGUSBwoDQUxMEAASFQoRQUxMX1NLSVBf",
-            "REVDT0RJTkcQARIOCgpMT0NBTF9PTkxZEAISDgoKS05PV05fT05MWRADGpEF",
-            "Cg5Qb3NpdGlvbkNvbmZpZxIfChdwb3NpdGlvbl9icm9hZGNhc3Rfc2VjcxgB",
-            "IAEoDRIoCiBwb3NpdGlvbl9icm9hZGNhc3Rfc21hcnRfZW5hYmxlZBgCIAEo",
-            "CBIWCg5maXhlZF9wb3NpdGlvbhgDIAEoCBIXCgtncHNfZW5hYmxlZBgEIAEo",
-            "CEICGAESGwoTZ3BzX3VwZGF0ZV9pbnRlcnZhbBgFIAEoDRIcChBncHNfYXR0",
-            "ZW1wdF90aW1lGAYgASgNQgIYARIWCg5wb3NpdGlvbl9mbGFncxgHIAEoDRIP",
-            "CgdyeF9ncGlvGAggASgNEg8KB3R4X2dwaW8YCSABKA0SKAogYnJvYWRjYXN0",
-            "X3NtYXJ0X21pbmltdW1fZGlzdGFuY2UYCiABKA0SLQolYnJvYWRjYXN0X3Nt",
-            "YXJ0X21pbmltdW1faW50ZXJ2YWxfc2VjcxgLIAEoDRITCgtncHNfZW5fZ3Bp",
-            "bxgMIAEoDRI7CghncHNfbW9kZRgNIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmln",
-            "LlBvc2l0aW9uQ29uZmlnLkdwc01vZGUiqwEKDVBvc2l0aW9uRmxhZ3MSCQoF",
-            "VU5TRVQQABIMCghBTFRJVFVERRABEhAKDEFMVElUVURFX01TTBACEhYKEkdF",
-            "T0lEQUxfU0VQQVJBVElPThAEEgcKA0RPUBAIEgkKBUhWRE9QEBASDQoJU0FU",
-            "SU5WSUVXECASCgoGU0VRX05PEEASDgoJVElNRVNUQU1QEIABEgwKB0hFQURJ",
-            "TkcQgAISCgoFU1BFRUQQgAQiNQoHR3BzTW9kZRIMCghESVNBQkxFRBAAEgsK",
-            "B0VOQUJMRUQQARIPCgtOT1RfUFJFU0VOVBACGoQCCgtQb3dlckNvbmZpZxIX",
-            "Cg9pc19wb3dlcl9zYXZpbmcYASABKAgSJgoeb25fYmF0dGVyeV9zaHV0ZG93",
-            "bl9hZnRlcl9zZWNzGAIgASgNEh8KF2FkY19tdWx0aXBsaWVyX292ZXJyaWRl",
-            "GAMgASgCEhsKE3dhaXRfYmx1ZXRvb3RoX3NlY3MYBCABKA0SEAoIc2RzX3Nl",
-            "Y3MYBiABKA0SDwoHbHNfc2VjcxgHIAEoDRIVCg1taW5fd2FrZV9zZWNzGAgg",
-            "ASgNEiIKGmRldmljZV9iYXR0ZXJ5X2luYV9hZGRyZXNzGAkgASgNEhgKEHBv",
-            "d2VybW9uX2VuYWJsZXMYICABKAQa/gIKDU5ldHdvcmtDb25maWcSFAoMd2lm",
-            "aV9lbmFibGVkGAEgASgIEhEKCXdpZmlfc3NpZBgDIAEoCRIQCgh3aWZpX3Bz",
-            "axgEIAEoCRISCgpudHBfc2VydmVyGAUgASgJEhMKC2V0aF9lbmFibGVkGAYg",
-            "ASgIEkIKDGFkZHJlc3NfbW9kZRgHIAEoDjIsLm1lc2h0YXN0aWMuQ29uZmln",
-            "Lk5ldHdvcmtDb25maWcuQWRkcmVzc01vZGUSQAoLaXB2NF9jb25maWcYCCAB",
-            "KAsyKy5tZXNodGFzdGljLkNvbmZpZy5OZXR3b3JrQ29uZmlnLklwVjRDb25m",
-            "aWcSFgoOcnN5c2xvZ19zZXJ2ZXIYCSABKAkaRgoKSXBWNENvbmZpZxIKCgJp",
-            "cBgBIAEoBxIPCgdnYXRld2F5GAIgASgHEg4KBnN1Ym5ldBgDIAEoBxILCgNk",
-            "bnMYBCABKAciIwoLQWRkcmVzc01vZGUSCAoEREhDUBAAEgoKBlNUQVRJQxAB",
-            "Gs0HCg1EaXNwbGF5Q29uZmlnEhYKDnNjcmVlbl9vbl9zZWNzGAEgASgNEkgK",
-            "Cmdwc19mb3JtYXQYAiABKA4yNC5tZXNodGFzdGljLkNvbmZpZy5EaXNwbGF5",
-            "Q29uZmlnLkdwc0Nvb3JkaW5hdGVGb3JtYXQSIQoZYXV0b19zY3JlZW5fY2Fy",
-            "b3VzZWxfc2VjcxgDIAEoDRIZChFjb21wYXNzX25vcnRoX3RvcBgEIAEoCBIT",
-            "CgtmbGlwX3NjcmVlbhgFIAEoCBI8CgV1bml0cxgGIAEoDjItLm1lc2h0YXN0",
-            "aWMuQ29uZmlnLkRpc3BsYXlDb25maWcuRGlzcGxheVVuaXRzEjcKBG9sZWQY",
-            "ByABKA4yKS5tZXNodGFzdGljLkNvbmZpZy5EaXNwbGF5Q29uZmlnLk9sZWRU",
-            "eXBlEkEKC2Rpc3BsYXltb2RlGAggASgOMiwubWVzaHRhc3RpYy5Db25maWcu",
-            "RGlzcGxheUNvbmZpZy5EaXNwbGF5TW9kZRIUCgxoZWFkaW5nX2JvbGQYCSAB",
-            "KAgSHQoVd2FrZV9vbl90YXBfb3JfbW90aW9uGAogASgIElAKE2NvbXBhc3Nf",
-            "b3JpZW50YXRpb24YCyABKA4yMy5tZXNodGFzdGljLkNvbmZpZy5EaXNwbGF5",
-            "Q29uZmlnLkNvbXBhc3NPcmllbnRhdGlvbiJNChNHcHNDb29yZGluYXRlRm9y",
-            "bWF0EgcKA0RFQxAAEgcKA0RNUxABEgcKA1VUTRACEggKBE1HUlMQAxIHCgNP",
-            "TEMQBBIICgRPU0dSEAUiKAoMRGlzcGxheVVuaXRzEgoKBk1FVFJJQxAAEgwK",
-            "CElNUEVSSUFMEAEiTQoIT2xlZFR5cGUSDQoJT0xFRF9BVVRPEAASEAoMT0xF",
-            "RF9TU0QxMzA2EAESDwoLT0xFRF9TSDExMDYQAhIPCgtPTEVEX1NIMTEwNxAD",
-            "IkEKC0Rpc3BsYXlNb2RlEgsKB0RFRkFVTFQQABIMCghUV09DT0xPUhABEgwK",
-            "CElOVkVSVEVEEAISCQoFQ09MT1IQAyK6AQoSQ29tcGFzc09yaWVudGF0aW9u",
-            "Eg0KCURFR1JFRVNfMBAAEg4KCkRFR1JFRVNfOTAQARIPCgtERUdSRUVTXzE4",
-            "MBACEg8KC0RFR1JFRVNfMjcwEAMSFgoSREVHUkVFU18wX0lOVkVSVEVEEAQS",
-            "FwoTREVHUkVFU185MF9JTlZFUlRFRBAFEhgKFERFR1JFRVNfMTgwX0lOVkVS",
-            "VEVEEAYSGAoUREVHUkVFU18yNzBfSU5WRVJURUQQBxrJBgoKTG9SYUNvbmZp",
-            "ZxISCgp1c2VfcHJlc2V0GAEgASgIEj8KDG1vZGVtX3ByZXNldBgCIAEoDjIp",
-            "Lm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25maWcuTW9kZW1QcmVzZXQSEQoJ",
-            "YmFuZHdpZHRoGAMgASgNEhUKDXNwcmVhZF9mYWN0b3IYBCABKA0SEwoLY29k",
-            "aW5nX3JhdGUYBSABKA0SGAoQZnJlcXVlbmN5X29mZnNldBgGIAEoAhI4CgZy",
-            "ZWdpb24YByABKA4yKC5tZXNodGFzdGljLkNvbmZpZy5Mb1JhQ29uZmlnLlJl",
-            "Z2lvbkNvZGUSEQoJaG9wX2xpbWl0GAggASgNEhIKCnR4X2VuYWJsZWQYCSAB",
-            "KAgSEAoIdHhfcG93ZXIYCiABKAUSEwoLY2hhbm5lbF9udW0YCyABKA0SGwoT",
-            "b3ZlcnJpZGVfZHV0eV9jeWNsZRgMIAEoCBIeChZzeDEyNnhfcnhfYm9vc3Rl",
-            "ZF9nYWluGA0gASgIEhoKEm92ZXJyaWRlX2ZyZXF1ZW5jeRgOIAEoAhIXCg9w",
-            "YV9mYW5fZGlzYWJsZWQYDyABKAgSFwoPaWdub3JlX2luY29taW5nGGcgAygN",
-            "EhMKC2lnbm9yZV9tcXR0GGggASgIIs0BCgpSZWdpb25Db2RlEgkKBVVOU0VU",
-            "EAASBgoCVVMQARIKCgZFVV80MzMQAhIKCgZFVV84NjgQAxIGCgJDThAEEgYK",
-            "AkpQEAUSBwoDQU5aEAYSBgoCS1IQBxIGCgJUVxAIEgYKAlJVEAkSBgoCSU4Q",
-            "ChIKCgZOWl84NjUQCxIGCgJUSBAMEgsKB0xPUkFfMjQQDRIKCgZVQV80MzMQ",
-            "DhIKCgZVQV84NjgQDxIKCgZNWV80MzMQEBIKCgZNWV85MTkQERIKCgZTR185",
-            "MjMQEiKUAQoLTW9kZW1QcmVzZXQSDQoJTE9OR19GQVNUEAASDQoJTE9OR19T",
-            "TE9XEAESEgoOVkVSWV9MT05HX1NMT1cQAhIPCgtNRURJVU1fU0xPVxADEg8K",
-            "C01FRElVTV9GQVNUEAQSDgoKU0hPUlRfU0xPVxAFEg4KClNIT1JUX0ZBU1QQ",
-            "BhIRCg1MT05HX01PREVSQVRFEAcazQEKD0JsdWV0b290aENvbmZpZxIPCgdl",
-            "bmFibGVkGAEgASgIEjwKBG1vZGUYAiABKA4yLi5tZXNodGFzdGljLkNvbmZp",
-            "Zy5CbHVldG9vdGhDb25maWcuUGFpcmluZ01vZGUSEQoJZml4ZWRfcGluGAMg",
-            "ASgNEh4KFmRldmljZV9sb2dnaW5nX2VuYWJsZWQYBCABKAgiOAoLUGFpcmlu",
-            "Z01vZGUSDgoKUkFORE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJ",
-            "ThACQhEKD3BheWxvYWRfdmFyaWFudEJhChNjb20uZ2Vla3N2aWxsZS5tZXNo",
-            "QgxDb25maWdQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5l",
-            "cmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "Q29uZmlnSAASNQoIc2VjdXJpdHkYCCABKAsyIS5tZXNodGFzdGljLkNvbmZp",
+            "Zy5TZWN1cml0eUNvbmZpZ0gAEjkKCnNlc3Npb25rZXkYCSABKAsyIy5tZXNo",
+            "dGFzdGljLkNvbmZpZy5TZXNzaW9ua2V5Q29uZmlnSAAaggUKDERldmljZUNv",
+            "bmZpZxIyCgRyb2xlGAEgASgOMiQubWVzaHRhc3RpYy5Db25maWcuRGV2aWNl",
+            "Q29uZmlnLlJvbGUSGgoOc2VyaWFsX2VuYWJsZWQYAiABKAhCAhgBEhMKC2J1",
+            "dHRvbl9ncGlvGAQgASgNEhMKC2J1enplcl9ncGlvGAUgASgNEkkKEHJlYnJv",
+            "YWRjYXN0X21vZGUYBiABKA4yLy5tZXNodGFzdGljLkNvbmZpZy5EZXZpY2VD",
+            "b25maWcuUmVicm9hZGNhc3RNb2RlEiAKGG5vZGVfaW5mb19icm9hZGNhc3Rf",
+            "c2VjcxgHIAEoDRIiChpkb3VibGVfdGFwX2FzX2J1dHRvbl9wcmVzcxgIIAEo",
+            "CBIWCgppc19tYW5hZ2VkGAkgASgIQgIYARIcChRkaXNhYmxlX3RyaXBsZV9j",
+            "bGljaxgKIAEoCBINCgV0emRlZhgLIAEoCRIeChZsZWRfaGVhcnRiZWF0X2Rp",
+            "c2FibGVkGAwgASgIIq4BCgRSb2xlEgoKBkNMSUVOVBAAEg8KC0NMSUVOVF9N",
+            "VVRFEAESCgoGUk9VVEVSEAISFQoNUk9VVEVSX0NMSUVOVBADGgIIARIMCghS",
+            "RVBFQVRFUhAEEgsKB1RSQUNLRVIQBRIKCgZTRU5TT1IQBhIHCgNUQUsQBxIR",
+            "Cg1DTElFTlRfSElEREVOEAgSEgoOTE9TVF9BTkRfRk9VTkQQCRIPCgtUQUtf",
+            "VFJBQ0tFUhAKIlEKD1JlYnJvYWRjYXN0TW9kZRIHCgNBTEwQABIVChFBTExf",
+            "U0tJUF9ERUNPRElORxABEg4KCkxPQ0FMX09OTFkQAhIOCgpLTk9XTl9PTkxZ",
+            "EAMakQUKDlBvc2l0aW9uQ29uZmlnEh8KF3Bvc2l0aW9uX2Jyb2FkY2FzdF9z",
+            "ZWNzGAEgASgNEigKIHBvc2l0aW9uX2Jyb2FkY2FzdF9zbWFydF9lbmFibGVk",
+            "GAIgASgIEhYKDmZpeGVkX3Bvc2l0aW9uGAMgASgIEhcKC2dwc19lbmFibGVk",
+            "GAQgASgIQgIYARIbChNncHNfdXBkYXRlX2ludGVydmFsGAUgASgNEhwKEGdw",
+            "c19hdHRlbXB0X3RpbWUYBiABKA1CAhgBEhYKDnBvc2l0aW9uX2ZsYWdzGAcg",
+            "ASgNEg8KB3J4X2dwaW8YCCABKA0SDwoHdHhfZ3BpbxgJIAEoDRIoCiBicm9h",
+            "ZGNhc3Rfc21hcnRfbWluaW11bV9kaXN0YW5jZRgKIAEoDRItCiVicm9hZGNh",
+            "c3Rfc21hcnRfbWluaW11bV9pbnRlcnZhbF9zZWNzGAsgASgNEhMKC2dwc19l",
+            "bl9ncGlvGAwgASgNEjsKCGdwc19tb2RlGA0gASgOMikubWVzaHRhc3RpYy5D",
+            "b25maWcuUG9zaXRpb25Db25maWcuR3BzTW9kZSKrAQoNUG9zaXRpb25GbGFn",
+            "cxIJCgVVTlNFVBAAEgwKCEFMVElUVURFEAESEAoMQUxUSVRVREVfTVNMEAIS",
+            "FgoSR0VPSURBTF9TRVBBUkFUSU9OEAQSBwoDRE9QEAgSCQoFSFZET1AQEBIN",
+            "CglTQVRJTlZJRVcQIBIKCgZTRVFfTk8QQBIOCglUSU1FU1RBTVAQgAESDAoH",
+            "SEVBRElORxCAAhIKCgVTUEVFRBCABCI1CgdHcHNNb2RlEgwKCERJU0FCTEVE",
+            "EAASCwoHRU5BQkxFRBABEg8KC05PVF9QUkVTRU5UEAIahAIKC1Bvd2VyQ29u",
+            "ZmlnEhcKD2lzX3Bvd2VyX3NhdmluZxgBIAEoCBImCh5vbl9iYXR0ZXJ5X3No",
+            "dXRkb3duX2FmdGVyX3NlY3MYAiABKA0SHwoXYWRjX211bHRpcGxpZXJfb3Zl",
+            "cnJpZGUYAyABKAISGwoTd2FpdF9ibHVldG9vdGhfc2VjcxgEIAEoDRIQCghz",
+            "ZHNfc2VjcxgGIAEoDRIPCgdsc19zZWNzGAcgASgNEhUKDW1pbl93YWtlX3Nl",
+            "Y3MYCCABKA0SIgoaZGV2aWNlX2JhdHRlcnlfaW5hX2FkZHJlc3MYCSABKA0S",
+            "GAoQcG93ZXJtb25fZW5hYmxlcxggIAEoBBr+AgoNTmV0d29ya0NvbmZpZxIU",
+            "Cgx3aWZpX2VuYWJsZWQYASABKAgSEQoJd2lmaV9zc2lkGAMgASgJEhAKCHdp",
+            "ZmlfcHNrGAQgASgJEhIKCm50cF9zZXJ2ZXIYBSABKAkSEwoLZXRoX2VuYWJs",
+            "ZWQYBiABKAgSQgoMYWRkcmVzc19tb2RlGAcgASgOMiwubWVzaHRhc3RpYy5D",
+            "b25maWcuTmV0d29ya0NvbmZpZy5BZGRyZXNzTW9kZRJACgtpcHY0X2NvbmZp",
+            "ZxgIIAEoCzIrLm1lc2h0YXN0aWMuQ29uZmlnLk5ldHdvcmtDb25maWcuSXBW",
+            "NENvbmZpZxIWCg5yc3lzbG9nX3NlcnZlchgJIAEoCRpGCgpJcFY0Q29uZmln",
+            "EgoKAmlwGAEgASgHEg8KB2dhdGV3YXkYAiABKAcSDgoGc3VibmV0GAMgASgH",
+            "EgsKA2RucxgEIAEoByIjCgtBZGRyZXNzTW9kZRIICgRESENQEAASCgoGU1RB",
+            "VElDEAEazQcKDURpc3BsYXlDb25maWcSFgoOc2NyZWVuX29uX3NlY3MYASAB",
+            "KA0SSAoKZ3BzX2Zvcm1hdBgCIAEoDjI0Lm1lc2h0YXN0aWMuQ29uZmlnLkRp",
+            "c3BsYXlDb25maWcuR3BzQ29vcmRpbmF0ZUZvcm1hdBIhChlhdXRvX3NjcmVl",
+            "bl9jYXJvdXNlbF9zZWNzGAMgASgNEhkKEWNvbXBhc3Nfbm9ydGhfdG9wGAQg",
+            "ASgIEhMKC2ZsaXBfc2NyZWVuGAUgASgIEjwKBXVuaXRzGAYgASgOMi0ubWVz",
+            "aHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZy5EaXNwbGF5VW5pdHMSNwoE",
+            "b2xlZBgHIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlDb25maWcu",
+            "T2xlZFR5cGUSQQoLZGlzcGxheW1vZGUYCCABKA4yLC5tZXNodGFzdGljLkNv",
+            "bmZpZy5EaXNwbGF5Q29uZmlnLkRpc3BsYXlNb2RlEhQKDGhlYWRpbmdfYm9s",
+            "ZBgJIAEoCBIdChV3YWtlX29uX3RhcF9vcl9tb3Rpb24YCiABKAgSUAoTY29t",
+            "cGFzc19vcmllbnRhdGlvbhgLIAEoDjIzLm1lc2h0YXN0aWMuQ29uZmlnLkRp",
+            "c3BsYXlDb25maWcuQ29tcGFzc09yaWVudGF0aW9uIk0KE0dwc0Nvb3JkaW5h",
+            "dGVGb3JtYXQSBwoDREVDEAASBwoDRE1TEAESBwoDVVRNEAISCAoETUdSUxAD",
+            "EgcKA09MQxAEEggKBE9TR1IQBSIoCgxEaXNwbGF5VW5pdHMSCgoGTUVUUklD",
+            "EAASDAoISU1QRVJJQUwQASJNCghPbGVkVHlwZRINCglPTEVEX0FVVE8QABIQ",
+            "CgxPTEVEX1NTRDEzMDYQARIPCgtPTEVEX1NIMTEwNhACEg8KC09MRURfU0gx",
+            "MTA3EAMiQQoLRGlzcGxheU1vZGUSCwoHREVGQVVMVBAAEgwKCFRXT0NPTE9S",
+            "EAESDAoISU5WRVJURUQQAhIJCgVDT0xPUhADIroBChJDb21wYXNzT3JpZW50",
+            "YXRpb24SDQoJREVHUkVFU18wEAASDgoKREVHUkVFU185MBABEg8KC0RFR1JF",
+            "RVNfMTgwEAISDwoLREVHUkVFU18yNzAQAxIWChJERUdSRUVTXzBfSU5WRVJU",
+            "RUQQBBIXChNERUdSRUVTXzkwX0lOVkVSVEVEEAUSGAoUREVHUkVFU18xODBf",
+            "SU5WRVJURUQQBhIYChRERUdSRUVTXzI3MF9JTlZFUlRFRBAHGt4GCgpMb1Jh",
+            "Q29uZmlnEhIKCnVzZV9wcmVzZXQYASABKAgSPwoMbW9kZW1fcHJlc2V0GAIg",
+            "ASgOMikubWVzaHRhc3RpYy5Db25maWcuTG9SYUNvbmZpZy5Nb2RlbVByZXNl",
+            "dBIRCgliYW5kd2lkdGgYAyABKA0SFQoNc3ByZWFkX2ZhY3RvchgEIAEoDRIT",
+            "Cgtjb2RpbmdfcmF0ZRgFIAEoDRIYChBmcmVxdWVuY3lfb2Zmc2V0GAYgASgC",
+            "EjgKBnJlZ2lvbhgHIAEoDjIoLm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25m",
+            "aWcuUmVnaW9uQ29kZRIRCglob3BfbGltaXQYCCABKA0SEgoKdHhfZW5hYmxl",
+            "ZBgJIAEoCBIQCgh0eF9wb3dlchgKIAEoBRITCgtjaGFubmVsX251bRgLIAEo",
+            "DRIbChNvdmVycmlkZV9kdXR5X2N5Y2xlGAwgASgIEh4KFnN4MTI2eF9yeF9i",
+            "b29zdGVkX2dhaW4YDSABKAgSGgoSb3ZlcnJpZGVfZnJlcXVlbmN5GA4gASgC",
+            "EhcKD3BhX2Zhbl9kaXNhYmxlZBgPIAEoCBIXCg9pZ25vcmVfaW5jb21pbmcY",
+            "ZyADKA0SEwoLaWdub3JlX21xdHQYaCABKAgizQEKClJlZ2lvbkNvZGUSCQoF",
+            "VU5TRVQQABIGCgJVUxABEgoKBkVVXzQzMxACEgoKBkVVXzg2OBADEgYKAkNO",
+            "EAQSBgoCSlAQBRIHCgNBTloQBhIGCgJLUhAHEgYKAlRXEAgSBgoCUlUQCRIG",
+            "CgJJThAKEgoKBk5aXzg2NRALEgYKAlRIEAwSCwoHTE9SQV8yNBANEgoKBlVB",
+            "XzQzMxAOEgoKBlVBXzg2OBAPEgoKBk1ZXzQzMxAQEgoKBk1ZXzkxORAREgoK",
+            "BlNHXzkyMxASIqkBCgtNb2RlbVByZXNldBINCglMT05HX0ZBU1QQABINCglM",
+            "T05HX1NMT1cQARIWCg5WRVJZX0xPTkdfU0xPVxACGgIIARIPCgtNRURJVU1f",
+            "U0xPVxADEg8KC01FRElVTV9GQVNUEAQSDgoKU0hPUlRfU0xPVxAFEg4KClNI",
+            "T1JUX0ZBU1QQBhIRCg1MT05HX01PREVSQVRFEAcSDwoLU0hPUlRfVFVSQk8Q",
+            "CBqtAQoPQmx1ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSPAoEbW9k",
+            "ZRgCIAEoDjIuLm1lc2h0YXN0aWMuQ29uZmlnLkJsdWV0b290aENvbmZpZy5Q",
+            "YWlyaW5nTW9kZRIRCglmaXhlZF9waW4YAyABKA0iOAoLUGFpcmluZ01vZGUS",
+            "DgoKUkFORE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJThACGrYB",
+            "Cg5TZWN1cml0eUNvbmZpZxISCgpwdWJsaWNfa2V5GAEgASgMEhMKC3ByaXZh",
+            "dGVfa2V5GAIgASgMEhEKCWFkbWluX2tleRgDIAMoDBISCgppc19tYW5hZ2Vk",
+            "GAQgASgIEhYKDnNlcmlhbF9lbmFibGVkGAUgASgIEh0KFWRlYnVnX2xvZ19h",
+            "cGlfZW5hYmxlZBgGIAEoCBIdChVhZG1pbl9jaGFubmVsX2VuYWJsZWQYCCAB",
+            "KAgaEgoQU2Vzc2lvbmtleUNvbmZpZ0IRCg9wYXlsb2FkX3ZhcmlhbnRCYQoT",
+            "Y29tLmdlZWtzdmlsbGUubWVzaEIMQ29uZmlnUHJvdG9zWiJnaXRodWIuY29t",
+            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
+            "ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config), global::Meshtastic.Protobufs.Config.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig), global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Parser, new[]{ "Role", "SerialEnabled", "DebugLogEnabled", "ButtonGpio", "BuzzerGpio", "RebroadcastMode", "NodeInfoBroadcastSecs", "DoubleTapAsButtonPress", "IsManaged", "DisableTripleClick", "Tzdef", "LedHeartbeatDisabled" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role), typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.RebroadcastMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config), global::Meshtastic.Protobufs.Config.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth", "Security", "Sessionkey" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig), global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Parser, new[]{ "Role", "SerialEnabled", "ButtonGpio", "BuzzerGpio", "RebroadcastMode", "NodeInfoBroadcastSecs", "DoubleTapAsButtonPress", "IsManaged", "DisableTripleClick", "Tzdef", "LedHeartbeatDisabled" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role), typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.RebroadcastMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig), global::Meshtastic.Protobufs.Config.Types.PositionConfig.Parser, new[]{ "PositionBroadcastSecs", "PositionBroadcastSmartEnabled", "FixedPosition", "GpsEnabled", "GpsUpdateInterval", "GpsAttemptTime", "PositionFlags", "RxGpio", "TxGpio", "BroadcastSmartMinimumDistance", "BroadcastSmartMinimumIntervalSecs", "GpsEnGpio", "GpsMode" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.PositionFlags), typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.GpsMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PowerConfig), global::Meshtastic.Protobufs.Config.Types.PowerConfig.Parser, new[]{ "IsPowerSaving", "OnBatteryShutdownAfterSecs", "AdcMultiplierOverride", "WaitBluetoothSecs", "SdsSecs", "LsSecs", "MinWakeSecs", "DeviceBatteryInaAddress", "PowermonEnables" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "AddressMode", "Ipv4Config", "RsyslogServer" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold", "WakeOnTapOrMotion", "CompassOrientation" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "Sx126XRxBoostedGain", "OverrideFrequency", "PaFanDisabled", "IgnoreIncoming", "IgnoreMqtt" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin", "DeviceLoggingEnabled" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.SecurityConfig), global::Meshtastic.Protobufs.Config.Types.SecurityConfig.Parser, new[]{ "PublicKey", "PrivateKey", "AdminKey", "IsManaged", "SerialEnabled", "DebugLogApiEnabled", "AdminChannelEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig), global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig.Parser, null, null, null, null, null)})
           }));
     }
     #endregion
@@ -196,6 +205,12 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.Bluetooth:
           Bluetooth = other.Bluetooth.Clone();
+          break;
+        case PayloadVariantOneofCase.Security:
+          Security = other.Security.Clone();
+          break;
+        case PayloadVariantOneofCase.Sessionkey:
+          Sessionkey = other.Sessionkey.Clone();
           break;
       }
 
@@ -292,6 +307,30 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "security" field.</summary>
+    public const int SecurityFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Config.Types.SecurityConfig Security {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Security ? (global::Meshtastic.Protobufs.Config.Types.SecurityConfig) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.Security;
+      }
+    }
+
+    /// <summary>Field number for the "sessionkey" field.</summary>
+    public const int SessionkeyFieldNumber = 9;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig Sessionkey {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Sessionkey ? (global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.Sessionkey;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -303,6 +342,8 @@ namespace Meshtastic.Protobufs {
       Display = 5,
       Lora = 6,
       Bluetooth = 7,
+      Security = 8,
+      Sessionkey = 9,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -340,6 +381,8 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Display, other.Display)) return false;
       if (!object.Equals(Lora, other.Lora)) return false;
       if (!object.Equals(Bluetooth, other.Bluetooth)) return false;
+      if (!object.Equals(Security, other.Security)) return false;
+      if (!object.Equals(Sessionkey, other.Sessionkey)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -355,6 +398,8 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Display) hash ^= Display.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Lora) hash ^= Lora.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Bluetooth) hash ^= Bluetooth.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Security) hash ^= Security.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Sessionkey) hash ^= Sessionkey.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -402,6 +447,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(58);
         output.WriteMessage(Bluetooth);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Security) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Security);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Sessionkey) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Sessionkey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -440,6 +493,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(58);
         output.WriteMessage(Bluetooth);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Security) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Security);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Sessionkey) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Sessionkey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -470,6 +531,12 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.Bluetooth) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Bluetooth);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Security) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Security);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Sessionkey) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sessionkey);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -525,6 +592,18 @@ namespace Meshtastic.Protobufs {
             Bluetooth = new global::Meshtastic.Protobufs.Config.Types.BluetoothConfig();
           }
           Bluetooth.MergeFrom(other.Bluetooth);
+          break;
+        case PayloadVariantOneofCase.Security:
+          if (Security == null) {
+            Security = new global::Meshtastic.Protobufs.Config.Types.SecurityConfig();
+          }
+          Security.MergeFrom(other.Security);
+          break;
+        case PayloadVariantOneofCase.Sessionkey:
+          if (Sessionkey == null) {
+            Sessionkey = new global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig();
+          }
+          Sessionkey.MergeFrom(other.Sessionkey);
           break;
       }
 
@@ -606,6 +685,24 @@ namespace Meshtastic.Protobufs {
             Bluetooth = subBuilder;
             break;
           }
+          case 66: {
+            global::Meshtastic.Protobufs.Config.Types.SecurityConfig subBuilder = new global::Meshtastic.Protobufs.Config.Types.SecurityConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Security) {
+              subBuilder.MergeFrom(Security);
+            }
+            input.ReadMessage(subBuilder);
+            Security = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig subBuilder = new global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Sessionkey) {
+              subBuilder.MergeFrom(Sessionkey);
+            }
+            input.ReadMessage(subBuilder);
+            Sessionkey = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -684,6 +781,24 @@ namespace Meshtastic.Protobufs {
             Bluetooth = subBuilder;
             break;
           }
+          case 66: {
+            global::Meshtastic.Protobufs.Config.Types.SecurityConfig subBuilder = new global::Meshtastic.Protobufs.Config.Types.SecurityConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Security) {
+              subBuilder.MergeFrom(Security);
+            }
+            input.ReadMessage(subBuilder);
+            Security = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig subBuilder = new global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Sessionkey) {
+              subBuilder.MergeFrom(Sessionkey);
+            }
+            input.ReadMessage(subBuilder);
+            Sessionkey = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -734,7 +849,6 @@ namespace Meshtastic.Protobufs {
         public DeviceConfig(DeviceConfig other) : this() {
           role_ = other.role_;
           serialEnabled_ = other.serialEnabled_;
-          debugLogEnabled_ = other.debugLogEnabled_;
           buttonGpio_ = other.buttonGpio_;
           buzzerGpio_ = other.buzzerGpio_;
           rebroadcastMode_ = other.rebroadcastMode_;
@@ -775,30 +889,15 @@ namespace Meshtastic.Protobufs {
         /// <summary>
         ///
         /// Disabling this will disable the SerialConsole by not initilizing the StreamAPI
+        /// Moved to SecurityConfig
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool SerialEnabled {
           get { return serialEnabled_; }
           set {
             serialEnabled_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "debug_log_enabled" field.</summary>
-        public const int DebugLogEnabledFieldNumber = 3;
-        private bool debugLogEnabled_;
-        /// <summary>
-        ///
-        /// By default we turn off logging as soon as an API client connects (to keep shared serial link quiet).
-        /// Set this to true to leave the debug log outputting even when API is active.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool DebugLogEnabled {
-          get { return debugLogEnabled_; }
-          set {
-            debugLogEnabled_ = value;
           }
         }
 
@@ -892,7 +991,9 @@ namespace Meshtastic.Protobufs {
         ///
         /// If true, device is considered to be "managed" by a mesh administrator
         /// Clients should then limit available configuration and administrative options inside the user interface
+        /// Moved to SecurityConfig
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool IsManaged {
@@ -967,7 +1068,6 @@ namespace Meshtastic.Protobufs {
           }
           if (Role != other.Role) return false;
           if (SerialEnabled != other.SerialEnabled) return false;
-          if (DebugLogEnabled != other.DebugLogEnabled) return false;
           if (ButtonGpio != other.ButtonGpio) return false;
           if (BuzzerGpio != other.BuzzerGpio) return false;
           if (RebroadcastMode != other.RebroadcastMode) return false;
@@ -986,7 +1086,6 @@ namespace Meshtastic.Protobufs {
           int hash = 1;
           if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) hash ^= Role.GetHashCode();
           if (SerialEnabled != false) hash ^= SerialEnabled.GetHashCode();
-          if (DebugLogEnabled != false) hash ^= DebugLogEnabled.GetHashCode();
           if (ButtonGpio != 0) hash ^= ButtonGpio.GetHashCode();
           if (BuzzerGpio != 0) hash ^= BuzzerGpio.GetHashCode();
           if (RebroadcastMode != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.RebroadcastMode.All) hash ^= RebroadcastMode.GetHashCode();
@@ -1021,10 +1120,6 @@ namespace Meshtastic.Protobufs {
           if (SerialEnabled != false) {
             output.WriteRawTag(16);
             output.WriteBool(SerialEnabled);
-          }
-          if (DebugLogEnabled != false) {
-            output.WriteRawTag(24);
-            output.WriteBool(DebugLogEnabled);
           }
           if (ButtonGpio != 0) {
             output.WriteRawTag(32);
@@ -1080,10 +1175,6 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(16);
             output.WriteBool(SerialEnabled);
           }
-          if (DebugLogEnabled != false) {
-            output.WriteRawTag(24);
-            output.WriteBool(DebugLogEnabled);
-          }
           if (ButtonGpio != 0) {
             output.WriteRawTag(32);
             output.WriteUInt32(ButtonGpio);
@@ -1136,9 +1227,6 @@ namespace Meshtastic.Protobufs {
           if (SerialEnabled != false) {
             size += 1 + 1;
           }
-          if (DebugLogEnabled != false) {
-            size += 1 + 1;
-          }
           if (ButtonGpio != 0) {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ButtonGpio);
           }
@@ -1183,9 +1271,6 @@ namespace Meshtastic.Protobufs {
           }
           if (other.SerialEnabled != false) {
             SerialEnabled = other.SerialEnabled;
-          }
-          if (other.DebugLogEnabled != false) {
-            DebugLogEnabled = other.DebugLogEnabled;
           }
           if (other.ButtonGpio != 0) {
             ButtonGpio = other.ButtonGpio;
@@ -1235,10 +1320,6 @@ namespace Meshtastic.Protobufs {
               }
               case 16: {
                 SerialEnabled = input.ReadBool();
-                break;
-              }
-              case 24: {
-                DebugLogEnabled = input.ReadBool();
                 break;
               }
               case 32: {
@@ -1298,10 +1379,6 @@ namespace Meshtastic.Protobufs {
               }
               case 16: {
                 SerialEnabled = input.ReadBool();
-                break;
-              }
-              case 24: {
-                DebugLogEnabled = input.ReadBool();
                 break;
               }
               case 32: {
@@ -5399,6 +5476,7 @@ namespace Meshtastic.Protobufs {
             /// <summary>
             ///
             /// Very Long Range - Slow
+            /// Deprecated in 2.5: Works only with txco and is unusably slow
             /// </summary>
             [pbr::OriginalName("VERY_LONG_SLOW")] VeryLongSlow = 2,
             /// <summary>
@@ -5426,6 +5504,13 @@ namespace Meshtastic.Protobufs {
             /// Long Range - Moderately Fast
             /// </summary>
             [pbr::OriginalName("LONG_MODERATE")] LongModerate = 7,
+            /// <summary>
+            ///
+            /// Short Range - Turbo
+            /// This is the fastest preset and the only one with 500kHz bandwidth.
+            /// It is not legal to use in all regions due to this wider bandwidth.
+            /// </summary>
+            [pbr::OriginalName("SHORT_TURBO")] ShortTurbo = 8,
           }
 
         }
@@ -5470,7 +5555,6 @@ namespace Meshtastic.Protobufs {
           enabled_ = other.enabled_;
           mode_ = other.mode_;
           fixedPin_ = other.fixedPin_;
-          deviceLoggingEnabled_ = other.deviceLoggingEnabled_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5528,22 +5612,6 @@ namespace Meshtastic.Protobufs {
           }
         }
 
-        /// <summary>Field number for the "device_logging_enabled" field.</summary>
-        public const int DeviceLoggingEnabledFieldNumber = 4;
-        private bool deviceLoggingEnabled_;
-        /// <summary>
-        ///
-        /// Enables device (serial style logs) over Bluetooth
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool DeviceLoggingEnabled {
-          get { return deviceLoggingEnabled_; }
-          set {
-            deviceLoggingEnabled_ = value;
-          }
-        }
-
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5562,7 +5630,6 @@ namespace Meshtastic.Protobufs {
           if (Enabled != other.Enabled) return false;
           if (Mode != other.Mode) return false;
           if (FixedPin != other.FixedPin) return false;
-          if (DeviceLoggingEnabled != other.DeviceLoggingEnabled) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5573,7 +5640,6 @@ namespace Meshtastic.Protobufs {
           if (Enabled != false) hash ^= Enabled.GetHashCode();
           if (Mode != global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode.RandomPin) hash ^= Mode.GetHashCode();
           if (FixedPin != 0) hash ^= FixedPin.GetHashCode();
-          if (DeviceLoggingEnabled != false) hash ^= DeviceLoggingEnabled.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5604,10 +5670,6 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(24);
             output.WriteUInt32(FixedPin);
           }
-          if (DeviceLoggingEnabled != false) {
-            output.WriteRawTag(32);
-            output.WriteBool(DeviceLoggingEnabled);
-          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5630,10 +5692,6 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(24);
             output.WriteUInt32(FixedPin);
           }
-          if (DeviceLoggingEnabled != false) {
-            output.WriteRawTag(32);
-            output.WriteBool(DeviceLoggingEnabled);
-          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5652,9 +5710,6 @@ namespace Meshtastic.Protobufs {
           }
           if (FixedPin != 0) {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FixedPin);
-          }
-          if (DeviceLoggingEnabled != false) {
-            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5676,9 +5731,6 @@ namespace Meshtastic.Protobufs {
           }
           if (other.FixedPin != 0) {
             FixedPin = other.FixedPin;
-          }
-          if (other.DeviceLoggingEnabled != false) {
-            DeviceLoggingEnabled = other.DeviceLoggingEnabled;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5707,10 +5759,6 @@ namespace Meshtastic.Protobufs {
                 FixedPin = input.ReadUInt32();
                 break;
               }
-              case 32: {
-                DeviceLoggingEnabled = input.ReadBool();
-                break;
-              }
             }
           }
         #endif
@@ -5736,10 +5784,6 @@ namespace Meshtastic.Protobufs {
               }
               case 24: {
                 FixedPin = input.ReadUInt32();
-                break;
-              }
-              case 32: {
-                DeviceLoggingEnabled = input.ReadBool();
                 break;
               }
             }
@@ -5772,6 +5816,594 @@ namespace Meshtastic.Protobufs {
 
         }
         #endregion
+
+      }
+
+      public sealed partial class SecurityConfig : pb::IMessage<SecurityConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SecurityConfig> _parser = new pb::MessageParser<SecurityConfig>(() => new SecurityConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SecurityConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Meshtastic.Protobufs.Config.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SecurityConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SecurityConfig(SecurityConfig other) : this() {
+          publicKey_ = other.publicKey_;
+          privateKey_ = other.privateKey_;
+          adminKey_ = other.adminKey_.Clone();
+          isManaged_ = other.isManaged_;
+          serialEnabled_ = other.serialEnabled_;
+          debugLogApiEnabled_ = other.debugLogApiEnabled_;
+          adminChannelEnabled_ = other.adminChannelEnabled_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SecurityConfig Clone() {
+          return new SecurityConfig(this);
+        }
+
+        /// <summary>Field number for the "public_key" field.</summary>
+        public const int PublicKeyFieldNumber = 1;
+        private pb::ByteString publicKey_ = pb::ByteString.Empty;
+        /// <summary>
+        ///
+        /// The public key of the user's device.
+        /// Sent out to other nodes on the mesh to allow them to compute a shared secret key.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString PublicKey {
+          get { return publicKey_; }
+          set {
+            publicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "private_key" field.</summary>
+        public const int PrivateKeyFieldNumber = 2;
+        private pb::ByteString privateKey_ = pb::ByteString.Empty;
+        /// <summary>
+        ///
+        /// The private key of the device.
+        /// Used to create a shared key with a remote device.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString PrivateKey {
+          get { return privateKey_; }
+          set {
+            privateKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "admin_key" field.</summary>
+        public const int AdminKeyFieldNumber = 3;
+        private static readonly pb::FieldCodec<pb::ByteString> _repeated_adminKey_codec
+            = pb::FieldCodec.ForBytes(26);
+        private readonly pbc::RepeatedField<pb::ByteString> adminKey_ = new pbc::RepeatedField<pb::ByteString>();
+        /// <summary>
+        ///
+        /// The public key authorized to send admin messages to this node.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<pb::ByteString> AdminKey {
+          get { return adminKey_; }
+        }
+
+        /// <summary>Field number for the "is_managed" field.</summary>
+        public const int IsManagedFieldNumber = 4;
+        private bool isManaged_;
+        /// <summary>
+        ///
+        /// If true, device is considered to be "managed" by a mesh administrator via admin messages
+        /// Device is managed by a mesh administrator.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool IsManaged {
+          get { return isManaged_; }
+          set {
+            isManaged_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "serial_enabled" field.</summary>
+        public const int SerialEnabledFieldNumber = 5;
+        private bool serialEnabled_;
+        /// <summary>
+        ///
+        /// Serial Console over the Stream API."
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool SerialEnabled {
+          get { return serialEnabled_; }
+          set {
+            serialEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "debug_log_api_enabled" field.</summary>
+        public const int DebugLogApiEnabledFieldNumber = 6;
+        private bool debugLogApiEnabled_;
+        /// <summary>
+        ///
+        /// By default we turn off logging as soon as an API client connects (to keep shared serial link quiet).
+        /// Output live debug logging over serial or bluetooth is set to true.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DebugLogApiEnabled {
+          get { return debugLogApiEnabled_; }
+          set {
+            debugLogApiEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "admin_channel_enabled" field.</summary>
+        public const int AdminChannelEnabledFieldNumber = 8;
+        private bool adminChannelEnabled_;
+        /// <summary>
+        ///
+        /// Allow incoming device control over the insecure legacy admin channel.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AdminChannelEnabled {
+          get { return adminChannelEnabled_; }
+          set {
+            adminChannelEnabled_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SecurityConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SecurityConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PublicKey != other.PublicKey) return false;
+          if (PrivateKey != other.PrivateKey) return false;
+          if(!adminKey_.Equals(other.adminKey_)) return false;
+          if (IsManaged != other.IsManaged) return false;
+          if (SerialEnabled != other.SerialEnabled) return false;
+          if (DebugLogApiEnabled != other.DebugLogApiEnabled) return false;
+          if (AdminChannelEnabled != other.AdminChannelEnabled) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PublicKey.Length != 0) hash ^= PublicKey.GetHashCode();
+          if (PrivateKey.Length != 0) hash ^= PrivateKey.GetHashCode();
+          hash ^= adminKey_.GetHashCode();
+          if (IsManaged != false) hash ^= IsManaged.GetHashCode();
+          if (SerialEnabled != false) hash ^= SerialEnabled.GetHashCode();
+          if (DebugLogApiEnabled != false) hash ^= DebugLogApiEnabled.GetHashCode();
+          if (AdminChannelEnabled != false) hash ^= AdminChannelEnabled.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (PublicKey.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteBytes(PublicKey);
+          }
+          if (PrivateKey.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(PrivateKey);
+          }
+          adminKey_.WriteTo(output, _repeated_adminKey_codec);
+          if (IsManaged != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(IsManaged);
+          }
+          if (SerialEnabled != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(SerialEnabled);
+          }
+          if (DebugLogApiEnabled != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(DebugLogApiEnabled);
+          }
+          if (AdminChannelEnabled != false) {
+            output.WriteRawTag(64);
+            output.WriteBool(AdminChannelEnabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PublicKey.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteBytes(PublicKey);
+          }
+          if (PrivateKey.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(PrivateKey);
+          }
+          adminKey_.WriteTo(ref output, _repeated_adminKey_codec);
+          if (IsManaged != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(IsManaged);
+          }
+          if (SerialEnabled != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(SerialEnabled);
+          }
+          if (DebugLogApiEnabled != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(DebugLogApiEnabled);
+          }
+          if (AdminChannelEnabled != false) {
+            output.WriteRawTag(64);
+            output.WriteBool(AdminChannelEnabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (PublicKey.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(PublicKey);
+          }
+          if (PrivateKey.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(PrivateKey);
+          }
+          size += adminKey_.CalculateSize(_repeated_adminKey_codec);
+          if (IsManaged != false) {
+            size += 1 + 1;
+          }
+          if (SerialEnabled != false) {
+            size += 1 + 1;
+          }
+          if (DebugLogApiEnabled != false) {
+            size += 1 + 1;
+          }
+          if (AdminChannelEnabled != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SecurityConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PublicKey.Length != 0) {
+            PublicKey = other.PublicKey;
+          }
+          if (other.PrivateKey.Length != 0) {
+            PrivateKey = other.PrivateKey;
+          }
+          adminKey_.Add(other.adminKey_);
+          if (other.IsManaged != false) {
+            IsManaged = other.IsManaged;
+          }
+          if (other.SerialEnabled != false) {
+            SerialEnabled = other.SerialEnabled;
+          }
+          if (other.DebugLogApiEnabled != false) {
+            DebugLogApiEnabled = other.DebugLogApiEnabled;
+          }
+          if (other.AdminChannelEnabled != false) {
+            AdminChannelEnabled = other.AdminChannelEnabled;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                PublicKey = input.ReadBytes();
+                break;
+              }
+              case 18: {
+                PrivateKey = input.ReadBytes();
+                break;
+              }
+              case 26: {
+                adminKey_.AddEntriesFrom(input, _repeated_adminKey_codec);
+                break;
+              }
+              case 32: {
+                IsManaged = input.ReadBool();
+                break;
+              }
+              case 40: {
+                SerialEnabled = input.ReadBool();
+                break;
+              }
+              case 48: {
+                DebugLogApiEnabled = input.ReadBool();
+                break;
+              }
+              case 64: {
+                AdminChannelEnabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                PublicKey = input.ReadBytes();
+                break;
+              }
+              case 18: {
+                PrivateKey = input.ReadBytes();
+                break;
+              }
+              case 26: {
+                adminKey_.AddEntriesFrom(ref input, _repeated_adminKey_codec);
+                break;
+              }
+              case 32: {
+                IsManaged = input.ReadBool();
+                break;
+              }
+              case 40: {
+                SerialEnabled = input.ReadBool();
+                break;
+              }
+              case 48: {
+                DebugLogApiEnabled = input.ReadBool();
+                break;
+              }
+              case 64: {
+                AdminChannelEnabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      ///
+      /// Blank config request, strictly for getting the session key
+      /// </summary>
+      public sealed partial class SessionkeyConfig : pb::IMessage<SessionkeyConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SessionkeyConfig> _parser = new pb::MessageParser<SessionkeyConfig>(() => new SessionkeyConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SessionkeyConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Meshtastic.Protobufs.Config.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionkeyConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionkeyConfig(SessionkeyConfig other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SessionkeyConfig Clone() {
+          return new SessionkeyConfig(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SessionkeyConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SessionkeyConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SessionkeyConfig other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
 
       }
 

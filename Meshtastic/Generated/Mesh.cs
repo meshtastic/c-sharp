@@ -28,87 +28,100 @@ namespace Meshtastic.Protobufs {
             "aWMvY2hhbm5lbC5wcm90bxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8aHm1l",
             "c2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90bxoZbWVzaHRhc3RpYy9wb3J0",
             "bnVtcy5wcm90bxoabWVzaHRhc3RpYy90ZWxlbWV0cnkucHJvdG8aF21lc2h0",
-            "YXN0aWMveG1vZGVtLnByb3RvIuUFCghQb3NpdGlvbhISCgpsYXRpdHVkZV9p",
-            "GAEgASgPEhMKC2xvbmdpdHVkZV9pGAIgASgPEhAKCGFsdGl0dWRlGAMgASgF",
-            "EgwKBHRpbWUYBCABKAcSNwoPbG9jYXRpb25fc291cmNlGAUgASgOMh4ubWVz",
-            "aHRhc3RpYy5Qb3NpdGlvbi5Mb2NTb3VyY2USNwoPYWx0aXR1ZGVfc291cmNl",
-            "GAYgASgOMh4ubWVzaHRhc3RpYy5Qb3NpdGlvbi5BbHRTb3VyY2USEQoJdGlt",
-            "ZXN0YW1wGAcgASgHEh8KF3RpbWVzdGFtcF9taWxsaXNfYWRqdXN0GAggASgF",
-            "EhQKDGFsdGl0dWRlX2hhZRgJIAEoERIjChthbHRpdHVkZV9nZW9pZGFsX3Nl",
-            "cGFyYXRpb24YCiABKBESDAoEUERPUBgLIAEoDRIMCgRIRE9QGAwgASgNEgwK",
-            "BFZET1AYDSABKA0SFAoMZ3BzX2FjY3VyYWN5GA4gASgNEhQKDGdyb3VuZF9z",
-            "cGVlZBgPIAEoDRIUCgxncm91bmRfdHJhY2sYECABKA0SEwoLZml4X3F1YWxp",
-            "dHkYESABKA0SEAoIZml4X3R5cGUYEiABKA0SFAoMc2F0c19pbl92aWV3GBMg",
-            "ASgNEhEKCXNlbnNvcl9pZBgUIAEoDRITCgtuZXh0X3VwZGF0ZRgVIAEoDRIS",
-            "CgpzZXFfbnVtYmVyGBYgASgNEhYKDnByZWNpc2lvbl9iaXRzGBcgASgNIk4K",
-            "CUxvY1NvdXJjZRINCglMT0NfVU5TRVQQABIOCgpMT0NfTUFOVUFMEAESEAoM",
-            "TE9DX0lOVEVSTkFMEAISEAoMTE9DX0VYVEVSTkFMEAMiYgoJQWx0U291cmNl",
-            "Eg0KCUFMVF9VTlNFVBAAEg4KCkFMVF9NQU5VQUwQARIQCgxBTFRfSU5URVJO",
-            "QUwQAhIQCgxBTFRfRVhURVJOQUwQAxISCg5BTFRfQkFST01FVFJJQxAEIsQB",
-            "CgRVc2VyEgoKAmlkGAEgASgJEhEKCWxvbmdfbmFtZRgCIAEoCRISCgpzaG9y",
-            "dF9uYW1lGAMgASgJEhMKB21hY2FkZHIYBCABKAxCAhgBEisKCGh3X21vZGVs",
-            "GAUgASgOMhkubWVzaHRhc3RpYy5IYXJkd2FyZU1vZGVsEhMKC2lzX2xpY2Vu",
-            "c2VkGAYgASgIEjIKBHJvbGUYByABKA4yJC5tZXNodGFzdGljLkNvbmZpZy5E",
-            "ZXZpY2VDb25maWcuUm9sZSIfCg5Sb3V0ZURpc2NvdmVyeRINCgVyb3V0ZRgB",
-            "IAMoByL8AgoHUm91dGluZxIzCg1yb3V0ZV9yZXF1ZXN0GAEgASgLMhoubWVz",
-            "aHRhc3RpYy5Sb3V0ZURpc2NvdmVyeUgAEjEKC3JvdXRlX3JlcGx5GAIgASgL",
-            "MhoubWVzaHRhc3RpYy5Sb3V0ZURpc2NvdmVyeUgAEjEKDGVycm9yX3JlYXNv",
-            "bhgDIAEoDjIZLm1lc2h0YXN0aWMuUm91dGluZy5FcnJvckgAIsoBCgVFcnJv",
-            "chIICgROT05FEAASDAoITk9fUk9VVEUQARILCgdHT1RfTkFLEAISCwoHVElN",
-            "RU9VVBADEhAKDE5PX0lOVEVSRkFDRRAEEhIKDk1BWF9SRVRSQU5TTUlUEAUS",
-            "DgoKTk9fQ0hBTk5FTBAGEg0KCVRPT19MQVJHRRAHEg8KC05PX1JFU1BPTlNF",
-            "EAgSFAoQRFVUWV9DWUNMRV9MSU1JVBAJEg8KC0JBRF9SRVFVRVNUECASEgoO",
-            "Tk9UX0FVVEhPUklaRUQQIUIJCgd2YXJpYW50IqcBCgREYXRhEiQKB3BvcnRu",
-            "dW0YASABKA4yEy5tZXNodGFzdGljLlBvcnROdW0SDwoHcGF5bG9hZBgCIAEo",
-            "DBIVCg13YW50X3Jlc3BvbnNlGAMgASgIEgwKBGRlc3QYBCABKAcSDgoGc291",
-            "cmNlGAUgASgHEhIKCnJlcXVlc3RfaWQYBiABKAcSEAoIcmVwbHlfaWQYByAB",
-            "KAcSDQoFZW1vamkYCCABKAcikwEKCFdheXBvaW50EgoKAmlkGAEgASgNEhIK",
-            "CmxhdGl0dWRlX2kYAiABKA8SEwoLbG9uZ2l0dWRlX2kYAyABKA8SDgoGZXhw",
-            "aXJlGAQgASgNEhEKCWxvY2tlZF90bxgFIAEoDRIMCgRuYW1lGAYgASgJEhMK",
-            "C2Rlc2NyaXB0aW9uGAcgASgJEgwKBGljb24YCCABKAcibAoWTXF0dENsaWVu",
-            "dFByb3h5TWVzc2FnZRINCgV0b3BpYxgBIAEoCRIOCgRkYXRhGAIgASgMSAAS",
-            "DgoEdGV4dBgDIAEoCUgAEhAKCHJldGFpbmVkGAQgASgIQhEKD3BheWxvYWRf",
-            "dmFyaWFudCKVBAoKTWVzaFBhY2tldBIMCgRmcm9tGAEgASgHEgoKAnRvGAIg",
-            "ASgHEg8KB2NoYW5uZWwYAyABKA0SIwoHZGVjb2RlZBgEIAEoCzIQLm1lc2h0",
-            "YXN0aWMuRGF0YUgAEhMKCWVuY3J5cHRlZBgFIAEoDEgAEgoKAmlkGAYgASgH",
-            "Eg8KB3J4X3RpbWUYByABKAcSDgoGcnhfc25yGAggASgCEhEKCWhvcF9saW1p",
-            "dBgJIAEoDRIQCgh3YW50X2FjaxgKIAEoCBIxCghwcmlvcml0eRgLIAEoDjIf",
-            "Lm1lc2h0YXN0aWMuTWVzaFBhY2tldC5Qcmlvcml0eRIPCgdyeF9yc3NpGAwg",
-            "ASgFEjMKB2RlbGF5ZWQYDSABKA4yHi5tZXNodGFzdGljLk1lc2hQYWNrZXQu",
-            "RGVsYXllZEICGAESEAoIdmlhX21xdHQYDiABKAgSEQoJaG9wX3N0YXJ0GA8g",
-            "ASgNIlsKCFByaW9yaXR5EgkKBVVOU0VUEAASBwoDTUlOEAESDgoKQkFDS0dS",
-            "T1VORBAKEgsKB0RFRkFVTFQQQBIMCghSRUxJQUJMRRBGEgcKA0FDSxB4EgcK",
-            "A01BWBB/IkIKB0RlbGF5ZWQSDAoITk9fREVMQVkQABIVChFERUxBWUVEX0JS",
-            "T0FEQ0FTVBABEhIKDkRFTEFZRURfRElSRUNUEAJCEQoPcGF5bG9hZF92YXJp",
-            "YW50Iv4BCghOb2RlSW5mbxILCgNudW0YASABKA0SHgoEdXNlchgCIAEoCzIQ",
-            "Lm1lc2h0YXN0aWMuVXNlchImCghwb3NpdGlvbhgDIAEoCzIULm1lc2h0YXN0",
-            "aWMuUG9zaXRpb24SCwoDc25yGAQgASgCEhIKCmxhc3RfaGVhcmQYBSABKAcS",
-            "MQoOZGV2aWNlX21ldHJpY3MYBiABKAsyGS5tZXNodGFzdGljLkRldmljZU1l",
-            "dHJpY3MSDwoHY2hhbm5lbBgHIAEoDRIQCgh2aWFfbXF0dBgIIAEoCBIRCglo",
-            "b3BzX2F3YXkYCSABKA0SEwoLaXNfZmF2b3JpdGUYCiABKAgiUAoKTXlOb2Rl",
-            "SW5mbxITCgtteV9ub2RlX251bRgBIAEoDRIUCgxyZWJvb3RfY291bnQYCCAB",
-            "KA0SFwoPbWluX2FwcF92ZXJzaW9uGAsgASgNIsABCglMb2dSZWNvcmQSDwoH",
-            "bWVzc2FnZRgBIAEoCRIMCgR0aW1lGAIgASgHEg4KBnNvdXJjZRgDIAEoCRIq",
-            "CgVsZXZlbBgEIAEoDjIbLm1lc2h0YXN0aWMuTG9nUmVjb3JkLkxldmVsIlgK",
-            "BUxldmVsEgkKBVVOU0VUEAASDAoIQ1JJVElDQUwQMhIJCgVFUlJPUhAoEgsK",
-            "B1dBUk5JTkcQHhIICgRJTkZPEBQSCQoFREVCVUcQChIJCgVUUkFDRRAFIlAK",
-            "C1F1ZXVlU3RhdHVzEgsKA3JlcxgBIAEoBRIMCgRmcmVlGAIgASgNEg4KBm1h",
-            "eGxlbhgDIAEoDRIWCg5tZXNoX3BhY2tldF9pZBgEIAEoDSKFBQoJRnJvbVJh",
-            "ZGlvEgoKAmlkGAEgASgNEigKBnBhY2tldBgCIAEoCzIWLm1lc2h0YXN0aWMu",
-            "TWVzaFBhY2tldEgAEikKB215X2luZm8YAyABKAsyFi5tZXNodGFzdGljLk15",
-            "Tm9kZUluZm9IABIpCglub2RlX2luZm8YBCABKAsyFC5tZXNodGFzdGljLk5v",
-            "ZGVJbmZvSAASJAoGY29uZmlnGAUgASgLMhIubWVzaHRhc3RpYy5Db25maWdI",
-            "ABIrCgpsb2dfcmVjb3JkGAYgASgLMhUubWVzaHRhc3RpYy5Mb2dSZWNvcmRI",
-            "ABIcChJjb25maWdfY29tcGxldGVfaWQYByABKA1IABISCghyZWJvb3RlZBgI",
-            "IAEoCEgAEjAKDG1vZHVsZUNvbmZpZxgJIAEoCzIYLm1lc2h0YXN0aWMuTW9k",
-            "dWxlQ29uZmlnSAASJgoHY2hhbm5lbBgKIAEoCzITLm1lc2h0YXN0aWMuQ2hh",
-            "bm5lbEgAEi4KC3F1ZXVlU3RhdHVzGAsgASgLMhcubWVzaHRhc3RpYy5RdWV1",
-            "ZVN0YXR1c0gAEioKDHhtb2RlbVBhY2tldBgMIAEoCzISLm1lc2h0YXN0aWMu",
-            "WE1vZGVtSAASLgoIbWV0YWRhdGEYDSABKAsyGi5tZXNodGFzdGljLkRldmlj",
-            "ZU1ldGFkYXRhSAASRAoWbXF0dENsaWVudFByb3h5TWVzc2FnZRgOIAEoCzIi",
-            "Lm1lc2h0YXN0aWMuTXF0dENsaWVudFByb3h5TWVzc2FnZUgAEigKCGZpbGVJ",
-            "bmZvGA8gASgLMhQubWVzaHRhc3RpYy5GaWxlSW5mb0gAQhEKD3BheWxvYWRf",
-            "dmFyaWFudCIxCghGaWxlSW5mbxIRCglmaWxlX25hbWUYASABKAkSEgoKc2l6",
+            "YXN0aWMveG1vZGVtLnByb3RvIocHCghQb3NpdGlvbhIXCgpsYXRpdHVkZV9p",
+            "GAEgASgPSACIAQESGAoLbG9uZ2l0dWRlX2kYAiABKA9IAYgBARIVCghhbHRp",
+            "dHVkZRgDIAEoBUgCiAEBEgwKBHRpbWUYBCABKAcSNwoPbG9jYXRpb25fc291",
+            "cmNlGAUgASgOMh4ubWVzaHRhc3RpYy5Qb3NpdGlvbi5Mb2NTb3VyY2USNwoP",
+            "YWx0aXR1ZGVfc291cmNlGAYgASgOMh4ubWVzaHRhc3RpYy5Qb3NpdGlvbi5B",
+            "bHRTb3VyY2USEQoJdGltZXN0YW1wGAcgASgHEh8KF3RpbWVzdGFtcF9taWxs",
+            "aXNfYWRqdXN0GAggASgFEhkKDGFsdGl0dWRlX2hhZRgJIAEoEUgDiAEBEigK",
+            "G2FsdGl0dWRlX2dlb2lkYWxfc2VwYXJhdGlvbhgKIAEoEUgEiAEBEgwKBFBE",
+            "T1AYCyABKA0SDAoESERPUBgMIAEoDRIMCgRWRE9QGA0gASgNEhQKDGdwc19h",
+            "Y2N1cmFjeRgOIAEoDRIZCgxncm91bmRfc3BlZWQYDyABKA1IBYgBARIZCgxn",
+            "cm91bmRfdHJhY2sYECABKA1IBogBARITCgtmaXhfcXVhbGl0eRgRIAEoDRIQ",
+            "CghmaXhfdHlwZRgSIAEoDRIUCgxzYXRzX2luX3ZpZXcYEyABKA0SEQoJc2Vu",
+            "c29yX2lkGBQgASgNEhMKC25leHRfdXBkYXRlGBUgASgNEhIKCnNlcV9udW1i",
+            "ZXIYFiABKA0SFgoOcHJlY2lzaW9uX2JpdHMYFyABKA0iTgoJTG9jU291cmNl",
+            "Eg0KCUxPQ19VTlNFVBAAEg4KCkxPQ19NQU5VQUwQARIQCgxMT0NfSU5URVJO",
+            "QUwQAhIQCgxMT0NfRVhURVJOQUwQAyJiCglBbHRTb3VyY2USDQoJQUxUX1VO",
+            "U0VUEAASDgoKQUxUX01BTlVBTBABEhAKDEFMVF9JTlRFUk5BTBACEhAKDEFM",
+            "VF9FWFRFUk5BTBADEhIKDkFMVF9CQVJPTUVUUklDEARCDQoLX2xhdGl0dWRl",
+            "X2lCDgoMX2xvbmdpdHVkZV9pQgsKCV9hbHRpdHVkZUIPCg1fYWx0aXR1ZGVf",
+            "aGFlQh4KHF9hbHRpdHVkZV9nZW9pZGFsX3NlcGFyYXRpb25CDwoNX2dyb3Vu",
+            "ZF9zcGVlZEIPCg1fZ3JvdW5kX3RyYWNrItgBCgRVc2VyEgoKAmlkGAEgASgJ",
+            "EhEKCWxvbmdfbmFtZRgCIAEoCRISCgpzaG9ydF9uYW1lGAMgASgJEhMKB21h",
+            "Y2FkZHIYBCABKAxCAhgBEisKCGh3X21vZGVsGAUgASgOMhkubWVzaHRhc3Rp",
+            "Yy5IYXJkd2FyZU1vZGVsEhMKC2lzX2xpY2Vuc2VkGAYgASgIEjIKBHJvbGUY",
+            "ByABKA4yJC5tZXNodGFzdGljLkNvbmZpZy5EZXZpY2VDb25maWcuUm9sZRIS",
+            "CgpwdWJsaWNfa2V5GAggASgMIloKDlJvdXRlRGlzY292ZXJ5Eg0KBXJvdXRl",
+            "GAEgAygHEhMKC3Nucl90b3dhcmRzGAIgAygFEhIKCnJvdXRlX2JhY2sYAyAD",
+            "KAcSEAoIc25yX2JhY2sYBCADKAUipAMKB1JvdXRpbmcSMwoNcm91dGVfcmVx",
+            "dWVzdBgBIAEoCzIaLm1lc2h0YXN0aWMuUm91dGVEaXNjb3ZlcnlIABIxCgty",
+            "b3V0ZV9yZXBseRgCIAEoCzIaLm1lc2h0YXN0aWMuUm91dGVEaXNjb3ZlcnlI",
+            "ABIxCgxlcnJvcl9yZWFzb24YAyABKA4yGS5tZXNodGFzdGljLlJvdXRpbmcu",
+            "RXJyb3JIACLyAQoFRXJyb3ISCAoETk9ORRAAEgwKCE5PX1JPVVRFEAESCwoH",
+            "R09UX05BSxACEgsKB1RJTUVPVVQQAxIQCgxOT19JTlRFUkZBQ0UQBBISCg5N",
+            "QVhfUkVUUkFOU01JVBAFEg4KCk5PX0NIQU5ORUwQBhINCglUT09fTEFSR0UQ",
+            "BxIPCgtOT19SRVNQT05TRRAIEhQKEERVVFlfQ1lDTEVfTElNSVQQCRIPCgtC",
+            "QURfUkVRVUVTVBAgEhIKDk5PVF9BVVRIT1JJWkVEECESDgoKUEtJX0ZBSUxF",
+            "RBAiEhYKElBLSV9VTktOT1dOX1BVQktFWRAjQgkKB3ZhcmlhbnQipwEKBERh",
+            "dGESJAoHcG9ydG51bRgBIAEoDjITLm1lc2h0YXN0aWMuUG9ydE51bRIPCgdw",
+            "YXlsb2FkGAIgASgMEhUKDXdhbnRfcmVzcG9uc2UYAyABKAgSDAoEZGVzdBgE",
+            "IAEoBxIOCgZzb3VyY2UYBSABKAcSEgoKcmVxdWVzdF9pZBgGIAEoBxIQCghy",
+            "ZXBseV9pZBgHIAEoBxINCgVlbW9qaRgIIAEoByK8AQoIV2F5cG9pbnQSCgoC",
+            "aWQYASABKA0SFwoKbGF0aXR1ZGVfaRgCIAEoD0gAiAEBEhgKC2xvbmdpdHVk",
+            "ZV9pGAMgASgPSAGIAQESDgoGZXhwaXJlGAQgASgNEhEKCWxvY2tlZF90bxgF",
+            "IAEoDRIMCgRuYW1lGAYgASgJEhMKC2Rlc2NyaXB0aW9uGAcgASgJEgwKBGlj",
+            "b24YCCABKAdCDQoLX2xhdGl0dWRlX2lCDgoMX2xvbmdpdHVkZV9pImwKFk1x",
+            "dHRDbGllbnRQcm94eU1lc3NhZ2USDQoFdG9waWMYASABKAkSDgoEZGF0YRgC",
+            "IAEoDEgAEg4KBHRleHQYAyABKAlIABIQCghyZXRhaW5lZBgEIAEoCEIRCg9w",
+            "YXlsb2FkX3ZhcmlhbnQi2AQKCk1lc2hQYWNrZXQSDAoEZnJvbRgBIAEoBxIK",
+            "CgJ0bxgCIAEoBxIPCgdjaGFubmVsGAMgASgNEiMKB2RlY29kZWQYBCABKAsy",
+            "EC5tZXNodGFzdGljLkRhdGFIABITCgllbmNyeXB0ZWQYBSABKAxIABIKCgJp",
+            "ZBgGIAEoBxIPCgdyeF90aW1lGAcgASgHEg4KBnJ4X3NuchgIIAEoAhIRCglo",
+            "b3BfbGltaXQYCSABKA0SEAoId2FudF9hY2sYCiABKAgSMQoIcHJpb3JpdHkY",
+            "CyABKA4yHy5tZXNodGFzdGljLk1lc2hQYWNrZXQuUHJpb3JpdHkSDwoHcnhf",
+            "cnNzaRgMIAEoBRIzCgdkZWxheWVkGA0gASgOMh4ubWVzaHRhc3RpYy5NZXNo",
+            "UGFja2V0LkRlbGF5ZWRCAhgBEhAKCHZpYV9tcXR0GA4gASgIEhEKCWhvcF9z",
+            "dGFydBgPIAEoDRISCgpwdWJsaWNfa2V5GBAgASgMEhUKDXBraV9lbmNyeXB0",
+            "ZWQYESABKAgicwoIUHJpb3JpdHkSCQoFVU5TRVQQABIHCgNNSU4QARIOCgpC",
+            "QUNLR1JPVU5EEAoSCwoHREVGQVVMVBBAEgwKCFJFTElBQkxFEEYSDAoIUkVT",
+            "UE9OU0UQUBIICgRISUdIEGQSBwoDQUNLEHgSBwoDTUFYEH8iQgoHRGVsYXll",
+            "ZBIMCghOT19ERUxBWRAAEhUKEURFTEFZRURfQlJPQURDQVNUEAESEgoOREVM",
+            "QVlFRF9ESVJFQ1QQAkIRCg9wYXlsb2FkX3ZhcmlhbnQi/gEKCE5vZGVJbmZv",
+            "EgsKA251bRgBIAEoDRIeCgR1c2VyGAIgASgLMhAubWVzaHRhc3RpYy5Vc2Vy",
+            "EiYKCHBvc2l0aW9uGAMgASgLMhQubWVzaHRhc3RpYy5Qb3NpdGlvbhILCgNz",
+            "bnIYBCABKAISEgoKbGFzdF9oZWFyZBgFIAEoBxIxCg5kZXZpY2VfbWV0cmlj",
+            "cxgGIAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljcxIPCgdjaGFubmVs",
+            "GAcgASgNEhAKCHZpYV9tcXR0GAggASgIEhEKCWhvcHNfYXdheRgJIAEoDRIT",
+            "Cgtpc19mYXZvcml0ZRgKIAEoCCJQCgpNeU5vZGVJbmZvEhMKC215X25vZGVf",
+            "bnVtGAEgASgNEhQKDHJlYm9vdF9jb3VudBgIIAEoDRIXCg9taW5fYXBwX3Zl",
+            "cnNpb24YCyABKA0iwAEKCUxvZ1JlY29yZBIPCgdtZXNzYWdlGAEgASgJEgwK",
+            "BHRpbWUYAiABKAcSDgoGc291cmNlGAMgASgJEioKBWxldmVsGAQgASgOMhsu",
+            "bWVzaHRhc3RpYy5Mb2dSZWNvcmQuTGV2ZWwiWAoFTGV2ZWwSCQoFVU5TRVQQ",
+            "ABIMCghDUklUSUNBTBAyEgkKBUVSUk9SECgSCwoHV0FSTklORxAeEggKBElO",
+            "Rk8QFBIJCgVERUJVRxAKEgkKBVRSQUNFEAUiUAoLUXVldWVTdGF0dXMSCwoD",
+            "cmVzGAEgASgFEgwKBGZyZWUYAiABKA0SDgoGbWF4bGVuGAMgASgNEhYKDm1l",
+            "c2hfcGFja2V0X2lkGAQgASgNIsMFCglGcm9tUmFkaW8SCgoCaWQYASABKA0S",
+            "KAoGcGFja2V0GAIgASgLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0SAASKQoH",
+            "bXlfaW5mbxgDIAEoCzIWLm1lc2h0YXN0aWMuTXlOb2RlSW5mb0gAEikKCW5v",
+            "ZGVfaW5mbxgEIAEoCzIULm1lc2h0YXN0aWMuTm9kZUluZm9IABIkCgZjb25m",
+            "aWcYBSABKAsyEi5tZXNodGFzdGljLkNvbmZpZ0gAEisKCmxvZ19yZWNvcmQY",
+            "BiABKAsyFS5tZXNodGFzdGljLkxvZ1JlY29yZEgAEhwKEmNvbmZpZ19jb21w",
+            "bGV0ZV9pZBgHIAEoDUgAEhIKCHJlYm9vdGVkGAggASgISAASMAoMbW9kdWxl",
+            "Q29uZmlnGAkgASgLMhgubWVzaHRhc3RpYy5Nb2R1bGVDb25maWdIABImCgdj",
+            "aGFubmVsGAogASgLMhMubWVzaHRhc3RpYy5DaGFubmVsSAASLgoLcXVldWVT",
+            "dGF0dXMYCyABKAsyFy5tZXNodGFzdGljLlF1ZXVlU3RhdHVzSAASKgoMeG1v",
+            "ZGVtUGFja2V0GAwgASgLMhIubWVzaHRhc3RpYy5YTW9kZW1IABIuCghtZXRh",
+            "ZGF0YRgNIAEoCzIaLm1lc2h0YXN0aWMuRGV2aWNlTWV0YWRhdGFIABJEChZt",
+            "cXR0Q2xpZW50UHJveHlNZXNzYWdlGA4gASgLMiIubWVzaHRhc3RpYy5NcXR0",
+            "Q2xpZW50UHJveHlNZXNzYWdlSAASKAoIZmlsZUluZm8YDyABKAsyFC5tZXNo",
+            "dGFzdGljLkZpbGVJbmZvSAASPAoSY2xpZW50Tm90aWZpY2F0aW9uGBAgASgL",
+            "Mh4ubWVzaHRhc3RpYy5DbGllbnROb3RpZmljYXRpb25IAEIRCg9wYXlsb2Fk",
+            "X3ZhcmlhbnQigwEKEkNsaWVudE5vdGlmaWNhdGlvbhIVCghyZXBseV9pZBgB",
+            "IAEoDUgAiAEBEgwKBHRpbWUYAiABKAcSKgoFbGV2ZWwYAyABKA4yGy5tZXNo",
+            "dGFzdGljLkxvZ1JlY29yZC5MZXZlbBIPCgdtZXNzYWdlGAQgASgJQgsKCV9y",
+            "ZXBseV9pZCIxCghGaWxlSW5mbxIRCglmaWxlX25hbWUYASABKAkSEgoKc2l6",
             "ZV9ieXRlcxgCIAEoDSKUAgoHVG9SYWRpbxIoCgZwYWNrZXQYASABKAsyFi5t",
             "ZXNodGFzdGljLk1lc2hQYWNrZXRIABIYCg53YW50X2NvbmZpZ19pZBgDIAEo",
             "DUgAEhQKCmRpc2Nvbm5lY3QYBCABKAhIABIqCgx4bW9kZW1QYWNrZXQYBSAB",
@@ -138,7 +151,7 @@ namespace Meshtastic.Protobufs {
             "YXlsb2FkX2lkGAEgASgNEhoKEHJlcXVlc3RfdHJhbnNmZXIYAiABKAhIABIZ",
             "Cg9hY2NlcHRfdHJhbnNmZXIYAyABKAhIABIyCg1yZXNlbmRfY2h1bmtzGAQg",
             "ASgLMhkubWVzaHRhc3RpYy5yZXNlbmRfY2h1bmtzSABCEQoPcGF5bG9hZF92",
-            "YXJpYW50KqMKCg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExPUkFf",
+            "YXJpYW50Kt4LCg1IYXJkd2FyZU1vZGVsEgkKBVVOU0VUEAASDAoIVExPUkFf",
             "VjIQARIMCghUTE9SQV9WMRACEhIKDlRMT1JBX1YyXzFfMVA2EAMSCQoFVEJF",
             "QU0QBBIPCgtIRUxURUNfVjJfMBAFEg4KClRCRUFNX1YwUDcQBhIKCgZUX0VD",
             "SE8QBxIQCgxUTE9SQV9WMV8xUDMQCBILCgdSQUs0NjMxEAkSDwoLSEVMVEVD",
@@ -167,32 +180,38 @@ namespace Meshtastic.Protobufs {
             "UFNVTEVfU0VOU09SX1YzEEESHQoZSEVMVEVDX1ZJU0lPTl9NQVNURVJfVDE5",
             "MBBCEh0KGUhFTFRFQ19WSVNJT05fTUFTVEVSX0UyMTMQQxIdChlIRUxURUNf",
             "VklTSU9OX01BU1RFUl9FMjkwEEQSGQoVSEVMVEVDX01FU0hfTk9ERV9UMTE0",
-            "EEUSDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAAEhUK",
-            "EERBVEFfUEFZTE9BRF9MRU4Q7QEq7gEKEUNyaXRpY2FsRXJyb3JDb2RlEggK",
-            "BE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQ",
-            "AhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5J",
-            "VF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NF",
-            "VFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIK",
-            "DlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALQl8KE2NvbS5n",
-            "ZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRh",
-            "c3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIG",
-            "cHJvdG8z"));
+            "EEUSFgoSU0VOU0VDQVBfSU5ESUNBVE9SEEYSEwoPVFJBQ0tFUl9UMTAwMF9F",
+            "EEcSCwoHUkFLMzE3MhBIEgoKBldJT19FNRBJEhoKFlJBRElPTUFTVEVSXzkw",
+            "MF9CQU5ESVQQShITCg9NRTI1TFMwMV80WTEwVEQQSxIYChRSUDIwNDBfRkVB",
+            "VEhFUl9SRk05NRBMEhUKEU01U1RBQ0tfQ09SRUJBU0lDEE0SEQoNTTVTVEFD",
+            "S19DT1JFMhBOEg8KClBSSVZBVEVfSFcQ/wEqLAoJQ29uc3RhbnRzEggKBFpF",
+            "Uk8QABIVChBEQVRBX1BBWUxPQURfTEVOEO0BKrQCChFDcml0aWNhbEVycm9y",
+            "Q29kZRIICgROT05FEAASDwoLVFhfV0FUQ0hET0cQARIUChBTTEVFUF9FTlRF",
+            "Ul9XQUlUEAISDAoITk9fUkFESU8QAxIPCgtVTlNQRUNJRklFRBAEEhUKEVVC",
+            "TE9YX1VOSVRfRkFJTEVEEAUSDQoJTk9fQVhQMTkyEAYSGQoVSU5WQUxJRF9S",
+            "QURJT19TRVRUSU5HEAcSEwoPVFJBTlNNSVRfRkFJTEVEEAgSDAoIQlJPV05P",
+            "VVQQCRISCg5TWDEyNjJfRkFJTFVSRRAKEhEKDVJBRElPX1NQSV9CVUcQCxIg",
+            "ChxGTEFTSF9DT1JSVVBUSU9OX1JFQ09WRVJBQkxFEAwSIgoeRkxBU0hfQ09S",
+            "UlVQVElPTl9VTlJFQ09WRVJBQkxFEA1CXwoTY29tLmdlZWtzdmlsbGUubWVz",
+            "aEIKTWVzaFByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVy",
+            "YXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Position), global::Meshtastic.Protobufs.Position.Parser, new[]{ "LatitudeI", "LongitudeI", "Altitude", "Time", "LocationSource", "AltitudeSource", "Timestamp", "TimestampMillisAdjust", "AltitudeHae", "AltitudeGeoidalSeparation", "PDOP", "HDOP", "VDOP", "GpsAccuracy", "GroundSpeed", "GroundTrack", "FixQuality", "FixType", "SatsInView", "SensorId", "NextUpdate", "SeqNumber", "PrecisionBits" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Position.Types.LocSource), typeof(global::Meshtastic.Protobufs.Position.Types.AltSource) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.User), global::Meshtastic.Protobufs.User.Parser, new[]{ "Id", "LongName", "ShortName", "Macaddr", "HwModel", "IsLicensed", "Role" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.RouteDiscovery), global::Meshtastic.Protobufs.RouteDiscovery.Parser, new[]{ "Route" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Position), global::Meshtastic.Protobufs.Position.Parser, new[]{ "LatitudeI", "LongitudeI", "Altitude", "Time", "LocationSource", "AltitudeSource", "Timestamp", "TimestampMillisAdjust", "AltitudeHae", "AltitudeGeoidalSeparation", "PDOP", "HDOP", "VDOP", "GpsAccuracy", "GroundSpeed", "GroundTrack", "FixQuality", "FixType", "SatsInView", "SensorId", "NextUpdate", "SeqNumber", "PrecisionBits" }, new[]{ "LatitudeI", "LongitudeI", "Altitude", "AltitudeHae", "AltitudeGeoidalSeparation", "GroundSpeed", "GroundTrack" }, new[]{ typeof(global::Meshtastic.Protobufs.Position.Types.LocSource), typeof(global::Meshtastic.Protobufs.Position.Types.AltSource) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.User), global::Meshtastic.Protobufs.User.Parser, new[]{ "Id", "LongName", "ShortName", "Macaddr", "HwModel", "IsLicensed", "Role", "PublicKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.RouteDiscovery), global::Meshtastic.Protobufs.RouteDiscovery.Parser, new[]{ "Route", "SnrTowards", "RouteBack", "SnrBack" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Routing), global::Meshtastic.Protobufs.Routing.Parser, new[]{ "RouteRequest", "RouteReply", "ErrorReason" }, new[]{ "Variant" }, new[]{ typeof(global::Meshtastic.Protobufs.Routing.Types.Error) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Data), global::Meshtastic.Protobufs.Data.Parser, new[]{ "Portnum", "Payload", "WantResponse", "Dest", "Source", "RequestId", "ReplyId", "Emoji" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Waypoint), global::Meshtastic.Protobufs.Waypoint.Parser, new[]{ "Id", "LatitudeI", "LongitudeI", "Expire", "LockedTo", "Name", "Description", "Icon" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Waypoint), global::Meshtastic.Protobufs.Waypoint.Parser, new[]{ "Id", "LatitudeI", "LongitudeI", "Expire", "LockedTo", "Name", "Description", "Icon" }, new[]{ "LatitudeI", "LongitudeI" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MqttClientProxyMessage), global::Meshtastic.Protobufs.MqttClientProxyMessage.Parser, new[]{ "Topic", "Data", "Text", "Retained" }, new[]{ "PayloadVariant" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MeshPacket), global::Meshtastic.Protobufs.MeshPacket.Parser, new[]{ "From", "To", "Channel", "Decoded", "Encrypted", "Id", "RxTime", "RxSnr", "HopLimit", "WantAck", "Priority", "RxRssi", "Delayed", "ViaMqtt", "HopStart" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Priority), typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Delayed) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MeshPacket), global::Meshtastic.Protobufs.MeshPacket.Parser, new[]{ "From", "To", "Channel", "Decoded", "Encrypted", "Id", "RxTime", "RxSnr", "HopLimit", "WantAck", "Priority", "RxRssi", "Delayed", "ViaMqtt", "HopStart", "PublicKey", "PkiEncrypted" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Priority), typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Delayed) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfo), global::Meshtastic.Protobufs.NodeInfo.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics", "Channel", "ViaMqtt", "HopsAway", "IsFavorite" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MyNodeInfo), global::Meshtastic.Protobufs.MyNodeInfo.Parser, new[]{ "MyNodeNum", "RebootCount", "MinAppVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LogRecord), global::Meshtastic.Protobufs.LogRecord.Parser, new[]{ "Message", "Time", "Source", "Level" }, null, new[]{ typeof(global::Meshtastic.Protobufs.LogRecord.Types.Level) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.QueueStatus), global::Meshtastic.Protobufs.QueueStatus.Parser, new[]{ "Res", "Free", "Maxlen", "MeshPacketId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel", "QueueStatus", "XmodemPacket", "Metadata", "MqttClientProxyMessage", "FileInfo" }, new[]{ "PayloadVariant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FromRadio), global::Meshtastic.Protobufs.FromRadio.Parser, new[]{ "Id", "Packet", "MyInfo", "NodeInfo", "Config", "LogRecord", "ConfigCompleteId", "Rebooted", "ModuleConfig", "Channel", "QueueStatus", "XmodemPacket", "Metadata", "MqttClientProxyMessage", "FileInfo", "ClientNotification" }, new[]{ "PayloadVariant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ClientNotification), global::Meshtastic.Protobufs.ClientNotification.Parser, new[]{ "ReplyId", "Time", "Level", "Message" }, new[]{ "ReplyId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.FileInfo), global::Meshtastic.Protobufs.FileInfo.Parser, new[]{ "FileName", "SizeBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ToRadio), global::Meshtastic.Protobufs.ToRadio.Parser, new[]{ "Packet", "WantConfigId", "Disconnect", "XmodemPacket", "MqttClientProxyMessage", "Heartbeat" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Compressed), global::Meshtastic.Protobufs.Compressed.Parser, new[]{ "Portnum", "Data" }, null, null, null, null),
@@ -582,6 +601,52 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("HELTEC_MESH_NODE_T114")] HeltecMeshNodeT114 = 69,
     /// <summary>
     ///
+    /// Sensecap Indicator from Seeed Studio. ESP32-S3 device with TFT and RP2040 coprocessor
+    /// </summary>
+    [pbr::OriginalName("SENSECAP_INDICATOR")] SensecapIndicator = 70,
+    /// <summary>
+    ///
+    /// Seeed studio T1000-E tracker card. NRF52840 w/ LR1110 radio, GPS, button, buzzer, and sensors.
+    /// </summary>
+    [pbr::OriginalName("TRACKER_T1000_E")] TrackerT1000E = 71,
+    /// <summary>
+    ///
+    /// RAK3172 STM32WLE5 Module (https://store.rakwireless.com/products/wisduo-lpwan-module-rak3172)
+    /// </summary>
+    [pbr::OriginalName("RAK3172")] Rak3172 = 72,
+    /// <summary>
+    ///
+    /// Seeed Studio Wio-E5 (either mini or Dev kit) using STM32WL chip.
+    /// </summary>
+    [pbr::OriginalName("WIO_E5")] WioE5 = 73,
+    /// <summary>
+    ///
+    /// RadioMaster 900 Bandit, https://www.radiomasterrc.com/products/bandit-expresslrs-rf-module
+    /// SSD1306 OLED and No GPS
+    /// </summary>
+    [pbr::OriginalName("RADIOMASTER_900_BANDIT")] Radiomaster900Bandit = 74,
+    /// <summary>
+    ///
+    /// Minewsemi ME25LS01 (ME25LE01_V1.0). NRF52840 w/ LR1110 radio, buttons and leds and pins.
+    /// </summary>
+    [pbr::OriginalName("ME25LS01_4Y10TD")] Me25Ls014Y10Td = 75,
+    /// <summary>
+    ///
+    /// RP2040_FEATHER_RFM95
+    /// Adafruit Feather RP2040 with RFM95 LoRa Radio RFM95 with SX1272, SSD1306 OLED
+    /// https://www.adafruit.com/product/5714
+    /// https://www.adafruit.com/product/326
+    /// https://www.adafruit.com/product/938
+    ///  ^^^ short A0 to switch to I2C address 0x3C
+    /// </summary>
+    [pbr::OriginalName("RP2040_FEATHER_RFM95")] Rp2040FeatherRfm95 = 76,
+    /// <summary>
+    /// M5 esp32 based MCU modules with enclosure, TFT and LORA Shields. All Variants (Basic, Core, Fire, Core2, Paper) https://m5stack.com/ 
+    /// </summary>
+    [pbr::OriginalName("M5STACK_COREBASIC")] M5StackCorebasic = 77,
+    [pbr::OriginalName("M5STACK_CORE2")] M5StackCore2 = 78,
+    /// <summary>
+    ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
     /// Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -679,6 +744,19 @@ namespace Meshtastic.Protobufs {
     /// If this occurs on your board, please post in the forum so that we can ask you to collect some information to allow fixing this bug
     /// </summary>
     [pbr::OriginalName("RADIO_SPI_BUG")] RadioSpiBug = 11,
+    /// <summary>
+    ///
+    /// Corruption was detected on the flash filesystem but we were able to repair things.
+    /// If you see this failure in the field please post in the forum because we are interested in seeing if this is occurring in the field.
+    /// </summary>
+    [pbr::OriginalName("FLASH_CORRUPTION_RECOVERABLE")] FlashCorruptionRecoverable = 12,
+    /// <summary>
+    ///
+    /// Corruption was detected on the flash filesystem but we were unable to repair things.
+    /// NOTE: Your node will probably need to be reconfigured the next time it reboots (it will lose the region code etc...)
+    /// If you see this failure in the field please post in the forum because we are interested in seeing if this is occurring in the field.
+    /// </summary>
+    [pbr::OriginalName("FLASH_CORRUPTION_UNRECOVERABLE")] FlashCorruptionUnrecoverable = 13,
   }
 
   #endregion
@@ -695,6 +773,7 @@ namespace Meshtastic.Protobufs {
   {
     private static readonly pb::MessageParser<Position> _parser = new pb::MessageParser<Position>(() => new Position());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Position> Parser { get { return _parser; } }
@@ -722,6 +801,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Position(Position other) : this() {
+      _hasBits0 = other._hasBits0;
       latitudeI_ = other.latitudeI_;
       longitudeI_ = other.longitudeI_;
       altitude_ = other.altitude_;
@@ -765,10 +845,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LatitudeI {
-      get { return latitudeI_; }
+      get { if ((_hasBits0 & 1) != 0) { return latitudeI_; } else { return 0; } }
       set {
+        _hasBits0 |= 1;
         latitudeI_ = value;
       }
+    }
+    /// <summary>Gets whether the "latitude_i" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLatitudeI {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "latitude_i" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLatitudeI() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "longitude_i" field.</summary>
@@ -781,10 +874,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LongitudeI {
-      get { return longitudeI_; }
+      get { if ((_hasBits0 & 2) != 0) { return longitudeI_; } else { return 0; } }
       set {
+        _hasBits0 |= 2;
         longitudeI_ = value;
       }
+    }
+    /// <summary>Gets whether the "longitude_i" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLongitudeI {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "longitude_i" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLongitudeI() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "altitude" field.</summary>
@@ -797,10 +903,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Altitude {
-      get { return altitude_; }
+      get { if ((_hasBits0 & 4) != 0) { return altitude_; } else { return 0; } }
       set {
+        _hasBits0 |= 4;
         altitude_ = value;
       }
+    }
+    /// <summary>Gets whether the "altitude" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAltitude {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "altitude" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAltitude() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "time" field.</summary>
@@ -896,10 +1015,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int AltitudeHae {
-      get { return altitudeHae_; }
+      get { if ((_hasBits0 & 8) != 0) { return altitudeHae_; } else { return 0; } }
       set {
+        _hasBits0 |= 8;
         altitudeHae_ = value;
       }
+    }
+    /// <summary>Gets whether the "altitude_hae" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAltitudeHae {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "altitude_hae" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAltitudeHae() {
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "altitude_geoidal_separation" field.</summary>
@@ -912,10 +1044,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int AltitudeGeoidalSeparation {
-      get { return altitudeGeoidalSeparation_; }
+      get { if ((_hasBits0 & 16) != 0) { return altitudeGeoidalSeparation_; } else { return 0; } }
       set {
+        _hasBits0 |= 16;
         altitudeGeoidalSeparation_ = value;
       }
+    }
+    /// <summary>Gets whether the "altitude_geoidal_separation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAltitudeGeoidalSeparation {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "altitude_geoidal_separation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAltitudeGeoidalSeparation() {
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "PDOP" field.</summary>
@@ -1003,10 +1148,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint GroundSpeed {
-      get { return groundSpeed_; }
+      get { if ((_hasBits0 & 32) != 0) { return groundSpeed_; } else { return 0; } }
       set {
+        _hasBits0 |= 32;
         groundSpeed_ = value;
       }
+    }
+    /// <summary>Gets whether the "ground_speed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGroundSpeed {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "ground_speed" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGroundSpeed() {
+      _hasBits0 &= ~32;
     }
 
     /// <summary>Field number for the "ground_track" field.</summary>
@@ -1019,10 +1177,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint GroundTrack {
-      get { return groundTrack_; }
+      get { if ((_hasBits0 & 64) != 0) { return groundTrack_; } else { return 0; } }
       set {
+        _hasBits0 |= 64;
         groundTrack_ = value;
       }
+    }
+    /// <summary>Gets whether the "ground_track" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGroundTrack {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "ground_track" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGroundTrack() {
+      _hasBits0 &= ~64;
     }
 
     /// <summary>Field number for the "fix_quality" field.</summary>
@@ -1186,22 +1357,22 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LatitudeI != 0) hash ^= LatitudeI.GetHashCode();
-      if (LongitudeI != 0) hash ^= LongitudeI.GetHashCode();
-      if (Altitude != 0) hash ^= Altitude.GetHashCode();
+      if (HasLatitudeI) hash ^= LatitudeI.GetHashCode();
+      if (HasLongitudeI) hash ^= LongitudeI.GetHashCode();
+      if (HasAltitude) hash ^= Altitude.GetHashCode();
       if (Time != 0) hash ^= Time.GetHashCode();
       if (LocationSource != global::Meshtastic.Protobufs.Position.Types.LocSource.LocUnset) hash ^= LocationSource.GetHashCode();
       if (AltitudeSource != global::Meshtastic.Protobufs.Position.Types.AltSource.AltUnset) hash ^= AltitudeSource.GetHashCode();
       if (Timestamp != 0) hash ^= Timestamp.GetHashCode();
       if (TimestampMillisAdjust != 0) hash ^= TimestampMillisAdjust.GetHashCode();
-      if (AltitudeHae != 0) hash ^= AltitudeHae.GetHashCode();
-      if (AltitudeGeoidalSeparation != 0) hash ^= AltitudeGeoidalSeparation.GetHashCode();
+      if (HasAltitudeHae) hash ^= AltitudeHae.GetHashCode();
+      if (HasAltitudeGeoidalSeparation) hash ^= AltitudeGeoidalSeparation.GetHashCode();
       if (PDOP != 0) hash ^= PDOP.GetHashCode();
       if (HDOP != 0) hash ^= HDOP.GetHashCode();
       if (VDOP != 0) hash ^= VDOP.GetHashCode();
       if (GpsAccuracy != 0) hash ^= GpsAccuracy.GetHashCode();
-      if (GroundSpeed != 0) hash ^= GroundSpeed.GetHashCode();
-      if (GroundTrack != 0) hash ^= GroundTrack.GetHashCode();
+      if (HasGroundSpeed) hash ^= GroundSpeed.GetHashCode();
+      if (HasGroundTrack) hash ^= GroundTrack.GetHashCode();
       if (FixQuality != 0) hash ^= FixQuality.GetHashCode();
       if (FixType != 0) hash ^= FixType.GetHashCode();
       if (SatsInView != 0) hash ^= SatsInView.GetHashCode();
@@ -1227,15 +1398,15 @@ namespace Meshtastic.Protobufs {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LatitudeI != 0) {
+      if (HasLatitudeI) {
         output.WriteRawTag(13);
         output.WriteSFixed32(LatitudeI);
       }
-      if (LongitudeI != 0) {
+      if (HasLongitudeI) {
         output.WriteRawTag(21);
         output.WriteSFixed32(LongitudeI);
       }
-      if (Altitude != 0) {
+      if (HasAltitude) {
         output.WriteRawTag(24);
         output.WriteInt32(Altitude);
       }
@@ -1259,11 +1430,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(64);
         output.WriteInt32(TimestampMillisAdjust);
       }
-      if (AltitudeHae != 0) {
+      if (HasAltitudeHae) {
         output.WriteRawTag(72);
         output.WriteSInt32(AltitudeHae);
       }
-      if (AltitudeGeoidalSeparation != 0) {
+      if (HasAltitudeGeoidalSeparation) {
         output.WriteRawTag(80);
         output.WriteSInt32(AltitudeGeoidalSeparation);
       }
@@ -1283,11 +1454,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(112);
         output.WriteUInt32(GpsAccuracy);
       }
-      if (GroundSpeed != 0) {
+      if (HasGroundSpeed) {
         output.WriteRawTag(120);
         output.WriteUInt32(GroundSpeed);
       }
-      if (GroundTrack != 0) {
+      if (HasGroundTrack) {
         output.WriteRawTag(128, 1);
         output.WriteUInt32(GroundTrack);
       }
@@ -1329,15 +1500,15 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LatitudeI != 0) {
+      if (HasLatitudeI) {
         output.WriteRawTag(13);
         output.WriteSFixed32(LatitudeI);
       }
-      if (LongitudeI != 0) {
+      if (HasLongitudeI) {
         output.WriteRawTag(21);
         output.WriteSFixed32(LongitudeI);
       }
-      if (Altitude != 0) {
+      if (HasAltitude) {
         output.WriteRawTag(24);
         output.WriteInt32(Altitude);
       }
@@ -1361,11 +1532,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(64);
         output.WriteInt32(TimestampMillisAdjust);
       }
-      if (AltitudeHae != 0) {
+      if (HasAltitudeHae) {
         output.WriteRawTag(72);
         output.WriteSInt32(AltitudeHae);
       }
-      if (AltitudeGeoidalSeparation != 0) {
+      if (HasAltitudeGeoidalSeparation) {
         output.WriteRawTag(80);
         output.WriteSInt32(AltitudeGeoidalSeparation);
       }
@@ -1385,11 +1556,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(112);
         output.WriteUInt32(GpsAccuracy);
       }
-      if (GroundSpeed != 0) {
+      if (HasGroundSpeed) {
         output.WriteRawTag(120);
         output.WriteUInt32(GroundSpeed);
       }
-      if (GroundTrack != 0) {
+      if (HasGroundTrack) {
         output.WriteRawTag(128, 1);
         output.WriteUInt32(GroundTrack);
       }
@@ -1431,13 +1602,13 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LatitudeI != 0) {
+      if (HasLatitudeI) {
         size += 1 + 4;
       }
-      if (LongitudeI != 0) {
+      if (HasLongitudeI) {
         size += 1 + 4;
       }
-      if (Altitude != 0) {
+      if (HasAltitude) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Altitude);
       }
       if (Time != 0) {
@@ -1455,10 +1626,10 @@ namespace Meshtastic.Protobufs {
       if (TimestampMillisAdjust != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TimestampMillisAdjust);
       }
-      if (AltitudeHae != 0) {
+      if (HasAltitudeHae) {
         size += 1 + pb::CodedOutputStream.ComputeSInt32Size(AltitudeHae);
       }
-      if (AltitudeGeoidalSeparation != 0) {
+      if (HasAltitudeGeoidalSeparation) {
         size += 1 + pb::CodedOutputStream.ComputeSInt32Size(AltitudeGeoidalSeparation);
       }
       if (PDOP != 0) {
@@ -1473,10 +1644,10 @@ namespace Meshtastic.Protobufs {
       if (GpsAccuracy != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GpsAccuracy);
       }
-      if (GroundSpeed != 0) {
+      if (HasGroundSpeed) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroundSpeed);
       }
-      if (GroundTrack != 0) {
+      if (HasGroundTrack) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(GroundTrack);
       }
       if (FixQuality != 0) {
@@ -1512,13 +1683,13 @@ namespace Meshtastic.Protobufs {
       if (other == null) {
         return;
       }
-      if (other.LatitudeI != 0) {
+      if (other.HasLatitudeI) {
         LatitudeI = other.LatitudeI;
       }
-      if (other.LongitudeI != 0) {
+      if (other.HasLongitudeI) {
         LongitudeI = other.LongitudeI;
       }
-      if (other.Altitude != 0) {
+      if (other.HasAltitude) {
         Altitude = other.Altitude;
       }
       if (other.Time != 0) {
@@ -1536,10 +1707,10 @@ namespace Meshtastic.Protobufs {
       if (other.TimestampMillisAdjust != 0) {
         TimestampMillisAdjust = other.TimestampMillisAdjust;
       }
-      if (other.AltitudeHae != 0) {
+      if (other.HasAltitudeHae) {
         AltitudeHae = other.AltitudeHae;
       }
-      if (other.AltitudeGeoidalSeparation != 0) {
+      if (other.HasAltitudeGeoidalSeparation) {
         AltitudeGeoidalSeparation = other.AltitudeGeoidalSeparation;
       }
       if (other.PDOP != 0) {
@@ -1554,10 +1725,10 @@ namespace Meshtastic.Protobufs {
       if (other.GpsAccuracy != 0) {
         GpsAccuracy = other.GpsAccuracy;
       }
-      if (other.GroundSpeed != 0) {
+      if (other.HasGroundSpeed) {
         GroundSpeed = other.GroundSpeed;
       }
-      if (other.GroundTrack != 0) {
+      if (other.HasGroundTrack) {
         GroundTrack = other.GroundTrack;
       }
       if (other.FixQuality != 0) {
@@ -1934,6 +2105,7 @@ namespace Meshtastic.Protobufs {
       hwModel_ = other.hwModel_;
       isLicensed_ = other.isLicensed_;
       role_ = other.role_;
+      publicKey_ = other.publicKey_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2067,6 +2239,23 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "public_key" field.</summary>
+    public const int PublicKeyFieldNumber = 8;
+    private pb::ByteString publicKey_ = pb::ByteString.Empty;
+    /// <summary>
+    ///
+    /// The public key of the user's device.
+    /// This is sent out to other nodes on the mesh to allow them to compute a shared secret key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString PublicKey {
+      get { return publicKey_; }
+      set {
+        publicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2089,6 +2278,7 @@ namespace Meshtastic.Protobufs {
       if (HwModel != other.HwModel) return false;
       if (IsLicensed != other.IsLicensed) return false;
       if (Role != other.Role) return false;
+      if (PublicKey != other.PublicKey) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2103,6 +2293,7 @@ namespace Meshtastic.Protobufs {
       if (HwModel != global::Meshtastic.Protobufs.HardwareModel.Unset) hash ^= HwModel.GetHashCode();
       if (IsLicensed != false) hash ^= IsLicensed.GetHashCode();
       if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) hash ^= Role.GetHashCode();
+      if (PublicKey.Length != 0) hash ^= PublicKey.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2149,6 +2340,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(56);
         output.WriteEnum((int) Role);
       }
+      if (PublicKey.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteBytes(PublicKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2187,6 +2382,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(56);
         output.WriteEnum((int) Role);
       }
+      if (PublicKey.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteBytes(PublicKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2217,6 +2416,9 @@ namespace Meshtastic.Protobufs {
       }
       if (Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Role);
+      }
+      if (PublicKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PublicKey);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2250,6 +2452,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.Role != global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role.Client) {
         Role = other.Role;
+      }
+      if (other.PublicKey.Length != 0) {
+        PublicKey = other.PublicKey;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2292,6 +2497,10 @@ namespace Meshtastic.Protobufs {
           }
           case 56: {
             Role = (global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            PublicKey = input.ReadBytes();
             break;
           }
         }
@@ -2337,6 +2546,10 @@ namespace Meshtastic.Protobufs {
             Role = (global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role) input.ReadEnum();
             break;
           }
+          case 66: {
+            PublicKey = input.ReadBytes();
+            break;
+          }
         }
       }
     }
@@ -2346,7 +2559,7 @@ namespace Meshtastic.Protobufs {
 
   /// <summary>
   ///
-  /// A message used in our Dynamic Source Routing protocol (RFC 4728 based)
+  /// A message used in a traceroute
   /// </summary>
   public sealed partial class RouteDiscovery : pb::IMessage<RouteDiscovery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2383,6 +2596,9 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RouteDiscovery(RouteDiscovery other) : this() {
       route_ = other.route_.Clone();
+      snrTowards_ = other.snrTowards_.Clone();
+      routeBack_ = other.routeBack_.Clone();
+      snrBack_ = other.snrBack_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2399,12 +2615,57 @@ namespace Meshtastic.Protobufs {
     private readonly pbc::RepeatedField<uint> route_ = new pbc::RepeatedField<uint>();
     /// <summary>
     ///
-    /// The list of nodenums this packet has visited so far
+    /// The list of nodenums this packet has visited so far to the destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> Route {
       get { return route_; }
+    }
+
+    /// <summary>Field number for the "snr_towards" field.</summary>
+    public const int SnrTowardsFieldNumber = 2;
+    private static readonly pb::FieldCodec<int> _repeated_snrTowards_codec
+        = pb::FieldCodec.ForInt32(18);
+    private readonly pbc::RepeatedField<int> snrTowards_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    ///
+    /// The list of SNRs (in dB, scaled by 4) in the route towards the destination.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> SnrTowards {
+      get { return snrTowards_; }
+    }
+
+    /// <summary>Field number for the "route_back" field.</summary>
+    public const int RouteBackFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_routeBack_codec
+        = pb::FieldCodec.ForFixed32(26);
+    private readonly pbc::RepeatedField<uint> routeBack_ = new pbc::RepeatedField<uint>();
+    /// <summary>
+    ///
+    /// The list of nodenums the packet has visited on the way back from the destination.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> RouteBack {
+      get { return routeBack_; }
+    }
+
+    /// <summary>Field number for the "snr_back" field.</summary>
+    public const int SnrBackFieldNumber = 4;
+    private static readonly pb::FieldCodec<int> _repeated_snrBack_codec
+        = pb::FieldCodec.ForInt32(34);
+    private readonly pbc::RepeatedField<int> snrBack_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    ///
+    /// The list of SNRs (in dB, scaled by 4) in the route back from the destination.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> SnrBack {
+      get { return snrBack_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2423,6 +2684,9 @@ namespace Meshtastic.Protobufs {
         return true;
       }
       if(!route_.Equals(other.route_)) return false;
+      if(!snrTowards_.Equals(other.snrTowards_)) return false;
+      if(!routeBack_.Equals(other.routeBack_)) return false;
+      if(!snrBack_.Equals(other.snrBack_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2431,6 +2695,9 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= route_.GetHashCode();
+      hash ^= snrTowards_.GetHashCode();
+      hash ^= routeBack_.GetHashCode();
+      hash ^= snrBack_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2450,6 +2717,9 @@ namespace Meshtastic.Protobufs {
       output.WriteRawMessage(this);
     #else
       route_.WriteTo(output, _repeated_route_codec);
+      snrTowards_.WriteTo(output, _repeated_snrTowards_codec);
+      routeBack_.WriteTo(output, _repeated_routeBack_codec);
+      snrBack_.WriteTo(output, _repeated_snrBack_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2461,6 +2731,9 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       route_.WriteTo(ref output, _repeated_route_codec);
+      snrTowards_.WriteTo(ref output, _repeated_snrTowards_codec);
+      routeBack_.WriteTo(ref output, _repeated_routeBack_codec);
+      snrBack_.WriteTo(ref output, _repeated_snrBack_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2472,6 +2745,9 @@ namespace Meshtastic.Protobufs {
     public int CalculateSize() {
       int size = 0;
       size += route_.CalculateSize(_repeated_route_codec);
+      size += snrTowards_.CalculateSize(_repeated_snrTowards_codec);
+      size += routeBack_.CalculateSize(_repeated_routeBack_codec);
+      size += snrBack_.CalculateSize(_repeated_snrBack_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2485,6 +2761,9 @@ namespace Meshtastic.Protobufs {
         return;
       }
       route_.Add(other.route_);
+      snrTowards_.Add(other.snrTowards_);
+      routeBack_.Add(other.routeBack_);
+      snrBack_.Add(other.snrBack_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2505,6 +2784,21 @@ namespace Meshtastic.Protobufs {
             route_.AddEntriesFrom(input, _repeated_route_codec);
             break;
           }
+          case 18:
+          case 16: {
+            snrTowards_.AddEntriesFrom(input, _repeated_snrTowards_codec);
+            break;
+          }
+          case 26:
+          case 29: {
+            routeBack_.AddEntriesFrom(input, _repeated_routeBack_codec);
+            break;
+          }
+          case 34:
+          case 32: {
+            snrBack_.AddEntriesFrom(input, _repeated_snrBack_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2523,6 +2817,21 @@ namespace Meshtastic.Protobufs {
           case 10:
           case 13: {
             route_.AddEntriesFrom(ref input, _repeated_route_codec);
+            break;
+          }
+          case 18:
+          case 16: {
+            snrTowards_.AddEntriesFrom(ref input, _repeated_snrTowards_codec);
+            break;
+          }
+          case 26:
+          case 29: {
+            routeBack_.AddEntriesFrom(ref input, _repeated_routeBack_codec);
+            break;
+          }
+          case 34:
+          case 32: {
+            snrBack_.AddEntriesFrom(ref input, _repeated_snrBack_codec);
             break;
           }
         }
@@ -2947,6 +3256,16 @@ namespace Meshtastic.Protobufs {
         /// (i.e you did not send the request on the required bound channel)
         /// </summary>
         [pbr::OriginalName("NOT_AUTHORIZED")] NotAuthorized = 33,
+        /// <summary>
+        ///
+        /// The client specified a PKI transport, but the node was unable to send the packet using PKI (and did not send the message at all)
+        /// </summary>
+        [pbr::OriginalName("PKI_FAILED")] PkiFailed = 34,
+        /// <summary>
+        ///
+        /// The receiving node does not have a Public Key to decode with
+        /// </summary>
+        [pbr::OriginalName("PKI_UNKNOWN_PUBKEY")] PkiUnknownPubkey = 35,
       }
 
     }
@@ -3461,6 +3780,7 @@ namespace Meshtastic.Protobufs {
   {
     private static readonly pb::MessageParser<Waypoint> _parser = new pb::MessageParser<Waypoint>(() => new Waypoint());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Waypoint> Parser { get { return _parser; } }
@@ -3488,6 +3808,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Waypoint(Waypoint other) : this() {
+      _hasBits0 = other._hasBits0;
       id_ = other.id_;
       latitudeI_ = other.latitudeI_;
       longitudeI_ = other.longitudeI_;
@@ -3531,10 +3852,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LatitudeI {
-      get { return latitudeI_; }
+      get { if ((_hasBits0 & 1) != 0) { return latitudeI_; } else { return 0; } }
       set {
+        _hasBits0 |= 1;
         latitudeI_ = value;
       }
+    }
+    /// <summary>Gets whether the "latitude_i" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLatitudeI {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "latitude_i" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLatitudeI() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "longitude_i" field.</summary>
@@ -3547,10 +3881,23 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LongitudeI {
-      get { return longitudeI_; }
+      get { if ((_hasBits0 & 2) != 0) { return longitudeI_; } else { return 0; } }
       set {
+        _hasBits0 |= 2;
         longitudeI_ = value;
       }
+    }
+    /// <summary>Gets whether the "longitude_i" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLongitudeI {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "longitude_i" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLongitudeI() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "expire" field.</summary>
@@ -3665,8 +4012,8 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (LatitudeI != 0) hash ^= LatitudeI.GetHashCode();
-      if (LongitudeI != 0) hash ^= LongitudeI.GetHashCode();
+      if (HasLatitudeI) hash ^= LatitudeI.GetHashCode();
+      if (HasLongitudeI) hash ^= LongitudeI.GetHashCode();
       if (Expire != 0) hash ^= Expire.GetHashCode();
       if (LockedTo != 0) hash ^= LockedTo.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3694,11 +4041,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteUInt32(Id);
       }
-      if (LatitudeI != 0) {
+      if (HasLatitudeI) {
         output.WriteRawTag(21);
         output.WriteSFixed32(LatitudeI);
       }
-      if (LongitudeI != 0) {
+      if (HasLongitudeI) {
         output.WriteRawTag(29);
         output.WriteSFixed32(LongitudeI);
       }
@@ -3736,11 +4083,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteUInt32(Id);
       }
-      if (LatitudeI != 0) {
+      if (HasLatitudeI) {
         output.WriteRawTag(21);
         output.WriteSFixed32(LatitudeI);
       }
-      if (LongitudeI != 0) {
+      if (HasLongitudeI) {
         output.WriteRawTag(29);
         output.WriteSFixed32(LongitudeI);
       }
@@ -3777,10 +4124,10 @@ namespace Meshtastic.Protobufs {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
-      if (LatitudeI != 0) {
+      if (HasLatitudeI) {
         size += 1 + 4;
       }
-      if (LongitudeI != 0) {
+      if (HasLongitudeI) {
         size += 1 + 4;
       }
       if (Expire != 0) {
@@ -3813,10 +4160,10 @@ namespace Meshtastic.Protobufs {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.LatitudeI != 0) {
+      if (other.HasLatitudeI) {
         LatitudeI = other.LatitudeI;
       }
-      if (other.LongitudeI != 0) {
+      if (other.HasLongitudeI) {
         LongitudeI = other.LongitudeI;
       }
       if (other.Expire != 0) {
@@ -4341,6 +4688,8 @@ namespace Meshtastic.Protobufs {
       delayed_ = other.delayed_;
       viaMqtt_ = other.viaMqtt_;
       hopStart_ = other.hopStart_;
+      publicKey_ = other.publicKey_;
+      pkiEncrypted_ = other.pkiEncrypted_;
       switch (other.PayloadVariantCase) {
         case PayloadVariantOneofCase.Decoded:
           Decoded = other.Decoded.Clone();
@@ -4633,6 +4982,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "public_key" field.</summary>
+    public const int PublicKeyFieldNumber = 16;
+    private pb::ByteString publicKey_ = pb::ByteString.Empty;
+    /// <summary>
+    ///
+    /// Records the public key the packet was encrypted with, if applicable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString PublicKey {
+      get { return publicKey_; }
+      set {
+        publicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pki_encrypted" field.</summary>
+    public const int PkiEncryptedFieldNumber = 17;
+    private bool pkiEncrypted_;
+    /// <summary>
+    ///
+    /// Indicates whether the packet was en/decrypted using PKI
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PkiEncrypted {
+      get { return pkiEncrypted_; }
+      set {
+        pkiEncrypted_ = value;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -4684,6 +5065,8 @@ namespace Meshtastic.Protobufs {
       if (Delayed != other.Delayed) return false;
       if (ViaMqtt != other.ViaMqtt) return false;
       if (HopStart != other.HopStart) return false;
+      if (PublicKey != other.PublicKey) return false;
+      if (PkiEncrypted != other.PkiEncrypted) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4707,6 +5090,8 @@ namespace Meshtastic.Protobufs {
       if (Delayed != global::Meshtastic.Protobufs.MeshPacket.Types.Delayed.NoDelay) hash ^= Delayed.GetHashCode();
       if (ViaMqtt != false) hash ^= ViaMqtt.GetHashCode();
       if (HopStart != 0) hash ^= HopStart.GetHashCode();
+      if (PublicKey.Length != 0) hash ^= PublicKey.GetHashCode();
+      if (PkiEncrypted != false) hash ^= PkiEncrypted.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4786,6 +5171,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(120);
         output.WriteUInt32(HopStart);
       }
+      if (PublicKey.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteBytes(PublicKey);
+      }
+      if (PkiEncrypted != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(PkiEncrypted);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4856,6 +5249,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(120);
         output.WriteUInt32(HopStart);
       }
+      if (PublicKey.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteBytes(PublicKey);
+      }
+      if (PkiEncrypted != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(PkiEncrypted);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4911,6 +5312,12 @@ namespace Meshtastic.Protobufs {
       if (HopStart != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HopStart);
       }
+      if (PublicKey.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeBytesSize(PublicKey);
+      }
+      if (PkiEncrypted != false) {
+        size += 2 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4961,6 +5368,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.HopStart != 0) {
         HopStart = other.HopStart;
+      }
+      if (other.PublicKey.Length != 0) {
+        PublicKey = other.PublicKey;
+      }
+      if (other.PkiEncrypted != false) {
+        PkiEncrypted = other.PkiEncrypted;
       }
       switch (other.PayloadVariantCase) {
         case PayloadVariantOneofCase.Decoded:
@@ -5054,6 +5467,14 @@ namespace Meshtastic.Protobufs {
             HopStart = input.ReadUInt32();
             break;
           }
+          case 130: {
+            PublicKey = input.ReadBytes();
+            break;
+          }
+          case 136: {
+            PkiEncrypted = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -5134,6 +5555,14 @@ namespace Meshtastic.Protobufs {
             HopStart = input.ReadUInt32();
             break;
           }
+          case 130: {
+            PublicKey = input.ReadBytes();
+            break;
+          }
+          case 136: {
+            PkiEncrypted = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -5193,6 +5622,17 @@ namespace Meshtastic.Protobufs {
         /// assume it is important and use a slightly higher priority
         /// </summary>
         [pbr::OriginalName("RELIABLE")] Reliable = 70,
+        /// <summary>
+        ///
+        /// If priority is unset but the packet is a response to a request, we want it to get there relatively quickly.
+        /// Furthermore, responses stop relaying packets directed to a node early.
+        /// </summary>
+        [pbr::OriginalName("RESPONSE")] Response = 80,
+        /// <summary>
+        ///
+        /// Higher priority for specific message types (portnums) to distinguish between other reliable packets.
+        /// </summary>
+        [pbr::OriginalName("HIGH")] High = 100,
         /// <summary>
         ///
         /// Ack/naks are sent with very high priority to ensure that retransmission
@@ -6899,6 +7339,9 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.FileInfo:
           FileInfo = other.FileInfo.Clone();
           break;
+        case PayloadVariantOneofCase.ClientNotification:
+          ClientNotification = other.ClientNotification.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -7159,6 +7602,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "clientNotification" field.</summary>
+    public const int ClientNotificationFieldNumber = 16;
+    /// <summary>
+    ///
+    /// Notification message to the client
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.ClientNotification ClientNotification {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.ClientNotification ? (global::Meshtastic.Protobufs.ClientNotification) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.ClientNotification;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -7177,6 +7636,7 @@ namespace Meshtastic.Protobufs {
       Metadata = 13,
       MqttClientProxyMessage = 14,
       FileInfo = 15,
+      ClientNotification = 16,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7222,6 +7682,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Metadata, other.Metadata)) return false;
       if (!object.Equals(MqttClientProxyMessage, other.MqttClientProxyMessage)) return false;
       if (!object.Equals(FileInfo, other.FileInfo)) return false;
+      if (!object.Equals(ClientNotification, other.ClientNotification)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7245,6 +7706,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Metadata) hash ^= Metadata.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.MqttClientProxyMessage) hash ^= MqttClientProxyMessage.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.FileInfo) hash ^= FileInfo.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.ClientNotification) hash ^= ClientNotification.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7324,6 +7786,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(122);
         output.WriteMessage(FileInfo);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.ClientNotification) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ClientNotification);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7394,6 +7860,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(122);
         output.WriteMessage(FileInfo);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.ClientNotification) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(ClientNotification);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7448,6 +7918,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.FileInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FileInfo);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.ClientNotification) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ClientNotification);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7542,6 +8015,12 @@ namespace Meshtastic.Protobufs {
             FileInfo = new global::Meshtastic.Protobufs.FileInfo();
           }
           FileInfo.MergeFrom(other.FileInfo);
+          break;
+        case PayloadVariantOneofCase.ClientNotification:
+          if (ClientNotification == null) {
+            ClientNotification = new global::Meshtastic.Protobufs.ClientNotification();
+          }
+          ClientNotification.MergeFrom(other.ClientNotification);
           break;
       }
 
@@ -7680,6 +8159,15 @@ namespace Meshtastic.Protobufs {
             FileInfo = subBuilder;
             break;
           }
+          case 130: {
+            global::Meshtastic.Protobufs.ClientNotification subBuilder = new global::Meshtastic.Protobufs.ClientNotification();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.ClientNotification) {
+              subBuilder.MergeFrom(ClientNotification);
+            }
+            input.ReadMessage(subBuilder);
+            ClientNotification = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -7815,6 +8303,353 @@ namespace Meshtastic.Protobufs {
             FileInfo = subBuilder;
             break;
           }
+          case 130: {
+            global::Meshtastic.Protobufs.ClientNotification subBuilder = new global::Meshtastic.Protobufs.ClientNotification();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.ClientNotification) {
+              subBuilder.MergeFrom(ClientNotification);
+            }
+            input.ReadMessage(subBuilder);
+            ClientNotification = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// A notification message from the device to the client
+  /// To be used for important messages that should to be displayed to the user
+  /// in the form of push notifications or validation messages when saving
+  /// invalid configuration.
+  /// </summary>
+  public sealed partial class ClientNotification : pb::IMessage<ClientNotification>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ClientNotification> _parser = new pb::MessageParser<ClientNotification>(() => new ClientNotification());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ClientNotification> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientNotification() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientNotification(ClientNotification other) : this() {
+      _hasBits0 = other._hasBits0;
+      replyId_ = other.replyId_;
+      time_ = other.time_;
+      level_ = other.level_;
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientNotification Clone() {
+      return new ClientNotification(this);
+    }
+
+    /// <summary>Field number for the "reply_id" field.</summary>
+    public const int ReplyIdFieldNumber = 1;
+    private uint replyId_;
+    /// <summary>
+    ///
+    /// The id of the packet we're notifying in response to
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ReplyId {
+      get { if ((_hasBits0 & 1) != 0) { return replyId_; } else { return 0; } }
+      set {
+        _hasBits0 |= 1;
+        replyId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "reply_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReplyId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "reply_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReplyId() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 2;
+    private uint time_;
+    /// <summary>
+    ///
+    /// Seconds since 1970 - or 0 for unknown/unset
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Time {
+      get { return time_; }
+      set {
+        time_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 3;
+    private global::Meshtastic.Protobufs.LogRecord.Types.Level level_ = global::Meshtastic.Protobufs.LogRecord.Types.Level.Unset;
+    /// <summary>
+    ///
+    /// The level type of notification
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.LogRecord.Types.Level Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 4;
+    private string message_ = "";
+    /// <summary>
+    ///
+    /// The message body of the notification
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ClientNotification);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ClientNotification other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ReplyId != other.ReplyId) return false;
+      if (Time != other.Time) return false;
+      if (Level != other.Level) return false;
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasReplyId) hash ^= ReplyId.GetHashCode();
+      if (Time != 0) hash ^= Time.GetHashCode();
+      if (Level != global::Meshtastic.Protobufs.LogRecord.Types.Level.Unset) hash ^= Level.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasReplyId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ReplyId);
+      }
+      if (Time != 0) {
+        output.WriteRawTag(21);
+        output.WriteFixed32(Time);
+      }
+      if (Level != global::Meshtastic.Protobufs.LogRecord.Types.Level.Unset) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Level);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasReplyId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ReplyId);
+      }
+      if (Time != 0) {
+        output.WriteRawTag(21);
+        output.WriteFixed32(Time);
+      }
+      if (Level != global::Meshtastic.Protobufs.LogRecord.Types.Level.Unset) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Level);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasReplyId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ReplyId);
+      }
+      if (Time != 0) {
+        size += 1 + 4;
+      }
+      if (Level != global::Meshtastic.Protobufs.LogRecord.Types.Level.Unset) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
+      }
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ClientNotification other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasReplyId) {
+        ReplyId = other.ReplyId;
+      }
+      if (other.Time != 0) {
+        Time = other.Time;
+      }
+      if (other.Level != global::Meshtastic.Protobufs.LogRecord.Types.Level.Unset) {
+        Level = other.Level;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ReplyId = input.ReadUInt32();
+            break;
+          }
+          case 21: {
+            Time = input.ReadFixed32();
+            break;
+          }
+          case 24: {
+            Level = (global::Meshtastic.Protobufs.LogRecord.Types.Level) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ReplyId = input.ReadUInt32();
+            break;
+          }
+          case 21: {
+            Time = input.ReadFixed32();
+            break;
+          }
+          case 24: {
+            Level = (global::Meshtastic.Protobufs.LogRecord.Types.Level) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Message = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -7840,7 +8675,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8079,7 +8914,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8583,7 +9418,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8821,7 +9656,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9130,7 +9965,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9452,7 +10287,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10019,7 +10854,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10175,7 +11010,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10418,7 +11253,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10738,7 +11573,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10922,7 +11757,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Meshtastic.Protobufs.MeshReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -26,7 +26,7 @@ namespace Meshtastic.Protobufs {
           string.Concat(
             "ChptZXNodGFzdGljL2xvY2Fsb25seS5wcm90bxIKbWVzaHRhc3RpYxoXbWVz",
             "aHRhc3RpYy9jb25maWcucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZp",
-            "Zy5wcm90byL9AgoLTG9jYWxDb25maWcSLwoGZGV2aWNlGAEgASgLMh8ubWVz",
+            "Zy5wcm90byKyAwoLTG9jYWxDb25maWcSLwoGZGV2aWNlGAEgASgLMh8ubWVz",
             "aHRhc3RpYy5Db25maWcuRGV2aWNlQ29uZmlnEjMKCHBvc2l0aW9uGAIgASgL",
             "MiEubWVzaHRhc3RpYy5Db25maWcuUG9zaXRpb25Db25maWcSLQoFcG93ZXIY",
             "AyABKAsyHi5tZXNodGFzdGljLkNvbmZpZy5Qb3dlckNvbmZpZxIxCgduZXR3",
@@ -34,33 +34,35 @@ namespace Meshtastic.Protobufs {
             "CgdkaXNwbGF5GAUgASgLMiAubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNv",
             "bmZpZxIrCgRsb3JhGAYgASgLMh0ubWVzaHRhc3RpYy5Db25maWcuTG9SYUNv",
             "bmZpZxI1CglibHVldG9vdGgYByABKAsyIi5tZXNodGFzdGljLkNvbmZpZy5C",
-            "bHVldG9vdGhDb25maWcSDwoHdmVyc2lvbhgIIAEoDSL7BgoRTG9jYWxNb2R1",
-            "bGVDb25maWcSMQoEbXF0dBgBIAEoCzIjLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
-            "ZmlnLk1RVFRDb25maWcSNQoGc2VyaWFsGAIgASgLMiUubWVzaHRhc3RpYy5N",
-            "b2R1bGVDb25maWcuU2VyaWFsQ29uZmlnElIKFWV4dGVybmFsX25vdGlmaWNh",
-            "dGlvbhgDIAEoCzIzLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkV4dGVybmFs",
-            "Tm90aWZpY2F0aW9uQ29uZmlnEkIKDXN0b3JlX2ZvcndhcmQYBCABKAsyKy5t",
-            "ZXNodGFzdGljLk1vZHVsZUNvbmZpZy5TdG9yZUZvcndhcmRDb25maWcSPAoK",
-            "cmFuZ2VfdGVzdBgFIAEoCzIoLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlJh",
-            "bmdlVGVzdENvbmZpZxI7Cgl0ZWxlbWV0cnkYBiABKAsyKC5tZXNodGFzdGlj",
-            "Lk1vZHVsZUNvbmZpZy5UZWxlbWV0cnlDb25maWcSRAoOY2FubmVkX21lc3Nh",
-            "Z2UYByABKAsyLC5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5DYW5uZWRNZXNz",
-            "YWdlQ29uZmlnEjMKBWF1ZGlvGAkgASgLMiQubWVzaHRhc3RpYy5Nb2R1bGVD",
-            "b25maWcuQXVkaW9Db25maWcSRgoPcmVtb3RlX2hhcmR3YXJlGAogASgLMi0u",
-            "bWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuUmVtb3RlSGFyZHdhcmVDb25maWcS",
-            "QgoNbmVpZ2hib3JfaW5mbxgLIAEoCzIrLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
-            "ZmlnLk5laWdoYm9ySW5mb0NvbmZpZxJIChBhbWJpZW50X2xpZ2h0aW5nGAwg",
-            "ASgLMi4ubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQW1iaWVudExpZ2h0aW5n",
-            "Q29uZmlnEkgKEGRldGVjdGlvbl9zZW5zb3IYDSABKAsyLi5tZXNodGFzdGlj",
-            "Lk1vZHVsZUNvbmZpZy5EZXRlY3Rpb25TZW5zb3JDb25maWcSPQoKcGF4Y291",
-            "bnRlchgOIAEoCzIpLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlBheGNvdW50",
-            "ZXJDb25maWcSDwoHdmVyc2lvbhgIIAEoDUJkChNjb20uZ2Vla3N2aWxsZS5t",
-            "ZXNoQg9Mb2NhbE9ubHlQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9n",
-            "by9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "bHVldG9vdGhDb25maWcSDwoHdmVyc2lvbhgIIAEoDRIzCghzZWN1cml0eRgJ",
+            "IAEoCzIhLm1lc2h0YXN0aWMuQ29uZmlnLlNlY3VyaXR5Q29uZmlnIvsGChFM",
+            "b2NhbE1vZHVsZUNvbmZpZxIxCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
+            "b2R1bGVDb25maWcuTVFUVENvbmZpZxI1CgZzZXJpYWwYAiABKAsyJS5tZXNo",
+            "dGFzdGljLk1vZHVsZUNvbmZpZy5TZXJpYWxDb25maWcSUgoVZXh0ZXJuYWxf",
+            "bm90aWZpY2F0aW9uGAMgASgLMjMubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcu",
+            "RXh0ZXJuYWxOb3RpZmljYXRpb25Db25maWcSQgoNc3RvcmVfZm9yd2FyZBgE",
+            "IAEoCzIrLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlN0b3JlRm9yd2FyZENv",
+            "bmZpZxI8CgpyYW5nZV90ZXN0GAUgASgLMigubWVzaHRhc3RpYy5Nb2R1bGVD",
+            "b25maWcuUmFuZ2VUZXN0Q29uZmlnEjsKCXRlbGVtZXRyeRgGIAEoCzIoLm1l",
+            "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLlRlbGVtZXRyeUNvbmZpZxJECg5jYW5u",
+            "ZWRfbWVzc2FnZRgHIAEoCzIsLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNh",
+            "bm5lZE1lc3NhZ2VDb25maWcSMwoFYXVkaW8YCSABKAsyJC5tZXNodGFzdGlj",
+            "Lk1vZHVsZUNvbmZpZy5BdWRpb0NvbmZpZxJGCg9yZW1vdGVfaGFyZHdhcmUY",
+            "CiABKAsyLS5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5SZW1vdGVIYXJkd2Fy",
+            "ZUNvbmZpZxJCCg1uZWlnaGJvcl9pbmZvGAsgASgLMisubWVzaHRhc3RpYy5N",
+            "b2R1bGVDb25maWcuTmVpZ2hib3JJbmZvQ29uZmlnEkgKEGFtYmllbnRfbGln",
+            "aHRpbmcYDCABKAsyLi5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5BbWJpZW50",
+            "TGlnaHRpbmdDb25maWcSSAoQZGV0ZWN0aW9uX3NlbnNvchgNIAEoCzIuLm1l",
+            "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLkRldGVjdGlvblNlbnNvckNvbmZpZxI9",
+            "CgpwYXhjb3VudGVyGA4gASgLMikubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcu",
+            "UGF4Y291bnRlckNvbmZpZxIPCgd2ZXJzaW9uGAggASgNQmQKE2NvbS5nZWVr",
+            "c3ZpbGxlLm1lc2hCD0xvY2FsT25seVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNo",
+            "dGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIA",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalConfig), global::Meshtastic.Protobufs.LocalConfig.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth", "Version" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalConfig), global::Meshtastic.Protobufs.LocalConfig.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth", "Version", "Security" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalModuleConfig), global::Meshtastic.Protobufs.LocalModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo", "AmbientLighting", "DetectionSensor", "Paxcounter", "Version" }, null, null, null, null)
           }));
     }
@@ -110,6 +112,7 @@ namespace Meshtastic.Protobufs {
       lora_ = other.lora_ != null ? other.lora_.Clone() : null;
       bluetooth_ = other.bluetooth_ != null ? other.bluetooth_.Clone() : null;
       version_ = other.version_;
+      security_ = other.security_ != null ? other.security_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -249,6 +252,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "security" field.</summary>
+    public const int SecurityFieldNumber = 9;
+    private global::Meshtastic.Protobufs.Config.Types.SecurityConfig security_;
+    /// <summary>
+    ///
+    /// The part of the config that is specific to Security settings
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Config.Types.SecurityConfig Security {
+      get { return security_; }
+      set {
+        security_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -272,6 +291,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Lora, other.Lora)) return false;
       if (!object.Equals(Bluetooth, other.Bluetooth)) return false;
       if (Version != other.Version) return false;
+      if (!object.Equals(Security, other.Security)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -287,6 +307,7 @@ namespace Meshtastic.Protobufs {
       if (lora_ != null) hash ^= Lora.GetHashCode();
       if (bluetooth_ != null) hash ^= Bluetooth.GetHashCode();
       if (Version != 0) hash ^= Version.GetHashCode();
+      if (security_ != null) hash ^= Security.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -337,6 +358,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(64);
         output.WriteUInt32(Version);
       }
+      if (security_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Security);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -379,6 +404,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(64);
         output.WriteUInt32(Version);
       }
+      if (security_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Security);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -412,6 +441,9 @@ namespace Meshtastic.Protobufs {
       }
       if (Version != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
+      }
+      if (security_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Security);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -469,6 +501,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.Version != 0) {
         Version = other.Version;
+      }
+      if (other.security_ != null) {
+        if (security_ == null) {
+          Security = new global::Meshtastic.Protobufs.Config.Types.SecurityConfig();
+        }
+        Security.MergeFrom(other.Security);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -538,6 +576,13 @@ namespace Meshtastic.Protobufs {
             Version = input.ReadUInt32();
             break;
           }
+          case 74: {
+            if (security_ == null) {
+              Security = new global::Meshtastic.Protobufs.Config.Types.SecurityConfig();
+            }
+            input.ReadMessage(Security);
+            break;
+          }
         }
       }
     #endif
@@ -604,6 +649,13 @@ namespace Meshtastic.Protobufs {
           }
           case 64: {
             Version = input.ReadUInt32();
+            break;
+          }
+          case 74: {
+            if (security_ == null) {
+              Security = new global::Meshtastic.Protobufs.Config.Types.SecurityConfig();
+            }
+            input.ReadMessage(Security);
             break;
           }
         }

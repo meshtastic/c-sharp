@@ -6526,7 +6526,7 @@ namespace Meshtastic.Protobufs {
         /// <summary>
         ///
         /// Input event origin accepted by the canned message module.
-        /// Can be e.g. "rotEnc1", "upDownEnc1" or keyword "_any"
+        /// Can be e.g. "rotEnc1", "upDownEnc1", "scanAndSelect", "cardkb", "serialkb", or keyword "_any"
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
