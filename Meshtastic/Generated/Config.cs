@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static ConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyLJJAoGQ29u",
+            "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYyLkJAoGQ29u",
             "ZmlnEjEKBmRldmljZRgBIAEoCzIfLm1lc2h0YXN0aWMuQ29uZmlnLkRldmlj",
             "ZUNvbmZpZ0gAEjUKCHBvc2l0aW9uGAIgASgLMiEubWVzaHRhc3RpYy5Db25m",
             "aWcuUG9zaXRpb25Db25maWdIABIvCgVwb3dlchgDIAEoCzIeLm1lc2h0YXN0",
@@ -100,7 +100,7 @@ namespace Meshtastic.Protobufs {
             "YXRpb24SDQoJREVHUkVFU18wEAASDgoKREVHUkVFU185MBABEg8KC0RFR1JF",
             "RVNfMTgwEAISDwoLREVHUkVFU18yNzAQAxIWChJERUdSRUVTXzBfSU5WRVJU",
             "RUQQBBIXChNERUdSRUVTXzkwX0lOVkVSVEVEEAUSGAoUREVHUkVFU18xODBf",
-            "SU5WRVJURUQQBhIYChRERUdSRUVTXzI3MF9JTlZFUlRFRBAHGt4GCgpMb1Jh",
+            "SU5WRVJURUQQBhIYChRERUdSRUVTXzI3MF9JTlZFUlRFRBAHGvkGCgpMb1Jh",
             "Q29uZmlnEhIKCnVzZV9wcmVzZXQYASABKAgSPwoMbW9kZW1fcHJlc2V0GAIg",
             "ASgOMikubWVzaHRhc3RpYy5Db25maWcuTG9SYUNvbmZpZy5Nb2RlbVByZXNl",
             "dBIRCgliYW5kd2lkdGgYAyABKA0SFQoNc3ByZWFkX2ZhY3RvchgEIAEoDRIT",
@@ -111,27 +111,27 @@ namespace Meshtastic.Protobufs {
             "DRIbChNvdmVycmlkZV9kdXR5X2N5Y2xlGAwgASgIEh4KFnN4MTI2eF9yeF9i",
             "b29zdGVkX2dhaW4YDSABKAgSGgoSb3ZlcnJpZGVfZnJlcXVlbmN5GA4gASgC",
             "EhcKD3BhX2Zhbl9kaXNhYmxlZBgPIAEoCBIXCg9pZ25vcmVfaW5jb21pbmcY",
-            "ZyADKA0SEwoLaWdub3JlX21xdHQYaCABKAgizQEKClJlZ2lvbkNvZGUSCQoF",
-            "VU5TRVQQABIGCgJVUxABEgoKBkVVXzQzMxACEgoKBkVVXzg2OBADEgYKAkNO",
-            "EAQSBgoCSlAQBRIHCgNBTloQBhIGCgJLUhAHEgYKAlRXEAgSBgoCUlUQCRIG",
-            "CgJJThAKEgoKBk5aXzg2NRALEgYKAlRIEAwSCwoHTE9SQV8yNBANEgoKBlVB",
-            "XzQzMxAOEgoKBlVBXzg2OBAPEgoKBk1ZXzQzMxAQEgoKBk1ZXzkxORAREgoK",
-            "BlNHXzkyMxASIqkBCgtNb2RlbVByZXNldBINCglMT05HX0ZBU1QQABINCglM",
-            "T05HX1NMT1cQARIWCg5WRVJZX0xPTkdfU0xPVxACGgIIARIPCgtNRURJVU1f",
-            "U0xPVxADEg8KC01FRElVTV9GQVNUEAQSDgoKU0hPUlRfU0xPVxAFEg4KClNI",
-            "T1JUX0ZBU1QQBhIRCg1MT05HX01PREVSQVRFEAcSDwoLU0hPUlRfVFVSQk8Q",
-            "CBqtAQoPQmx1ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSPAoEbW9k",
-            "ZRgCIAEoDjIuLm1lc2h0YXN0aWMuQ29uZmlnLkJsdWV0b290aENvbmZpZy5Q",
-            "YWlyaW5nTW9kZRIRCglmaXhlZF9waW4YAyABKA0iOAoLUGFpcmluZ01vZGUS",
-            "DgoKUkFORE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJThACGrYB",
-            "Cg5TZWN1cml0eUNvbmZpZxISCgpwdWJsaWNfa2V5GAEgASgMEhMKC3ByaXZh",
-            "dGVfa2V5GAIgASgMEhEKCWFkbWluX2tleRgDIAMoDBISCgppc19tYW5hZ2Vk",
-            "GAQgASgIEhYKDnNlcmlhbF9lbmFibGVkGAUgASgIEh0KFWRlYnVnX2xvZ19h",
-            "cGlfZW5hYmxlZBgGIAEoCBIdChVhZG1pbl9jaGFubmVsX2VuYWJsZWQYCCAB",
-            "KAgaEgoQU2Vzc2lvbmtleUNvbmZpZ0IRCg9wYXlsb2FkX3ZhcmlhbnRCYQoT",
-            "Y29tLmdlZWtzdmlsbGUubWVzaEIMQ29uZmlnUHJvdG9zWiJnaXRodWIuY29t",
-            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
-            "ZnO6AgBiBnByb3RvMw=="));
+            "ZyADKA0SEwoLaWdub3JlX21xdHQYaCABKAgSGQoRY29uZmlnX29rX3RvX21x",
+            "dHQYaSABKAgizQEKClJlZ2lvbkNvZGUSCQoFVU5TRVQQABIGCgJVUxABEgoK",
+            "BkVVXzQzMxACEgoKBkVVXzg2OBADEgYKAkNOEAQSBgoCSlAQBRIHCgNBTloQ",
+            "BhIGCgJLUhAHEgYKAlRXEAgSBgoCUlUQCRIGCgJJThAKEgoKBk5aXzg2NRAL",
+            "EgYKAlRIEAwSCwoHTE9SQV8yNBANEgoKBlVBXzQzMxAOEgoKBlVBXzg2OBAP",
+            "EgoKBk1ZXzQzMxAQEgoKBk1ZXzkxORAREgoKBlNHXzkyMxASIqkBCgtNb2Rl",
+            "bVByZXNldBINCglMT05HX0ZBU1QQABINCglMT05HX1NMT1cQARIWCg5WRVJZ",
+            "X0xPTkdfU0xPVxACGgIIARIPCgtNRURJVU1fU0xPVxADEg8KC01FRElVTV9G",
+            "QVNUEAQSDgoKU0hPUlRfU0xPVxAFEg4KClNIT1JUX0ZBU1QQBhIRCg1MT05H",
+            "X01PREVSQVRFEAcSDwoLU0hPUlRfVFVSQk8QCBqtAQoPQmx1ZXRvb3RoQ29u",
+            "ZmlnEg8KB2VuYWJsZWQYASABKAgSPAoEbW9kZRgCIAEoDjIuLm1lc2h0YXN0",
+            "aWMuQ29uZmlnLkJsdWV0b290aENvbmZpZy5QYWlyaW5nTW9kZRIRCglmaXhl",
+            "ZF9waW4YAyABKA0iOAoLUGFpcmluZ01vZGUSDgoKUkFORE9NX1BJThAAEg0K",
+            "CUZJWEVEX1BJThABEgoKBk5PX1BJThACGrYBCg5TZWN1cml0eUNvbmZpZxIS",
+            "CgpwdWJsaWNfa2V5GAEgASgMEhMKC3ByaXZhdGVfa2V5GAIgASgMEhEKCWFk",
+            "bWluX2tleRgDIAMoDBISCgppc19tYW5hZ2VkGAQgASgIEhYKDnNlcmlhbF9l",
+            "bmFibGVkGAUgASgIEh0KFWRlYnVnX2xvZ19hcGlfZW5hYmxlZBgGIAEoCBId",
+            "ChVhZG1pbl9jaGFubmVsX2VuYWJsZWQYCCABKAgaEgoQU2Vzc2lvbmtleUNv",
+            "bmZpZ0IRCg9wYXlsb2FkX3ZhcmlhbnRCYQoTY29tLmdlZWtzdmlsbGUubWVz",
+            "aEIMQ29uZmlnUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
+            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -140,7 +140,7 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PowerConfig), global::Meshtastic.Protobufs.Config.Types.PowerConfig.Parser, new[]{ "IsPowerSaving", "OnBatteryShutdownAfterSecs", "AdcMultiplierOverride", "WaitBluetoothSecs", "SdsSecs", "LsSecs", "MinWakeSecs", "DeviceBatteryInaAddress", "PowermonEnables" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "AddressMode", "Ipv4Config", "RsyslogServer" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold", "WakeOnTapOrMotion", "CompassOrientation" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "Sx126XRxBoostedGain", "OverrideFrequency", "PaFanDisabled", "IgnoreIncoming", "IgnoreMqtt" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "Sx126XRxBoostedGain", "OverrideFrequency", "PaFanDisabled", "IgnoreIncoming", "IgnoreMqtt", "ConfigOkToMqtt" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.SecurityConfig), global::Meshtastic.Protobufs.Config.Types.SecurityConfig.Parser, new[]{ "PublicKey", "PrivateKey", "AdminKey", "IsManaged", "SerialEnabled", "DebugLogApiEnabled", "AdminChannelEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig), global::Meshtastic.Protobufs.Config.Types.SessionkeyConfig.Parser, null, null, null, null, null)})
@@ -4536,6 +4536,7 @@ namespace Meshtastic.Protobufs {
           paFanDisabled_ = other.paFanDisabled_;
           ignoreIncoming_ = other.ignoreIncoming_.Clone();
           ignoreMqtt_ = other.ignoreMqtt_;
+          configOkToMqtt_ = other.configOkToMqtt_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4847,6 +4848,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "config_ok_to_mqtt" field.</summary>
+        public const int ConfigOkToMqttFieldNumber = 105;
+        private bool configOkToMqtt_;
+        /// <summary>
+        ///
+        /// Sets the ok_to_mqtt bit on outgoing packets
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ConfigOkToMqtt {
+          get { return configOkToMqtt_; }
+          set {
+            configOkToMqtt_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4879,6 +4896,7 @@ namespace Meshtastic.Protobufs {
           if (PaFanDisabled != other.PaFanDisabled) return false;
           if(!ignoreIncoming_.Equals(other.ignoreIncoming_)) return false;
           if (IgnoreMqtt != other.IgnoreMqtt) return false;
+          if (ConfigOkToMqtt != other.ConfigOkToMqtt) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4903,6 +4921,7 @@ namespace Meshtastic.Protobufs {
           if (PaFanDisabled != false) hash ^= PaFanDisabled.GetHashCode();
           hash ^= ignoreIncoming_.GetHashCode();
           if (IgnoreMqtt != false) hash ^= IgnoreMqtt.GetHashCode();
+          if (ConfigOkToMqtt != false) hash ^= ConfigOkToMqtt.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4986,6 +5005,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(192, 6);
             output.WriteBool(IgnoreMqtt);
           }
+          if (ConfigOkToMqtt != false) {
+            output.WriteRawTag(200, 6);
+            output.WriteBool(ConfigOkToMqtt);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5061,6 +5084,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(192, 6);
             output.WriteBool(IgnoreMqtt);
           }
+          if (ConfigOkToMqtt != false) {
+            output.WriteRawTag(200, 6);
+            output.WriteBool(ConfigOkToMqtt);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5118,6 +5145,9 @@ namespace Meshtastic.Protobufs {
           }
           size += ignoreIncoming_.CalculateSize(_repeated_ignoreIncoming_codec);
           if (IgnoreMqtt != false) {
+            size += 2 + 1;
+          }
+          if (ConfigOkToMqtt != false) {
             size += 2 + 1;
           }
           if (_unknownFields != null) {
@@ -5180,6 +5210,9 @@ namespace Meshtastic.Protobufs {
           ignoreIncoming_.Add(other.ignoreIncoming_);
           if (other.IgnoreMqtt != false) {
             IgnoreMqtt = other.IgnoreMqtt;
+          }
+          if (other.ConfigOkToMqtt != false) {
+            ConfigOkToMqtt = other.ConfigOkToMqtt;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5265,6 +5298,10 @@ namespace Meshtastic.Protobufs {
                 IgnoreMqtt = input.ReadBool();
                 break;
               }
+              case 840: {
+                ConfigOkToMqtt = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -5347,6 +5384,10 @@ namespace Meshtastic.Protobufs {
               }
               case 832: {
                 IgnoreMqtt = input.ReadBool();
+                break;
+              }
+              case 840: {
+                ConfigOkToMqtt = input.ReadBool();
                 break;
               }
             }
