@@ -25,20 +25,24 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChttZXNodGFzdGljL2NsaWVudG9ubHkucHJvdG8SCm1lc2h0YXN0aWMaGm1l",
-            "c2h0YXN0aWMvbG9jYWxvbmx5LnByb3RvIo0CCg1EZXZpY2VQcm9maWxlEhYK",
-            "CWxvbmdfbmFtZRgBIAEoCUgAiAEBEhcKCnNob3J0X25hbWUYAiABKAlIAYgB",
-            "ARIYCgtjaGFubmVsX3VybBgDIAEoCUgCiAEBEiwKBmNvbmZpZxgEIAEoCzIX",
-            "Lm1lc2h0YXN0aWMuTG9jYWxDb25maWdIA4gBARI5Cg1tb2R1bGVfY29uZmln",
-            "GAUgASgLMh0ubWVzaHRhc3RpYy5Mb2NhbE1vZHVsZUNvbmZpZ0gEiAEBQgwK",
-            "Cl9sb25nX25hbWVCDQoLX3Nob3J0X25hbWVCDgoMX2NoYW5uZWxfdXJsQgkK",
-            "B19jb25maWdCEAoOX21vZHVsZV9jb25maWdCZQoTY29tLmdlZWtzdmlsbGUu",
-            "bWVzaEIQQ2xpZW50T25seVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
-            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
-            "bzM="));
+            "c2h0YXN0aWMvbG9jYWxvbmx5LnByb3RvGhVtZXNodGFzdGljL21lc2gucHJv",
+            "dG8iqQMKDURldmljZVByb2ZpbGUSFgoJbG9uZ19uYW1lGAEgASgJSACIAQES",
+            "FwoKc2hvcnRfbmFtZRgCIAEoCUgBiAEBEhgKC2NoYW5uZWxfdXJsGAMgASgJ",
+            "SAKIAQESLAoGY29uZmlnGAQgASgLMhcubWVzaHRhc3RpYy5Mb2NhbENvbmZp",
+            "Z0gDiAEBEjkKDW1vZHVsZV9jb25maWcYBSABKAsyHS5tZXNodGFzdGljLkxv",
+            "Y2FsTW9kdWxlQ29uZmlnSASIAQESMQoOZml4ZWRfcG9zaXRpb24YBiABKAsy",
+            "FC5tZXNodGFzdGljLlBvc2l0aW9uSAWIAQESFQoIcmluZ3RvbmUYByABKAlI",
+            "BogBARIcCg9jYW5uZWRfbWVzc2FnZXMYCCABKAlIB4gBAUIMCgpfbG9uZ19u",
+            "YW1lQg0KC19zaG9ydF9uYW1lQg4KDF9jaGFubmVsX3VybEIJCgdfY29uZmln",
+            "QhAKDl9tb2R1bGVfY29uZmlnQhEKD19maXhlZF9wb3NpdGlvbkILCglfcmlu",
+            "Z3RvbmVCEgoQX2Nhbm5lZF9tZXNzYWdlc0JlChNjb20uZ2Vla3N2aWxsZS5t",
+            "ZXNoQhBDbGllbnRPbmx5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMv",
+            "Z28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceProfile), global::Meshtastic.Protobufs.DeviceProfile.Parser, new[]{ "LongName", "ShortName", "ChannelUrl", "Config", "ModuleConfig" }, new[]{ "LongName", "ShortName", "ChannelUrl", "Config", "ModuleConfig" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceProfile), global::Meshtastic.Protobufs.DeviceProfile.Parser, new[]{ "LongName", "ShortName", "ChannelUrl", "Config", "ModuleConfig", "FixedPosition", "Ringtone", "CannedMessages" }, new[]{ "LongName", "ShortName", "ChannelUrl", "Config", "ModuleConfig", "FixedPosition", "Ringtone", "CannedMessages" }, null, null, null)
           }));
     }
     #endregion
@@ -89,6 +93,9 @@ namespace Meshtastic.Protobufs {
       channelUrl_ = other.channelUrl_;
       config_ = other.config_ != null ? other.config_.Clone() : null;
       moduleConfig_ = other.moduleConfig_ != null ? other.moduleConfig_.Clone() : null;
+      fixedPosition_ = other.fixedPosition_ != null ? other.fixedPosition_.Clone() : null;
+      ringtone_ = other.ringtone_;
+      cannedMessages_ = other.cannedMessages_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -214,6 +221,78 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "fixed_position" field.</summary>
+    public const int FixedPositionFieldNumber = 6;
+    private global::Meshtastic.Protobufs.Position fixedPosition_;
+    /// <summary>
+    ///
+    /// Fixed position data
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Position FixedPosition {
+      get { return fixedPosition_; }
+      set {
+        fixedPosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ringtone" field.</summary>
+    public const int RingtoneFieldNumber = 7;
+    private string ringtone_;
+    /// <summary>
+    ///
+    /// Ringtone for ExternalNotification
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Ringtone {
+      get { return ringtone_ ?? ""; }
+      set {
+        ringtone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "ringtone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRingtone {
+      get { return ringtone_ != null; }
+    }
+    /// <summary>Clears the value of the "ringtone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRingtone() {
+      ringtone_ = null;
+    }
+
+    /// <summary>Field number for the "canned_messages" field.</summary>
+    public const int CannedMessagesFieldNumber = 8;
+    private string cannedMessages_;
+    /// <summary>
+    ///
+    /// Predefined messages for CannedMessage
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CannedMessages {
+      get { return cannedMessages_ ?? ""; }
+      set {
+        cannedMessages_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "canned_messages" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCannedMessages {
+      get { return cannedMessages_ != null; }
+    }
+    /// <summary>Clears the value of the "canned_messages" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCannedMessages() {
+      cannedMessages_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -234,6 +313,9 @@ namespace Meshtastic.Protobufs {
       if (ChannelUrl != other.ChannelUrl) return false;
       if (!object.Equals(Config, other.Config)) return false;
       if (!object.Equals(ModuleConfig, other.ModuleConfig)) return false;
+      if (!object.Equals(FixedPosition, other.FixedPosition)) return false;
+      if (Ringtone != other.Ringtone) return false;
+      if (CannedMessages != other.CannedMessages) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -246,6 +328,9 @@ namespace Meshtastic.Protobufs {
       if (HasChannelUrl) hash ^= ChannelUrl.GetHashCode();
       if (config_ != null) hash ^= Config.GetHashCode();
       if (moduleConfig_ != null) hash ^= ModuleConfig.GetHashCode();
+      if (fixedPosition_ != null) hash ^= FixedPosition.GetHashCode();
+      if (HasRingtone) hash ^= Ringtone.GetHashCode();
+      if (HasCannedMessages) hash ^= CannedMessages.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -284,6 +369,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(42);
         output.WriteMessage(ModuleConfig);
       }
+      if (fixedPosition_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(FixedPosition);
+      }
+      if (HasRingtone) {
+        output.WriteRawTag(58);
+        output.WriteString(Ringtone);
+      }
+      if (HasCannedMessages) {
+        output.WriteRawTag(66);
+        output.WriteString(CannedMessages);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -314,6 +411,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(42);
         output.WriteMessage(ModuleConfig);
       }
+      if (fixedPosition_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(FixedPosition);
+      }
+      if (HasRingtone) {
+        output.WriteRawTag(58);
+        output.WriteString(Ringtone);
+      }
+      if (HasCannedMessages) {
+        output.WriteRawTag(66);
+        output.WriteString(CannedMessages);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -338,6 +447,15 @@ namespace Meshtastic.Protobufs {
       }
       if (moduleConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModuleConfig);
+      }
+      if (fixedPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FixedPosition);
+      }
+      if (HasRingtone) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Ringtone);
+      }
+      if (HasCannedMessages) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CannedMessages);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -371,6 +489,18 @@ namespace Meshtastic.Protobufs {
           ModuleConfig = new global::Meshtastic.Protobufs.LocalModuleConfig();
         }
         ModuleConfig.MergeFrom(other.ModuleConfig);
+      }
+      if (other.fixedPosition_ != null) {
+        if (fixedPosition_ == null) {
+          FixedPosition = new global::Meshtastic.Protobufs.Position();
+        }
+        FixedPosition.MergeFrom(other.FixedPosition);
+      }
+      if (other.HasRingtone) {
+        Ringtone = other.Ringtone;
+      }
+      if (other.HasCannedMessages) {
+        CannedMessages = other.CannedMessages;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -413,6 +543,21 @@ namespace Meshtastic.Protobufs {
             input.ReadMessage(ModuleConfig);
             break;
           }
+          case 50: {
+            if (fixedPosition_ == null) {
+              FixedPosition = new global::Meshtastic.Protobufs.Position();
+            }
+            input.ReadMessage(FixedPosition);
+            break;
+          }
+          case 58: {
+            Ringtone = input.ReadString();
+            break;
+          }
+          case 66: {
+            CannedMessages = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -452,6 +597,21 @@ namespace Meshtastic.Protobufs {
               ModuleConfig = new global::Meshtastic.Protobufs.LocalModuleConfig();
             }
             input.ReadMessage(ModuleConfig);
+            break;
+          }
+          case 50: {
+            if (fixedPosition_ == null) {
+              FixedPosition = new global::Meshtastic.Protobufs.Position();
+            }
+            input.ReadMessage(FixedPosition);
+            break;
+          }
+          case 58: {
+            Ringtone = input.ReadString();
+            break;
+          }
+          case 66: {
+            CannedMessages = input.ReadString();
             break;
           }
         }
