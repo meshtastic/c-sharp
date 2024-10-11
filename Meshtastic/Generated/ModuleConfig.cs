@@ -25,7 +25,7 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8SCm1lc2h0YXN0aWMi",
-            "8CIKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
+            "mCUKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
             "b2R1bGVDb25maWcuTVFUVENvbmZpZ0gAEjcKBnNlcmlhbBgCIAEoCzIlLm1l",
             "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZ0gAElQKFWV4dGVy",
             "bmFsX25vdGlmaWNhdGlvbhgDIAEoCzIzLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
@@ -57,80 +57,87 @@ namespace Meshtastic.Protobufs {
             "bmZpZxIPCgdlbmFibGVkGAEgASgIEiIKGmFsbG93X3VuZGVmaW5lZF9waW5f",
             "YWNjZXNzGAIgASgIEjUKDmF2YWlsYWJsZV9waW5zGAMgAygLMh0ubWVzaHRh",
             "c3RpYy5SZW1vdGVIYXJkd2FyZVBpbho+ChJOZWlnaGJvckluZm9Db25maWcS",
-            "DwoHZW5hYmxlZBgBIAEoCBIXCg91cGRhdGVfaW50ZXJ2YWwYAiABKA0a0gEK",
+            "DwoHZW5hYmxlZBgBIAEoCBIXCg91cGRhdGVfaW50ZXJ2YWwYAiABKA0alwMK",
             "FURldGVjdGlvblNlbnNvckNvbmZpZxIPCgdlbmFibGVkGAEgASgIEh4KFm1p",
             "bmltdW1fYnJvYWRjYXN0X3NlY3MYAiABKA0SHAoUc3RhdGVfYnJvYWRjYXN0",
             "X3NlY3MYAyABKA0SEQoJc2VuZF9iZWxsGAQgASgIEgwKBG5hbWUYBSABKAkS",
-            "EwoLbW9uaXRvcl9waW4YBiABKA0SIAoYZGV0ZWN0aW9uX3RyaWdnZXJlZF9o",
-            "aWdoGAcgASgIEhIKCnVzZV9wdWxsdXAYCCABKAga5AIKC0F1ZGlvQ29uZmln",
-            "EhYKDmNvZGVjMl9lbmFibGVkGAEgASgIEg8KB3B0dF9waW4YAiABKA0SQAoH",
-            "Yml0cmF0ZRgDIAEoDjIvLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkF1ZGlv",
-            "Q29uZmlnLkF1ZGlvX0JhdWQSDgoGaTJzX3dzGAQgASgNEg4KBmkyc19zZBgF",
-            "IAEoDRIPCgdpMnNfZGluGAYgASgNEg8KB2kyc19zY2sYByABKA0ipwEKCkF1",
-            "ZGlvX0JhdWQSEgoOQ09ERUMyX0RFRkFVTFQQABIPCgtDT0RFQzJfMzIwMBAB",
-            "Eg8KC0NPREVDMl8yNDAwEAISDwoLQ09ERUMyXzE2MDAQAxIPCgtDT0RFQzJf",
-            "MTQwMBAEEg8KC0NPREVDMl8xMzAwEAUSDwoLQ09ERUMyXzEyMDAQBhIOCgpD",
-            "T0RFQzJfNzAwEAcSDwoLQ09ERUMyXzcwMEIQCBp2ChBQYXhjb3VudGVyQ29u",
-            "ZmlnEg8KB2VuYWJsZWQYASABKAgSIgoacGF4Y291bnRlcl91cGRhdGVfaW50",
-            "ZXJ2YWwYAiABKA0SFgoOd2lmaV90aHJlc2hvbGQYAyABKAUSFQoNYmxlX3Ro",
-            "cmVzaG9sZBgEIAEoBRruBAoMU2VyaWFsQ29uZmlnEg8KB2VuYWJsZWQYASAB",
-            "KAgSDAoEZWNobxgCIAEoCBILCgNyeGQYAyABKA0SCwoDdHhkGAQgASgNEj8K",
-            "BGJhdWQYBSABKA4yMS5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5TZXJpYWxD",
-            "b25maWcuU2VyaWFsX0JhdWQSDwoHdGltZW91dBgGIAEoDRI/CgRtb2RlGAcg",
-            "ASgOMjEubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuU2VyaWFsQ29uZmlnLlNl",
-            "cmlhbF9Nb2RlEiQKHG92ZXJyaWRlX2NvbnNvbGVfc2VyaWFsX3BvcnQYCCAB",
-            "KAgiigIKC1NlcmlhbF9CYXVkEhAKDEJBVURfREVGQVVMVBAAEgwKCEJBVURf",
-            "MTEwEAESDAoIQkFVRF8zMDAQAhIMCghCQVVEXzYwMBADEg0KCUJBVURfMTIw",
-            "MBAEEg0KCUJBVURfMjQwMBAFEg0KCUJBVURfNDgwMBAGEg0KCUJBVURfOTYw",
-            "MBAHEg4KCkJBVURfMTkyMDAQCBIOCgpCQVVEXzM4NDAwEAkSDgoKQkFVRF81",
-            "NzYwMBAKEg8KC0JBVURfMTE1MjAwEAsSDwoLQkFVRF8yMzA0MDAQDBIPCgtC",
-            "QVVEXzQ2MDgwMBANEg8KC0JBVURfNTc2MDAwEA4SDwoLQkFVRF85MjE2MDAQ",
-            "DyJfCgtTZXJpYWxfTW9kZRILCgdERUZBVUxUEAASCgoGU0lNUExFEAESCQoF",
-            "UFJPVE8QAhILCgdURVhUTVNHEAMSCAoETk1FQRAEEgsKB0NBTFRPUE8QBRII",
-            "CgRXUzg1EAYa6QIKGkV4dGVybmFsTm90aWZpY2F0aW9uQ29uZmlnEg8KB2Vu",
-            "YWJsZWQYASABKAgSEQoJb3V0cHV0X21zGAIgASgNEg4KBm91dHB1dBgDIAEo",
-            "DRIUCgxvdXRwdXRfdmlicmEYCCABKA0SFQoNb3V0cHV0X2J1enplchgJIAEo",
-            "DRIOCgZhY3RpdmUYBCABKAgSFQoNYWxlcnRfbWVzc2FnZRgFIAEoCBIbChNh",
-            "bGVydF9tZXNzYWdlX3ZpYnJhGAogASgIEhwKFGFsZXJ0X21lc3NhZ2VfYnV6",
-            "emVyGAsgASgIEhIKCmFsZXJ0X2JlbGwYBiABKAgSGAoQYWxlcnRfYmVsbF92",
-            "aWJyYRgMIAEoCBIZChFhbGVydF9iZWxsX2J1enplchgNIAEoCBIPCgd1c2Vf",
-            "cHdtGAcgASgIEhMKC25hZ190aW1lb3V0GA4gASgNEhkKEXVzZV9pMnNfYXNf",
-            "YnV6emVyGA8gASgIGpcBChJTdG9yZUZvcndhcmRDb25maWcSDwoHZW5hYmxl",
-            "ZBgBIAEoCBIRCgloZWFydGJlYXQYAiABKAgSDwoHcmVjb3JkcxgDIAEoDRIa",
-            "ChJoaXN0b3J5X3JldHVybl9tYXgYBCABKA0SHQoVaGlzdG9yeV9yZXR1cm5f",
-            "d2luZG93GAUgASgNEhEKCWlzX3NlcnZlchgGIAEoCBpACg9SYW5nZVRlc3RD",
-            "b25maWcSDwoHZW5hYmxlZBgBIAEoCBIOCgZzZW5kZXIYAiABKA0SDAoEc2F2",
-            "ZRgDIAEoCBrmAgoPVGVsZW1ldHJ5Q29uZmlnEh4KFmRldmljZV91cGRhdGVf",
-            "aW50ZXJ2YWwYASABKA0SIwobZW52aXJvbm1lbnRfdXBkYXRlX2ludGVydmFs",
-            "GAIgASgNEicKH2Vudmlyb25tZW50X21lYXN1cmVtZW50X2VuYWJsZWQYAyAB",
-            "KAgSIgoaZW52aXJvbm1lbnRfc2NyZWVuX2VuYWJsZWQYBCABKAgSJgoeZW52",
-            "aXJvbm1lbnRfZGlzcGxheV9mYWhyZW5oZWl0GAUgASgIEhsKE2Fpcl9xdWFs",
-            "aXR5X2VuYWJsZWQYBiABKAgSHAoUYWlyX3F1YWxpdHlfaW50ZXJ2YWwYByAB",
-            "KA0SIQoZcG93ZXJfbWVhc3VyZW1lbnRfZW5hYmxlZBgIIAEoCBIdChVwb3dl",
-            "cl91cGRhdGVfaW50ZXJ2YWwYCSABKA0SHAoUcG93ZXJfc2NyZWVuX2VuYWJs",
-            "ZWQYCiABKAga1gQKE0Nhbm5lZE1lc3NhZ2VDb25maWcSFwoPcm90YXJ5MV9l",
-            "bmFibGVkGAEgASgIEhkKEWlucHV0YnJva2VyX3Bpbl9hGAIgASgNEhkKEWlu",
-            "cHV0YnJva2VyX3Bpbl9iGAMgASgNEh0KFWlucHV0YnJva2VyX3Bpbl9wcmVz",
-            "cxgEIAEoDRJZChRpbnB1dGJyb2tlcl9ldmVudF9jdxgFIAEoDjI7Lm1lc2h0",
-            "YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcuSW5wdXRF",
-            "dmVudENoYXISWgoVaW5wdXRicm9rZXJfZXZlbnRfY2N3GAYgASgOMjsubWVz",
-            "aHRhc3RpYy5Nb2R1bGVDb25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1",
-            "dEV2ZW50Q2hhchJcChdpbnB1dGJyb2tlcl9ldmVudF9wcmVzcxgHIAEoDjI7",
-            "Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcu",
-            "SW5wdXRFdmVudENoYXISFwoPdXBkb3duMV9lbmFibGVkGAggASgIEg8KB2Vu",
-            "YWJsZWQYCSABKAgSGgoSYWxsb3dfaW5wdXRfc291cmNlGAogASgJEhEKCXNl",
-            "bmRfYmVsbBgLIAEoCCJjCg5JbnB1dEV2ZW50Q2hhchIICgROT05FEAASBgoC",
-            "VVAQERIICgRET1dOEBISCAoETEVGVBATEgkKBVJJR0hUEBQSCgoGU0VMRUNU",
-            "EAoSCAoEQkFDSxAbEgoKBkNBTkNFTBAYGmUKFUFtYmllbnRMaWdodGluZ0Nv",
-            "bmZpZxIRCglsZWRfc3RhdGUYASABKAgSDwoHY3VycmVudBgCIAEoDRILCgNy",
-            "ZWQYAyABKA0SDQoFZ3JlZW4YBCABKA0SDAoEYmx1ZRgFIAEoDUIRCg9wYXls",
-            "b2FkX3ZhcmlhbnQiZAoRUmVtb3RlSGFyZHdhcmVQaW4SEAoIZ3Bpb19waW4Y",
-            "ASABKA0SDAoEbmFtZRgCIAEoCRIvCgR0eXBlGAMgASgOMiEubWVzaHRhc3Rp",
-            "Yy5SZW1vdGVIYXJkd2FyZVBpblR5cGUqSQoVUmVtb3RlSGFyZHdhcmVQaW5U",
-            "eXBlEgsKB1VOS05PV04QABIQCgxESUdJVEFMX1JFQUQQARIRCg1ESUdJVEFM",
-            "X1dSSVRFEAJCZwoTY29tLmdlZWtzdmlsbGUubWVzaEISTW9kdWxlQ29uZmln",
-            "UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
-            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "EwoLbW9uaXRvcl9waW4YBiABKA0SWgoWZGV0ZWN0aW9uX3RyaWdnZXJfdHlw",
+            "ZRgHIAEoDjI6Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkRldGVjdGlvblNl",
+            "bnNvckNvbmZpZy5UcmlnZ2VyVHlwZRISCgp1c2VfcHVsbHVwGAggASgIIogB",
+            "CgtUcmlnZ2VyVHlwZRINCglMT0dJQ19MT1cQABIOCgpMT0dJQ19ISUdIEAES",
+            "EAoMRkFMTElOR19FREdFEAISDwoLUklTSU5HX0VER0UQAxIaChZFSVRIRVJf",
+            "RURHRV9BQ1RJVkVfTE9XEAQSGwoXRUlUSEVSX0VER0VfQUNUSVZFX0hJR0gQ",
+            "BRrkAgoLQXVkaW9Db25maWcSFgoOY29kZWMyX2VuYWJsZWQYASABKAgSDwoH",
+            "cHR0X3BpbhgCIAEoDRJACgdiaXRyYXRlGAMgASgOMi8ubWVzaHRhc3RpYy5N",
+            "b2R1bGVDb25maWcuQXVkaW9Db25maWcuQXVkaW9fQmF1ZBIOCgZpMnNfd3MY",
+            "BCABKA0SDgoGaTJzX3NkGAUgASgNEg8KB2kyc19kaW4YBiABKA0SDwoHaTJz",
+            "X3NjaxgHIAEoDSKnAQoKQXVkaW9fQmF1ZBISCg5DT0RFQzJfREVGQVVMVBAA",
+            "Eg8KC0NPREVDMl8zMjAwEAESDwoLQ09ERUMyXzI0MDAQAhIPCgtDT0RFQzJf",
+            "MTYwMBADEg8KC0NPREVDMl8xNDAwEAQSDwoLQ09ERUMyXzEzMDAQBRIPCgtD",
+            "T0RFQzJfMTIwMBAGEg4KCkNPREVDMl83MDAQBxIPCgtDT0RFQzJfNzAwQhAI",
+            "GnYKEFBheGNvdW50ZXJDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIiChpwYXhj",
+            "b3VudGVyX3VwZGF0ZV9pbnRlcnZhbBgCIAEoDRIWCg53aWZpX3RocmVzaG9s",
+            "ZBgDIAEoBRIVCg1ibGVfdGhyZXNob2xkGAQgASgFGu4ECgxTZXJpYWxDb25m",
+            "aWcSDwoHZW5hYmxlZBgBIAEoCBIMCgRlY2hvGAIgASgIEgsKA3J4ZBgDIAEo",
+            "DRILCgN0eGQYBCABKA0SPwoEYmF1ZBgFIAEoDjIxLm1lc2h0YXN0aWMuTW9k",
+            "dWxlQ29uZmlnLlNlcmlhbENvbmZpZy5TZXJpYWxfQmF1ZBIPCgd0aW1lb3V0",
+            "GAYgASgNEj8KBG1vZGUYByABKA4yMS5tZXNodGFzdGljLk1vZHVsZUNvbmZp",
+            "Zy5TZXJpYWxDb25maWcuU2VyaWFsX01vZGUSJAocb3ZlcnJpZGVfY29uc29s",
+            "ZV9zZXJpYWxfcG9ydBgIIAEoCCKKAgoLU2VyaWFsX0JhdWQSEAoMQkFVRF9E",
+            "RUZBVUxUEAASDAoIQkFVRF8xMTAQARIMCghCQVVEXzMwMBACEgwKCEJBVURf",
+            "NjAwEAMSDQoJQkFVRF8xMjAwEAQSDQoJQkFVRF8yNDAwEAUSDQoJQkFVRF80",
+            "ODAwEAYSDQoJQkFVRF85NjAwEAcSDgoKQkFVRF8xOTIwMBAIEg4KCkJBVURf",
+            "Mzg0MDAQCRIOCgpCQVVEXzU3NjAwEAoSDwoLQkFVRF8xMTUyMDAQCxIPCgtC",
+            "QVVEXzIzMDQwMBAMEg8KC0JBVURfNDYwODAwEA0SDwoLQkFVRF81NzYwMDAQ",
+            "DhIPCgtCQVVEXzkyMTYwMBAPIl8KC1NlcmlhbF9Nb2RlEgsKB0RFRkFVTFQQ",
+            "ABIKCgZTSU1QTEUQARIJCgVQUk9UTxACEgsKB1RFWFRNU0cQAxIICgROTUVB",
+            "EAQSCwoHQ0FMVE9QTxAFEggKBFdTODUQBhrpAgoaRXh0ZXJuYWxOb3RpZmlj",
+            "YXRpb25Db25maWcSDwoHZW5hYmxlZBgBIAEoCBIRCglvdXRwdXRfbXMYAiAB",
+            "KA0SDgoGb3V0cHV0GAMgASgNEhQKDG91dHB1dF92aWJyYRgIIAEoDRIVCg1v",
+            "dXRwdXRfYnV6emVyGAkgASgNEg4KBmFjdGl2ZRgEIAEoCBIVCg1hbGVydF9t",
+            "ZXNzYWdlGAUgASgIEhsKE2FsZXJ0X21lc3NhZ2VfdmlicmEYCiABKAgSHAoU",
+            "YWxlcnRfbWVzc2FnZV9idXp6ZXIYCyABKAgSEgoKYWxlcnRfYmVsbBgGIAEo",
+            "CBIYChBhbGVydF9iZWxsX3ZpYnJhGAwgASgIEhkKEWFsZXJ0X2JlbGxfYnV6",
+            "emVyGA0gASgIEg8KB3VzZV9wd20YByABKAgSEwoLbmFnX3RpbWVvdXQYDiAB",
+            "KA0SGQoRdXNlX2kyc19hc19idXp6ZXIYDyABKAgalwEKElN0b3JlRm9yd2Fy",
+            "ZENvbmZpZxIPCgdlbmFibGVkGAEgASgIEhEKCWhlYXJ0YmVhdBgCIAEoCBIP",
+            "CgdyZWNvcmRzGAMgASgNEhoKEmhpc3RvcnlfcmV0dXJuX21heBgEIAEoDRId",
+            "ChVoaXN0b3J5X3JldHVybl93aW5kb3cYBSABKA0SEQoJaXNfc2VydmVyGAYg",
+            "ASgIGkAKD1JhbmdlVGVzdENvbmZpZxIPCgdlbmFibGVkGAEgASgIEg4KBnNl",
+            "bmRlchgCIAEoDRIMCgRzYXZlGAMgASgIGskDCg9UZWxlbWV0cnlDb25maWcS",
+            "HgoWZGV2aWNlX3VwZGF0ZV9pbnRlcnZhbBgBIAEoDRIjChtlbnZpcm9ubWVu",
+            "dF91cGRhdGVfaW50ZXJ2YWwYAiABKA0SJwofZW52aXJvbm1lbnRfbWVhc3Vy",
+            "ZW1lbnRfZW5hYmxlZBgDIAEoCBIiChplbnZpcm9ubWVudF9zY3JlZW5fZW5h",
+            "YmxlZBgEIAEoCBImCh5lbnZpcm9ubWVudF9kaXNwbGF5X2ZhaHJlbmhlaXQY",
+            "BSABKAgSGwoTYWlyX3F1YWxpdHlfZW5hYmxlZBgGIAEoCBIcChRhaXJfcXVh",
+            "bGl0eV9pbnRlcnZhbBgHIAEoDRIhChlwb3dlcl9tZWFzdXJlbWVudF9lbmFi",
+            "bGVkGAggASgIEh0KFXBvd2VyX3VwZGF0ZV9pbnRlcnZhbBgJIAEoDRIcChRw",
+            "b3dlcl9zY3JlZW5fZW5hYmxlZBgKIAEoCBIiChpoZWFsdGhfbWVhc3VyZW1l",
+            "bnRfZW5hYmxlZBgLIAEoCBIeChZoZWFsdGhfdXBkYXRlX2ludGVydmFsGAwg",
+            "ASgNEh0KFWhlYWx0aF9zY3JlZW5fZW5hYmxlZBgNIAEoCBrWBAoTQ2FubmVk",
+            "TWVzc2FnZUNvbmZpZxIXCg9yb3RhcnkxX2VuYWJsZWQYASABKAgSGQoRaW5w",
+            "dXRicm9rZXJfcGluX2EYAiABKA0SGQoRaW5wdXRicm9rZXJfcGluX2IYAyAB",
+            "KA0SHQoVaW5wdXRicm9rZXJfcGluX3ByZXNzGAQgASgNElkKFGlucHV0YnJv",
+            "a2VyX2V2ZW50X2N3GAUgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcu",
+            "Q2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJaChVpbnB1dGJy",
+            "b2tlcl9ldmVudF9jY3cYBiABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNvbmZp",
+            "Zy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0RXZlbnRDaGFyElwKF2lucHV0",
+            "YnJva2VyX2V2ZW50X3ByZXNzGAcgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVD",
+            "b25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchIXCg91",
+            "cGRvd24xX2VuYWJsZWQYCCABKAgSDwoHZW5hYmxlZBgJIAEoCBIaChJhbGxv",
+            "d19pbnB1dF9zb3VyY2UYCiABKAkSEQoJc2VuZF9iZWxsGAsgASgIImMKDklu",
+            "cHV0RXZlbnRDaGFyEggKBE5PTkUQABIGCgJVUBAREggKBERPV04QEhIICgRM",
+            "RUZUEBMSCQoFUklHSFQQFBIKCgZTRUxFQ1QQChIICgRCQUNLEBsSCgoGQ0FO",
+            "Q0VMEBgaZQoVQW1iaWVudExpZ2h0aW5nQ29uZmlnEhEKCWxlZF9zdGF0ZRgB",
+            "IAEoCBIPCgdjdXJyZW50GAIgASgNEgsKA3JlZBgDIAEoDRINCgVncmVlbhgE",
+            "IAEoDRIMCgRibHVlGAUgASgNQhEKD3BheWxvYWRfdmFyaWFudCJkChFSZW1v",
+            "dGVIYXJkd2FyZVBpbhIQCghncGlvX3BpbhgBIAEoDRIMCgRuYW1lGAIgASgJ",
+            "Ei8KBHR5cGUYAyABKA4yIS5tZXNodGFzdGljLlJlbW90ZUhhcmR3YXJlUGlu",
+            "VHlwZSpJChVSZW1vdGVIYXJkd2FyZVBpblR5cGUSCwoHVU5LTk9XThAAEhAK",
+            "DERJR0lUQUxfUkVBRBABEhEKDURJR0lUQUxfV1JJVEUQAkJnChNjb20uZ2Vl",
+            "a3N2aWxsZS5tZXNoQhJNb2R1bGVDb25maWdQcm90b3NaImdpdGh1Yi5jb20v",
+            "bWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVm",
+            "c7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.RemoteHardwarePinType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -138,14 +145,14 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MapReportSettings), global::Meshtastic.Protobufs.ModuleConfig.Types.MapReportSettings.Parser, new[]{ "PublishIntervalSecs", "PositionPrecision" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig.Parser, new[]{ "Enabled", "AllowUndefinedPinAccess", "AvailablePins" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig.Parser, new[]{ "Enabled", "UpdateInterval" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Parser, new[]{ "Enabled", "MinimumBroadcastSecs", "StateBroadcastSecs", "SendBell", "Name", "MonitorPin", "DetectionTriggeredHigh", "UsePullup" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Parser, new[]{ "Enabled", "MinimumBroadcastSecs", "StateBroadcastSecs", "SendBell", "Name", "MonitorPin", "DetectionTriggerType", "UsePullup" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Parser, new[]{ "Codec2Enabled", "PttPin", "Bitrate", "I2SWs", "I2SSd", "I2SDin", "I2SSck" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Types.Audio_Baud) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig.Parser, new[]{ "Enabled", "PaxcounterUpdateInterval", "WifiThreshold", "BleThreshold" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Parser, new[]{ "Enabled", "Echo", "Rxd", "Txd", "Baud", "Timeout", "Mode", "OverrideConsoleSerialPort" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types.Serial_Baud), typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types.Serial_Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig.Parser, new[]{ "Enabled", "OutputMs", "Output", "OutputVibra", "OutputBuzzer", "Active", "AlertMessage", "AlertMessageVibra", "AlertMessageBuzzer", "AlertBell", "AlertBellVibra", "AlertBellBuzzer", "UsePwm", "NagTimeout", "UseI2SAsBuzzer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig.Parser, new[]{ "Enabled", "Heartbeat", "Records", "HistoryReturnMax", "HistoryReturnWindow", "IsServer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig.Parser, new[]{ "Enabled", "Sender", "Save" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit", "AirQualityEnabled", "AirQualityInterval", "PowerMeasurementEnabled", "PowerUpdateInterval", "PowerScreenEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit", "AirQualityEnabled", "AirQualityInterval", "PowerMeasurementEnabled", "PowerUpdateInterval", "PowerScreenEnabled", "HealthMeasurementEnabled", "HealthUpdateInterval", "HealthScreenEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Parser, new[]{ "Rotary1Enabled", "InputbrokerPinA", "InputbrokerPinB", "InputbrokerPinPress", "InputbrokerEventCw", "InputbrokerEventCcw", "InputbrokerEventPress", "Updown1Enabled", "Enabled", "AllowInputSource", "SendBell" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Types.InputEventChar) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig.Parser, new[]{ "LedState", "Current", "Red", "Green", "Blue" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.RemoteHardwarePin), global::Meshtastic.Protobufs.RemoteHardwarePin.Parser, new[]{ "GpioPin", "Name", "Type" }, null, null, null, null)
@@ -2518,7 +2525,7 @@ namespace Meshtastic.Protobufs {
           sendBell_ = other.sendBell_;
           name_ = other.name_;
           monitorPin_ = other.monitorPin_;
-          detectionTriggeredHigh_ = other.detectionTriggeredHigh_;
+          detectionTriggerType_ = other.detectionTriggerType_;
           usePullup_ = other.usePullup_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -2550,7 +2557,8 @@ namespace Meshtastic.Protobufs {
         private uint minimumBroadcastSecs_;
         /// <summary>
         ///
-        /// Interval in seconds of how often we can send a message to the mesh when a state change is detected
+        /// Interval in seconds of how often we can send a message to the mesh when a
+        /// trigger event is detected
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2566,9 +2574,10 @@ namespace Meshtastic.Protobufs {
         private uint stateBroadcastSecs_;
         /// <summary>
         ///
-        /// Interval in seconds of how often we should send a message to the mesh with the current state regardless of changes
-        /// When set to 0, only state changes will be broadcasted
-        /// Works as a sort of status heartbeat for peace of mind
+        /// Interval in seconds of how often we should send a message to the mesh
+        /// with the current state regardless of trigger events When set to 0, only
+        /// trigger events will be broadcasted Works as a sort of status heartbeat
+        /// for peace of mind
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2630,20 +2639,19 @@ namespace Meshtastic.Protobufs {
           }
         }
 
-        /// <summary>Field number for the "detection_triggered_high" field.</summary>
-        public const int DetectionTriggeredHighFieldNumber = 7;
-        private bool detectionTriggeredHigh_;
+        /// <summary>Field number for the "detection_trigger_type" field.</summary>
+        public const int DetectionTriggerTypeFieldNumber = 7;
+        private global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType detectionTriggerType_ = global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType.LogicLow;
         /// <summary>
         ///
-        /// Whether or not the GPIO pin state detection is triggered on HIGH (1)
-        /// Otherwise LOW (0)
+        /// The type of trigger event to be used
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool DetectionTriggeredHigh {
-          get { return detectionTriggeredHigh_; }
+        public global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType DetectionTriggerType {
+          get { return detectionTriggerType_; }
           set {
-            detectionTriggeredHigh_ = value;
+            detectionTriggerType_ = value;
           }
         }
 
@@ -2685,7 +2693,7 @@ namespace Meshtastic.Protobufs {
           if (SendBell != other.SendBell) return false;
           if (Name != other.Name) return false;
           if (MonitorPin != other.MonitorPin) return false;
-          if (DetectionTriggeredHigh != other.DetectionTriggeredHigh) return false;
+          if (DetectionTriggerType != other.DetectionTriggerType) return false;
           if (UsePullup != other.UsePullup) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -2700,7 +2708,7 @@ namespace Meshtastic.Protobufs {
           if (SendBell != false) hash ^= SendBell.GetHashCode();
           if (Name.Length != 0) hash ^= Name.GetHashCode();
           if (MonitorPin != 0) hash ^= MonitorPin.GetHashCode();
-          if (DetectionTriggeredHigh != false) hash ^= DetectionTriggeredHigh.GetHashCode();
+          if (DetectionTriggerType != global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType.LogicLow) hash ^= DetectionTriggerType.GetHashCode();
           if (UsePullup != false) hash ^= UsePullup.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2744,9 +2752,9 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(48);
             output.WriteUInt32(MonitorPin);
           }
-          if (DetectionTriggeredHigh != false) {
+          if (DetectionTriggerType != global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType.LogicLow) {
             output.WriteRawTag(56);
-            output.WriteBool(DetectionTriggeredHigh);
+            output.WriteEnum((int) DetectionTriggerType);
           }
           if (UsePullup != false) {
             output.WriteRawTag(64);
@@ -2786,9 +2794,9 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(48);
             output.WriteUInt32(MonitorPin);
           }
-          if (DetectionTriggeredHigh != false) {
+          if (DetectionTriggerType != global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType.LogicLow) {
             output.WriteRawTag(56);
-            output.WriteBool(DetectionTriggeredHigh);
+            output.WriteEnum((int) DetectionTriggerType);
           }
           if (UsePullup != false) {
             output.WriteRawTag(64);
@@ -2822,8 +2830,8 @@ namespace Meshtastic.Protobufs {
           if (MonitorPin != 0) {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonitorPin);
           }
-          if (DetectionTriggeredHigh != false) {
-            size += 1 + 1;
+          if (DetectionTriggerType != global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType.LogicLow) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DetectionTriggerType);
           }
           if (UsePullup != false) {
             size += 1 + 1;
@@ -2858,8 +2866,8 @@ namespace Meshtastic.Protobufs {
           if (other.MonitorPin != 0) {
             MonitorPin = other.MonitorPin;
           }
-          if (other.DetectionTriggeredHigh != false) {
-            DetectionTriggeredHigh = other.DetectionTriggeredHigh;
+          if (other.DetectionTriggerType != global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType.LogicLow) {
+            DetectionTriggerType = other.DetectionTriggerType;
           }
           if (other.UsePullup != false) {
             UsePullup = other.UsePullup;
@@ -2904,7 +2912,7 @@ namespace Meshtastic.Protobufs {
                 break;
               }
               case 56: {
-                DetectionTriggeredHigh = input.ReadBool();
+                DetectionTriggerType = (global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType) input.ReadEnum();
                 break;
               }
               case 64: {
@@ -2951,7 +2959,7 @@ namespace Meshtastic.Protobufs {
                 break;
               }
               case 56: {
-                DetectionTriggeredHigh = input.ReadBool();
+                DetectionTriggerType = (global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType) input.ReadEnum();
                 break;
               }
               case 64: {
@@ -2962,6 +2970,43 @@ namespace Meshtastic.Protobufs {
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the DetectionSensorConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          public enum TriggerType {
+            /// <summary>
+            /// Event is triggered if pin is low
+            /// </summary>
+            [pbr::OriginalName("LOGIC_LOW")] LogicLow = 0,
+            /// <summary>
+            /// Event is triggered if pin is high
+            /// </summary>
+            [pbr::OriginalName("LOGIC_HIGH")] LogicHigh = 1,
+            /// <summary>
+            /// Event is triggered when pin goes high to low
+            /// </summary>
+            [pbr::OriginalName("FALLING_EDGE")] FallingEdge = 2,
+            /// <summary>
+            /// Event is triggered when pin goes low to high
+            /// </summary>
+            [pbr::OriginalName("RISING_EDGE")] RisingEdge = 3,
+            /// <summary>
+            /// Event is triggered on every pin state change, low is considered to be
+            /// "active"
+            /// </summary>
+            [pbr::OriginalName("EITHER_EDGE_ACTIVE_LOW")] EitherEdgeActiveLow = 4,
+            /// <summary>
+            /// Event is triggered on every pin state change, high is considered to be
+            /// "active"
+            /// </summary>
+            [pbr::OriginalName("EITHER_EDGE_ACTIVE_HIGH")] EitherEdgeActiveHigh = 5,
+          }
+
+        }
+        #endregion
 
       }
 
@@ -5797,6 +5842,9 @@ namespace Meshtastic.Protobufs {
           powerMeasurementEnabled_ = other.powerMeasurementEnabled_;
           powerUpdateInterval_ = other.powerUpdateInterval_;
           powerScreenEnabled_ = other.powerScreenEnabled_;
+          healthMeasurementEnabled_ = other.healthMeasurementEnabled_;
+          healthUpdateInterval_ = other.healthUpdateInterval_;
+          healthScreenEnabled_ = other.healthScreenEnabled_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5923,8 +5971,7 @@ namespace Meshtastic.Protobufs {
         private bool powerMeasurementEnabled_;
         /// <summary>
         ///
-        /// Interval in seconds of how often we should try to send our
-        /// air quality metrics to the mesh
+        /// Enable/disable Power metrics
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5941,7 +5988,7 @@ namespace Meshtastic.Protobufs {
         /// <summary>
         ///
         /// Interval in seconds of how often we should try to send our
-        /// air quality metrics to the mesh
+        /// power metrics to the mesh
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5957,8 +6004,7 @@ namespace Meshtastic.Protobufs {
         private bool powerScreenEnabled_;
         /// <summary>
         ///
-        /// Interval in seconds of how often we should try to send our
-        /// air quality metrics to the mesh
+        /// Enable/Disable the power measurement module on-device display
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5966,6 +6012,56 @@ namespace Meshtastic.Protobufs {
           get { return powerScreenEnabled_; }
           set {
             powerScreenEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "health_measurement_enabled" field.</summary>
+        public const int HealthMeasurementEnabledFieldNumber = 11;
+        private bool healthMeasurementEnabled_;
+        /// <summary>
+        ///
+        /// Preferences for the (Health) Telemetry Module
+        /// Enable/Disable the telemetry measurement module measurement collection
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HealthMeasurementEnabled {
+          get { return healthMeasurementEnabled_; }
+          set {
+            healthMeasurementEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "health_update_interval" field.</summary>
+        public const int HealthUpdateIntervalFieldNumber = 12;
+        private uint healthUpdateInterval_;
+        /// <summary>
+        ///
+        /// Interval in seconds of how often we should try to send our
+        /// health metrics to the mesh
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint HealthUpdateInterval {
+          get { return healthUpdateInterval_; }
+          set {
+            healthUpdateInterval_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "health_screen_enabled" field.</summary>
+        public const int HealthScreenEnabledFieldNumber = 13;
+        private bool healthScreenEnabled_;
+        /// <summary>
+        ///
+        /// Enable/Disable the health telemetry module on-device display
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HealthScreenEnabled {
+          get { return healthScreenEnabled_; }
+          set {
+            healthScreenEnabled_ = value;
           }
         }
 
@@ -5994,6 +6090,9 @@ namespace Meshtastic.Protobufs {
           if (PowerMeasurementEnabled != other.PowerMeasurementEnabled) return false;
           if (PowerUpdateInterval != other.PowerUpdateInterval) return false;
           if (PowerScreenEnabled != other.PowerScreenEnabled) return false;
+          if (HealthMeasurementEnabled != other.HealthMeasurementEnabled) return false;
+          if (HealthUpdateInterval != other.HealthUpdateInterval) return false;
+          if (HealthScreenEnabled != other.HealthScreenEnabled) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -6011,6 +6110,9 @@ namespace Meshtastic.Protobufs {
           if (PowerMeasurementEnabled != false) hash ^= PowerMeasurementEnabled.GetHashCode();
           if (PowerUpdateInterval != 0) hash ^= PowerUpdateInterval.GetHashCode();
           if (PowerScreenEnabled != false) hash ^= PowerScreenEnabled.GetHashCode();
+          if (HealthMeasurementEnabled != false) hash ^= HealthMeasurementEnabled.GetHashCode();
+          if (HealthUpdateInterval != 0) hash ^= HealthUpdateInterval.GetHashCode();
+          if (HealthScreenEnabled != false) hash ^= HealthScreenEnabled.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -6069,6 +6171,18 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(80);
             output.WriteBool(PowerScreenEnabled);
           }
+          if (HealthMeasurementEnabled != false) {
+            output.WriteRawTag(88);
+            output.WriteBool(HealthMeasurementEnabled);
+          }
+          if (HealthUpdateInterval != 0) {
+            output.WriteRawTag(96);
+            output.WriteUInt32(HealthUpdateInterval);
+          }
+          if (HealthScreenEnabled != false) {
+            output.WriteRawTag(104);
+            output.WriteBool(HealthScreenEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -6119,6 +6233,18 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(80);
             output.WriteBool(PowerScreenEnabled);
           }
+          if (HealthMeasurementEnabled != false) {
+            output.WriteRawTag(88);
+            output.WriteBool(HealthMeasurementEnabled);
+          }
+          if (HealthUpdateInterval != 0) {
+            output.WriteRawTag(96);
+            output.WriteUInt32(HealthUpdateInterval);
+          }
+          if (HealthScreenEnabled != false) {
+            output.WriteRawTag(104);
+            output.WriteBool(HealthScreenEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -6157,6 +6283,15 @@ namespace Meshtastic.Protobufs {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PowerUpdateInterval);
           }
           if (PowerScreenEnabled != false) {
+            size += 1 + 1;
+          }
+          if (HealthMeasurementEnabled != false) {
+            size += 1 + 1;
+          }
+          if (HealthUpdateInterval != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HealthUpdateInterval);
+          }
+          if (HealthScreenEnabled != false) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {
@@ -6200,6 +6335,15 @@ namespace Meshtastic.Protobufs {
           }
           if (other.PowerScreenEnabled != false) {
             PowerScreenEnabled = other.PowerScreenEnabled;
+          }
+          if (other.HealthMeasurementEnabled != false) {
+            HealthMeasurementEnabled = other.HealthMeasurementEnabled;
+          }
+          if (other.HealthUpdateInterval != 0) {
+            HealthUpdateInterval = other.HealthUpdateInterval;
+          }
+          if (other.HealthScreenEnabled != false) {
+            HealthScreenEnabled = other.HealthScreenEnabled;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -6256,6 +6400,18 @@ namespace Meshtastic.Protobufs {
                 PowerScreenEnabled = input.ReadBool();
                 break;
               }
+              case 88: {
+                HealthMeasurementEnabled = input.ReadBool();
+                break;
+              }
+              case 96: {
+                HealthUpdateInterval = input.ReadUInt32();
+                break;
+              }
+              case 104: {
+                HealthScreenEnabled = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -6309,6 +6465,18 @@ namespace Meshtastic.Protobufs {
               }
               case 80: {
                 PowerScreenEnabled = input.ReadBool();
+                break;
+              }
+              case 88: {
+                HealthMeasurementEnabled = input.ReadBool();
+                break;
+              }
+              case 96: {
+                HealthUpdateInterval = input.ReadUInt32();
+                break;
+              }
+              case 104: {
+                HealthScreenEnabled = input.ReadBool();
                 break;
               }
             }

@@ -39,7 +39,9 @@ public class TcpConnection : DeviceConnection, IDisposable
         networkStream = client.GetStream();
         await networkStream.WriteAsync(toRadio);
         VerboseLogPacket(packet);
-        await ReadFromRadio(isComplete);
+        if (isComplete != null)
+            await ReadFromRadio(isComplete);
+
         return DeviceStateContainer;
     }
 

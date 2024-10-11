@@ -24,34 +24,34 @@ namespace Meshtastic.Protobufs {
     static AtakReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVtZXNodGFzdGljL2F0YWsucHJvdG8SCm1lc2h0YXN0aWMi5gEKCVRBS1Bh",
+            "ChVtZXNodGFzdGljL2F0YWsucHJvdG8SCm1lc2h0YXN0aWMi+AEKCVRBS1Bh",
             "Y2tldBIVCg1pc19jb21wcmVzc2VkGAEgASgIEiQKB2NvbnRhY3QYAiABKAsy",
             "Ey5tZXNodGFzdGljLkNvbnRhY3QSIAoFZ3JvdXAYAyABKAsyES5tZXNodGFz",
             "dGljLkdyb3VwEiIKBnN0YXR1cxgEIAEoCzISLm1lc2h0YXN0aWMuU3RhdHVz",
             "Eh4KA3BsaRgFIAEoCzIPLm1lc2h0YXN0aWMuUExJSAASIwoEY2hhdBgGIAEo",
-            "CzITLm1lc2h0YXN0aWMuR2VvQ2hhdEgAQhEKD3BheWxvYWRfdmFyaWFudCJc",
-            "CgdHZW9DaGF0Eg8KB21lc3NhZ2UYASABKAkSDwoCdG8YAiABKAlIAIgBARIY",
-            "Cgt0b19jYWxsc2lnbhgDIAEoCUgBiAEBQgUKA190b0IOCgxfdG9fY2FsbHNp",
-            "Z24iTQoFR3JvdXASJAoEcm9sZRgBIAEoDjIWLm1lc2h0YXN0aWMuTWVtYmVy",
-            "Um9sZRIeCgR0ZWFtGAIgASgOMhAubWVzaHRhc3RpYy5UZWFtIhkKBlN0YXR1",
-            "cxIPCgdiYXR0ZXJ5GAEgASgNIjQKB0NvbnRhY3QSEAoIY2FsbHNpZ24YASAB",
-            "KAkSFwoPZGV2aWNlX2NhbGxzaWduGAIgASgJIl8KA1BMSRISCgpsYXRpdHVk",
-            "ZV9pGAEgASgPEhMKC2xvbmdpdHVkZV9pGAIgASgPEhAKCGFsdGl0dWRlGAMg",
-            "ASgFEg0KBXNwZWVkGAQgASgNEg4KBmNvdXJzZRgFIAEoDSrAAQoEVGVhbRIU",
-            "ChBVbnNwZWNpZmVkX0NvbG9yEAASCQoFV2hpdGUQARIKCgZZZWxsb3cQAhIK",
-            "CgZPcmFuZ2UQAxILCgdNYWdlbnRhEAQSBwoDUmVkEAUSCgoGTWFyb29uEAYS",
-            "CgoGUHVycGxlEAcSDQoJRGFya19CbHVlEAgSCAoEQmx1ZRAJEggKBEN5YW4Q",
-            "ChIICgRUZWFsEAsSCQoFR3JlZW4QDBIOCgpEYXJrX0dyZWVuEA0SCQoFQnJv",
-            "d24QDip/CgpNZW1iZXJSb2xlEg4KClVuc3BlY2lmZWQQABIOCgpUZWFtTWVt",
-            "YmVyEAESDAoIVGVhbUxlYWQQAhIGCgJIURADEgoKBlNuaXBlchAEEgkKBU1l",
-            "ZGljEAUSEwoPRm9yd2FyZE9ic2VydmVyEAYSBwoDUlRPEAcSBgoCSzkQCEJf",
-            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpBVEFLUHJvdG9zWiJnaXRodWIuY29t",
-            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
-            "ZnO6AgBiBnByb3RvMw=="));
+            "CzITLm1lc2h0YXN0aWMuR2VvQ2hhdEgAEhAKBmRldGFpbBgHIAEoDEgAQhEK",
+            "D3BheWxvYWRfdmFyaWFudCJcCgdHZW9DaGF0Eg8KB21lc3NhZ2UYASABKAkS",
+            "DwoCdG8YAiABKAlIAIgBARIYCgt0b19jYWxsc2lnbhgDIAEoCUgBiAEBQgUK",
+            "A190b0IOCgxfdG9fY2FsbHNpZ24iTQoFR3JvdXASJAoEcm9sZRgBIAEoDjIW",
+            "Lm1lc2h0YXN0aWMuTWVtYmVyUm9sZRIeCgR0ZWFtGAIgASgOMhAubWVzaHRh",
+            "c3RpYy5UZWFtIhkKBlN0YXR1cxIPCgdiYXR0ZXJ5GAEgASgNIjQKB0NvbnRh",
+            "Y3QSEAoIY2FsbHNpZ24YASABKAkSFwoPZGV2aWNlX2NhbGxzaWduGAIgASgJ",
+            "Il8KA1BMSRISCgpsYXRpdHVkZV9pGAEgASgPEhMKC2xvbmdpdHVkZV9pGAIg",
+            "ASgPEhAKCGFsdGl0dWRlGAMgASgFEg0KBXNwZWVkGAQgASgNEg4KBmNvdXJz",
+            "ZRgFIAEoDSrAAQoEVGVhbRIUChBVbnNwZWNpZmVkX0NvbG9yEAASCQoFV2hp",
+            "dGUQARIKCgZZZWxsb3cQAhIKCgZPcmFuZ2UQAxILCgdNYWdlbnRhEAQSBwoD",
+            "UmVkEAUSCgoGTWFyb29uEAYSCgoGUHVycGxlEAcSDQoJRGFya19CbHVlEAgS",
+            "CAoEQmx1ZRAJEggKBEN5YW4QChIICgRUZWFsEAsSCQoFR3JlZW4QDBIOCgpE",
+            "YXJrX0dyZWVuEA0SCQoFQnJvd24QDip/CgpNZW1iZXJSb2xlEg4KClVuc3Bl",
+            "Y2lmZWQQABIOCgpUZWFtTWVtYmVyEAESDAoIVGVhbUxlYWQQAhIGCgJIURAD",
+            "EgoKBlNuaXBlchAEEgkKBU1lZGljEAUSEwoPRm9yd2FyZE9ic2VydmVyEAYS",
+            "BwoDUlRPEAcSBgoCSzkQCEJfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpBVEFL",
+            "UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
+            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Team), typeof(global::Meshtastic.Protobufs.MemberRole), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.TAKPacket), global::Meshtastic.Protobufs.TAKPacket.Parser, new[]{ "IsCompressed", "Contact", "Group", "Status", "Pli", "Chat" }, new[]{ "PayloadVariant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.TAKPacket), global::Meshtastic.Protobufs.TAKPacket.Parser, new[]{ "IsCompressed", "Contact", "Group", "Status", "Pli", "Chat", "Detail" }, new[]{ "PayloadVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.GeoChat), global::Meshtastic.Protobufs.GeoChat.Parser, new[]{ "Message", "To", "ToCallsign" }, new[]{ "To", "ToCallsign" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Group), global::Meshtastic.Protobufs.Group.Parser, new[]{ "Role", "Team" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Status), global::Meshtastic.Protobufs.Status.Parser, new[]{ "Battery" }, null, null, null, null),
@@ -245,6 +245,9 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.Chat:
           Chat = other.Chat.Clone();
           break;
+        case PayloadVariantOneofCase.Detail:
+          Detail = other.Detail;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -352,12 +355,30 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "detail" field.</summary>
+    public const int DetailFieldNumber = 7;
+    /// <summary>
+    ///
+    /// Generic CoT detail XML
+    /// May be compressed / truncated by the sender (EUD)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Detail {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Detail ? (pb::ByteString) payloadVariant_ : pb::ByteString.Empty; }
+      set {
+        payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        payloadVariantCase_ = PayloadVariantOneofCase.Detail;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
       None = 0,
       Pli = 5,
       Chat = 6,
+      Detail = 7,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -394,6 +415,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(Status, other.Status)) return false;
       if (!object.Equals(Pli, other.Pli)) return false;
       if (!object.Equals(Chat, other.Chat)) return false;
+      if (Detail != other.Detail) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -408,6 +430,7 @@ namespace Meshtastic.Protobufs {
       if (status_ != null) hash ^= Status.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Pli) hash ^= Pli.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Chat) hash ^= Chat.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Detail) hash ^= Detail.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -451,6 +474,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteMessage(Chat);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Detail) {
+        output.WriteRawTag(58);
+        output.WriteBytes(Detail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -485,6 +512,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteMessage(Chat);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Detail) {
+        output.WriteRawTag(58);
+        output.WriteBytes(Detail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -512,6 +543,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.Chat) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Chat);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Detail) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Detail);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -558,6 +592,9 @@ namespace Meshtastic.Protobufs {
             Chat = new global::Meshtastic.Protobufs.GeoChat();
           }
           Chat.MergeFrom(other.Chat);
+          break;
+        case PayloadVariantOneofCase.Detail:
+          Detail = other.Detail;
           break;
       }
 
@@ -619,6 +656,10 @@ namespace Meshtastic.Protobufs {
             Chat = subBuilder;
             break;
           }
+          case 58: {
+            Detail = input.ReadBytes();
+            break;
+          }
         }
       }
     #endif
@@ -675,6 +716,10 @@ namespace Meshtastic.Protobufs {
             }
             input.ReadMessage(subBuilder);
             Chat = subBuilder;
+            break;
+          }
+          case 58: {
+            Detail = input.ReadBytes();
             break;
           }
         }

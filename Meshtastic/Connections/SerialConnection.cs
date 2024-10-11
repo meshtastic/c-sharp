@@ -76,7 +76,9 @@ public class SerialConnection : DeviceConnection
         await serialPort.BaseStream.WriteAsync(PacketFraming.SERIAL_PREAMBLE.AsMemory(0, PacketFraming.SERIAL_PREAMBLE.Length));
         await serialPort.BaseStream.WriteAsync(toRadio);
         VerboseLogPacket(packet);
-        await ReadFromRadio(isComplete);
+        if (isComplete != null)
+            await ReadFromRadio(isComplete);
+
         return DeviceStateContainer;
     }
 
