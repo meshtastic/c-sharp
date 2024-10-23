@@ -38,11 +38,12 @@ namespace Meshtastic.Protobufs {
             "EwoLY2hhdF9zd2l0Y2gYASABKAgSFwoPcG9zaXRpb25fc3dpdGNoGAIgASgI",
             "EhgKEHRlbGVtZXRyeV9zd2l0Y2gYAyABKAgSEgoKaWFxX3N3aXRjaBgEIAEo",
             "CBIRCglub2RlX25hbWUYBSABKAkqJQoFVGhlbWUSCAoEREFSSxAAEgkKBUxJ",
-            "R0hUEAESBwoDUkVEEAIqWQoITGFuZ3VhZ2USCwoHRU5HTElTSBAAEgoKBkZS",
-            "RU5DSBABEgoKBkdFUk1BThACEgsKB0lUQUxJQU4QAxIOCgpQT1JUVUdVRVNF",
-            "EAQSCwoHU1BBTklTSBAFQmQKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD0xvY2Fs",
-            "T25seVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRl",
-            "ZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "R0hUEAESBwoDUkVEEAIqjAEKCExhbmd1YWdlEgsKB0VOR0xJU0gQABIKCgZG",
+            "UkVOQ0gQARIKCgZHRVJNQU4QAhILCgdJVEFMSUFOEAMSDgoKUE9SVFVHVUVT",
+            "RRAEEgsKB1NQQU5JU0gQBRILCgdTV0VESVNIEAYSCwoHRklOTklTSBAHEgoK",
+            "BlBPTElTSBAIEgsKB1RVUktJU0gQCUJjChNjb20uZ2Vla3N2aWxsZS5tZXNo",
+            "Qg5EZXZpY2VVSVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dl",
+            "bmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -108,6 +109,26 @@ namespace Meshtastic.Protobufs {
     /// Spanish
     /// </summary>
     [pbr::OriginalName("SPANISH")] Spanish = 5,
+    /// <summary>
+    ///
+    /// Swedish
+    /// </summary>
+    [pbr::OriginalName("SWEDISH")] Swedish = 6,
+    /// <summary>
+    ///
+    /// Finnish
+    /// </summary>
+    [pbr::OriginalName("FINNISH")] Finnish = 7,
+    /// <summary>
+    ///
+    /// Polish
+    /// </summary>
+    [pbr::OriginalName("POLISH")] Polish = 8,
+    /// <summary>
+    ///
+    /// Turkish
+    /// </summary>
+    [pbr::OriginalName("TURKISH")] Turkish = 9,
   }
 
   #endregion

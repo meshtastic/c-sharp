@@ -21,7 +21,6 @@ public class TcpConnection : DeviceConnection, IDisposable
         };
     }
 
-
     public TcpConnection(ILogger logger, string host, DeviceStateContainer container, int port = Resources.DEFAULT_TCP_PORT) : base(logger)
     {
         client = new TcpClient(host, port)
