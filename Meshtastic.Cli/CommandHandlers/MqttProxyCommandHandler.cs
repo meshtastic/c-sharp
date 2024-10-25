@@ -91,7 +91,7 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
 
         if (container.LocalModuleConfig.Mqtt.TlsEnabled)
         {
-            builder = builder.WithTls()
+            builder = builder.WithTlsOptions(options => { })
                 .WithTcpServer(host, Int32.Parse(port ?? "8883"));
         }
         else {
