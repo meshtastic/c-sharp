@@ -47,7 +47,12 @@ public static class ReflectionExtensions
             .Where(p => !Exclusions.Contains(p.Name));
     }
 
-    public static string GetSettingValue(this PropertyInfo property, object instance) =>
-        (property.GetValue(instance)?.ToString() ?? string.Empty).Replace("[", string.Empty).Replace("]", string.Empty);
-
+    public static string GetSettingValue(this PropertyInfo property, object instance)
+    {
+        if (property.PropertyType == typeof(ByteString)) {
+            var byteString = (ByteString)property.GetValue(instance)!;
+            return Convert.ToHexString(byteString.ToByteArray());
+        }
+        return (property.GetValue(instance)?.ToString() ?? string.Empty).Replace("[", string.Empty).Replace("]", string.Empty);
+    }
 }
