@@ -48,6 +48,7 @@ root.AddCommand(new SetCommand("set", "Save one or more settings onto the device
 root.AddCommand(new ChannelCommand("channel", "Enable, Disable, Add, Save channels on the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new UrlCommand("url", "Get or set shared channel url", port, host, output, log));
 root.AddCommand(new RebootCommand("reboot", "Reboot the device", port, host, output, log, dest, selectDest));
+root.AddCommand(new RegisterCommand("register", "Print registration info for the device", port, host, output, log));
 root.AddCommand(new MetadataCommand("metadata", "Get device metadata from the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new FactoryResetCommand("factory-reset", "Factory reset configuration of the device", port, host, output, log, dest, selectDest));
 root.AddCommand(new FixedPositionCommand("fixed-position", "Set the device to a fixed position", port, host, output, log, dest, selectDest));
