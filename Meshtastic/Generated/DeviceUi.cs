@@ -24,30 +24,35 @@ namespace Meshtastic.Protobufs {
     static DeviceUiReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyKZAgoO",
-            "RGV2aWNlVUlDb25maWcSGQoRc2NyZWVuX2JyaWdodG5lc3MYASABKA0SFgoO",
-            "c2NyZWVuX3RpbWVvdXQYAiABKA0SEwoLc2NyZWVuX2xvY2sYAyABKAgSIAoF",
-            "dGhlbWUYBCABKA4yES5tZXNodGFzdGljLlRoZW1lEhUKDWFsZXJ0X2VuYWJs",
-            "ZWQYBSABKAgSJgoIbGFuZ3VhZ2UYBiABKA4yFC5tZXNodGFzdGljLkxhbmd1",
-            "YWdlEisKC25vZGVfZmlsdGVyGAcgASgLMhYubWVzaHRhc3RpYy5Ob2RlRmls",
-            "dGVyEjEKDm5vZGVfaGlnaGxpZ2h0GAggASgLMhkubWVzaHRhc3RpYy5Ob2Rl",
-            "SGlnaGxpZ2h0IpYBCgpOb2RlRmlsdGVyEhYKDnVua25vd25fc3dpdGNoGAEg",
-            "ASgIEhYKDm9mZmxpbmVfc3dpdGNoGAIgASgIEhkKEXB1YmxpY19rZXlfc3dp",
-            "dGNoGAMgASgIEhEKCWhvcHNfYXdheRgEIAEoBRIXCg9wb3NpdGlvbl9zd2l0",
-            "Y2gYBSABKAgSEQoJbm9kZV9uYW1lGAYgASgJIn4KDU5vZGVIaWdobGlnaHQS",
-            "EwoLY2hhdF9zd2l0Y2gYASABKAgSFwoPcG9zaXRpb25fc3dpdGNoGAIgASgI",
-            "EhgKEHRlbGVtZXRyeV9zd2l0Y2gYAyABKAgSEgoKaWFxX3N3aXRjaBgEIAEo",
-            "CBIRCglub2RlX25hbWUYBSABKAkqJQoFVGhlbWUSCAoEREFSSxAAEgkKBUxJ",
-            "R0hUEAESBwoDUkVEEAIqjAEKCExhbmd1YWdlEgsKB0VOR0xJU0gQABIKCgZG",
-            "UkVOQ0gQARIKCgZHRVJNQU4QAhILCgdJVEFMSUFOEAMSDgoKUE9SVFVHVUVT",
-            "RRAEEgsKB1NQQU5JU0gQBRILCgdTV0VESVNIEAYSCwoHRklOTklTSBAHEgoK",
-            "BlBPTElTSBAIEgsKB1RVUktJU0gQCUJjChNjb20uZ2Vla3N2aWxsZS5tZXNo",
-            "Qg5EZXZpY2VVSVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dl",
-            "bmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyKBAwoO",
+            "RGV2aWNlVUlDb25maWcSDwoHdmVyc2lvbhgBIAEoDRIZChFzY3JlZW5fYnJp",
+            "Z2h0bmVzcxgCIAEoDRIWCg5zY3JlZW5fdGltZW91dBgDIAEoDRITCgtzY3Jl",
+            "ZW5fbG9jaxgEIAEoCBIVCg1zZXR0aW5nc19sb2NrGAUgASgIEhAKCHBpbl9j",
+            "b2RlGAYgASgNEiAKBXRoZW1lGAcgASgOMhEubWVzaHRhc3RpYy5UaGVtZRIV",
+            "Cg1hbGVydF9lbmFibGVkGAggASgIEhYKDmJhbm5lcl9lbmFibGVkGAkgASgI",
+            "EhQKDHJpbmdfdG9uZV9pZBgKIAEoDRImCghsYW5ndWFnZRgLIAEoDjIULm1l",
+            "c2h0YXN0aWMuTGFuZ3VhZ2USKwoLbm9kZV9maWx0ZXIYDCABKAsyFi5tZXNo",
+            "dGFzdGljLk5vZGVGaWx0ZXISMQoObm9kZV9oaWdobGlnaHQYDSABKAsyGS5t",
+            "ZXNodGFzdGljLk5vZGVIaWdobGlnaHQilgEKCk5vZGVGaWx0ZXISFgoOdW5r",
+            "bm93bl9zd2l0Y2gYASABKAgSFgoOb2ZmbGluZV9zd2l0Y2gYAiABKAgSGQoR",
+            "cHVibGljX2tleV9zd2l0Y2gYAyABKAgSEQoJaG9wc19hd2F5GAQgASgFEhcK",
+            "D3Bvc2l0aW9uX3N3aXRjaBgFIAEoCBIRCglub2RlX25hbWUYBiABKAkifgoN",
+            "Tm9kZUhpZ2hsaWdodBITCgtjaGF0X3N3aXRjaBgBIAEoCBIXCg9wb3NpdGlv",
+            "bl9zd2l0Y2gYAiABKAgSGAoQdGVsZW1ldHJ5X3N3aXRjaBgDIAEoCBISCgpp",
+            "YXFfc3dpdGNoGAQgASgIEhEKCW5vZGVfbmFtZRgFIAEoCSolCgVUaGVtZRII",
+            "CgREQVJLEAASCQoFTElHSFQQARIHCgNSRUQQAirtAQoITGFuZ3VhZ2USCwoH",
+            "RU5HTElTSBAAEgoKBkZSRU5DSBABEgoKBkdFUk1BThACEgsKB0lUQUxJQU4Q",
+            "AxIOCgpQT1JUVUdVRVNFEAQSCwoHU1BBTklTSBAFEgsKB1NXRURJU0gQBhIL",
+            "CgdGSU5OSVNIEAcSCgoGUE9MSVNIEAgSCwoHVFVSS0lTSBAJEgsKB1NFUkJJ",
+            "QU4QChILCgdSVVNTSUFOEAsSCQoFRFVUQ0gQDBIJCgVHUkVFSxANEhYKElNJ",
+            "TVBMSUZJRURfQ0hJTkVTRRAeEhcKE1RSQURJVElPTkFMX0NISU5FU0UQH0Jj",
+            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQg5EZXZpY2VVSVByb3Rvc1oiZ2l0aHVi",
+            "LmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJv",
+            "dG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "ScreenBrightness", "ScreenTimeout", "ScreenLock", "Theme", "AlertEnabled", "Language", "NodeFilter", "NodeHighlight" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeFilter), global::Meshtastic.Protobufs.NodeFilter.Parser, new[]{ "UnknownSwitch", "OfflineSwitch", "PublicKeySwitch", "HopsAway", "PositionSwitch", "NodeName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeHighlight), global::Meshtastic.Protobufs.NodeHighlight.Parser, new[]{ "ChatSwitch", "PositionSwitch", "TelemetrySwitch", "IaqSwitch", "NodeName" }, null, null, null, null)
           }));
@@ -129,6 +134,36 @@ namespace Meshtastic.Protobufs {
     /// Turkish
     /// </summary>
     [pbr::OriginalName("TURKISH")] Turkish = 9,
+    /// <summary>
+    ///
+    /// Serbian
+    /// </summary>
+    [pbr::OriginalName("SERBIAN")] Serbian = 10,
+    /// <summary>
+    ///
+    /// Russian
+    /// </summary>
+    [pbr::OriginalName("RUSSIAN")] Russian = 11,
+    /// <summary>
+    ///
+    /// Dutch
+    /// </summary>
+    [pbr::OriginalName("DUTCH")] Dutch = 12,
+    /// <summary>
+    ///
+    /// Greek
+    /// </summary>
+    [pbr::OriginalName("GREEK")] Greek = 13,
+    /// <summary>
+    ///
+    /// Simplified Chinese (experimental)
+    /// </summary>
+    [pbr::OriginalName("SIMPLIFIED_CHINESE")] SimplifiedChinese = 30,
+    /// <summary>
+    ///
+    /// Traditional Chinese (experimental)
+    /// </summary>
+    [pbr::OriginalName("TRADITIONAL_CHINESE")] TraditionalChinese = 31,
   }
 
   #endregion
@@ -168,11 +203,16 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceUIConfig(DeviceUIConfig other) : this() {
+      version_ = other.version_;
       screenBrightness_ = other.screenBrightness_;
       screenTimeout_ = other.screenTimeout_;
       screenLock_ = other.screenLock_;
+      settingsLock_ = other.settingsLock_;
+      pinCode_ = other.pinCode_;
       theme_ = other.theme_;
       alertEnabled_ = other.alertEnabled_;
+      bannerEnabled_ = other.bannerEnabled_;
+      ringToneId_ = other.ringToneId_;
       language_ = other.language_;
       nodeFilter_ = other.nodeFilter_ != null ? other.nodeFilter_.Clone() : null;
       nodeHighlight_ = other.nodeHighlight_ != null ? other.nodeHighlight_.Clone() : null;
@@ -185,8 +225,24 @@ namespace Meshtastic.Protobufs {
       return new DeviceUIConfig(this);
     }
 
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 1;
+    private uint version_;
+    /// <summary>
+    ///
+    /// A version integer used to invalidate saved files when we make incompatible changes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Version {
+      get { return version_; }
+      set {
+        version_ = value;
+      }
+    }
+
     /// <summary>Field number for the "screen_brightness" field.</summary>
-    public const int ScreenBrightnessFieldNumber = 1;
+    public const int ScreenBrightnessFieldNumber = 2;
     private uint screenBrightness_;
     /// <summary>
     ///
@@ -202,7 +258,7 @@ namespace Meshtastic.Protobufs {
     }
 
     /// <summary>Field number for the "screen_timeout" field.</summary>
-    public const int ScreenTimeoutFieldNumber = 2;
+    public const int ScreenTimeoutFieldNumber = 3;
     private uint screenTimeout_;
     /// <summary>
     ///
@@ -218,11 +274,11 @@ namespace Meshtastic.Protobufs {
     }
 
     /// <summary>Field number for the "screen_lock" field.</summary>
-    public const int ScreenLockFieldNumber = 3;
+    public const int ScreenLockFieldNumber = 4;
     private bool screenLock_;
     /// <summary>
     ///
-    /// Screen lock enabled 
+    /// Screen/Settings lock enabled 
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -233,8 +289,32 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "settings_lock" field.</summary>
+    public const int SettingsLockFieldNumber = 5;
+    private bool settingsLock_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SettingsLock {
+      get { return settingsLock_; }
+      set {
+        settingsLock_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pin_code" field.</summary>
+    public const int PinCodeFieldNumber = 6;
+    private uint pinCode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PinCode {
+      get { return pinCode_; }
+      set {
+        pinCode_ = value;
+      }
+    }
+
     /// <summary>Field number for the "theme" field.</summary>
-    public const int ThemeFieldNumber = 4;
+    public const int ThemeFieldNumber = 7;
     private global::Meshtastic.Protobufs.Theme theme_ = global::Meshtastic.Protobufs.Theme.Dark;
     /// <summary>
     ///
@@ -250,11 +330,11 @@ namespace Meshtastic.Protobufs {
     }
 
     /// <summary>Field number for the "alert_enabled" field.</summary>
-    public const int AlertEnabledFieldNumber = 5;
+    public const int AlertEnabledFieldNumber = 8;
     private bool alertEnabled_;
     /// <summary>
     ///
-    /// Audible message alert enabled
+    /// Audible message, banner and ring tone
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -265,8 +345,32 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "banner_enabled" field.</summary>
+    public const int BannerEnabledFieldNumber = 9;
+    private bool bannerEnabled_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BannerEnabled {
+      get { return bannerEnabled_; }
+      set {
+        bannerEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ring_tone_id" field.</summary>
+    public const int RingToneIdFieldNumber = 10;
+    private uint ringToneId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RingToneId {
+      get { return ringToneId_; }
+      set {
+        ringToneId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "language" field.</summary>
-    public const int LanguageFieldNumber = 6;
+    public const int LanguageFieldNumber = 11;
     private global::Meshtastic.Protobufs.Language language_ = global::Meshtastic.Protobufs.Language.English;
     /// <summary>
     ///
@@ -282,7 +386,7 @@ namespace Meshtastic.Protobufs {
     }
 
     /// <summary>Field number for the "node_filter" field.</summary>
-    public const int NodeFilterFieldNumber = 7;
+    public const int NodeFilterFieldNumber = 12;
     private global::Meshtastic.Protobufs.NodeFilter nodeFilter_;
     /// <summary>
     ///
@@ -298,11 +402,11 @@ namespace Meshtastic.Protobufs {
     }
 
     /// <summary>Field number for the "node_highlight" field.</summary>
-    public const int NodeHighlightFieldNumber = 8;
+    public const int NodeHighlightFieldNumber = 13;
     private global::Meshtastic.Protobufs.NodeHighlight nodeHighlight_;
     /// <summary>
     ///
-    /// Node list highlightening 
+    /// Node list highlightening
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -328,11 +432,16 @@ namespace Meshtastic.Protobufs {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Version != other.Version) return false;
       if (ScreenBrightness != other.ScreenBrightness) return false;
       if (ScreenTimeout != other.ScreenTimeout) return false;
       if (ScreenLock != other.ScreenLock) return false;
+      if (SettingsLock != other.SettingsLock) return false;
+      if (PinCode != other.PinCode) return false;
       if (Theme != other.Theme) return false;
       if (AlertEnabled != other.AlertEnabled) return false;
+      if (BannerEnabled != other.BannerEnabled) return false;
+      if (RingToneId != other.RingToneId) return false;
       if (Language != other.Language) return false;
       if (!object.Equals(NodeFilter, other.NodeFilter)) return false;
       if (!object.Equals(NodeHighlight, other.NodeHighlight)) return false;
@@ -343,11 +452,16 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Version != 0) hash ^= Version.GetHashCode();
       if (ScreenBrightness != 0) hash ^= ScreenBrightness.GetHashCode();
       if (ScreenTimeout != 0) hash ^= ScreenTimeout.GetHashCode();
       if (ScreenLock != false) hash ^= ScreenLock.GetHashCode();
+      if (SettingsLock != false) hash ^= SettingsLock.GetHashCode();
+      if (PinCode != 0) hash ^= PinCode.GetHashCode();
       if (Theme != global::Meshtastic.Protobufs.Theme.Dark) hash ^= Theme.GetHashCode();
       if (AlertEnabled != false) hash ^= AlertEnabled.GetHashCode();
+      if (BannerEnabled != false) hash ^= BannerEnabled.GetHashCode();
+      if (RingToneId != 0) hash ^= RingToneId.GetHashCode();
       if (Language != global::Meshtastic.Protobufs.Language.English) hash ^= Language.GetHashCode();
       if (nodeFilter_ != null) hash ^= NodeFilter.GetHashCode();
       if (nodeHighlight_ != null) hash ^= NodeHighlight.GetHashCode();
@@ -369,36 +483,56 @@ namespace Meshtastic.Protobufs {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ScreenBrightness != 0) {
+      if (Version != 0) {
         output.WriteRawTag(8);
+        output.WriteUInt32(Version);
+      }
+      if (ScreenBrightness != 0) {
+        output.WriteRawTag(16);
         output.WriteUInt32(ScreenBrightness);
       }
       if (ScreenTimeout != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(ScreenTimeout);
       }
       if (ScreenLock != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteBool(ScreenLock);
       }
+      if (SettingsLock != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SettingsLock);
+      }
+      if (PinCode != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(PinCode);
+      }
       if (Theme != global::Meshtastic.Protobufs.Theme.Dark) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteEnum((int) Theme);
       }
       if (AlertEnabled != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteBool(AlertEnabled);
       }
+      if (BannerEnabled != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(BannerEnabled);
+      }
+      if (RingToneId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(RingToneId);
+      }
       if (Language != global::Meshtastic.Protobufs.Language.English) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Language);
       }
       if (nodeFilter_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(98);
         output.WriteMessage(NodeFilter);
       }
       if (nodeHighlight_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(106);
         output.WriteMessage(NodeHighlight);
       }
       if (_unknownFields != null) {
@@ -411,36 +545,56 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ScreenBrightness != 0) {
+      if (Version != 0) {
         output.WriteRawTag(8);
+        output.WriteUInt32(Version);
+      }
+      if (ScreenBrightness != 0) {
+        output.WriteRawTag(16);
         output.WriteUInt32(ScreenBrightness);
       }
       if (ScreenTimeout != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(ScreenTimeout);
       }
       if (ScreenLock != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteBool(ScreenLock);
       }
+      if (SettingsLock != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SettingsLock);
+      }
+      if (PinCode != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(PinCode);
+      }
       if (Theme != global::Meshtastic.Protobufs.Theme.Dark) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteEnum((int) Theme);
       }
       if (AlertEnabled != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteBool(AlertEnabled);
       }
+      if (BannerEnabled != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(BannerEnabled);
+      }
+      if (RingToneId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(RingToneId);
+      }
       if (Language != global::Meshtastic.Protobufs.Language.English) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Language);
       }
       if (nodeFilter_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(98);
         output.WriteMessage(NodeFilter);
       }
       if (nodeHighlight_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(106);
         output.WriteMessage(NodeHighlight);
       }
       if (_unknownFields != null) {
@@ -453,6 +607,9 @@ namespace Meshtastic.Protobufs {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Version != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
+      }
       if (ScreenBrightness != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScreenBrightness);
       }
@@ -462,11 +619,23 @@ namespace Meshtastic.Protobufs {
       if (ScreenLock != false) {
         size += 1 + 1;
       }
+      if (SettingsLock != false) {
+        size += 1 + 1;
+      }
+      if (PinCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PinCode);
+      }
       if (Theme != global::Meshtastic.Protobufs.Theme.Dark) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Theme);
       }
       if (AlertEnabled != false) {
         size += 1 + 1;
+      }
+      if (BannerEnabled != false) {
+        size += 1 + 1;
+      }
+      if (RingToneId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RingToneId);
       }
       if (Language != global::Meshtastic.Protobufs.Language.English) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Language);
@@ -489,6 +658,9 @@ namespace Meshtastic.Protobufs {
       if (other == null) {
         return;
       }
+      if (other.Version != 0) {
+        Version = other.Version;
+      }
       if (other.ScreenBrightness != 0) {
         ScreenBrightness = other.ScreenBrightness;
       }
@@ -498,11 +670,23 @@ namespace Meshtastic.Protobufs {
       if (other.ScreenLock != false) {
         ScreenLock = other.ScreenLock;
       }
+      if (other.SettingsLock != false) {
+        SettingsLock = other.SettingsLock;
+      }
+      if (other.PinCode != 0) {
+        PinCode = other.PinCode;
+      }
       if (other.Theme != global::Meshtastic.Protobufs.Theme.Dark) {
         Theme = other.Theme;
       }
       if (other.AlertEnabled != false) {
         AlertEnabled = other.AlertEnabled;
+      }
+      if (other.BannerEnabled != false) {
+        BannerEnabled = other.BannerEnabled;
+      }
+      if (other.RingToneId != 0) {
+        RingToneId = other.RingToneId;
       }
       if (other.Language != global::Meshtastic.Protobufs.Language.English) {
         Language = other.Language;
@@ -535,37 +719,57 @@ namespace Meshtastic.Protobufs {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ScreenBrightness = input.ReadUInt32();
+            Version = input.ReadUInt32();
             break;
           }
           case 16: {
-            ScreenTimeout = input.ReadUInt32();
+            ScreenBrightness = input.ReadUInt32();
             break;
           }
           case 24: {
-            ScreenLock = input.ReadBool();
+            ScreenTimeout = input.ReadUInt32();
             break;
           }
           case 32: {
-            Theme = (global::Meshtastic.Protobufs.Theme) input.ReadEnum();
+            ScreenLock = input.ReadBool();
             break;
           }
           case 40: {
-            AlertEnabled = input.ReadBool();
+            SettingsLock = input.ReadBool();
             break;
           }
           case 48: {
+            PinCode = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Theme = (global::Meshtastic.Protobufs.Theme) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            AlertEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            BannerEnabled = input.ReadBool();
+            break;
+          }
+          case 80: {
+            RingToneId = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             Language = (global::Meshtastic.Protobufs.Language) input.ReadEnum();
             break;
           }
-          case 58: {
+          case 98: {
             if (nodeFilter_ == null) {
               NodeFilter = new global::Meshtastic.Protobufs.NodeFilter();
             }
             input.ReadMessage(NodeFilter);
             break;
           }
-          case 66: {
+          case 106: {
             if (nodeHighlight_ == null) {
               NodeHighlight = new global::Meshtastic.Protobufs.NodeHighlight();
             }
@@ -588,37 +792,57 @@ namespace Meshtastic.Protobufs {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ScreenBrightness = input.ReadUInt32();
+            Version = input.ReadUInt32();
             break;
           }
           case 16: {
-            ScreenTimeout = input.ReadUInt32();
+            ScreenBrightness = input.ReadUInt32();
             break;
           }
           case 24: {
-            ScreenLock = input.ReadBool();
+            ScreenTimeout = input.ReadUInt32();
             break;
           }
           case 32: {
-            Theme = (global::Meshtastic.Protobufs.Theme) input.ReadEnum();
+            ScreenLock = input.ReadBool();
             break;
           }
           case 40: {
-            AlertEnabled = input.ReadBool();
+            SettingsLock = input.ReadBool();
             break;
           }
           case 48: {
+            PinCode = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Theme = (global::Meshtastic.Protobufs.Theme) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            AlertEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            BannerEnabled = input.ReadBool();
+            break;
+          }
+          case 80: {
+            RingToneId = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             Language = (global::Meshtastic.Protobufs.Language) input.ReadEnum();
             break;
           }
-          case 58: {
+          case 98: {
             if (nodeFilter_ == null) {
               NodeFilter = new global::Meshtastic.Protobufs.NodeFilter();
             }
             input.ReadMessage(NodeFilter);
             break;
           }
-          case 66: {
+          case 106: {
             if (nodeHighlight_ == null) {
               NodeHighlight = new global::Meshtastic.Protobufs.NodeHighlight();
             }
