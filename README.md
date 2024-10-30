@@ -8,7 +8,7 @@
 [![Vercel](https://img.shields.io/static/v1?label=Powered%20by&message=Vercel&style=flat&logo=vercel&color=000000)](https://vercel.com?utm_source=meshtastic&utm_campaign=oss)
 
 ## Overview
-A cross-platform C# / .NET 7 based command line interface for meshtastic.
+A cross-platform C# / .NET 8 based command line interface for Meshtastic.
 
 
 
@@ -117,7 +117,7 @@ Commands:
 
 ## Installation (dotnet cli / tool method)
 
-* Install the latest [dotnet 7 sdk](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) for your platform 
+* Install the latest [dotnet 8 sdk](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) for your platform 
 * Install the Meshtastic.Cli nuget package as a dotnet tool via `dotnet tool install --global Meshtastic.Cli` in your terminal of choice
 
 ## Installation (standalone executable)
