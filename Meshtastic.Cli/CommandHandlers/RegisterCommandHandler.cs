@@ -31,14 +31,12 @@ public class RegisterCommandHandlerCommandHandler(DeviceConnectionContext contex
             Logger.LogError("Device does not have a valid key or mac address, and cannot be registered.");
             return;
         }
-        var hmac = new HMACSHA256(key.ToByteArray());
-        var computedHash = hmac.ComputeHash(macAddress.ToByteArray());
         var jsonForm = JsonConvert.SerializeObject(new
         {
             MeshtasticDeviceId = Convert.ToHexString(key.ToByteArray()),
             MACAddress = Convert.ToHexString(macAddress.ToByteArray()),
             DeviceHardwareId = container.Metadata.HwModel,
-            FirmwareVersion = container.Metadata.FirmwareVersion,
+            container.Metadata.FirmwareVersion,
         });
 
         var json = new JsonText(jsonForm);
