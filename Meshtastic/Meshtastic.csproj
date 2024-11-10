@@ -1,48 +1,44 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Meshtastic</RootNamespace>
+    <PackageIcon>logo.png</PackageIcon>
+    <RepositoryUrl>http://github.com/meshtastic/c-sharp</RepositoryUrl>
+    <Company>Meshtastic LLC</Company>
+    <Title>Meshtastic C#</Title>
+    <IncludeSymbols>True</IncludeSymbols>
+    <DebugType>embedded</DebugType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
 
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<RootNamespace>Meshtastic</RootNamespace>
-		<PackageIcon>logo.png</PackageIcon>
-		<RepositoryUrl>http://github.com/meshtastic/c-sharp</RepositoryUrl>
-		<Company>Meshtastic LLC</Company>
-		<Title>Meshtastic C#</Title>
-		<IncludeSymbols>True</IncludeSymbols>
-		<DebugType>embedded</DebugType>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	</PropertyGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
-	<ItemGroup>
-		<None Include="..\LICENSE">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-		<None Include="..\logo.png">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-		<None Include="..\README.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" />
+    <PackageReference Include="Google.Protobuf.Tools" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
+    <PackageReference Include="System.IO.Ports" />
+  </ItemGroup>
 
-
-	<ItemGroup>
-		<PackageReference Include="Google.Protobuf" Version="3.25.3" />
-		<PackageReference Include="Google.Protobuf.Tools" Version="3.25.3" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
-		<PackageReference Include="System.IO.Ports" Version="8.0.0" />
-	</ItemGroup>
-
-
-	<ItemGroup>
-		<Folder Include="Generated\" />
-	</ItemGroup>
-
+  <ItemGroup>
+    <Folder Include="Generated\" />
+  </ItemGroup>
 </Project>
