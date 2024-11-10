@@ -1,0 +1,31 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageVersion Include="coverlet.collector" Version="6.0.1" />
+    <PackageVersion Include="FluentAssertions" Version="6.12.0" />
+    <PackageVersion Include="ILogger.Moq" Version="1.1.10" />
+    <PackageVersion Include="Google.Protobuf" Version="3.25.3" />
+    <PackageVersion Include="Google.Protobuf.Tools" Version="3.25.3" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageVersion Include="Moq" Version="4.18.4" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageVersion Include="NUnit" Version="4.1.0" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageVersion Include="NUnit.Analyzers" Version="4.0.1" />
+    <PackageVersion Include="MQTTnet" Version="4.3.3.952" />
+    <PackageVersion Include="QRCoder" Version="1.4.3" />
+    <PackageVersion Include="SimpleExec" Version="12.0.0" />
+    <PackageVersion Include="Spectre.Console" Version="0.49.1" />
+    <PackageVersion Include="Spectre.Console.Json" Version="0.49.1" />
+    <PackageVersion Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    <PackageVersion Include="System.IO.Ports" Version="8.0.0" />
+    <PackageVersion Include="YamlDotNet" Version="15.1.2" />
+  </ItemGroup>
+</Project>
