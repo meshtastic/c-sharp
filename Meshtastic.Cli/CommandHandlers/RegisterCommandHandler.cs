@@ -1,4 +1,3 @@
-using System.Security.Cryptography;
 using Meshtastic.Data;
 using Meshtastic.Data.MessageFactories;
 using Meshtastic.Protobufs;
