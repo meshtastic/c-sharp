@@ -25,7 +25,7 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8SCm1lc2h0YXN0aWMi",
-            "mCUKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
+            "tCUKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
             "b2R1bGVDb25maWcuTVFUVENvbmZpZ0gAEjcKBnNlcmlhbBgCIAEoCzIlLm1l",
             "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZ0gAElQKFWV4dGVy",
             "bmFsX25vdGlmaWNhdGlvbhgDIAEoCzIzLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
@@ -56,95 +56,95 @@ namespace Meshtastic.Protobufs {
             "cG9zaXRpb25fcHJlY2lzaW9uGAIgASgNGoIBChRSZW1vdGVIYXJkd2FyZUNv",
             "bmZpZxIPCgdlbmFibGVkGAEgASgIEiIKGmFsbG93X3VuZGVmaW5lZF9waW5f",
             "YWNjZXNzGAIgASgIEjUKDmF2YWlsYWJsZV9waW5zGAMgAygLMh0ubWVzaHRh",
-            "c3RpYy5SZW1vdGVIYXJkd2FyZVBpbho+ChJOZWlnaGJvckluZm9Db25maWcS",
-            "DwoHZW5hYmxlZBgBIAEoCBIXCg91cGRhdGVfaW50ZXJ2YWwYAiABKA0alwMK",
-            "FURldGVjdGlvblNlbnNvckNvbmZpZxIPCgdlbmFibGVkGAEgASgIEh4KFm1p",
-            "bmltdW1fYnJvYWRjYXN0X3NlY3MYAiABKA0SHAoUc3RhdGVfYnJvYWRjYXN0",
-            "X3NlY3MYAyABKA0SEQoJc2VuZF9iZWxsGAQgASgIEgwKBG5hbWUYBSABKAkS",
-            "EwoLbW9uaXRvcl9waW4YBiABKA0SWgoWZGV0ZWN0aW9uX3RyaWdnZXJfdHlw",
-            "ZRgHIAEoDjI6Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkRldGVjdGlvblNl",
-            "bnNvckNvbmZpZy5UcmlnZ2VyVHlwZRISCgp1c2VfcHVsbHVwGAggASgIIogB",
-            "CgtUcmlnZ2VyVHlwZRINCglMT0dJQ19MT1cQABIOCgpMT0dJQ19ISUdIEAES",
-            "EAoMRkFMTElOR19FREdFEAISDwoLUklTSU5HX0VER0UQAxIaChZFSVRIRVJf",
-            "RURHRV9BQ1RJVkVfTE9XEAQSGwoXRUlUSEVSX0VER0VfQUNUSVZFX0hJR0gQ",
-            "BRrkAgoLQXVkaW9Db25maWcSFgoOY29kZWMyX2VuYWJsZWQYASABKAgSDwoH",
-            "cHR0X3BpbhgCIAEoDRJACgdiaXRyYXRlGAMgASgOMi8ubWVzaHRhc3RpYy5N",
-            "b2R1bGVDb25maWcuQXVkaW9Db25maWcuQXVkaW9fQmF1ZBIOCgZpMnNfd3MY",
-            "BCABKA0SDgoGaTJzX3NkGAUgASgNEg8KB2kyc19kaW4YBiABKA0SDwoHaTJz",
-            "X3NjaxgHIAEoDSKnAQoKQXVkaW9fQmF1ZBISCg5DT0RFQzJfREVGQVVMVBAA",
-            "Eg8KC0NPREVDMl8zMjAwEAESDwoLQ09ERUMyXzI0MDAQAhIPCgtDT0RFQzJf",
-            "MTYwMBADEg8KC0NPREVDMl8xNDAwEAQSDwoLQ09ERUMyXzEzMDAQBRIPCgtD",
-            "T0RFQzJfMTIwMBAGEg4KCkNPREVDMl83MDAQBxIPCgtDT0RFQzJfNzAwQhAI",
-            "GnYKEFBheGNvdW50ZXJDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIiChpwYXhj",
-            "b3VudGVyX3VwZGF0ZV9pbnRlcnZhbBgCIAEoDRIWCg53aWZpX3RocmVzaG9s",
-            "ZBgDIAEoBRIVCg1ibGVfdGhyZXNob2xkGAQgASgFGu4ECgxTZXJpYWxDb25m",
-            "aWcSDwoHZW5hYmxlZBgBIAEoCBIMCgRlY2hvGAIgASgIEgsKA3J4ZBgDIAEo",
-            "DRILCgN0eGQYBCABKA0SPwoEYmF1ZBgFIAEoDjIxLm1lc2h0YXN0aWMuTW9k",
-            "dWxlQ29uZmlnLlNlcmlhbENvbmZpZy5TZXJpYWxfQmF1ZBIPCgd0aW1lb3V0",
-            "GAYgASgNEj8KBG1vZGUYByABKA4yMS5tZXNodGFzdGljLk1vZHVsZUNvbmZp",
-            "Zy5TZXJpYWxDb25maWcuU2VyaWFsX01vZGUSJAocb3ZlcnJpZGVfY29uc29s",
-            "ZV9zZXJpYWxfcG9ydBgIIAEoCCKKAgoLU2VyaWFsX0JhdWQSEAoMQkFVRF9E",
-            "RUZBVUxUEAASDAoIQkFVRF8xMTAQARIMCghCQVVEXzMwMBACEgwKCEJBVURf",
-            "NjAwEAMSDQoJQkFVRF8xMjAwEAQSDQoJQkFVRF8yNDAwEAUSDQoJQkFVRF80",
-            "ODAwEAYSDQoJQkFVRF85NjAwEAcSDgoKQkFVRF8xOTIwMBAIEg4KCkJBVURf",
-            "Mzg0MDAQCRIOCgpCQVVEXzU3NjAwEAoSDwoLQkFVRF8xMTUyMDAQCxIPCgtC",
-            "QVVEXzIzMDQwMBAMEg8KC0JBVURfNDYwODAwEA0SDwoLQkFVRF81NzYwMDAQ",
-            "DhIPCgtCQVVEXzkyMTYwMBAPIl8KC1NlcmlhbF9Nb2RlEgsKB0RFRkFVTFQQ",
-            "ABIKCgZTSU1QTEUQARIJCgVQUk9UTxACEgsKB1RFWFRNU0cQAxIICgROTUVB",
-            "EAQSCwoHQ0FMVE9QTxAFEggKBFdTODUQBhrpAgoaRXh0ZXJuYWxOb3RpZmlj",
-            "YXRpb25Db25maWcSDwoHZW5hYmxlZBgBIAEoCBIRCglvdXRwdXRfbXMYAiAB",
-            "KA0SDgoGb3V0cHV0GAMgASgNEhQKDG91dHB1dF92aWJyYRgIIAEoDRIVCg1v",
-            "dXRwdXRfYnV6emVyGAkgASgNEg4KBmFjdGl2ZRgEIAEoCBIVCg1hbGVydF9t",
-            "ZXNzYWdlGAUgASgIEhsKE2FsZXJ0X21lc3NhZ2VfdmlicmEYCiABKAgSHAoU",
-            "YWxlcnRfbWVzc2FnZV9idXp6ZXIYCyABKAgSEgoKYWxlcnRfYmVsbBgGIAEo",
-            "CBIYChBhbGVydF9iZWxsX3ZpYnJhGAwgASgIEhkKEWFsZXJ0X2JlbGxfYnV6",
-            "emVyGA0gASgIEg8KB3VzZV9wd20YByABKAgSEwoLbmFnX3RpbWVvdXQYDiAB",
-            "KA0SGQoRdXNlX2kyc19hc19idXp6ZXIYDyABKAgalwEKElN0b3JlRm9yd2Fy",
-            "ZENvbmZpZxIPCgdlbmFibGVkGAEgASgIEhEKCWhlYXJ0YmVhdBgCIAEoCBIP",
-            "CgdyZWNvcmRzGAMgASgNEhoKEmhpc3RvcnlfcmV0dXJuX21heBgEIAEoDRId",
-            "ChVoaXN0b3J5X3JldHVybl93aW5kb3cYBSABKA0SEQoJaXNfc2VydmVyGAYg",
-            "ASgIGkAKD1JhbmdlVGVzdENvbmZpZxIPCgdlbmFibGVkGAEgASgIEg4KBnNl",
-            "bmRlchgCIAEoDRIMCgRzYXZlGAMgASgIGskDCg9UZWxlbWV0cnlDb25maWcS",
-            "HgoWZGV2aWNlX3VwZGF0ZV9pbnRlcnZhbBgBIAEoDRIjChtlbnZpcm9ubWVu",
-            "dF91cGRhdGVfaW50ZXJ2YWwYAiABKA0SJwofZW52aXJvbm1lbnRfbWVhc3Vy",
-            "ZW1lbnRfZW5hYmxlZBgDIAEoCBIiChplbnZpcm9ubWVudF9zY3JlZW5fZW5h",
-            "YmxlZBgEIAEoCBImCh5lbnZpcm9ubWVudF9kaXNwbGF5X2ZhaHJlbmhlaXQY",
-            "BSABKAgSGwoTYWlyX3F1YWxpdHlfZW5hYmxlZBgGIAEoCBIcChRhaXJfcXVh",
-            "bGl0eV9pbnRlcnZhbBgHIAEoDRIhChlwb3dlcl9tZWFzdXJlbWVudF9lbmFi",
-            "bGVkGAggASgIEh0KFXBvd2VyX3VwZGF0ZV9pbnRlcnZhbBgJIAEoDRIcChRw",
-            "b3dlcl9zY3JlZW5fZW5hYmxlZBgKIAEoCBIiChpoZWFsdGhfbWVhc3VyZW1l",
-            "bnRfZW5hYmxlZBgLIAEoCBIeChZoZWFsdGhfdXBkYXRlX2ludGVydmFsGAwg",
-            "ASgNEh0KFWhlYWx0aF9zY3JlZW5fZW5hYmxlZBgNIAEoCBrWBAoTQ2FubmVk",
-            "TWVzc2FnZUNvbmZpZxIXCg9yb3RhcnkxX2VuYWJsZWQYASABKAgSGQoRaW5w",
-            "dXRicm9rZXJfcGluX2EYAiABKA0SGQoRaW5wdXRicm9rZXJfcGluX2IYAyAB",
-            "KA0SHQoVaW5wdXRicm9rZXJfcGluX3ByZXNzGAQgASgNElkKFGlucHV0YnJv",
-            "a2VyX2V2ZW50X2N3GAUgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcu",
-            "Q2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJaChVpbnB1dGJy",
-            "b2tlcl9ldmVudF9jY3cYBiABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNvbmZp",
-            "Zy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0RXZlbnRDaGFyElwKF2lucHV0",
-            "YnJva2VyX2V2ZW50X3ByZXNzGAcgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVD",
-            "b25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchIXCg91",
-            "cGRvd24xX2VuYWJsZWQYCCABKAgSDwoHZW5hYmxlZBgJIAEoCBIaChJhbGxv",
-            "d19pbnB1dF9zb3VyY2UYCiABKAkSEQoJc2VuZF9iZWxsGAsgASgIImMKDklu",
-            "cHV0RXZlbnRDaGFyEggKBE5PTkUQABIGCgJVUBAREggKBERPV04QEhIICgRM",
-            "RUZUEBMSCQoFUklHSFQQFBIKCgZTRUxFQ1QQChIICgRCQUNLEBsSCgoGQ0FO",
-            "Q0VMEBgaZQoVQW1iaWVudExpZ2h0aW5nQ29uZmlnEhEKCWxlZF9zdGF0ZRgB",
-            "IAEoCBIPCgdjdXJyZW50GAIgASgNEgsKA3JlZBgDIAEoDRINCgVncmVlbhgE",
-            "IAEoDRIMCgRibHVlGAUgASgNQhEKD3BheWxvYWRfdmFyaWFudCJkChFSZW1v",
-            "dGVIYXJkd2FyZVBpbhIQCghncGlvX3BpbhgBIAEoDRIMCgRuYW1lGAIgASgJ",
-            "Ei8KBHR5cGUYAyABKA4yIS5tZXNodGFzdGljLlJlbW90ZUhhcmR3YXJlUGlu",
-            "VHlwZSpJChVSZW1vdGVIYXJkd2FyZVBpblR5cGUSCwoHVU5LTk9XThAAEhAK",
-            "DERJR0lUQUxfUkVBRBABEhEKDURJR0lUQUxfV1JJVEUQAkJnChNjb20uZ2Vl",
-            "a3N2aWxsZS5tZXNoQhJNb2R1bGVDb25maWdQcm90b3NaImdpdGh1Yi5jb20v",
-            "bWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVm",
-            "c7oCAGIGcHJvdG8z"));
+            "c3RpYy5SZW1vdGVIYXJkd2FyZVBpbhpaChJOZWlnaGJvckluZm9Db25maWcS",
+            "DwoHZW5hYmxlZBgBIAEoCBIXCg91cGRhdGVfaW50ZXJ2YWwYAiABKA0SGgoS",
+            "dHJhbnNtaXRfb3Zlcl9sb3JhGAMgASgIGpcDChVEZXRlY3Rpb25TZW5zb3JD",
+            "b25maWcSDwoHZW5hYmxlZBgBIAEoCBIeChZtaW5pbXVtX2Jyb2FkY2FzdF9z",
+            "ZWNzGAIgASgNEhwKFHN0YXRlX2Jyb2FkY2FzdF9zZWNzGAMgASgNEhEKCXNl",
+            "bmRfYmVsbBgEIAEoCBIMCgRuYW1lGAUgASgJEhMKC21vbml0b3JfcGluGAYg",
+            "ASgNEloKFmRldGVjdGlvbl90cmlnZ2VyX3R5cGUYByABKA4yOi5tZXNodGFz",
+            "dGljLk1vZHVsZUNvbmZpZy5EZXRlY3Rpb25TZW5zb3JDb25maWcuVHJpZ2dl",
+            "clR5cGUSEgoKdXNlX3B1bGx1cBgIIAEoCCKIAQoLVHJpZ2dlclR5cGUSDQoJ",
+            "TE9HSUNfTE9XEAASDgoKTE9HSUNfSElHSBABEhAKDEZBTExJTkdfRURHRRAC",
+            "Eg8KC1JJU0lOR19FREdFEAMSGgoWRUlUSEVSX0VER0VfQUNUSVZFX0xPVxAE",
+            "EhsKF0VJVEhFUl9FREdFX0FDVElWRV9ISUdIEAUa5AIKC0F1ZGlvQ29uZmln",
+            "EhYKDmNvZGVjMl9lbmFibGVkGAEgASgIEg8KB3B0dF9waW4YAiABKA0SQAoH",
+            "Yml0cmF0ZRgDIAEoDjIvLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkF1ZGlv",
+            "Q29uZmlnLkF1ZGlvX0JhdWQSDgoGaTJzX3dzGAQgASgNEg4KBmkyc19zZBgF",
+            "IAEoDRIPCgdpMnNfZGluGAYgASgNEg8KB2kyc19zY2sYByABKA0ipwEKCkF1",
+            "ZGlvX0JhdWQSEgoOQ09ERUMyX0RFRkFVTFQQABIPCgtDT0RFQzJfMzIwMBAB",
+            "Eg8KC0NPREVDMl8yNDAwEAISDwoLQ09ERUMyXzE2MDAQAxIPCgtDT0RFQzJf",
+            "MTQwMBAEEg8KC0NPREVDMl8xMzAwEAUSDwoLQ09ERUMyXzEyMDAQBhIOCgpD",
+            "T0RFQzJfNzAwEAcSDwoLQ09ERUMyXzcwMEIQCBp2ChBQYXhjb3VudGVyQ29u",
+            "ZmlnEg8KB2VuYWJsZWQYASABKAgSIgoacGF4Y291bnRlcl91cGRhdGVfaW50",
+            "ZXJ2YWwYAiABKA0SFgoOd2lmaV90aHJlc2hvbGQYAyABKAUSFQoNYmxlX3Ro",
+            "cmVzaG9sZBgEIAEoBRruBAoMU2VyaWFsQ29uZmlnEg8KB2VuYWJsZWQYASAB",
+            "KAgSDAoEZWNobxgCIAEoCBILCgNyeGQYAyABKA0SCwoDdHhkGAQgASgNEj8K",
+            "BGJhdWQYBSABKA4yMS5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5TZXJpYWxD",
+            "b25maWcuU2VyaWFsX0JhdWQSDwoHdGltZW91dBgGIAEoDRI/CgRtb2RlGAcg",
+            "ASgOMjEubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuU2VyaWFsQ29uZmlnLlNl",
+            "cmlhbF9Nb2RlEiQKHG92ZXJyaWRlX2NvbnNvbGVfc2VyaWFsX3BvcnQYCCAB",
+            "KAgiigIKC1NlcmlhbF9CYXVkEhAKDEJBVURfREVGQVVMVBAAEgwKCEJBVURf",
+            "MTEwEAESDAoIQkFVRF8zMDAQAhIMCghCQVVEXzYwMBADEg0KCUJBVURfMTIw",
+            "MBAEEg0KCUJBVURfMjQwMBAFEg0KCUJBVURfNDgwMBAGEg0KCUJBVURfOTYw",
+            "MBAHEg4KCkJBVURfMTkyMDAQCBIOCgpCQVVEXzM4NDAwEAkSDgoKQkFVRF81",
+            "NzYwMBAKEg8KC0JBVURfMTE1MjAwEAsSDwoLQkFVRF8yMzA0MDAQDBIPCgtC",
+            "QVVEXzQ2MDgwMBANEg8KC0JBVURfNTc2MDAwEA4SDwoLQkFVRF85MjE2MDAQ",
+            "DyJfCgtTZXJpYWxfTW9kZRILCgdERUZBVUxUEAASCgoGU0lNUExFEAESCQoF",
+            "UFJPVE8QAhILCgdURVhUTVNHEAMSCAoETk1FQRAEEgsKB0NBTFRPUE8QBRII",
+            "CgRXUzg1EAYa6QIKGkV4dGVybmFsTm90aWZpY2F0aW9uQ29uZmlnEg8KB2Vu",
+            "YWJsZWQYASABKAgSEQoJb3V0cHV0X21zGAIgASgNEg4KBm91dHB1dBgDIAEo",
+            "DRIUCgxvdXRwdXRfdmlicmEYCCABKA0SFQoNb3V0cHV0X2J1enplchgJIAEo",
+            "DRIOCgZhY3RpdmUYBCABKAgSFQoNYWxlcnRfbWVzc2FnZRgFIAEoCBIbChNh",
+            "bGVydF9tZXNzYWdlX3ZpYnJhGAogASgIEhwKFGFsZXJ0X21lc3NhZ2VfYnV6",
+            "emVyGAsgASgIEhIKCmFsZXJ0X2JlbGwYBiABKAgSGAoQYWxlcnRfYmVsbF92",
+            "aWJyYRgMIAEoCBIZChFhbGVydF9iZWxsX2J1enplchgNIAEoCBIPCgd1c2Vf",
+            "cHdtGAcgASgIEhMKC25hZ190aW1lb3V0GA4gASgNEhkKEXVzZV9pMnNfYXNf",
+            "YnV6emVyGA8gASgIGpcBChJTdG9yZUZvcndhcmRDb25maWcSDwoHZW5hYmxl",
+            "ZBgBIAEoCBIRCgloZWFydGJlYXQYAiABKAgSDwoHcmVjb3JkcxgDIAEoDRIa",
+            "ChJoaXN0b3J5X3JldHVybl9tYXgYBCABKA0SHQoVaGlzdG9yeV9yZXR1cm5f",
+            "d2luZG93GAUgASgNEhEKCWlzX3NlcnZlchgGIAEoCBpACg9SYW5nZVRlc3RD",
+            "b25maWcSDwoHZW5hYmxlZBgBIAEoCBIOCgZzZW5kZXIYAiABKA0SDAoEc2F2",
+            "ZRgDIAEoCBrJAwoPVGVsZW1ldHJ5Q29uZmlnEh4KFmRldmljZV91cGRhdGVf",
+            "aW50ZXJ2YWwYASABKA0SIwobZW52aXJvbm1lbnRfdXBkYXRlX2ludGVydmFs",
+            "GAIgASgNEicKH2Vudmlyb25tZW50X21lYXN1cmVtZW50X2VuYWJsZWQYAyAB",
+            "KAgSIgoaZW52aXJvbm1lbnRfc2NyZWVuX2VuYWJsZWQYBCABKAgSJgoeZW52",
+            "aXJvbm1lbnRfZGlzcGxheV9mYWhyZW5oZWl0GAUgASgIEhsKE2Fpcl9xdWFs",
+            "aXR5X2VuYWJsZWQYBiABKAgSHAoUYWlyX3F1YWxpdHlfaW50ZXJ2YWwYByAB",
+            "KA0SIQoZcG93ZXJfbWVhc3VyZW1lbnRfZW5hYmxlZBgIIAEoCBIdChVwb3dl",
+            "cl91cGRhdGVfaW50ZXJ2YWwYCSABKA0SHAoUcG93ZXJfc2NyZWVuX2VuYWJs",
+            "ZWQYCiABKAgSIgoaaGVhbHRoX21lYXN1cmVtZW50X2VuYWJsZWQYCyABKAgS",
+            "HgoWaGVhbHRoX3VwZGF0ZV9pbnRlcnZhbBgMIAEoDRIdChVoZWFsdGhfc2Ny",
+            "ZWVuX2VuYWJsZWQYDSABKAga1gQKE0Nhbm5lZE1lc3NhZ2VDb25maWcSFwoP",
+            "cm90YXJ5MV9lbmFibGVkGAEgASgIEhkKEWlucHV0YnJva2VyX3Bpbl9hGAIg",
+            "ASgNEhkKEWlucHV0YnJva2VyX3Bpbl9iGAMgASgNEh0KFWlucHV0YnJva2Vy",
+            "X3Bpbl9wcmVzcxgEIAEoDRJZChRpbnB1dGJyb2tlcl9ldmVudF9jdxgFIAEo",
+            "DjI7Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25m",
+            "aWcuSW5wdXRFdmVudENoYXISWgoVaW5wdXRicm9rZXJfZXZlbnRfY2N3GAYg",
+            "ASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQ2FubmVkTWVzc2FnZUNv",
+            "bmZpZy5JbnB1dEV2ZW50Q2hhchJcChdpbnB1dGJyb2tlcl9ldmVudF9wcmVz",
+            "cxgHIAEoDjI7Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3Nh",
+            "Z2VDb25maWcuSW5wdXRFdmVudENoYXISFwoPdXBkb3duMV9lbmFibGVkGAgg",
+            "ASgIEg8KB2VuYWJsZWQYCSABKAgSGgoSYWxsb3dfaW5wdXRfc291cmNlGAog",
+            "ASgJEhEKCXNlbmRfYmVsbBgLIAEoCCJjCg5JbnB1dEV2ZW50Q2hhchIICgRO",
+            "T05FEAASBgoCVVAQERIICgRET1dOEBISCAoETEVGVBATEgkKBVJJR0hUEBQS",
+            "CgoGU0VMRUNUEAoSCAoEQkFDSxAbEgoKBkNBTkNFTBAYGmUKFUFtYmllbnRM",
+            "aWdodGluZ0NvbmZpZxIRCglsZWRfc3RhdGUYASABKAgSDwoHY3VycmVudBgC",
+            "IAEoDRILCgNyZWQYAyABKA0SDQoFZ3JlZW4YBCABKA0SDAoEYmx1ZRgFIAEo",
+            "DUIRCg9wYXlsb2FkX3ZhcmlhbnQiZAoRUmVtb3RlSGFyZHdhcmVQaW4SEAoI",
+            "Z3Bpb19waW4YASABKA0SDAoEbmFtZRgCIAEoCRIvCgR0eXBlGAMgASgOMiEu",
+            "bWVzaHRhc3RpYy5SZW1vdGVIYXJkd2FyZVBpblR5cGUqSQoVUmVtb3RlSGFy",
+            "ZHdhcmVQaW5UeXBlEgsKB1VOS05PV04QABIQCgxESUdJVEFMX1JFQUQQARIR",
+            "Cg1ESUdJVEFMX1dSSVRFEAJCZwoTY29tLmdlZWtzdmlsbGUubWVzaEISTW9k",
+            "dWxlQ29uZmlnUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
+            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.RemoteHardwarePinType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig), global::Meshtastic.Protobufs.ModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo", "AmbientLighting", "DetectionSensor", "Paxcounter" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig.Parser, new[]{ "Enabled", "Address", "Username", "Password", "EncryptionEnabled", "JsonEnabled", "TlsEnabled", "Root", "ProxyToClientEnabled", "MapReportingEnabled", "MapReportSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MapReportSettings), global::Meshtastic.Protobufs.ModuleConfig.Types.MapReportSettings.Parser, new[]{ "PublishIntervalSecs", "PositionPrecision" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig.Parser, new[]{ "Enabled", "AllowUndefinedPinAccess", "AvailablePins" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig.Parser, new[]{ "Enabled", "UpdateInterval" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig.Parser, new[]{ "Enabled", "UpdateInterval", "TransmitOverLora" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Parser, new[]{ "Enabled", "MinimumBroadcastSecs", "StateBroadcastSecs", "SendBell", "Name", "MonitorPin", "DetectionTriggerType", "UsePullup" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Parser, new[]{ "Codec2Enabled", "PttPin", "Bitrate", "I2SWs", "I2SSd", "I2SDin", "I2SSck" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Types.Audio_Baud) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig.Parser, new[]{ "Enabled", "PaxcounterUpdateInterval", "WifiThreshold", "BleThreshold" }, null, null, null, null),
@@ -2282,6 +2282,7 @@ namespace Meshtastic.Protobufs {
         public NeighborInfoConfig(NeighborInfoConfig other) : this() {
           enabled_ = other.enabled_;
           updateInterval_ = other.updateInterval_;
+          transmitOverLora_ = other.transmitOverLora_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2313,7 +2314,7 @@ namespace Meshtastic.Protobufs {
         /// <summary>
         ///
         /// Interval in seconds of how often we should try to send our
-        /// Neighbor Info to the mesh
+        /// Neighbor Info (minimum is 14400, i.e., 4 hours)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2321,6 +2322,23 @@ namespace Meshtastic.Protobufs {
           get { return updateInterval_; }
           set {
             updateInterval_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "transmit_over_lora" field.</summary>
+        public const int TransmitOverLoraFieldNumber = 3;
+        private bool transmitOverLora_;
+        /// <summary>
+        ///
+        /// Whether in addition to sending it to MQTT and the PhoneAPI, our NeighborInfo should be transmitted over LoRa.
+        /// Note that this is not available on a channel with default key and name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool TransmitOverLora {
+          get { return transmitOverLora_; }
+          set {
+            transmitOverLora_ = value;
           }
         }
 
@@ -2341,6 +2359,7 @@ namespace Meshtastic.Protobufs {
           }
           if (Enabled != other.Enabled) return false;
           if (UpdateInterval != other.UpdateInterval) return false;
+          if (TransmitOverLora != other.TransmitOverLora) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2350,6 +2369,7 @@ namespace Meshtastic.Protobufs {
           int hash = 1;
           if (Enabled != false) hash ^= Enabled.GetHashCode();
           if (UpdateInterval != 0) hash ^= UpdateInterval.GetHashCode();
+          if (TransmitOverLora != false) hash ^= TransmitOverLora.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2376,6 +2396,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(16);
             output.WriteUInt32(UpdateInterval);
           }
+          if (TransmitOverLora != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(TransmitOverLora);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2394,6 +2418,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(16);
             output.WriteUInt32(UpdateInterval);
           }
+          if (TransmitOverLora != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(TransmitOverLora);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2409,6 +2437,9 @@ namespace Meshtastic.Protobufs {
           }
           if (UpdateInterval != 0) {
             size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UpdateInterval);
+          }
+          if (TransmitOverLora != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2427,6 +2458,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.UpdateInterval != 0) {
             UpdateInterval = other.UpdateInterval;
+          }
+          if (other.TransmitOverLora != false) {
+            TransmitOverLora = other.TransmitOverLora;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2451,6 +2485,10 @@ namespace Meshtastic.Protobufs {
                 UpdateInterval = input.ReadUInt32();
                 break;
               }
+              case 24: {
+                TransmitOverLora = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -2472,6 +2510,10 @@ namespace Meshtastic.Protobufs {
               }
               case 16: {
                 UpdateInterval = input.ReadUInt32();
+                break;
+              }
+              case 24: {
+                TransmitOverLora = input.ReadBool();
                 break;
               }
             }

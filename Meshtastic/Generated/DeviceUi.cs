@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static DeviceUiReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyKBAwoO",
+            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyKbAwoO",
             "RGV2aWNlVUlDb25maWcSDwoHdmVyc2lvbhgBIAEoDRIZChFzY3JlZW5fYnJp",
             "Z2h0bmVzcxgCIAEoDRIWCg5zY3JlZW5fdGltZW91dBgDIAEoDRITCgtzY3Jl",
             "ZW5fbG9jaxgEIAEoCBIVCg1zZXR0aW5nc19sb2NrGAUgASgIEhAKCHBpbl9j",
@@ -33,26 +33,27 @@ namespace Meshtastic.Protobufs {
             "EhQKDHJpbmdfdG9uZV9pZBgKIAEoDRImCghsYW5ndWFnZRgLIAEoDjIULm1l",
             "c2h0YXN0aWMuTGFuZ3VhZ2USKwoLbm9kZV9maWx0ZXIYDCABKAsyFi5tZXNo",
             "dGFzdGljLk5vZGVGaWx0ZXISMQoObm9kZV9oaWdobGlnaHQYDSABKAsyGS5t",
-            "ZXNodGFzdGljLk5vZGVIaWdobGlnaHQilgEKCk5vZGVGaWx0ZXISFgoOdW5r",
-            "bm93bl9zd2l0Y2gYASABKAgSFgoOb2ZmbGluZV9zd2l0Y2gYAiABKAgSGQoR",
-            "cHVibGljX2tleV9zd2l0Y2gYAyABKAgSEQoJaG9wc19hd2F5GAQgASgFEhcK",
-            "D3Bvc2l0aW9uX3N3aXRjaBgFIAEoCBIRCglub2RlX25hbWUYBiABKAkifgoN",
-            "Tm9kZUhpZ2hsaWdodBITCgtjaGF0X3N3aXRjaBgBIAEoCBIXCg9wb3NpdGlv",
-            "bl9zd2l0Y2gYAiABKAgSGAoQdGVsZW1ldHJ5X3N3aXRjaBgDIAEoCBISCgpp",
-            "YXFfc3dpdGNoGAQgASgIEhEKCW5vZGVfbmFtZRgFIAEoCSolCgVUaGVtZRII",
-            "CgREQVJLEAASCQoFTElHSFQQARIHCgNSRUQQAirtAQoITGFuZ3VhZ2USCwoH",
-            "RU5HTElTSBAAEgoKBkZSRU5DSBABEgoKBkdFUk1BThACEgsKB0lUQUxJQU4Q",
-            "AxIOCgpQT1JUVUdVRVNFEAQSCwoHU1BBTklTSBAFEgsKB1NXRURJU0gQBhIL",
-            "CgdGSU5OSVNIEAcSCgoGUE9MSVNIEAgSCwoHVFVSS0lTSBAJEgsKB1NFUkJJ",
-            "QU4QChILCgdSVVNTSUFOEAsSCQoFRFVUQ0gQDBIJCgVHUkVFSxANEhYKElNJ",
-            "TVBMSUZJRURfQ0hJTkVTRRAeEhcKE1RSQURJVElPTkFMX0NISU5FU0UQH0Jj",
-            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQg5EZXZpY2VVSVByb3Rvc1oiZ2l0aHVi",
-            "LmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJv",
-            "dG9idWZzugIAYgZwcm90bzM="));
+            "ZXNodGFzdGljLk5vZGVIaWdobGlnaHQSGAoQY2FsaWJyYXRpb25fZGF0YRgO",
+            "IAEoDCKWAQoKTm9kZUZpbHRlchIWCg51bmtub3duX3N3aXRjaBgBIAEoCBIW",
+            "Cg5vZmZsaW5lX3N3aXRjaBgCIAEoCBIZChFwdWJsaWNfa2V5X3N3aXRjaBgD",
+            "IAEoCBIRCglob3BzX2F3YXkYBCABKAUSFwoPcG9zaXRpb25fc3dpdGNoGAUg",
+            "ASgIEhEKCW5vZGVfbmFtZRgGIAEoCSJ+Cg1Ob2RlSGlnaGxpZ2h0EhMKC2No",
+            "YXRfc3dpdGNoGAEgASgIEhcKD3Bvc2l0aW9uX3N3aXRjaBgCIAEoCBIYChB0",
+            "ZWxlbWV0cnlfc3dpdGNoGAMgASgIEhIKCmlhcV9zd2l0Y2gYBCABKAgSEQoJ",
+            "bm9kZV9uYW1lGAUgASgJKiUKBVRoZW1lEggKBERBUksQABIJCgVMSUdIVBAB",
+            "EgcKA1JFRBACKvwBCghMYW5ndWFnZRILCgdFTkdMSVNIEAASCgoGRlJFTkNI",
+            "EAESCgoGR0VSTUFOEAISCwoHSVRBTElBThADEg4KClBPUlRVR1VFU0UQBBIL",
+            "CgdTUEFOSVNIEAUSCwoHU1dFRElTSBAGEgsKB0ZJTk5JU0gQBxIKCgZQT0xJ",
+            "U0gQCBILCgdUVVJLSVNIEAkSCwoHU0VSQklBThAKEgsKB1JVU1NJQU4QCxIJ",
+            "CgVEVVRDSBAMEgkKBUdSRUVLEA0SDQoJTk9SV0VHSUFOEA4SFgoSU0lNUExJ",
+            "RklFRF9DSElORVNFEB4SFwoTVFJBRElUSU9OQUxfQ0hJTkVTRRAfQmMKE2Nv",
+            "bS5nZWVrc3ZpbGxlLm1lc2hCDkRldmljZVVJUHJvdG9zWiJnaXRodWIuY29t",
+            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
+            "ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight", "CalibrationData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeFilter), global::Meshtastic.Protobufs.NodeFilter.Parser, new[]{ "UnknownSwitch", "OfflineSwitch", "PublicKeySwitch", "HopsAway", "PositionSwitch", "NodeName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeHighlight), global::Meshtastic.Protobufs.NodeHighlight.Parser, new[]{ "ChatSwitch", "PositionSwitch", "TelemetrySwitch", "IaqSwitch", "NodeName" }, null, null, null, null)
           }));
@@ -156,6 +157,11 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("GREEK")] Greek = 13,
     /// <summary>
     ///
+    /// Norwegian
+    /// </summary>
+    [pbr::OriginalName("NORWEGIAN")] Norwegian = 14,
+    /// <summary>
+    ///
     /// Simplified Chinese (experimental)
     /// </summary>
     [pbr::OriginalName("SIMPLIFIED_CHINESE")] SimplifiedChinese = 30,
@@ -216,6 +222,7 @@ namespace Meshtastic.Protobufs {
       language_ = other.language_;
       nodeFilter_ = other.nodeFilter_ != null ? other.nodeFilter_.Clone() : null;
       nodeHighlight_ = other.nodeHighlight_ != null ? other.nodeHighlight_.Clone() : null;
+      calibrationData_ = other.calibrationData_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -417,6 +424,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "calibration_data" field.</summary>
+    public const int CalibrationDataFieldNumber = 14;
+    private pb::ByteString calibrationData_ = pb::ByteString.Empty;
+    /// <summary>
+    ///
+    /// 8 integers for screen calibration data
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString CalibrationData {
+      get { return calibrationData_; }
+      set {
+        calibrationData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -445,6 +468,7 @@ namespace Meshtastic.Protobufs {
       if (Language != other.Language) return false;
       if (!object.Equals(NodeFilter, other.NodeFilter)) return false;
       if (!object.Equals(NodeHighlight, other.NodeHighlight)) return false;
+      if (CalibrationData != other.CalibrationData) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -465,6 +489,7 @@ namespace Meshtastic.Protobufs {
       if (Language != global::Meshtastic.Protobufs.Language.English) hash ^= Language.GetHashCode();
       if (nodeFilter_ != null) hash ^= NodeFilter.GetHashCode();
       if (nodeHighlight_ != null) hash ^= NodeHighlight.GetHashCode();
+      if (CalibrationData.Length != 0) hash ^= CalibrationData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -535,6 +560,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(106);
         output.WriteMessage(NodeHighlight);
       }
+      if (CalibrationData.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteBytes(CalibrationData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -597,6 +626,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(106);
         output.WriteMessage(NodeHighlight);
       }
+      if (CalibrationData.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteBytes(CalibrationData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -645,6 +678,9 @@ namespace Meshtastic.Protobufs {
       }
       if (nodeHighlight_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NodeHighlight);
+      }
+      if (CalibrationData.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(CalibrationData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -702,6 +738,9 @@ namespace Meshtastic.Protobufs {
           NodeHighlight = new global::Meshtastic.Protobufs.NodeHighlight();
         }
         NodeHighlight.MergeFrom(other.NodeHighlight);
+      }
+      if (other.CalibrationData.Length != 0) {
+        CalibrationData = other.CalibrationData;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -776,6 +815,10 @@ namespace Meshtastic.Protobufs {
             input.ReadMessage(NodeHighlight);
             break;
           }
+          case 114: {
+            CalibrationData = input.ReadBytes();
+            break;
+          }
         }
       }
     #endif
@@ -847,6 +890,10 @@ namespace Meshtastic.Protobufs {
               NodeHighlight = new global::Meshtastic.Protobufs.NodeHighlight();
             }
             input.ReadMessage(NodeHighlight);
+            break;
+          }
+          case 114: {
+            CalibrationData = input.ReadBytes();
             break;
           }
         }

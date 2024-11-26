@@ -9,7 +9,7 @@ namespace Meshtastic.Test.CommandHandlers;
 [TestFixture]
 [Category(TestCategories.SimulatedDeviceTests)]
 [NonParallelizable]
-[Timeout(10000)]
+[CancelAfter(10000)]
 public class CommandHandlerTests : CommandHandlerTestBase
 {
     [SetUp]
