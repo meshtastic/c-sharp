@@ -108,7 +108,7 @@ public class SerialConnection : DeviceConnection
                 continue;
             }
             var buffer = new byte[1];
-            await serialPort.BaseStream.ReadAsync(buffer);
+            await serialPort.BaseStream.ReadExactlyAsync(buffer);
             if (await ParsePackets(buffer.First(), isComplete))
                 return;
         }
