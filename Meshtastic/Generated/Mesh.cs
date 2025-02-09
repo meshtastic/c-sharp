@@ -78,7 +78,7 @@ namespace Meshtastic.Protobufs {
             "DQoLX2xhdGl0dWRlX2lCDgoMX2xvbmdpdHVkZV9pImwKFk1xdHRDbGllbnRQ",
             "cm94eU1lc3NhZ2USDQoFdG9waWMYASABKAkSDgoEZGF0YRgCIAEoDEgAEg4K",
             "BHRleHQYAyABKAlIABIQCghyZXRhaW5lZBgEIAEoCEIRCg9wYXlsb2FkX3Zh",
-            "cmlhbnQi/gQKCk1lc2hQYWNrZXQSDAoEZnJvbRgBIAEoBxIKCgJ0bxgCIAEo",
+            "cmlhbnQimwUKCk1lc2hQYWNrZXQSDAoEZnJvbRgBIAEoBxIKCgJ0bxgCIAEo",
             "BxIPCgdjaGFubmVsGAMgASgNEiMKB2RlY29kZWQYBCABKAsyEC5tZXNodGFz",
             "dGljLkRhdGFIABITCgllbmNyeXB0ZWQYBSABKAxIABIKCgJpZBgGIAEoBxIP",
             "CgdyeF90aW1lGAcgASgHEg4KBnJ4X3NuchgIIAEoAhIRCglob3BfbGltaXQY",
@@ -87,132 +87,134 @@ namespace Meshtastic.Protobufs {
             "BRIzCgdkZWxheWVkGA0gASgOMh4ubWVzaHRhc3RpYy5NZXNoUGFja2V0LkRl",
             "bGF5ZWRCAhgBEhAKCHZpYV9tcXR0GA4gASgIEhEKCWhvcF9zdGFydBgPIAEo",
             "DRISCgpwdWJsaWNfa2V5GBAgASgMEhUKDXBraV9lbmNyeXB0ZWQYESABKAgS",
-            "EAoIbmV4dF9ob3AYEiABKA0SEgoKcmVsYXlfbm9kZRgTIAEoDSJzCghQcmlv",
-            "cml0eRIJCgVVTlNFVBAAEgcKA01JThABEg4KCkJBQ0tHUk9VTkQQChILCgdE",
-            "RUZBVUxUEEASDAoIUkVMSUFCTEUQRhIMCghSRVNQT05TRRBQEggKBEhJR0gQ",
-            "ZBIHCgNBQ0sQeBIHCgNNQVgQfyJCCgdEZWxheWVkEgwKCE5PX0RFTEFZEAAS",
-            "FQoRREVMQVlFRF9CUk9BRENBU1QQARISCg5ERUxBWUVEX0RJUkVDVBACQhEK",
-            "D3BheWxvYWRfdmFyaWFudCKlAgoITm9kZUluZm8SCwoDbnVtGAEgASgNEh4K",
-            "BHVzZXIYAiABKAsyEC5tZXNodGFzdGljLlVzZXISJgoIcG9zaXRpb24YAyAB",
-            "KAsyFC5tZXNodGFzdGljLlBvc2l0aW9uEgsKA3NuchgEIAEoAhISCgpsYXN0",
-            "X2hlYXJkGAUgASgHEjEKDmRldmljZV9tZXRyaWNzGAYgASgLMhkubWVzaHRh",
-            "c3RpYy5EZXZpY2VNZXRyaWNzEg8KB2NoYW5uZWwYByABKA0SEAoIdmlhX21x",
-            "dHQYCCABKAgSFgoJaG9wc19hd2F5GAkgASgNSACIAQESEwoLaXNfZmF2b3Jp",
-            "dGUYCiABKAgSEgoKaXNfaWdub3JlZBgLIAEoCEIMCgpfaG9wc19hd2F5InQK",
-            "Ck15Tm9kZUluZm8SEwoLbXlfbm9kZV9udW0YASABKA0SFAoMcmVib290X2Nv",
-            "dW50GAggASgNEhcKD21pbl9hcHBfdmVyc2lvbhgLIAEoDRIRCglkZXZpY2Vf",
-            "aWQYDCABKAwSDwoHcGlvX2VudhgNIAEoCSLAAQoJTG9nUmVjb3JkEg8KB21l",
-            "c3NhZ2UYASABKAkSDAoEdGltZRgCIAEoBxIOCgZzb3VyY2UYAyABKAkSKgoF",
-            "bGV2ZWwYBCABKA4yGy5tZXNodGFzdGljLkxvZ1JlY29yZC5MZXZlbCJYCgVM",
-            "ZXZlbBIJCgVVTlNFVBAAEgwKCENSSVRJQ0FMEDISCQoFRVJST1IQKBILCgdX",
-            "QVJOSU5HEB4SCAoESU5GTxAUEgkKBURFQlVHEAoSCQoFVFJBQ0UQBSJQCgtR",
-            "dWV1ZVN0YXR1cxILCgNyZXMYASABKAUSDAoEZnJlZRgCIAEoDRIOCgZtYXhs",
-            "ZW4YAyABKA0SFgoObWVzaF9wYWNrZXRfaWQYBCABKA0i+QUKCUZyb21SYWRp",
-            "bxIKCgJpZBgBIAEoDRIoCgZwYWNrZXQYAiABKAsyFi5tZXNodGFzdGljLk1l",
-            "c2hQYWNrZXRIABIpCgdteV9pbmZvGAMgASgLMhYubWVzaHRhc3RpYy5NeU5v",
-            "ZGVJbmZvSAASKQoJbm9kZV9pbmZvGAQgASgLMhQubWVzaHRhc3RpYy5Ob2Rl",
-            "SW5mb0gAEiQKBmNvbmZpZxgFIAEoCzISLm1lc2h0YXN0aWMuQ29uZmlnSAAS",
-            "KwoKbG9nX3JlY29yZBgGIAEoCzIVLm1lc2h0YXN0aWMuTG9nUmVjb3JkSAAS",
-            "HAoSY29uZmlnX2NvbXBsZXRlX2lkGAcgASgNSAASEgoIcmVib290ZWQYCCAB",
-            "KAhIABIwCgxtb2R1bGVDb25maWcYCSABKAsyGC5tZXNodGFzdGljLk1vZHVs",
-            "ZUNvbmZpZ0gAEiYKB2NoYW5uZWwYCiABKAsyEy5tZXNodGFzdGljLkNoYW5u",
-            "ZWxIABIuCgtxdWV1ZVN0YXR1cxgLIAEoCzIXLm1lc2h0YXN0aWMuUXVldWVT",
-            "dGF0dXNIABIqCgx4bW9kZW1QYWNrZXQYDCABKAsyEi5tZXNodGFzdGljLlhN",
-            "b2RlbUgAEi4KCG1ldGFkYXRhGA0gASgLMhoubWVzaHRhc3RpYy5EZXZpY2VN",
-            "ZXRhZGF0YUgAEkQKFm1xdHRDbGllbnRQcm94eU1lc3NhZ2UYDiABKAsyIi5t",
-            "ZXNodGFzdGljLk1xdHRDbGllbnRQcm94eU1lc3NhZ2VIABIoCghmaWxlSW5m",
-            "bxgPIAEoCzIULm1lc2h0YXN0aWMuRmlsZUluZm9IABI8ChJjbGllbnROb3Rp",
-            "ZmljYXRpb24YECABKAsyHi5tZXNodGFzdGljLkNsaWVudE5vdGlmaWNhdGlv",
-            "bkgAEjQKDmRldmljZXVpQ29uZmlnGBEgASgLMhoubWVzaHRhc3RpYy5EZXZp",
-            "Y2VVSUNvbmZpZ0gAQhEKD3BheWxvYWRfdmFyaWFudCKDAQoSQ2xpZW50Tm90",
-            "aWZpY2F0aW9uEhUKCHJlcGx5X2lkGAEgASgNSACIAQESDAoEdGltZRgCIAEo",
-            "BxIqCgVsZXZlbBgDIAEoDjIbLm1lc2h0YXN0aWMuTG9nUmVjb3JkLkxldmVs",
-            "Eg8KB21lc3NhZ2UYBCABKAlCCwoJX3JlcGx5X2lkIjEKCEZpbGVJbmZvEhEK",
-            "CWZpbGVfbmFtZRgBIAEoCRISCgpzaXplX2J5dGVzGAIgASgNIpQCCgdUb1Jh",
-            "ZGlvEigKBnBhY2tldBgBIAEoCzIWLm1lc2h0YXN0aWMuTWVzaFBhY2tldEgA",
-            "EhgKDndhbnRfY29uZmlnX2lkGAMgASgNSAASFAoKZGlzY29ubmVjdBgEIAEo",
-            "CEgAEioKDHhtb2RlbVBhY2tldBgFIAEoCzISLm1lc2h0YXN0aWMuWE1vZGVt",
-            "SAASRAoWbXF0dENsaWVudFByb3h5TWVzc2FnZRgGIAEoCzIiLm1lc2h0YXN0",
-            "aWMuTXF0dENsaWVudFByb3h5TWVzc2FnZUgAEioKCWhlYXJ0YmVhdBgHIAEo",
-            "CzIVLm1lc2h0YXN0aWMuSGVhcnRiZWF0SABCEQoPcGF5bG9hZF92YXJpYW50",
-            "IkAKCkNvbXByZXNzZWQSJAoHcG9ydG51bRgBIAEoDjITLm1lc2h0YXN0aWMu",
-            "UG9ydE51bRIMCgRkYXRhGAIgASgMIocBCgxOZWlnaGJvckluZm8SDwoHbm9k",
-            "ZV9pZBgBIAEoDRIXCg9sYXN0X3NlbnRfYnlfaWQYAiABKA0SJAocbm9kZV9i",
-            "cm9hZGNhc3RfaW50ZXJ2YWxfc2VjcxgDIAEoDRInCgluZWlnaGJvcnMYBCAD",
-            "KAsyFC5tZXNodGFzdGljLk5laWdoYm9yImQKCE5laWdoYm9yEg8KB25vZGVf",
-            "aWQYASABKA0SCwoDc25yGAIgASgCEhQKDGxhc3RfcnhfdGltZRgDIAEoBxIk",
-            "Chxub2RlX2Jyb2FkY2FzdF9pbnRlcnZhbF9zZWNzGAQgASgNItcCCg5EZXZp",
-            "Y2VNZXRhZGF0YRIYChBmaXJtd2FyZV92ZXJzaW9uGAEgASgJEhwKFGRldmlj",
-            "ZV9zdGF0ZV92ZXJzaW9uGAIgASgNEhMKC2NhblNodXRkb3duGAMgASgIEg8K",
-            "B2hhc1dpZmkYBCABKAgSFAoMaGFzQmx1ZXRvb3RoGAUgASgIEhMKC2hhc0V0",
-            "aGVybmV0GAYgASgIEjIKBHJvbGUYByABKA4yJC5tZXNodGFzdGljLkNvbmZp",
-            "Zy5EZXZpY2VDb25maWcuUm9sZRIWCg5wb3NpdGlvbl9mbGFncxgIIAEoDRIr",
-            "Cghod19tb2RlbBgJIAEoDjIZLm1lc2h0YXN0aWMuSGFyZHdhcmVNb2RlbBIZ",
-            "ChFoYXNSZW1vdGVIYXJkd2FyZRgKIAEoCBIOCgZoYXNQS0MYCyABKAgSGAoQ",
-            "ZXhjbHVkZWRfbW9kdWxlcxgMIAEoDSILCglIZWFydGJlYXQiVQoVTm9kZVJl",
-            "bW90ZUhhcmR3YXJlUGluEhAKCG5vZGVfbnVtGAEgASgNEioKA3BpbhgCIAEo",
-            "CzIdLm1lc2h0YXN0aWMuUmVtb3RlSGFyZHdhcmVQaW4iZQoOQ2h1bmtlZFBh",
-            "eWxvYWQSEgoKcGF5bG9hZF9pZBgBIAEoDRITCgtjaHVua19jb3VudBgCIAEo",
-            "DRITCgtjaHVua19pbmRleBgDIAEoDRIVCg1wYXlsb2FkX2NodW5rGAQgASgM",
-            "Ih8KDXJlc2VuZF9jaHVua3MSDgoGY2h1bmtzGAEgAygNIqoBChZDaHVua2Vk",
-            "UGF5bG9hZFJlc3BvbnNlEhIKCnBheWxvYWRfaWQYASABKA0SGgoQcmVxdWVz",
-            "dF90cmFuc2ZlchgCIAEoCEgAEhkKD2FjY2VwdF90cmFuc2ZlchgDIAEoCEgA",
-            "EjIKDXJlc2VuZF9jaHVua3MYBCABKAsyGS5tZXNodGFzdGljLnJlc2VuZF9j",
-            "aHVua3NIAEIRCg9wYXlsb2FkX3ZhcmlhbnQq3AwKDUhhcmR3YXJlTW9kZWwS",
-            "CQoFVU5TRVQQABIMCghUTE9SQV9WMhABEgwKCFRMT1JBX1YxEAISEgoOVExP",
-            "UkFfVjJfMV8xUDYQAxIJCgVUQkVBTRAEEg8KC0hFTFRFQ19WMl8wEAUSDgoK",
-            "VEJFQU1fVjBQNxAGEgoKBlRfRUNITxAHEhAKDFRMT1JBX1YxXzFQMxAIEgsK",
-            "B1JBSzQ2MzEQCRIPCgtIRUxURUNfVjJfMRAKEg0KCUhFTFRFQ19WMRALEhgK",
-            "FExJTFlHT19UQkVBTV9TM19DT1JFEAwSDAoIUkFLMTEyMDAQDRILCgdOQU5P",
-            "X0cxEA4SEgoOVExPUkFfVjJfMV8xUDgQDxIPCgtUTE9SQV9UM19TMxAQEhQK",
-            "EE5BTk9fRzFfRVhQTE9SRVIQERIRCg1OQU5PX0cyX1VMVFJBEBISDQoJTE9S",
-            "QV9UWVBFEBMSCwoHV0lQSE9ORRAUEg4KCldJT19XTTExMTAQFRILCgdSQUsy",
-            "NTYwEBYSEwoPSEVMVEVDX0hSVV8zNjAxEBcSGgoWSEVMVEVDX1dJUkVMRVNT",
-            "X0JSSURHRRAYEg4KClNUQVRJT05fRzEQGRIMCghSQUsxMTMxMBAaEhQKEFNF",
-            "TlNFTE9SQV9SUDIwNDAQGxIQCgxTRU5TRUxPUkFfUzMQHBINCglDQU5BUllP",
-            "TkUQHRIPCgtSUDIwNDBfTE9SQRAeEg4KClNUQVRJT05fRzIQHxIRCg1MT1JB",
-            "X1JFTEFZX1YxECASDgoKTlJGNTI4NDBESxAhEgcKA1BQUhAiEg8KC0dFTklF",
-            "QkxPQ0tTECMSEQoNTlJGNTJfVU5LTk9XThAkEg0KCVBPUlREVUlOTxAlEg8K",
-            "C0FORFJPSURfU0lNECYSCgoGRElZX1YxECcSFQoRTlJGNTI4NDBfUENBMTAw",
-            "NTkQKBIKCgZEUl9ERVYQKRILCgdNNVNUQUNLECoSDQoJSEVMVEVDX1YzECsS",
-            "EQoNSEVMVEVDX1dTTF9WMxAsEhMKD0JFVEFGUFZfMjQwMF9UWBAtEhcKE0JF",
-            "VEFGUFZfOTAwX05BTk9fVFgQLhIMCghSUElfUElDTxAvEhsKF0hFTFRFQ19X",
-            "SVJFTEVTU19UUkFDS0VSEDASGQoVSEVMVEVDX1dJUkVMRVNTX1BBUEVSEDES",
-            "CgoGVF9ERUNLEDISDgoKVF9XQVRDSF9TMxAzEhEKDVBJQ09NUFVURVJfUzMQ",
-            "NBIPCgtIRUxURUNfSFQ2MhA1EhIKDkVCWVRFX0VTUDMyX1MzEDYSEQoNRVNQ",
-            "MzJfUzNfUElDTxA3Eg0KCUNIQVRURVJfMhA4Eh4KGkhFTFRFQ19XSVJFTEVT",
-            "U19QQVBFUl9WMV8wEDkSIAocSEVMVEVDX1dJUkVMRVNTX1RSQUNLRVJfVjFf",
-            "MBA6EgsKB1VOUEhPTkUQOxIMCghURF9MT1JBQxA8EhMKD0NERUJZVEVfRU9S",
-            "QV9TMxA9Eg8KC1RXQ19NRVNIX1Y0ED4SFgoSTlJGNTJfUFJPTUlDUk9fRElZ",
-            "ED8SHwobUkFESU9NQVNURVJfOTAwX0JBTkRJVF9OQU5PEEASHAoYSEVMVEVD",
-            "X0NBUFNVTEVfU0VOU09SX1YzEEESHQoZSEVMVEVDX1ZJU0lPTl9NQVNURVJf",
-            "VDE5MBBCEh0KGUhFTFRFQ19WSVNJT05fTUFTVEVSX0UyMTMQQxIdChlIRUxU",
-            "RUNfVklTSU9OX01BU1RFUl9FMjkwEEQSGQoVSEVMVEVDX01FU0hfTk9ERV9U",
-            "MTE0EEUSFgoSU0VOU0VDQVBfSU5ESUNBVE9SEEYSEwoPVFJBQ0tFUl9UMTAw",
-            "MF9FEEcSCwoHUkFLMzE3MhBIEgoKBldJT19FNRBJEhoKFlJBRElPTUFTVEVS",
-            "XzkwMF9CQU5ESVQQShITCg9NRTI1TFMwMV80WTEwVEQQSxIYChRSUDIwNDBf",
-            "RkVBVEhFUl9SRk05NRBMEhUKEU01U1RBQ0tfQ09SRUJBU0lDEE0SEQoNTTVT",
-            "VEFDS19DT1JFMhBOEg0KCVJQSV9QSUNPMhBPEhIKDk01U1RBQ0tfQ09SRVMz",
-            "EFASEQoNU0VFRURfWElBT19TMxBREgsKB01TMjRTRjEQUhIMCghUTE9SQV9D",
-            "NhBTEg8KC1dJU01FU0hfVEFQEFQSDwoKUFJJVkFURV9IVxD/ASosCglDb25z",
-            "dGFudHMSCAoEWkVSTxAAEhUKEERBVEFfUEFZTE9BRF9MRU4Q6QEqtAIKEUNy",
-            "aXRpY2FsRXJyb3JDb2RlEggKBE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQK",
-            "EFNMRUVQX0VOVEVSX1dBSVQQAhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lG",
-            "SUVEEAQSFQoRVUJMT1hfVU5JVF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZ",
-            "ChVJTlZBTElEX1JBRElPX1NFVFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQ",
-            "CBIMCghCUk9XTk9VVBAJEhIKDlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9f",
-            "U1BJX0JVRxALEiAKHEZMQVNIX0NPUlJVUFRJT05fUkVDT1ZFUkFCTEUQDBIi",
-            "Ch5GTEFTSF9DT1JSVVBUSU9OX1VOUkVDT1ZFUkFCTEUQDSrTAgoPRXhjbHVk",
-            "ZWRNb2R1bGVzEhEKDUVYQ0xVREVEX05PTkUQABIPCgtNUVRUX0NPTkZJRxAB",
-            "EhEKDVNFUklBTF9DT05GSUcQAhITCg9FWFROT1RJRl9DT05GSUcQBBIXChNT",
-            "VE9SRUZPUldBUkRfQ09ORklHEAgSFAoQUkFOR0VURVNUX0NPTkZJRxAQEhQK",
-            "EFRFTEVNRVRSWV9DT05GSUcQIBIUChBDQU5ORURNU0dfQ09ORklHEEASEQoM",
-            "QVVESU9fQ09ORklHEIABEhoKFVJFTU9URUhBUkRXQVJFX0NPTkZJRxCAAhIY",
-            "ChNORUlHSEJPUklORk9fQ09ORklHEIAEEhsKFkFNQklFTlRMSUdIVElOR19D",
-            "T05GSUcQgAgSGwoWREVURUNUSU9OU0VOU09SX0NPTkZJRxCAEBIWChFQQVhD",
-            "T1VOVEVSX0NPTkZJRxCAIEJfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpNZXNo",
-            "UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
-            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "EAoIbmV4dF9ob3AYEiABKA0SEgoKcmVsYXlfbm9kZRgTIAEoDRIQCgh0eF9h",
+            "ZnRlchgUIAEoDSJ+CghQcmlvcml0eRIJCgVVTlNFVBAAEgcKA01JThABEg4K",
+            "CkJBQ0tHUk9VTkQQChILCgdERUZBVUxUEEASDAoIUkVMSUFCTEUQRhIMCghS",
+            "RVNQT05TRRBQEggKBEhJR0gQZBIJCgVBTEVSVBBuEgcKA0FDSxB4EgcKA01B",
+            "WBB/IkIKB0RlbGF5ZWQSDAoITk9fREVMQVkQABIVChFERUxBWUVEX0JST0FE",
+            "Q0FTVBABEhIKDkRFTEFZRURfRElSRUNUEAJCEQoPcGF5bG9hZF92YXJpYW50",
+            "IqUCCghOb2RlSW5mbxILCgNudW0YASABKA0SHgoEdXNlchgCIAEoCzIQLm1l",
+            "c2h0YXN0aWMuVXNlchImCghwb3NpdGlvbhgDIAEoCzIULm1lc2h0YXN0aWMu",
+            "UG9zaXRpb24SCwoDc25yGAQgASgCEhIKCmxhc3RfaGVhcmQYBSABKAcSMQoO",
+            "ZGV2aWNlX21ldHJpY3MYBiABKAsyGS5tZXNodGFzdGljLkRldmljZU1ldHJp",
+            "Y3MSDwoHY2hhbm5lbBgHIAEoDRIQCgh2aWFfbXF0dBgIIAEoCBIWCglob3Bz",
+            "X2F3YXkYCSABKA1IAIgBARITCgtpc19mYXZvcml0ZRgKIAEoCBISCgppc19p",
+            "Z25vcmVkGAsgASgIQgwKCl9ob3BzX2F3YXkidAoKTXlOb2RlSW5mbxITCgtt",
+            "eV9ub2RlX251bRgBIAEoDRIUCgxyZWJvb3RfY291bnQYCCABKA0SFwoPbWlu",
+            "X2FwcF92ZXJzaW9uGAsgASgNEhEKCWRldmljZV9pZBgMIAEoDBIPCgdwaW9f",
+            "ZW52GA0gASgJIsABCglMb2dSZWNvcmQSDwoHbWVzc2FnZRgBIAEoCRIMCgR0",
+            "aW1lGAIgASgHEg4KBnNvdXJjZRgDIAEoCRIqCgVsZXZlbBgEIAEoDjIbLm1l",
+            "c2h0YXN0aWMuTG9nUmVjb3JkLkxldmVsIlgKBUxldmVsEgkKBVVOU0VUEAAS",
+            "DAoIQ1JJVElDQUwQMhIJCgVFUlJPUhAoEgsKB1dBUk5JTkcQHhIICgRJTkZP",
+            "EBQSCQoFREVCVUcQChIJCgVUUkFDRRAFIlAKC1F1ZXVlU3RhdHVzEgsKA3Jl",
+            "cxgBIAEoBRIMCgRmcmVlGAIgASgNEg4KBm1heGxlbhgDIAEoDRIWCg5tZXNo",
+            "X3BhY2tldF9pZBgEIAEoDSL5BQoJRnJvbVJhZGlvEgoKAmlkGAEgASgNEigK",
+            "BnBhY2tldBgCIAEoCzIWLm1lc2h0YXN0aWMuTWVzaFBhY2tldEgAEikKB215",
+            "X2luZm8YAyABKAsyFi5tZXNodGFzdGljLk15Tm9kZUluZm9IABIpCglub2Rl",
+            "X2luZm8YBCABKAsyFC5tZXNodGFzdGljLk5vZGVJbmZvSAASJAoGY29uZmln",
+            "GAUgASgLMhIubWVzaHRhc3RpYy5Db25maWdIABIrCgpsb2dfcmVjb3JkGAYg",
+            "ASgLMhUubWVzaHRhc3RpYy5Mb2dSZWNvcmRIABIcChJjb25maWdfY29tcGxl",
+            "dGVfaWQYByABKA1IABISCghyZWJvb3RlZBgIIAEoCEgAEjAKDG1vZHVsZUNv",
+            "bmZpZxgJIAEoCzIYLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnSAASJgoHY2hh",
+            "bm5lbBgKIAEoCzITLm1lc2h0YXN0aWMuQ2hhbm5lbEgAEi4KC3F1ZXVlU3Rh",
+            "dHVzGAsgASgLMhcubWVzaHRhc3RpYy5RdWV1ZVN0YXR1c0gAEioKDHhtb2Rl",
+            "bVBhY2tldBgMIAEoCzISLm1lc2h0YXN0aWMuWE1vZGVtSAASLgoIbWV0YWRh",
+            "dGEYDSABKAsyGi5tZXNodGFzdGljLkRldmljZU1ldGFkYXRhSAASRAoWbXF0",
+            "dENsaWVudFByb3h5TWVzc2FnZRgOIAEoCzIiLm1lc2h0YXN0aWMuTXF0dENs",
+            "aWVudFByb3h5TWVzc2FnZUgAEigKCGZpbGVJbmZvGA8gASgLMhQubWVzaHRh",
+            "c3RpYy5GaWxlSW5mb0gAEjwKEmNsaWVudE5vdGlmaWNhdGlvbhgQIAEoCzIe",
+            "Lm1lc2h0YXN0aWMuQ2xpZW50Tm90aWZpY2F0aW9uSAASNAoOZGV2aWNldWlD",
+            "b25maWcYESABKAsyGi5tZXNodGFzdGljLkRldmljZVVJQ29uZmlnSABCEQoP",
+            "cGF5bG9hZF92YXJpYW50IoMBChJDbGllbnROb3RpZmljYXRpb24SFQoIcmVw",
+            "bHlfaWQYASABKA1IAIgBARIMCgR0aW1lGAIgASgHEioKBWxldmVsGAMgASgO",
+            "MhsubWVzaHRhc3RpYy5Mb2dSZWNvcmQuTGV2ZWwSDwoHbWVzc2FnZRgEIAEo",
+            "CUILCglfcmVwbHlfaWQiMQoIRmlsZUluZm8SEQoJZmlsZV9uYW1lGAEgASgJ",
+            "EhIKCnNpemVfYnl0ZXMYAiABKA0ilAIKB1RvUmFkaW8SKAoGcGFja2V0GAEg",
+            "ASgLMhYubWVzaHRhc3RpYy5NZXNoUGFja2V0SAASGAoOd2FudF9jb25maWdf",
+            "aWQYAyABKA1IABIUCgpkaXNjb25uZWN0GAQgASgISAASKgoMeG1vZGVtUGFj",
+            "a2V0GAUgASgLMhIubWVzaHRhc3RpYy5YTW9kZW1IABJEChZtcXR0Q2xpZW50",
+            "UHJveHlNZXNzYWdlGAYgASgLMiIubWVzaHRhc3RpYy5NcXR0Q2xpZW50UHJv",
+            "eHlNZXNzYWdlSAASKgoJaGVhcnRiZWF0GAcgASgLMhUubWVzaHRhc3RpYy5I",
+            "ZWFydGJlYXRIAEIRCg9wYXlsb2FkX3ZhcmlhbnQiQAoKQ29tcHJlc3NlZBIk",
+            "Cgdwb3J0bnVtGAEgASgOMhMubWVzaHRhc3RpYy5Qb3J0TnVtEgwKBGRhdGEY",
+            "AiABKAwihwEKDE5laWdoYm9ySW5mbxIPCgdub2RlX2lkGAEgASgNEhcKD2xh",
+            "c3Rfc2VudF9ieV9pZBgCIAEoDRIkChxub2RlX2Jyb2FkY2FzdF9pbnRlcnZh",
+            "bF9zZWNzGAMgASgNEicKCW5laWdoYm9ycxgEIAMoCzIULm1lc2h0YXN0aWMu",
+            "TmVpZ2hib3IiZAoITmVpZ2hib3ISDwoHbm9kZV9pZBgBIAEoDRILCgNzbnIY",
+            "AiABKAISFAoMbGFzdF9yeF90aW1lGAMgASgHEiQKHG5vZGVfYnJvYWRjYXN0",
+            "X2ludGVydmFsX3NlY3MYBCABKA0i1wIKDkRldmljZU1ldGFkYXRhEhgKEGZp",
+            "cm13YXJlX3ZlcnNpb24YASABKAkSHAoUZGV2aWNlX3N0YXRlX3ZlcnNpb24Y",
+            "AiABKA0SEwoLY2FuU2h1dGRvd24YAyABKAgSDwoHaGFzV2lmaRgEIAEoCBIU",
+            "CgxoYXNCbHVldG9vdGgYBSABKAgSEwoLaGFzRXRoZXJuZXQYBiABKAgSMgoE",
+            "cm9sZRgHIAEoDjIkLm1lc2h0YXN0aWMuQ29uZmlnLkRldmljZUNvbmZpZy5S",
+            "b2xlEhYKDnBvc2l0aW9uX2ZsYWdzGAggASgNEisKCGh3X21vZGVsGAkgASgO",
+            "MhkubWVzaHRhc3RpYy5IYXJkd2FyZU1vZGVsEhkKEWhhc1JlbW90ZUhhcmR3",
+            "YXJlGAogASgIEg4KBmhhc1BLQxgLIAEoCBIYChBleGNsdWRlZF9tb2R1bGVz",
+            "GAwgASgNIgsKCUhlYXJ0YmVhdCJVChVOb2RlUmVtb3RlSGFyZHdhcmVQaW4S",
+            "EAoIbm9kZV9udW0YASABKA0SKgoDcGluGAIgASgLMh0ubWVzaHRhc3RpYy5S",
+            "ZW1vdGVIYXJkd2FyZVBpbiJlCg5DaHVua2VkUGF5bG9hZBISCgpwYXlsb2Fk",
+            "X2lkGAEgASgNEhMKC2NodW5rX2NvdW50GAIgASgNEhMKC2NodW5rX2luZGV4",
+            "GAMgASgNEhUKDXBheWxvYWRfY2h1bmsYBCABKAwiHwoNcmVzZW5kX2NodW5r",
+            "cxIOCgZjaHVua3MYASADKA0iqgEKFkNodW5rZWRQYXlsb2FkUmVzcG9uc2US",
+            "EgoKcGF5bG9hZF9pZBgBIAEoDRIaChByZXF1ZXN0X3RyYW5zZmVyGAIgASgI",
+            "SAASGQoPYWNjZXB0X3RyYW5zZmVyGAMgASgISAASMgoNcmVzZW5kX2NodW5r",
+            "cxgEIAEoCzIZLm1lc2h0YXN0aWMucmVzZW5kX2NodW5rc0gAQhEKD3BheWxv",
+            "YWRfdmFyaWFudCqHDQoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRM",
+            "T1JBX1YyEAESDAoIVExPUkFfVjEQAhISCg5UTE9SQV9WMl8xXzFQNhADEgkK",
+            "BVRCRUFNEAQSDwoLSEVMVEVDX1YyXzAQBRIOCgpUQkVBTV9WMFA3EAYSCgoG",
+            "VF9FQ0hPEAcSEAoMVExPUkFfVjFfMVAzEAgSCwoHUkFLNDYzMRAJEg8KC0hF",
+            "TFRFQ19WMl8xEAoSDQoJSEVMVEVDX1YxEAsSGAoUTElMWUdPX1RCRUFNX1Mz",
+            "X0NPUkUQDBIMCghSQUsxMTIwMBANEgsKB05BTk9fRzEQDhISCg5UTE9SQV9W",
+            "Ml8xXzFQOBAPEg8KC1RMT1JBX1QzX1MzEBASFAoQTkFOT19HMV9FWFBMT1JF",
+            "UhAREhEKDU5BTk9fRzJfVUxUUkEQEhINCglMT1JBX1RZUEUQExILCgdXSVBI",
+            "T05FEBQSDgoKV0lPX1dNMTExMBAVEgsKB1JBSzI1NjAQFhITCg9IRUxURUNf",
+            "SFJVXzM2MDEQFxIaChZIRUxURUNfV0lSRUxFU1NfQlJJREdFEBgSDgoKU1RB",
+            "VElPTl9HMRAZEgwKCFJBSzExMzEwEBoSFAoQU0VOU0VMT1JBX1JQMjA0MBAb",
+            "EhAKDFNFTlNFTE9SQV9TMxAcEg0KCUNBTkFSWU9ORRAdEg8KC1JQMjA0MF9M",
+            "T1JBEB4SDgoKU1RBVElPTl9HMhAfEhEKDUxPUkFfUkVMQVlfVjEQIBIOCgpO",
+            "UkY1Mjg0MERLECESBwoDUFBSECISDwoLR0VOSUVCTE9DS1MQIxIRCg1OUkY1",
+            "Ml9VTktOT1dOECQSDQoJUE9SVERVSU5PECUSDwoLQU5EUk9JRF9TSU0QJhIK",
+            "CgZESVlfVjEQJxIVChFOUkY1Mjg0MF9QQ0ExMDA1ORAoEgoKBkRSX0RFVhAp",
+            "EgsKB001U1RBQ0sQKhINCglIRUxURUNfVjMQKxIRCg1IRUxURUNfV1NMX1Yz",
+            "ECwSEwoPQkVUQUZQVl8yNDAwX1RYEC0SFwoTQkVUQUZQVl85MDBfTkFOT19U",
+            "WBAuEgwKCFJQSV9QSUNPEC8SGwoXSEVMVEVDX1dJUkVMRVNTX1RSQUNLRVIQ",
+            "MBIZChVIRUxURUNfV0lSRUxFU1NfUEFQRVIQMRIKCgZUX0RFQ0sQMhIOCgpU",
+            "X1dBVENIX1MzEDMSEQoNUElDT01QVVRFUl9TMxA0Eg8KC0hFTFRFQ19IVDYy",
+            "EDUSEgoORUJZVEVfRVNQMzJfUzMQNhIRCg1FU1AzMl9TM19QSUNPEDcSDQoJ",
+            "Q0hBVFRFUl8yEDgSHgoaSEVMVEVDX1dJUkVMRVNTX1BBUEVSX1YxXzAQORIg",
+            "ChxIRUxURUNfV0lSRUxFU1NfVFJBQ0tFUl9WMV8wEDoSCwoHVU5QSE9ORRA7",
+            "EgwKCFREX0xPUkFDEDwSEwoPQ0RFQllURV9FT1JBX1MzED0SDwoLVFdDX01F",
+            "U0hfVjQQPhIWChJOUkY1Ml9QUk9NSUNST19ESVkQPxIfChtSQURJT01BU1RF",
+            "Ul85MDBfQkFORElUX05BTk8QQBIcChhIRUxURUNfQ0FQU1VMRV9TRU5TT1Jf",
+            "VjMQQRIdChlIRUxURUNfVklTSU9OX01BU1RFUl9UMTkwEEISHQoZSEVMVEVD",
+            "X1ZJU0lPTl9NQVNURVJfRTIxMxBDEh0KGUhFTFRFQ19WSVNJT05fTUFTVEVS",
+            "X0UyOTAQRBIZChVIRUxURUNfTUVTSF9OT0RFX1QxMTQQRRIWChJTRU5TRUNB",
+            "UF9JTkRJQ0FUT1IQRhITCg9UUkFDS0VSX1QxMDAwX0UQRxILCgdSQUszMTcy",
+            "EEgSCgoGV0lPX0U1EEkSGgoWUkFESU9NQVNURVJfOTAwX0JBTkRJVBBKEhMK",
+            "D01FMjVMUzAxXzRZMTBURBBLEhgKFFJQMjA0MF9GRUFUSEVSX1JGTTk1EEwS",
+            "FQoRTTVTVEFDS19DT1JFQkFTSUMQTRIRCg1NNVNUQUNLX0NPUkUyEE4SDQoJ",
+            "UlBJX1BJQ08yEE8SEgoOTTVTVEFDS19DT1JFUzMQUBIRCg1TRUVFRF9YSUFP",
+            "X1MzEFESCwoHTVMyNFNGMRBSEgwKCFRMT1JBX0M2EFMSDwoLV0lTTUVTSF9U",
+            "QVAQVBINCglST1VUQVNUSUMQVRIMCghNRVNIX1RBQhBWEgwKCE1FU0hMSU5L",
+            "EFcSDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAAEhUK",
+            "EERBVEFfUEFZTE9BRF9MRU4Q6QEqtAIKEUNyaXRpY2FsRXJyb3JDb2RlEggK",
+            "BE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQ",
+            "AhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5J",
+            "VF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NF",
+            "VFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIK",
+            "DlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALEiAKHEZMQVNI",
+            "X0NPUlJVUFRJT05fUkVDT1ZFUkFCTEUQDBIiCh5GTEFTSF9DT1JSVVBUSU9O",
+            "X1VOUkVDT1ZFUkFCTEUQDSrTAgoPRXhjbHVkZWRNb2R1bGVzEhEKDUVYQ0xV",
+            "REVEX05PTkUQABIPCgtNUVRUX0NPTkZJRxABEhEKDVNFUklBTF9DT05GSUcQ",
+            "AhITCg9FWFROT1RJRl9DT05GSUcQBBIXChNTVE9SRUZPUldBUkRfQ09ORklH",
+            "EAgSFAoQUkFOR0VURVNUX0NPTkZJRxAQEhQKEFRFTEVNRVRSWV9DT05GSUcQ",
+            "IBIUChBDQU5ORURNU0dfQ09ORklHEEASEQoMQVVESU9fQ09ORklHEIABEhoK",
+            "FVJFTU9URUhBUkRXQVJFX0NPTkZJRxCAAhIYChNORUlHSEJPUklORk9fQ09O",
+            "RklHEIAEEhsKFkFNQklFTlRMSUdIVElOR19DT05GSUcQgAgSGwoWREVURUNU",
+            "SU9OU0VOU09SX0NPTkZJRxCAEBIWChFQQVhDT1VOVEVSX0NPTkZJRxCAIEJf",
+            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpNZXNoUHJvdG9zWiJnaXRodWIuY29t",
+            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
+            "ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), typeof(global::Meshtastic.Protobufs.ExcludedModules), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -223,7 +225,7 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Data), global::Meshtastic.Protobufs.Data.Parser, new[]{ "Portnum", "Payload", "WantResponse", "Dest", "Source", "RequestId", "ReplyId", "Emoji", "Bitfield" }, new[]{ "Bitfield" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Waypoint), global::Meshtastic.Protobufs.Waypoint.Parser, new[]{ "Id", "LatitudeI", "LongitudeI", "Expire", "LockedTo", "Name", "Description", "Icon" }, new[]{ "LatitudeI", "LongitudeI" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MqttClientProxyMessage), global::Meshtastic.Protobufs.MqttClientProxyMessage.Parser, new[]{ "Topic", "Data", "Text", "Retained" }, new[]{ "PayloadVariant" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MeshPacket), global::Meshtastic.Protobufs.MeshPacket.Parser, new[]{ "From", "To", "Channel", "Decoded", "Encrypted", "Id", "RxTime", "RxSnr", "HopLimit", "WantAck", "Priority", "RxRssi", "Delayed", "ViaMqtt", "HopStart", "PublicKey", "PkiEncrypted", "NextHop", "RelayNode" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Priority), typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Delayed) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MeshPacket), global::Meshtastic.Protobufs.MeshPacket.Parser, new[]{ "From", "To", "Channel", "Decoded", "Encrypted", "Id", "RxTime", "RxSnr", "HopLimit", "WantAck", "Priority", "RxRssi", "Delayed", "ViaMqtt", "HopStart", "PublicKey", "PkiEncrypted", "NextHop", "RelayNode", "TxAfter" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Priority), typeof(global::Meshtastic.Protobufs.MeshPacket.Types.Delayed) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeInfo), global::Meshtastic.Protobufs.NodeInfo.Parser, new[]{ "Num", "User", "Position", "Snr", "LastHeard", "DeviceMetrics", "Channel", "ViaMqtt", "HopsAway", "IsFavorite", "IsIgnored" }, new[]{ "HopsAway" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MyNodeInfo), global::Meshtastic.Protobufs.MyNodeInfo.Parser, new[]{ "MyNodeNum", "RebootCount", "MinAppVersion", "DeviceId", "PioEnv" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LogRecord), global::Meshtastic.Protobufs.LogRecord.Parser, new[]{ "Message", "Time", "Source", "Level" }, null, new[]{ typeof(global::Meshtastic.Protobufs.LogRecord.Types.Level) }, null, null),
@@ -698,6 +700,26 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("WISMESH_TAP")] WismeshTap = 84,
     /// <summary>
     ///
+    /// Similar to PORTDUINO but used by Routastic devices, this is not any
+    /// particular device and does not run Meshtastic's code but supports
+    /// the same frame format.
+    /// Runs on linux, see https://github.com/Jorropo/routastic
+    /// </summary>
+    [pbr::OriginalName("ROUTASTIC")] Routastic = 85,
+    /// <summary>
+    ///
+    /// Mesh-Tab, esp32 based
+    /// https://github.com/valzzu/Mesh-Tab
+    /// </summary>
+    [pbr::OriginalName("MESH_TAB")] MeshTab = 86,
+    /// <summary>
+    ///
+    /// MeshLink board developed by LoraItalia. NRF52840, eByte E22900M22S (Will also come with other frequencies), 25w MPPT solar charger (5v,12v,18v selectable), support for gps, buzzer, oled or e-ink display, 10 gpios, hardware watchdog
+    /// https://www.loraitalia.it
+    /// </summary>
+    [pbr::OriginalName("MESHLINK")] Meshlink = 87,
+    /// <summary>
+    ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
     /// Reserved ID For developing private Ports. These will show up in live traffic sparsely, so we can use a high number. Keep it within 8 bits.
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -896,6 +918,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// A GPS Position
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Position : pb::IMessage<Position>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -966,6 +989,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "latitude_i" field.</summary>
     public const int LatitudeIFieldNumber = 1;
+    private readonly static int LatitudeIDefaultValue = 0;
+
     private int latitudeI_;
     /// <summary>
     ///
@@ -975,7 +1000,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LatitudeI {
-      get { if ((_hasBits0 & 1) != 0) { return latitudeI_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return latitudeI_; } else { return LatitudeIDefaultValue; } }
       set {
         _hasBits0 |= 1;
         latitudeI_ = value;
@@ -996,6 +1021,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "longitude_i" field.</summary>
     public const int LongitudeIFieldNumber = 2;
+    private readonly static int LongitudeIDefaultValue = 0;
+
     private int longitudeI_;
     /// <summary>
     ///
@@ -1004,7 +1031,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LongitudeI {
-      get { if ((_hasBits0 & 2) != 0) { return longitudeI_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return longitudeI_; } else { return LongitudeIDefaultValue; } }
       set {
         _hasBits0 |= 2;
         longitudeI_ = value;
@@ -1025,6 +1052,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "altitude" field.</summary>
     public const int AltitudeFieldNumber = 3;
+    private readonly static int AltitudeDefaultValue = 0;
+
     private int altitude_;
     /// <summary>
     ///
@@ -1033,7 +1062,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Altitude {
-      get { if ((_hasBits0 & 4) != 0) { return altitude_; } else { return 0; } }
+      get { if ((_hasBits0 & 4) != 0) { return altitude_; } else { return AltitudeDefaultValue; } }
       set {
         _hasBits0 |= 4;
         altitude_ = value;
@@ -1137,6 +1166,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "altitude_hae" field.</summary>
     public const int AltitudeHaeFieldNumber = 9;
+    private readonly static int AltitudeHaeDefaultValue = 0;
+
     private int altitudeHae_;
     /// <summary>
     ///
@@ -1145,7 +1176,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int AltitudeHae {
-      get { if ((_hasBits0 & 8) != 0) { return altitudeHae_; } else { return 0; } }
+      get { if ((_hasBits0 & 8) != 0) { return altitudeHae_; } else { return AltitudeHaeDefaultValue; } }
       set {
         _hasBits0 |= 8;
         altitudeHae_ = value;
@@ -1166,6 +1197,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "altitude_geoidal_separation" field.</summary>
     public const int AltitudeGeoidalSeparationFieldNumber = 10;
+    private readonly static int AltitudeGeoidalSeparationDefaultValue = 0;
+
     private int altitudeGeoidalSeparation_;
     /// <summary>
     ///
@@ -1174,7 +1207,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int AltitudeGeoidalSeparation {
-      get { if ((_hasBits0 & 16) != 0) { return altitudeGeoidalSeparation_; } else { return 0; } }
+      get { if ((_hasBits0 & 16) != 0) { return altitudeGeoidalSeparation_; } else { return AltitudeGeoidalSeparationDefaultValue; } }
       set {
         _hasBits0 |= 16;
         altitudeGeoidalSeparation_ = value;
@@ -1265,6 +1298,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "ground_speed" field.</summary>
     public const int GroundSpeedFieldNumber = 15;
+    private readonly static uint GroundSpeedDefaultValue = 0;
+
     private uint groundSpeed_;
     /// <summary>
     ///
@@ -1278,7 +1313,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint GroundSpeed {
-      get { if ((_hasBits0 & 32) != 0) { return groundSpeed_; } else { return 0; } }
+      get { if ((_hasBits0 & 32) != 0) { return groundSpeed_; } else { return GroundSpeedDefaultValue; } }
       set {
         _hasBits0 |= 32;
         groundSpeed_ = value;
@@ -1299,6 +1334,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "ground_track" field.</summary>
     public const int GroundTrackFieldNumber = 16;
+    private readonly static uint GroundTrackDefaultValue = 0;
+
     private uint groundTrack_;
     /// <summary>
     ///
@@ -1307,7 +1344,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint GroundTrack {
-      get { if ((_hasBits0 & 64) != 0) { return groundTrack_; } else { return 0; } }
+      get { if ((_hasBits0 & 64) != 0) { return groundTrack_; } else { return GroundTrackDefaultValue; } }
       set {
         _hasBits0 |= 64;
         groundTrack_ = value;
@@ -1893,7 +1930,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2000,7 +2041,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2194,6 +2239,7 @@ namespace Meshtastic.Protobufs {
   /// 0xff - broadcast
   /// 0 through 3 - for future use
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class User : pb::IMessage<User>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2597,7 +2643,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2644,7 +2694,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2691,6 +2745,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// A message used in a traceroute
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteDiscovery : pb::IMessage<RouteDiscovery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2905,7 +2960,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2940,7 +2999,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2975,6 +3038,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// A Routing control Data packet handled by the routing module
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Routing : pb::IMessage<Routing>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3072,10 +3136,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Meshtastic.Protobufs.Routing.Types.Error ErrorReason {
-      get { return variantCase_ == VariantOneofCase.ErrorReason ? (global::Meshtastic.Protobufs.Routing.Types.Error) variant_ : global::Meshtastic.Protobufs.Routing.Types.Error.None; }
+      get { return HasErrorReason ? (global::Meshtastic.Protobufs.Routing.Types.Error) variant_ : global::Meshtastic.Protobufs.Routing.Types.Error.None; }
       set {
         variant_ = value;
         variantCase_ = VariantOneofCase.ErrorReason;
+      }
+    }
+    /// <summary>Gets whether the "error_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasErrorReason {
+      get { return variantCase_ == VariantOneofCase.ErrorReason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "error_reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearErrorReason() {
+      if (HasErrorReason) {
+        ClearVariant();
       }
     }
 
@@ -3129,7 +3207,7 @@ namespace Meshtastic.Protobufs {
       int hash = 1;
       if (variantCase_ == VariantOneofCase.RouteRequest) hash ^= RouteRequest.GetHashCode();
       if (variantCase_ == VariantOneofCase.RouteReply) hash ^= RouteReply.GetHashCode();
-      if (variantCase_ == VariantOneofCase.ErrorReason) hash ^= ErrorReason.GetHashCode();
+      if (HasErrorReason) hash ^= ErrorReason.GetHashCode();
       hash ^= (int) variantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3157,7 +3235,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(18);
         output.WriteMessage(RouteReply);
       }
-      if (variantCase_ == VariantOneofCase.ErrorReason) {
+      if (HasErrorReason) {
         output.WriteRawTag(24);
         output.WriteEnum((int) ErrorReason);
       }
@@ -3179,7 +3257,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(18);
         output.WriteMessage(RouteReply);
       }
-      if (variantCase_ == VariantOneofCase.ErrorReason) {
+      if (HasErrorReason) {
         output.WriteRawTag(24);
         output.WriteEnum((int) ErrorReason);
       }
@@ -3199,7 +3277,7 @@ namespace Meshtastic.Protobufs {
       if (variantCase_ == VariantOneofCase.RouteReply) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RouteReply);
       }
-      if (variantCase_ == VariantOneofCase.ErrorReason) {
+      if (HasErrorReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ErrorReason);
       }
       if (_unknownFields != null) {
@@ -3243,7 +3321,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -3281,7 +3363,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -3419,6 +3505,7 @@ namespace Meshtastic.Protobufs {
   /// The payload portion fo a packet, this is the actual bytes that are sent
   /// inside a radio packet (because from/to are broken out by the comms library)
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Data : pb::IMessage<Data>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3613,6 +3700,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "bitfield" field.</summary>
     public const int BitfieldFieldNumber = 9;
+    private readonly static uint BitfieldDefaultValue = 0;
+
     private uint bitfield_;
     /// <summary>
     ///
@@ -3621,7 +3710,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint Bitfield {
-      get { if ((_hasBits0 & 1) != 0) { return bitfield_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return bitfield_; } else { return BitfieldDefaultValue; } }
       set {
         _hasBits0 |= 1;
         bitfield_ = value;
@@ -3867,7 +3956,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -3918,7 +4011,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -3969,6 +4066,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Waypoint message, used to share arbitrary locations across the mesh
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Waypoint : pb::IMessage<Waypoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4040,6 +4138,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "latitude_i" field.</summary>
     public const int LatitudeIFieldNumber = 2;
+    private readonly static int LatitudeIDefaultValue = 0;
+
     private int latitudeI_;
     /// <summary>
     ///
@@ -4048,7 +4148,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LatitudeI {
-      get { if ((_hasBits0 & 1) != 0) { return latitudeI_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return latitudeI_; } else { return LatitudeIDefaultValue; } }
       set {
         _hasBits0 |= 1;
         latitudeI_ = value;
@@ -4069,6 +4169,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "longitude_i" field.</summary>
     public const int LongitudeIFieldNumber = 3;
+    private readonly static int LongitudeIDefaultValue = 0;
+
     private int longitudeI_;
     /// <summary>
     ///
@@ -4077,7 +4179,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LongitudeI {
-      get { if ((_hasBits0 & 2) != 0) { return longitudeI_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return longitudeI_; } else { return LongitudeIDefaultValue; } }
       set {
         _hasBits0 |= 2;
         longitudeI_ = value;
@@ -4388,7 +4490,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4435,7 +4541,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -4482,6 +4592,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// This message will be proxied over the PhoneAPI for the client to deliver to the MQTT server
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MqttClientProxyMessage : pb::IMessage<MqttClientProxyMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4561,10 +4672,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Data {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.Data ? (pb::ByteString) payloadVariant_ : pb::ByteString.Empty; }
+      get { return HasData ? (pb::ByteString) payloadVariant_ : pb::ByteString.Empty; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.Data;
+      }
+    }
+    /// <summary>Gets whether the "data" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasData {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Data; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "data" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearData() {
+      if (HasData) {
+        ClearPayloadVariant();
       }
     }
 
@@ -4577,10 +4702,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.Text ? (string) payloadVariant_ : ""; }
+      get { return HasText ? (string) payloadVariant_ : ""; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.Text;
+      }
+    }
+    /// <summary>Gets whether the "text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasText {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Text; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearText() {
+      if (HasText) {
+        ClearPayloadVariant();
       }
     }
 
@@ -4649,8 +4788,8 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       if (Topic.Length != 0) hash ^= Topic.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Data) hash ^= Data.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Text) hash ^= Text.GetHashCode();
+      if (HasData) hash ^= Data.GetHashCode();
+      if (HasText) hash ^= Text.GetHashCode();
       if (Retained != false) hash ^= Retained.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
@@ -4675,11 +4814,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(10);
         output.WriteString(Topic);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Data) {
+      if (HasData) {
         output.WriteRawTag(18);
         output.WriteBytes(Data);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(26);
         output.WriteString(Text);
       }
@@ -4701,11 +4840,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(10);
         output.WriteString(Topic);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Data) {
+      if (HasData) {
         output.WriteRawTag(18);
         output.WriteBytes(Data);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(26);
         output.WriteString(Text);
       }
@@ -4726,10 +4865,10 @@ namespace Meshtastic.Protobufs {
       if (Topic.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Topic);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Data) {
+      if (HasData) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Text) {
+      if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
       if (Retained != false) {
@@ -4773,7 +4912,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -4804,7 +4947,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -4837,6 +4984,7 @@ namespace Meshtastic.Protobufs {
   /// only payload_variant is sent in the payload portion of the LORA packet.
   /// The other fields are either not sent at all, or sent in the special 16 byte LORA header.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MeshPacket : pb::IMessage<MeshPacket>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4888,6 +5036,7 @@ namespace Meshtastic.Protobufs {
       pkiEncrypted_ = other.pkiEncrypted_;
       nextHop_ = other.nextHop_;
       relayNode_ = other.relayNode_;
+      txAfter_ = other.txAfter_;
       switch (other.PayloadVariantCase) {
         case PayloadVariantOneofCase.Decoded:
           Decoded = other.Decoded.Clone();
@@ -4987,10 +5136,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Encrypted {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.Encrypted ? (pb::ByteString) payloadVariant_ : pb::ByteString.Empty; }
+      get { return HasEncrypted ? (pb::ByteString) payloadVariant_ : pb::ByteString.Empty; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.Encrypted;
+      }
+    }
+    /// <summary>Gets whether the "encrypted" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEncrypted {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Encrypted; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "encrypted" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEncrypted() {
+      if (HasEncrypted) {
+        ClearPayloadVariant();
       }
     }
 
@@ -5246,6 +5409,24 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "tx_after" field.</summary>
+    public const int TxAfterFieldNumber = 20;
+    private uint txAfter_;
+    /// <summary>
+    ///
+    /// *Never* sent over the radio links.
+    /// Timestamp after which this packet may be sent.
+    /// Set by the firmware internally, clients are not supposed to set this.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TxAfter {
+      get { return txAfter_; }
+      set {
+        txAfter_ = value;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -5301,6 +5482,7 @@ namespace Meshtastic.Protobufs {
       if (PkiEncrypted != other.PkiEncrypted) return false;
       if (NextHop != other.NextHop) return false;
       if (RelayNode != other.RelayNode) return false;
+      if (TxAfter != other.TxAfter) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5313,7 +5495,7 @@ namespace Meshtastic.Protobufs {
       if (To != 0) hash ^= To.GetHashCode();
       if (Channel != 0) hash ^= Channel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Decoded) hash ^= Decoded.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Encrypted) hash ^= Encrypted.GetHashCode();
+      if (HasEncrypted) hash ^= Encrypted.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
       if (RxTime != 0) hash ^= RxTime.GetHashCode();
       if (RxSnr != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(RxSnr);
@@ -5328,6 +5510,7 @@ namespace Meshtastic.Protobufs {
       if (PkiEncrypted != false) hash ^= PkiEncrypted.GetHashCode();
       if (NextHop != 0) hash ^= NextHop.GetHashCode();
       if (RelayNode != 0) hash ^= RelayNode.GetHashCode();
+      if (TxAfter != 0) hash ^= TxAfter.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5363,7 +5546,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(Decoded);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Encrypted) {
+      if (HasEncrypted) {
         output.WriteRawTag(42);
         output.WriteBytes(Encrypted);
       }
@@ -5422,6 +5605,10 @@ namespace Meshtastic.Protobufs {
       if (RelayNode != 0) {
         output.WriteRawTag(152, 1);
         output.WriteUInt32(RelayNode);
+      }
+      if (TxAfter != 0) {
+        output.WriteRawTag(160, 1);
+        output.WriteUInt32(TxAfter);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5449,7 +5636,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(Decoded);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Encrypted) {
+      if (HasEncrypted) {
         output.WriteRawTag(42);
         output.WriteBytes(Encrypted);
       }
@@ -5509,6 +5696,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(152, 1);
         output.WriteUInt32(RelayNode);
       }
+      if (TxAfter != 0) {
+        output.WriteRawTag(160, 1);
+        output.WriteUInt32(TxAfter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5531,7 +5722,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Decoded) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Decoded);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Encrypted) {
+      if (HasEncrypted) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Encrypted);
       }
       if (Id != 0) {
@@ -5575,6 +5766,9 @@ namespace Meshtastic.Protobufs {
       }
       if (RelayNode != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RelayNode);
+      }
+      if (TxAfter != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(TxAfter);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5639,6 +5833,9 @@ namespace Meshtastic.Protobufs {
       if (other.RelayNode != 0) {
         RelayNode = other.RelayNode;
       }
+      if (other.TxAfter != 0) {
+        TxAfter = other.TxAfter;
+      }
       switch (other.PayloadVariantCase) {
         case PayloadVariantOneofCase.Decoded:
           if (Decoded == null) {
@@ -5662,7 +5859,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -5747,6 +5948,10 @@ namespace Meshtastic.Protobufs {
             RelayNode = input.ReadUInt32();
             break;
           }
+          case 160: {
+            TxAfter = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -5758,7 +5963,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -5843,6 +6052,10 @@ namespace Meshtastic.Protobufs {
             RelayNode = input.ReadUInt32();
             break;
           }
+          case 160: {
+            TxAfter = input.ReadUInt32();
+            break;
+          }
         }
       }
     }
@@ -5915,6 +6128,11 @@ namespace Meshtastic.Protobufs {
         [pbr::OriginalName("HIGH")] High = 100,
         /// <summary>
         ///
+        /// Higher priority alert message used for critical alerts which take priority over other reliable packets.
+        /// </summary>
+        [pbr::OriginalName("ALERT")] Alert = 110,
+        /// <summary>
+        ///
         /// Ack/naks are sent with very high priority to ensure that retransmission
         /// stops as soon as possible
         /// </summary>
@@ -5972,6 +6190,7 @@ namespace Meshtastic.Protobufs {
   /// preshared key, drops all existing nodes, force our node to rejoin this new group)
   /// Full information about a node on the mesh
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeInfo : pb::IMessage<NodeInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6160,6 +6379,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "hops_away" field.</summary>
     public const int HopsAwayFieldNumber = 9;
+    private readonly static uint HopsAwayDefaultValue = 0;
+
     private uint hopsAway_;
     /// <summary>
     ///
@@ -6168,7 +6389,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint HopsAway {
-      get { if ((_hasBits0 & 1) != 0) { return hopsAway_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return hopsAway_; } else { return HopsAwayDefaultValue; } }
       set {
         _hasBits0 |= 1;
         hopsAway_ = value;
@@ -6489,7 +6710,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -6557,7 +6782,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -6627,6 +6856,7 @@ namespace Meshtastic.Protobufs {
   /// Note: we don't include position or the user info, because that will come in the
   /// Sent to the phone in response to WantNodes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MyNodeInfo : pb::IMessage<MyNodeInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6921,7 +7151,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -6956,7 +7190,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -6995,6 +7233,7 @@ namespace Meshtastic.Protobufs {
   /// This allows the device code to use fixed maxlen 64 byte strings for messages,
   /// and then extend as needed by emitting multiple records.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogRecord : pb::IMessage<LogRecord>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7253,7 +7492,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -7284,7 +7527,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -7361,6 +7608,7 @@ namespace Meshtastic.Protobufs {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueueStatus : pb::IMessage<QueueStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7615,7 +7863,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -7646,7 +7898,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -7680,6 +7936,7 @@ namespace Meshtastic.Protobufs {
   /// It will sit in that descriptor until consumed by the phone,
   /// at which point the next item in the FIFO will be populated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FromRadio : pb::IMessage<FromRadio>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7886,10 +8143,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint ConfigCompleteId {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.ConfigCompleteId ? (uint) payloadVariant_ : 0; }
+      get { return HasConfigCompleteId ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.ConfigCompleteId;
+      }
+    }
+    /// <summary>Gets whether the "config_complete_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConfigCompleteId {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.ConfigCompleteId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "config_complete_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConfigCompleteId() {
+      if (HasConfigCompleteId) {
+        ClearPayloadVariant();
       }
     }
 
@@ -7905,10 +8176,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Rebooted {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.Rebooted ? (bool) payloadVariant_ : false; }
+      get { return HasRebooted ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.Rebooted;
+      }
+    }
+    /// <summary>Gets whether the "rebooted" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRebooted {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Rebooted; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "rebooted" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRebooted() {
+      if (HasRebooted) {
+        ClearPayloadVariant();
       }
     }
 
@@ -8137,8 +8422,8 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.NodeInfo) hash ^= NodeInfo.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Config) hash ^= Config.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.LogRecord) hash ^= LogRecord.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfigCompleteId) hash ^= ConfigCompleteId.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Rebooted) hash ^= Rebooted.GetHashCode();
+      if (HasConfigCompleteId) hash ^= ConfigCompleteId.GetHashCode();
+      if (HasRebooted) hash ^= Rebooted.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.ModuleConfig) hash ^= ModuleConfig.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Channel) hash ^= Channel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.QueueStatus) hash ^= QueueStatus.GetHashCode();
@@ -8191,11 +8476,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteMessage(LogRecord);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfigCompleteId) {
+      if (HasConfigCompleteId) {
         output.WriteRawTag(56);
         output.WriteUInt32(ConfigCompleteId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Rebooted) {
+      if (HasRebooted) {
         output.WriteRawTag(64);
         output.WriteBool(Rebooted);
       }
@@ -8269,11 +8554,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteMessage(LogRecord);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfigCompleteId) {
+      if (HasConfigCompleteId) {
         output.WriteRawTag(56);
         output.WriteUInt32(ConfigCompleteId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Rebooted) {
+      if (HasRebooted) {
         output.WriteRawTag(64);
         output.WriteBool(Rebooted);
       }
@@ -8341,10 +8626,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.LogRecord) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LogRecord);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ConfigCompleteId) {
+      if (HasConfigCompleteId) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ConfigCompleteId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Rebooted) {
+      if (HasRebooted) {
         size += 1 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.ModuleConfig) {
@@ -8493,7 +8778,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -8646,7 +8935,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -8802,6 +9095,7 @@ namespace Meshtastic.Protobufs {
   /// in the form of push notifications or validation messages when saving
   /// invalid configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClientNotification : pb::IMessage<ClientNotification>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8853,6 +9147,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "reply_id" field.</summary>
     public const int ReplyIdFieldNumber = 1;
+    private readonly static uint ReplyIdDefaultValue = 0;
+
     private uint replyId_;
     /// <summary>
     ///
@@ -8861,7 +9157,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint ReplyId {
-      get { if ((_hasBits0 & 1) != 0) { return replyId_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return replyId_; } else { return ReplyIdDefaultValue; } }
       set {
         _hasBits0 |= 1;
         replyId_ = value;
@@ -9075,7 +9371,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -9106,7 +9406,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -9137,6 +9441,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Individual File info for the device
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FileInfo : pb::IMessage<FileInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9329,7 +9634,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -9352,7 +9661,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -9376,6 +9689,7 @@ namespace Meshtastic.Protobufs {
   /// Packets/commands to the radio will be written (reliably) to the toRadio characteristic.
   /// Once the write completes the phone can assume it is handled.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ToRadio : pb::IMessage<ToRadio>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9472,10 +9786,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint WantConfigId {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.WantConfigId ? (uint) payloadVariant_ : 0; }
+      get { return HasWantConfigId ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.WantConfigId;
+      }
+    }
+    /// <summary>Gets whether the "want_config_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWantConfigId {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.WantConfigId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "want_config_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWantConfigId() {
+      if (HasWantConfigId) {
+        ClearPayloadVariant();
       }
     }
 
@@ -9490,10 +9818,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Disconnect {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.Disconnect ? (bool) payloadVariant_ : false; }
+      get { return HasDisconnect ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.Disconnect;
+      }
+    }
+    /// <summary>Gets whether the "disconnect" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisconnect {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Disconnect; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "disconnect" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisconnect() {
+      if (HasDisconnect) {
+        ClearPayloadVariant();
       }
     }
 
@@ -9596,8 +9938,8 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       if (payloadVariantCase_ == PayloadVariantOneofCase.Packet) hash ^= Packet.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.WantConfigId) hash ^= WantConfigId.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Disconnect) hash ^= Disconnect.GetHashCode();
+      if (HasWantConfigId) hash ^= WantConfigId.GetHashCode();
+      if (HasDisconnect) hash ^= Disconnect.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) hash ^= XmodemPacket.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.MqttClientProxyMessage) hash ^= MqttClientProxyMessage.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Heartbeat) hash ^= Heartbeat.GetHashCode();
@@ -9624,11 +9966,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(10);
         output.WriteMessage(Packet);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.WantConfigId) {
+      if (HasWantConfigId) {
         output.WriteRawTag(24);
         output.WriteUInt32(WantConfigId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Disconnect) {
+      if (HasDisconnect) {
         output.WriteRawTag(32);
         output.WriteBool(Disconnect);
       }
@@ -9658,11 +10000,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(10);
         output.WriteMessage(Packet);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.WantConfigId) {
+      if (HasWantConfigId) {
         output.WriteRawTag(24);
         output.WriteUInt32(WantConfigId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Disconnect) {
+      if (HasDisconnect) {
         output.WriteRawTag(32);
         output.WriteBool(Disconnect);
       }
@@ -9691,10 +10033,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Packet) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Packet);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.WantConfigId) {
+      if (HasWantConfigId) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WantConfigId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Disconnect) {
+      if (HasDisconnect) {
         size += 1 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.XmodemPacket) {
@@ -9762,7 +10104,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -9821,7 +10167,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -9880,6 +10230,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Compressed message payload
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Compressed : pb::IMessage<Compressed>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10072,7 +10423,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -10095,7 +10450,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -10118,6 +10477,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Full info on edges for a single node
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NeighborInfo : pb::IMessage<NeighborInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10365,7 +10725,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -10396,7 +10760,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -10427,6 +10795,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// A single edge in the mesh
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Neighbor : pb::IMessage<Neighbor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10687,7 +11056,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -10718,7 +11091,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -10749,6 +11126,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Device metadata response
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeviceMetadata : pb::IMessage<DeviceMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11272,7 +11650,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -11335,7 +11717,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -11399,6 +11785,7 @@ namespace Meshtastic.Protobufs {
   /// A heartbeat message is sent to the node from the client to keep the connection alive.
   /// This is currently only needed to keep serial connections alive, but can be used by any PhoneAPI.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Heartbeat : pb::IMessage<Heartbeat>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11525,7 +11912,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -11540,7 +11931,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -11555,6 +11950,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// RemoteHardwarePins associated with a node
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeRemoteHardwarePin : pb::IMessage<NodeRemoteHardwarePin>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11750,7 +12146,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -11776,7 +12176,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -11798,6 +12202,7 @@ namespace Meshtastic.Protobufs {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChunkedPayload : pb::IMessage<ChunkedPayload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12056,7 +12461,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -12087,7 +12496,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -12118,6 +12531,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Wrapper message for broken repeated oneof support
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class resend_chunks : pb::IMessage<resend_chunks>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12262,7 +12676,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -12282,7 +12700,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -12302,6 +12724,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Responses to a ChunkedPayload request
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChunkedPayloadResponse : pb::IMessage<ChunkedPayloadResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12383,10 +12806,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool RequestTransfer {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer ? (bool) payloadVariant_ : false; }
+      get { return HasRequestTransfer ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.RequestTransfer;
+      }
+    }
+    /// <summary>Gets whether the "request_transfer" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRequestTransfer {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "request_transfer" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRequestTransfer() {
+      if (HasRequestTransfer) {
+        ClearPayloadVariant();
       }
     }
 
@@ -12399,10 +12836,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AcceptTransfer {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer ? (bool) payloadVariant_ : false; }
+      get { return HasAcceptTransfer ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.AcceptTransfer;
+      }
+    }
+    /// <summary>Gets whether the "accept_transfer" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAcceptTransfer {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "accept_transfer" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAcceptTransfer() {
+      if (HasAcceptTransfer) {
+        ClearPayloadVariant();
       }
     }
 
@@ -12472,8 +12923,8 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       if (PayloadId != 0) hash ^= PayloadId.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer) hash ^= RequestTransfer.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer) hash ^= AcceptTransfer.GetHashCode();
+      if (HasRequestTransfer) hash ^= RequestTransfer.GetHashCode();
+      if (HasAcceptTransfer) hash ^= AcceptTransfer.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks) hash ^= ResendChunks.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
@@ -12498,11 +12949,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteUInt32(PayloadId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer) {
+      if (HasRequestTransfer) {
         output.WriteRawTag(16);
         output.WriteBool(RequestTransfer);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer) {
+      if (HasAcceptTransfer) {
         output.WriteRawTag(24);
         output.WriteBool(AcceptTransfer);
       }
@@ -12524,11 +12975,11 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(8);
         output.WriteUInt32(PayloadId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer) {
+      if (HasRequestTransfer) {
         output.WriteRawTag(16);
         output.WriteBool(RequestTransfer);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer) {
+      if (HasAcceptTransfer) {
         output.WriteRawTag(24);
         output.WriteBool(AcceptTransfer);
       }
@@ -12549,10 +13000,10 @@ namespace Meshtastic.Protobufs {
       if (PayloadId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PayloadId);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RequestTransfer) {
+      if (HasRequestTransfer) {
         size += 1 + 1;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.AcceptTransfer) {
+      if (HasAcceptTransfer) {
         size += 1 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.ResendChunks) {
@@ -12599,7 +13050,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -12635,7 +13090,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

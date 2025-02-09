@@ -54,6 +54,7 @@ namespace Meshtastic.Protobufs {
   /// This abstraction is used to contain any configuration for provisioning a node on any client.
   /// It is useful for importing and exporting configurations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeviceProfile : pb::IMessage<DeviceProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -107,6 +108,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "long_name" field.</summary>
     public const int LongNameFieldNumber = 1;
+    private readonly static string LongNameDefaultValue = "";
+
     private string longName_;
     /// <summary>
     ///
@@ -115,7 +118,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LongName {
-      get { return longName_ ?? ""; }
+      get { return longName_ ?? LongNameDefaultValue; }
       set {
         longName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -135,6 +138,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "short_name" field.</summary>
     public const int ShortNameFieldNumber = 2;
+    private readonly static string ShortNameDefaultValue = "";
+
     private string shortName_;
     /// <summary>
     ///
@@ -143,7 +148,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ShortName {
-      get { return shortName_ ?? ""; }
+      get { return shortName_ ?? ShortNameDefaultValue; }
       set {
         shortName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -163,6 +168,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "channel_url" field.</summary>
     public const int ChannelUrlFieldNumber = 3;
+    private readonly static string ChannelUrlDefaultValue = "";
+
     private string channelUrl_;
     /// <summary>
     ///
@@ -171,7 +178,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ChannelUrl {
-      get { return channelUrl_ ?? ""; }
+      get { return channelUrl_ ?? ChannelUrlDefaultValue; }
       set {
         channelUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -239,6 +246,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "ringtone" field.</summary>
     public const int RingtoneFieldNumber = 7;
+    private readonly static string RingtoneDefaultValue = "";
+
     private string ringtone_;
     /// <summary>
     ///
@@ -247,7 +256,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Ringtone {
-      get { return ringtone_ ?? ""; }
+      get { return ringtone_ ?? RingtoneDefaultValue; }
       set {
         ringtone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -267,6 +276,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "canned_messages" field.</summary>
     public const int CannedMessagesFieldNumber = 8;
+    private readonly static string CannedMessagesDefaultValue = "";
+
     private string cannedMessages_;
     /// <summary>
     ///
@@ -275,7 +286,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CannedMessages {
-      get { return cannedMessages_ ?? ""; }
+      get { return cannedMessages_ ?? CannedMessagesDefaultValue; }
       set {
         cannedMessages_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -513,7 +524,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -569,7 +584,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

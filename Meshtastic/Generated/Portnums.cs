@@ -24,22 +24,22 @@ namespace Meshtastic.Protobufs {
     static PortnumsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKqIECgdQ",
+            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKrEECgdQ",
             "b3J0TnVtEg8KC1VOS05PV05fQVBQEAASFAoQVEVYVF9NRVNTQUdFX0FQUBAB",
             "EhcKE1JFTU9URV9IQVJEV0FSRV9BUFAQAhIQCgxQT1NJVElPTl9BUFAQAxIQ",
             "CgxOT0RFSU5GT19BUFAQBBIPCgtST1VUSU5HX0FQUBAFEg0KCUFETUlOX0FQ",
             "UBAGEh8KG1RFWFRfTUVTU0FHRV9DT01QUkVTU0VEX0FQUBAHEhAKDFdBWVBP",
             "SU5UX0FQUBAIEg0KCUFVRElPX0FQUBAJEhgKFERFVEVDVElPTl9TRU5TT1Jf",
-            "QVBQEAoSDQoJUkVQTFlfQVBQECASEQoNSVBfVFVOTkVMX0FQUBAhEhIKDlBB",
-            "WENPVU5URVJfQVBQECISDgoKU0VSSUFMX0FQUBBAEhUKEVNUT1JFX0ZPUldB",
-            "UkRfQVBQEEESEgoOUkFOR0VfVEVTVF9BUFAQQhIRCg1URUxFTUVUUllfQVBQ",
-            "EEMSCwoHWlBTX0FQUBBEEhEKDVNJTVVMQVRPUl9BUFAQRRISCg5UUkFDRVJP",
-            "VVRFX0FQUBBGEhQKEE5FSUdIQk9SSU5GT19BUFAQRxIPCgtBVEFLX1BMVUdJ",
-            "ThBIEhIKDk1BUF9SRVBPUlRfQVBQEEkSEwoPUE9XRVJTVFJFU1NfQVBQEEoS",
-            "EAoLUFJJVkFURV9BUFAQgAISEwoOQVRBS19GT1JXQVJERVIQgQISCAoDTUFY",
-            "EP8DQl0KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCFBvcnRudW1zWiJnaXRodWIu",
-            "Y29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90",
-            "b2J1ZnO6AgBiBnByb3RvMw=="));
+            "QVBQEAoSDQoJQUxFUlRfQVBQEAsSDQoJUkVQTFlfQVBQECASEQoNSVBfVFVO",
+            "TkVMX0FQUBAhEhIKDlBBWENPVU5URVJfQVBQECISDgoKU0VSSUFMX0FQUBBA",
+            "EhUKEVNUT1JFX0ZPUldBUkRfQVBQEEESEgoOUkFOR0VfVEVTVF9BUFAQQhIR",
+            "Cg1URUxFTUVUUllfQVBQEEMSCwoHWlBTX0FQUBBEEhEKDVNJTVVMQVRPUl9B",
+            "UFAQRRISCg5UUkFDRVJPVVRFX0FQUBBGEhQKEE5FSUdIQk9SSU5GT19BUFAQ",
+            "RxIPCgtBVEFLX1BMVUdJThBIEhIKDk1BUF9SRVBPUlRfQVBQEEkSEwoPUE9X",
+            "RVJTVFJFU1NfQVBQEEoSEAoLUFJJVkFURV9BUFAQgAISEwoOQVRBS19GT1JX",
+            "QVJERVIQgQISCAoDTUFYEP8DQl0KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCFBv",
+            "cnRudW1zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
+            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.PortNum), }, null, null));
@@ -146,6 +146,11 @@ namespace Meshtastic.Protobufs {
     /// NOTE: This portnum traffic is not sent to the public MQTT starting at firmware version 2.2.9
     /// </summary>
     [pbr::OriginalName("DETECTION_SENSOR_APP")] DetectionSensorApp = 10,
+    /// <summary>
+    ///
+    /// Same as Text Message but used for critical alerts.
+    /// </summary>
+    [pbr::OriginalName("ALERT_APP")] AlertApp = 11,
     /// <summary>
     ///
     /// Provides a 'ping' service that replies to any packet it receives.

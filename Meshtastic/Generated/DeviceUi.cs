@@ -34,27 +34,27 @@ namespace Meshtastic.Protobufs {
             "c2h0YXN0aWMuTGFuZ3VhZ2USKwoLbm9kZV9maWx0ZXIYDCABKAsyFi5tZXNo",
             "dGFzdGljLk5vZGVGaWx0ZXISMQoObm9kZV9oaWdobGlnaHQYDSABKAsyGS5t",
             "ZXNodGFzdGljLk5vZGVIaWdobGlnaHQSGAoQY2FsaWJyYXRpb25fZGF0YRgO",
-            "IAEoDCKWAQoKTm9kZUZpbHRlchIWCg51bmtub3duX3N3aXRjaBgBIAEoCBIW",
+            "IAEoDCKnAQoKTm9kZUZpbHRlchIWCg51bmtub3duX3N3aXRjaBgBIAEoCBIW",
             "Cg5vZmZsaW5lX3N3aXRjaBgCIAEoCBIZChFwdWJsaWNfa2V5X3N3aXRjaBgD",
             "IAEoCBIRCglob3BzX2F3YXkYBCABKAUSFwoPcG9zaXRpb25fc3dpdGNoGAUg",
-            "ASgIEhEKCW5vZGVfbmFtZRgGIAEoCSJ+Cg1Ob2RlSGlnaGxpZ2h0EhMKC2No",
-            "YXRfc3dpdGNoGAEgASgIEhcKD3Bvc2l0aW9uX3N3aXRjaBgCIAEoCBIYChB0",
-            "ZWxlbWV0cnlfc3dpdGNoGAMgASgIEhIKCmlhcV9zd2l0Y2gYBCABKAgSEQoJ",
-            "bm9kZV9uYW1lGAUgASgJKiUKBVRoZW1lEggKBERBUksQABIJCgVMSUdIVBAB",
-            "EgcKA1JFRBACKvwBCghMYW5ndWFnZRILCgdFTkdMSVNIEAASCgoGRlJFTkNI",
-            "EAESCgoGR0VSTUFOEAISCwoHSVRBTElBThADEg4KClBPUlRVR1VFU0UQBBIL",
-            "CgdTUEFOSVNIEAUSCwoHU1dFRElTSBAGEgsKB0ZJTk5JU0gQBxIKCgZQT0xJ",
-            "U0gQCBILCgdUVVJLSVNIEAkSCwoHU0VSQklBThAKEgsKB1JVU1NJQU4QCxIJ",
-            "CgVEVVRDSBAMEgkKBUdSRUVLEA0SDQoJTk9SV0VHSUFOEA4SFgoSU0lNUExJ",
-            "RklFRF9DSElORVNFEB4SFwoTVFJBRElUSU9OQUxfQ0hJTkVTRRAfQmMKE2Nv",
-            "bS5nZWVrc3ZpbGxlLm1lc2hCDkRldmljZVVJUHJvdG9zWiJnaXRodWIuY29t",
-            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
-            "ZnO6AgBiBnByb3RvMw=="));
+            "ASgIEhEKCW5vZGVfbmFtZRgGIAEoCRIPCgdjaGFubmVsGAcgASgFIn4KDU5v",
+            "ZGVIaWdobGlnaHQSEwoLY2hhdF9zd2l0Y2gYASABKAgSFwoPcG9zaXRpb25f",
+            "c3dpdGNoGAIgASgIEhgKEHRlbGVtZXRyeV9zd2l0Y2gYAyABKAgSEgoKaWFx",
+            "X3N3aXRjaBgEIAEoCBIRCglub2RlX25hbWUYBSABKAkqJQoFVGhlbWUSCAoE",
+            "REFSSxAAEgkKBUxJR0hUEAESBwoDUkVEEAIqiwIKCExhbmd1YWdlEgsKB0VO",
+            "R0xJU0gQABIKCgZGUkVOQ0gQARIKCgZHRVJNQU4QAhILCgdJVEFMSUFOEAMS",
+            "DgoKUE9SVFVHVUVTRRAEEgsKB1NQQU5JU0gQBRILCgdTV0VESVNIEAYSCwoH",
+            "RklOTklTSBAHEgoKBlBPTElTSBAIEgsKB1RVUktJU0gQCRILCgdTRVJCSUFO",
+            "EAoSCwoHUlVTU0lBThALEgkKBURVVENIEAwSCQoFR1JFRUsQDRINCglOT1JX",
+            "RUdJQU4QDhINCglTTE9WRU5JQU4QDxIWChJTSU1QTElGSUVEX0NISU5FU0UQ",
+            "HhIXChNUUkFESVRJT05BTF9DSElORVNFEB9CYwoTY29tLmdlZWtzdmlsbGUu",
+            "bWVzaEIORGV2aWNlVUlQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9n",
+            "by9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight", "CalibrationData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeFilter), global::Meshtastic.Protobufs.NodeFilter.Parser, new[]{ "UnknownSwitch", "OfflineSwitch", "PublicKeySwitch", "HopsAway", "PositionSwitch", "NodeName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeFilter), global::Meshtastic.Protobufs.NodeFilter.Parser, new[]{ "UnknownSwitch", "OfflineSwitch", "PublicKeySwitch", "HopsAway", "PositionSwitch", "NodeName", "Channel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeHighlight), global::Meshtastic.Protobufs.NodeHighlight.Parser, new[]{ "ChatSwitch", "PositionSwitch", "TelemetrySwitch", "IaqSwitch", "NodeName" }, null, null, null, null)
           }));
     }
@@ -162,6 +162,11 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("NORWEGIAN")] Norwegian = 14,
     /// <summary>
     ///
+    /// Slovenian
+    /// </summary>
+    [pbr::OriginalName("SLOVENIAN")] Slovenian = 15,
+    /// <summary>
+    ///
     /// Simplified Chinese (experimental)
     /// </summary>
     [pbr::OriginalName("SIMPLIFIED_CHINESE")] SimplifiedChinese = 30,
@@ -175,6 +180,7 @@ namespace Meshtastic.Protobufs {
   #endregion
 
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeviceUIConfig : pb::IMessage<DeviceUIConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -753,7 +759,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -830,7 +840,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -903,6 +917,7 @@ namespace Meshtastic.Protobufs {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeFilter : pb::IMessage<NodeFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -943,6 +958,7 @@ namespace Meshtastic.Protobufs {
       hopsAway_ = other.hopsAway_;
       positionSwitch_ = other.positionSwitch_;
       nodeName_ = other.nodeName_;
+      channel_ = other.channel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1048,6 +1064,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "channel" field.</summary>
+    public const int ChannelFieldNumber = 7;
+    private int channel_;
+    /// <summary>
+    ///
+    /// Filter based on channel
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Channel {
+      get { return channel_; }
+      set {
+        channel_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1069,6 +1101,7 @@ namespace Meshtastic.Protobufs {
       if (HopsAway != other.HopsAway) return false;
       if (PositionSwitch != other.PositionSwitch) return false;
       if (NodeName != other.NodeName) return false;
+      if (Channel != other.Channel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1082,6 +1115,7 @@ namespace Meshtastic.Protobufs {
       if (HopsAway != 0) hash ^= HopsAway.GetHashCode();
       if (PositionSwitch != false) hash ^= PositionSwitch.GetHashCode();
       if (NodeName.Length != 0) hash ^= NodeName.GetHashCode();
+      if (Channel != 0) hash ^= Channel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1124,6 +1158,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteString(NodeName);
       }
+      if (Channel != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(Channel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1158,6 +1196,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteString(NodeName);
       }
+      if (Channel != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(Channel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1185,6 +1227,9 @@ namespace Meshtastic.Protobufs {
       }
       if (NodeName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeName);
+      }
+      if (Channel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Channel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1216,6 +1261,9 @@ namespace Meshtastic.Protobufs {
       if (other.NodeName.Length != 0) {
         NodeName = other.NodeName;
       }
+      if (other.Channel != 0) {
+        Channel = other.Channel;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1227,7 +1275,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1255,6 +1307,10 @@ namespace Meshtastic.Protobufs {
             NodeName = input.ReadString();
             break;
           }
+          case 56: {
+            Channel = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1266,7 +1322,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1294,6 +1354,10 @@ namespace Meshtastic.Protobufs {
             NodeName = input.ReadString();
             break;
           }
+          case 56: {
+            Channel = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -1301,6 +1365,7 @@ namespace Meshtastic.Protobufs {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeHighlight : pb::IMessage<NodeHighlight>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1592,7 +1657,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1627,7 +1696,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

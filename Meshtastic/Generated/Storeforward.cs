@@ -65,6 +65,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// TODO: REPLACE
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StoreAndForward : pb::IMessage<StoreAndForward>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -197,10 +198,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Text {
-      get { return variantCase_ == VariantOneofCase.Text ? (pb::ByteString) variant_ : pb::ByteString.Empty; }
+      get { return HasText ? (pb::ByteString) variant_ : pb::ByteString.Empty; }
       set {
         variant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         variantCase_ = VariantOneofCase.Text;
+      }
+    }
+    /// <summary>Gets whether the "text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasText {
+      get { return variantCase_ == VariantOneofCase.Text; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearText() {
+      if (HasText) {
+        ClearVariant();
       }
     }
 
@@ -259,7 +274,7 @@ namespace Meshtastic.Protobufs {
       if (variantCase_ == VariantOneofCase.Stats) hash ^= Stats.GetHashCode();
       if (variantCase_ == VariantOneofCase.History) hash ^= History.GetHashCode();
       if (variantCase_ == VariantOneofCase.Heartbeat) hash ^= Heartbeat.GetHashCode();
-      if (variantCase_ == VariantOneofCase.Text) hash ^= Text.GetHashCode();
+      if (HasText) hash ^= Text.GetHashCode();
       hash ^= (int) variantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -295,7 +310,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(Heartbeat);
       }
-      if (variantCase_ == VariantOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(42);
         output.WriteBytes(Text);
       }
@@ -325,7 +340,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(Heartbeat);
       }
-      if (variantCase_ == VariantOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(42);
         output.WriteBytes(Text);
       }
@@ -351,7 +366,7 @@ namespace Meshtastic.Protobufs {
       if (variantCase_ == VariantOneofCase.Heartbeat) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Heartbeat);
       }
-      if (variantCase_ == VariantOneofCase.Text) {
+      if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Text);
       }
       if (_unknownFields != null) {
@@ -404,7 +419,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -454,7 +473,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -597,6 +620,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// TODO: REPLACE
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Statistics : pb::IMessage<Statistics>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1020,7 +1044,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -1071,7 +1099,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -1122,6 +1154,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// TODO: REPLACE
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class History : pb::IMessage<History>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1348,7 +1381,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -1375,7 +1412,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -1402,6 +1443,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// TODO: REPLACE
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Heartbeat : pb::IMessage<Heartbeat>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1594,7 +1636,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -1617,7 +1663,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;

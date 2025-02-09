@@ -112,6 +112,7 @@ namespace Meshtastic.Protobufs {
   /// This message is used to do settings operations to both remote AND local nodes.
   /// (Prior to 1.2 these operations were done via special ToRadio operations)
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdminMessage : pb::IMessage<AdminMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -331,10 +332,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint GetChannelRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetChannelRequest ? (uint) payloadVariant_ : 0; }
+      get { return HasGetChannelRequest ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetChannelRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_channel_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetChannelRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetChannelRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_channel_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetChannelRequest() {
+      if (HasGetChannelRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -363,10 +378,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GetOwnerRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerRequest ? (bool) payloadVariant_ : false; }
+      get { return HasGetOwnerRequest ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetOwnerRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_owner_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetOwnerRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_owner_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetOwnerRequest() {
+      if (HasGetOwnerRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -395,10 +424,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType GetConfigRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetConfigRequest ? (global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType) payloadVariant_ : global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType.DeviceConfig; }
+      get { return HasGetConfigRequest ? (global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType) payloadVariant_ : global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType.DeviceConfig; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetConfigRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_config_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetConfigRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetConfigRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_config_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetConfigRequest() {
+      if (HasGetConfigRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -427,10 +470,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType GetModuleConfigRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetModuleConfigRequest ? (global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) payloadVariant_ : global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType.MqttConfig; }
+      get { return HasGetModuleConfigRequest ? (global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) payloadVariant_ : global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType.MqttConfig; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetModuleConfigRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_module_config_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetModuleConfigRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetModuleConfigRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_module_config_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetModuleConfigRequest() {
+      if (HasGetModuleConfigRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -459,10 +516,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GetCannedMessageModuleMessagesRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesRequest ? (bool) payloadVariant_ : false; }
+      get { return HasGetCannedMessageModuleMessagesRequest ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetCannedMessageModuleMessagesRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_canned_message_module_messages_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetCannedMessageModuleMessagesRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_canned_message_module_messages_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetCannedMessageModuleMessagesRequest() {
+      if (HasGetCannedMessageModuleMessagesRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -475,10 +546,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GetCannedMessageModuleMessagesResponse {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse ? (string) payloadVariant_ : ""; }
+      get { return HasGetCannedMessageModuleMessagesResponse ? (string) payloadVariant_ : ""; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse;
+      }
+    }
+    /// <summary>Gets whether the "get_canned_message_module_messages_response" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetCannedMessageModuleMessagesResponse {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_canned_message_module_messages_response" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetCannedMessageModuleMessagesResponse() {
+      if (HasGetCannedMessageModuleMessagesResponse) {
+        ClearPayloadVariant();
       }
     }
 
@@ -491,10 +576,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GetDeviceMetadataRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataRequest ? (bool) payloadVariant_ : false; }
+      get { return HasGetDeviceMetadataRequest ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetDeviceMetadataRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_device_metadata_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetDeviceMetadataRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_device_metadata_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetDeviceMetadataRequest() {
+      if (HasGetDeviceMetadataRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -523,10 +622,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GetRingtoneRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest ? (bool) payloadVariant_ : false; }
+      get { return HasGetRingtoneRequest ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetRingtoneRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_ringtone_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetRingtoneRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_ringtone_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetRingtoneRequest() {
+      if (HasGetRingtoneRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -539,10 +652,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GetRingtoneResponse {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse ? (string) payloadVariant_ : ""; }
+      get { return HasGetRingtoneResponse ? (string) payloadVariant_ : ""; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.GetRingtoneResponse;
+      }
+    }
+    /// <summary>Gets whether the "get_ringtone_response" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetRingtoneResponse {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_ringtone_response" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetRingtoneResponse() {
+      if (HasGetRingtoneResponse) {
+        ClearPayloadVariant();
       }
     }
 
@@ -555,10 +682,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GetDeviceConnectionStatusRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest ? (bool) payloadVariant_ : false; }
+      get { return HasGetDeviceConnectionStatusRequest ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetDeviceConnectionStatusRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_device_connection_status_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetDeviceConnectionStatusRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_device_connection_status_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetDeviceConnectionStatusRequest() {
+      if (HasGetDeviceConnectionStatusRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -603,10 +744,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GetNodeRemoteHardwarePinsRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsRequest ? (bool) payloadVariant_ : false; }
+      get { return HasGetNodeRemoteHardwarePinsRequest ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetNodeRemoteHardwarePinsRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_node_remote_hardware_pins_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetNodeRemoteHardwarePinsRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_node_remote_hardware_pins_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetNodeRemoteHardwarePinsRequest() {
+      if (HasGetNodeRemoteHardwarePinsRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -636,10 +791,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnterDfuModeRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest ? (bool) payloadVariant_ : false; }
+      get { return HasEnterDfuModeRequest ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.EnterDfuModeRequest;
+      }
+    }
+    /// <summary>Gets whether the "enter_dfu_mode_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnterDfuModeRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "enter_dfu_mode_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnterDfuModeRequest() {
+      if (HasEnterDfuModeRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -652,10 +821,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DeleteFileRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest ? (string) payloadVariant_ : ""; }
+      get { return HasDeleteFileRequest ? (string) payloadVariant_ : ""; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.DeleteFileRequest;
+      }
+    }
+    /// <summary>Gets whether the "delete_file_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeleteFileRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "delete_file_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeleteFileRequest() {
+      if (HasDeleteFileRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -668,10 +851,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint SetScale {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetScale ? (uint) payloadVariant_ : 0; }
+      get { return HasSetScale ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.SetScale;
+      }
+    }
+    /// <summary>Gets whether the "set_scale" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetScale {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetScale; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "set_scale" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetScale() {
+      if (HasSetScale) {
+        ClearPayloadVariant();
       }
     }
 
@@ -752,10 +949,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SetCannedMessageModuleMessages {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages ? (string) payloadVariant_ : ""; }
+      get { return HasSetCannedMessageModuleMessages ? (string) payloadVariant_ : ""; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.SetCannedMessageModuleMessages;
+      }
+    }
+    /// <summary>Gets whether the "set_canned_message_module_messages" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetCannedMessageModuleMessages {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "set_canned_message_module_messages" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetCannedMessageModuleMessages() {
+      if (HasSetCannedMessageModuleMessages) {
+        ClearPayloadVariant();
       }
     }
 
@@ -768,10 +979,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SetRingtoneMessage {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage ? (string) payloadVariant_ : ""; }
+      get { return HasSetRingtoneMessage ? (string) payloadVariant_ : ""; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.SetRingtoneMessage;
+      }
+    }
+    /// <summary>Gets whether the "set_ringtone_message" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetRingtoneMessage {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "set_ringtone_message" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetRingtoneMessage() {
+      if (HasSetRingtoneMessage) {
+        ClearPayloadVariant();
       }
     }
 
@@ -784,10 +1009,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint RemoveByNodenum {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum ? (uint) payloadVariant_ : 0; }
+      get { return HasRemoveByNodenum ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.RemoveByNodenum;
+      }
+    }
+    /// <summary>Gets whether the "remove_by_nodenum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemoveByNodenum {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "remove_by_nodenum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemoveByNodenum() {
+      if (HasRemoveByNodenum) {
+        ClearPayloadVariant();
       }
     }
 
@@ -800,10 +1039,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint SetFavoriteNode {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetFavoriteNode ? (uint) payloadVariant_ : 0; }
+      get { return HasSetFavoriteNode ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.SetFavoriteNode;
+      }
+    }
+    /// <summary>Gets whether the "set_favorite_node" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetFavoriteNode {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetFavoriteNode; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "set_favorite_node" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetFavoriteNode() {
+      if (HasSetFavoriteNode) {
+        ClearPayloadVariant();
       }
     }
 
@@ -816,10 +1069,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint RemoveFavoriteNode {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveFavoriteNode ? (uint) payloadVariant_ : 0; }
+      get { return HasRemoveFavoriteNode ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.RemoveFavoriteNode;
+      }
+    }
+    /// <summary>Gets whether the "remove_favorite_node" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemoveFavoriteNode {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveFavoriteNode; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "remove_favorite_node" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemoveFavoriteNode() {
+      if (HasRemoveFavoriteNode) {
+        ClearPayloadVariant();
       }
     }
 
@@ -848,10 +1115,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool RemoveFixedPosition {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveFixedPosition ? (bool) payloadVariant_ : false; }
+      get { return HasRemoveFixedPosition ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.RemoveFixedPosition;
+      }
+    }
+    /// <summary>Gets whether the "remove_fixed_position" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemoveFixedPosition {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveFixedPosition; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "remove_fixed_position" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemoveFixedPosition() {
+      if (HasRemoveFixedPosition) {
+        ClearPayloadVariant();
       }
     }
 
@@ -865,10 +1146,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint SetTimeOnly {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly ? (uint) payloadVariant_ : 0; }
+      get { return HasSetTimeOnly ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.SetTimeOnly;
+      }
+    }
+    /// <summary>Gets whether the "set_time_only" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetTimeOnly {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "set_time_only" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetTimeOnly() {
+      if (HasSetTimeOnly) {
+        ClearPayloadVariant();
       }
     }
 
@@ -881,10 +1176,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GetUiConfigRequest {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetUiConfigRequest ? (bool) payloadVariant_ : false; }
+      get { return HasGetUiConfigRequest ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.GetUiConfigRequest;
+      }
+    }
+    /// <summary>Gets whether the "get_ui_config_request" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGetUiConfigRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.GetUiConfigRequest; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "get_ui_config_request" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGetUiConfigRequest() {
+      if (HasGetUiConfigRequest) {
+        ClearPayloadVariant();
       }
     }
 
@@ -929,10 +1238,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint SetIgnoredNode {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetIgnoredNode ? (uint) payloadVariant_ : 0; }
+      get { return HasSetIgnoredNode ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.SetIgnoredNode;
+      }
+    }
+    /// <summary>Gets whether the "set_ignored_node" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetIgnoredNode {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SetIgnoredNode; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "set_ignored_node" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetIgnoredNode() {
+      if (HasSetIgnoredNode) {
+        ClearPayloadVariant();
       }
     }
 
@@ -945,10 +1268,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint RemoveIgnoredNode {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveIgnoredNode ? (uint) payloadVariant_ : 0; }
+      get { return HasRemoveIgnoredNode ? (uint) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.RemoveIgnoredNode;
+      }
+    }
+    /// <summary>Gets whether the "remove_ignored_node" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemoveIgnoredNode {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveIgnoredNode; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "remove_ignored_node" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemoveIgnoredNode() {
+      if (HasRemoveIgnoredNode) {
+        ClearPayloadVariant();
       }
     }
 
@@ -962,10 +1299,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BeginEditSettings {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings ? (bool) payloadVariant_ : false; }
+      get { return HasBeginEditSettings ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.BeginEditSettings;
+      }
+    }
+    /// <summary>Gets whether the "begin_edit_settings" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBeginEditSettings {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "begin_edit_settings" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBeginEditSettings() {
+      if (HasBeginEditSettings) {
+        ClearPayloadVariant();
       }
     }
 
@@ -978,10 +1329,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CommitEditSettings {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings ? (bool) payloadVariant_ : false; }
+      get { return HasCommitEditSettings ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.CommitEditSettings;
+      }
+    }
+    /// <summary>Gets whether the "commit_edit_settings" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCommitEditSettings {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "commit_edit_settings" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCommitEditSettings() {
+      if (HasCommitEditSettings) {
+        ClearPayloadVariant();
       }
     }
 
@@ -994,10 +1359,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int FactoryResetDevice {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice ? (int) payloadVariant_ : 0; }
+      get { return HasFactoryResetDevice ? (int) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.FactoryResetDevice;
+      }
+    }
+    /// <summary>Gets whether the "factory_reset_device" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFactoryResetDevice {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "factory_reset_device" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFactoryResetDevice() {
+      if (HasFactoryResetDevice) {
+        ClearPayloadVariant();
       }
     }
 
@@ -1011,10 +1390,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RebootOtaSeconds {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds ? (int) payloadVariant_ : 0; }
+      get { return HasRebootOtaSeconds ? (int) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.RebootOtaSeconds;
+      }
+    }
+    /// <summary>Gets whether the "reboot_ota_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRebootOtaSeconds {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "reboot_ota_seconds" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRebootOtaSeconds() {
+      if (HasRebootOtaSeconds) {
+        ClearPayloadVariant();
       }
     }
 
@@ -1028,10 +1421,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ExitSimulator {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.ExitSimulator ? (bool) payloadVariant_ : false; }
+      get { return HasExitSimulator ? (bool) payloadVariant_ : false; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.ExitSimulator;
+      }
+    }
+    /// <summary>Gets whether the "exit_simulator" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExitSimulator {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.ExitSimulator; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "exit_simulator" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExitSimulator() {
+      if (HasExitSimulator) {
+        ClearPayloadVariant();
       }
     }
 
@@ -1044,10 +1451,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RebootSeconds {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.RebootSeconds ? (int) payloadVariant_ : 0; }
+      get { return HasRebootSeconds ? (int) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.RebootSeconds;
+      }
+    }
+    /// <summary>Gets whether the "reboot_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRebootSeconds {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RebootSeconds; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "reboot_seconds" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRebootSeconds() {
+      if (HasRebootSeconds) {
+        ClearPayloadVariant();
       }
     }
 
@@ -1060,10 +1481,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ShutdownSeconds {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.ShutdownSeconds ? (int) payloadVariant_ : 0; }
+      get { return HasShutdownSeconds ? (int) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.ShutdownSeconds;
+      }
+    }
+    /// <summary>Gets whether the "shutdown_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasShutdownSeconds {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.ShutdownSeconds; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "shutdown_seconds" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearShutdownSeconds() {
+      if (HasShutdownSeconds) {
+        ClearPayloadVariant();
       }
     }
 
@@ -1076,10 +1511,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int FactoryResetConfig {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig ? (int) payloadVariant_ : 0; }
+      get { return HasFactoryResetConfig ? (int) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.FactoryResetConfig;
+      }
+    }
+    /// <summary>Gets whether the "factory_reset_config" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFactoryResetConfig {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "factory_reset_config" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFactoryResetConfig() {
+      if (HasFactoryResetConfig) {
+        ClearPayloadVariant();
       }
     }
 
@@ -1092,10 +1541,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int NodedbReset {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset ? (int) payloadVariant_ : 0; }
+      get { return HasNodedbReset ? (int) payloadVariant_ : 0; }
       set {
         payloadVariant_ = value;
         payloadVariantCase_ = PayloadVariantOneofCase.NodedbReset;
+      }
+    }
+    /// <summary>Gets whether the "nodedb_reset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNodedbReset {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "nodedb_reset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNodedbReset() {
+      if (HasNodedbReset) {
+        ClearPayloadVariant();
       }
     }
 
@@ -1239,54 +1702,54 @@ namespace Meshtastic.Protobufs {
     public override int GetHashCode() {
       int hash = 1;
       if (SessionPasskey.Length != 0) hash ^= SessionPasskey.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelRequest) hash ^= GetChannelRequest.GetHashCode();
+      if (HasGetChannelRequest) hash ^= GetChannelRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelResponse) hash ^= GetChannelResponse.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerRequest) hash ^= GetOwnerRequest.GetHashCode();
+      if (HasGetOwnerRequest) hash ^= GetOwnerRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerResponse) hash ^= GetOwnerResponse.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetConfigRequest) hash ^= GetConfigRequest.GetHashCode();
+      if (HasGetConfigRequest) hash ^= GetConfigRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetConfigResponse) hash ^= GetConfigResponse.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetModuleConfigRequest) hash ^= GetModuleConfigRequest.GetHashCode();
+      if (HasGetModuleConfigRequest) hash ^= GetModuleConfigRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetModuleConfigResponse) hash ^= GetModuleConfigResponse.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesRequest) hash ^= GetCannedMessageModuleMessagesRequest.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse) hash ^= GetCannedMessageModuleMessagesResponse.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataRequest) hash ^= GetDeviceMetadataRequest.GetHashCode();
+      if (HasGetCannedMessageModuleMessagesRequest) hash ^= GetCannedMessageModuleMessagesRequest.GetHashCode();
+      if (HasGetCannedMessageModuleMessagesResponse) hash ^= GetCannedMessageModuleMessagesResponse.GetHashCode();
+      if (HasGetDeviceMetadataRequest) hash ^= GetDeviceMetadataRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataResponse) hash ^= GetDeviceMetadataResponse.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) hash ^= GetRingtoneRequest.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) hash ^= GetRingtoneResponse.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest) hash ^= GetDeviceConnectionStatusRequest.GetHashCode();
+      if (HasGetRingtoneRequest) hash ^= GetRingtoneRequest.GetHashCode();
+      if (HasGetRingtoneResponse) hash ^= GetRingtoneResponse.GetHashCode();
+      if (HasGetDeviceConnectionStatusRequest) hash ^= GetDeviceConnectionStatusRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse) hash ^= GetDeviceConnectionStatusResponse.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode) hash ^= SetHamMode.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsRequest) hash ^= GetNodeRemoteHardwarePinsRequest.GetHashCode();
+      if (HasGetNodeRemoteHardwarePinsRequest) hash ^= GetNodeRemoteHardwarePinsRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsResponse) hash ^= GetNodeRemoteHardwarePinsResponse.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest) hash ^= EnterDfuModeRequest.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) hash ^= DeleteFileRequest.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetScale) hash ^= SetScale.GetHashCode();
+      if (HasEnterDfuModeRequest) hash ^= EnterDfuModeRequest.GetHashCode();
+      if (HasDeleteFileRequest) hash ^= DeleteFileRequest.GetHashCode();
+      if (HasSetScale) hash ^= SetScale.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) hash ^= SetOwner.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetChannel) hash ^= SetChannel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetConfig) hash ^= SetConfig.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetModuleConfig) hash ^= SetModuleConfig.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) hash ^= SetCannedMessageModuleMessages.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) hash ^= SetRingtoneMessage.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum) hash ^= RemoveByNodenum.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetFavoriteNode) hash ^= SetFavoriteNode.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFavoriteNode) hash ^= RemoveFavoriteNode.GetHashCode();
+      if (HasSetCannedMessageModuleMessages) hash ^= SetCannedMessageModuleMessages.GetHashCode();
+      if (HasSetRingtoneMessage) hash ^= SetRingtoneMessage.GetHashCode();
+      if (HasRemoveByNodenum) hash ^= RemoveByNodenum.GetHashCode();
+      if (HasSetFavoriteNode) hash ^= SetFavoriteNode.GetHashCode();
+      if (HasRemoveFavoriteNode) hash ^= RemoveFavoriteNode.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetFixedPosition) hash ^= SetFixedPosition.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFixedPosition) hash ^= RemoveFixedPosition.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly) hash ^= SetTimeOnly.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetUiConfigRequest) hash ^= GetUiConfigRequest.GetHashCode();
+      if (HasRemoveFixedPosition) hash ^= RemoveFixedPosition.GetHashCode();
+      if (HasSetTimeOnly) hash ^= SetTimeOnly.GetHashCode();
+      if (HasGetUiConfigRequest) hash ^= GetUiConfigRequest.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetUiConfigResponse) hash ^= GetUiConfigResponse.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.StoreUiConfig) hash ^= StoreUiConfig.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetIgnoredNode) hash ^= SetIgnoredNode.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveIgnoredNode) hash ^= RemoveIgnoredNode.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice) hash ^= FactoryResetDevice.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) hash ^= RebootOtaSeconds.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ExitSimulator) hash ^= ExitSimulator.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RebootSeconds) hash ^= RebootSeconds.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ShutdownSeconds) hash ^= ShutdownSeconds.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig) hash ^= FactoryResetConfig.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset) hash ^= NodedbReset.GetHashCode();
+      if (HasSetIgnoredNode) hash ^= SetIgnoredNode.GetHashCode();
+      if (HasRemoveIgnoredNode) hash ^= RemoveIgnoredNode.GetHashCode();
+      if (HasBeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
+      if (HasCommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
+      if (HasFactoryResetDevice) hash ^= FactoryResetDevice.GetHashCode();
+      if (HasRebootOtaSeconds) hash ^= RebootOtaSeconds.GetHashCode();
+      if (HasExitSimulator) hash ^= ExitSimulator.GetHashCode();
+      if (HasRebootSeconds) hash ^= RebootSeconds.GetHashCode();
+      if (HasShutdownSeconds) hash ^= ShutdownSeconds.GetHashCode();
+      if (HasFactoryResetConfig) hash ^= FactoryResetConfig.GetHashCode();
+      if (HasNodedbReset) hash ^= NodedbReset.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1306,7 +1769,7 @@ namespace Meshtastic.Protobufs {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelRequest) {
+      if (HasGetChannelRequest) {
         output.WriteRawTag(8);
         output.WriteUInt32(GetChannelRequest);
       }
@@ -1314,7 +1777,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(18);
         output.WriteMessage(GetChannelResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerRequest) {
+      if (HasGetOwnerRequest) {
         output.WriteRawTag(24);
         output.WriteBool(GetOwnerRequest);
       }
@@ -1322,7 +1785,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(GetOwnerResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetConfigRequest) {
+      if (HasGetConfigRequest) {
         output.WriteRawTag(40);
         output.WriteEnum((int) GetConfigRequest);
       }
@@ -1330,7 +1793,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteMessage(GetConfigResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetModuleConfigRequest) {
+      if (HasGetModuleConfigRequest) {
         output.WriteRawTag(56);
         output.WriteEnum((int) GetModuleConfigRequest);
       }
@@ -1338,15 +1801,15 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(66);
         output.WriteMessage(GetModuleConfigResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesRequest) {
+      if (HasGetCannedMessageModuleMessagesRequest) {
         output.WriteRawTag(80);
         output.WriteBool(GetCannedMessageModuleMessagesRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse) {
+      if (HasGetCannedMessageModuleMessagesResponse) {
         output.WriteRawTag(90);
         output.WriteString(GetCannedMessageModuleMessagesResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataRequest) {
+      if (HasGetDeviceMetadataRequest) {
         output.WriteRawTag(96);
         output.WriteBool(GetDeviceMetadataRequest);
       }
@@ -1354,15 +1817,15 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(106);
         output.WriteMessage(GetDeviceMetadataResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) {
+      if (HasGetRingtoneRequest) {
         output.WriteRawTag(112);
         output.WriteBool(GetRingtoneRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) {
+      if (HasGetRingtoneResponse) {
         output.WriteRawTag(122);
         output.WriteString(GetRingtoneResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest) {
+      if (HasGetDeviceConnectionStatusRequest) {
         output.WriteRawTag(128, 1);
         output.WriteBool(GetDeviceConnectionStatusRequest);
       }
@@ -1374,7 +1837,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(146, 1);
         output.WriteMessage(SetHamMode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsRequest) {
+      if (HasGetNodeRemoteHardwarePinsRequest) {
         output.WriteRawTag(152, 1);
         output.WriteBool(GetNodeRemoteHardwarePinsRequest);
       }
@@ -1382,15 +1845,15 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(162, 1);
         output.WriteMessage(GetNodeRemoteHardwarePinsResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest) {
+      if (HasEnterDfuModeRequest) {
         output.WriteRawTag(168, 1);
         output.WriteBool(EnterDfuModeRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) {
+      if (HasDeleteFileRequest) {
         output.WriteRawTag(178, 1);
         output.WriteString(DeleteFileRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetScale) {
+      if (HasSetScale) {
         output.WriteRawTag(184, 1);
         output.WriteUInt32(SetScale);
       }
@@ -1410,23 +1873,23 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(154, 2);
         output.WriteMessage(SetModuleConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) {
+      if (HasSetCannedMessageModuleMessages) {
         output.WriteRawTag(162, 2);
         output.WriteString(SetCannedMessageModuleMessages);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) {
+      if (HasSetRingtoneMessage) {
         output.WriteRawTag(170, 2);
         output.WriteString(SetRingtoneMessage);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum) {
+      if (HasRemoveByNodenum) {
         output.WriteRawTag(176, 2);
         output.WriteUInt32(RemoveByNodenum);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetFavoriteNode) {
+      if (HasSetFavoriteNode) {
         output.WriteRawTag(184, 2);
         output.WriteUInt32(SetFavoriteNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFavoriteNode) {
+      if (HasRemoveFavoriteNode) {
         output.WriteRawTag(192, 2);
         output.WriteUInt32(RemoveFavoriteNode);
       }
@@ -1434,15 +1897,15 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(202, 2);
         output.WriteMessage(SetFixedPosition);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFixedPosition) {
+      if (HasRemoveFixedPosition) {
         output.WriteRawTag(208, 2);
         output.WriteBool(RemoveFixedPosition);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly) {
+      if (HasSetTimeOnly) {
         output.WriteRawTag(221, 2);
         output.WriteFixed32(SetTimeOnly);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetUiConfigRequest) {
+      if (HasGetUiConfigRequest) {
         output.WriteRawTag(224, 2);
         output.WriteBool(GetUiConfigRequest);
       }
@@ -1454,47 +1917,47 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(242, 2);
         output.WriteMessage(StoreUiConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetIgnoredNode) {
+      if (HasSetIgnoredNode) {
         output.WriteRawTag(248, 2);
         output.WriteUInt32(SetIgnoredNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveIgnoredNode) {
+      if (HasRemoveIgnoredNode) {
         output.WriteRawTag(128, 3);
         output.WriteUInt32(RemoveIgnoredNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
+      if (HasBeginEditSettings) {
         output.WriteRawTag(128, 4);
         output.WriteBool(BeginEditSettings);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) {
+      if (HasCommitEditSettings) {
         output.WriteRawTag(136, 4);
         output.WriteBool(CommitEditSettings);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice) {
+      if (HasFactoryResetDevice) {
         output.WriteRawTag(240, 5);
         output.WriteInt32(FactoryResetDevice);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
+      if (HasRebootOtaSeconds) {
         output.WriteRawTag(248, 5);
         output.WriteInt32(RebootOtaSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ExitSimulator) {
+      if (HasExitSimulator) {
         output.WriteRawTag(128, 6);
         output.WriteBool(ExitSimulator);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RebootSeconds) {
+      if (HasRebootSeconds) {
         output.WriteRawTag(136, 6);
         output.WriteInt32(RebootSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ShutdownSeconds) {
+      if (HasShutdownSeconds) {
         output.WriteRawTag(144, 6);
         output.WriteInt32(ShutdownSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig) {
+      if (HasFactoryResetConfig) {
         output.WriteRawTag(152, 6);
         output.WriteInt32(FactoryResetConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset) {
+      if (HasNodedbReset) {
         output.WriteRawTag(160, 6);
         output.WriteInt32(NodedbReset);
       }
@@ -1512,7 +1975,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelRequest) {
+      if (HasGetChannelRequest) {
         output.WriteRawTag(8);
         output.WriteUInt32(GetChannelRequest);
       }
@@ -1520,7 +1983,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(18);
         output.WriteMessage(GetChannelResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerRequest) {
+      if (HasGetOwnerRequest) {
         output.WriteRawTag(24);
         output.WriteBool(GetOwnerRequest);
       }
@@ -1528,7 +1991,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(34);
         output.WriteMessage(GetOwnerResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetConfigRequest) {
+      if (HasGetConfigRequest) {
         output.WriteRawTag(40);
         output.WriteEnum((int) GetConfigRequest);
       }
@@ -1536,7 +1999,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteMessage(GetConfigResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetModuleConfigRequest) {
+      if (HasGetModuleConfigRequest) {
         output.WriteRawTag(56);
         output.WriteEnum((int) GetModuleConfigRequest);
       }
@@ -1544,15 +2007,15 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(66);
         output.WriteMessage(GetModuleConfigResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesRequest) {
+      if (HasGetCannedMessageModuleMessagesRequest) {
         output.WriteRawTag(80);
         output.WriteBool(GetCannedMessageModuleMessagesRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse) {
+      if (HasGetCannedMessageModuleMessagesResponse) {
         output.WriteRawTag(90);
         output.WriteString(GetCannedMessageModuleMessagesResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataRequest) {
+      if (HasGetDeviceMetadataRequest) {
         output.WriteRawTag(96);
         output.WriteBool(GetDeviceMetadataRequest);
       }
@@ -1560,15 +2023,15 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(106);
         output.WriteMessage(GetDeviceMetadataResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) {
+      if (HasGetRingtoneRequest) {
         output.WriteRawTag(112);
         output.WriteBool(GetRingtoneRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) {
+      if (HasGetRingtoneResponse) {
         output.WriteRawTag(122);
         output.WriteString(GetRingtoneResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest) {
+      if (HasGetDeviceConnectionStatusRequest) {
         output.WriteRawTag(128, 1);
         output.WriteBool(GetDeviceConnectionStatusRequest);
       }
@@ -1580,7 +2043,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(146, 1);
         output.WriteMessage(SetHamMode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsRequest) {
+      if (HasGetNodeRemoteHardwarePinsRequest) {
         output.WriteRawTag(152, 1);
         output.WriteBool(GetNodeRemoteHardwarePinsRequest);
       }
@@ -1588,15 +2051,15 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(162, 1);
         output.WriteMessage(GetNodeRemoteHardwarePinsResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest) {
+      if (HasEnterDfuModeRequest) {
         output.WriteRawTag(168, 1);
         output.WriteBool(EnterDfuModeRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) {
+      if (HasDeleteFileRequest) {
         output.WriteRawTag(178, 1);
         output.WriteString(DeleteFileRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetScale) {
+      if (HasSetScale) {
         output.WriteRawTag(184, 1);
         output.WriteUInt32(SetScale);
       }
@@ -1616,23 +2079,23 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(154, 2);
         output.WriteMessage(SetModuleConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) {
+      if (HasSetCannedMessageModuleMessages) {
         output.WriteRawTag(162, 2);
         output.WriteString(SetCannedMessageModuleMessages);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) {
+      if (HasSetRingtoneMessage) {
         output.WriteRawTag(170, 2);
         output.WriteString(SetRingtoneMessage);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum) {
+      if (HasRemoveByNodenum) {
         output.WriteRawTag(176, 2);
         output.WriteUInt32(RemoveByNodenum);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetFavoriteNode) {
+      if (HasSetFavoriteNode) {
         output.WriteRawTag(184, 2);
         output.WriteUInt32(SetFavoriteNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFavoriteNode) {
+      if (HasRemoveFavoriteNode) {
         output.WriteRawTag(192, 2);
         output.WriteUInt32(RemoveFavoriteNode);
       }
@@ -1640,15 +2103,15 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(202, 2);
         output.WriteMessage(SetFixedPosition);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFixedPosition) {
+      if (HasRemoveFixedPosition) {
         output.WriteRawTag(208, 2);
         output.WriteBool(RemoveFixedPosition);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly) {
+      if (HasSetTimeOnly) {
         output.WriteRawTag(221, 2);
         output.WriteFixed32(SetTimeOnly);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetUiConfigRequest) {
+      if (HasGetUiConfigRequest) {
         output.WriteRawTag(224, 2);
         output.WriteBool(GetUiConfigRequest);
       }
@@ -1660,47 +2123,47 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(242, 2);
         output.WriteMessage(StoreUiConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetIgnoredNode) {
+      if (HasSetIgnoredNode) {
         output.WriteRawTag(248, 2);
         output.WriteUInt32(SetIgnoredNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveIgnoredNode) {
+      if (HasRemoveIgnoredNode) {
         output.WriteRawTag(128, 3);
         output.WriteUInt32(RemoveIgnoredNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
+      if (HasBeginEditSettings) {
         output.WriteRawTag(128, 4);
         output.WriteBool(BeginEditSettings);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) {
+      if (HasCommitEditSettings) {
         output.WriteRawTag(136, 4);
         output.WriteBool(CommitEditSettings);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice) {
+      if (HasFactoryResetDevice) {
         output.WriteRawTag(240, 5);
         output.WriteInt32(FactoryResetDevice);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
+      if (HasRebootOtaSeconds) {
         output.WriteRawTag(248, 5);
         output.WriteInt32(RebootOtaSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ExitSimulator) {
+      if (HasExitSimulator) {
         output.WriteRawTag(128, 6);
         output.WriteBool(ExitSimulator);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RebootSeconds) {
+      if (HasRebootSeconds) {
         output.WriteRawTag(136, 6);
         output.WriteInt32(RebootSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ShutdownSeconds) {
+      if (HasShutdownSeconds) {
         output.WriteRawTag(144, 6);
         output.WriteInt32(ShutdownSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig) {
+      if (HasFactoryResetConfig) {
         output.WriteRawTag(152, 6);
         output.WriteInt32(FactoryResetConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset) {
+      if (HasNodedbReset) {
         output.WriteRawTag(160, 6);
         output.WriteInt32(NodedbReset);
       }
@@ -1721,49 +2184,49 @@ namespace Meshtastic.Protobufs {
       if (SessionPasskey.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeBytesSize(SessionPasskey);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelRequest) {
+      if (HasGetChannelRequest) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GetChannelRequest);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetChannelResponse) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GetChannelResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerRequest) {
+      if (HasGetOwnerRequest) {
         size += 1 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetOwnerResponse) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GetOwnerResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetConfigRequest) {
+      if (HasGetConfigRequest) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GetConfigRequest);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetConfigResponse) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GetConfigResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetModuleConfigRequest) {
+      if (HasGetModuleConfigRequest) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GetModuleConfigRequest);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetModuleConfigResponse) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GetModuleConfigResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesRequest) {
+      if (HasGetCannedMessageModuleMessagesRequest) {
         size += 1 + 1;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetCannedMessageModuleMessagesResponse) {
+      if (HasGetCannedMessageModuleMessagesResponse) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GetCannedMessageModuleMessagesResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataRequest) {
+      if (HasGetDeviceMetadataRequest) {
         size += 1 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceMetadataResponse) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GetDeviceMetadataResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneRequest) {
+      if (HasGetRingtoneRequest) {
         size += 1 + 1;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetRingtoneResponse) {
+      if (HasGetRingtoneResponse) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GetRingtoneResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusRequest) {
+      if (HasGetDeviceConnectionStatusRequest) {
         size += 2 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetDeviceConnectionStatusResponse) {
@@ -1772,19 +2235,19 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetHamMode) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetHamMode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsRequest) {
+      if (HasGetNodeRemoteHardwarePinsRequest) {
         size += 2 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetNodeRemoteHardwarePinsResponse) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GetNodeRemoteHardwarePinsResponse);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.EnterDfuModeRequest) {
+      if (HasEnterDfuModeRequest) {
         size += 2 + 1;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.DeleteFileRequest) {
+      if (HasDeleteFileRequest) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(DeleteFileRequest);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetScale) {
+      if (HasSetScale) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SetScale);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
@@ -1799,31 +2262,31 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetModuleConfig) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetModuleConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetCannedMessageModuleMessages) {
+      if (HasSetCannedMessageModuleMessages) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SetCannedMessageModuleMessages);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetRingtoneMessage) {
+      if (HasSetRingtoneMessage) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SetRingtoneMessage);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveByNodenum) {
+      if (HasRemoveByNodenum) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RemoveByNodenum);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetFavoriteNode) {
+      if (HasSetFavoriteNode) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SetFavoriteNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFavoriteNode) {
+      if (HasRemoveFavoriteNode) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RemoveFavoriteNode);
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetFixedPosition) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetFixedPosition);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveFixedPosition) {
+      if (HasRemoveFixedPosition) {
         size += 2 + 1;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetTimeOnly) {
+      if (HasSetTimeOnly) {
         size += 2 + 4;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.GetUiConfigRequest) {
+      if (HasGetUiConfigRequest) {
         size += 2 + 1;
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.GetUiConfigResponse) {
@@ -1832,37 +2295,37 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.StoreUiConfig) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(StoreUiConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.SetIgnoredNode) {
+      if (HasSetIgnoredNode) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SetIgnoredNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RemoveIgnoredNode) {
+      if (HasRemoveIgnoredNode) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RemoveIgnoredNode);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.BeginEditSettings) {
+      if (HasBeginEditSettings) {
         size += 2 + 1;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.CommitEditSettings) {
+      if (HasCommitEditSettings) {
         size += 2 + 1;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetDevice) {
+      if (HasFactoryResetDevice) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(FactoryResetDevice);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds) {
+      if (HasRebootOtaSeconds) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RebootOtaSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ExitSimulator) {
+      if (HasExitSimulator) {
         size += 2 + 1;
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.RebootSeconds) {
+      if (HasRebootSeconds) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(RebootSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.ShutdownSeconds) {
+      if (HasShutdownSeconds) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(ShutdownSeconds);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.FactoryResetConfig) {
+      if (HasFactoryResetConfig) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(FactoryResetConfig);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.NodedbReset) {
+      if (HasNodedbReset) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(NodedbReset);
       }
       if (_unknownFields != null) {
@@ -2083,7 +2546,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2371,7 +2838,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2794,6 +3265,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Parameters for setting up Meshtastic for ameteur radio usage
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HamParameters : pb::IMessage<HamParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3054,7 +3526,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -3085,7 +3561,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -3116,6 +3596,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Response envelope for node_remote_hardware_pins
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeRemoteHardwarePinsResponse : pb::IMessage<NodeRemoteHardwarePinsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3264,7 +3745,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -3283,7 +3768,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
