@@ -25,7 +25,7 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYxoabWVzaHRh",
-            "c3RpYy9kZXZpY2VfdWkucHJvdG8i2yUKBkNvbmZpZxIxCgZkZXZpY2UYASAB",
+            "c3RpYy9kZXZpY2VfdWkucHJvdG8i1CYKBkNvbmZpZxIxCgZkZXZpY2UYASAB",
             "KAsyHy5tZXNodGFzdGljLkNvbmZpZy5EZXZpY2VDb25maWdIABI1Cghwb3Np",
             "dGlvbhgCIAEoCzIhLm1lc2h0YXN0aWMuQ29uZmlnLlBvc2l0aW9uQ29uZmln",
             "SAASLwoFcG93ZXIYAyABKAsyHi5tZXNodGFzdGljLkNvbmZpZy5Qb3dlckNv",
@@ -37,7 +37,7 @@ namespace Meshtastic.Protobufs {
             "aXR5GAggASgLMiEubWVzaHRhc3RpYy5Db25maWcuU2VjdXJpdHlDb25maWdI",
             "ABI5CgpzZXNzaW9ua2V5GAkgASgLMiMubWVzaHRhc3RpYy5Db25maWcuU2Vz",
             "c2lvbmtleUNvbmZpZ0gAEi8KCWRldmljZV91aRgKIAEoCzIaLm1lc2h0YXN0",
-            "aWMuRGV2aWNlVUlDb25maWdIABqkBQoMRGV2aWNlQ29uZmlnEjIKBHJvbGUY",
+            "aWMuRGV2aWNlVUlDb25maWdIABq1BQoMRGV2aWNlQ29uZmlnEjIKBHJvbGUY",
             "ASABKA4yJC5tZXNodGFzdGljLkNvbmZpZy5EZXZpY2VDb25maWcuUm9sZRIa",
             "Cg5zZXJpYWxfZW5hYmxlZBgCIAEoCEICGAESEwoLYnV0dG9uX2dwaW8YBCAB",
             "KA0SEwoLYnV6emVyX2dwaW8YBSABKA0SSQoQcmVicm9hZGNhc3RfbW9kZRgG",
@@ -46,104 +46,106 @@ namespace Meshtastic.Protobufs {
             "GmRvdWJsZV90YXBfYXNfYnV0dG9uX3ByZXNzGAggASgIEhYKCmlzX21hbmFn",
             "ZWQYCSABKAhCAhgBEhwKFGRpc2FibGVfdHJpcGxlX2NsaWNrGAogASgIEg0K",
             "BXR6ZGVmGAsgASgJEh4KFmxlZF9oZWFydGJlYXRfZGlzYWJsZWQYDCABKAgi",
-            "rgEKBFJvbGUSCgoGQ0xJRU5UEAASDwoLQ0xJRU5UX01VVEUQARIKCgZST1VU",
+            "vwEKBFJvbGUSCgoGQ0xJRU5UEAASDwoLQ0xJRU5UX01VVEUQARIKCgZST1VU",
             "RVIQAhIVCg1ST1VURVJfQ0xJRU5UEAMaAggBEgwKCFJFUEVBVEVSEAQSCwoH",
             "VFJBQ0tFUhAFEgoKBlNFTlNPUhAGEgcKA1RBSxAHEhEKDUNMSUVOVF9ISURE",
-            "RU4QCBISCg5MT1NUX0FORF9GT1VORBAJEg8KC1RBS19UUkFDS0VSEAoicwoP",
-            "UmVicm9hZGNhc3RNb2RlEgcKA0FMTBAAEhUKEUFMTF9TS0lQX0RFQ09ESU5H",
-            "EAESDgoKTE9DQUxfT05MWRACEg4KCktOT1dOX09OTFkQAxIICgROT05FEAQS",
-            "FgoSQ09SRV9QT1JUTlVNU19PTkxZEAUakQUKDlBvc2l0aW9uQ29uZmlnEh8K",
-            "F3Bvc2l0aW9uX2Jyb2FkY2FzdF9zZWNzGAEgASgNEigKIHBvc2l0aW9uX2Jy",
-            "b2FkY2FzdF9zbWFydF9lbmFibGVkGAIgASgIEhYKDmZpeGVkX3Bvc2l0aW9u",
-            "GAMgASgIEhcKC2dwc19lbmFibGVkGAQgASgIQgIYARIbChNncHNfdXBkYXRl",
-            "X2ludGVydmFsGAUgASgNEhwKEGdwc19hdHRlbXB0X3RpbWUYBiABKA1CAhgB",
-            "EhYKDnBvc2l0aW9uX2ZsYWdzGAcgASgNEg8KB3J4X2dwaW8YCCABKA0SDwoH",
-            "dHhfZ3BpbxgJIAEoDRIoCiBicm9hZGNhc3Rfc21hcnRfbWluaW11bV9kaXN0",
-            "YW5jZRgKIAEoDRItCiVicm9hZGNhc3Rfc21hcnRfbWluaW11bV9pbnRlcnZh",
-            "bF9zZWNzGAsgASgNEhMKC2dwc19lbl9ncGlvGAwgASgNEjsKCGdwc19tb2Rl",
-            "GA0gASgOMikubWVzaHRhc3RpYy5Db25maWcuUG9zaXRpb25Db25maWcuR3Bz",
-            "TW9kZSKrAQoNUG9zaXRpb25GbGFncxIJCgVVTlNFVBAAEgwKCEFMVElUVURF",
-            "EAESEAoMQUxUSVRVREVfTVNMEAISFgoSR0VPSURBTF9TRVBBUkFUSU9OEAQS",
-            "BwoDRE9QEAgSCQoFSFZET1AQEBINCglTQVRJTlZJRVcQIBIKCgZTRVFfTk8Q",
-            "QBIOCglUSU1FU1RBTVAQgAESDAoHSEVBRElORxCAAhIKCgVTUEVFRBCABCI1",
-            "CgdHcHNNb2RlEgwKCERJU0FCTEVEEAASCwoHRU5BQkxFRBABEg8KC05PVF9Q",
-            "UkVTRU5UEAIahAIKC1Bvd2VyQ29uZmlnEhcKD2lzX3Bvd2VyX3NhdmluZxgB",
-            "IAEoCBImCh5vbl9iYXR0ZXJ5X3NodXRkb3duX2FmdGVyX3NlY3MYAiABKA0S",
-            "HwoXYWRjX211bHRpcGxpZXJfb3ZlcnJpZGUYAyABKAISGwoTd2FpdF9ibHVl",
-            "dG9vdGhfc2VjcxgEIAEoDRIQCghzZHNfc2VjcxgGIAEoDRIPCgdsc19zZWNz",
-            "GAcgASgNEhUKDW1pbl93YWtlX3NlY3MYCCABKA0SIgoaZGV2aWNlX2JhdHRl",
-            "cnlfaW5hX2FkZHJlc3MYCSABKA0SGAoQcG93ZXJtb25fZW5hYmxlcxggIAEo",
-            "BBr+AgoNTmV0d29ya0NvbmZpZxIUCgx3aWZpX2VuYWJsZWQYASABKAgSEQoJ",
-            "d2lmaV9zc2lkGAMgASgJEhAKCHdpZmlfcHNrGAQgASgJEhIKCm50cF9zZXJ2",
-            "ZXIYBSABKAkSEwoLZXRoX2VuYWJsZWQYBiABKAgSQgoMYWRkcmVzc19tb2Rl",
-            "GAcgASgOMiwubWVzaHRhc3RpYy5Db25maWcuTmV0d29ya0NvbmZpZy5BZGRy",
-            "ZXNzTW9kZRJACgtpcHY0X2NvbmZpZxgIIAEoCzIrLm1lc2h0YXN0aWMuQ29u",
-            "ZmlnLk5ldHdvcmtDb25maWcuSXBWNENvbmZpZxIWCg5yc3lzbG9nX3NlcnZl",
-            "chgJIAEoCRpGCgpJcFY0Q29uZmlnEgoKAmlwGAEgASgHEg8KB2dhdGV3YXkY",
-            "AiABKAcSDgoGc3VibmV0GAMgASgHEgsKA2RucxgEIAEoByIjCgtBZGRyZXNz",
-            "TW9kZRIICgRESENQEAASCgoGU1RBVElDEAEazQcKDURpc3BsYXlDb25maWcS",
-            "FgoOc2NyZWVuX29uX3NlY3MYASABKA0SSAoKZ3BzX2Zvcm1hdBgCIAEoDjI0",
-            "Lm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlDb25maWcuR3BzQ29vcmRpbmF0",
-            "ZUZvcm1hdBIhChlhdXRvX3NjcmVlbl9jYXJvdXNlbF9zZWNzGAMgASgNEhkK",
-            "EWNvbXBhc3Nfbm9ydGhfdG9wGAQgASgIEhMKC2ZsaXBfc2NyZWVuGAUgASgI",
-            "EjwKBXVuaXRzGAYgASgOMi0ubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNv",
-            "bmZpZy5EaXNwbGF5VW5pdHMSNwoEb2xlZBgHIAEoDjIpLm1lc2h0YXN0aWMu",
-            "Q29uZmlnLkRpc3BsYXlDb25maWcuT2xlZFR5cGUSQQoLZGlzcGxheW1vZGUY",
-            "CCABKA4yLC5tZXNodGFzdGljLkNvbmZpZy5EaXNwbGF5Q29uZmlnLkRpc3Bs",
-            "YXlNb2RlEhQKDGhlYWRpbmdfYm9sZBgJIAEoCBIdChV3YWtlX29uX3RhcF9v",
-            "cl9tb3Rpb24YCiABKAgSUAoTY29tcGFzc19vcmllbnRhdGlvbhgLIAEoDjIz",
-            "Lm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlDb25maWcuQ29tcGFzc09yaWVu",
-            "dGF0aW9uIk0KE0dwc0Nvb3JkaW5hdGVGb3JtYXQSBwoDREVDEAASBwoDRE1T",
-            "EAESBwoDVVRNEAISCAoETUdSUxADEgcKA09MQxAEEggKBE9TR1IQBSIoCgxE",
-            "aXNwbGF5VW5pdHMSCgoGTUVUUklDEAASDAoISU1QRVJJQUwQASJNCghPbGVk",
-            "VHlwZRINCglPTEVEX0FVVE8QABIQCgxPTEVEX1NTRDEzMDYQARIPCgtPTEVE",
-            "X1NIMTEwNhACEg8KC09MRURfU0gxMTA3EAMiQQoLRGlzcGxheU1vZGUSCwoH",
-            "REVGQVVMVBAAEgwKCFRXT0NPTE9SEAESDAoISU5WRVJURUQQAhIJCgVDT0xP",
-            "UhADIroBChJDb21wYXNzT3JpZW50YXRpb24SDQoJREVHUkVFU18wEAASDgoK",
-            "REVHUkVFU185MBABEg8KC0RFR1JFRVNfMTgwEAISDwoLREVHUkVFU18yNzAQ",
-            "AxIWChJERUdSRUVTXzBfSU5WRVJURUQQBBIXChNERUdSRUVTXzkwX0lOVkVS",
-            "VEVEEAUSGAoUREVHUkVFU18xODBfSU5WRVJURUQQBhIYChRERUdSRUVTXzI3",
-            "MF9JTlZFUlRFRBAHGp0HCgpMb1JhQ29uZmlnEhIKCnVzZV9wcmVzZXQYASAB",
-            "KAgSPwoMbW9kZW1fcHJlc2V0GAIgASgOMikubWVzaHRhc3RpYy5Db25maWcu",
-            "TG9SYUNvbmZpZy5Nb2RlbVByZXNldBIRCgliYW5kd2lkdGgYAyABKA0SFQoN",
-            "c3ByZWFkX2ZhY3RvchgEIAEoDRITCgtjb2RpbmdfcmF0ZRgFIAEoDRIYChBm",
-            "cmVxdWVuY3lfb2Zmc2V0GAYgASgCEjgKBnJlZ2lvbhgHIAEoDjIoLm1lc2h0",
-            "YXN0aWMuQ29uZmlnLkxvUmFDb25maWcuUmVnaW9uQ29kZRIRCglob3BfbGlt",
-            "aXQYCCABKA0SEgoKdHhfZW5hYmxlZBgJIAEoCBIQCgh0eF9wb3dlchgKIAEo",
-            "BRITCgtjaGFubmVsX251bRgLIAEoDRIbChNvdmVycmlkZV9kdXR5X2N5Y2xl",
-            "GAwgASgIEh4KFnN4MTI2eF9yeF9ib29zdGVkX2dhaW4YDSABKAgSGgoSb3Zl",
-            "cnJpZGVfZnJlcXVlbmN5GA4gASgCEhcKD3BhX2Zhbl9kaXNhYmxlZBgPIAEo",
-            "CBIXCg9pZ25vcmVfaW5jb21pbmcYZyADKA0SEwoLaWdub3JlX21xdHQYaCAB",
-            "KAgSGQoRY29uZmlnX29rX3RvX21xdHQYaSABKAgi8QEKClJlZ2lvbkNvZGUS",
-            "CQoFVU5TRVQQABIGCgJVUxABEgoKBkVVXzQzMxACEgoKBkVVXzg2OBADEgYK",
-            "AkNOEAQSBgoCSlAQBRIHCgNBTloQBhIGCgJLUhAHEgYKAlRXEAgSBgoCUlUQ",
-            "CRIGCgJJThAKEgoKBk5aXzg2NRALEgYKAlRIEAwSCwoHTE9SQV8yNBANEgoK",
-            "BlVBXzQzMxAOEgoKBlVBXzg2OBAPEgoKBk1ZXzQzMxAQEgoKBk1ZXzkxORAR",
-            "EgoKBlNHXzkyMxASEgoKBlBIXzQzMxATEgoKBlBIXzg2OBAUEgoKBlBIXzkx",
-            "NRAVIqkBCgtNb2RlbVByZXNldBINCglMT05HX0ZBU1QQABINCglMT05HX1NM",
-            "T1cQARIWCg5WRVJZX0xPTkdfU0xPVxACGgIIARIPCgtNRURJVU1fU0xPVxAD",
-            "Eg8KC01FRElVTV9GQVNUEAQSDgoKU0hPUlRfU0xPVxAFEg4KClNIT1JUX0ZB",
-            "U1QQBhIRCg1MT05HX01PREVSQVRFEAcSDwoLU0hPUlRfVFVSQk8QCBqtAQoP",
-            "Qmx1ZXRvb3RoQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSPAoEbW9kZRgCIAEo",
-            "DjIuLm1lc2h0YXN0aWMuQ29uZmlnLkJsdWV0b290aENvbmZpZy5QYWlyaW5n",
-            "TW9kZRIRCglmaXhlZF9waW4YAyABKA0iOAoLUGFpcmluZ01vZGUSDgoKUkFO",
-            "RE9NX1BJThAAEg0KCUZJWEVEX1BJThABEgoKBk5PX1BJThACGrYBCg5TZWN1",
-            "cml0eUNvbmZpZxISCgpwdWJsaWNfa2V5GAEgASgMEhMKC3ByaXZhdGVfa2V5",
-            "GAIgASgMEhEKCWFkbWluX2tleRgDIAMoDBISCgppc19tYW5hZ2VkGAQgASgI",
-            "EhYKDnNlcmlhbF9lbmFibGVkGAUgASgIEh0KFWRlYnVnX2xvZ19hcGlfZW5h",
-            "YmxlZBgGIAEoCBIdChVhZG1pbl9jaGFubmVsX2VuYWJsZWQYCCABKAgaEgoQ",
-            "U2Vzc2lvbmtleUNvbmZpZ0IRCg9wYXlsb2FkX3ZhcmlhbnRCYQoTY29tLmdl",
-            "ZWtzdmlsbGUubWVzaEIMQ29uZmlnUHJvdG9zWiJnaXRodWIuY29tL21lc2h0",
-            "YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBi",
-            "BnByb3RvMw=="));
+            "RU4QCBISCg5MT1NUX0FORF9GT1VORBAJEg8KC1RBS19UUkFDS0VSEAoSDwoL",
+            "Uk9VVEVSX0xBVEUQCyJzCg9SZWJyb2FkY2FzdE1vZGUSBwoDQUxMEAASFQoR",
+            "QUxMX1NLSVBfREVDT0RJTkcQARIOCgpMT0NBTF9PTkxZEAISDgoKS05PV05f",
+            "T05MWRADEggKBE5PTkUQBBIWChJDT1JFX1BPUlROVU1TX09OTFkQBRqRBQoO",
+            "UG9zaXRpb25Db25maWcSHwoXcG9zaXRpb25fYnJvYWRjYXN0X3NlY3MYASAB",
+            "KA0SKAogcG9zaXRpb25fYnJvYWRjYXN0X3NtYXJ0X2VuYWJsZWQYAiABKAgS",
+            "FgoOZml4ZWRfcG9zaXRpb24YAyABKAgSFwoLZ3BzX2VuYWJsZWQYBCABKAhC",
+            "AhgBEhsKE2dwc191cGRhdGVfaW50ZXJ2YWwYBSABKA0SHAoQZ3BzX2F0dGVt",
+            "cHRfdGltZRgGIAEoDUICGAESFgoOcG9zaXRpb25fZmxhZ3MYByABKA0SDwoH",
+            "cnhfZ3BpbxgIIAEoDRIPCgd0eF9ncGlvGAkgASgNEigKIGJyb2FkY2FzdF9z",
+            "bWFydF9taW5pbXVtX2Rpc3RhbmNlGAogASgNEi0KJWJyb2FkY2FzdF9zbWFy",
+            "dF9taW5pbXVtX2ludGVydmFsX3NlY3MYCyABKA0SEwoLZ3BzX2VuX2dwaW8Y",
+            "DCABKA0SOwoIZ3BzX21vZGUYDSABKA4yKS5tZXNodGFzdGljLkNvbmZpZy5Q",
+            "b3NpdGlvbkNvbmZpZy5HcHNNb2RlIqsBCg1Qb3NpdGlvbkZsYWdzEgkKBVVO",
+            "U0VUEAASDAoIQUxUSVRVREUQARIQCgxBTFRJVFVERV9NU0wQAhIWChJHRU9J",
+            "REFMX1NFUEFSQVRJT04QBBIHCgNET1AQCBIJCgVIVkRPUBAQEg0KCVNBVElO",
+            "VklFVxAgEgoKBlNFUV9OTxBAEg4KCVRJTUVTVEFNUBCAARIMCgdIRUFESU5H",
+            "EIACEgoKBVNQRUVEEIAEIjUKB0dwc01vZGUSDAoIRElTQUJMRUQQABILCgdF",
+            "TkFCTEVEEAESDwoLTk9UX1BSRVNFTlQQAhqEAgoLUG93ZXJDb25maWcSFwoP",
+            "aXNfcG93ZXJfc2F2aW5nGAEgASgIEiYKHm9uX2JhdHRlcnlfc2h1dGRvd25f",
+            "YWZ0ZXJfc2VjcxgCIAEoDRIfChdhZGNfbXVsdGlwbGllcl9vdmVycmlkZRgD",
+            "IAEoAhIbChN3YWl0X2JsdWV0b290aF9zZWNzGAQgASgNEhAKCHNkc19zZWNz",
+            "GAYgASgNEg8KB2xzX3NlY3MYByABKA0SFQoNbWluX3dha2Vfc2VjcxgIIAEo",
+            "DRIiChpkZXZpY2VfYmF0dGVyeV9pbmFfYWRkcmVzcxgJIAEoDRIYChBwb3dl",
+            "cm1vbl9lbmFibGVzGCAgASgEGs8DCg1OZXR3b3JrQ29uZmlnEhQKDHdpZmlf",
+            "ZW5hYmxlZBgBIAEoCBIRCgl3aWZpX3NzaWQYAyABKAkSEAoId2lmaV9wc2sY",
+            "BCABKAkSEgoKbnRwX3NlcnZlchgFIAEoCRITCgtldGhfZW5hYmxlZBgGIAEo",
+            "CBJCCgxhZGRyZXNzX21vZGUYByABKA4yLC5tZXNodGFzdGljLkNvbmZpZy5O",
+            "ZXR3b3JrQ29uZmlnLkFkZHJlc3NNb2RlEkAKC2lwdjRfY29uZmlnGAggASgL",
+            "MisubWVzaHRhc3RpYy5Db25maWcuTmV0d29ya0NvbmZpZy5JcFY0Q29uZmln",
+            "EhYKDnJzeXNsb2dfc2VydmVyGAkgASgJEhkKEWVuYWJsZWRfcHJvdG9jb2xz",
+            "GAogASgNGkYKCklwVjRDb25maWcSCgoCaXAYASABKAcSDwoHZ2F0ZXdheRgC",
+            "IAEoBxIOCgZzdWJuZXQYAyABKAcSCwoDZG5zGAQgASgHIiMKC0FkZHJlc3NN",
+            "b2RlEggKBERIQ1AQABIKCgZTVEFUSUMQASI0Cg1Qcm90b2NvbEZsYWdzEhAK",
+            "DE5PX0JST0FEQ0FTVBAAEhEKDVVEUF9CUk9BRENBU1QQARrkBwoNRGlzcGxh",
+            "eUNvbmZpZxIWCg5zY3JlZW5fb25fc2VjcxgBIAEoDRJICgpncHNfZm9ybWF0",
+            "GAIgASgOMjQubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZy5HcHND",
+            "b29yZGluYXRlRm9ybWF0EiEKGWF1dG9fc2NyZWVuX2Nhcm91c2VsX3NlY3MY",
+            "AyABKA0SGQoRY29tcGFzc19ub3J0aF90b3AYBCABKAgSEwoLZmxpcF9zY3Jl",
+            "ZW4YBSABKAgSPAoFdW5pdHMYBiABKA4yLS5tZXNodGFzdGljLkNvbmZpZy5E",
+            "aXNwbGF5Q29uZmlnLkRpc3BsYXlVbml0cxI3CgRvbGVkGAcgASgOMikubWVz",
+            "aHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZy5PbGVkVHlwZRJBCgtkaXNw",
+            "bGF5bW9kZRgIIAEoDjIsLm1lc2h0YXN0aWMuQ29uZmlnLkRpc3BsYXlDb25m",
+            "aWcuRGlzcGxheU1vZGUSFAoMaGVhZGluZ19ib2xkGAkgASgIEh0KFXdha2Vf",
+            "b25fdGFwX29yX21vdGlvbhgKIAEoCBJQChNjb21wYXNzX29yaWVudGF0aW9u",
+            "GAsgASgOMjMubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZy5Db21w",
+            "YXNzT3JpZW50YXRpb24SFQoNdXNlXzEyaF9jbG9jaxgMIAEoCCJNChNHcHND",
+            "b29yZGluYXRlRm9ybWF0EgcKA0RFQxAAEgcKA0RNUxABEgcKA1VUTRACEggK",
+            "BE1HUlMQAxIHCgNPTEMQBBIICgRPU0dSEAUiKAoMRGlzcGxheVVuaXRzEgoK",
+            "Bk1FVFJJQxAAEgwKCElNUEVSSUFMEAEiTQoIT2xlZFR5cGUSDQoJT0xFRF9B",
+            "VVRPEAASEAoMT0xFRF9TU0QxMzA2EAESDwoLT0xFRF9TSDExMDYQAhIPCgtP",
+            "TEVEX1NIMTEwNxADIkEKC0Rpc3BsYXlNb2RlEgsKB0RFRkFVTFQQABIMCghU",
+            "V09DT0xPUhABEgwKCElOVkVSVEVEEAISCQoFQ09MT1IQAyK6AQoSQ29tcGFz",
+            "c09yaWVudGF0aW9uEg0KCURFR1JFRVNfMBAAEg4KCkRFR1JFRVNfOTAQARIP",
+            "CgtERUdSRUVTXzE4MBACEg8KC0RFR1JFRVNfMjcwEAMSFgoSREVHUkVFU18w",
+            "X0lOVkVSVEVEEAQSFwoTREVHUkVFU185MF9JTlZFUlRFRBAFEhgKFERFR1JF",
+            "RVNfMTgwX0lOVkVSVEVEEAYSGAoUREVHUkVFU18yNzBfSU5WRVJURUQQBxqd",
+            "BwoKTG9SYUNvbmZpZxISCgp1c2VfcHJlc2V0GAEgASgIEj8KDG1vZGVtX3By",
+            "ZXNldBgCIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25maWcuTW9k",
+            "ZW1QcmVzZXQSEQoJYmFuZHdpZHRoGAMgASgNEhUKDXNwcmVhZF9mYWN0b3IY",
+            "BCABKA0SEwoLY29kaW5nX3JhdGUYBSABKA0SGAoQZnJlcXVlbmN5X29mZnNl",
+            "dBgGIAEoAhI4CgZyZWdpb24YByABKA4yKC5tZXNodGFzdGljLkNvbmZpZy5M",
+            "b1JhQ29uZmlnLlJlZ2lvbkNvZGUSEQoJaG9wX2xpbWl0GAggASgNEhIKCnR4",
+            "X2VuYWJsZWQYCSABKAgSEAoIdHhfcG93ZXIYCiABKAUSEwoLY2hhbm5lbF9u",
+            "dW0YCyABKA0SGwoTb3ZlcnJpZGVfZHV0eV9jeWNsZRgMIAEoCBIeChZzeDEy",
+            "NnhfcnhfYm9vc3RlZF9nYWluGA0gASgIEhoKEm92ZXJyaWRlX2ZyZXF1ZW5j",
+            "eRgOIAEoAhIXCg9wYV9mYW5fZGlzYWJsZWQYDyABKAgSFwoPaWdub3JlX2lu",
+            "Y29taW5nGGcgAygNEhMKC2lnbm9yZV9tcXR0GGggASgIEhkKEWNvbmZpZ19v",
+            "a190b19tcXR0GGkgASgIIvEBCgpSZWdpb25Db2RlEgkKBVVOU0VUEAASBgoC",
+            "VVMQARIKCgZFVV80MzMQAhIKCgZFVV84NjgQAxIGCgJDThAEEgYKAkpQEAUS",
+            "BwoDQU5aEAYSBgoCS1IQBxIGCgJUVxAIEgYKAlJVEAkSBgoCSU4QChIKCgZO",
+            "Wl84NjUQCxIGCgJUSBAMEgsKB0xPUkFfMjQQDRIKCgZVQV80MzMQDhIKCgZV",
+            "QV84NjgQDxIKCgZNWV80MzMQEBIKCgZNWV85MTkQERIKCgZTR185MjMQEhIK",
+            "CgZQSF80MzMQExIKCgZQSF84NjgQFBIKCgZQSF85MTUQFSKpAQoLTW9kZW1Q",
+            "cmVzZXQSDQoJTE9OR19GQVNUEAASDQoJTE9OR19TTE9XEAESFgoOVkVSWV9M",
+            "T05HX1NMT1cQAhoCCAESDwoLTUVESVVNX1NMT1cQAxIPCgtNRURJVU1fRkFT",
+            "VBAEEg4KClNIT1JUX1NMT1cQBRIOCgpTSE9SVF9GQVNUEAYSEQoNTE9OR19N",
+            "T0RFUkFURRAHEg8KC1NIT1JUX1RVUkJPEAgarQEKD0JsdWV0b290aENvbmZp",
+            "ZxIPCgdlbmFibGVkGAEgASgIEjwKBG1vZGUYAiABKA4yLi5tZXNodGFzdGlj",
+            "LkNvbmZpZy5CbHVldG9vdGhDb25maWcuUGFpcmluZ01vZGUSEQoJZml4ZWRf",
+            "cGluGAMgASgNIjgKC1BhaXJpbmdNb2RlEg4KClJBTkRPTV9QSU4QABINCglG",
+            "SVhFRF9QSU4QARIKCgZOT19QSU4QAhq2AQoOU2VjdXJpdHlDb25maWcSEgoK",
+            "cHVibGljX2tleRgBIAEoDBITCgtwcml2YXRlX2tleRgCIAEoDBIRCglhZG1p",
+            "bl9rZXkYAyADKAwSEgoKaXNfbWFuYWdlZBgEIAEoCBIWCg5zZXJpYWxfZW5h",
+            "YmxlZBgFIAEoCBIdChVkZWJ1Z19sb2dfYXBpX2VuYWJsZWQYBiABKAgSHQoV",
+            "YWRtaW5fY2hhbm5lbF9lbmFibGVkGAggASgIGhIKEFNlc3Npb25rZXlDb25m",
+            "aWdCEQoPcGF5bG9hZF92YXJpYW50QmEKE2NvbS5nZWVrc3ZpbGxlLm1lc2hC",
+            "DENvbmZpZ1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVy",
+            "YXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config), global::Meshtastic.Protobufs.Config.Parser, new[]{ "Device", "Position", "Power", "Network", "Display", "Lora", "Bluetooth", "Security", "Sessionkey", "DeviceUi" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig), global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Parser, new[]{ "Role", "SerialEnabled", "ButtonGpio", "BuzzerGpio", "RebroadcastMode", "NodeInfoBroadcastSecs", "DoubleTapAsButtonPress", "IsManaged", "DisableTripleClick", "Tzdef", "LedHeartbeatDisabled" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.Role), typeof(global::Meshtastic.Protobufs.Config.Types.DeviceConfig.Types.RebroadcastMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig), global::Meshtastic.Protobufs.Config.Types.PositionConfig.Parser, new[]{ "PositionBroadcastSecs", "PositionBroadcastSmartEnabled", "FixedPosition", "GpsEnabled", "GpsUpdateInterval", "GpsAttemptTime", "PositionFlags", "RxGpio", "TxGpio", "BroadcastSmartMinimumDistance", "BroadcastSmartMinimumIntervalSecs", "GpsEnGpio", "GpsMode" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.PositionFlags), typeof(global::Meshtastic.Protobufs.Config.Types.PositionConfig.Types.GpsMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.PowerConfig), global::Meshtastic.Protobufs.Config.Types.PowerConfig.Parser, new[]{ "IsPowerSaving", "OnBatteryShutdownAfterSecs", "AdcMultiplierOverride", "WaitBluetoothSecs", "SdsSecs", "LsSecs", "MinWakeSecs", "DeviceBatteryInaAddress", "PowermonEnables" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "AddressMode", "Ipv4Config", "RsyslogServer" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold", "WakeOnTapOrMotion", "CompassOrientation" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Parser, new[]{ "WifiEnabled", "WifiSsid", "WifiPsk", "NtpServer", "EthEnabled", "AddressMode", "Ipv4Config", "RsyslogServer", "EnabledProtocols" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode), typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.ProtocolFlags) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config), global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.IpV4Config.Parser, new[]{ "Ip", "Gateway", "Subnet", "Dns" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig), global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Parser, new[]{ "ScreenOnSecs", "GpsFormat", "AutoScreenCarouselSecs", "CompassNorthTop", "FlipScreen", "Units", "Oled", "Displaymode", "HeadingBold", "WakeOnTapOrMotion", "CompassOrientation", "Use12HClock" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.GpsCoordinateFormat), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayUnits), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.OledType), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.DisplayMode), typeof(global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig), global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Parser, new[]{ "UsePreset", "ModemPreset", "Bandwidth", "SpreadFactor", "CodingRate", "FrequencyOffset", "Region", "HopLimit", "TxEnabled", "TxPower", "ChannelNum", "OverrideDutyCycle", "Sx126XRxBoostedGain", "OverrideFrequency", "PaFanDisabled", "IgnoreIncoming", "IgnoreMqtt", "ConfigOkToMqtt" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.RegionCode), typeof(global::Meshtastic.Protobufs.Config.Types.LoRaConfig.Types.ModemPreset) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig), global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Parser, new[]{ "Enabled", "Mode", "FixedPin" }, null, new[]{ typeof(global::Meshtastic.Protobufs.Config.Types.BluetoothConfig.Types.PairingMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Config.Types.SecurityConfig), global::Meshtastic.Protobufs.Config.Types.SecurityConfig.Parser, new[]{ "PublicKey", "PrivateKey", "AdminKey", "IsManaged", "SerialEnabled", "DebugLogApiEnabled", "AdminChannelEnabled" }, null, null, null, null),
@@ -154,6 +156,7 @@ namespace Meshtastic.Protobufs {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Config : pb::IMessage<Config>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -657,7 +660,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -762,7 +769,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -870,6 +881,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// Configuration
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DeviceConfig : pb::IMessage<DeviceConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1367,7 +1379,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -1426,7 +1442,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -1508,6 +1528,7 @@ namespace Meshtastic.Protobufs {
             ///   This mode may still potentially have higher power usage due to it's preference in message rebroadcasting on the mesh.
             /// </summary>
             [pbr::OriginalName("ROUTER")] Router = 2,
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("ROUTER_CLIENT")] RouterClient = 3,
             /// <summary>
             ///
@@ -1565,6 +1586,15 @@ namespace Meshtastic.Protobufs {
             ///    Uses position module configuration to determine TAK PLI broadcast interval.
             /// </summary>
             [pbr::OriginalName("TAK_TRACKER")] TakTracker = 10,
+            /// <summary>
+            ///
+            /// Description: Will always rebroadcast packets, but will do so after all other modes.
+            /// Technical Details: Used for router nodes that are intended to provide additional coverage
+            ///    in areas not already covered by other routers, or to bridge around problematic terrain,
+            ///    but should not be given priority over other routers in order to avoid unnecessaraily
+            ///    consuming hops.
+            /// </summary>
+            [pbr::OriginalName("ROUTER_LATE")] RouterLate = 11,
           }
 
           /// <summary>
@@ -1618,6 +1648,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// Position Config
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PositionConfig : pb::IMessage<PositionConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2181,7 +2212,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -2248,7 +2283,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -2413,6 +2452,7 @@ namespace Meshtastic.Protobufs {
       /// Power Config\
       /// See [Power Config](/docs/settings/config/power) for additional power config details.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PowerConfig : pb::IMessage<PowerConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2848,7 +2888,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -2899,7 +2943,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -2950,6 +2998,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// Network Config
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NetworkConfig : pb::IMessage<NetworkConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2992,6 +3041,7 @@ namespace Meshtastic.Protobufs {
           addressMode_ = other.addressMode_;
           ipv4Config_ = other.ipv4Config_ != null ? other.ipv4Config_.Clone() : null;
           rsyslogServer_ = other.rsyslogServer_;
+          enabledProtocols_ = other.enabledProtocols_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3130,6 +3180,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "enabled_protocols" field.</summary>
+        public const int EnabledProtocolsFieldNumber = 10;
+        private uint enabledProtocols_;
+        /// <summary>
+        ///
+        /// Flags for enabling/disabling network protocols
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint EnabledProtocols {
+          get { return enabledProtocols_; }
+          set {
+            enabledProtocols_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3153,6 +3219,7 @@ namespace Meshtastic.Protobufs {
           if (AddressMode != other.AddressMode) return false;
           if (!object.Equals(Ipv4Config, other.Ipv4Config)) return false;
           if (RsyslogServer != other.RsyslogServer) return false;
+          if (EnabledProtocols != other.EnabledProtocols) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3168,6 +3235,7 @@ namespace Meshtastic.Protobufs {
           if (AddressMode != global::Meshtastic.Protobufs.Config.Types.NetworkConfig.Types.AddressMode.Dhcp) hash ^= AddressMode.GetHashCode();
           if (ipv4Config_ != null) hash ^= Ipv4Config.GetHashCode();
           if (RsyslogServer.Length != 0) hash ^= RsyslogServer.GetHashCode();
+          if (EnabledProtocols != 0) hash ^= EnabledProtocols.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3218,6 +3286,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(74);
             output.WriteString(RsyslogServer);
           }
+          if (EnabledProtocols != 0) {
+            output.WriteRawTag(80);
+            output.WriteUInt32(EnabledProtocols);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3260,6 +3332,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(74);
             output.WriteString(RsyslogServer);
           }
+          if (EnabledProtocols != 0) {
+            output.WriteRawTag(80);
+            output.WriteUInt32(EnabledProtocols);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3293,6 +3369,9 @@ namespace Meshtastic.Protobufs {
           }
           if (RsyslogServer.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(RsyslogServer);
+          }
+          if (EnabledProtocols != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EnabledProtocols);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3333,6 +3412,9 @@ namespace Meshtastic.Protobufs {
           if (other.RsyslogServer.Length != 0) {
             RsyslogServer = other.RsyslogServer;
           }
+          if (other.EnabledProtocols != 0) {
+            EnabledProtocols = other.EnabledProtocols;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -3344,7 +3426,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -3383,6 +3469,10 @@ namespace Meshtastic.Protobufs {
                 RsyslogServer = input.ReadString();
                 break;
               }
+              case 80: {
+                EnabledProtocols = input.ReadUInt32();
+                break;
+              }
             }
           }
         #endif
@@ -3394,7 +3484,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -3433,6 +3527,10 @@ namespace Meshtastic.Protobufs {
                 RsyslogServer = input.ReadString();
                 break;
               }
+              case 80: {
+                EnabledProtocols = input.ReadUInt32();
+                break;
+              }
             }
           }
         }
@@ -3456,6 +3554,24 @@ namespace Meshtastic.Protobufs {
             [pbr::OriginalName("STATIC")] Static = 1,
           }
 
+          /// <summary>
+          ///
+          /// Available flags auxiliary network protocols
+          /// </summary>
+          public enum ProtocolFlags {
+            /// <summary>
+            ///
+            /// Do not broadcast packets over any network protocol
+            /// </summary>
+            [pbr::OriginalName("NO_BROADCAST")] NoBroadcast = 0,
+            /// <summary>
+            ///
+            /// Enable broadcasting packets via UDP over the local network
+            /// </summary>
+            [pbr::OriginalName("UDP_BROADCAST")] UdpBroadcast = 1,
+          }
+
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class IpV4Config : pb::IMessage<IpV4Config>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3714,7 +3830,11 @@ namespace Meshtastic.Protobufs {
             #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
-                switch(tag) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
                   default:
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                     break;
@@ -3745,7 +3865,11 @@ namespace Meshtastic.Protobufs {
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
-                switch(tag) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
                   default:
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                     break;
@@ -3781,6 +3905,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// Display Config
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DisplayConfig : pb::IMessage<DisplayConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3826,6 +3951,7 @@ namespace Meshtastic.Protobufs {
           headingBold_ = other.headingBold_;
           wakeOnTapOrMotion_ = other.wakeOnTapOrMotion_;
           compassOrientation_ = other.compassOrientation_;
+          use12HClock_ = other.use12HClock_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4014,6 +4140,23 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "use_12h_clock" field.</summary>
+        public const int Use12HClockFieldNumber = 12;
+        private bool use12HClock_;
+        /// <summary>
+        ///
+        /// If false (default), the device will display the time in 24-hour format on screen.
+        /// If true, the device will display the time in 12-hour format on screen.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Use12HClock {
+          get { return use12HClock_; }
+          set {
+            use12HClock_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4040,6 +4183,7 @@ namespace Meshtastic.Protobufs {
           if (HeadingBold != other.HeadingBold) return false;
           if (WakeOnTapOrMotion != other.WakeOnTapOrMotion) return false;
           if (CompassOrientation != other.CompassOrientation) return false;
+          if (Use12HClock != other.Use12HClock) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4058,6 +4202,7 @@ namespace Meshtastic.Protobufs {
           if (HeadingBold != false) hash ^= HeadingBold.GetHashCode();
           if (WakeOnTapOrMotion != false) hash ^= WakeOnTapOrMotion.GetHashCode();
           if (CompassOrientation != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0) hash ^= CompassOrientation.GetHashCode();
+          if (Use12HClock != false) hash ^= Use12HClock.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4120,6 +4265,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(88);
             output.WriteEnum((int) CompassOrientation);
           }
+          if (Use12HClock != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(Use12HClock);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4174,6 +4323,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(88);
             output.WriteEnum((int) CompassOrientation);
           }
+          if (Use12HClock != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(Use12HClock);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4216,6 +4369,9 @@ namespace Meshtastic.Protobufs {
           }
           if (CompassOrientation != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CompassOrientation);
+          }
+          if (Use12HClock != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4262,6 +4418,9 @@ namespace Meshtastic.Protobufs {
           if (other.CompassOrientation != global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation.Degrees0) {
             CompassOrientation = other.CompassOrientation;
           }
+          if (other.Use12HClock != false) {
+            Use12HClock = other.Use12HClock;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4273,7 +4432,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -4321,6 +4484,10 @@ namespace Meshtastic.Protobufs {
                 CompassOrientation = (global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) input.ReadEnum();
                 break;
               }
+              case 96: {
+                Use12HClock = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -4332,7 +4499,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -4378,6 +4549,10 @@ namespace Meshtastic.Protobufs {
               }
               case 88: {
                 CompassOrientation = (global::Meshtastic.Protobufs.Config.Types.DisplayConfig.Types.CompassOrientation) input.ReadEnum();
+                break;
+              }
+              case 96: {
+                Use12HClock = input.ReadBool();
                 break;
               }
             }
@@ -4553,6 +4728,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// Lora Config
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LoRaConfig : pb::IMessage<LoRaConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5293,7 +5469,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -5381,7 +5561,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -5602,6 +5786,7 @@ namespace Meshtastic.Protobufs {
             /// Very Long Range - Slow
             /// Deprecated in 2.5: Works only with txco and is unusably slow
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("VERY_LONG_SLOW")] VeryLongSlow = 2,
             /// <summary>
             ///
@@ -5642,6 +5827,7 @@ namespace Meshtastic.Protobufs {
 
       }
 
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BluetoothConfig : pb::IMessage<BluetoothConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5867,7 +6053,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -5894,7 +6084,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -5943,6 +6137,7 @@ namespace Meshtastic.Protobufs {
 
       }
 
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SecurityConfig : pb::IMessage<SecurityConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6293,7 +6488,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -6336,7 +6535,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
@@ -6379,6 +6582,7 @@ namespace Meshtastic.Protobufs {
       ///
       /// Blank config request, strictly for getting the session key
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SessionkeyConfig : pb::IMessage<SessionkeyConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6505,7 +6709,11 @@ namespace Meshtastic.Protobufs {
         #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
@@ -6520,7 +6728,11 @@ namespace Meshtastic.Protobufs {
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;

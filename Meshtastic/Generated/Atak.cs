@@ -200,6 +200,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Packets for the official ATAK Plugin
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TAKPacket : pb::IMessage<TAKPacket>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -365,10 +366,24 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Detail {
-      get { return payloadVariantCase_ == PayloadVariantOneofCase.Detail ? (pb::ByteString) payloadVariant_ : pb::ByteString.Empty; }
+      get { return HasDetail ? (pb::ByteString) payloadVariant_ : pb::ByteString.Empty; }
       set {
         payloadVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadVariantCase_ = PayloadVariantOneofCase.Detail;
+      }
+    }
+    /// <summary>Gets whether the "detail" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDetail {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Detail; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "detail" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDetail() {
+      if (HasDetail) {
+        ClearPayloadVariant();
       }
     }
 
@@ -430,7 +445,7 @@ namespace Meshtastic.Protobufs {
       if (status_ != null) hash ^= Status.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Pli) hash ^= Pli.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Chat) hash ^= Chat.GetHashCode();
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Detail) hash ^= Detail.GetHashCode();
+      if (HasDetail) hash ^= Detail.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -474,7 +489,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteMessage(Chat);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Detail) {
+      if (HasDetail) {
         output.WriteRawTag(58);
         output.WriteBytes(Detail);
       }
@@ -512,7 +527,7 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(50);
         output.WriteMessage(Chat);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Detail) {
+      if (HasDetail) {
         output.WriteRawTag(58);
         output.WriteBytes(Detail);
       }
@@ -544,7 +559,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.Chat) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Chat);
       }
-      if (payloadVariantCase_ == PayloadVariantOneofCase.Detail) {
+      if (HasDetail) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Detail);
       }
       if (_unknownFields != null) {
@@ -609,7 +624,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -671,7 +690,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -733,6 +756,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// ATAK GeoChat message
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeoChat : pb::IMessage<GeoChat>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -797,6 +821,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "to" field.</summary>
     public const int ToFieldNumber = 2;
+    private readonly static string ToDefaultValue = "";
+
     private string to_;
     /// <summary>
     ///
@@ -805,7 +831,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string To {
-      get { return to_ ?? ""; }
+      get { return to_ ?? ToDefaultValue; }
       set {
         to_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -825,6 +851,8 @@ namespace Meshtastic.Protobufs {
 
     /// <summary>Field number for the "to_callsign" field.</summary>
     public const int ToCallsignFieldNumber = 3;
+    private readonly static string ToCallsignDefaultValue = "";
+
     private string toCallsign_;
     /// <summary>
     ///
@@ -833,7 +861,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ToCallsign {
-      get { return toCallsign_ ?? ""; }
+      get { return toCallsign_ ?? ToCallsignDefaultValue; }
       set {
         toCallsign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -982,7 +1010,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1009,7 +1041,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1037,6 +1073,7 @@ namespace Meshtastic.Protobufs {
   /// ATAK Group
   /// &lt;__group role='Team Member' name='Cyan'/>
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Group : pb::IMessage<Group>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1230,7 +1267,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1253,7 +1294,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1277,6 +1322,7 @@ namespace Meshtastic.Protobufs {
   /// ATAK EUD Status
   /// &lt;status battery='100' />
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Status : pb::IMessage<Status>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1436,7 +1482,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1455,7 +1505,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1475,6 +1529,7 @@ namespace Meshtastic.Protobufs {
   /// ATAK Contact
   /// &lt;contact endpoint='0.0.0.0:4242:tcp' phone='+12345678' callsign='FALKE'/>
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Contact : pb::IMessage<Contact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1667,7 +1722,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1690,7 +1749,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1713,6 +1776,7 @@ namespace Meshtastic.Protobufs {
   ///
   /// Position Location Information from ATAK
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PLI : pb::IMessage<PLI>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2006,7 +2070,11 @@ namespace Meshtastic.Protobufs {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2041,7 +2109,11 @@ namespace Meshtastic.Protobufs {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
