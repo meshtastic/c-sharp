@@ -61,7 +61,7 @@ public class TcpConnection : DeviceConnection, IDisposable
         var buffer = new byte[DEFAULT_BUFFER_SIZE];
         while (networkStream.CanRead)
         {
-            await networkStream.ReadAsync(buffer);
+            await networkStream.ReadExactlyAsync(buffer);
             foreach (var item in buffer)
             {
                 if (await ParsePackets(item, isComplete))
