@@ -2,8 +2,8 @@
 using Meshtastic.Data.MessageFactories;
 using MQTTnet;
 using Meshtastic.Protobufs;
-using MQTTnet.Client;
 using Microsoft.Extensions.Logging;
+using System.Buffers;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
@@ -22,7 +22,7 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
     public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
         // connect to mqtt server with mqttnet
-        var factory = new MqttFactory();
+        var factory = new MqttClientFactory();
         using var mqttClient = factory.CreateMqttClient();
         MqttClientOptions options = GetMqttClientOptions(container);
         await mqttClient.ConnectAsync(options, CancellationToken.None);
@@ -45,7 +45,7 @@ public class MqttProxyCommandHandler : DeviceCommandHandler
 
             // Get bytes from utf8 string
             var toRadio = new ToRadioMessageFactory()
-                .CreateMqttClientProxyMessage(e.ApplicationMessage.Topic, e.ApplicationMessage.PayloadSegment.ToArray(), e.ApplicationMessage.Retain);
+                .CreateMqttClientProxyMessage(e.ApplicationMessage.Topic, e.ApplicationMessage.Payload.ToArray(), e.ApplicationMessage.Retain);
             Logger.LogDebug(toRadio.ToString());
             await Connection.WriteToRadio(toRadio);
         };
