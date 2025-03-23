@@ -23,10 +23,11 @@ public class SimulatorWorker(ILogger<SimulatorWorker> logger) : BackgroundServic
                     EnableBroadcast = true,
                     Ttl = 64,
                 };
-                udpClient.Connect(IPAddress.Parse("224.0.0.69"), Resources.DEFAULT_TCP_PORT);
+                await udpClient.Client.ConnectAsync(IPAddress.Parse("224.0.0.69"), Resources.DEFAULT_TCP_PORT);
+                //udpClient.Connect(IPAddress.Parse("224.0.0.69"), Resources.DEFAULT_TCP_PORT);
             }
 
-            if (udpClient.Available > 0)
+            if (udpClient.Client.Available > 0)
             {
                 var data = udpClient.Receive(ref remoteEndpoint);
                 var packet = MeshPacket.Parser.ParseFrom(data);
