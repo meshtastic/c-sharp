@@ -8,22 +8,26 @@ public class DeviceStateContainer
     public LocalConfig LocalConfig;
     public LocalModuleConfig LocalModuleConfig;
     public List<Channel> Channels;
+    public ChannelSet ChannelSettings;
     public MyNodeInfo MyNodeInfo;
     public List<NodeInfo> Nodes;
     public List<FromRadio> FromRadioMessageLog;
     public List<ToRadio> ToRadioMessageLog;
     public DeviceMetadata Metadata;
+    public User User;
 
     public DeviceStateContainer()
     {
         this.LocalConfig = new LocalConfig();
         this.LocalModuleConfig = new LocalModuleConfig();
-        this.Channels = new List<Channel>();
+        this.Channels = [];
+        this.ChannelSettings = new ChannelSet();
         this.MyNodeInfo = new MyNodeInfo();
-        this.Nodes = new List<NodeInfo>();
-        this.ToRadioMessageLog = new List<ToRadio>();
-        this.FromRadioMessageLog = new List<FromRadio>();
+        this.Nodes = [];
+        this.ToRadioMessageLog = [];
+        this.FromRadioMessageLog = [];
         this.Metadata = new DeviceMetadata();
+        this.User = new User();
     }
 
     private void SetConfig(Config.PayloadVariantOneofCase variant, Config config)

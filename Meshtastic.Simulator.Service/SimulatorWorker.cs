@@ -2,13 +2,12 @@ using Meshtastic.Crypto;
 using Meshtastic.Protobufs;
 using System.Net;
 using System.Net.Sockets;
-using Meshtastic.Extensions;
 using Google.Protobuf;
-using System.Net.NetworkInformation;
+using Meshtastic.Simulator.Service.Persistance;
 
 namespace Meshtastic.Simulator.Service;
 
-public class SimulatorWorker(ILogger<SimulatorWorker> logger) : BackgroundService
+public class SimulatorWorker(ILogger<SimulatorWorker> logger, ISimulatorStore store) : BackgroundService
 {
     private UdpClient? udpClient;
 
@@ -16,7 +15,8 @@ public class SimulatorWorker(ILogger<SimulatorWorker> logger) : BackgroundServic
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            // logger.LogInformation("Simulator running with MAC Address: {MacAddress}", macAddress);
+            await store.Load();
+            logger.LogInformation("Simulator running with MAC Address: {Macaddr}", store.User.Macaddr);
 
             if (udpClient == null)
             {
@@ -68,50 +68,20 @@ public class SimulatorWorker(ILogger<SimulatorWorker> logger) : BackgroundServic
             logger.LogInformation($"Decrypted packet: {data}");
 
             // Handle node info request
-            // if (data.Portnum == PortNum.NodeinfoApp && data.WantResponse == true)
-            // {
-                var macAddress = NetworkInterface
-                    .GetAllNetworkInterfaces()
-                    .Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
-                    .Select(nic => nic.GetPhysicalAddress())
-                    .First();
-                byte[] nodeNum = [.. macAddress.GetAddressBytes().TakeLast(4)];
-                var shortName = Convert.ToHexString(nodeNum);
-                var user = new User
-                {
-                    HwModel = HardwareModel.Portduino,
-                    Macaddr = ByteString.CopyFrom(macAddress.GetAddressBytes()),
-                    LongName = $"Simulator_{shortName}",
-                    ShortName = shortName,
-                    Id = $"!{Convert.ToHexString([.. macAddress.GetAddressBytes().TakeLast(8)])}",
-                    PublicKey = ByteString.CopyFrom(new byte[32]),
-                };
-                var packetId = (uint)Random.Shared.Next(int.MinValue, int.MaxValue);
-                var from = BitConverter.ToUInt32(nodeNum, 0);
-                // byte[] payload = new byte[233];
-                var nodeInfo = new Protobufs.Data
+            if (data.Portnum == PortNum.NodeinfoApp && data.WantResponse == true)
+            {
+                var responsePacket = CreateMeshPacket(new Protobufs.Data
                 {
                     Portnum = PortNum.NodeinfoApp,
-                    Payload = user.ToByteString(),
+                    Payload = store.User.ToByteString(),
                     WantResponse = false,
-                }.ToByteArray();
-                // Array.Copy(nodeInfo, payload, nodeInfo.Length);
-
-                MeshPacket responsePacket = new()
-                {
-                    Id = packetId,
-                    From = from,
-                    To = UInt32.MaxValue, // Broadcast
-                    HopLimit = 3,
-                    HopStart = 0,
-                    Priority = MeshPacket.Types.Priority.Background,
-                    Encrypted = ByteString.CopyFrom(PacketEncryption.TransformPacket(nodeInfo, new NonceGenerator(from, packetId).Create(), Resources.DEFAULT_PSK))
-                };
+                });
                 var responseBytes = responsePacket.ToByteArray();
+                // var decrypted = PacketEncryption.TransformPacket(encrypted, nonce, Resources.DEFAULT_PSK);
+                // var decryptedData = Protobufs.Data.Parser.ParseFrom(decrypted);
                 await udpClient!.SendAsync(responseBytes, responseBytes.Length, udpData.RemoteEndPoint);
                 logger.LogInformation($"Sent node info response to {udpData.RemoteEndPoint}");
-            // }
-
+            }
         }
         catch (Exception ex)
         {
@@ -121,16 +91,43 @@ public class SimulatorWorker(ILogger<SimulatorWorker> logger) : BackgroundServic
         return true;
     }
 
-    private static Protobufs.Data? TryDecryptPacket(MeshPacket packet)
+    private MeshPacket CreateMeshPacket(Protobufs.Data data, uint to = uint.MaxValue)
+    {
+        var packetId = (uint)Random.Shared.Next(int.MinValue, int.MaxValue);
+        var nonce = new NonceGenerator(store.MyNodeInfo.MyNodeNum, packetId).Create();
+
+        var encrypted = PacketEncryption.TransformPacket(
+            data.ToByteArray(),
+            nonce,
+            Resources.DEFAULT_PSK
+        );
+
+        return new MeshPacket
+        {
+            Id = packetId,
+            From = store.MyNodeInfo.MyNodeNum,
+            To = to, // Broadcast
+            HopLimit = 3,
+            HopStart = 0,
+            Channel = 8, //FIXME: hash function
+            Priority = MeshPacket.Types.Priority.Background,
+            Encrypted = ByteString.CopyFrom(encrypted)
+        };
+    }
+
+    private Protobufs.Data? TryDecryptPacket(MeshPacket packet)
     {
         Protobufs.Data payload;
         var nonce = new NonceGenerator(packet.From, packet.Id).Create();
-        byte[] decrypted = PacketEncryption.TransformPacket(packet.Encrypted.Span.ToArray(), nonce, Resources.DEFAULT_PSK);
-        payload = Protobufs.Data.Parser.ParseFrom(decrypted);
 
-        if (payload.Portnum > PortNum.UnknownApp && payload.Payload.Length > 0)
-            return payload;
+        foreach (var channel in store.Channels)
+        {
+            byte[] decrypted = PacketEncryption.TransformPacket(packet.Encrypted.Span.ToArray(), nonce, channel.Settings.Psk.ToByteArray());
+            payload = Protobufs.Data.Parser.ParseFrom(decrypted);
 
+            if (payload.Portnum > PortNum.UnknownApp && payload.Payload.Length > 0)
+                return payload;
+         }
         // Was not able to decrypt the payload
         return null;
     }
