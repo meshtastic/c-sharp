@@ -14,7 +14,7 @@ public class DeviceStateContainer
     public List<FromRadio> FromRadioMessageLog;
     public List<ToRadio> ToRadioMessageLog;
     public DeviceMetadata Metadata;
-    public User User;
+    public NodeInfo Node;
 
     public DeviceStateContainer()
     {
@@ -27,7 +27,7 @@ public class DeviceStateContainer
         this.ToRadioMessageLog = [];
         this.FromRadioMessageLog = [];
         this.Metadata = new DeviceMetadata();
-        this.User = new User();
+        this.Node = new NodeInfo();
     }
 
     private void SetConfig(Config.PayloadVariantOneofCase variant, Config config)

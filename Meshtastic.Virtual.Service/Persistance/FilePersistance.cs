@@ -1,6 +1,6 @@
 using static System.Environment;
 
-namespace Meshtastic.Simulator.Service.Persistance;
+namespace Meshtastic.Virtual.Service.Persistance;
 
 public class FilePersistance(ILogger<IFilePersistance> logger) : IFilePersistance
 {
@@ -48,10 +48,5 @@ public class FilePersistance(ILogger<IFilePersistance> logger) : IFilePersistanc
             logger.LogError(ex, "Error deleting file {FileName}", fileName);
             return false;
         }
-    }
-
-    Task<byte[]> IFilePersistance.Save(string fileName, byte[] data)
-    {
-        throw new NotImplementedException();
     }
 }

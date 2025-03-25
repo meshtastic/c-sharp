@@ -4,35 +4,89 @@ using System.Net.NetworkInformation;
 using Google.Protobuf;
 using Meshtastic.Data;
 using Meshtastic.Protobufs;
+using Meshtastic.Virtual.Service.Network;
+using Org.BouncyCastle.Crypto.Generators;
+using Org.BouncyCastle.Crypto.Parameters;
+using Org.BouncyCastle.Security;
+using static Meshtastic.Protobufs.Config.Types;
+using static Meshtastic.Protobufs.ModuleConfig.Types;
 
-namespace Meshtastic.Simulator.Service.Persistance;
+namespace Meshtastic.Virtual.Service.Persistance;
 
-public class SimulatorStore(IFilePersistance filePersistance) : ISimulatorStore
+public class VirtualStore(IFilePersistance filePersistance) : IVirtualStore
 {
     private readonly DeviceStateContainer deviceStateContainer = new();
 
-    public User User => deviceStateContainer.User;
     public LocalConfig LocalConfig => deviceStateContainer.LocalConfig;
     public LocalModuleConfig LocalModuleConfig => deviceStateContainer.LocalModuleConfig;
     public List<Channel> Channels => deviceStateContainer.Channels;
     public ChannelSet ChannelSettings => deviceStateContainer.ChannelSettings;
     public MyNodeInfo MyNodeInfo => deviceStateContainer.MyNodeInfo;
+    public NodeInfo Node => deviceStateContainer.Node;
     public List<NodeInfo> Nodes => deviceStateContainer.Nodes;
 
     public async Task Load()
     {
-        var macAddress = NetworkInterface
-                .GetAllNetworkInterfaces()
-                .Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
-                .Select(nic => nic.GetPhysicalAddress())
-                .First();
-
+        var macAddress = InterfaceUtility.GetMacAddress();
         byte[] nodeNum = [.. macAddress.GetAddressBytes().TakeLast(4)];
         var shortName = Convert.ToHexString(nodeNum)[^4..];
 
-        if (await filePersistance.Exists(FilePaths.USER_FILE))
+        if (await filePersistance.Exists(FilePaths.CONFIG_FILE))
         {
-            deviceStateContainer.User = User.Parser.ParseFrom(await filePersistance.Load(FilePaths.USER_FILE));
+            deviceStateContainer.LocalConfig = LocalConfig.Parser.ParseFrom(await filePersistance.Load(FilePaths.CONFIG_FILE));
+        }
+        else
+        {
+            var generator = new Ed25519KeyPairGenerator();
+            var parameters = new Ed25519KeyGenerationParameters(new SecureRandom());
+            generator.Init(parameters);
+            var keyPair = generator.GenerateKeyPair();
+            var privateKey = ((Ed25519PrivateKeyParameters)keyPair.Private).GetEncoded();
+            var publicKey = ((Ed25519PublicKeyParameters)keyPair.Public).GetEncoded();
+
+            deviceStateContainer.LocalConfig = new LocalConfig
+            {
+                Bluetooth = new BluetoothConfig
+                {
+                    Enabled = false
+                },
+                Device = new DeviceConfig
+                {
+                    Role = DeviceConfig.Types.Role.Client,
+                    NodeInfoBroadcastSecs = 900,
+                },
+                Lora = new LoRaConfig
+                {
+                    TxEnabled = false,
+                    HopLimit = 3,
+                    Region = LoRaConfig.Types.RegionCode.Unset,
+                    UsePreset = true,
+                    ModemPreset = LoRaConfig.Types.ModemPreset.LongFast,
+                },
+                Network = new NetworkConfig
+                {
+                    EnabledProtocols = (uint)NetworkConfig.Types.ProtocolFlags.UdpBroadcast,
+                },
+                Position = new PositionConfig
+                {
+                    GpsMode = PositionConfig.Types.GpsMode.NotPresent
+                },
+                Power = new PowerConfig
+                {
+                    IsPowerSaving = false,
+                    MinWakeSecs = Int32.MaxValue,
+                },
+                Security = new SecurityConfig
+                {
+                    PrivateKey = ByteString.CopyFrom(privateKey),
+                    PublicKey = ByteString.CopyFrom(publicKey),
+                },
+            };
+        }
+
+        if (await filePersistance.Exists(FilePaths.NODE_FILE))
+        {
+            deviceStateContainer.Node = NodeInfo.Parser.ParseFrom(await filePersistance.Load(FilePaths.NODE_FILE));
         }
         else
         {
@@ -43,7 +97,14 @@ public class SimulatorStore(IFilePersistance filePersistance) : ISimulatorStore
                 LongName = $"Simulator_{shortName}",
                 ShortName = shortName,
             };
-            deviceStateContainer.User = user;
+            deviceStateContainer.Node = new NodeInfo
+            {
+                User = user,
+                Num = BitConverter.ToUInt32(nodeNum, 0),
+                Channel = 0,
+                HopsAway = 0,
+                IsFavorite = true,
+            };
         }
         if (await filePersistance.Exists(FilePaths.MYNODEINFO_FILE))
         {
@@ -56,17 +117,26 @@ public class SimulatorStore(IFilePersistance filePersistance) : ISimulatorStore
                 MyNodeNum = BitConverter.ToUInt32(nodeNum, 0),
             };
         }
-        if (await filePersistance.Exists(FilePaths.CONFIG_FILE))
-        {
-            deviceStateContainer.LocalConfig = LocalConfig.Parser.ParseFrom(await filePersistance.Load(FilePaths.CONFIG_FILE));
-        }
+        
         if (await filePersistance.Exists(FilePaths.MODULE_FILE))
         {
             deviceStateContainer.LocalModuleConfig = LocalModuleConfig.Parser.ParseFrom(await filePersistance.Load(FilePaths.MODULE_FILE));
         }
+        else {
+            deviceStateContainer.LocalModuleConfig = new LocalModuleConfig
+            {
+                Mqtt = new MQTTConfig
+                {
+                    Enabled = false,
+                    Address = "mqtt.meshtastic.org",
+                    Username = "meshdev",
+                    Password = "large4cats",
+                },
+            };
+        }
         if (await filePersistance.Exists(FilePaths.CHANNELS_FILE))
         {
-            // FIXME: deviceStateContainer.Channels = 
+            // FIXME: Open channels
         } 
         else {
             deviceStateContainer.Channels = [
@@ -127,10 +197,12 @@ public class SimulatorStore(IFilePersistance filePersistance) : ISimulatorStore
                 },
             ];
         }
+        await Save();
     }
+
     public async Task Save()
     {
-        await filePersistance.Save(FilePaths.USER_FILE, deviceStateContainer.User.ToByteArray());
+        await filePersistance.Save(FilePaths.NODE_FILE, deviceStateContainer.Node.ToByteArray());
         // await filePersistance.Save(FilePaths.CHANNELS_FILE, deviceStateContainer.Channels);
         await filePersistance.Save(FilePaths.CONFIG_FILE, deviceStateContainer.LocalConfig.ToByteArray());
         await filePersistance.Save(FilePaths.MODULE_FILE, deviceStateContainer.LocalModuleConfig.ToByteArray());

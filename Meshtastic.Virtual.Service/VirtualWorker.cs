@@ -3,20 +3,24 @@ using Meshtastic.Protobufs;
 using System.Net;
 using System.Net.Sockets;
 using Google.Protobuf;
-using Meshtastic.Simulator.Service.Persistance;
+using Meshtastic.Virtual.Service.Persistance;
+using System.Diagnostics;
 
-namespace Meshtastic.Simulator.Service;
+namespace Meshtastic.Virtual.Service;
 
 public class VirtualWorker(ILogger<VirtualWorker> logger, IVirtualStore store) : BackgroundService
 {
     private UdpClient? udpClient;
+    private Stopwatch stopwatch = new Stopwatch();
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        await store.Load();
+        stopwatch.Start();
+
         while (!stoppingToken.IsCancellationRequested)
         {
-            await store.Load();
-            logger.LogInformation("Simulator running with MAC Address: {Macaddr}", store.User.Macaddr);
+            logger.LogInformation("Simulator running with MAC Address: {Macaddr}", store.Node.User.Macaddr);
 
             if (udpClient == null)
             {
@@ -47,20 +51,21 @@ public class VirtualWorker(ILogger<VirtualWorker> logger, IVirtualStore store) :
         logger.LogInformation($"Received {udpData.Buffer.Length} bytes from {udpData.RemoteEndPoint}");
         try
         {
-            var packet = MeshPacket.Parser.ParseFrom(udpData.Buffer);
-            if (packet == null)
+            var receivedPacket = MeshPacket.Parser.ParseFrom(udpData.Buffer);
+            MeshPacket? responsePacket = null;
+            if (receivedPacket == null)
             {
                 logger.LogWarning("Unable to parse packet, ignoring");
                 return false;
             }
-            if (packet.Encrypted.Length == 0)
+            if (receivedPacket.Encrypted.Length == 0)
             {
                 logger.LogWarning("Received unencrypted packet... ignoring");
                 return false;
             }
 
-            var data = TryDecryptPacket(packet);
-            if (packet == null || data == null)
+            var data = TryDecryptPacket(receivedPacket);
+            if (receivedPacket == null || data == null)
             {
                 logger.LogWarning("Unable to decrypt packet, ignoring");
                 return false;
@@ -70,22 +75,45 @@ public class VirtualWorker(ILogger<VirtualWorker> logger, IVirtualStore store) :
             // Handle node info request
             if (data.Portnum == PortNum.NodeinfoApp && data.WantResponse == true)
             {
-                var responsePacket = CreateMeshPacket(new Protobufs.Data
+                responsePacket = CreateMeshPacket(new Protobufs.Data
                 {
                     Portnum = PortNum.NodeinfoApp,
                     Payload = store.Node.User.ToByteString(),
                     WantResponse = false,
                 });
-                var responseBytes = responsePacket.ToByteArray();
-                // var decrypted = PacketEncryption.TransformPacket(encrypted, nonce, Resources.DEFAULT_PSK);
-                // var decryptedData = Protobufs.Data.Parser.ParseFrom(decrypted);
-                await udpClient!.SendAsync(responseBytes, responseBytes.Length, udpData.RemoteEndPoint);
-                logger.LogInformation($"Sent node info response to {udpData.RemoteEndPoint}");
             }
+            else if (data.Portnum == PortNum.TelemetryApp && data.WantResponse == true)
+            {
+                // Handle telemetry data
+                var telemetryData = new Protobufs.Data
+                {
+                    Portnum = PortNum.TelemetryApp,
+                    Payload = new Telemetry
+                    {
+                        DeviceMetrics = new DeviceMetrics
+                        {
+                            BatteryLevel = 100,
+                            AirUtilTx = 0,
+                            ChannelUtilization = 0,
+                            UptimeSeconds = (uint)stopwatch.Elapsed.TotalSeconds,
+                            Voltage = 0,
+                        },
+                    }.ToByteString(),
+                    WantResponse = false,
+                };
+                responsePacket = CreateMeshPacket(telemetryData);
+            }
+            if (responsePacket == null)
+                return false; // No response needed
+
+            var responseBytes = responsePacket.ToByteArray();
+            await udpClient!.SendAsync(responseBytes, responseBytes.Length, udpData.RemoteEndPoint);
+            logger.LogInformation($"Sent node info response to {udpData.RemoteEndPoint}");
         }
         catch (Exception ex)
         {
             logger.LogError(ex, "Error decrypting packet");
+            return false;
         }
 
         return true;

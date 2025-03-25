@@ -4,7 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-Meshtastic.Simulator.Service-f04ea7a8-15a0-4fec-b79a-3106e594e1a5</UserSecretsId>
+    <UserSecretsId>dotnet-Meshtastic.Virtual.Service-f04ea7a8-15a0-4fec-b79a-3106e594e1a5</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 

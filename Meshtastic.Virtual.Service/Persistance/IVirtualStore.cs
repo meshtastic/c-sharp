@@ -1,13 +1,13 @@
 using Meshtastic.Protobufs;
 
-namespace Meshtastic.Simulator.Service.Persistance;
+namespace Meshtastic.Virtual.Service.Persistance;
 
-public interface ISimulatorStore
+public interface IVirtualStore
 {
     Task Load();
     Task Save();
 
-    User User { get; }
+    NodeInfo Node { get; }
     LocalConfig LocalConfig { get; }
     LocalModuleConfig LocalModuleConfig { get; }
     List<Channel> Channels { get; }

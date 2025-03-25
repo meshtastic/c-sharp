@@ -11,19 +11,19 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Directory.Packages.props", "."]
-COPY ["Meshtastic.Simulator.Service/Meshtastic.Simulator.Service.csproj", "Meshtastic.Simulator.Service/"]
-RUN dotnet restore "./Meshtastic.Simulator.Service/Meshtastic.Simulator.Service.csproj"
+COPY ["Meshtastic.Virtual.Service/Meshtastic.Virtual.Service.csproj", "Meshtastic.Virtual.Service/"]
+RUN dotnet restore "./Meshtastic.Virtual.Service/Meshtastic.Virtual.Service.csproj"
 COPY . .
-WORKDIR "/src/Meshtastic.Simulator.Service"
-RUN dotnet build "./Meshtastic.Simulator.Service.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/Meshtastic.Virtual.Service"
+RUN dotnet build "./Meshtastic.Virtual.Service.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Meshtastic.Simulator.Service.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Meshtastic.Virtual.Service.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Meshtastic.Simulator.Service.dll"]
+ENTRYPOINT ["dotnet", "Meshtastic.Virtual.Service.dll"]
