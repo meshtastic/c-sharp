@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" />
     <PackageReference Include="Google.Protobuf" />
     <PackageReference Include="Google.Protobuf.Tools" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
