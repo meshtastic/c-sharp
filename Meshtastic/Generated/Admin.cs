@@ -28,7 +28,7 @@ namespace Meshtastic.Protobufs {
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
             "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhVtZXNodGFzdGlj",
             "L21lc2gucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90bxoa",
-            "bWVzaHRhc3RpYy9kZXZpY2VfdWkucHJvdG8izhQKDEFkbWluTWVzc2FnZRIX",
+            "bWVzaHRhc3RpYy9kZXZpY2VfdWkucHJvdG8ighcKDEFkbWluTWVzc2FnZRIX",
             "Cg9zZXNzaW9uX3Bhc3NrZXkYZSABKAwSHQoTZ2V0X2NoYW5uZWxfcmVxdWVz",
             "dBgBIAEoDUgAEjMKFGdldF9jaGFubmVsX3Jlc3BvbnNlGAIgASgLMhMubWVz",
             "aHRhc3RpYy5DaGFubmVsSAASGwoRZ2V0X293bmVyX3JlcXVlc3QYAyABKAhI",
@@ -54,52 +54,62 @@ namespace Meshtastic.Protobufs {
             "aW5zX3Jlc3BvbnNlGBQgASgLMioubWVzaHRhc3RpYy5Ob2RlUmVtb3RlSGFy",
             "ZHdhcmVQaW5zUmVzcG9uc2VIABIgChZlbnRlcl9kZnVfbW9kZV9yZXF1ZXN0",
             "GBUgASgISAASHQoTZGVsZXRlX2ZpbGVfcmVxdWVzdBgWIAEoCUgAEhMKCXNl",
-            "dF9zY2FsZRgXIAEoDUgAEiUKCXNldF9vd25lchggIAEoCzIQLm1lc2h0YXN0",
-            "aWMuVXNlckgAEioKC3NldF9jaGFubmVsGCEgASgLMhMubWVzaHRhc3RpYy5D",
-            "aGFubmVsSAASKAoKc2V0X2NvbmZpZxgiIAEoCzISLm1lc2h0YXN0aWMuQ29u",
-            "ZmlnSAASNQoRc2V0X21vZHVsZV9jb25maWcYIyABKAsyGC5tZXNodGFzdGlj",
-            "Lk1vZHVsZUNvbmZpZ0gAEiwKInNldF9jYW5uZWRfbWVzc2FnZV9tb2R1bGVf",
-            "bWVzc2FnZXMYJCABKAlIABIeChRzZXRfcmluZ3RvbmVfbWVzc2FnZRglIAEo",
-            "CUgAEhsKEXJlbW92ZV9ieV9ub2RlbnVtGCYgASgNSAASGwoRc2V0X2Zhdm9y",
-            "aXRlX25vZGUYJyABKA1IABIeChRyZW1vdmVfZmF2b3JpdGVfbm9kZRgoIAEo",
-            "DUgAEjIKEnNldF9maXhlZF9wb3NpdGlvbhgpIAEoCzIULm1lc2h0YXN0aWMu",
-            "UG9zaXRpb25IABIfChVyZW1vdmVfZml4ZWRfcG9zaXRpb24YKiABKAhIABIX",
-            "Cg1zZXRfdGltZV9vbmx5GCsgASgHSAASHwoVZ2V0X3VpX2NvbmZpZ19yZXF1",
-            "ZXN0GCwgASgISAASPAoWZ2V0X3VpX2NvbmZpZ19yZXNwb25zZRgtIAEoCzIa",
-            "Lm1lc2h0YXN0aWMuRGV2aWNlVUlDb25maWdIABI1Cg9zdG9yZV91aV9jb25m",
-            "aWcYLiABKAsyGi5tZXNodGFzdGljLkRldmljZVVJQ29uZmlnSAASGgoQc2V0",
-            "X2lnbm9yZWRfbm9kZRgvIAEoDUgAEh0KE3JlbW92ZV9pZ25vcmVkX25vZGUY",
-            "MCABKA1IABIdChNiZWdpbl9lZGl0X3NldHRpbmdzGEAgASgISAASHgoUY29t",
-            "bWl0X2VkaXRfc2V0dGluZ3MYQSABKAhIABIeChRmYWN0b3J5X3Jlc2V0X2Rl",
-            "dmljZRheIAEoBUgAEhwKEnJlYm9vdF9vdGFfc2Vjb25kcxhfIAEoBUgAEhgK",
-            "DmV4aXRfc2ltdWxhdG9yGGAgASgISAASGAoOcmVib290X3NlY29uZHMYYSAB",
-            "KAVIABIaChBzaHV0ZG93bl9zZWNvbmRzGGIgASgFSAASHgoUZmFjdG9yeV9y",
-            "ZXNldF9jb25maWcYYyABKAVIABIWCgxub2RlZGJfcmVzZXQYZCABKAVIACLW",
-            "AQoKQ29uZmlnVHlwZRIRCg1ERVZJQ0VfQ09ORklHEAASEwoPUE9TSVRJT05f",
-            "Q09ORklHEAESEAoMUE9XRVJfQ09ORklHEAISEgoOTkVUV09SS19DT05GSUcQ",
-            "AxISCg5ESVNQTEFZX0NPTkZJRxAEEg8KC0xPUkFfQ09ORklHEAUSFAoQQkxV",
-            "RVRPT1RIX0NPTkZJRxAGEhMKD1NFQ1VSSVRZX0NPTkZJRxAHEhUKEVNFU1NJ",
-            "T05LRVlfQ09ORklHEAgSEwoPREVWSUNFVUlfQ09ORklHEAkiuwIKEE1vZHVs",
-            "ZUNvbmZpZ1R5cGUSDwoLTVFUVF9DT05GSUcQABIRCg1TRVJJQUxfQ09ORklH",
-            "EAESEwoPRVhUTk9USUZfQ09ORklHEAISFwoTU1RPUkVGT1JXQVJEX0NPTkZJ",
-            "RxADEhQKEFJBTkdFVEVTVF9DT05GSUcQBBIUChBURUxFTUVUUllfQ09ORklH",
-            "EAUSFAoQQ0FOTkVETVNHX0NPTkZJRxAGEhAKDEFVRElPX0NPTkZJRxAHEhkK",
-            "FVJFTU9URUhBUkRXQVJFX0NPTkZJRxAIEhcKE05FSUdIQk9SSU5GT19DT05G",
-            "SUcQCRIaChZBTUJJRU5UTElHSFRJTkdfQ09ORklHEAoSGgoWREVURUNUSU9O",
-            "U0VOU09SX0NPTkZJRxALEhUKEVBBWENPVU5URVJfQ09ORklHEAxCEQoPcGF5",
-            "bG9hZF92YXJpYW50IlsKDUhhbVBhcmFtZXRlcnMSEQoJY2FsbF9zaWduGAEg",
-            "ASgJEhAKCHR4X3Bvd2VyGAIgASgFEhEKCWZyZXF1ZW5jeRgDIAEoAhISCgpz",
-            "aG9ydF9uYW1lGAQgASgJImYKHk5vZGVSZW1vdGVIYXJkd2FyZVBpbnNSZXNw",
-            "b25zZRJEChlub2RlX3JlbW90ZV9oYXJkd2FyZV9waW5zGAEgAygLMiEubWVz",
-            "aHRhc3RpYy5Ob2RlUmVtb3RlSGFyZHdhcmVQaW5CYAoTY29tLmdlZWtzdmls",
-            "bGUubWVzaEILQWRtaW5Qcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9n",
-            "by9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "dF9zY2FsZRgXIAEoDUgAEkUKEmJhY2t1cF9wcmVmZXJlbmNlcxgYIAEoDjIn",
+            "Lm1lc2h0YXN0aWMuQWRtaW5NZXNzYWdlLkJhY2t1cExvY2F0aW9uSAASRgoT",
+            "cmVzdG9yZV9wcmVmZXJlbmNlcxgZIAEoDjInLm1lc2h0YXN0aWMuQWRtaW5N",
+            "ZXNzYWdlLkJhY2t1cExvY2F0aW9uSAASTAoZcmVtb3ZlX2JhY2t1cF9wcmVm",
+            "ZXJlbmNlcxgaIAEoDjInLm1lc2h0YXN0aWMuQWRtaW5NZXNzYWdlLkJhY2t1",
+            "cExvY2F0aW9uSAASJQoJc2V0X293bmVyGCAgASgLMhAubWVzaHRhc3RpYy5V",
+            "c2VySAASKgoLc2V0X2NoYW5uZWwYISABKAsyEy5tZXNodGFzdGljLkNoYW5u",
+            "ZWxIABIoCgpzZXRfY29uZmlnGCIgASgLMhIubWVzaHRhc3RpYy5Db25maWdI",
+            "ABI1ChFzZXRfbW9kdWxlX2NvbmZpZxgjIAEoCzIYLm1lc2h0YXN0aWMuTW9k",
+            "dWxlQ29uZmlnSAASLAoic2V0X2Nhbm5lZF9tZXNzYWdlX21vZHVsZV9tZXNz",
+            "YWdlcxgkIAEoCUgAEh4KFHNldF9yaW5ndG9uZV9tZXNzYWdlGCUgASgJSAAS",
+            "GwoRcmVtb3ZlX2J5X25vZGVudW0YJiABKA1IABIbChFzZXRfZmF2b3JpdGVf",
+            "bm9kZRgnIAEoDUgAEh4KFHJlbW92ZV9mYXZvcml0ZV9ub2RlGCggASgNSAAS",
+            "MgoSc2V0X2ZpeGVkX3Bvc2l0aW9uGCkgASgLMhQubWVzaHRhc3RpYy5Qb3Np",
+            "dGlvbkgAEh8KFXJlbW92ZV9maXhlZF9wb3NpdGlvbhgqIAEoCEgAEhcKDXNl",
+            "dF90aW1lX29ubHkYKyABKAdIABIfChVnZXRfdWlfY29uZmlnX3JlcXVlc3QY",
+            "LCABKAhIABI8ChZnZXRfdWlfY29uZmlnX3Jlc3BvbnNlGC0gASgLMhoubWVz",
+            "aHRhc3RpYy5EZXZpY2VVSUNvbmZpZ0gAEjUKD3N0b3JlX3VpX2NvbmZpZxgu",
+            "IAEoCzIaLm1lc2h0YXN0aWMuRGV2aWNlVUlDb25maWdIABIaChBzZXRfaWdu",
+            "b3JlZF9ub2RlGC8gASgNSAASHQoTcmVtb3ZlX2lnbm9yZWRfbm9kZRgwIAEo",
+            "DUgAEh0KE2JlZ2luX2VkaXRfc2V0dGluZ3MYQCABKAhIABIeChRjb21taXRf",
+            "ZWRpdF9zZXR0aW5ncxhBIAEoCEgAEjAKC2FkZF9jb250YWN0GEIgASgLMhku",
+            "bWVzaHRhc3RpYy5TaGFyZWRDb250YWN0SAASHgoUZmFjdG9yeV9yZXNldF9k",
+            "ZXZpY2UYXiABKAVIABIcChJyZWJvb3Rfb3RhX3NlY29uZHMYXyABKAVIABIY",
+            "Cg5leGl0X3NpbXVsYXRvchhgIAEoCEgAEhgKDnJlYm9vdF9zZWNvbmRzGGEg",
+            "ASgFSAASGgoQc2h1dGRvd25fc2Vjb25kcxhiIAEoBUgAEh4KFGZhY3Rvcnlf",
+            "cmVzZXRfY29uZmlnGGMgASgFSAASFgoMbm9kZWRiX3Jlc2V0GGQgASgFSAAi",
+            "1gEKCkNvbmZpZ1R5cGUSEQoNREVWSUNFX0NPTkZJRxAAEhMKD1BPU0lUSU9O",
+            "X0NPTkZJRxABEhAKDFBPV0VSX0NPTkZJRxACEhIKDk5FVFdPUktfQ09ORklH",
+            "EAMSEgoORElTUExBWV9DT05GSUcQBBIPCgtMT1JBX0NPTkZJRxAFEhQKEEJM",
+            "VUVUT09USF9DT05GSUcQBhITCg9TRUNVUklUWV9DT05GSUcQBxIVChFTRVNT",
+            "SU9OS0VZX0NPTkZJRxAIEhMKD0RFVklDRVVJX0NPTkZJRxAJIrsCChBNb2R1",
+            "bGVDb25maWdUeXBlEg8KC01RVFRfQ09ORklHEAASEQoNU0VSSUFMX0NPTkZJ",
+            "RxABEhMKD0VYVE5PVElGX0NPTkZJRxACEhcKE1NUT1JFRk9SV0FSRF9DT05G",
+            "SUcQAxIUChBSQU5HRVRFU1RfQ09ORklHEAQSFAoQVEVMRU1FVFJZX0NPTkZJ",
+            "RxAFEhQKEENBTk5FRE1TR19DT05GSUcQBhIQCgxBVURJT19DT05GSUcQBxIZ",
+            "ChVSRU1PVEVIQVJEV0FSRV9DT05GSUcQCBIXChNORUlHSEJPUklORk9fQ09O",
+            "RklHEAkSGgoWQU1CSUVOVExJR0hUSU5HX0NPTkZJRxAKEhoKFkRFVEVDVElP",
+            "TlNFTlNPUl9DT05GSUcQCxIVChFQQVhDT1VOVEVSX0NPTkZJRxAMIiMKDkJh",
+            "Y2t1cExvY2F0aW9uEgkKBUZMQVNIEAASBgoCU0QQAUIRCg9wYXlsb2FkX3Zh",
+            "cmlhbnQiWwoNSGFtUGFyYW1ldGVycxIRCgljYWxsX3NpZ24YASABKAkSEAoI",
+            "dHhfcG93ZXIYAiABKAUSEQoJZnJlcXVlbmN5GAMgASgCEhIKCnNob3J0X25h",
+            "bWUYBCABKAkiZgoeTm9kZVJlbW90ZUhhcmR3YXJlUGluc1Jlc3BvbnNlEkQK",
+            "GW5vZGVfcmVtb3RlX2hhcmR3YXJlX3BpbnMYASADKAsyIS5tZXNodGFzdGlj",
+            "Lk5vZGVSZW1vdGVIYXJkd2FyZVBpbiJBCg1TaGFyZWRDb250YWN0EhAKCG5v",
+            "ZGVfbnVtGAEgASgNEh4KBHVzZXIYAiABKAsyEC5tZXNodGFzdGljLlVzZXJC",
+            "YAoTY29tLmdlZWtzdmlsbGUubWVzaEILQWRtaW5Qcm90b3NaImdpdGh1Yi5j",
+            "b20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3Rv",
+            "YnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "SessionPasskey", "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "SetTimeOnly", "GetUiConfigRequest", "GetUiConfigResponse", "StoreUiConfig", "SetIgnoredNode", "RemoveIgnoredNode", "BeginEditSettings", "CommitEditSettings", "FactoryResetDevice", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryResetConfig", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "SessionPasskey", "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "BackupPreferences", "RestorePreferences", "RemoveBackupPreferences", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "SetTimeOnly", "GetUiConfigRequest", "GetUiConfigResponse", "StoreUiConfig", "SetIgnoredNode", "RemoveIgnoredNode", "BeginEditSettings", "CommitEditSettings", "AddContact", "FactoryResetDevice", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryResetConfig", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SharedContact), global::Meshtastic.Protobufs.SharedContact.Parser, new[]{ "NodeNum", "User" }, null, null, null, null)
           }));
     }
     #endregion
@@ -215,6 +225,15 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.SetScale:
           SetScale = other.SetScale;
           break;
+        case PayloadVariantOneofCase.BackupPreferences:
+          BackupPreferences = other.BackupPreferences;
+          break;
+        case PayloadVariantOneofCase.RestorePreferences:
+          RestorePreferences = other.RestorePreferences;
+          break;
+        case PayloadVariantOneofCase.RemoveBackupPreferences:
+          RemoveBackupPreferences = other.RemoveBackupPreferences;
+          break;
         case PayloadVariantOneofCase.SetOwner:
           SetOwner = other.SetOwner.Clone();
           break;
@@ -271,6 +290,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.CommitEditSettings:
           CommitEditSettings = other.CommitEditSettings;
+          break;
+        case PayloadVariantOneofCase.AddContact:
+          AddContact = other.AddContact.Clone();
           break;
         case PayloadVariantOneofCase.FactoryResetDevice:
           FactoryResetDevice = other.FactoryResetDevice;
@@ -872,6 +894,96 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "backup_preferences" field.</summary>
+    public const int BackupPreferencesFieldNumber = 24;
+    /// <summary>
+    ///
+    /// Backup the node's preferences
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation BackupPreferences {
+      get { return HasBackupPreferences ? (global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) payloadVariant_ : global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation.Flash; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.BackupPreferences;
+      }
+    }
+    /// <summary>Gets whether the "backup_preferences" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBackupPreferences {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.BackupPreferences; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "backup_preferences" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBackupPreferences() {
+      if (HasBackupPreferences) {
+        ClearPayloadVariant();
+      }
+    }
+
+    /// <summary>Field number for the "restore_preferences" field.</summary>
+    public const int RestorePreferencesFieldNumber = 25;
+    /// <summary>
+    ///
+    /// Restore the node's preferences
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation RestorePreferences {
+      get { return HasRestorePreferences ? (global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) payloadVariant_ : global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation.Flash; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.RestorePreferences;
+      }
+    }
+    /// <summary>Gets whether the "restore_preferences" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRestorePreferences {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RestorePreferences; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "restore_preferences" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRestorePreferences() {
+      if (HasRestorePreferences) {
+        ClearPayloadVariant();
+      }
+    }
+
+    /// <summary>Field number for the "remove_backup_preferences" field.</summary>
+    public const int RemoveBackupPreferencesFieldNumber = 26;
+    /// <summary>
+    ///
+    /// Remove backups of the node's preferences
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation RemoveBackupPreferences {
+      get { return HasRemoveBackupPreferences ? (global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) payloadVariant_ : global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation.Flash; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.RemoveBackupPreferences;
+      }
+    }
+    /// <summary>Gets whether the "remove_backup_preferences" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemoveBackupPreferences {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.RemoveBackupPreferences; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "remove_backup_preferences" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemoveBackupPreferences() {
+      if (HasRemoveBackupPreferences) {
+        ClearPayloadVariant();
+      }
+    }
+
     /// <summary>Field number for the "set_owner" field.</summary>
     public const int SetOwnerFieldNumber = 32;
     /// <summary>
@@ -1350,6 +1462,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "add_contact" field.</summary>
+    public const int AddContactFieldNumber = 66;
+    /// <summary>
+    ///
+    /// Add a contact (User) to the nodedb
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.SharedContact AddContact {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.AddContact ? (global::Meshtastic.Protobufs.SharedContact) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.AddContact;
+      }
+    }
+
     /// <summary>Field number for the "factory_reset_device" field.</summary>
     public const int FactoryResetDeviceFieldNumber = 94;
     /// <summary>
@@ -1588,6 +1716,9 @@ namespace Meshtastic.Protobufs {
       EnterDfuModeRequest = 21,
       DeleteFileRequest = 22,
       SetScale = 23,
+      BackupPreferences = 24,
+      RestorePreferences = 25,
+      RemoveBackupPreferences = 26,
       SetOwner = 32,
       SetChannel = 33,
       SetConfig = 34,
@@ -1607,6 +1738,7 @@ namespace Meshtastic.Protobufs {
       RemoveIgnoredNode = 48,
       BeginEditSettings = 64,
       CommitEditSettings = 65,
+      AddContact = 66,
       FactoryResetDevice = 94,
       RebootOtaSeconds = 95,
       ExitSimulator = 96,
@@ -1667,6 +1799,9 @@ namespace Meshtastic.Protobufs {
       if (EnterDfuModeRequest != other.EnterDfuModeRequest) return false;
       if (DeleteFileRequest != other.DeleteFileRequest) return false;
       if (SetScale != other.SetScale) return false;
+      if (BackupPreferences != other.BackupPreferences) return false;
+      if (RestorePreferences != other.RestorePreferences) return false;
+      if (RemoveBackupPreferences != other.RemoveBackupPreferences) return false;
       if (!object.Equals(SetOwner, other.SetOwner)) return false;
       if (!object.Equals(SetChannel, other.SetChannel)) return false;
       if (!object.Equals(SetConfig, other.SetConfig)) return false;
@@ -1686,6 +1821,7 @@ namespace Meshtastic.Protobufs {
       if (RemoveIgnoredNode != other.RemoveIgnoredNode) return false;
       if (BeginEditSettings != other.BeginEditSettings) return false;
       if (CommitEditSettings != other.CommitEditSettings) return false;
+      if (!object.Equals(AddContact, other.AddContact)) return false;
       if (FactoryResetDevice != other.FactoryResetDevice) return false;
       if (RebootOtaSeconds != other.RebootOtaSeconds) return false;
       if (ExitSimulator != other.ExitSimulator) return false;
@@ -1724,6 +1860,9 @@ namespace Meshtastic.Protobufs {
       if (HasEnterDfuModeRequest) hash ^= EnterDfuModeRequest.GetHashCode();
       if (HasDeleteFileRequest) hash ^= DeleteFileRequest.GetHashCode();
       if (HasSetScale) hash ^= SetScale.GetHashCode();
+      if (HasBackupPreferences) hash ^= BackupPreferences.GetHashCode();
+      if (HasRestorePreferences) hash ^= RestorePreferences.GetHashCode();
+      if (HasRemoveBackupPreferences) hash ^= RemoveBackupPreferences.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) hash ^= SetOwner.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetChannel) hash ^= SetChannel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetConfig) hash ^= SetConfig.GetHashCode();
@@ -1743,6 +1882,7 @@ namespace Meshtastic.Protobufs {
       if (HasRemoveIgnoredNode) hash ^= RemoveIgnoredNode.GetHashCode();
       if (HasBeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
       if (HasCommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) hash ^= AddContact.GetHashCode();
       if (HasFactoryResetDevice) hash ^= FactoryResetDevice.GetHashCode();
       if (HasRebootOtaSeconds) hash ^= RebootOtaSeconds.GetHashCode();
       if (HasExitSimulator) hash ^= ExitSimulator.GetHashCode();
@@ -1857,6 +1997,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(184, 1);
         output.WriteUInt32(SetScale);
       }
+      if (HasBackupPreferences) {
+        output.WriteRawTag(192, 1);
+        output.WriteEnum((int) BackupPreferences);
+      }
+      if (HasRestorePreferences) {
+        output.WriteRawTag(200, 1);
+        output.WriteEnum((int) RestorePreferences);
+      }
+      if (HasRemoveBackupPreferences) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) RemoveBackupPreferences);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -1932,6 +2084,10 @@ namespace Meshtastic.Protobufs {
       if (HasCommitEditSettings) {
         output.WriteRawTag(136, 4);
         output.WriteBool(CommitEditSettings);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) {
+        output.WriteRawTag(146, 4);
+        output.WriteMessage(AddContact);
       }
       if (HasFactoryResetDevice) {
         output.WriteRawTag(240, 5);
@@ -2063,6 +2219,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(184, 1);
         output.WriteUInt32(SetScale);
       }
+      if (HasBackupPreferences) {
+        output.WriteRawTag(192, 1);
+        output.WriteEnum((int) BackupPreferences);
+      }
+      if (HasRestorePreferences) {
+        output.WriteRawTag(200, 1);
+        output.WriteEnum((int) RestorePreferences);
+      }
+      if (HasRemoveBackupPreferences) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) RemoveBackupPreferences);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -2138,6 +2306,10 @@ namespace Meshtastic.Protobufs {
       if (HasCommitEditSettings) {
         output.WriteRawTag(136, 4);
         output.WriteBool(CommitEditSettings);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) {
+        output.WriteRawTag(146, 4);
+        output.WriteMessage(AddContact);
       }
       if (HasFactoryResetDevice) {
         output.WriteRawTag(240, 5);
@@ -2250,6 +2422,15 @@ namespace Meshtastic.Protobufs {
       if (HasSetScale) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SetScale);
       }
+      if (HasBackupPreferences) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) BackupPreferences);
+      }
+      if (HasRestorePreferences) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) RestorePreferences);
+      }
+      if (HasRemoveBackupPreferences) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) RemoveBackupPreferences);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetOwner);
       }
@@ -2306,6 +2487,9 @@ namespace Meshtastic.Protobufs {
       }
       if (HasCommitEditSettings) {
         size += 2 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AddContact);
       }
       if (HasFactoryResetDevice) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(FactoryResetDevice);
@@ -2434,6 +2618,15 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.SetScale:
           SetScale = other.SetScale;
           break;
+        case PayloadVariantOneofCase.BackupPreferences:
+          BackupPreferences = other.BackupPreferences;
+          break;
+        case PayloadVariantOneofCase.RestorePreferences:
+          RestorePreferences = other.RestorePreferences;
+          break;
+        case PayloadVariantOneofCase.RemoveBackupPreferences:
+          RemoveBackupPreferences = other.RemoveBackupPreferences;
+          break;
         case PayloadVariantOneofCase.SetOwner:
           if (SetOwner == null) {
             SetOwner = new global::Meshtastic.Protobufs.User();
@@ -2511,6 +2704,12 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.CommitEditSettings:
           CommitEditSettings = other.CommitEditSettings;
+          break;
+        case PayloadVariantOneofCase.AddContact:
+          if (AddContact == null) {
+            AddContact = new global::Meshtastic.Protobufs.SharedContact();
+          }
+          AddContact.MergeFrom(other.AddContact);
           break;
         case PayloadVariantOneofCase.FactoryResetDevice:
           FactoryResetDevice = other.FactoryResetDevice;
@@ -2684,6 +2883,21 @@ namespace Meshtastic.Protobufs {
             SetScale = input.ReadUInt32();
             break;
           }
+          case 192: {
+            payloadVariant_ = input.ReadEnum();
+            payloadVariantCase_ = PayloadVariantOneofCase.BackupPreferences;
+            break;
+          }
+          case 200: {
+            payloadVariant_ = input.ReadEnum();
+            payloadVariantCase_ = PayloadVariantOneofCase.RestorePreferences;
+            break;
+          }
+          case 208: {
+            payloadVariant_ = input.ReadEnum();
+            payloadVariantCase_ = PayloadVariantOneofCase.RemoveBackupPreferences;
+            break;
+          }
           case 258: {
             global::Meshtastic.Protobufs.User subBuilder = new global::Meshtastic.Protobufs.User();
             if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
@@ -2793,6 +3007,15 @@ namespace Meshtastic.Protobufs {
           }
           case 520: {
             CommitEditSettings = input.ReadBool();
+            break;
+          }
+          case 530: {
+            global::Meshtastic.Protobufs.SharedContact subBuilder = new global::Meshtastic.Protobufs.SharedContact();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) {
+              subBuilder.MergeFrom(AddContact);
+            }
+            input.ReadMessage(subBuilder);
+            AddContact = subBuilder;
             break;
           }
           case 752: {
@@ -2976,6 +3199,21 @@ namespace Meshtastic.Protobufs {
             SetScale = input.ReadUInt32();
             break;
           }
+          case 192: {
+            payloadVariant_ = input.ReadEnum();
+            payloadVariantCase_ = PayloadVariantOneofCase.BackupPreferences;
+            break;
+          }
+          case 200: {
+            payloadVariant_ = input.ReadEnum();
+            payloadVariantCase_ = PayloadVariantOneofCase.RestorePreferences;
+            break;
+          }
+          case 208: {
+            payloadVariant_ = input.ReadEnum();
+            payloadVariantCase_ = PayloadVariantOneofCase.RemoveBackupPreferences;
+            break;
+          }
           case 258: {
             global::Meshtastic.Protobufs.User subBuilder = new global::Meshtastic.Protobufs.User();
             if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
@@ -3087,6 +3325,15 @@ namespace Meshtastic.Protobufs {
             CommitEditSettings = input.ReadBool();
             break;
           }
+          case 530: {
+            global::Meshtastic.Protobufs.SharedContact subBuilder = new global::Meshtastic.Protobufs.SharedContact();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) {
+              subBuilder.MergeFrom(AddContact);
+            }
+            input.ReadMessage(subBuilder);
+            AddContact = subBuilder;
+            break;
+          }
           case 752: {
             FactoryResetDevice = input.ReadInt32();
             break;
@@ -3175,6 +3422,8 @@ namespace Meshtastic.Protobufs {
         /// </summary>
         [pbr::OriginalName("SECURITY_CONFIG")] SecurityConfig = 7,
         /// <summary>
+        ///
+        /// Session key config
         /// </summary>
         [pbr::OriginalName("SESSIONKEY_CONFIG")] SessionkeyConfig = 8,
         /// <summary>
@@ -3254,6 +3503,19 @@ namespace Meshtastic.Protobufs {
         /// TODO: REPLACE
         /// </summary>
         [pbr::OriginalName("PAXCOUNTER_CONFIG")] PaxcounterConfig = 12,
+      }
+
+      public enum BackupLocation {
+        /// <summary>
+        ///
+        /// Backup to the internal flash
+        /// </summary>
+        [pbr::OriginalName("FLASH")] Flash = 0,
+        /// <summary>
+        ///
+        /// Backup to the SD card
+        /// </summary>
+        [pbr::OriginalName("SD")] Sd = 1,
       }
 
     }
@@ -3778,6 +4040,258 @@ namespace Meshtastic.Protobufs {
             break;
           case 10: {
             nodeRemoteHardwarePins_.AddEntriesFrom(ref input, _repeated_nodeRemoteHardwarePins_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SharedContact : pb::IMessage<SharedContact>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SharedContact> _parser = new pb::MessageParser<SharedContact>(() => new SharedContact());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SharedContact> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.AdminReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SharedContact() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SharedContact(SharedContact other) : this() {
+      nodeNum_ = other.nodeNum_;
+      user_ = other.user_ != null ? other.user_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SharedContact Clone() {
+      return new SharedContact(this);
+    }
+
+    /// <summary>Field number for the "node_num" field.</summary>
+    public const int NodeNumFieldNumber = 1;
+    private uint nodeNum_;
+    /// <summary>
+    ///
+    /// The node number of the contact
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NodeNum {
+      get { return nodeNum_; }
+      set {
+        nodeNum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user" field.</summary>
+    public const int UserFieldNumber = 2;
+    private global::Meshtastic.Protobufs.User user_;
+    /// <summary>
+    ///
+    /// The User of the contact
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.User User {
+      get { return user_; }
+      set {
+        user_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SharedContact);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SharedContact other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NodeNum != other.NodeNum) return false;
+      if (!object.Equals(User, other.User)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NodeNum != 0) hash ^= NodeNum.GetHashCode();
+      if (user_ != null) hash ^= User.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (NodeNum != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(NodeNum);
+      }
+      if (user_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(User);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeNum != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(NodeNum);
+      }
+      if (user_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(User);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (NodeNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NodeNum);
+      }
+      if (user_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SharedContact other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NodeNum != 0) {
+        NodeNum = other.NodeNum;
+      }
+      if (other.user_ != null) {
+        if (user_ == null) {
+          User = new global::Meshtastic.Protobufs.User();
+        }
+        User.MergeFrom(other.User);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            NodeNum = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (user_ == null) {
+              User = new global::Meshtastic.Protobufs.User();
+            }
+            input.ReadMessage(User);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            NodeNum = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            if (user_ == null) {
+              User = new global::Meshtastic.Protobufs.User();
+            }
+            input.ReadMessage(User);
             break;
           }
         }

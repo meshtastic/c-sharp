@@ -159,7 +159,7 @@ namespace Meshtastic.Protobufs {
             "EgoKcGF5bG9hZF9pZBgBIAEoDRIaChByZXF1ZXN0X3RyYW5zZmVyGAIgASgI",
             "SAASGQoPYWNjZXB0X3RyYW5zZmVyGAMgASgISAASMgoNcmVzZW5kX2NodW5r",
             "cxgEIAEoCzIZLm1lc2h0YXN0aWMucmVzZW5kX2NodW5rc0gAQhEKD3BheWxv",
-            "YWRfdmFyaWFudCqHDQoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRM",
+            "YWRfdmFyaWFudCraDgoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRM",
             "T1JBX1YyEAESDAoIVExPUkFfVjEQAhISCg5UTE9SQV9WMl8xXzFQNhADEgkK",
             "BVRCRUFNEAQSDwoLSEVMVEVDX1YyXzAQBRIOCgpUQkVBTV9WMFA3EAYSCgoG",
             "VF9FQ0hPEAcSEAoMVExPUkFfVjFfMVAzEAgSCwoHUkFLNDYzMRAJEg8KC0hF",
@@ -196,25 +196,30 @@ namespace Meshtastic.Protobufs {
             "UlBJX1BJQ08yEE8SEgoOTTVTVEFDS19DT1JFUzMQUBIRCg1TRUVFRF9YSUFP",
             "X1MzEFESCwoHTVMyNFNGMRBSEgwKCFRMT1JBX0M2EFMSDwoLV0lTTUVTSF9U",
             "QVAQVBINCglST1VUQVNUSUMQVRIMCghNRVNIX1RBQhBWEgwKCE1FU0hMSU5L",
-            "EFcSDwoKUFJJVkFURV9IVxD/ASosCglDb25zdGFudHMSCAoEWkVSTxAAEhUK",
-            "EERBVEFfUEFZTE9BRF9MRU4Q6QEqtAIKEUNyaXRpY2FsRXJyb3JDb2RlEggK",
-            "BE5PTkUQABIPCgtUWF9XQVRDSERPRxABEhQKEFNMRUVQX0VOVEVSX1dBSVQQ",
-            "AhIMCghOT19SQURJTxADEg8KC1VOU1BFQ0lGSUVEEAQSFQoRVUJMT1hfVU5J",
-            "VF9GQUlMRUQQBRINCglOT19BWFAxOTIQBhIZChVJTlZBTElEX1JBRElPX1NF",
-            "VFRJTkcQBxITCg9UUkFOU01JVF9GQUlMRUQQCBIMCghCUk9XTk9VVBAJEhIK",
-            "DlNYMTI2Ml9GQUlMVVJFEAoSEQoNUkFESU9fU1BJX0JVRxALEiAKHEZMQVNI",
-            "X0NPUlJVUFRJT05fUkVDT1ZFUkFCTEUQDBIiCh5GTEFTSF9DT1JSVVBUSU9O",
-            "X1VOUkVDT1ZFUkFCTEUQDSrTAgoPRXhjbHVkZWRNb2R1bGVzEhEKDUVYQ0xV",
-            "REVEX05PTkUQABIPCgtNUVRUX0NPTkZJRxABEhEKDVNFUklBTF9DT05GSUcQ",
-            "AhITCg9FWFROT1RJRl9DT05GSUcQBBIXChNTVE9SRUZPUldBUkRfQ09ORklH",
-            "EAgSFAoQUkFOR0VURVNUX0NPTkZJRxAQEhQKEFRFTEVNRVRSWV9DT05GSUcQ",
-            "IBIUChBDQU5ORURNU0dfQ09ORklHEEASEQoMQVVESU9fQ09ORklHEIABEhoK",
-            "FVJFTU9URUhBUkRXQVJFX0NPTkZJRxCAAhIYChNORUlHSEJPUklORk9fQ09O",
-            "RklHEIAEEhsKFkFNQklFTlRMSUdIVElOR19DT05GSUcQgAgSGwoWREVURUNU",
-            "SU9OU0VOU09SX0NPTkZJRxCAEBIWChFQQVhDT1VOVEVSX0NPTkZJRxCAIEJf",
-            "ChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpNZXNoUHJvdG9zWiJnaXRodWIuY29t",
-            "L21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1",
-            "ZnO6AgBiBnByb3RvMw=="));
+            "EFcSEgoOWElBT19OUkY1Ml9LSVQQWBIQCgxUSElOS05PREVfTTEQWRIQCgxU",
+            "SElOS05PREVfTTIQWhIPCgtUX0VUSF9FTElURRBbEhUKEUhFTFRFQ19TRU5T",
+            "T1JfSFVCEFwSGgoWUkVTRVJWRURfRlJJRURfQ0hJQ0tFThBdEhYKEkhFTFRF",
+            "Q19NRVNIX1BPQ0tFVBBeEhQKEFNFRUVEX1NPTEFSX05PREUQXxIYChROT01B",
+            "RFNUQVJfTUVURU9SX1BSTxBgEg0KCUNST1dQQU5FTBBhEg8KClBSSVZBVEVf",
+            "SFcQ/wEqLAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRBX1BBWUxPQURf",
+            "TEVOEOkBKrQCChFDcml0aWNhbEVycm9yQ29kZRIICgROT05FEAASDwoLVFhf",
+            "V0FUQ0hET0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoITk9fUkFESU8Q",
+            "AxIPCgtVTlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJTEVEEAUSDQoJ",
+            "Tk9fQVhQMTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5HEAcSEwoPVFJB",
+            "TlNNSVRfRkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEyNjJfRkFJTFVS",
+            "RRAKEhEKDVJBRElPX1NQSV9CVUcQCxIgChxGTEFTSF9DT1JSVVBUSU9OX1JF",
+            "Q09WRVJBQkxFEAwSIgoeRkxBU0hfQ09SUlVQVElPTl9VTlJFQ09WRVJBQkxF",
+            "EA0qgAMKD0V4Y2x1ZGVkTW9kdWxlcxIRCg1FWENMVURFRF9OT05FEAASDwoL",
+            "TVFUVF9DT05GSUcQARIRCg1TRVJJQUxfQ09ORklHEAISEwoPRVhUTk9USUZf",
+            "Q09ORklHEAQSFwoTU1RPUkVGT1JXQVJEX0NPTkZJRxAIEhQKEFJBTkdFVEVT",
+            "VF9DT05GSUcQEBIUChBURUxFTUVUUllfQ09ORklHECASFAoQQ0FOTkVETVNH",
+            "X0NPTkZJRxBAEhEKDEFVRElPX0NPTkZJRxCAARIaChVSRU1PVEVIQVJEV0FS",
+            "RV9DT05GSUcQgAISGAoTTkVJR0hCT1JJTkZPX0NPTkZJRxCABBIbChZBTUJJ",
+            "RU5UTElHSFRJTkdfQ09ORklHEIAIEhsKFkRFVEVDVElPTlNFTlNPUl9DT05G",
+            "SUcQgBASFgoRUEFYQ09VTlRFUl9DT05GSUcQgCASFQoQQkxVRVRPT1RIX0NP",
+            "TkZJRxCAQBIUCg5ORVRXT1JLX0NPTkZJRxCAgAFCXwoTY29tLmdlZWtzdmls",
+            "bGUubWVzaEIKTWVzaFByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dv",
+            "L2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), typeof(global::Meshtastic.Protobufs.ExcludedModules), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -582,7 +587,7 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("CDEBYTE_EORA_S3")] CdebyteEoraS3 = 61,
     /// <summary>
     ///
-    /// TWC_MESH_V4 
+    /// TWC_MESH_V4
     /// Adafruit NRF52840 feather express with SX1262, SSD1306 OLED and NEO6M GPS
     /// </summary>
     [pbr::OriginalName("TWC_MESH_V4")] TwcMeshV4 = 62,
@@ -718,6 +723,54 @@ namespace Meshtastic.Protobufs {
     /// https://www.loraitalia.it
     /// </summary>
     [pbr::OriginalName("MESHLINK")] Meshlink = 87,
+    /// <summary>
+    ///
+    /// Seeed XIAO nRF52840 + Wio SX1262 kit
+    /// </summary>
+    [pbr::OriginalName("XIAO_NRF52_KIT")] XiaoNrf52Kit = 88,
+    /// <summary>
+    ///
+    /// Elecrow ThinkNode M1 &amp; M2
+    /// https://www.elecrow.com/wiki/ThinkNode-M1_Transceiver_Device(Meshtastic)_Power_By_nRF52840.html
+    /// https://www.elecrow.com/wiki/ThinkNode-M2_Transceiver_Device(Meshtastic)_Power_By_NRF52840.html (this actually uses ESP32-S3)
+    /// </summary>
+    [pbr::OriginalName("THINKNODE_M1")] ThinknodeM1 = 89,
+    [pbr::OriginalName("THINKNODE_M2")] ThinknodeM2 = 90,
+    /// <summary>
+    ///
+    /// Lilygo T-ETH-Elite
+    /// </summary>
+    [pbr::OriginalName("T_ETH_ELITE")] TEthElite = 91,
+    /// <summary>
+    ///
+    /// Heltec HRI-3621 industrial probe
+    /// </summary>
+    [pbr::OriginalName("HELTEC_SENSOR_HUB")] HeltecSensorHub = 92,
+    /// <summary>
+    ///
+    /// Reserved Fried Chicken ID for future use
+    /// </summary>
+    [pbr::OriginalName("RESERVED_FRIED_CHICKEN")] ReservedFriedChicken = 93,
+    /// <summary>
+    ///
+    /// Heltec Magnetic Power Bank with Meshtastic compatible
+    /// </summary>
+    [pbr::OriginalName("HELTEC_MESH_POCKET")] HeltecMeshPocket = 94,
+    /// <summary>
+    ///
+    /// Seeed Solar Node
+    /// </summary>
+    [pbr::OriginalName("SEEED_SOLAR_NODE")] SeeedSolarNode = 95,
+    /// <summary>
+    ///
+    /// NomadStar Meteor Pro https://nomadstar.ch/
+    /// </summary>
+    [pbr::OriginalName("NOMADSTAR_METEOR_PRO")] NomadstarMeteorPro = 96,
+    /// <summary>
+    ///
+    /// Elecrow CrowPanel Advance models, ESP32-S3 and TFT with SX1262 radio plugin
+    /// </summary>
+    [pbr::OriginalName("CROWPANEL")] Crowpanel = 97,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -909,6 +962,16 @@ namespace Meshtastic.Protobufs {
     /// Paxcounter module
     /// </summary>
     [pbr::OriginalName("PAXCOUNTER_CONFIG")] PaxcounterConfig = 4096,
+    /// <summary>
+    /// 
+    /// Bluetooth config (not technically a module, but used to indicate bluetooth capabilities)
+    /// </summary>
+    [pbr::OriginalName("BLUETOOTH_CONFIG")] BluetoothConfig = 8192,
+    /// <summary>
+    ///
+    /// Network config (not technically a module, but used to indicate network capabilities)
+    /// </summary>
+    [pbr::OriginalName("NETWORK_CONFIG")] NetworkConfig = 16384,
   }
 
   #endregion
@@ -5380,7 +5443,7 @@ namespace Meshtastic.Protobufs {
     private uint nextHop_;
     /// <summary>
     ///
-    /// Last byte of the node number of the node that should be used as the next hop in routing. 
+    /// Last byte of the node number of the node that should be used as the next hop in routing.
     /// Set by the firmware internally, clients are not supposed to set this.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

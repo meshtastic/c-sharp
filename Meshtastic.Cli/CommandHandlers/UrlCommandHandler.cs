@@ -30,22 +30,33 @@ public class UrlCommandHandler : DeviceCommandHandler
 
     public override async Task OnCompleted(FromRadio packet, DeviceStateContainer container)
     {
-        if (operation == GetSetOperation.Set)
+        if (operation == GetSetOperation.Set && url!.Contains("/v/#")) {
+            await SetContactFromUrl(container);
+        } else if (operation == GetSetOperation.Set) {
             await SetChannelsFromUrl(container);
+        }
         else if (operation == GetSetOperation.Get)
         {
             var printer = new ProtobufPrinter(container, OutputFormat);
             printer.PrintUrl();
         }
     }
+    private async Task SetContactFromUrl(DeviceStateContainer container)
+    {
+        var adminMessageFactory = new AdminMessageFactory(container, Destination);
+        var urlParser = new UrlParser(url!);
+        var contact = urlParser.ParseContact();
+        Logger.LogInformation($"Sending contact {contact.User.LongName} to device...");
+        var setContact = adminMessageFactory.CreateAddContactMessage(contact);
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(setContact), AnyResponseReceived);
+    }
 
     private async Task SetChannelsFromUrl(DeviceStateContainer container)
     {
         var adminMessageFactory = new AdminMessageFactory(container, Destination);
         await BeginEditSettings(adminMessageFactory);
-
         var urlParser = new UrlParser(url!);
-        var channelSet = urlParser.Parse();
+        var channelSet = urlParser.ParseChannels();
         int index = 0;
         foreach (var setting in channelSet.Settings)
         {

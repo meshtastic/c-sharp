@@ -30,7 +30,7 @@ namespace Meshtastic.Protobufs {
             "KAJIAogBARIYCgthaXJfdXRpbF90eBgEIAEoAkgDiAEBEhsKDnVwdGltZV9z",
             "ZWNvbmRzGAUgASgNSASIAQFCEAoOX2JhdHRlcnlfbGV2ZWxCCgoIX3ZvbHRh",
             "Z2VCFgoUX2NoYW5uZWxfdXRpbGl6YXRpb25CDgoMX2Fpcl91dGlsX3R4QhEK",
-            "D191cHRpbWVfc2Vjb25kcyKgBgoSRW52aXJvbm1lbnRNZXRyaWNzEhgKC3Rl",
+            "D191cHRpbWVfc2Vjb25kcyKCBwoSRW52aXJvbm1lbnRNZXRyaWNzEhgKC3Rl",
             "bXBlcmF0dXJlGAEgASgCSACIAQESHgoRcmVsYXRpdmVfaHVtaWRpdHkYAiAB",
             "KAJIAYgBARIgChNiYXJvbWV0cmljX3ByZXNzdXJlGAMgASgCSAKIAQESGwoO",
             "Z2FzX3Jlc2lzdGFuY2UYBCABKAJIA4gBARIUCgd2b2x0YWdlGAUgASgCSASI",
@@ -41,72 +41,74 @@ namespace Meshtastic.Protobufs {
             "Cgp3aW5kX3NwZWVkGA4gASgCSA2IAQESEwoGd2VpZ2h0GA8gASgCSA6IAQES",
             "FgoJd2luZF9ndXN0GBAgASgCSA+IAQESFgoJd2luZF9sdWxsGBEgASgCSBCI",
             "AQESFgoJcmFkaWF0aW9uGBIgASgCSBGIAQESGAoLcmFpbmZhbGxfMWgYEyAB",
-            "KAJIEogBARIZCgxyYWluZmFsbF8yNGgYFCABKAJIE4gBAUIOCgxfdGVtcGVy",
-            "YXR1cmVCFAoSX3JlbGF0aXZlX2h1bWlkaXR5QhYKFF9iYXJvbWV0cmljX3By",
-            "ZXNzdXJlQhEKD19nYXNfcmVzaXN0YW5jZUIKCghfdm9sdGFnZUIKCghfY3Vy",
-            "cmVudEIGCgRfaWFxQgsKCV9kaXN0YW5jZUIGCgRfbHV4QgwKCl93aGl0ZV9s",
-            "dXhCCQoHX2lyX2x1eEIJCgdfdXZfbHV4QhEKD193aW5kX2RpcmVjdGlvbkIN",
-            "Cgtfd2luZF9zcGVlZEIJCgdfd2VpZ2h0QgwKCl93aW5kX2d1c3RCDAoKX3dp",
-            "bmRfbHVsbEIMCgpfcmFkaWF0aW9uQg4KDF9yYWluZmFsbF8xaEIPCg1fcmFp",
-            "bmZhbGxfMjRoIooCCgxQb3dlck1ldHJpY3MSGAoLY2gxX3ZvbHRhZ2UYASAB",
-            "KAJIAIgBARIYCgtjaDFfY3VycmVudBgCIAEoAkgBiAEBEhgKC2NoMl92b2x0",
-            "YWdlGAMgASgCSAKIAQESGAoLY2gyX2N1cnJlbnQYBCABKAJIA4gBARIYCgtj",
-            "aDNfdm9sdGFnZRgFIAEoAkgEiAEBEhgKC2NoM19jdXJyZW50GAYgASgCSAWI",
-            "AQFCDgoMX2NoMV92b2x0YWdlQg4KDF9jaDFfY3VycmVudEIOCgxfY2gyX3Zv",
-            "bHRhZ2VCDgoMX2NoMl9jdXJyZW50Qg4KDF9jaDNfdm9sdGFnZUIOCgxfY2gz",
-            "X2N1cnJlbnQihQUKEUFpclF1YWxpdHlNZXRyaWNzEhoKDXBtMTBfc3RhbmRh",
-            "cmQYASABKA1IAIgBARIaCg1wbTI1X3N0YW5kYXJkGAIgASgNSAGIAQESGwoO",
-            "cG0xMDBfc3RhbmRhcmQYAyABKA1IAogBARIfChJwbTEwX2Vudmlyb25tZW50",
-            "YWwYBCABKA1IA4gBARIfChJwbTI1X2Vudmlyb25tZW50YWwYBSABKA1IBIgB",
-            "ARIgChNwbTEwMF9lbnZpcm9ubWVudGFsGAYgASgNSAWIAQESGwoOcGFydGlj",
-            "bGVzXzAzdW0YByABKA1IBogBARIbCg5wYXJ0aWNsZXNfMDV1bRgIIAEoDUgH",
-            "iAEBEhsKDnBhcnRpY2xlc18xMHVtGAkgASgNSAiIAQESGwoOcGFydGljbGVz",
-            "XzI1dW0YCiABKA1ICYgBARIbCg5wYXJ0aWNsZXNfNTB1bRgLIAEoDUgKiAEB",
-            "EhwKD3BhcnRpY2xlc18xMDB1bRgMIAEoDUgLiAEBEhAKA2NvMhgNIAEoDUgM",
-            "iAEBQhAKDl9wbTEwX3N0YW5kYXJkQhAKDl9wbTI1X3N0YW5kYXJkQhEKD19w",
-            "bTEwMF9zdGFuZGFyZEIVChNfcG0xMF9lbnZpcm9ubWVudGFsQhUKE19wbTI1",
-            "X2Vudmlyb25tZW50YWxCFgoUX3BtMTAwX2Vudmlyb25tZW50YWxCEQoPX3Bh",
-            "cnRpY2xlc18wM3VtQhEKD19wYXJ0aWNsZXNfMDV1bUIRCg9fcGFydGljbGVz",
-            "XzEwdW1CEQoPX3BhcnRpY2xlc18yNXVtQhEKD19wYXJ0aWNsZXNfNTB1bUIS",
-            "ChBfcGFydGljbGVzXzEwMHVtQgYKBF9jbzIinwIKCkxvY2FsU3RhdHMSFgoO",
-            "dXB0aW1lX3NlY29uZHMYASABKA0SGwoTY2hhbm5lbF91dGlsaXphdGlvbhgC",
-            "IAEoAhITCgthaXJfdXRpbF90eBgDIAEoAhIWCg5udW1fcGFja2V0c190eBgE",
-            "IAEoDRIWCg5udW1fcGFja2V0c19yeBgFIAEoDRIaChJudW1fcGFja2V0c19y",
-            "eF9iYWQYBiABKA0SGAoQbnVtX29ubGluZV9ub2RlcxgHIAEoDRIXCg9udW1f",
-            "dG90YWxfbm9kZXMYCCABKA0SEwoLbnVtX3J4X2R1cGUYCSABKA0SFAoMbnVt",
-            "X3R4X3JlbGF5GAogASgNEh0KFW51bV90eF9yZWxheV9jYW5jZWxlZBgLIAEo",
-            "DSJ7Cg1IZWFsdGhNZXRyaWNzEhYKCWhlYXJ0X2JwbRgBIAEoDUgAiAEBEhEK",
-            "BHNwTzIYAiABKA1IAYgBARIYCgt0ZW1wZXJhdHVyZRgDIAEoAkgCiAEBQgwK",
-            "Cl9oZWFydF9icG1CBwoFX3NwTzJCDgoMX3RlbXBlcmF0dXJlIu0CCglUZWxl",
-            "bWV0cnkSDAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0cmljcxgCIAEoCzIZ",
-            "Lm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vudmlyb25tZW50X21l",
-            "dHJpY3MYAyABKAsyHi5tZXNodGFzdGljLkVudmlyb25tZW50TWV0cmljc0gA",
-            "EjwKE2Fpcl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5tZXNodGFzdGljLkFp",
-            "clF1YWxpdHlNZXRyaWNzSAASMQoNcG93ZXJfbWV0cmljcxgFIAEoCzIYLm1l",
-            "c2h0YXN0aWMuUG93ZXJNZXRyaWNzSAASLQoLbG9jYWxfc3RhdHMYBiABKAsy",
-            "Fi5tZXNodGFzdGljLkxvY2FsU3RhdHNIABIzCg5oZWFsdGhfbWV0cmljcxgH",
-            "IAEoCzIZLm1lc2h0YXN0aWMuSGVhbHRoTWV0cmljc0gAQgkKB3ZhcmlhbnQi",
-            "PgoNTmF1NzgwMkNvbmZpZxISCgp6ZXJvT2Zmc2V0GAEgASgFEhkKEWNhbGli",
-            "cmF0aW9uRmFjdG9yGAIgASgCKvcDChNUZWxlbWV0cnlTZW5zb3JUeXBlEhAK",
-            "DFNFTlNPUl9VTlNFVBAAEgoKBkJNRTI4MBABEgoKBkJNRTY4MBACEgsKB01D",
-            "UDk4MDgQAxIKCgZJTkEyNjAQBBIKCgZJTkEyMTkQBRIKCgZCTVAyODAQBhIJ",
-            "CgVTSFRDMxAHEgkKBUxQUzIyEAgSCwoHUU1DNjMxMBAJEgsKB1FNSTg2NTgQ",
-            "ChIMCghRTUM1ODgzTBALEgkKBVNIVDMxEAwSDAoIUE1TQTAwM0kQDRILCgdJ",
-            "TkEzMjIxEA4SCgoGQk1QMDg1EA8SDAoIUkNXTDk2MjAQEBIJCgVTSFQ0WBAR",
-            "EgwKCFZFTUw3NzAwEBISDAoITUxYOTA2MzIQExILCgdPUFQzMDAxEBQSDAoI",
-            "TFRSMzkwVVYQFRIOCgpUU0wyNTkxMUZOEBYSCQoFQUhUMTAQFxIQCgxERlJP",
-            "Qk9UX0xBUksQGBILCgdOQVU3ODAyEBkSCgoGQk1QM1hYEBoSDAoISUNNMjA5",
-            "NDgQGxIMCghNQVgxNzA0OBAcEhEKDUNVU1RPTV9TRU5TT1IQHRIMCghNQVgz",
-            "MDEwMhAeEgwKCE1MWDkwNjE0EB8SCQoFU0NENFgQIBILCgdSQURTRU5TECES",
-            "CgoGSU5BMjI2ECISEAoMREZST0JPVF9SQUlOECNCZAoTY29tLmdlZWtzdmls",
-            "bGUubWVzaEIPVGVsZW1ldHJ5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0",
-            "aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnBy",
-            "b3RvMw=="));
+            "KAJIEogBARIZCgxyYWluZmFsbF8yNGgYFCABKAJIE4gBARIaCg1zb2lsX21v",
+            "aXN0dXJlGBUgASgNSBSIAQESHQoQc29pbF90ZW1wZXJhdHVyZRgWIAEoAkgV",
+            "iAEBQg4KDF90ZW1wZXJhdHVyZUIUChJfcmVsYXRpdmVfaHVtaWRpdHlCFgoU",
+            "X2Jhcm9tZXRyaWNfcHJlc3N1cmVCEQoPX2dhc19yZXNpc3RhbmNlQgoKCF92",
+            "b2x0YWdlQgoKCF9jdXJyZW50QgYKBF9pYXFCCwoJX2Rpc3RhbmNlQgYKBF9s",
+            "dXhCDAoKX3doaXRlX2x1eEIJCgdfaXJfbHV4QgkKB191dl9sdXhCEQoPX3dp",
+            "bmRfZGlyZWN0aW9uQg0KC193aW5kX3NwZWVkQgkKB193ZWlnaHRCDAoKX3dp",
+            "bmRfZ3VzdEIMCgpfd2luZF9sdWxsQgwKCl9yYWRpYXRpb25CDgoMX3JhaW5m",
+            "YWxsXzFoQg8KDV9yYWluZmFsbF8yNGhCEAoOX3NvaWxfbW9pc3R1cmVCEwoR",
+            "X3NvaWxfdGVtcGVyYXR1cmUiigIKDFBvd2VyTWV0cmljcxIYCgtjaDFfdm9s",
+            "dGFnZRgBIAEoAkgAiAEBEhgKC2NoMV9jdXJyZW50GAIgASgCSAGIAQESGAoL",
+            "Y2gyX3ZvbHRhZ2UYAyABKAJIAogBARIYCgtjaDJfY3VycmVudBgEIAEoAkgD",
+            "iAEBEhgKC2NoM192b2x0YWdlGAUgASgCSASIAQESGAoLY2gzX2N1cnJlbnQY",
+            "BiABKAJIBYgBAUIOCgxfY2gxX3ZvbHRhZ2VCDgoMX2NoMV9jdXJyZW50Qg4K",
+            "DF9jaDJfdm9sdGFnZUIOCgxfY2gyX2N1cnJlbnRCDgoMX2NoM192b2x0YWdl",
+            "Qg4KDF9jaDNfY3VycmVudCKFBQoRQWlyUXVhbGl0eU1ldHJpY3MSGgoNcG0x",
+            "MF9zdGFuZGFyZBgBIAEoDUgAiAEBEhoKDXBtMjVfc3RhbmRhcmQYAiABKA1I",
+            "AYgBARIbCg5wbTEwMF9zdGFuZGFyZBgDIAEoDUgCiAEBEh8KEnBtMTBfZW52",
+            "aXJvbm1lbnRhbBgEIAEoDUgDiAEBEh8KEnBtMjVfZW52aXJvbm1lbnRhbBgF",
+            "IAEoDUgEiAEBEiAKE3BtMTAwX2Vudmlyb25tZW50YWwYBiABKA1IBYgBARIb",
+            "Cg5wYXJ0aWNsZXNfMDN1bRgHIAEoDUgGiAEBEhsKDnBhcnRpY2xlc18wNXVt",
+            "GAggASgNSAeIAQESGwoOcGFydGljbGVzXzEwdW0YCSABKA1ICIgBARIbCg5w",
+            "YXJ0aWNsZXNfMjV1bRgKIAEoDUgJiAEBEhsKDnBhcnRpY2xlc181MHVtGAsg",
+            "ASgNSAqIAQESHAoPcGFydGljbGVzXzEwMHVtGAwgASgNSAuIAQESEAoDY28y",
+            "GA0gASgNSAyIAQFCEAoOX3BtMTBfc3RhbmRhcmRCEAoOX3BtMjVfc3RhbmRh",
+            "cmRCEQoPX3BtMTAwX3N0YW5kYXJkQhUKE19wbTEwX2Vudmlyb25tZW50YWxC",
+            "FQoTX3BtMjVfZW52aXJvbm1lbnRhbEIWChRfcG0xMDBfZW52aXJvbm1lbnRh",
+            "bEIRCg9fcGFydGljbGVzXzAzdW1CEQoPX3BhcnRpY2xlc18wNXVtQhEKD19w",
+            "YXJ0aWNsZXNfMTB1bUIRCg9fcGFydGljbGVzXzI1dW1CEQoPX3BhcnRpY2xl",
+            "c181MHVtQhIKEF9wYXJ0aWNsZXNfMTAwdW1CBgoEX2NvMiKfAgoKTG9jYWxT",
+            "dGF0cxIWCg51cHRpbWVfc2Vjb25kcxgBIAEoDRIbChNjaGFubmVsX3V0aWxp",
+            "emF0aW9uGAIgASgCEhMKC2Fpcl91dGlsX3R4GAMgASgCEhYKDm51bV9wYWNr",
+            "ZXRzX3R4GAQgASgNEhYKDm51bV9wYWNrZXRzX3J4GAUgASgNEhoKEm51bV9w",
+            "YWNrZXRzX3J4X2JhZBgGIAEoDRIYChBudW1fb25saW5lX25vZGVzGAcgASgN",
+            "EhcKD251bV90b3RhbF9ub2RlcxgIIAEoDRITCgtudW1fcnhfZHVwZRgJIAEo",
+            "DRIUCgxudW1fdHhfcmVsYXkYCiABKA0SHQoVbnVtX3R4X3JlbGF5X2NhbmNl",
+            "bGVkGAsgASgNInsKDUhlYWx0aE1ldHJpY3MSFgoJaGVhcnRfYnBtGAEgASgN",
+            "SACIAQESEQoEc3BPMhgCIAEoDUgBiAEBEhgKC3RlbXBlcmF0dXJlGAMgASgC",
+            "SAKIAQFCDAoKX2hlYXJ0X2JwbUIHCgVfc3BPMkIOCgxfdGVtcGVyYXR1cmUi",
+            "7QIKCVRlbGVtZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRldmljZV9tZXRyaWNz",
+            "GAIgASgLMhkubWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNzSAASPQoTZW52aXJv",
+            "bm1lbnRfbWV0cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMuRW52aXJvbm1lbnRN",
+            "ZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgEIAEoCzIdLm1lc2h0",
+            "YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dlcl9tZXRyaWNzGAUg",
+            "ASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIABItCgtsb2NhbF9zdGF0",
+            "cxgGIAEoCzIWLm1lc2h0YXN0aWMuTG9jYWxTdGF0c0gAEjMKDmhlYWx0aF9t",
+            "ZXRyaWNzGAcgASgLMhkubWVzaHRhc3RpYy5IZWFsdGhNZXRyaWNzSABCCQoH",
+            "dmFyaWFudCI+Cg1OYXU3ODAyQ29uZmlnEhIKCnplcm9PZmZzZXQYASABKAUS",
+            "GQoRY2FsaWJyYXRpb25GYWN0b3IYAiABKAIqkQQKE1RlbGVtZXRyeVNlbnNv",
+            "clR5cGUSEAoMU0VOU09SX1VOU0VUEAASCgoGQk1FMjgwEAESCgoGQk1FNjgw",
+            "EAISCwoHTUNQOTgwOBADEgoKBklOQTI2MBAEEgoKBklOQTIxORAFEgoKBkJN",
+            "UDI4MBAGEgkKBVNIVEMzEAcSCQoFTFBTMjIQCBILCgdRTUM2MzEwEAkSCwoH",
+            "UU1JODY1OBAKEgwKCFFNQzU4ODNMEAsSCQoFU0hUMzEQDBIMCghQTVNBMDAz",
+            "SRANEgsKB0lOQTMyMjEQDhIKCgZCTVAwODUQDxIMCghSQ1dMOTYyMBAQEgkK",
+            "BVNIVDRYEBESDAoIVkVNTDc3MDAQEhIMCghNTFg5MDYzMhATEgsKB09QVDMw",
+            "MDEQFBIMCghMVFIzOTBVVhAVEg4KClRTTDI1OTExRk4QFhIJCgVBSFQxMBAX",
+            "EhAKDERGUk9CT1RfTEFSSxAYEgsKB05BVTc4MDIQGRIKCgZCTVAzWFgQGhIM",
+            "CghJQ00yMDk0OBAbEgwKCE1BWDE3MDQ4EBwSEQoNQ1VTVE9NX1NFTlNPUhAd",
+            "EgwKCE1BWDMwMTAyEB4SDAoITUxYOTA2MTQQHxIJCgVTQ0Q0WBAgEgsKB1JB",
+            "RFNFTlMQIRIKCgZJTkEyMjYQIhIQCgxERlJPQk9UX1JBSU4QIxIKCgZEUFMz",
+            "MTAQJBIMCghSQUsxMjAzNRAlQmQKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1Rl",
+            "bGVtZXRyeVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVy",
+            "YXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H" }, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2" }, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled" }, null, null, null, null),
@@ -246,7 +248,7 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("AHT10")] Aht10 = 23,
     /// <summary>
     ///
-    /// DFRobot Lark Weather station (temperature, humidity, pressure, wind speed and direction) 
+    /// DFRobot Lark Weather station (temperature, humidity, pressure, wind speed and direction)
     /// </summary>
     [pbr::OriginalName("DFROBOT_LARK")] DfrobotLark = 24,
     /// <summary>
@@ -276,7 +278,7 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("CUSTOM_SENSOR")] CustomSensor = 29,
     /// <summary>
     ///
-    /// MAX30102 Pulse Oximeter and Heart-Rate Sensor 
+    /// MAX30102 Pulse Oximeter and Heart-Rate Sensor
     /// </summary>
     [pbr::OriginalName("MAX30102")] Max30102 = 30,
     /// <summary>
@@ -304,6 +306,16 @@ namespace Meshtastic.Protobufs {
     /// DFRobot Gravity tipping bucket rain gauge
     /// </summary>
     [pbr::OriginalName("DFROBOT_RAIN")] DfrobotRain = 35,
+    /// <summary>
+    ///
+    /// Infineon DPS310 High accuracy pressure and temperature
+    /// </summary>
+    [pbr::OriginalName("DPS310")] Dps310 = 36,
+    /// <summary>
+    ///
+    /// RAKWireless RAK12035 Soil Moisture Sensor Module
+    /// </summary>
+    [pbr::OriginalName("RAK12035")] Rak12035 = 37,
   }
 
   #endregion
@@ -817,6 +829,8 @@ namespace Meshtastic.Protobufs {
       radiation_ = other.radiation_;
       rainfall1H_ = other.rainfall1H_;
       rainfall24H_ = other.rainfall24H_;
+      soilMoisture_ = other.soilMoisture_;
+      soilTemperature_ = other.soilTemperature_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1018,7 +1032,7 @@ namespace Meshtastic.Protobufs {
 
     private uint iaq_;
     /// <summary>
-    /// 
+    ///
     /// relative scale IAQ value as measured by Bosch BME680 . value 0-500.
     /// Belongs to Air Quality but is not particle but VOC measurement. Other VOC values can also be put in here.
     /// </summary>
@@ -1448,6 +1462,68 @@ namespace Meshtastic.Protobufs {
       _hasBits0 &= ~524288;
     }
 
+    /// <summary>Field number for the "soil_moisture" field.</summary>
+    public const int SoilMoistureFieldNumber = 21;
+    private readonly static uint SoilMoistureDefaultValue = 0;
+
+    private uint soilMoisture_;
+    /// <summary>
+    ///
+    /// Soil moisture measured (% 1-100)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SoilMoisture {
+      get { if ((_hasBits0 & 1048576) != 0) { return soilMoisture_; } else { return SoilMoistureDefaultValue; } }
+      set {
+        _hasBits0 |= 1048576;
+        soilMoisture_ = value;
+      }
+    }
+    /// <summary>Gets whether the "soil_moisture" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSoilMoisture {
+      get { return (_hasBits0 & 1048576) != 0; }
+    }
+    /// <summary>Clears the value of the "soil_moisture" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSoilMoisture() {
+      _hasBits0 &= ~1048576;
+    }
+
+    /// <summary>Field number for the "soil_temperature" field.</summary>
+    public const int SoilTemperatureFieldNumber = 22;
+    private readonly static float SoilTemperatureDefaultValue = 0F;
+
+    private float soilTemperature_;
+    /// <summary>
+    ///
+    /// Soil temperature measured (*C)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SoilTemperature {
+      get { if ((_hasBits0 & 2097152) != 0) { return soilTemperature_; } else { return SoilTemperatureDefaultValue; } }
+      set {
+        _hasBits0 |= 2097152;
+        soilTemperature_ = value;
+      }
+    }
+    /// <summary>Gets whether the "soil_temperature" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSoilTemperature {
+      get { return (_hasBits0 & 2097152) != 0; }
+    }
+    /// <summary>Clears the value of the "soil_temperature" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSoilTemperature() {
+      _hasBits0 &= ~2097152;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1483,6 +1559,8 @@ namespace Meshtastic.Protobufs {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Radiation, other.Radiation)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Rainfall1H, other.Rainfall1H)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Rainfall24H, other.Rainfall24H)) return false;
+      if (SoilMoisture != other.SoilMoisture) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SoilTemperature, other.SoilTemperature)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1510,6 +1588,8 @@ namespace Meshtastic.Protobufs {
       if (HasRadiation) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Radiation);
       if (HasRainfall1H) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Rainfall1H);
       if (HasRainfall24H) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Rainfall24H);
+      if (HasSoilMoisture) hash ^= SoilMoisture.GetHashCode();
+      if (HasSoilTemperature) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SoilTemperature);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1608,6 +1688,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(165, 1);
         output.WriteFloat(Rainfall24H);
       }
+      if (HasSoilMoisture) {
+        output.WriteRawTag(168, 1);
+        output.WriteUInt32(SoilMoisture);
+      }
+      if (HasSoilTemperature) {
+        output.WriteRawTag(181, 1);
+        output.WriteFloat(SoilTemperature);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1698,6 +1786,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(165, 1);
         output.WriteFloat(Rainfall24H);
       }
+      if (HasSoilMoisture) {
+        output.WriteRawTag(168, 1);
+        output.WriteUInt32(SoilMoisture);
+      }
+      if (HasSoilTemperature) {
+        output.WriteRawTag(181, 1);
+        output.WriteFloat(SoilTemperature);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1766,6 +1862,12 @@ namespace Meshtastic.Protobufs {
         size += 2 + 4;
       }
       if (HasRainfall24H) {
+        size += 2 + 4;
+      }
+      if (HasSoilMoisture) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SoilMoisture);
+      }
+      if (HasSoilTemperature) {
         size += 2 + 4;
       }
       if (_unknownFields != null) {
@@ -1839,6 +1941,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.HasRainfall24H) {
         Rainfall24H = other.Rainfall24H;
+      }
+      if (other.HasSoilMoisture) {
+        SoilMoisture = other.SoilMoisture;
+      }
+      if (other.HasSoilTemperature) {
+        SoilTemperature = other.SoilTemperature;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1939,6 +2047,14 @@ namespace Meshtastic.Protobufs {
             Rainfall24H = input.ReadFloat();
             break;
           }
+          case 168: {
+            SoilMoisture = input.ReadUInt32();
+            break;
+          }
+          case 181: {
+            SoilTemperature = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -2036,6 +2152,14 @@ namespace Meshtastic.Protobufs {
           }
           case 165: {
             Rainfall24H = input.ReadFloat();
+            break;
+          }
+          case 168: {
+            SoilMoisture = input.ReadUInt32();
+            break;
+          }
+          case 181: {
+            SoilTemperature = input.ReadFloat();
             break;
           }
         }
@@ -2990,7 +3114,7 @@ namespace Meshtastic.Protobufs {
     private uint co2_;
     /// <summary>
     ///
-    /// 10.0um Particle Count
+    /// CO2 concentration in ppm
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

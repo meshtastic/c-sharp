@@ -14,7 +14,7 @@ public class UrlParser
         this.url = url;
     }
 
-    public ChannelSet Parse()
+    public ChannelSet ParseChannels()
     {
         var split = this.url.Split("/#");
         var base64ChannelSet = split.Last();
@@ -25,5 +25,14 @@ public class UrlParser
 
         var base64EncodedBytes = Convert.FromBase64String(base64ChannelSet);
         return ChannelSet.Parser.ParseFrom(base64EncodedBytes);
+    }
+
+    public SharedContact ParseContact()
+    {
+        var split = this.url.Split("/#");
+        var content = split.Last();
+
+        var base64EncodedBytes = Convert.FromBase64String(content);
+        return SharedContact.Parser.ParseFrom(base64EncodedBytes);
     }
 }

@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static DeviceUiReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyKbAwoO",
+            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyK+AwoO",
             "RGV2aWNlVUlDb25maWcSDwoHdmVyc2lvbhgBIAEoDRIZChFzY3JlZW5fYnJp",
             "Z2h0bmVzcxgCIAEoDRIWCg5zY3JlZW5fdGltZW91dBgDIAEoDRITCgtzY3Jl",
             "ZW5fbG9jaxgEIAEoCBIVCg1zZXR0aW5nc19sb2NrGAUgASgIEhAKCHBpbl9j",
@@ -34,28 +34,35 @@ namespace Meshtastic.Protobufs {
             "c2h0YXN0aWMuTGFuZ3VhZ2USKwoLbm9kZV9maWx0ZXIYDCABKAsyFi5tZXNo",
             "dGFzdGljLk5vZGVGaWx0ZXISMQoObm9kZV9oaWdobGlnaHQYDSABKAsyGS5t",
             "ZXNodGFzdGljLk5vZGVIaWdobGlnaHQSGAoQY2FsaWJyYXRpb25fZGF0YRgO",
-            "IAEoDCKnAQoKTm9kZUZpbHRlchIWCg51bmtub3duX3N3aXRjaBgBIAEoCBIW",
-            "Cg5vZmZsaW5lX3N3aXRjaBgCIAEoCBIZChFwdWJsaWNfa2V5X3N3aXRjaBgD",
-            "IAEoCBIRCglob3BzX2F3YXkYBCABKAUSFwoPcG9zaXRpb25fc3dpdGNoGAUg",
-            "ASgIEhEKCW5vZGVfbmFtZRgGIAEoCRIPCgdjaGFubmVsGAcgASgFIn4KDU5v",
-            "ZGVIaWdobGlnaHQSEwoLY2hhdF9zd2l0Y2gYASABKAgSFwoPcG9zaXRpb25f",
-            "c3dpdGNoGAIgASgIEhgKEHRlbGVtZXRyeV9zd2l0Y2gYAyABKAgSEgoKaWFx",
-            "X3N3aXRjaBgEIAEoCBIRCglub2RlX25hbWUYBSABKAkqJQoFVGhlbWUSCAoE",
-            "REFSSxAAEgkKBUxJR0hUEAESBwoDUkVEEAIqiwIKCExhbmd1YWdlEgsKB0VO",
-            "R0xJU0gQABIKCgZGUkVOQ0gQARIKCgZHRVJNQU4QAhILCgdJVEFMSUFOEAMS",
-            "DgoKUE9SVFVHVUVTRRAEEgsKB1NQQU5JU0gQBRILCgdTV0VESVNIEAYSCwoH",
-            "RklOTklTSBAHEgoKBlBPTElTSBAIEgsKB1RVUktJU0gQCRILCgdTRVJCSUFO",
-            "EAoSCwoHUlVTU0lBThALEgkKBURVVENIEAwSCQoFR1JFRUsQDRINCglOT1JX",
-            "RUdJQU4QDhINCglTTE9WRU5JQU4QDxIWChJTSU1QTElGSUVEX0NISU5FU0UQ",
-            "HhIXChNUUkFESVRJT05BTF9DSElORVNFEB9CYwoTY29tLmdlZWtzdmlsbGUu",
-            "bWVzaEIORGV2aWNlVUlQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9n",
-            "by9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "IAEoDBIhCghtYXBfZGF0YRgPIAEoCzIPLm1lc2h0YXN0aWMuTWFwIqcBCgpO",
+            "b2RlRmlsdGVyEhYKDnVua25vd25fc3dpdGNoGAEgASgIEhYKDm9mZmxpbmVf",
+            "c3dpdGNoGAIgASgIEhkKEXB1YmxpY19rZXlfc3dpdGNoGAMgASgIEhEKCWhv",
+            "cHNfYXdheRgEIAEoBRIXCg9wb3NpdGlvbl9zd2l0Y2gYBSABKAgSEQoJbm9k",
+            "ZV9uYW1lGAYgASgJEg8KB2NoYW5uZWwYByABKAUifgoNTm9kZUhpZ2hsaWdo",
+            "dBITCgtjaGF0X3N3aXRjaBgBIAEoCBIXCg9wb3NpdGlvbl9zd2l0Y2gYAiAB",
+            "KAgSGAoQdGVsZW1ldHJ5X3N3aXRjaBgDIAEoCBISCgppYXFfc3dpdGNoGAQg",
+            "ASgIEhEKCW5vZGVfbmFtZRgFIAEoCSI9CghHZW9Qb2ludBIMCgR6b29tGAEg",
+            "ASgFEhAKCGxhdGl0dWRlGAIgASgFEhEKCWxvbmdpdHVkZRgDIAEoBSJMCgNN",
+            "YXASIgoEaG9tZRgBIAEoCzIULm1lc2h0YXN0aWMuR2VvUG9pbnQSDQoFc3R5",
+            "bGUYAiABKAkSEgoKZm9sbG93X2dwcxgDIAEoCColCgVUaGVtZRIICgREQVJL",
+            "EAASCQoFTElHSFQQARIHCgNSRUQQAiqaAgoITGFuZ3VhZ2USCwoHRU5HTElT",
+            "SBAAEgoKBkZSRU5DSBABEgoKBkdFUk1BThACEgsKB0lUQUxJQU4QAxIOCgpQ",
+            "T1JUVUdVRVNFEAQSCwoHU1BBTklTSBAFEgsKB1NXRURJU0gQBhILCgdGSU5O",
+            "SVNIEAcSCgoGUE9MSVNIEAgSCwoHVFVSS0lTSBAJEgsKB1NFUkJJQU4QChIL",
+            "CgdSVVNTSUFOEAsSCQoFRFVUQ0gQDBIJCgVHUkVFSxANEg0KCU5PUldFR0lB",
+            "ThAOEg0KCVNMT1ZFTklBThAPEg0KCVVLUkFJTklBThAQEhYKElNJTVBMSUZJ",
+            "RURfQ0hJTkVTRRAeEhcKE1RSQURJVElPTkFMX0NISU5FU0UQH0JjChNjb20u",
+            "Z2Vla3N2aWxsZS5tZXNoQg5EZXZpY2VVSVByb3Rvc1oiZ2l0aHViLmNvbS9t",
+            "ZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZz",
+            "ugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight", "CalibrationData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight", "CalibrationData", "MapData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeFilter), global::Meshtastic.Protobufs.NodeFilter.Parser, new[]{ "UnknownSwitch", "OfflineSwitch", "PublicKeySwitch", "HopsAway", "PositionSwitch", "NodeName", "Channel" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeHighlight), global::Meshtastic.Protobufs.NodeHighlight.Parser, new[]{ "ChatSwitch", "PositionSwitch", "TelemetrySwitch", "IaqSwitch", "NodeName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeHighlight), global::Meshtastic.Protobufs.NodeHighlight.Parser, new[]{ "ChatSwitch", "PositionSwitch", "TelemetrySwitch", "IaqSwitch", "NodeName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.GeoPoint), global::Meshtastic.Protobufs.GeoPoint.Parser, new[]{ "Zoom", "Latitude", "Longitude" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Map), global::Meshtastic.Protobufs.Map.Parser, new[]{ "Home", "Style", "FollowGps" }, null, null, null, null)
           }));
     }
     #endregion
@@ -167,6 +174,11 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("SLOVENIAN")] Slovenian = 15,
     /// <summary>
     ///
+    /// Ukrainian
+    /// </summary>
+    [pbr::OriginalName("UKRAINIAN")] Ukrainian = 16,
+    /// <summary>
+    ///
     /// Simplified Chinese (experimental)
     /// </summary>
     [pbr::OriginalName("SIMPLIFIED_CHINESE")] SimplifiedChinese = 30,
@@ -229,6 +241,7 @@ namespace Meshtastic.Protobufs {
       nodeFilter_ = other.nodeFilter_ != null ? other.nodeFilter_.Clone() : null;
       nodeHighlight_ = other.nodeHighlight_ != null ? other.nodeHighlight_.Clone() : null;
       calibrationData_ = other.calibrationData_;
+      mapData_ = other.mapData_ != null ? other.mapData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -259,7 +272,7 @@ namespace Meshtastic.Protobufs {
     private uint screenBrightness_;
     /// <summary>
     ///
-    /// TFT display brightness 1..255 
+    /// TFT display brightness 1..255
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -275,7 +288,7 @@ namespace Meshtastic.Protobufs {
     private uint screenTimeout_;
     /// <summary>
     ///
-    /// Screen timeout 0..900 
+    /// Screen timeout 0..900
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -291,7 +304,7 @@ namespace Meshtastic.Protobufs {
     private bool screenLock_;
     /// <summary>
     ///
-    /// Screen/Settings lock enabled 
+    /// Screen/Settings lock enabled
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -331,7 +344,7 @@ namespace Meshtastic.Protobufs {
     private global::Meshtastic.Protobufs.Theme theme_ = global::Meshtastic.Protobufs.Theme.Dark;
     /// <summary>
     ///
-    /// Color theme 
+    /// Color theme
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -387,7 +400,7 @@ namespace Meshtastic.Protobufs {
     private global::Meshtastic.Protobufs.Language language_ = global::Meshtastic.Protobufs.Language.English;
     /// <summary>
     ///
-    /// Localization 
+    /// Localization
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -403,7 +416,7 @@ namespace Meshtastic.Protobufs {
     private global::Meshtastic.Protobufs.NodeFilter nodeFilter_;
     /// <summary>
     ///
-    /// Node list filter 
+    /// Node list filter
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -446,6 +459,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "map_data" field.</summary>
+    public const int MapDataFieldNumber = 15;
+    private global::Meshtastic.Protobufs.Map mapData_;
+    /// <summary>
+    ///
+    /// Map related data
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.Map MapData {
+      get { return mapData_; }
+      set {
+        mapData_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -475,6 +504,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(NodeFilter, other.NodeFilter)) return false;
       if (!object.Equals(NodeHighlight, other.NodeHighlight)) return false;
       if (CalibrationData != other.CalibrationData) return false;
+      if (!object.Equals(MapData, other.MapData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -496,6 +526,7 @@ namespace Meshtastic.Protobufs {
       if (nodeFilter_ != null) hash ^= NodeFilter.GetHashCode();
       if (nodeHighlight_ != null) hash ^= NodeHighlight.GetHashCode();
       if (CalibrationData.Length != 0) hash ^= CalibrationData.GetHashCode();
+      if (mapData_ != null) hash ^= MapData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -570,6 +601,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(114);
         output.WriteBytes(CalibrationData);
       }
+      if (mapData_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(MapData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -636,6 +671,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(114);
         output.WriteBytes(CalibrationData);
       }
+      if (mapData_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(MapData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -687,6 +726,9 @@ namespace Meshtastic.Protobufs {
       }
       if (CalibrationData.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(CalibrationData);
+      }
+      if (mapData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MapData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -747,6 +789,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.CalibrationData.Length != 0) {
         CalibrationData = other.CalibrationData;
+      }
+      if (other.mapData_ != null) {
+        if (mapData_ == null) {
+          MapData = new global::Meshtastic.Protobufs.Map();
+        }
+        MapData.MergeFrom(other.MapData);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -829,6 +877,13 @@ namespace Meshtastic.Protobufs {
             CalibrationData = input.ReadBytes();
             break;
           }
+          case 122: {
+            if (mapData_ == null) {
+              MapData = new global::Meshtastic.Protobufs.Map();
+            }
+            input.ReadMessage(MapData);
+            break;
+          }
         }
       }
     #endif
@@ -908,6 +963,13 @@ namespace Meshtastic.Protobufs {
           }
           case 114: {
             CalibrationData = input.ReadBytes();
+            break;
+          }
+          case 122: {
+            if (mapData_ == null) {
+              MapData = new global::Meshtastic.Protobufs.Map();
+            }
+            input.ReadMessage(MapData);
             break;
           }
         }
@@ -1722,6 +1784,583 @@ namespace Meshtastic.Protobufs {
           }
           case 42: {
             NodeName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GeoPoint : pb::IMessage<GeoPoint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GeoPoint> _parser = new pb::MessageParser<GeoPoint>(() => new GeoPoint());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GeoPoint> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeoPoint() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeoPoint(GeoPoint other) : this() {
+      zoom_ = other.zoom_;
+      latitude_ = other.latitude_;
+      longitude_ = other.longitude_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeoPoint Clone() {
+      return new GeoPoint(this);
+    }
+
+    /// <summary>Field number for the "zoom" field.</summary>
+    public const int ZoomFieldNumber = 1;
+    private int zoom_;
+    /// <summary>
+    ///
+    /// Zoom level
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Zoom {
+      get { return zoom_; }
+      set {
+        zoom_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "latitude" field.</summary>
+    public const int LatitudeFieldNumber = 2;
+    private int latitude_;
+    /// <summary>
+    ///
+    /// Coordinate: latitude
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Latitude {
+      get { return latitude_; }
+      set {
+        latitude_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "longitude" field.</summary>
+    public const int LongitudeFieldNumber = 3;
+    private int longitude_;
+    /// <summary>
+    ///
+    /// Coordinate: longitude
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Longitude {
+      get { return longitude_; }
+      set {
+        longitude_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GeoPoint);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GeoPoint other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Zoom != other.Zoom) return false;
+      if (Latitude != other.Latitude) return false;
+      if (Longitude != other.Longitude) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Zoom != 0) hash ^= Zoom.GetHashCode();
+      if (Latitude != 0) hash ^= Latitude.GetHashCode();
+      if (Longitude != 0) hash ^= Longitude.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Zoom != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Zoom);
+      }
+      if (Latitude != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Latitude);
+      }
+      if (Longitude != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Longitude);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Zoom != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Zoom);
+      }
+      if (Latitude != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Latitude);
+      }
+      if (Longitude != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Longitude);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Zoom != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Zoom);
+      }
+      if (Latitude != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Latitude);
+      }
+      if (Longitude != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Longitude);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GeoPoint other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Zoom != 0) {
+        Zoom = other.Zoom;
+      }
+      if (other.Latitude != 0) {
+        Latitude = other.Latitude;
+      }
+      if (other.Longitude != 0) {
+        Longitude = other.Longitude;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Zoom = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Latitude = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Longitude = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Zoom = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Latitude = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Longitude = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Map : pb::IMessage<Map>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Map> _parser = new pb::MessageParser<Map>(() => new Map());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Map> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Map() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Map(Map other) : this() {
+      home_ = other.home_ != null ? other.home_.Clone() : null;
+      style_ = other.style_;
+      followGps_ = other.followGps_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Map Clone() {
+      return new Map(this);
+    }
+
+    /// <summary>Field number for the "home" field.</summary>
+    public const int HomeFieldNumber = 1;
+    private global::Meshtastic.Protobufs.GeoPoint home_;
+    /// <summary>
+    ///
+    /// Home coordinates
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.GeoPoint Home {
+      get { return home_; }
+      set {
+        home_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "style" field.</summary>
+    public const int StyleFieldNumber = 2;
+    private string style_ = "";
+    /// <summary>
+    ///
+    /// Map tile style
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Style {
+      get { return style_; }
+      set {
+        style_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "follow_gps" field.</summary>
+    public const int FollowGpsFieldNumber = 3;
+    private bool followGps_;
+    /// <summary>
+    ///
+    /// Map scroll follows GPS
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool FollowGps {
+      get { return followGps_; }
+      set {
+        followGps_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Map);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Map other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Home, other.Home)) return false;
+      if (Style != other.Style) return false;
+      if (FollowGps != other.FollowGps) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (home_ != null) hash ^= Home.GetHashCode();
+      if (Style.Length != 0) hash ^= Style.GetHashCode();
+      if (FollowGps != false) hash ^= FollowGps.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (home_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Home);
+      }
+      if (Style.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Style);
+      }
+      if (FollowGps != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(FollowGps);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (home_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Home);
+      }
+      if (Style.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Style);
+      }
+      if (FollowGps != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(FollowGps);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (home_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Home);
+      }
+      if (Style.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Style);
+      }
+      if (FollowGps != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Map other) {
+      if (other == null) {
+        return;
+      }
+      if (other.home_ != null) {
+        if (home_ == null) {
+          Home = new global::Meshtastic.Protobufs.GeoPoint();
+        }
+        Home.MergeFrom(other.Home);
+      }
+      if (other.Style.Length != 0) {
+        Style = other.Style;
+      }
+      if (other.FollowGps != false) {
+        FollowGps = other.FollowGps;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (home_ == null) {
+              Home = new global::Meshtastic.Protobufs.GeoPoint();
+            }
+            input.ReadMessage(Home);
+            break;
+          }
+          case 18: {
+            Style = input.ReadString();
+            break;
+          }
+          case 24: {
+            FollowGps = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (home_ == null) {
+              Home = new global::Meshtastic.Protobufs.GeoPoint();
+            }
+            input.ReadMessage(Home);
+            break;
+          }
+          case 18: {
+            Style = input.ReadString();
+            break;
+          }
+          case 24: {
+            FollowGps = input.ReadBool();
             break;
           }
         }
