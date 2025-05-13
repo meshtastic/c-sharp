@@ -110,7 +110,7 @@ public class ImportCommandHandler : DeviceCommandHandler
     private async Task SetChannels(AdminMessageFactory adminMessageFactory, string url)
     {
         var urlParser = new UrlParser(url);
-        var channelSet = urlParser.Parse();
+        var channelSet = urlParser.ParseChannels();
         int index = 0;
         foreach (var setting in channelSet.Settings)
         {
