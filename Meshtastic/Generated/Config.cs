@@ -25,7 +25,7 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdtZXNodGFzdGljL2NvbmZpZy5wcm90bxIKbWVzaHRhc3RpYxoabWVzaHRh",
-            "c3RpYy9kZXZpY2VfdWkucHJvdG8i1CYKBkNvbmZpZxIxCgZkZXZpY2UYASAB",
+            "c3RpYy9kZXZpY2VfdWkucHJvdG8i7CYKBkNvbmZpZxIxCgZkZXZpY2UYASAB",
             "KAsyHy5tZXNodGFzdGljLkNvbmZpZy5EZXZpY2VDb25maWdIABI1Cghwb3Np",
             "dGlvbhgCIAEoCzIhLm1lc2h0YXN0aWMuQ29uZmlnLlBvc2l0aW9uQ29uZmln",
             "SAASLwoFcG93ZXIYAyABKAsyHi5tZXNodGFzdGljLkNvbmZpZy5Qb3dlckNv",
@@ -83,7 +83,7 @@ namespace Meshtastic.Protobufs {
             "GAogASgNGkYKCklwVjRDb25maWcSCgoCaXAYASABKAcSDwoHZ2F0ZXdheRgC",
             "IAEoBxIOCgZzdWJuZXQYAyABKAcSCwoDZG5zGAQgASgHIiMKC0FkZHJlc3NN",
             "b2RlEggKBERIQ1AQABIKCgZTVEFUSUMQASI0Cg1Qcm90b2NvbEZsYWdzEhAK",
-            "DE5PX0JST0FEQ0FTVBAAEhEKDVVEUF9CUk9BRENBU1QQARrkBwoNRGlzcGxh",
+            "DE5PX0JST0FEQ0FTVBAAEhEKDVVEUF9CUk9BRENBU1QQARr8BwoNRGlzcGxh",
             "eUNvbmZpZxIWCg5zY3JlZW5fb25fc2VjcxgBIAEoDRJICgpncHNfZm9ybWF0",
             "GAIgASgOMjQubWVzaHRhc3RpYy5Db25maWcuRGlzcGxheUNvbmZpZy5HcHND",
             "b29yZGluYXRlRm9ybWF0EiEKGWF1dG9fc2NyZWVuX2Nhcm91c2VsX3NlY3MY",
@@ -98,46 +98,47 @@ namespace Meshtastic.Protobufs {
             "YXNzT3JpZW50YXRpb24SFQoNdXNlXzEyaF9jbG9jaxgMIAEoCCJNChNHcHND",
             "b29yZGluYXRlRm9ybWF0EgcKA0RFQxAAEgcKA0RNUxABEgcKA1VUTRACEggK",
             "BE1HUlMQAxIHCgNPTEMQBBIICgRPU0dSEAUiKAoMRGlzcGxheVVuaXRzEgoK",
-            "Bk1FVFJJQxAAEgwKCElNUEVSSUFMEAEiTQoIT2xlZFR5cGUSDQoJT0xFRF9B",
+            "Bk1FVFJJQxAAEgwKCElNUEVSSUFMEAEiZQoIT2xlZFR5cGUSDQoJT0xFRF9B",
             "VVRPEAASEAoMT0xFRF9TU0QxMzA2EAESDwoLT0xFRF9TSDExMDYQAhIPCgtP",
-            "TEVEX1NIMTEwNxADIkEKC0Rpc3BsYXlNb2RlEgsKB0RFRkFVTFQQABIMCghU",
-            "V09DT0xPUhABEgwKCElOVkVSVEVEEAISCQoFQ09MT1IQAyK6AQoSQ29tcGFz",
-            "c09yaWVudGF0aW9uEg0KCURFR1JFRVNfMBAAEg4KCkRFR1JFRVNfOTAQARIP",
-            "CgtERUdSRUVTXzE4MBACEg8KC0RFR1JFRVNfMjcwEAMSFgoSREVHUkVFU18w",
-            "X0lOVkVSVEVEEAQSFwoTREVHUkVFU185MF9JTlZFUlRFRBAFEhgKFERFR1JF",
-            "RVNfMTgwX0lOVkVSVEVEEAYSGAoUREVHUkVFU18yNzBfSU5WRVJURUQQBxqd",
-            "BwoKTG9SYUNvbmZpZxISCgp1c2VfcHJlc2V0GAEgASgIEj8KDG1vZGVtX3By",
-            "ZXNldBgCIAEoDjIpLm1lc2h0YXN0aWMuQ29uZmlnLkxvUmFDb25maWcuTW9k",
-            "ZW1QcmVzZXQSEQoJYmFuZHdpZHRoGAMgASgNEhUKDXNwcmVhZF9mYWN0b3IY",
-            "BCABKA0SEwoLY29kaW5nX3JhdGUYBSABKA0SGAoQZnJlcXVlbmN5X29mZnNl",
-            "dBgGIAEoAhI4CgZyZWdpb24YByABKA4yKC5tZXNodGFzdGljLkNvbmZpZy5M",
-            "b1JhQ29uZmlnLlJlZ2lvbkNvZGUSEQoJaG9wX2xpbWl0GAggASgNEhIKCnR4",
-            "X2VuYWJsZWQYCSABKAgSEAoIdHhfcG93ZXIYCiABKAUSEwoLY2hhbm5lbF9u",
-            "dW0YCyABKA0SGwoTb3ZlcnJpZGVfZHV0eV9jeWNsZRgMIAEoCBIeChZzeDEy",
-            "NnhfcnhfYm9vc3RlZF9nYWluGA0gASgIEhoKEm92ZXJyaWRlX2ZyZXF1ZW5j",
-            "eRgOIAEoAhIXCg9wYV9mYW5fZGlzYWJsZWQYDyABKAgSFwoPaWdub3JlX2lu",
-            "Y29taW5nGGcgAygNEhMKC2lnbm9yZV9tcXR0GGggASgIEhkKEWNvbmZpZ19v",
-            "a190b19tcXR0GGkgASgIIvEBCgpSZWdpb25Db2RlEgkKBVVOU0VUEAASBgoC",
-            "VVMQARIKCgZFVV80MzMQAhIKCgZFVV84NjgQAxIGCgJDThAEEgYKAkpQEAUS",
-            "BwoDQU5aEAYSBgoCS1IQBxIGCgJUVxAIEgYKAlJVEAkSBgoCSU4QChIKCgZO",
-            "Wl84NjUQCxIGCgJUSBAMEgsKB0xPUkFfMjQQDRIKCgZVQV80MzMQDhIKCgZV",
-            "QV84NjgQDxIKCgZNWV80MzMQEBIKCgZNWV85MTkQERIKCgZTR185MjMQEhIK",
-            "CgZQSF80MzMQExIKCgZQSF84NjgQFBIKCgZQSF85MTUQFSKpAQoLTW9kZW1Q",
-            "cmVzZXQSDQoJTE9OR19GQVNUEAASDQoJTE9OR19TTE9XEAESFgoOVkVSWV9M",
-            "T05HX1NMT1cQAhoCCAESDwoLTUVESVVNX1NMT1cQAxIPCgtNRURJVU1fRkFT",
-            "VBAEEg4KClNIT1JUX1NMT1cQBRIOCgpTSE9SVF9GQVNUEAYSEQoNTE9OR19N",
-            "T0RFUkFURRAHEg8KC1NIT1JUX1RVUkJPEAgarQEKD0JsdWV0b290aENvbmZp",
-            "ZxIPCgdlbmFibGVkGAEgASgIEjwKBG1vZGUYAiABKA4yLi5tZXNodGFzdGlj",
-            "LkNvbmZpZy5CbHVldG9vdGhDb25maWcuUGFpcmluZ01vZGUSEQoJZml4ZWRf",
-            "cGluGAMgASgNIjgKC1BhaXJpbmdNb2RlEg4KClJBTkRPTV9QSU4QABINCglG",
-            "SVhFRF9QSU4QARIKCgZOT19QSU4QAhq2AQoOU2VjdXJpdHlDb25maWcSEgoK",
-            "cHVibGljX2tleRgBIAEoDBITCgtwcml2YXRlX2tleRgCIAEoDBIRCglhZG1p",
-            "bl9rZXkYAyADKAwSEgoKaXNfbWFuYWdlZBgEIAEoCBIWCg5zZXJpYWxfZW5h",
-            "YmxlZBgFIAEoCBIdChVkZWJ1Z19sb2dfYXBpX2VuYWJsZWQYBiABKAgSHQoV",
-            "YWRtaW5fY2hhbm5lbF9lbmFibGVkGAggASgIGhIKEFNlc3Npb25rZXlDb25m",
-            "aWdCEQoPcGF5bG9hZF92YXJpYW50QmEKE2NvbS5nZWVrc3ZpbGxlLm1lc2hC",
-            "DENvbmZpZ1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVy",
-            "YXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "TEVEX1NIMTEwNxADEhYKEk9MRURfU0gxMTA3XzEyOF82NBAEIkEKC0Rpc3Bs",
+            "YXlNb2RlEgsKB0RFRkFVTFQQABIMCghUV09DT0xPUhABEgwKCElOVkVSVEVE",
+            "EAISCQoFQ09MT1IQAyK6AQoSQ29tcGFzc09yaWVudGF0aW9uEg0KCURFR1JF",
+            "RVNfMBAAEg4KCkRFR1JFRVNfOTAQARIPCgtERUdSRUVTXzE4MBACEg8KC0RF",
+            "R1JFRVNfMjcwEAMSFgoSREVHUkVFU18wX0lOVkVSVEVEEAQSFwoTREVHUkVF",
+            "U185MF9JTlZFUlRFRBAFEhgKFERFR1JFRVNfMTgwX0lOVkVSVEVEEAYSGAoU",
+            "REVHUkVFU18yNzBfSU5WRVJURUQQBxqdBwoKTG9SYUNvbmZpZxISCgp1c2Vf",
+            "cHJlc2V0GAEgASgIEj8KDG1vZGVtX3ByZXNldBgCIAEoDjIpLm1lc2h0YXN0",
+            "aWMuQ29uZmlnLkxvUmFDb25maWcuTW9kZW1QcmVzZXQSEQoJYmFuZHdpZHRo",
+            "GAMgASgNEhUKDXNwcmVhZF9mYWN0b3IYBCABKA0SEwoLY29kaW5nX3JhdGUY",
+            "BSABKA0SGAoQZnJlcXVlbmN5X29mZnNldBgGIAEoAhI4CgZyZWdpb24YByAB",
+            "KA4yKC5tZXNodGFzdGljLkNvbmZpZy5Mb1JhQ29uZmlnLlJlZ2lvbkNvZGUS",
+            "EQoJaG9wX2xpbWl0GAggASgNEhIKCnR4X2VuYWJsZWQYCSABKAgSEAoIdHhf",
+            "cG93ZXIYCiABKAUSEwoLY2hhbm5lbF9udW0YCyABKA0SGwoTb3ZlcnJpZGVf",
+            "ZHV0eV9jeWNsZRgMIAEoCBIeChZzeDEyNnhfcnhfYm9vc3RlZF9nYWluGA0g",
+            "ASgIEhoKEm92ZXJyaWRlX2ZyZXF1ZW5jeRgOIAEoAhIXCg9wYV9mYW5fZGlz",
+            "YWJsZWQYDyABKAgSFwoPaWdub3JlX2luY29taW5nGGcgAygNEhMKC2lnbm9y",
+            "ZV9tcXR0GGggASgIEhkKEWNvbmZpZ19va190b19tcXR0GGkgASgIIvEBCgpS",
+            "ZWdpb25Db2RlEgkKBVVOU0VUEAASBgoCVVMQARIKCgZFVV80MzMQAhIKCgZF",
+            "VV84NjgQAxIGCgJDThAEEgYKAkpQEAUSBwoDQU5aEAYSBgoCS1IQBxIGCgJU",
+            "VxAIEgYKAlJVEAkSBgoCSU4QChIKCgZOWl84NjUQCxIGCgJUSBAMEgsKB0xP",
+            "UkFfMjQQDRIKCgZVQV80MzMQDhIKCgZVQV84NjgQDxIKCgZNWV80MzMQEBIK",
+            "CgZNWV85MTkQERIKCgZTR185MjMQEhIKCgZQSF80MzMQExIKCgZQSF84NjgQ",
+            "FBIKCgZQSF85MTUQFSKpAQoLTW9kZW1QcmVzZXQSDQoJTE9OR19GQVNUEAAS",
+            "DQoJTE9OR19TTE9XEAESFgoOVkVSWV9MT05HX1NMT1cQAhoCCAESDwoLTUVE",
+            "SVVNX1NMT1cQAxIPCgtNRURJVU1fRkFTVBAEEg4KClNIT1JUX1NMT1cQBRIO",
+            "CgpTSE9SVF9GQVNUEAYSEQoNTE9OR19NT0RFUkFURRAHEg8KC1NIT1JUX1RV",
+            "UkJPEAgarQEKD0JsdWV0b290aENvbmZpZxIPCgdlbmFibGVkGAEgASgIEjwK",
+            "BG1vZGUYAiABKA4yLi5tZXNodGFzdGljLkNvbmZpZy5CbHVldG9vdGhDb25m",
+            "aWcuUGFpcmluZ01vZGUSEQoJZml4ZWRfcGluGAMgASgNIjgKC1BhaXJpbmdN",
+            "b2RlEg4KClJBTkRPTV9QSU4QABINCglGSVhFRF9QSU4QARIKCgZOT19QSU4Q",
+            "Ahq2AQoOU2VjdXJpdHlDb25maWcSEgoKcHVibGljX2tleRgBIAEoDBITCgtw",
+            "cml2YXRlX2tleRgCIAEoDBIRCglhZG1pbl9rZXkYAyADKAwSEgoKaXNfbWFu",
+            "YWdlZBgEIAEoCBIWCg5zZXJpYWxfZW5hYmxlZBgFIAEoCBIdChVkZWJ1Z19s",
+            "b2dfYXBpX2VuYWJsZWQYBiABKAgSHQoVYWRtaW5fY2hhbm5lbF9lbmFibGVk",
+            "GAggASgIGhIKEFNlc3Npb25rZXlDb25maWdCEQoPcGF5bG9hZF92YXJpYW50",
+            "QmEKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCDENvbmZpZ1Byb3Rvc1oiZ2l0aHVi",
+            "LmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJv",
+            "dG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1109,7 +1110,7 @@ namespace Meshtastic.Protobufs {
         private bool ledHeartbeatDisabled_;
         /// <summary>
         ///
-        /// If true, disable the default blinking LED (LED_PIN) behavior on the device 
+        /// If true, disable the default blinking LED (LED_PIN) behavior on the device
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2510,7 +2511,7 @@ namespace Meshtastic.Protobufs {
         private bool isPowerSaving_;
         /// <summary>
         ///
-        /// Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio. 
+        /// Description: Will sleep everything as much as possible, for the tracker and sensor role this will also include the lora radio.
         /// Don't use this setting if you want to use your device with the phone apps or are using a device without a user button.
         /// Technical Details: Works for ESP32 devices and NRF52 devices in the Sensor or Tracker roles
         /// </summary>
@@ -3105,7 +3106,7 @@ namespace Meshtastic.Protobufs {
         private string ntpServer_ = "";
         /// <summary>
         ///
-        /// NTP server to use if WiFi is conneced, defaults to `0.pool.ntp.org`
+        /// NTP server to use if WiFi is conneced, defaults to `meshtastic.pool.ntp.org`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4633,17 +4634,17 @@ namespace Meshtastic.Protobufs {
           public enum OledType {
             /// <summary>
             ///
-            /// Default / Auto
+            /// Default / Autodetect
             /// </summary>
             [pbr::OriginalName("OLED_AUTO")] OledAuto = 0,
             /// <summary>
             ///
-            /// Default / Auto
+            /// Default / Autodetect
             /// </summary>
             [pbr::OriginalName("OLED_SSD1306")] OledSsd1306 = 1,
             /// <summary>
             ///
-            /// Default / Auto
+            /// Default / Autodetect
             /// </summary>
             [pbr::OriginalName("OLED_SH1106")] OledSh1106 = 2,
             /// <summary>
@@ -4651,6 +4652,11 @@ namespace Meshtastic.Protobufs {
             /// Can not be auto detected but set by proto. Used for 128x128 screens
             /// </summary>
             [pbr::OriginalName("OLED_SH1107")] OledSh1107 = 3,
+            /// <summary>
+            ///
+            /// Can not be auto detected but set by proto. Used for 128x64 screens
+            /// </summary>
+            [pbr::OriginalName("OLED_SH1107_128_64")] OledSh110712864 = 4,
           }
 
           public enum DisplayMode {
