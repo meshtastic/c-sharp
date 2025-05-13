@@ -13,6 +13,10 @@ public class FilteredTypeInspector : TypeInspectorSkeleton
         this.inner = inner;
     }
 
+    public override string GetEnumName(Type enumType, string name) => inner.GetEnumName(enumType, name);
+
+    public override string GetEnumValue(object enumValue) => inner.GetEnumValue(enumValue);
+
     public override IEnumerable<IPropertyDescriptor> GetProperties(Type type, object? container)
     {
         var properties = inner.GetProperties(type, container)
