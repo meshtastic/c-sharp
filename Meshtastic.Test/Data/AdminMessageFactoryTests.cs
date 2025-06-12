@@ -150,4 +150,19 @@ public class AdminMessageFactoryTests
         var result = factory.CreateGetCannedMessage();
         result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
     }
+
+    [Test]
+    public void CreateSendInputEventMessage_Should_ReturnValidAdminMessage()
+    {
+        var inputEvent = new AdminMessage.Types.InputEvent()
+        {
+            EventCode = 1,
+            KbChar = 65,
+            TouchX = 100,
+            TouchY = 200
+        };
+
+        var result = factory.CreateSendInputEventMessage(inputEvent);
+        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+    }
 }

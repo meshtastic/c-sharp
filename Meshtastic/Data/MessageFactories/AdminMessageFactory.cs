@@ -156,4 +156,9 @@ public class AdminMessageFactory
     {
         return GetNewMeshPacket(new AdminMessage() { RemoveFixedPosition = true });
     }
+
+    public MeshPacket CreateSendInputEventMessage(AdminMessage.Types.InputEvent inputEvent)
+    {
+        return GetNewMeshPacket(new AdminMessage() { SendInputEvent = inputEvent });
+    }
 }
