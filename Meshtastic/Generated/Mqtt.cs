@@ -28,7 +28,7 @@ namespace Meshtastic.Protobufs {
             "aWMvY29uZmlnLnByb3RvGhVtZXNodGFzdGljL21lc2gucHJvdG8iYQoPU2Vy",
             "dmljZUVudmVsb3BlEiYKBnBhY2tldBgBIAEoCzIWLm1lc2h0YXN0aWMuTWVz",
             "aFBhY2tldBISCgpjaGFubmVsX2lkGAIgASgJEhIKCmdhdGV3YXlfaWQYAyAB",
-            "KAkivAMKCU1hcFJlcG9ydBIRCglsb25nX25hbWUYASABKAkSEgoKc2hvcnRf",
+            "KAki3wMKCU1hcFJlcG9ydBIRCglsb25nX25hbWUYASABKAkSEgoKc2hvcnRf",
             "bmFtZRgCIAEoCRIyCgRyb2xlGAMgASgOMiQubWVzaHRhc3RpYy5Db25maWcu",
             "RGV2aWNlQ29uZmlnLlJvbGUSKwoIaHdfbW9kZWwYBCABKA4yGS5tZXNodGFz",
             "dGljLkhhcmR3YXJlTW9kZWwSGAoQZmlybXdhcmVfdmVyc2lvbhgFIAEoCRI4",
@@ -37,15 +37,16 @@ namespace Meshtastic.Protobufs {
             "Yy5Db25maWcuTG9SYUNvbmZpZy5Nb2RlbVByZXNldBIbChNoYXNfZGVmYXVs",
             "dF9jaGFubmVsGAggASgIEhIKCmxhdGl0dWRlX2kYCSABKA8SEwoLbG9uZ2l0",
             "dWRlX2kYCiABKA8SEAoIYWx0aXR1ZGUYCyABKAUSGgoScG9zaXRpb25fcHJl",
-            "Y2lzaW9uGAwgASgNEh4KFm51bV9vbmxpbmVfbG9jYWxfbm9kZXMYDSABKA1C",
-            "XwoTY29tLmdlZWtzdmlsbGUubWVzaEIKTVFUVFByb3Rvc1oiZ2l0aHViLmNv",
-            "bS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9i",
-            "dWZzugIAYgZwcm90bzM="));
+            "Y2lzaW9uGAwgASgNEh4KFm51bV9vbmxpbmVfbG9jYWxfbm9kZXMYDSABKA0S",
+            "IQoZaGFzX29wdGVkX3JlcG9ydF9sb2NhdGlvbhgOIAEoCEJfChNjb20uZ2Vl",
+            "a3N2aWxsZS5tZXNoQgpNUVRUUHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0",
+            "aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ServiceEnvelope), global::Meshtastic.Protobufs.ServiceEnvelope.Parser, new[]{ "Packet", "ChannelId", "GatewayId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MapReport), global::Meshtastic.Protobufs.MapReport.Parser, new[]{ "LongName", "ShortName", "Role", "HwModel", "FirmwareVersion", "Region", "ModemPreset", "HasDefaultChannel", "LatitudeI", "LongitudeI", "Altitude", "PositionPrecision", "NumOnlineLocalNodes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.MapReport), global::Meshtastic.Protobufs.MapReport.Parser, new[]{ "LongName", "ShortName", "Role", "HwModel", "FirmwareVersion", "Region", "ModemPreset", "HasDefaultChannel", "LatitudeI", "LongitudeI", "Altitude", "PositionPrecision", "NumOnlineLocalNodes", "HasOptedReportLocation" }, null, null, null, null)
           }));
     }
     #endregion
@@ -403,6 +404,7 @@ namespace Meshtastic.Protobufs {
       altitude_ = other.altitude_;
       positionPrecision_ = other.positionPrecision_;
       numOnlineLocalNodes_ = other.numOnlineLocalNodes_;
+      hasOptedReportLocation_ = other.hasOptedReportLocation_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -622,6 +624,23 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "has_opted_report_location" field.</summary>
+    public const int HasOptedReportLocationFieldNumber = 14;
+    private bool hasOptedReportLocation_;
+    /// <summary>
+    ///
+    /// User has opted in to share their location (map report) with the mqtt server
+    /// Controlled by map_report.should_report_location
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOptedReportLocation {
+      get { return hasOptedReportLocation_; }
+      set {
+        hasOptedReportLocation_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -650,6 +669,7 @@ namespace Meshtastic.Protobufs {
       if (Altitude != other.Altitude) return false;
       if (PositionPrecision != other.PositionPrecision) return false;
       if (NumOnlineLocalNodes != other.NumOnlineLocalNodes) return false;
+      if (HasOptedReportLocation != other.HasOptedReportLocation) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -670,6 +690,7 @@ namespace Meshtastic.Protobufs {
       if (Altitude != 0) hash ^= Altitude.GetHashCode();
       if (PositionPrecision != 0) hash ^= PositionPrecision.GetHashCode();
       if (NumOnlineLocalNodes != 0) hash ^= NumOnlineLocalNodes.GetHashCode();
+      if (HasOptedReportLocation != false) hash ^= HasOptedReportLocation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -740,6 +761,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(104);
         output.WriteUInt32(NumOnlineLocalNodes);
       }
+      if (HasOptedReportLocation != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(HasOptedReportLocation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -802,6 +827,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(104);
         output.WriteUInt32(NumOnlineLocalNodes);
       }
+      if (HasOptedReportLocation != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(HasOptedReportLocation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -850,6 +879,9 @@ namespace Meshtastic.Protobufs {
       }
       if (NumOnlineLocalNodes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumOnlineLocalNodes);
+      }
+      if (HasOptedReportLocation != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -901,6 +933,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.NumOnlineLocalNodes != 0) {
         NumOnlineLocalNodes = other.NumOnlineLocalNodes;
+      }
+      if (other.HasOptedReportLocation != false) {
+        HasOptedReportLocation = other.HasOptedReportLocation;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -973,6 +1008,10 @@ namespace Meshtastic.Protobufs {
             NumOnlineLocalNodes = input.ReadUInt32();
             break;
           }
+          case 112: {
+            HasOptedReportLocation = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1042,6 +1081,10 @@ namespace Meshtastic.Protobufs {
           }
           case 104: {
             NumOnlineLocalNodes = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            HasOptedReportLocation = input.ReadBool();
             break;
           }
         }

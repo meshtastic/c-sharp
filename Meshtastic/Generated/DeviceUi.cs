@@ -45,16 +45,16 @@ namespace Meshtastic.Protobufs {
             "ASgFEhAKCGxhdGl0dWRlGAIgASgFEhEKCWxvbmdpdHVkZRgDIAEoBSJMCgNN",
             "YXASIgoEaG9tZRgBIAEoCzIULm1lc2h0YXN0aWMuR2VvUG9pbnQSDQoFc3R5",
             "bGUYAiABKAkSEgoKZm9sbG93X2dwcxgDIAEoCColCgVUaGVtZRIICgREQVJL",
-            "EAASCQoFTElHSFQQARIHCgNSRUQQAiqaAgoITGFuZ3VhZ2USCwoHRU5HTElT",
+            "EAASCQoFTElHSFQQARIHCgNSRUQQAiqpAgoITGFuZ3VhZ2USCwoHRU5HTElT",
             "SBAAEgoKBkZSRU5DSBABEgoKBkdFUk1BThACEgsKB0lUQUxJQU4QAxIOCgpQ",
             "T1JUVUdVRVNFEAQSCwoHU1BBTklTSBAFEgsKB1NXRURJU0gQBhILCgdGSU5O",
             "SVNIEAcSCgoGUE9MSVNIEAgSCwoHVFVSS0lTSBAJEgsKB1NFUkJJQU4QChIL",
             "CgdSVVNTSUFOEAsSCQoFRFVUQ0gQDBIJCgVHUkVFSxANEg0KCU5PUldFR0lB",
-            "ThAOEg0KCVNMT1ZFTklBThAPEg0KCVVLUkFJTklBThAQEhYKElNJTVBMSUZJ",
-            "RURfQ0hJTkVTRRAeEhcKE1RSQURJVElPTkFMX0NISU5FU0UQH0JjChNjb20u",
-            "Z2Vla3N2aWxsZS5tZXNoQg5EZXZpY2VVSVByb3Rvc1oiZ2l0aHViLmNvbS9t",
-            "ZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZz",
-            "ugIAYgZwcm90bzM="));
+            "ThAOEg0KCVNMT1ZFTklBThAPEg0KCVVLUkFJTklBThAQEg0KCUJVTEdBUklB",
+            "ThAREhYKElNJTVBMSUZJRURfQ0hJTkVTRRAeEhcKE1RSQURJVElPTkFMX0NI",
+            "SU5FU0UQH0JjChNjb20uZ2Vla3N2aWxsZS5tZXNoQg5EZXZpY2VVSVByb3Rv",
+            "c1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0",
+            "YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -177,6 +177,11 @@ namespace Meshtastic.Protobufs {
     /// Ukrainian
     /// </summary>
     [pbr::OriginalName("UKRAINIAN")] Ukrainian = 16,
+    /// <summary>
+    ///
+    /// Bulgarian
+    /// </summary>
+    [pbr::OriginalName("BULGARIAN")] Bulgarian = 17,
     /// <summary>
     ///
     /// Simplified Chinese (experimental)

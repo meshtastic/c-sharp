@@ -70,40 +70,49 @@ namespace Meshtastic.Protobufs {
             "FQoTX3BtMjVfZW52aXJvbm1lbnRhbEIWChRfcG0xMDBfZW52aXJvbm1lbnRh",
             "bEIRCg9fcGFydGljbGVzXzAzdW1CEQoPX3BhcnRpY2xlc18wNXVtQhEKD19w",
             "YXJ0aWNsZXNfMTB1bUIRCg9fcGFydGljbGVzXzI1dW1CEQoPX3BhcnRpY2xl",
-            "c181MHVtQhIKEF9wYXJ0aWNsZXNfMTAwdW1CBgoEX2NvMiKfAgoKTG9jYWxT",
+            "c181MHVtQhIKEF9wYXJ0aWNsZXNfMTAwdW1CBgoEX2NvMiLSAgoKTG9jYWxT",
             "dGF0cxIWCg51cHRpbWVfc2Vjb25kcxgBIAEoDRIbChNjaGFubmVsX3V0aWxp",
             "emF0aW9uGAIgASgCEhMKC2Fpcl91dGlsX3R4GAMgASgCEhYKDm51bV9wYWNr",
             "ZXRzX3R4GAQgASgNEhYKDm51bV9wYWNrZXRzX3J4GAUgASgNEhoKEm51bV9w",
             "YWNrZXRzX3J4X2JhZBgGIAEoDRIYChBudW1fb25saW5lX25vZGVzGAcgASgN",
             "EhcKD251bV90b3RhbF9ub2RlcxgIIAEoDRITCgtudW1fcnhfZHVwZRgJIAEo",
             "DRIUCgxudW1fdHhfcmVsYXkYCiABKA0SHQoVbnVtX3R4X3JlbGF5X2NhbmNl",
-            "bGVkGAsgASgNInsKDUhlYWx0aE1ldHJpY3MSFgoJaGVhcnRfYnBtGAEgASgN",
-            "SACIAQESEQoEc3BPMhgCIAEoDUgBiAEBEhgKC3RlbXBlcmF0dXJlGAMgASgC",
-            "SAKIAQFCDAoKX2hlYXJ0X2JwbUIHCgVfc3BPMkIOCgxfdGVtcGVyYXR1cmUi",
-            "7QIKCVRlbGVtZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRldmljZV9tZXRyaWNz",
-            "GAIgASgLMhkubWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNzSAASPQoTZW52aXJv",
-            "bm1lbnRfbWV0cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMuRW52aXJvbm1lbnRN",
-            "ZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgEIAEoCzIdLm1lc2h0",
-            "YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dlcl9tZXRyaWNzGAUg",
-            "ASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIABItCgtsb2NhbF9zdGF0",
-            "cxgGIAEoCzIWLm1lc2h0YXN0aWMuTG9jYWxTdGF0c0gAEjMKDmhlYWx0aF9t",
-            "ZXRyaWNzGAcgASgLMhkubWVzaHRhc3RpYy5IZWFsdGhNZXRyaWNzSABCCQoH",
-            "dmFyaWFudCI+Cg1OYXU3ODAyQ29uZmlnEhIKCnplcm9PZmZzZXQYASABKAUS",
-            "GQoRY2FsaWJyYXRpb25GYWN0b3IYAiABKAIqkQQKE1RlbGVtZXRyeVNlbnNv",
-            "clR5cGUSEAoMU0VOU09SX1VOU0VUEAASCgoGQk1FMjgwEAESCgoGQk1FNjgw",
-            "EAISCwoHTUNQOTgwOBADEgoKBklOQTI2MBAEEgoKBklOQTIxORAFEgoKBkJN",
-            "UDI4MBAGEgkKBVNIVEMzEAcSCQoFTFBTMjIQCBILCgdRTUM2MzEwEAkSCwoH",
-            "UU1JODY1OBAKEgwKCFFNQzU4ODNMEAsSCQoFU0hUMzEQDBIMCghQTVNBMDAz",
-            "SRANEgsKB0lOQTMyMjEQDhIKCgZCTVAwODUQDxIMCghSQ1dMOTYyMBAQEgkK",
-            "BVNIVDRYEBESDAoIVkVNTDc3MDAQEhIMCghNTFg5MDYzMhATEgsKB09QVDMw",
-            "MDEQFBIMCghMVFIzOTBVVhAVEg4KClRTTDI1OTExRk4QFhIJCgVBSFQxMBAX",
-            "EhAKDERGUk9CT1RfTEFSSxAYEgsKB05BVTc4MDIQGRIKCgZCTVAzWFgQGhIM",
-            "CghJQ00yMDk0OBAbEgwKCE1BWDE3MDQ4EBwSEQoNQ1VTVE9NX1NFTlNPUhAd",
-            "EgwKCE1BWDMwMTAyEB4SDAoITUxYOTA2MTQQHxIJCgVTQ0Q0WBAgEgsKB1JB",
-            "RFNFTlMQIRIKCgZJTkEyMjYQIhIQCgxERlJPQk9UX1JBSU4QIxIKCgZEUFMz",
-            "MTAQJBIMCghSQUsxMjAzNRAlQmQKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1Rl",
-            "bGVtZXRyeVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVy",
-            "YXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "bGVkGAsgASgNEhgKEGhlYXBfdG90YWxfYnl0ZXMYDCABKA0SFwoPaGVhcF9m",
+            "cmVlX2J5dGVzGA0gASgNInsKDUhlYWx0aE1ldHJpY3MSFgoJaGVhcnRfYnBt",
+            "GAEgASgNSACIAQESEQoEc3BPMhgCIAEoDUgBiAEBEhgKC3RlbXBlcmF0dXJl",
+            "GAMgASgCSAKIAQFCDAoKX2hlYXJ0X2JwbUIHCgVfc3BPMkIOCgxfdGVtcGVy",
+            "YXR1cmUikQIKC0hvc3RNZXRyaWNzEhYKDnVwdGltZV9zZWNvbmRzGAEgASgN",
+            "EhUKDWZyZWVtZW1fYnl0ZXMYAiABKAQSFwoPZGlza2ZyZWUxX2J5dGVzGAMg",
+            "ASgEEhwKD2Rpc2tmcmVlMl9ieXRlcxgEIAEoBEgAiAEBEhwKD2Rpc2tmcmVl",
+            "M19ieXRlcxgFIAEoBEgBiAEBEg0KBWxvYWQxGAYgASgNEg0KBWxvYWQ1GAcg",
+            "ASgNEg4KBmxvYWQxNRgIIAEoDRIYCgt1c2VyX3N0cmluZxgJIAEoCUgCiAEB",
+            "QhIKEF9kaXNrZnJlZTJfYnl0ZXNCEgoQX2Rpc2tmcmVlM19ieXRlc0IOCgxf",
+            "dXNlcl9zdHJpbmcingMKCVRlbGVtZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRl",
+            "dmljZV9tZXRyaWNzGAIgASgLMhkubWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNz",
+            "SAASPQoTZW52aXJvbm1lbnRfbWV0cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMu",
+            "RW52aXJvbm1lbnRNZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgE",
+            "IAEoCzIdLm1lc2h0YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dl",
+            "cl9tZXRyaWNzGAUgASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIABIt",
+            "Cgtsb2NhbF9zdGF0cxgGIAEoCzIWLm1lc2h0YXN0aWMuTG9jYWxTdGF0c0gA",
+            "EjMKDmhlYWx0aF9tZXRyaWNzGAcgASgLMhkubWVzaHRhc3RpYy5IZWFsdGhN",
+            "ZXRyaWNzSAASLwoMaG9zdF9tZXRyaWNzGAggASgLMhcubWVzaHRhc3RpYy5I",
+            "b3N0TWV0cmljc0gAQgkKB3ZhcmlhbnQiPgoNTmF1NzgwMkNvbmZpZxISCgp6",
+            "ZXJvT2Zmc2V0GAEgASgFEhkKEWNhbGlicmF0aW9uRmFjdG9yGAIgASgCKqwE",
+            "ChNUZWxlbWV0cnlTZW5zb3JUeXBlEhAKDFNFTlNPUl9VTlNFVBAAEgoKBkJN",
+            "RTI4MBABEgoKBkJNRTY4MBACEgsKB01DUDk4MDgQAxIKCgZJTkEyNjAQBBIK",
+            "CgZJTkEyMTkQBRIKCgZCTVAyODAQBhIJCgVTSFRDMxAHEgkKBUxQUzIyEAgS",
+            "CwoHUU1DNjMxMBAJEgsKB1FNSTg2NTgQChIMCghRTUM1ODgzTBALEgkKBVNI",
+            "VDMxEAwSDAoIUE1TQTAwM0kQDRILCgdJTkEzMjIxEA4SCgoGQk1QMDg1EA8S",
+            "DAoIUkNXTDk2MjAQEBIJCgVTSFQ0WBAREgwKCFZFTUw3NzAwEBISDAoITUxY",
+            "OTA2MzIQExILCgdPUFQzMDAxEBQSDAoITFRSMzkwVVYQFRIOCgpUU0wyNTkx",
+            "MUZOEBYSCQoFQUhUMTAQFxIQCgxERlJPQk9UX0xBUksQGBILCgdOQVU3ODAy",
+            "EBkSCgoGQk1QM1hYEBoSDAoISUNNMjA5NDgQGxIMCghNQVgxNzA0OBAcEhEK",
+            "DUNVU1RPTV9TRU5TT1IQHRIMCghNQVgzMDEwMhAeEgwKCE1MWDkwNjE0EB8S",
+            "CQoFU0NENFgQIBILCgdSQURTRU5TECESCgoGSU5BMjI2ECISEAoMREZST0JP",
+            "VF9SQUlOECMSCgoGRFBTMzEwECQSDAoIUkFLMTIwMzUQJRIMCghNQVgxNzI2",
+            "MRAmEgsKB1BDVDIwNzUQJ0JkChNjb20uZ2Vla3N2aWxsZS5tZXNoQg9UZWxl",
+            "bWV0cnlQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0",
+            "ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -111,9 +120,10 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2" }, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled", "HeapTotalBytes", "HeapFreeBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HealthMetrics), global::Meshtastic.Protobufs.HealthMetrics.Parser, new[]{ "HeartBpm", "SpO2", "Temperature" }, new[]{ "HeartBpm", "SpO2", "Temperature" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics", "LocalStats", "HealthMetrics" }, new[]{ "Variant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HostMetrics), global::Meshtastic.Protobufs.HostMetrics.Parser, new[]{ "UptimeSeconds", "FreememBytes", "Diskfree1Bytes", "Diskfree2Bytes", "Diskfree3Bytes", "Load1", "Load5", "Load15", "UserString" }, new[]{ "Diskfree2Bytes", "Diskfree3Bytes", "UserString" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics", "LocalStats", "HealthMetrics", "HostMetrics" }, new[]{ "Variant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Nau7802Config), global::Meshtastic.Protobufs.Nau7802Config.Parser, new[]{ "ZeroOffset", "CalibrationFactor" }, null, null, null, null)
           }));
     }
@@ -316,6 +326,16 @@ namespace Meshtastic.Protobufs {
     /// RAKWireless RAK12035 Soil Moisture Sensor Module
     /// </summary>
     [pbr::OriginalName("RAK12035")] Rak12035 = 37,
+    /// <summary>
+    ///
+    /// MAX17261 lipo battery gauge
+    /// </summary>
+    [pbr::OriginalName("MAX17261")] Max17261 = 38,
+    /// <summary>
+    ///
+    /// PCT2075 Temperature Sensor
+    /// </summary>
+    [pbr::OriginalName("PCT2075")] Pct2075 = 39,
   }
 
   #endregion
@@ -3617,6 +3637,8 @@ namespace Meshtastic.Protobufs {
       numRxDupe_ = other.numRxDupe_;
       numTxRelay_ = other.numTxRelay_;
       numTxRelayCanceled_ = other.numTxRelayCanceled_;
+      heapTotalBytes_ = other.heapTotalBytes_;
+      heapFreeBytes_ = other.heapFreeBytes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3804,6 +3826,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "heap_total_bytes" field.</summary>
+    public const int HeapTotalBytesFieldNumber = 12;
+    private uint heapTotalBytes_;
+    /// <summary>
+    ///
+    /// Number of bytes used in the heap
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HeapTotalBytes {
+      get { return heapTotalBytes_; }
+      set {
+        heapTotalBytes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "heap_free_bytes" field.</summary>
+    public const int HeapFreeBytesFieldNumber = 13;
+    private uint heapFreeBytes_;
+    /// <summary>
+    ///
+    /// Number of bytes free in the heap
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HeapFreeBytes {
+      get { return heapFreeBytes_; }
+      set {
+        heapFreeBytes_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3830,6 +3884,8 @@ namespace Meshtastic.Protobufs {
       if (NumRxDupe != other.NumRxDupe) return false;
       if (NumTxRelay != other.NumTxRelay) return false;
       if (NumTxRelayCanceled != other.NumTxRelayCanceled) return false;
+      if (HeapTotalBytes != other.HeapTotalBytes) return false;
+      if (HeapFreeBytes != other.HeapFreeBytes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3848,6 +3904,8 @@ namespace Meshtastic.Protobufs {
       if (NumRxDupe != 0) hash ^= NumRxDupe.GetHashCode();
       if (NumTxRelay != 0) hash ^= NumTxRelay.GetHashCode();
       if (NumTxRelayCanceled != 0) hash ^= NumTxRelayCanceled.GetHashCode();
+      if (HeapTotalBytes != 0) hash ^= HeapTotalBytes.GetHashCode();
+      if (HeapFreeBytes != 0) hash ^= HeapFreeBytes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3910,6 +3968,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(88);
         output.WriteUInt32(NumTxRelayCanceled);
       }
+      if (HeapTotalBytes != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(HeapTotalBytes);
+      }
+      if (HeapFreeBytes != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(HeapFreeBytes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3964,6 +4030,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(88);
         output.WriteUInt32(NumTxRelayCanceled);
       }
+      if (HeapTotalBytes != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(HeapTotalBytes);
+      }
+      if (HeapFreeBytes != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(HeapFreeBytes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4006,6 +4080,12 @@ namespace Meshtastic.Protobufs {
       }
       if (NumTxRelayCanceled != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumTxRelayCanceled);
+      }
+      if (HeapTotalBytes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HeapTotalBytes);
+      }
+      if (HeapFreeBytes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HeapFreeBytes);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4051,6 +4131,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.NumTxRelayCanceled != 0) {
         NumTxRelayCanceled = other.NumTxRelayCanceled;
+      }
+      if (other.HeapTotalBytes != 0) {
+        HeapTotalBytes = other.HeapTotalBytes;
+      }
+      if (other.HeapFreeBytes != 0) {
+        HeapFreeBytes = other.HeapFreeBytes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4115,6 +4201,14 @@ namespace Meshtastic.Protobufs {
             NumTxRelayCanceled = input.ReadUInt32();
             break;
           }
+          case 96: {
+            HeapTotalBytes = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            HeapFreeBytes = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -4176,6 +4270,14 @@ namespace Meshtastic.Protobufs {
           }
           case 88: {
             NumTxRelayCanceled = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            HeapTotalBytes = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            HeapFreeBytes = input.ReadUInt32();
             break;
           }
         }
@@ -4522,6 +4624,587 @@ namespace Meshtastic.Protobufs {
 
   /// <summary>
   ///
+  /// Linux host metrics
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class HostMetrics : pb::IMessage<HostMetrics>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<HostMetrics> _parser = new pb::MessageParser<HostMetrics>(() => new HostMetrics());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<HostMetrics> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HostMetrics() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HostMetrics(HostMetrics other) : this() {
+      _hasBits0 = other._hasBits0;
+      uptimeSeconds_ = other.uptimeSeconds_;
+      freememBytes_ = other.freememBytes_;
+      diskfree1Bytes_ = other.diskfree1Bytes_;
+      diskfree2Bytes_ = other.diskfree2Bytes_;
+      diskfree3Bytes_ = other.diskfree3Bytes_;
+      load1_ = other.load1_;
+      load5_ = other.load5_;
+      load15_ = other.load15_;
+      userString_ = other.userString_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HostMetrics Clone() {
+      return new HostMetrics(this);
+    }
+
+    /// <summary>Field number for the "uptime_seconds" field.</summary>
+    public const int UptimeSecondsFieldNumber = 1;
+    private uint uptimeSeconds_;
+    /// <summary>
+    ///
+    /// Host system uptime
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UptimeSeconds {
+      get { return uptimeSeconds_; }
+      set {
+        uptimeSeconds_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "freemem_bytes" field.</summary>
+    public const int FreememBytesFieldNumber = 2;
+    private ulong freememBytes_;
+    /// <summary>
+    ///
+    /// Host system free memory
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FreememBytes {
+      get { return freememBytes_; }
+      set {
+        freememBytes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "diskfree1_bytes" field.</summary>
+    public const int Diskfree1BytesFieldNumber = 3;
+    private ulong diskfree1Bytes_;
+    /// <summary>
+    ///
+    /// Host system disk space free for /
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Diskfree1Bytes {
+      get { return diskfree1Bytes_; }
+      set {
+        diskfree1Bytes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "diskfree2_bytes" field.</summary>
+    public const int Diskfree2BytesFieldNumber = 4;
+    private readonly static ulong Diskfree2BytesDefaultValue = 0UL;
+
+    private ulong diskfree2Bytes_;
+    /// <summary>
+    ///
+    /// Secondary system disk space free
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Diskfree2Bytes {
+      get { if ((_hasBits0 & 1) != 0) { return diskfree2Bytes_; } else { return Diskfree2BytesDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        diskfree2Bytes_ = value;
+      }
+    }
+    /// <summary>Gets whether the "diskfree2_bytes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDiskfree2Bytes {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "diskfree2_bytes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDiskfree2Bytes() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "diskfree3_bytes" field.</summary>
+    public const int Diskfree3BytesFieldNumber = 5;
+    private readonly static ulong Diskfree3BytesDefaultValue = 0UL;
+
+    private ulong diskfree3Bytes_;
+    /// <summary>
+    ///
+    /// Tertiary disk space free
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Diskfree3Bytes {
+      get { if ((_hasBits0 & 2) != 0) { return diskfree3Bytes_; } else { return Diskfree3BytesDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        diskfree3Bytes_ = value;
+      }
+    }
+    /// <summary>Gets whether the "diskfree3_bytes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDiskfree3Bytes {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "diskfree3_bytes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDiskfree3Bytes() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "load1" field.</summary>
+    public const int Load1FieldNumber = 6;
+    private uint load1_;
+    /// <summary>
+    ///
+    /// Host system one minute load in 1/100ths
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Load1 {
+      get { return load1_; }
+      set {
+        load1_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "load5" field.</summary>
+    public const int Load5FieldNumber = 7;
+    private uint load5_;
+    /// <summary>
+    ///
+    /// Host system five minute load  in 1/100ths
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Load5 {
+      get { return load5_; }
+      set {
+        load5_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "load15" field.</summary>
+    public const int Load15FieldNumber = 8;
+    private uint load15_;
+    /// <summary>
+    ///
+    /// Host system fifteen minute load  in 1/100ths
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Load15 {
+      get { return load15_; }
+      set {
+        load15_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_string" field.</summary>
+    public const int UserStringFieldNumber = 9;
+    private readonly static string UserStringDefaultValue = "";
+
+    private string userString_;
+    /// <summary>
+    ///
+    /// Optional User-provided string for arbitrary host system information
+    /// that doesn't make sense as a dedicated entry.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserString {
+      get { return userString_ ?? UserStringDefaultValue; }
+      set {
+        userString_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "user_string" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserString {
+      get { return userString_ != null; }
+    }
+    /// <summary>Clears the value of the "user_string" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserString() {
+      userString_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as HostMetrics);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(HostMetrics other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UptimeSeconds != other.UptimeSeconds) return false;
+      if (FreememBytes != other.FreememBytes) return false;
+      if (Diskfree1Bytes != other.Diskfree1Bytes) return false;
+      if (Diskfree2Bytes != other.Diskfree2Bytes) return false;
+      if (Diskfree3Bytes != other.Diskfree3Bytes) return false;
+      if (Load1 != other.Load1) return false;
+      if (Load5 != other.Load5) return false;
+      if (Load15 != other.Load15) return false;
+      if (UserString != other.UserString) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UptimeSeconds != 0) hash ^= UptimeSeconds.GetHashCode();
+      if (FreememBytes != 0UL) hash ^= FreememBytes.GetHashCode();
+      if (Diskfree1Bytes != 0UL) hash ^= Diskfree1Bytes.GetHashCode();
+      if (HasDiskfree2Bytes) hash ^= Diskfree2Bytes.GetHashCode();
+      if (HasDiskfree3Bytes) hash ^= Diskfree3Bytes.GetHashCode();
+      if (Load1 != 0) hash ^= Load1.GetHashCode();
+      if (Load5 != 0) hash ^= Load5.GetHashCode();
+      if (Load15 != 0) hash ^= Load15.GetHashCode();
+      if (HasUserString) hash ^= UserString.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UptimeSeconds != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UptimeSeconds);
+      }
+      if (FreememBytes != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(FreememBytes);
+      }
+      if (Diskfree1Bytes != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Diskfree1Bytes);
+      }
+      if (HasDiskfree2Bytes) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Diskfree2Bytes);
+      }
+      if (HasDiskfree3Bytes) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(Diskfree3Bytes);
+      }
+      if (Load1 != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Load1);
+      }
+      if (Load5 != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Load5);
+      }
+      if (Load15 != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Load15);
+      }
+      if (HasUserString) {
+        output.WriteRawTag(74);
+        output.WriteString(UserString);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UptimeSeconds != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UptimeSeconds);
+      }
+      if (FreememBytes != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(FreememBytes);
+      }
+      if (Diskfree1Bytes != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Diskfree1Bytes);
+      }
+      if (HasDiskfree2Bytes) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Diskfree2Bytes);
+      }
+      if (HasDiskfree3Bytes) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(Diskfree3Bytes);
+      }
+      if (Load1 != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Load1);
+      }
+      if (Load5 != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Load5);
+      }
+      if (Load15 != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Load15);
+      }
+      if (HasUserString) {
+        output.WriteRawTag(74);
+        output.WriteString(UserString);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UptimeSeconds != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UptimeSeconds);
+      }
+      if (FreememBytes != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FreememBytes);
+      }
+      if (Diskfree1Bytes != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Diskfree1Bytes);
+      }
+      if (HasDiskfree2Bytes) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Diskfree2Bytes);
+      }
+      if (HasDiskfree3Bytes) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Diskfree3Bytes);
+      }
+      if (Load1 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Load1);
+      }
+      if (Load5 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Load5);
+      }
+      if (Load15 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Load15);
+      }
+      if (HasUserString) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserString);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(HostMetrics other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UptimeSeconds != 0) {
+        UptimeSeconds = other.UptimeSeconds;
+      }
+      if (other.FreememBytes != 0UL) {
+        FreememBytes = other.FreememBytes;
+      }
+      if (other.Diskfree1Bytes != 0UL) {
+        Diskfree1Bytes = other.Diskfree1Bytes;
+      }
+      if (other.HasDiskfree2Bytes) {
+        Diskfree2Bytes = other.Diskfree2Bytes;
+      }
+      if (other.HasDiskfree3Bytes) {
+        Diskfree3Bytes = other.Diskfree3Bytes;
+      }
+      if (other.Load1 != 0) {
+        Load1 = other.Load1;
+      }
+      if (other.Load5 != 0) {
+        Load5 = other.Load5;
+      }
+      if (other.Load15 != 0) {
+        Load15 = other.Load15;
+      }
+      if (other.HasUserString) {
+        UserString = other.UserString;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UptimeSeconds = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            FreememBytes = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            Diskfree1Bytes = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            Diskfree2Bytes = input.ReadUInt64();
+            break;
+          }
+          case 40: {
+            Diskfree3Bytes = input.ReadUInt64();
+            break;
+          }
+          case 48: {
+            Load1 = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Load5 = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Load15 = input.ReadUInt32();
+            break;
+          }
+          case 74: {
+            UserString = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UptimeSeconds = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            FreememBytes = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            Diskfree1Bytes = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            Diskfree2Bytes = input.ReadUInt64();
+            break;
+          }
+          case 40: {
+            Diskfree3Bytes = input.ReadUInt64();
+            break;
+          }
+          case 48: {
+            Load1 = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Load5 = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Load15 = input.ReadUInt32();
+            break;
+          }
+          case 74: {
+            UserString = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
   /// Types of Measurements the telemetry module is equipped to handle
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -4539,7 +5222,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4578,6 +5261,9 @@ namespace Meshtastic.Protobufs {
           break;
         case VariantOneofCase.HealthMetrics:
           HealthMetrics = other.HealthMetrics.Clone();
+          break;
+        case VariantOneofCase.HostMetrics:
+          HostMetrics = other.HostMetrics.Clone();
           break;
       }
 
@@ -4702,6 +5388,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "host_metrics" field.</summary>
+    public const int HostMetricsFieldNumber = 8;
+    /// <summary>
+    ///
+    /// Linux host metrics
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.HostMetrics HostMetrics {
+      get { return variantCase_ == VariantOneofCase.HostMetrics ? (global::Meshtastic.Protobufs.HostMetrics) variant_ : null; }
+      set {
+        variant_ = value;
+        variantCase_ = value == null ? VariantOneofCase.None : VariantOneofCase.HostMetrics;
+      }
+    }
+
     private object variant_;
     /// <summary>Enum of possible cases for the "variant" oneof.</summary>
     public enum VariantOneofCase {
@@ -4712,6 +5414,7 @@ namespace Meshtastic.Protobufs {
       PowerMetrics = 5,
       LocalStats = 6,
       HealthMetrics = 7,
+      HostMetrics = 8,
     }
     private VariantOneofCase variantCase_ = VariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4749,6 +5452,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(PowerMetrics, other.PowerMetrics)) return false;
       if (!object.Equals(LocalStats, other.LocalStats)) return false;
       if (!object.Equals(HealthMetrics, other.HealthMetrics)) return false;
+      if (!object.Equals(HostMetrics, other.HostMetrics)) return false;
       if (VariantCase != other.VariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4764,6 +5468,7 @@ namespace Meshtastic.Protobufs {
       if (variantCase_ == VariantOneofCase.PowerMetrics) hash ^= PowerMetrics.GetHashCode();
       if (variantCase_ == VariantOneofCase.LocalStats) hash ^= LocalStats.GetHashCode();
       if (variantCase_ == VariantOneofCase.HealthMetrics) hash ^= HealthMetrics.GetHashCode();
+      if (variantCase_ == VariantOneofCase.HostMetrics) hash ^= HostMetrics.GetHashCode();
       hash ^= (int) variantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4811,6 +5516,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(58);
         output.WriteMessage(HealthMetrics);
       }
+      if (variantCase_ == VariantOneofCase.HostMetrics) {
+        output.WriteRawTag(66);
+        output.WriteMessage(HostMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4849,6 +5558,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(58);
         output.WriteMessage(HealthMetrics);
       }
+      if (variantCase_ == VariantOneofCase.HostMetrics) {
+        output.WriteRawTag(66);
+        output.WriteMessage(HostMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4879,6 +5592,9 @@ namespace Meshtastic.Protobufs {
       }
       if (variantCase_ == VariantOneofCase.HealthMetrics) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(HealthMetrics);
+      }
+      if (variantCase_ == VariantOneofCase.HostMetrics) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HostMetrics);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4931,6 +5647,12 @@ namespace Meshtastic.Protobufs {
             HealthMetrics = new global::Meshtastic.Protobufs.HealthMetrics();
           }
           HealthMetrics.MergeFrom(other.HealthMetrics);
+          break;
+        case VariantOneofCase.HostMetrics:
+          if (HostMetrics == null) {
+            HostMetrics = new global::Meshtastic.Protobufs.HostMetrics();
+          }
+          HostMetrics.MergeFrom(other.HostMetrics);
           break;
       }
 
@@ -5011,6 +5733,15 @@ namespace Meshtastic.Protobufs {
             HealthMetrics = subBuilder;
             break;
           }
+          case 66: {
+            global::Meshtastic.Protobufs.HostMetrics subBuilder = new global::Meshtastic.Protobufs.HostMetrics();
+            if (variantCase_ == VariantOneofCase.HostMetrics) {
+              subBuilder.MergeFrom(HostMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            HostMetrics = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -5088,6 +5819,15 @@ namespace Meshtastic.Protobufs {
             HealthMetrics = subBuilder;
             break;
           }
+          case 66: {
+            global::Meshtastic.Protobufs.HostMetrics subBuilder = new global::Meshtastic.Protobufs.HostMetrics();
+            if (variantCase_ == VariantOneofCase.HostMetrics) {
+              subBuilder.MergeFrom(HostMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            HostMetrics = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -5114,7 +5854,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -28,7 +28,7 @@ namespace Meshtastic.Protobufs {
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
             "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhVtZXNodGFzdGlj",
             "L21lc2gucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90bxoa",
-            "bWVzaHRhc3RpYy9kZXZpY2VfdWkucHJvdG8ighcKDEFkbWluTWVzc2FnZRIX",
+            "bWVzaHRhc3RpYy9kZXZpY2VfdWkucHJvdG8i1hgKDEFkbWluTWVzc2FnZRIX",
             "Cg9zZXNzaW9uX3Bhc3NrZXkYZSABKAwSHQoTZ2V0X2NoYW5uZWxfcmVxdWVz",
             "dBgBIAEoDUgAEjMKFGdldF9jaGFubmVsX3Jlc3BvbnNlGAIgASgLMhMubWVz",
             "aHRhc3RpYy5DaGFubmVsSAASGwoRZ2V0X293bmVyX3JlcXVlc3QYAyABKAhI",
@@ -59,57 +59,69 @@ namespace Meshtastic.Protobufs {
             "cmVzdG9yZV9wcmVmZXJlbmNlcxgZIAEoDjInLm1lc2h0YXN0aWMuQWRtaW5N",
             "ZXNzYWdlLkJhY2t1cExvY2F0aW9uSAASTAoZcmVtb3ZlX2JhY2t1cF9wcmVm",
             "ZXJlbmNlcxgaIAEoDjInLm1lc2h0YXN0aWMuQWRtaW5NZXNzYWdlLkJhY2t1",
-            "cExvY2F0aW9uSAASJQoJc2V0X293bmVyGCAgASgLMhAubWVzaHRhc3RpYy5V",
-            "c2VySAASKgoLc2V0X2NoYW5uZWwYISABKAsyEy5tZXNodGFzdGljLkNoYW5u",
-            "ZWxIABIoCgpzZXRfY29uZmlnGCIgASgLMhIubWVzaHRhc3RpYy5Db25maWdI",
-            "ABI1ChFzZXRfbW9kdWxlX2NvbmZpZxgjIAEoCzIYLm1lc2h0YXN0aWMuTW9k",
-            "dWxlQ29uZmlnSAASLAoic2V0X2Nhbm5lZF9tZXNzYWdlX21vZHVsZV9tZXNz",
-            "YWdlcxgkIAEoCUgAEh4KFHNldF9yaW5ndG9uZV9tZXNzYWdlGCUgASgJSAAS",
-            "GwoRcmVtb3ZlX2J5X25vZGVudW0YJiABKA1IABIbChFzZXRfZmF2b3JpdGVf",
-            "bm9kZRgnIAEoDUgAEh4KFHJlbW92ZV9mYXZvcml0ZV9ub2RlGCggASgNSAAS",
-            "MgoSc2V0X2ZpeGVkX3Bvc2l0aW9uGCkgASgLMhQubWVzaHRhc3RpYy5Qb3Np",
-            "dGlvbkgAEh8KFXJlbW92ZV9maXhlZF9wb3NpdGlvbhgqIAEoCEgAEhcKDXNl",
-            "dF90aW1lX29ubHkYKyABKAdIABIfChVnZXRfdWlfY29uZmlnX3JlcXVlc3QY",
-            "LCABKAhIABI8ChZnZXRfdWlfY29uZmlnX3Jlc3BvbnNlGC0gASgLMhoubWVz",
-            "aHRhc3RpYy5EZXZpY2VVSUNvbmZpZ0gAEjUKD3N0b3JlX3VpX2NvbmZpZxgu",
-            "IAEoCzIaLm1lc2h0YXN0aWMuRGV2aWNlVUlDb25maWdIABIaChBzZXRfaWdu",
-            "b3JlZF9ub2RlGC8gASgNSAASHQoTcmVtb3ZlX2lnbm9yZWRfbm9kZRgwIAEo",
-            "DUgAEh0KE2JlZ2luX2VkaXRfc2V0dGluZ3MYQCABKAhIABIeChRjb21taXRf",
-            "ZWRpdF9zZXR0aW5ncxhBIAEoCEgAEjAKC2FkZF9jb250YWN0GEIgASgLMhku",
-            "bWVzaHRhc3RpYy5TaGFyZWRDb250YWN0SAASHgoUZmFjdG9yeV9yZXNldF9k",
-            "ZXZpY2UYXiABKAVIABIcChJyZWJvb3Rfb3RhX3NlY29uZHMYXyABKAVIABIY",
-            "Cg5leGl0X3NpbXVsYXRvchhgIAEoCEgAEhgKDnJlYm9vdF9zZWNvbmRzGGEg",
-            "ASgFSAASGgoQc2h1dGRvd25fc2Vjb25kcxhiIAEoBUgAEh4KFGZhY3Rvcnlf",
-            "cmVzZXRfY29uZmlnGGMgASgFSAASFgoMbm9kZWRiX3Jlc2V0GGQgASgFSAAi",
-            "1gEKCkNvbmZpZ1R5cGUSEQoNREVWSUNFX0NPTkZJRxAAEhMKD1BPU0lUSU9O",
-            "X0NPTkZJRxABEhAKDFBPV0VSX0NPTkZJRxACEhIKDk5FVFdPUktfQ09ORklH",
-            "EAMSEgoORElTUExBWV9DT05GSUcQBBIPCgtMT1JBX0NPTkZJRxAFEhQKEEJM",
-            "VUVUT09USF9DT05GSUcQBhITCg9TRUNVUklUWV9DT05GSUcQBxIVChFTRVNT",
-            "SU9OS0VZX0NPTkZJRxAIEhMKD0RFVklDRVVJX0NPTkZJRxAJIrsCChBNb2R1",
-            "bGVDb25maWdUeXBlEg8KC01RVFRfQ09ORklHEAASEQoNU0VSSUFMX0NPTkZJ",
-            "RxABEhMKD0VYVE5PVElGX0NPTkZJRxACEhcKE1NUT1JFRk9SV0FSRF9DT05G",
-            "SUcQAxIUChBSQU5HRVRFU1RfQ09ORklHEAQSFAoQVEVMRU1FVFJZX0NPTkZJ",
-            "RxAFEhQKEENBTk5FRE1TR19DT05GSUcQBhIQCgxBVURJT19DT05GSUcQBxIZ",
-            "ChVSRU1PVEVIQVJEV0FSRV9DT05GSUcQCBIXChNORUlHSEJPUklORk9fQ09O",
-            "RklHEAkSGgoWQU1CSUVOVExJR0hUSU5HX0NPTkZJRxAKEhoKFkRFVEVDVElP",
-            "TlNFTlNPUl9DT05GSUcQCxIVChFQQVhDT1VOVEVSX0NPTkZJRxAMIiMKDkJh",
-            "Y2t1cExvY2F0aW9uEgkKBUZMQVNIEAASBgoCU0QQAUIRCg9wYXlsb2FkX3Zh",
-            "cmlhbnQiWwoNSGFtUGFyYW1ldGVycxIRCgljYWxsX3NpZ24YASABKAkSEAoI",
-            "dHhfcG93ZXIYAiABKAUSEQoJZnJlcXVlbmN5GAMgASgCEhIKCnNob3J0X25h",
-            "bWUYBCABKAkiZgoeTm9kZVJlbW90ZUhhcmR3YXJlUGluc1Jlc3BvbnNlEkQK",
-            "GW5vZGVfcmVtb3RlX2hhcmR3YXJlX3BpbnMYASADKAsyIS5tZXNodGFzdGlj",
-            "Lk5vZGVSZW1vdGVIYXJkd2FyZVBpbiJBCg1TaGFyZWRDb250YWN0EhAKCG5v",
-            "ZGVfbnVtGAEgASgNEh4KBHVzZXIYAiABKAsyEC5tZXNodGFzdGljLlVzZXJC",
-            "YAoTY29tLmdlZWtzdmlsbGUubWVzaEILQWRtaW5Qcm90b3NaImdpdGh1Yi5j",
-            "b20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3Rv",
-            "YnVmc7oCAGIGcHJvdG8z"));
+            "cExvY2F0aW9uSAASPwoQc2VuZF9pbnB1dF9ldmVudBgbIAEoCzIjLm1lc2h0",
+            "YXN0aWMuQWRtaW5NZXNzYWdlLklucHV0RXZlbnRIABIlCglzZXRfb3duZXIY",
+            "ICABKAsyEC5tZXNodGFzdGljLlVzZXJIABIqCgtzZXRfY2hhbm5lbBghIAEo",
+            "CzITLm1lc2h0YXN0aWMuQ2hhbm5lbEgAEigKCnNldF9jb25maWcYIiABKAsy",
+            "Ei5tZXNodGFzdGljLkNvbmZpZ0gAEjUKEXNldF9tb2R1bGVfY29uZmlnGCMg",
+            "ASgLMhgubWVzaHRhc3RpYy5Nb2R1bGVDb25maWdIABIsCiJzZXRfY2FubmVk",
+            "X21lc3NhZ2VfbW9kdWxlX21lc3NhZ2VzGCQgASgJSAASHgoUc2V0X3Jpbmd0",
+            "b25lX21lc3NhZ2UYJSABKAlIABIbChFyZW1vdmVfYnlfbm9kZW51bRgmIAEo",
+            "DUgAEhsKEXNldF9mYXZvcml0ZV9ub2RlGCcgASgNSAASHgoUcmVtb3ZlX2Zh",
+            "dm9yaXRlX25vZGUYKCABKA1IABIyChJzZXRfZml4ZWRfcG9zaXRpb24YKSAB",
+            "KAsyFC5tZXNodGFzdGljLlBvc2l0aW9uSAASHwoVcmVtb3ZlX2ZpeGVkX3Bv",
+            "c2l0aW9uGCogASgISAASFwoNc2V0X3RpbWVfb25seRgrIAEoB0gAEh8KFWdl",
+            "dF91aV9jb25maWdfcmVxdWVzdBgsIAEoCEgAEjwKFmdldF91aV9jb25maWdf",
+            "cmVzcG9uc2UYLSABKAsyGi5tZXNodGFzdGljLkRldmljZVVJQ29uZmlnSAAS",
+            "NQoPc3RvcmVfdWlfY29uZmlnGC4gASgLMhoubWVzaHRhc3RpYy5EZXZpY2VV",
+            "SUNvbmZpZ0gAEhoKEHNldF9pZ25vcmVkX25vZGUYLyABKA1IABIdChNyZW1v",
+            "dmVfaWdub3JlZF9ub2RlGDAgASgNSAASHQoTYmVnaW5fZWRpdF9zZXR0aW5n",
+            "cxhAIAEoCEgAEh4KFGNvbW1pdF9lZGl0X3NldHRpbmdzGEEgASgISAASMAoL",
+            "YWRkX2NvbnRhY3QYQiABKAsyGS5tZXNodGFzdGljLlNoYXJlZENvbnRhY3RI",
+            "ABI8ChBrZXlfdmVyaWZpY2F0aW9uGEMgASgLMiAubWVzaHRhc3RpYy5LZXlW",
+            "ZXJpZmljYXRpb25BZG1pbkgAEh4KFGZhY3RvcnlfcmVzZXRfZGV2aWNlGF4g",
+            "ASgFSAASHAoScmVib290X290YV9zZWNvbmRzGF8gASgFSAASGAoOZXhpdF9z",
+            "aW11bGF0b3IYYCABKAhIABIYCg5yZWJvb3Rfc2Vjb25kcxhhIAEoBUgAEhoK",
+            "EHNodXRkb3duX3NlY29uZHMYYiABKAVIABIeChRmYWN0b3J5X3Jlc2V0X2Nv",
+            "bmZpZxhjIAEoBUgAEhYKDG5vZGVkYl9yZXNldBhkIAEoBUgAGlMKCklucHV0",
+            "RXZlbnQSEgoKZXZlbnRfY29kZRgBIAEoDRIPCgdrYl9jaGFyGAIgASgNEg8K",
+            "B3RvdWNoX3gYAyABKA0SDwoHdG91Y2hfeRgEIAEoDSLWAQoKQ29uZmlnVHlw",
+            "ZRIRCg1ERVZJQ0VfQ09ORklHEAASEwoPUE9TSVRJT05fQ09ORklHEAESEAoM",
+            "UE9XRVJfQ09ORklHEAISEgoOTkVUV09SS19DT05GSUcQAxISCg5ESVNQTEFZ",
+            "X0NPTkZJRxAEEg8KC0xPUkFfQ09ORklHEAUSFAoQQkxVRVRPT1RIX0NPTkZJ",
+            "RxAGEhMKD1NFQ1VSSVRZX0NPTkZJRxAHEhUKEVNFU1NJT05LRVlfQ09ORklH",
+            "EAgSEwoPREVWSUNFVUlfQ09ORklHEAkiuwIKEE1vZHVsZUNvbmZpZ1R5cGUS",
+            "DwoLTVFUVF9DT05GSUcQABIRCg1TRVJJQUxfQ09ORklHEAESEwoPRVhUTk9U",
+            "SUZfQ09ORklHEAISFwoTU1RPUkVGT1JXQVJEX0NPTkZJRxADEhQKEFJBTkdF",
+            "VEVTVF9DT05GSUcQBBIUChBURUxFTUVUUllfQ09ORklHEAUSFAoQQ0FOTkVE",
+            "TVNHX0NPTkZJRxAGEhAKDEFVRElPX0NPTkZJRxAHEhkKFVJFTU9URUhBUkRX",
+            "QVJFX0NPTkZJRxAIEhcKE05FSUdIQk9SSU5GT19DT05GSUcQCRIaChZBTUJJ",
+            "RU5UTElHSFRJTkdfQ09ORklHEAoSGgoWREVURUNUSU9OU0VOU09SX0NPTkZJ",
+            "RxALEhUKEVBBWENPVU5URVJfQ09ORklHEAwiIwoOQmFja3VwTG9jYXRpb24S",
+            "CQoFRkxBU0gQABIGCgJTRBABQhEKD3BheWxvYWRfdmFyaWFudCJbCg1IYW1Q",
+            "YXJhbWV0ZXJzEhEKCWNhbGxfc2lnbhgBIAEoCRIQCgh0eF9wb3dlchgCIAEo",
+            "BRIRCglmcmVxdWVuY3kYAyABKAISEgoKc2hvcnRfbmFtZRgEIAEoCSJmCh5O",
+            "b2RlUmVtb3RlSGFyZHdhcmVQaW5zUmVzcG9uc2USRAoZbm9kZV9yZW1vdGVf",
+            "aGFyZHdhcmVfcGlucxgBIAMoCzIhLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhh",
+            "cmR3YXJlUGluIkEKDVNoYXJlZENvbnRhY3QSEAoIbm9kZV9udW0YASABKA0S",
+            "HgoEdXNlchgCIAEoCzIQLm1lc2h0YXN0aWMuVXNlciKcAgoUS2V5VmVyaWZp",
+            "Y2F0aW9uQWRtaW4SQgoMbWVzc2FnZV90eXBlGAEgASgOMiwubWVzaHRhc3Rp",
+            "Yy5LZXlWZXJpZmljYXRpb25BZG1pbi5NZXNzYWdlVHlwZRIWCg5yZW1vdGVf",
+            "bm9kZW51bRgCIAEoDRINCgVub25jZRgDIAEoBBIcCg9zZWN1cml0eV9udW1i",
+            "ZXIYBCABKA1IAIgBASJnCgtNZXNzYWdlVHlwZRIZChVJTklUSUFURV9WRVJJ",
+            "RklDQVRJT04QABIbChdQUk9WSURFX1NFQ1VSSVRZX05VTUJFUhABEg0KCURP",
+            "X1ZFUklGWRACEhEKDURPX05PVF9WRVJJRlkQA0ISChBfc2VjdXJpdHlfbnVt",
+            "YmVyQmAKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCC0FkbWluUHJvdG9zWiJnaXRo",
+            "dWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Q",
+            "cm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "SessionPasskey", "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "BackupPreferences", "RestorePreferences", "RemoveBackupPreferences", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "SetTimeOnly", "GetUiConfigRequest", "GetUiConfigResponse", "StoreUiConfig", "SetIgnoredNode", "RemoveIgnoredNode", "BeginEditSettings", "CommitEditSettings", "AddContact", "FactoryResetDevice", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryResetConfig", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "SessionPasskey", "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "BackupPreferences", "RestorePreferences", "RemoveBackupPreferences", "SendInputEvent", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "SetTimeOnly", "GetUiConfigRequest", "GetUiConfigResponse", "StoreUiConfig", "SetIgnoredNode", "RemoveIgnoredNode", "BeginEditSettings", "CommitEditSettings", "AddContact", "KeyVerification", "FactoryResetDevice", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryResetConfig", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent), global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent.Parser, new[]{ "EventCode", "KbChar", "TouchX", "TouchY" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SharedContact), global::Meshtastic.Protobufs.SharedContact.Parser, new[]{ "NodeNum", "User" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SharedContact), global::Meshtastic.Protobufs.SharedContact.Parser, new[]{ "NodeNum", "User" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.KeyVerificationAdmin), global::Meshtastic.Protobufs.KeyVerificationAdmin.Parser, new[]{ "MessageType", "RemoteNodenum", "Nonce", "SecurityNumber" }, new[]{ "SecurityNumber" }, new[]{ typeof(global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType) }, null, null)
           }));
     }
     #endregion
@@ -234,6 +246,9 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.RemoveBackupPreferences:
           RemoveBackupPreferences = other.RemoveBackupPreferences;
           break;
+        case PayloadVariantOneofCase.SendInputEvent:
+          SendInputEvent = other.SendInputEvent.Clone();
+          break;
         case PayloadVariantOneofCase.SetOwner:
           SetOwner = other.SetOwner.Clone();
           break;
@@ -293,6 +308,9 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.AddContact:
           AddContact = other.AddContact.Clone();
+          break;
+        case PayloadVariantOneofCase.KeyVerification:
+          KeyVerification = other.KeyVerification.Clone();
           break;
         case PayloadVariantOneofCase.FactoryResetDevice:
           FactoryResetDevice = other.FactoryResetDevice;
@@ -984,6 +1002,23 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "send_input_event" field.</summary>
+    public const int SendInputEventFieldNumber = 27;
+    /// <summary>
+    ///
+    /// Send an input event to the node.
+    /// This is used to trigger physical input events like button presses, touch events, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent SendInputEvent {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SendInputEvent ? (global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.SendInputEvent;
+      }
+    }
+
     /// <summary>Field number for the "set_owner" field.</summary>
     public const int SetOwnerFieldNumber = 32;
     /// <summary>
@@ -1478,6 +1513,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "key_verification" field.</summary>
+    public const int KeyVerificationFieldNumber = 67;
+    /// <summary>
+    ///
+    /// Initiate or respond to a key verification request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.KeyVerificationAdmin KeyVerification {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.KeyVerification ? (global::Meshtastic.Protobufs.KeyVerificationAdmin) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.KeyVerification;
+      }
+    }
+
     /// <summary>Field number for the "factory_reset_device" field.</summary>
     public const int FactoryResetDeviceFieldNumber = 94;
     /// <summary>
@@ -1719,6 +1770,7 @@ namespace Meshtastic.Protobufs {
       BackupPreferences = 24,
       RestorePreferences = 25,
       RemoveBackupPreferences = 26,
+      SendInputEvent = 27,
       SetOwner = 32,
       SetChannel = 33,
       SetConfig = 34,
@@ -1739,6 +1791,7 @@ namespace Meshtastic.Protobufs {
       BeginEditSettings = 64,
       CommitEditSettings = 65,
       AddContact = 66,
+      KeyVerification = 67,
       FactoryResetDevice = 94,
       RebootOtaSeconds = 95,
       ExitSimulator = 96,
@@ -1802,6 +1855,7 @@ namespace Meshtastic.Protobufs {
       if (BackupPreferences != other.BackupPreferences) return false;
       if (RestorePreferences != other.RestorePreferences) return false;
       if (RemoveBackupPreferences != other.RemoveBackupPreferences) return false;
+      if (!object.Equals(SendInputEvent, other.SendInputEvent)) return false;
       if (!object.Equals(SetOwner, other.SetOwner)) return false;
       if (!object.Equals(SetChannel, other.SetChannel)) return false;
       if (!object.Equals(SetConfig, other.SetConfig)) return false;
@@ -1822,6 +1876,7 @@ namespace Meshtastic.Protobufs {
       if (BeginEditSettings != other.BeginEditSettings) return false;
       if (CommitEditSettings != other.CommitEditSettings) return false;
       if (!object.Equals(AddContact, other.AddContact)) return false;
+      if (!object.Equals(KeyVerification, other.KeyVerification)) return false;
       if (FactoryResetDevice != other.FactoryResetDevice) return false;
       if (RebootOtaSeconds != other.RebootOtaSeconds) return false;
       if (ExitSimulator != other.ExitSimulator) return false;
@@ -1863,6 +1918,7 @@ namespace Meshtastic.Protobufs {
       if (HasBackupPreferences) hash ^= BackupPreferences.GetHashCode();
       if (HasRestorePreferences) hash ^= RestorePreferences.GetHashCode();
       if (HasRemoveBackupPreferences) hash ^= RemoveBackupPreferences.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SendInputEvent) hash ^= SendInputEvent.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) hash ^= SetOwner.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetChannel) hash ^= SetChannel.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetConfig) hash ^= SetConfig.GetHashCode();
@@ -1883,6 +1939,7 @@ namespace Meshtastic.Protobufs {
       if (HasBeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
       if (HasCommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) hash ^= AddContact.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.KeyVerification) hash ^= KeyVerification.GetHashCode();
       if (HasFactoryResetDevice) hash ^= FactoryResetDevice.GetHashCode();
       if (HasRebootOtaSeconds) hash ^= RebootOtaSeconds.GetHashCode();
       if (HasExitSimulator) hash ^= ExitSimulator.GetHashCode();
@@ -2009,6 +2066,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(208, 1);
         output.WriteEnum((int) RemoveBackupPreferences);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SendInputEvent) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(SendInputEvent);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -2088,6 +2149,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) {
         output.WriteRawTag(146, 4);
         output.WriteMessage(AddContact);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.KeyVerification) {
+        output.WriteRawTag(154, 4);
+        output.WriteMessage(KeyVerification);
       }
       if (HasFactoryResetDevice) {
         output.WriteRawTag(240, 5);
@@ -2231,6 +2296,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(208, 1);
         output.WriteEnum((int) RemoveBackupPreferences);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SendInputEvent) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(SendInputEvent);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(SetOwner);
@@ -2310,6 +2379,10 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) {
         output.WriteRawTag(146, 4);
         output.WriteMessage(AddContact);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.KeyVerification) {
+        output.WriteRawTag(154, 4);
+        output.WriteMessage(KeyVerification);
       }
       if (HasFactoryResetDevice) {
         output.WriteRawTag(240, 5);
@@ -2431,6 +2504,9 @@ namespace Meshtastic.Protobufs {
       if (HasRemoveBackupPreferences) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) RemoveBackupPreferences);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SendInputEvent) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SendInputEvent);
+      }
       if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SetOwner);
       }
@@ -2490,6 +2566,9 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AddContact);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.KeyVerification) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KeyVerification);
       }
       if (HasFactoryResetDevice) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(FactoryResetDevice);
@@ -2627,6 +2706,12 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.RemoveBackupPreferences:
           RemoveBackupPreferences = other.RemoveBackupPreferences;
           break;
+        case PayloadVariantOneofCase.SendInputEvent:
+          if (SendInputEvent == null) {
+            SendInputEvent = new global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent();
+          }
+          SendInputEvent.MergeFrom(other.SendInputEvent);
+          break;
         case PayloadVariantOneofCase.SetOwner:
           if (SetOwner == null) {
             SetOwner = new global::Meshtastic.Protobufs.User();
@@ -2710,6 +2795,12 @@ namespace Meshtastic.Protobufs {
             AddContact = new global::Meshtastic.Protobufs.SharedContact();
           }
           AddContact.MergeFrom(other.AddContact);
+          break;
+        case PayloadVariantOneofCase.KeyVerification:
+          if (KeyVerification == null) {
+            KeyVerification = new global::Meshtastic.Protobufs.KeyVerificationAdmin();
+          }
+          KeyVerification.MergeFrom(other.KeyVerification);
           break;
         case PayloadVariantOneofCase.FactoryResetDevice:
           FactoryResetDevice = other.FactoryResetDevice;
@@ -2898,6 +2989,15 @@ namespace Meshtastic.Protobufs {
             payloadVariantCase_ = PayloadVariantOneofCase.RemoveBackupPreferences;
             break;
           }
+          case 218: {
+            global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent subBuilder = new global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.SendInputEvent) {
+              subBuilder.MergeFrom(SendInputEvent);
+            }
+            input.ReadMessage(subBuilder);
+            SendInputEvent = subBuilder;
+            break;
+          }
           case 258: {
             global::Meshtastic.Protobufs.User subBuilder = new global::Meshtastic.Protobufs.User();
             if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
@@ -3016,6 +3116,15 @@ namespace Meshtastic.Protobufs {
             }
             input.ReadMessage(subBuilder);
             AddContact = subBuilder;
+            break;
+          }
+          case 538: {
+            global::Meshtastic.Protobufs.KeyVerificationAdmin subBuilder = new global::Meshtastic.Protobufs.KeyVerificationAdmin();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.KeyVerification) {
+              subBuilder.MergeFrom(KeyVerification);
+            }
+            input.ReadMessage(subBuilder);
+            KeyVerification = subBuilder;
             break;
           }
           case 752: {
@@ -3214,6 +3323,15 @@ namespace Meshtastic.Protobufs {
             payloadVariantCase_ = PayloadVariantOneofCase.RemoveBackupPreferences;
             break;
           }
+          case 218: {
+            global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent subBuilder = new global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.SendInputEvent) {
+              subBuilder.MergeFrom(SendInputEvent);
+            }
+            input.ReadMessage(subBuilder);
+            SendInputEvent = subBuilder;
+            break;
+          }
           case 258: {
             global::Meshtastic.Protobufs.User subBuilder = new global::Meshtastic.Protobufs.User();
             if (payloadVariantCase_ == PayloadVariantOneofCase.SetOwner) {
@@ -3332,6 +3450,15 @@ namespace Meshtastic.Protobufs {
             }
             input.ReadMessage(subBuilder);
             AddContact = subBuilder;
+            break;
+          }
+          case 538: {
+            global::Meshtastic.Protobufs.KeyVerificationAdmin subBuilder = new global::Meshtastic.Protobufs.KeyVerificationAdmin();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.KeyVerification) {
+              subBuilder.MergeFrom(KeyVerification);
+            }
+            input.ReadMessage(subBuilder);
+            KeyVerification = subBuilder;
             break;
           }
           case 752: {
@@ -3516,6 +3643,335 @@ namespace Meshtastic.Protobufs {
         /// Backup to the SD card
         /// </summary>
         [pbr::OriginalName("SD")] Sd = 1,
+      }
+
+      /// <summary>
+      ///
+      /// Input event message to be sent to the node.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class InputEvent : pb::IMessage<InputEvent>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<InputEvent> _parser = new pb::MessageParser<InputEvent>(() => new InputEvent());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<InputEvent> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Meshtastic.Protobufs.AdminMessage.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InputEvent() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InputEvent(InputEvent other) : this() {
+          eventCode_ = other.eventCode_;
+          kbChar_ = other.kbChar_;
+          touchX_ = other.touchX_;
+          touchY_ = other.touchY_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InputEvent Clone() {
+          return new InputEvent(this);
+        }
+
+        /// <summary>Field number for the "event_code" field.</summary>
+        public const int EventCodeFieldNumber = 1;
+        private uint eventCode_;
+        /// <summary>
+        ///
+        /// The input event code
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint EventCode {
+          get { return eventCode_; }
+          set {
+            eventCode_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "kb_char" field.</summary>
+        public const int KbCharFieldNumber = 2;
+        private uint kbChar_;
+        /// <summary>
+        ///
+        /// Keyboard character code
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint KbChar {
+          get { return kbChar_; }
+          set {
+            kbChar_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "touch_x" field.</summary>
+        public const int TouchXFieldNumber = 3;
+        private uint touchX_;
+        /// <summary>
+        ///
+        /// The touch X coordinate
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint TouchX {
+          get { return touchX_; }
+          set {
+            touchX_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "touch_y" field.</summary>
+        public const int TouchYFieldNumber = 4;
+        private uint touchY_;
+        /// <summary>
+        ///
+        /// The touch Y coordinate
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint TouchY {
+          get { return touchY_; }
+          set {
+            touchY_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as InputEvent);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(InputEvent other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EventCode != other.EventCode) return false;
+          if (KbChar != other.KbChar) return false;
+          if (TouchX != other.TouchX) return false;
+          if (TouchY != other.TouchY) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EventCode != 0) hash ^= EventCode.GetHashCode();
+          if (KbChar != 0) hash ^= KbChar.GetHashCode();
+          if (TouchX != 0) hash ^= TouchX.GetHashCode();
+          if (TouchY != 0) hash ^= TouchY.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EventCode != 0) {
+            output.WriteRawTag(8);
+            output.WriteUInt32(EventCode);
+          }
+          if (KbChar != 0) {
+            output.WriteRawTag(16);
+            output.WriteUInt32(KbChar);
+          }
+          if (TouchX != 0) {
+            output.WriteRawTag(24);
+            output.WriteUInt32(TouchX);
+          }
+          if (TouchY != 0) {
+            output.WriteRawTag(32);
+            output.WriteUInt32(TouchY);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EventCode != 0) {
+            output.WriteRawTag(8);
+            output.WriteUInt32(EventCode);
+          }
+          if (KbChar != 0) {
+            output.WriteRawTag(16);
+            output.WriteUInt32(KbChar);
+          }
+          if (TouchX != 0) {
+            output.WriteRawTag(24);
+            output.WriteUInt32(TouchX);
+          }
+          if (TouchY != 0) {
+            output.WriteRawTag(32);
+            output.WriteUInt32(TouchY);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EventCode != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventCode);
+          }
+          if (KbChar != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KbChar);
+          }
+          if (TouchX != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TouchX);
+          }
+          if (TouchY != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TouchY);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(InputEvent other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EventCode != 0) {
+            EventCode = other.EventCode;
+          }
+          if (other.KbChar != 0) {
+            KbChar = other.KbChar;
+          }
+          if (other.TouchX != 0) {
+            TouchX = other.TouchX;
+          }
+          if (other.TouchY != 0) {
+            TouchY = other.TouchY;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                EventCode = input.ReadUInt32();
+                break;
+              }
+              case 16: {
+                KbChar = input.ReadUInt32();
+                break;
+              }
+              case 24: {
+                TouchX = input.ReadUInt32();
+                break;
+              }
+              case 32: {
+                TouchY = input.ReadUInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EventCode = input.ReadUInt32();
+                break;
+              }
+              case 16: {
+                KbChar = input.ReadUInt32();
+                break;
+              }
+              case 24: {
+                TouchX = input.ReadUInt32();
+                break;
+              }
+              case 32: {
+                TouchY = input.ReadUInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
@@ -4298,6 +4754,384 @@ namespace Meshtastic.Protobufs {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// This message is used by a client to initiate or complete a key verification
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class KeyVerificationAdmin : pb::IMessage<KeyVerificationAdmin>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<KeyVerificationAdmin> _parser = new pb::MessageParser<KeyVerificationAdmin>(() => new KeyVerificationAdmin());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<KeyVerificationAdmin> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.AdminReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyVerificationAdmin() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyVerificationAdmin(KeyVerificationAdmin other) : this() {
+      _hasBits0 = other._hasBits0;
+      messageType_ = other.messageType_;
+      remoteNodenum_ = other.remoteNodenum_;
+      nonce_ = other.nonce_;
+      securityNumber_ = other.securityNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyVerificationAdmin Clone() {
+      return new KeyVerificationAdmin(this);
+    }
+
+    /// <summary>Field number for the "message_type" field.</summary>
+    public const int MessageTypeFieldNumber = 1;
+    private global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType messageType_ = global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType.InitiateVerification;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType MessageType {
+      get { return messageType_; }
+      set {
+        messageType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "remote_nodenum" field.</summary>
+    public const int RemoteNodenumFieldNumber = 2;
+    private uint remoteNodenum_;
+    /// <summary>
+    ///
+    /// The nodenum we're requesting
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RemoteNodenum {
+      get { return remoteNodenum_; }
+      set {
+        remoteNodenum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nonce" field.</summary>
+    public const int NonceFieldNumber = 3;
+    private ulong nonce_;
+    /// <summary>
+    ///
+    /// The nonce is used to track the connection
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Nonce {
+      get { return nonce_; }
+      set {
+        nonce_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "security_number" field.</summary>
+    public const int SecurityNumberFieldNumber = 4;
+    private readonly static uint SecurityNumberDefaultValue = 0;
+
+    private uint securityNumber_;
+    /// <summary>
+    ///
+    /// The 4 digit code generated by the remote node, and communicated outside the mesh
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SecurityNumber {
+      get { if ((_hasBits0 & 1) != 0) { return securityNumber_; } else { return SecurityNumberDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        securityNumber_ = value;
+      }
+    }
+    /// <summary>Gets whether the "security_number" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSecurityNumber {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "security_number" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSecurityNumber() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as KeyVerificationAdmin);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(KeyVerificationAdmin other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MessageType != other.MessageType) return false;
+      if (RemoteNodenum != other.RemoteNodenum) return false;
+      if (Nonce != other.Nonce) return false;
+      if (SecurityNumber != other.SecurityNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MessageType != global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType.InitiateVerification) hash ^= MessageType.GetHashCode();
+      if (RemoteNodenum != 0) hash ^= RemoteNodenum.GetHashCode();
+      if (Nonce != 0UL) hash ^= Nonce.GetHashCode();
+      if (HasSecurityNumber) hash ^= SecurityNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MessageType != global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType.InitiateVerification) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) MessageType);
+      }
+      if (RemoteNodenum != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(RemoteNodenum);
+      }
+      if (Nonce != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Nonce);
+      }
+      if (HasSecurityNumber) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SecurityNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MessageType != global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType.InitiateVerification) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) MessageType);
+      }
+      if (RemoteNodenum != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(RemoteNodenum);
+      }
+      if (Nonce != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Nonce);
+      }
+      if (HasSecurityNumber) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SecurityNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MessageType != global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType.InitiateVerification) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MessageType);
+      }
+      if (RemoteNodenum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RemoteNodenum);
+      }
+      if (Nonce != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Nonce);
+      }
+      if (HasSecurityNumber) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SecurityNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(KeyVerificationAdmin other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MessageType != global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType.InitiateVerification) {
+        MessageType = other.MessageType;
+      }
+      if (other.RemoteNodenum != 0) {
+        RemoteNodenum = other.RemoteNodenum;
+      }
+      if (other.Nonce != 0UL) {
+        Nonce = other.Nonce;
+      }
+      if (other.HasSecurityNumber) {
+        SecurityNumber = other.SecurityNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            MessageType = (global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            RemoteNodenum = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Nonce = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            SecurityNumber = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MessageType = (global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            RemoteNodenum = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Nonce = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            SecurityNumber = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the KeyVerificationAdmin message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      ///
+      /// Three stages of this request.
+      /// </summary>
+      public enum MessageType {
+        /// <summary>
+        ///
+        /// This is the first stage, where a client initiates
+        /// </summary>
+        [pbr::OriginalName("INITIATE_VERIFICATION")] InitiateVerification = 0,
+        /// <summary>
+        ///
+        /// After the nonce has been returned over the mesh, the client prompts for the security number
+        /// And uses this message to provide it to the node.
+        /// </summary>
+        [pbr::OriginalName("PROVIDE_SECURITY_NUMBER")] ProvideSecurityNumber = 1,
+        /// <summary>
+        ///
+        /// Once the user has compared the verification message, this message notifies the node.
+        /// </summary>
+        [pbr::OriginalName("DO_VERIFY")] DoVerify = 2,
+        /// <summary>
+        ///
+        /// This is the cancel path, can be taken at any point
+        /// </summary>
+        [pbr::OriginalName("DO_NOT_VERIFY")] DoNotVerify = 3,
+      }
+
+    }
+    #endregion
 
   }
 
