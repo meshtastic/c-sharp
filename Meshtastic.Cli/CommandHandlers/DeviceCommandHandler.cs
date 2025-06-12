@@ -49,8 +49,14 @@ public class DeviceCommandHandler
 
     public static async Task<bool> AnyResponseReceived(FromRadio fromRadio, DeviceStateContainer container)
     {
-        await Task.Delay(100);
+        await Task.Delay(50);
         return true;
+    }
+
+    public static async Task<bool> StayConnected(FromRadio fromRadio, DeviceStateContainer container)
+    {
+        await Task.Delay(50);
+        return false;
     }
 
     public async Task<bool> CompleteOnConfigReceived(FromRadio fromRadio, DeviceStateContainer container)

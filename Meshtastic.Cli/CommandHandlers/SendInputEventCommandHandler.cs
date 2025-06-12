@@ -5,26 +5,13 @@ using Microsoft.Extensions.Logging;
 
 namespace Meshtastic.Cli.CommandHandlers;
 
-public class SendInputEventCommandHandler : DeviceCommandHandler
+public class SendInputEventCommandHandler(uint eventCode,
+    uint? kbChar,
+    uint? touchX,
+    uint? touchY,
+    DeviceConnectionContext context,
+    CommandContext commandContext) : DeviceCommandHandler(context, commandContext)
 {
-    private readonly uint eventCode;
-    private readonly uint? kbChar;
-    private readonly uint? touchX;
-    private readonly uint? touchY;
-
-    public SendInputEventCommandHandler(uint eventCode,
-        uint? kbChar,
-        uint? touchX,
-        uint? touchY,
-        DeviceConnectionContext context,
-        CommandContext commandContext) : base(context, commandContext)
-    {
-        this.eventCode = eventCode;
-        this.kbChar = kbChar;
-        this.touchX = touchX;
-        this.touchY = touchY;
-    }
-
     public async Task<DeviceStateContainer> Handle()
     {
         var wantConfig = new ToRadioMessageFactory().CreateWantConfigMessage();
@@ -53,6 +40,6 @@ public class SendInputEventCommandHandler : DeviceCommandHandler
 
         Logger.LogInformation($"Sending input event (code: {eventCode}) to device...");
         var adminMessage = adminMessageFactory.CreateSendInputEventMessage(inputEvent);
-        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), AnyResponseReceived);
+        await Connection.WriteToRadio(ToRadioMessageFactory.CreateMeshPacketMessage(adminMessage), StayConnected);
     }
 }
