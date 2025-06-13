@@ -161,4 +161,9 @@ public class AdminMessageFactory
     {
         return GetNewMeshPacket(new AdminMessage() { SendInputEvent = inputEvent });
     }
+
+    public MeshPacket CreateGetOwnerMessage()
+    {
+        return GetNewMeshPacket(new AdminMessage() { GetOwnerRequest = true });
+    }
 }

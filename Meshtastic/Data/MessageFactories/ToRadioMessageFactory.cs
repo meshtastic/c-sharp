@@ -23,6 +23,12 @@ public class ToRadioMessageFactory
             WantConfigId = (uint)Random.Shared.Next(),
         };
 
+    public ToRadio CreateWantConfigOnlyMessage() =>
+        new()
+        {
+            WantConfigId = 69421,
+        };
+
     public ToRadio CreateMeshPacketMessage(MeshPacket packet) =>
         new()
         {
