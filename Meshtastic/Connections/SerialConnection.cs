@@ -39,7 +39,10 @@ public class SerialConnection : DeviceConnection
         DeviceStateContainer = container;
     }
 
-    public static string[] ListPorts() => SerialPort.GetPortNames();
+    public static string[] ListPorts() => SerialPort
+        .GetPortNames()
+        .Where(p => p.EndsWith("debug-console", StringComparison.OrdinalIgnoreCase) || p.EndsWith("Bluetooth-Incoming-Port", StringComparison.OrdinalIgnoreCase))
+        .ToArray();
 
     public override async Task Monitor()
     {
