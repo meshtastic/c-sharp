@@ -41,7 +41,9 @@ public class SerialConnection : DeviceConnection
 
     public static string[] ListPorts() => SerialPort
         .GetPortNames()
-        .Where(p => p.EndsWith("debug-console", StringComparison.OrdinalIgnoreCase) || p.EndsWith("Bluetooth-Incoming-Port", StringComparison.OrdinalIgnoreCase))
+        .Where(p => !p.EndsWith("debug-console", StringComparison.OrdinalIgnoreCase) &&
+            !p.EndsWith("Bluetooth-Incoming-Port", StringComparison.OrdinalIgnoreCase) &&
+            !p.StartsWith("/dev/cu.", StringComparison.OrdinalIgnoreCase))
         .ToArray();
 
     public override async Task Monitor()
