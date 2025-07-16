@@ -29,13 +29,14 @@ public static class PKIEncryption
 			0
 		];
 
-	public static void Decrypt(byte[] recipientPrivateKey, byte[] senderPublicKey, MeshPacket meshPacket)
+	public static bool Decrypt(byte[] recipientPrivateKey, byte[] senderPublicKey, MeshPacket meshPacket)
 	{
-		if (meshPacket.Encrypted == null || meshPacket.Encrypted.Length == 0) return;
+		if (meshPacket.Encrypted == null || meshPacket.Encrypted.Length == 0) return false;
 		var encryptedData = meshPacket.Encrypted.ToByteArray();
 		var decrypted = Decrypt(recipientPrivateKey, senderPublicKey, encryptedData, meshPacket.Id, meshPacket.From);
 		var data = Protobufs.Data.Parser.ParseFrom(decrypted);
 		meshPacket.Decoded = data;
+		return true;
 	}
 
 	public static byte[] Decrypt(byte[] recipientPrivateKey, byte[] senderPublicKey, byte[] encryptedData, uint packetId, uint senderNodeId)
