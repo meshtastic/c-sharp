@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static PortnumsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKuUECgdQ",
+            "ChltZXNodGFzdGljL3BvcnRudW1zLnByb3RvEgptZXNodGFzdGljKvYECgdQ",
             "b3J0TnVtEg8KC1VOS05PV05fQVBQEAASFAoQVEVYVF9NRVNTQUdFX0FQUBAB",
             "EhcKE1JFTU9URV9IQVJEV0FSRV9BUFAQAhIQCgxQT1NJVElPTl9BUFAQAxIQ",
             "CgxOT0RFSU5GT19BUFAQBBIPCgtST1VUSU5HX0FQUBAFEg0KCUFETUlOX0FQ",
@@ -37,10 +37,11 @@ namespace Meshtastic.Protobufs {
             "CgdaUFNfQVBQEEQSEQoNU0lNVUxBVE9SX0FQUBBFEhIKDlRSQUNFUk9VVEVf",
             "QVBQEEYSFAoQTkVJR0hCT1JJTkZPX0FQUBBHEg8KC0FUQUtfUExVR0lOEEgS",
             "EgoOTUFQX1JFUE9SVF9BUFAQSRITCg9QT1dFUlNUUkVTU19BUFAQShIYChRS",
-            "RVRJQ1VMVU1fVFVOTkVMX0FQUBBMEhAKC1BSSVZBVEVfQVBQEIACEhMKDkFU",
-            "QUtfRk9SV0FSREVSEIECEggKA01BWBD/A0JdChNjb20uZ2Vla3N2aWxsZS5t",
-            "ZXNoQghQb3J0bnVtc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVy",
-            "YXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "RVRJQ1VMVU1fVFVOTkVMX0FQUBBMEg8KC0NBWUVOTkVfQVBQEE0SEAoLUFJJ",
+            "VkFURV9BUFAQgAISEwoOQVRBS19GT1JXQVJERVIQgQISCAoDTUFYEP8DQl0K",
+            "E2NvbS5nZWVrc3ZpbGxlLm1lc2hCCFBvcnRudW1zWiJnaXRodWIuY29tL21l",
+            "c2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6",
+            "AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.PortNum), }, null, null));
@@ -259,6 +260,13 @@ namespace Meshtastic.Protobufs {
     /// ENCODING: Fragmented RNS Packet. Handled by Meshtastic RNS interface
     /// </summary>
     [pbr::OriginalName("RETICULUM_TUNNEL_APP")] ReticulumTunnelApp = 76,
+    /// <summary>
+    ///
+    /// App for transporting Cayenne Low Power Payload, popular for LoRaWAN sensor nodes. Offers ability to send
+    /// arbitrary telemetry over meshtastic that is not covered by telemetry.proto
+    /// ENCODING: CayenneLLP
+    /// </summary>
+    [pbr::OriginalName("CAYENNE_APP")] CayenneApp = 77,
     /// <summary>
     ///
     /// Private applications should use portnums >= 256.

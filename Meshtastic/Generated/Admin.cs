@@ -26,9 +26,9 @@ namespace Meshtastic.Protobufs {
           string.Concat(
             "ChZtZXNodGFzdGljL2FkbWluLnByb3RvEgptZXNodGFzdGljGhhtZXNodGFz",
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
-            "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhVtZXNodGFzdGlj",
-            "L21lc2gucHJvdG8aHm1lc2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90bxoa",
-            "bWVzaHRhc3RpYy9kZXZpY2VfdWkucHJvdG8i1hgKDEFkbWluTWVzc2FnZRIX",
+            "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhptZXNodGFzdGlj",
+            "L2RldmljZV91aS5wcm90bxoVbWVzaHRhc3RpYy9tZXNoLnByb3RvGh5tZXNo",
+            "dGFzdGljL21vZHVsZV9jb25maWcucHJvdG8i1hgKDEFkbWluTWVzc2FnZRIX",
             "Cg9zZXNzaW9uX3Bhc3NrZXkYZSABKAwSHQoTZ2V0X2NoYW5uZWxfcmVxdWVz",
             "dBgBIAEoDUgAEjMKFGdldF9jaGFubmVsX3Jlc3BvbnNlGAIgASgLMhMubWVz",
             "aHRhc3RpYy5DaGFubmVsSAASGwoRZ2V0X293bmVyX3JlcXVlc3QYAyABKAhI",
@@ -103,24 +103,24 @@ namespace Meshtastic.Protobufs {
             "BRIRCglmcmVxdWVuY3kYAyABKAISEgoKc2hvcnRfbmFtZRgEIAEoCSJmCh5O",
             "b2RlUmVtb3RlSGFyZHdhcmVQaW5zUmVzcG9uc2USRAoZbm9kZV9yZW1vdGVf",
             "aGFyZHdhcmVfcGlucxgBIAMoCzIhLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhh",
-            "cmR3YXJlUGluIkEKDVNoYXJlZENvbnRhY3QSEAoIbm9kZV9udW0YASABKA0S",
-            "HgoEdXNlchgCIAEoCzIQLm1lc2h0YXN0aWMuVXNlciKcAgoUS2V5VmVyaWZp",
-            "Y2F0aW9uQWRtaW4SQgoMbWVzc2FnZV90eXBlGAEgASgOMiwubWVzaHRhc3Rp",
-            "Yy5LZXlWZXJpZmljYXRpb25BZG1pbi5NZXNzYWdlVHlwZRIWCg5yZW1vdGVf",
-            "bm9kZW51bRgCIAEoDRINCgVub25jZRgDIAEoBBIcCg9zZWN1cml0eV9udW1i",
-            "ZXIYBCABKA1IAIgBASJnCgtNZXNzYWdlVHlwZRIZChVJTklUSUFURV9WRVJJ",
-            "RklDQVRJT04QABIbChdQUk9WSURFX1NFQ1VSSVRZX05VTUJFUhABEg0KCURP",
-            "X1ZFUklGWRACEhEKDURPX05PVF9WRVJJRlkQA0ISChBfc2VjdXJpdHlfbnVt",
-            "YmVyQmAKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCC0FkbWluUHJvdG9zWiJnaXRo",
-            "dWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Q",
-            "cm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "cmR3YXJlUGluIlgKDVNoYXJlZENvbnRhY3QSEAoIbm9kZV9udW0YASABKA0S",
+            "HgoEdXNlchgCIAEoCzIQLm1lc2h0YXN0aWMuVXNlchIVCg1zaG91bGRfaWdu",
+            "b3JlGAMgASgIIpwCChRLZXlWZXJpZmljYXRpb25BZG1pbhJCCgxtZXNzYWdl",
+            "X3R5cGUYASABKA4yLC5tZXNodGFzdGljLktleVZlcmlmaWNhdGlvbkFkbWlu",
+            "Lk1lc3NhZ2VUeXBlEhYKDnJlbW90ZV9ub2RlbnVtGAIgASgNEg0KBW5vbmNl",
+            "GAMgASgEEhwKD3NlY3VyaXR5X251bWJlchgEIAEoDUgAiAEBImcKC01lc3Nh",
+            "Z2VUeXBlEhkKFUlOSVRJQVRFX1ZFUklGSUNBVElPThAAEhsKF1BST1ZJREVf",
+            "U0VDVVJJVFlfTlVNQkVSEAESDQoJRE9fVkVSSUZZEAISEQoNRE9fTk9UX1ZF",
+            "UklGWRADQhIKEF9zZWN1cml0eV9udW1iZXJCYAoTY29tLmdlZWtzdmlsbGUu",
+            "bWVzaEILQWRtaW5Qcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9n",
+            "ZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "SessionPasskey", "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "BackupPreferences", "RestorePreferences", "RemoveBackupPreferences", "SendInputEvent", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "SetTimeOnly", "GetUiConfigRequest", "GetUiConfigResponse", "StoreUiConfig", "SetIgnoredNode", "RemoveIgnoredNode", "BeginEditSettings", "CommitEditSettings", "AddContact", "KeyVerification", "FactoryResetDevice", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryResetConfig", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent), global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent.Parser, new[]{ "EventCode", "KbChar", "TouchX", "TouchY" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SharedContact), global::Meshtastic.Protobufs.SharedContact.Parser, new[]{ "NodeNum", "User" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SharedContact), global::Meshtastic.Protobufs.SharedContact.Parser, new[]{ "NodeNum", "User", "ShouldIgnore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.KeyVerificationAdmin), global::Meshtastic.Protobufs.KeyVerificationAdmin.Parser, new[]{ "MessageType", "RemoteNodenum", "Nonce", "SecurityNumber" }, new[]{ "SecurityNumber" }, new[]{ typeof(global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType) }, null, null)
           }));
     }
@@ -4542,6 +4542,7 @@ namespace Meshtastic.Protobufs {
     public SharedContact(SharedContact other) : this() {
       nodeNum_ = other.nodeNum_;
       user_ = other.user_ != null ? other.user_.Clone() : null;
+      shouldIgnore_ = other.shouldIgnore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4583,6 +4584,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "should_ignore" field.</summary>
+    public const int ShouldIgnoreFieldNumber = 3;
+    private bool shouldIgnore_;
+    /// <summary>
+    ///
+    /// Add this contact to the blocked / ignored list
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ShouldIgnore {
+      get { return shouldIgnore_; }
+      set {
+        shouldIgnore_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4600,6 +4617,7 @@ namespace Meshtastic.Protobufs {
       }
       if (NodeNum != other.NodeNum) return false;
       if (!object.Equals(User, other.User)) return false;
+      if (ShouldIgnore != other.ShouldIgnore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4609,6 +4627,7 @@ namespace Meshtastic.Protobufs {
       int hash = 1;
       if (NodeNum != 0) hash ^= NodeNum.GetHashCode();
       if (user_ != null) hash ^= User.GetHashCode();
+      if (ShouldIgnore != false) hash ^= ShouldIgnore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4635,6 +4654,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(18);
         output.WriteMessage(User);
       }
+      if (ShouldIgnore != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ShouldIgnore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4653,6 +4676,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(18);
         output.WriteMessage(User);
       }
+      if (ShouldIgnore != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ShouldIgnore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4668,6 +4695,9 @@ namespace Meshtastic.Protobufs {
       }
       if (user_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
+      }
+      if (ShouldIgnore != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4689,6 +4719,9 @@ namespace Meshtastic.Protobufs {
           User = new global::Meshtastic.Protobufs.User();
         }
         User.MergeFrom(other.User);
+      }
+      if (other.ShouldIgnore != false) {
+        ShouldIgnore = other.ShouldIgnore;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4720,6 +4753,10 @@ namespace Meshtastic.Protobufs {
             input.ReadMessage(User);
             break;
           }
+          case 24: {
+            ShouldIgnore = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -4748,6 +4785,10 @@ namespace Meshtastic.Protobufs {
               User = new global::Meshtastic.Protobufs.User();
             }
             input.ReadMessage(User);
+            break;
+          }
+          case 24: {
+            ShouldIgnore = input.ReadBool();
             break;
           }
         }

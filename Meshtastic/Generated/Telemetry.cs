@@ -50,76 +50,88 @@ namespace Meshtastic.Protobufs {
             "bmRfZGlyZWN0aW9uQg0KC193aW5kX3NwZWVkQgkKB193ZWlnaHRCDAoKX3dp",
             "bmRfZ3VzdEIMCgpfd2luZF9sdWxsQgwKCl9yYWRpYXRpb25CDgoMX3JhaW5m",
             "YWxsXzFoQg8KDV9yYWluZmFsbF8yNGhCEAoOX3NvaWxfbW9pc3R1cmVCEwoR",
-            "X3NvaWxfdGVtcGVyYXR1cmUiigIKDFBvd2VyTWV0cmljcxIYCgtjaDFfdm9s",
+            "X3NvaWxfdGVtcGVyYXR1cmUirgUKDFBvd2VyTWV0cmljcxIYCgtjaDFfdm9s",
             "dGFnZRgBIAEoAkgAiAEBEhgKC2NoMV9jdXJyZW50GAIgASgCSAGIAQESGAoL",
             "Y2gyX3ZvbHRhZ2UYAyABKAJIAogBARIYCgtjaDJfY3VycmVudBgEIAEoAkgD",
             "iAEBEhgKC2NoM192b2x0YWdlGAUgASgCSASIAQESGAoLY2gzX2N1cnJlbnQY",
-            "BiABKAJIBYgBAUIOCgxfY2gxX3ZvbHRhZ2VCDgoMX2NoMV9jdXJyZW50Qg4K",
-            "DF9jaDJfdm9sdGFnZUIOCgxfY2gyX2N1cnJlbnRCDgoMX2NoM192b2x0YWdl",
-            "Qg4KDF9jaDNfY3VycmVudCKFBQoRQWlyUXVhbGl0eU1ldHJpY3MSGgoNcG0x",
-            "MF9zdGFuZGFyZBgBIAEoDUgAiAEBEhoKDXBtMjVfc3RhbmRhcmQYAiABKA1I",
-            "AYgBARIbCg5wbTEwMF9zdGFuZGFyZBgDIAEoDUgCiAEBEh8KEnBtMTBfZW52",
-            "aXJvbm1lbnRhbBgEIAEoDUgDiAEBEh8KEnBtMjVfZW52aXJvbm1lbnRhbBgF",
-            "IAEoDUgEiAEBEiAKE3BtMTAwX2Vudmlyb25tZW50YWwYBiABKA1IBYgBARIb",
-            "Cg5wYXJ0aWNsZXNfMDN1bRgHIAEoDUgGiAEBEhsKDnBhcnRpY2xlc18wNXVt",
-            "GAggASgNSAeIAQESGwoOcGFydGljbGVzXzEwdW0YCSABKA1ICIgBARIbCg5w",
-            "YXJ0aWNsZXNfMjV1bRgKIAEoDUgJiAEBEhsKDnBhcnRpY2xlc181MHVtGAsg",
-            "ASgNSAqIAQESHAoPcGFydGljbGVzXzEwMHVtGAwgASgNSAuIAQESEAoDY28y",
-            "GA0gASgNSAyIAQFCEAoOX3BtMTBfc3RhbmRhcmRCEAoOX3BtMjVfc3RhbmRh",
-            "cmRCEQoPX3BtMTAwX3N0YW5kYXJkQhUKE19wbTEwX2Vudmlyb25tZW50YWxC",
-            "FQoTX3BtMjVfZW52aXJvbm1lbnRhbEIWChRfcG0xMDBfZW52aXJvbm1lbnRh",
-            "bEIRCg9fcGFydGljbGVzXzAzdW1CEQoPX3BhcnRpY2xlc18wNXVtQhEKD19w",
-            "YXJ0aWNsZXNfMTB1bUIRCg9fcGFydGljbGVzXzI1dW1CEQoPX3BhcnRpY2xl",
-            "c181MHVtQhIKEF9wYXJ0aWNsZXNfMTAwdW1CBgoEX2NvMiLSAgoKTG9jYWxT",
-            "dGF0cxIWCg51cHRpbWVfc2Vjb25kcxgBIAEoDRIbChNjaGFubmVsX3V0aWxp",
-            "emF0aW9uGAIgASgCEhMKC2Fpcl91dGlsX3R4GAMgASgCEhYKDm51bV9wYWNr",
-            "ZXRzX3R4GAQgASgNEhYKDm51bV9wYWNrZXRzX3J4GAUgASgNEhoKEm51bV9w",
-            "YWNrZXRzX3J4X2JhZBgGIAEoDRIYChBudW1fb25saW5lX25vZGVzGAcgASgN",
-            "EhcKD251bV90b3RhbF9ub2RlcxgIIAEoDRITCgtudW1fcnhfZHVwZRgJIAEo",
-            "DRIUCgxudW1fdHhfcmVsYXkYCiABKA0SHQoVbnVtX3R4X3JlbGF5X2NhbmNl",
-            "bGVkGAsgASgNEhgKEGhlYXBfdG90YWxfYnl0ZXMYDCABKA0SFwoPaGVhcF9m",
-            "cmVlX2J5dGVzGA0gASgNInsKDUhlYWx0aE1ldHJpY3MSFgoJaGVhcnRfYnBt",
-            "GAEgASgNSACIAQESEQoEc3BPMhgCIAEoDUgBiAEBEhgKC3RlbXBlcmF0dXJl",
-            "GAMgASgCSAKIAQFCDAoKX2hlYXJ0X2JwbUIHCgVfc3BPMkIOCgxfdGVtcGVy",
-            "YXR1cmUikQIKC0hvc3RNZXRyaWNzEhYKDnVwdGltZV9zZWNvbmRzGAEgASgN",
-            "EhUKDWZyZWVtZW1fYnl0ZXMYAiABKAQSFwoPZGlza2ZyZWUxX2J5dGVzGAMg",
-            "ASgEEhwKD2Rpc2tmcmVlMl9ieXRlcxgEIAEoBEgAiAEBEhwKD2Rpc2tmcmVl",
-            "M19ieXRlcxgFIAEoBEgBiAEBEg0KBWxvYWQxGAYgASgNEg0KBWxvYWQ1GAcg",
-            "ASgNEg4KBmxvYWQxNRgIIAEoDRIYCgt1c2VyX3N0cmluZxgJIAEoCUgCiAEB",
-            "QhIKEF9kaXNrZnJlZTJfYnl0ZXNCEgoQX2Rpc2tmcmVlM19ieXRlc0IOCgxf",
-            "dXNlcl9zdHJpbmcingMKCVRlbGVtZXRyeRIMCgR0aW1lGAEgASgHEjMKDmRl",
-            "dmljZV9tZXRyaWNzGAIgASgLMhkubWVzaHRhc3RpYy5EZXZpY2VNZXRyaWNz",
-            "SAASPQoTZW52aXJvbm1lbnRfbWV0cmljcxgDIAEoCzIeLm1lc2h0YXN0aWMu",
-            "RW52aXJvbm1lbnRNZXRyaWNzSAASPAoTYWlyX3F1YWxpdHlfbWV0cmljcxgE",
-            "IAEoCzIdLm1lc2h0YXN0aWMuQWlyUXVhbGl0eU1ldHJpY3NIABIxCg1wb3dl",
-            "cl9tZXRyaWNzGAUgASgLMhgubWVzaHRhc3RpYy5Qb3dlck1ldHJpY3NIABIt",
-            "Cgtsb2NhbF9zdGF0cxgGIAEoCzIWLm1lc2h0YXN0aWMuTG9jYWxTdGF0c0gA",
-            "EjMKDmhlYWx0aF9tZXRyaWNzGAcgASgLMhkubWVzaHRhc3RpYy5IZWFsdGhN",
-            "ZXRyaWNzSAASLwoMaG9zdF9tZXRyaWNzGAggASgLMhcubWVzaHRhc3RpYy5I",
-            "b3N0TWV0cmljc0gAQgkKB3ZhcmlhbnQiPgoNTmF1NzgwMkNvbmZpZxISCgp6",
-            "ZXJvT2Zmc2V0GAEgASgFEhkKEWNhbGlicmF0aW9uRmFjdG9yGAIgASgCKqwE",
-            "ChNUZWxlbWV0cnlTZW5zb3JUeXBlEhAKDFNFTlNPUl9VTlNFVBAAEgoKBkJN",
-            "RTI4MBABEgoKBkJNRTY4MBACEgsKB01DUDk4MDgQAxIKCgZJTkEyNjAQBBIK",
-            "CgZJTkEyMTkQBRIKCgZCTVAyODAQBhIJCgVTSFRDMxAHEgkKBUxQUzIyEAgS",
-            "CwoHUU1DNjMxMBAJEgsKB1FNSTg2NTgQChIMCghRTUM1ODgzTBALEgkKBVNI",
-            "VDMxEAwSDAoIUE1TQTAwM0kQDRILCgdJTkEzMjIxEA4SCgoGQk1QMDg1EA8S",
-            "DAoIUkNXTDk2MjAQEBIJCgVTSFQ0WBAREgwKCFZFTUw3NzAwEBISDAoITUxY",
-            "OTA2MzIQExILCgdPUFQzMDAxEBQSDAoITFRSMzkwVVYQFRIOCgpUU0wyNTkx",
-            "MUZOEBYSCQoFQUhUMTAQFxIQCgxERlJPQk9UX0xBUksQGBILCgdOQVU3ODAy",
-            "EBkSCgoGQk1QM1hYEBoSDAoISUNNMjA5NDgQGxIMCghNQVgxNzA0OBAcEhEK",
-            "DUNVU1RPTV9TRU5TT1IQHRIMCghNQVgzMDEwMhAeEgwKCE1MWDkwNjE0EB8S",
-            "CQoFU0NENFgQIBILCgdSQURTRU5TECESCgoGSU5BMjI2ECISEAoMREZST0JP",
-            "VF9SQUlOECMSCgoGRFBTMzEwECQSDAoIUkFLMTIwMzUQJRIMCghNQVgxNzI2",
-            "MRAmEgsKB1BDVDIwNzUQJ0JkChNjb20uZ2Vla3N2aWxsZS5tZXNoQg9UZWxl",
-            "bWV0cnlQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0",
-            "ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
+            "BiABKAJIBYgBARIYCgtjaDRfdm9sdGFnZRgHIAEoAkgGiAEBEhgKC2NoNF9j",
+            "dXJyZW50GAggASgCSAeIAQESGAoLY2g1X3ZvbHRhZ2UYCSABKAJICIgBARIY",
+            "CgtjaDVfY3VycmVudBgKIAEoAkgJiAEBEhgKC2NoNl92b2x0YWdlGAsgASgC",
+            "SAqIAQESGAoLY2g2X2N1cnJlbnQYDCABKAJIC4gBARIYCgtjaDdfdm9sdGFn",
+            "ZRgNIAEoAkgMiAEBEhgKC2NoN19jdXJyZW50GA4gASgCSA2IAQESGAoLY2g4",
+            "X3ZvbHRhZ2UYDyABKAJIDogBARIYCgtjaDhfY3VycmVudBgQIAEoAkgPiAEB",
+            "Qg4KDF9jaDFfdm9sdGFnZUIOCgxfY2gxX2N1cnJlbnRCDgoMX2NoMl92b2x0",
+            "YWdlQg4KDF9jaDJfY3VycmVudEIOCgxfY2gzX3ZvbHRhZ2VCDgoMX2NoM19j",
+            "dXJyZW50Qg4KDF9jaDRfdm9sdGFnZUIOCgxfY2g0X2N1cnJlbnRCDgoMX2No",
+            "NV92b2x0YWdlQg4KDF9jaDVfY3VycmVudEIOCgxfY2g2X3ZvbHRhZ2VCDgoM",
+            "X2NoNl9jdXJyZW50Qg4KDF9jaDdfdm9sdGFnZUIOCgxfY2g3X2N1cnJlbnRC",
+            "DgoMX2NoOF92b2x0YWdlQg4KDF9jaDhfY3VycmVudCLjBQoRQWlyUXVhbGl0",
+            "eU1ldHJpY3MSGgoNcG0xMF9zdGFuZGFyZBgBIAEoDUgAiAEBEhoKDXBtMjVf",
+            "c3RhbmRhcmQYAiABKA1IAYgBARIbCg5wbTEwMF9zdGFuZGFyZBgDIAEoDUgC",
+            "iAEBEh8KEnBtMTBfZW52aXJvbm1lbnRhbBgEIAEoDUgDiAEBEh8KEnBtMjVf",
+            "ZW52aXJvbm1lbnRhbBgFIAEoDUgEiAEBEiAKE3BtMTAwX2Vudmlyb25tZW50",
+            "YWwYBiABKA1IBYgBARIbCg5wYXJ0aWNsZXNfMDN1bRgHIAEoDUgGiAEBEhsK",
+            "DnBhcnRpY2xlc18wNXVtGAggASgNSAeIAQESGwoOcGFydGljbGVzXzEwdW0Y",
+            "CSABKA1ICIgBARIbCg5wYXJ0aWNsZXNfMjV1bRgKIAEoDUgJiAEBEhsKDnBh",
+            "cnRpY2xlc181MHVtGAsgASgNSAqIAQESHAoPcGFydGljbGVzXzEwMHVtGAwg",
+            "ASgNSAuIAQESEAoDY28yGA0gASgNSAyIAQESHAoPY28yX3RlbXBlcmF0dXJl",
+            "GA4gASgCSA2IAQESGQoMY28yX2h1bWlkaXR5GA8gASgCSA6IAQFCEAoOX3Bt",
+            "MTBfc3RhbmRhcmRCEAoOX3BtMjVfc3RhbmRhcmRCEQoPX3BtMTAwX3N0YW5k",
+            "YXJkQhUKE19wbTEwX2Vudmlyb25tZW50YWxCFQoTX3BtMjVfZW52aXJvbm1l",
+            "bnRhbEIWChRfcG0xMDBfZW52aXJvbm1lbnRhbEIRCg9fcGFydGljbGVzXzAz",
+            "dW1CEQoPX3BhcnRpY2xlc18wNXVtQhEKD19wYXJ0aWNsZXNfMTB1bUIRCg9f",
+            "cGFydGljbGVzXzI1dW1CEQoPX3BhcnRpY2xlc181MHVtQhIKEF9wYXJ0aWNs",
+            "ZXNfMTAwdW1CBgoEX2NvMkISChBfY28yX3RlbXBlcmF0dXJlQg8KDV9jbzJf",
+            "aHVtaWRpdHki0gIKCkxvY2FsU3RhdHMSFgoOdXB0aW1lX3NlY29uZHMYASAB",
+            "KA0SGwoTY2hhbm5lbF91dGlsaXphdGlvbhgCIAEoAhITCgthaXJfdXRpbF90",
+            "eBgDIAEoAhIWCg5udW1fcGFja2V0c190eBgEIAEoDRIWCg5udW1fcGFja2V0",
+            "c19yeBgFIAEoDRIaChJudW1fcGFja2V0c19yeF9iYWQYBiABKA0SGAoQbnVt",
+            "X29ubGluZV9ub2RlcxgHIAEoDRIXCg9udW1fdG90YWxfbm9kZXMYCCABKA0S",
+            "EwoLbnVtX3J4X2R1cGUYCSABKA0SFAoMbnVtX3R4X3JlbGF5GAogASgNEh0K",
+            "FW51bV90eF9yZWxheV9jYW5jZWxlZBgLIAEoDRIYChBoZWFwX3RvdGFsX2J5",
+            "dGVzGAwgASgNEhcKD2hlYXBfZnJlZV9ieXRlcxgNIAEoDSJ7Cg1IZWFsdGhN",
+            "ZXRyaWNzEhYKCWhlYXJ0X2JwbRgBIAEoDUgAiAEBEhEKBHNwTzIYAiABKA1I",
+            "AYgBARIYCgt0ZW1wZXJhdHVyZRgDIAEoAkgCiAEBQgwKCl9oZWFydF9icG1C",
+            "BwoFX3NwTzJCDgoMX3RlbXBlcmF0dXJlIpECCgtIb3N0TWV0cmljcxIWCg51",
+            "cHRpbWVfc2Vjb25kcxgBIAEoDRIVCg1mcmVlbWVtX2J5dGVzGAIgASgEEhcK",
+            "D2Rpc2tmcmVlMV9ieXRlcxgDIAEoBBIcCg9kaXNrZnJlZTJfYnl0ZXMYBCAB",
+            "KARIAIgBARIcCg9kaXNrZnJlZTNfYnl0ZXMYBSABKARIAYgBARINCgVsb2Fk",
+            "MRgGIAEoDRINCgVsb2FkNRgHIAEoDRIOCgZsb2FkMTUYCCABKA0SGAoLdXNl",
+            "cl9zdHJpbmcYCSABKAlIAogBAUISChBfZGlza2ZyZWUyX2J5dGVzQhIKEF9k",
+            "aXNrZnJlZTNfYnl0ZXNCDgoMX3VzZXJfc3RyaW5nIp4DCglUZWxlbWV0cnkS",
+            "DAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0cmljcxgCIAEoCzIZLm1lc2h0",
+            "YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vudmlyb25tZW50X21ldHJpY3MY",
+            "AyABKAsyHi5tZXNodGFzdGljLkVudmlyb25tZW50TWV0cmljc0gAEjwKE2Fp",
+            "cl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5tZXNodGFzdGljLkFpclF1YWxp",
+            "dHlNZXRyaWNzSAASMQoNcG93ZXJfbWV0cmljcxgFIAEoCzIYLm1lc2h0YXN0",
+            "aWMuUG93ZXJNZXRyaWNzSAASLQoLbG9jYWxfc3RhdHMYBiABKAsyFi5tZXNo",
+            "dGFzdGljLkxvY2FsU3RhdHNIABIzCg5oZWFsdGhfbWV0cmljcxgHIAEoCzIZ",
+            "Lm1lc2h0YXN0aWMuSGVhbHRoTWV0cmljc0gAEi8KDGhvc3RfbWV0cmljcxgI",
+            "IAEoCzIXLm1lc2h0YXN0aWMuSG9zdE1ldHJpY3NIAEIJCgd2YXJpYW50Ij4K",
+            "DU5hdTc4MDJDb25maWcSEgoKemVyb09mZnNldBgBIAEoBRIZChFjYWxpYnJh",
+            "dGlvbkZhY3RvchgCIAEoAiq5BAoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxT",
+            "RU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5",
+            "ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoF",
+            "U0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoS",
+            "DAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwKCFBNU0EwMDNJEA0SCwoHSU5B",
+            "MzIyMRAOEgoKBkJNUDA4NRAPEgwKCFJDV0w5NjIwEBASCQoFU0hUNFgQERIM",
+            "CghWRU1MNzcwMBASEgwKCE1MWDkwNjMyEBMSCwoHT1BUMzAwMRAUEgwKCExU",
+            "UjM5MFVWEBUSDgoKVFNMMjU5MTFGThAWEgkKBUFIVDEwEBcSEAoMREZST0JP",
+            "VF9MQVJLEBgSCwoHTkFVNzgwMhAZEgoKBkJNUDNYWBAaEgwKCElDTTIwOTQ4",
+            "EBsSDAoITUFYMTcwNDgQHBIRCg1DVVNUT01fU0VOU09SEB0SDAoITUFYMzAx",
+            "MDIQHhIMCghNTFg5MDYxNBAfEgkKBVNDRDRYECASCwoHUkFEU0VOUxAhEgoK",
+            "BklOQTIyNhAiEhAKDERGUk9CT1RfUkFJThAjEgoKBkRQUzMxMBAkEgwKCFJB",
+            "SzEyMDM1ECUSDAoITUFYMTcyNjEQJhILCgdQQ1QyMDc1ECcSCwoHQURTMVgx",
+            "NRAoQmQKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1RlbGVtZXRyeVByb3Rvc1oi",
+            "Z2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0",
+            "aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2" }, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current", "Ch4Voltage", "Ch4Current", "Ch5Voltage", "Ch5Current", "Ch6Voltage", "Ch6Current", "Ch7Voltage", "Ch7Current", "Ch8Voltage", "Ch8Current" }, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current", "Ch4Voltage", "Ch4Current", "Ch5Voltage", "Ch5Current", "Ch6Voltage", "Ch6Current", "Ch7Voltage", "Ch7Current", "Ch8Voltage", "Ch8Current" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity" }, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled", "HeapTotalBytes", "HeapFreeBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HealthMetrics), global::Meshtastic.Protobufs.HealthMetrics.Parser, new[]{ "HeartBpm", "SpO2", "Temperature" }, new[]{ "HeartBpm", "SpO2", "Temperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HostMetrics), global::Meshtastic.Protobufs.HostMetrics.Parser, new[]{ "UptimeSeconds", "FreememBytes", "Diskfree1Bytes", "Diskfree2Bytes", "Diskfree3Bytes", "Load1", "Load5", "Load15", "UserString" }, new[]{ "Diskfree2Bytes", "Diskfree3Bytes", "UserString" }, null, null, null),
@@ -336,6 +348,11 @@ namespace Meshtastic.Protobufs {
     /// PCT2075 Temperature Sensor
     /// </summary>
     [pbr::OriginalName("PCT2075")] Pct2075 = 39,
+    /// <summary>
+    ///
+    /// ADS1X15 ADC
+    /// </summary>
+    [pbr::OriginalName("ADS1X15")] Ads1X15 = 40,
   }
 
   #endregion
@@ -2236,6 +2253,16 @@ namespace Meshtastic.Protobufs {
       ch2Current_ = other.ch2Current_;
       ch3Voltage_ = other.ch3Voltage_;
       ch3Current_ = other.ch3Current_;
+      ch4Voltage_ = other.ch4Voltage_;
+      ch4Current_ = other.ch4Current_;
+      ch5Voltage_ = other.ch5Voltage_;
+      ch5Current_ = other.ch5Current_;
+      ch6Voltage_ = other.ch6Voltage_;
+      ch6Current_ = other.ch6Current_;
+      ch7Voltage_ = other.ch7Voltage_;
+      ch7Current_ = other.ch7Current_;
+      ch8Voltage_ = other.ch8Voltage_;
+      ch8Current_ = other.ch8Current_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2431,6 +2458,316 @@ namespace Meshtastic.Protobufs {
       _hasBits0 &= ~32;
     }
 
+    /// <summary>Field number for the "ch4_voltage" field.</summary>
+    public const int Ch4VoltageFieldNumber = 7;
+    private readonly static float Ch4VoltageDefaultValue = 0F;
+
+    private float ch4Voltage_;
+    /// <summary>
+    ///
+    /// Voltage (Ch4)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch4Voltage {
+      get { if ((_hasBits0 & 64) != 0) { return ch4Voltage_; } else { return Ch4VoltageDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        ch4Voltage_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch4_voltage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh4Voltage {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "ch4_voltage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh4Voltage() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "ch4_current" field.</summary>
+    public const int Ch4CurrentFieldNumber = 8;
+    private readonly static float Ch4CurrentDefaultValue = 0F;
+
+    private float ch4Current_;
+    /// <summary>
+    ///
+    /// Current (Ch4)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch4Current {
+      get { if ((_hasBits0 & 128) != 0) { return ch4Current_; } else { return Ch4CurrentDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        ch4Current_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch4_current" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh4Current {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "ch4_current" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh4Current() {
+      _hasBits0 &= ~128;
+    }
+
+    /// <summary>Field number for the "ch5_voltage" field.</summary>
+    public const int Ch5VoltageFieldNumber = 9;
+    private readonly static float Ch5VoltageDefaultValue = 0F;
+
+    private float ch5Voltage_;
+    /// <summary>
+    ///
+    /// Voltage (Ch5)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch5Voltage {
+      get { if ((_hasBits0 & 256) != 0) { return ch5Voltage_; } else { return Ch5VoltageDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        ch5Voltage_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch5_voltage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh5Voltage {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "ch5_voltage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh5Voltage() {
+      _hasBits0 &= ~256;
+    }
+
+    /// <summary>Field number for the "ch5_current" field.</summary>
+    public const int Ch5CurrentFieldNumber = 10;
+    private readonly static float Ch5CurrentDefaultValue = 0F;
+
+    private float ch5Current_;
+    /// <summary>
+    ///
+    /// Current (Ch5)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch5Current {
+      get { if ((_hasBits0 & 512) != 0) { return ch5Current_; } else { return Ch5CurrentDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        ch5Current_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch5_current" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh5Current {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "ch5_current" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh5Current() {
+      _hasBits0 &= ~512;
+    }
+
+    /// <summary>Field number for the "ch6_voltage" field.</summary>
+    public const int Ch6VoltageFieldNumber = 11;
+    private readonly static float Ch6VoltageDefaultValue = 0F;
+
+    private float ch6Voltage_;
+    /// <summary>
+    ///
+    /// Voltage (Ch6)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch6Voltage {
+      get { if ((_hasBits0 & 1024) != 0) { return ch6Voltage_; } else { return Ch6VoltageDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        ch6Voltage_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch6_voltage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh6Voltage {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "ch6_voltage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh6Voltage() {
+      _hasBits0 &= ~1024;
+    }
+
+    /// <summary>Field number for the "ch6_current" field.</summary>
+    public const int Ch6CurrentFieldNumber = 12;
+    private readonly static float Ch6CurrentDefaultValue = 0F;
+
+    private float ch6Current_;
+    /// <summary>
+    ///
+    /// Current (Ch6)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch6Current {
+      get { if ((_hasBits0 & 2048) != 0) { return ch6Current_; } else { return Ch6CurrentDefaultValue; } }
+      set {
+        _hasBits0 |= 2048;
+        ch6Current_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch6_current" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh6Current {
+      get { return (_hasBits0 & 2048) != 0; }
+    }
+    /// <summary>Clears the value of the "ch6_current" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh6Current() {
+      _hasBits0 &= ~2048;
+    }
+
+    /// <summary>Field number for the "ch7_voltage" field.</summary>
+    public const int Ch7VoltageFieldNumber = 13;
+    private readonly static float Ch7VoltageDefaultValue = 0F;
+
+    private float ch7Voltage_;
+    /// <summary>
+    ///
+    /// Voltage (Ch7)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch7Voltage {
+      get { if ((_hasBits0 & 4096) != 0) { return ch7Voltage_; } else { return Ch7VoltageDefaultValue; } }
+      set {
+        _hasBits0 |= 4096;
+        ch7Voltage_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch7_voltage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh7Voltage {
+      get { return (_hasBits0 & 4096) != 0; }
+    }
+    /// <summary>Clears the value of the "ch7_voltage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh7Voltage() {
+      _hasBits0 &= ~4096;
+    }
+
+    /// <summary>Field number for the "ch7_current" field.</summary>
+    public const int Ch7CurrentFieldNumber = 14;
+    private readonly static float Ch7CurrentDefaultValue = 0F;
+
+    private float ch7Current_;
+    /// <summary>
+    ///
+    /// Current (Ch7)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch7Current {
+      get { if ((_hasBits0 & 8192) != 0) { return ch7Current_; } else { return Ch7CurrentDefaultValue; } }
+      set {
+        _hasBits0 |= 8192;
+        ch7Current_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch7_current" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh7Current {
+      get { return (_hasBits0 & 8192) != 0; }
+    }
+    /// <summary>Clears the value of the "ch7_current" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh7Current() {
+      _hasBits0 &= ~8192;
+    }
+
+    /// <summary>Field number for the "ch8_voltage" field.</summary>
+    public const int Ch8VoltageFieldNumber = 15;
+    private readonly static float Ch8VoltageDefaultValue = 0F;
+
+    private float ch8Voltage_;
+    /// <summary>
+    ///
+    /// Voltage (Ch8)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch8Voltage {
+      get { if ((_hasBits0 & 16384) != 0) { return ch8Voltage_; } else { return Ch8VoltageDefaultValue; } }
+      set {
+        _hasBits0 |= 16384;
+        ch8Voltage_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch8_voltage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh8Voltage {
+      get { return (_hasBits0 & 16384) != 0; }
+    }
+    /// <summary>Clears the value of the "ch8_voltage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh8Voltage() {
+      _hasBits0 &= ~16384;
+    }
+
+    /// <summary>Field number for the "ch8_current" field.</summary>
+    public const int Ch8CurrentFieldNumber = 16;
+    private readonly static float Ch8CurrentDefaultValue = 0F;
+
+    private float ch8Current_;
+    /// <summary>
+    ///
+    /// Current (Ch8)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Ch8Current {
+      get { if ((_hasBits0 & 32768) != 0) { return ch8Current_; } else { return Ch8CurrentDefaultValue; } }
+      set {
+        _hasBits0 |= 32768;
+        ch8Current_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ch8_current" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCh8Current {
+      get { return (_hasBits0 & 32768) != 0; }
+    }
+    /// <summary>Clears the value of the "ch8_current" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCh8Current() {
+      _hasBits0 &= ~32768;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2452,6 +2789,16 @@ namespace Meshtastic.Protobufs {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch2Current, other.Ch2Current)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch3Voltage, other.Ch3Voltage)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch3Current, other.Ch3Current)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch4Voltage, other.Ch4Voltage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch4Current, other.Ch4Current)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch5Voltage, other.Ch5Voltage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch5Current, other.Ch5Current)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch6Voltage, other.Ch6Voltage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch6Current, other.Ch6Current)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch7Voltage, other.Ch7Voltage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch7Current, other.Ch7Current)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch8Voltage, other.Ch8Voltage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Ch8Current, other.Ch8Current)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2465,6 +2812,16 @@ namespace Meshtastic.Protobufs {
       if (HasCh2Current) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch2Current);
       if (HasCh3Voltage) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch3Voltage);
       if (HasCh3Current) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch3Current);
+      if (HasCh4Voltage) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch4Voltage);
+      if (HasCh4Current) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch4Current);
+      if (HasCh5Voltage) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch5Voltage);
+      if (HasCh5Current) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch5Current);
+      if (HasCh6Voltage) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch6Voltage);
+      if (HasCh6Current) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch6Current);
+      if (HasCh7Voltage) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch7Voltage);
+      if (HasCh7Current) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch7Current);
+      if (HasCh8Voltage) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch8Voltage);
+      if (HasCh8Current) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Ch8Current);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2507,6 +2864,46 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(53);
         output.WriteFloat(Ch3Current);
       }
+      if (HasCh4Voltage) {
+        output.WriteRawTag(61);
+        output.WriteFloat(Ch4Voltage);
+      }
+      if (HasCh4Current) {
+        output.WriteRawTag(69);
+        output.WriteFloat(Ch4Current);
+      }
+      if (HasCh5Voltage) {
+        output.WriteRawTag(77);
+        output.WriteFloat(Ch5Voltage);
+      }
+      if (HasCh5Current) {
+        output.WriteRawTag(85);
+        output.WriteFloat(Ch5Current);
+      }
+      if (HasCh6Voltage) {
+        output.WriteRawTag(93);
+        output.WriteFloat(Ch6Voltage);
+      }
+      if (HasCh6Current) {
+        output.WriteRawTag(101);
+        output.WriteFloat(Ch6Current);
+      }
+      if (HasCh7Voltage) {
+        output.WriteRawTag(109);
+        output.WriteFloat(Ch7Voltage);
+      }
+      if (HasCh7Current) {
+        output.WriteRawTag(117);
+        output.WriteFloat(Ch7Current);
+      }
+      if (HasCh8Voltage) {
+        output.WriteRawTag(125);
+        output.WriteFloat(Ch8Voltage);
+      }
+      if (HasCh8Current) {
+        output.WriteRawTag(133, 1);
+        output.WriteFloat(Ch8Current);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2541,6 +2938,46 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(53);
         output.WriteFloat(Ch3Current);
       }
+      if (HasCh4Voltage) {
+        output.WriteRawTag(61);
+        output.WriteFloat(Ch4Voltage);
+      }
+      if (HasCh4Current) {
+        output.WriteRawTag(69);
+        output.WriteFloat(Ch4Current);
+      }
+      if (HasCh5Voltage) {
+        output.WriteRawTag(77);
+        output.WriteFloat(Ch5Voltage);
+      }
+      if (HasCh5Current) {
+        output.WriteRawTag(85);
+        output.WriteFloat(Ch5Current);
+      }
+      if (HasCh6Voltage) {
+        output.WriteRawTag(93);
+        output.WriteFloat(Ch6Voltage);
+      }
+      if (HasCh6Current) {
+        output.WriteRawTag(101);
+        output.WriteFloat(Ch6Current);
+      }
+      if (HasCh7Voltage) {
+        output.WriteRawTag(109);
+        output.WriteFloat(Ch7Voltage);
+      }
+      if (HasCh7Current) {
+        output.WriteRawTag(117);
+        output.WriteFloat(Ch7Current);
+      }
+      if (HasCh8Voltage) {
+        output.WriteRawTag(125);
+        output.WriteFloat(Ch8Voltage);
+      }
+      if (HasCh8Current) {
+        output.WriteRawTag(133, 1);
+        output.WriteFloat(Ch8Current);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2568,6 +3005,36 @@ namespace Meshtastic.Protobufs {
       }
       if (HasCh3Current) {
         size += 1 + 4;
+      }
+      if (HasCh4Voltage) {
+        size += 1 + 4;
+      }
+      if (HasCh4Current) {
+        size += 1 + 4;
+      }
+      if (HasCh5Voltage) {
+        size += 1 + 4;
+      }
+      if (HasCh5Current) {
+        size += 1 + 4;
+      }
+      if (HasCh6Voltage) {
+        size += 1 + 4;
+      }
+      if (HasCh6Current) {
+        size += 1 + 4;
+      }
+      if (HasCh7Voltage) {
+        size += 1 + 4;
+      }
+      if (HasCh7Current) {
+        size += 1 + 4;
+      }
+      if (HasCh8Voltage) {
+        size += 1 + 4;
+      }
+      if (HasCh8Current) {
+        size += 2 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2598,6 +3065,36 @@ namespace Meshtastic.Protobufs {
       }
       if (other.HasCh3Current) {
         Ch3Current = other.Ch3Current;
+      }
+      if (other.HasCh4Voltage) {
+        Ch4Voltage = other.Ch4Voltage;
+      }
+      if (other.HasCh4Current) {
+        Ch4Current = other.Ch4Current;
+      }
+      if (other.HasCh5Voltage) {
+        Ch5Voltage = other.Ch5Voltage;
+      }
+      if (other.HasCh5Current) {
+        Ch5Current = other.Ch5Current;
+      }
+      if (other.HasCh6Voltage) {
+        Ch6Voltage = other.Ch6Voltage;
+      }
+      if (other.HasCh6Current) {
+        Ch6Current = other.Ch6Current;
+      }
+      if (other.HasCh7Voltage) {
+        Ch7Voltage = other.Ch7Voltage;
+      }
+      if (other.HasCh7Current) {
+        Ch7Current = other.Ch7Current;
+      }
+      if (other.HasCh8Voltage) {
+        Ch8Voltage = other.Ch8Voltage;
+      }
+      if (other.HasCh8Current) {
+        Ch8Current = other.Ch8Current;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2642,6 +3139,46 @@ namespace Meshtastic.Protobufs {
             Ch3Current = input.ReadFloat();
             break;
           }
+          case 61: {
+            Ch4Voltage = input.ReadFloat();
+            break;
+          }
+          case 69: {
+            Ch4Current = input.ReadFloat();
+            break;
+          }
+          case 77: {
+            Ch5Voltage = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            Ch5Current = input.ReadFloat();
+            break;
+          }
+          case 93: {
+            Ch6Voltage = input.ReadFloat();
+            break;
+          }
+          case 101: {
+            Ch6Current = input.ReadFloat();
+            break;
+          }
+          case 109: {
+            Ch7Voltage = input.ReadFloat();
+            break;
+          }
+          case 117: {
+            Ch7Current = input.ReadFloat();
+            break;
+          }
+          case 125: {
+            Ch8Voltage = input.ReadFloat();
+            break;
+          }
+          case 133: {
+            Ch8Current = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -2683,6 +3220,46 @@ namespace Meshtastic.Protobufs {
           }
           case 53: {
             Ch3Current = input.ReadFloat();
+            break;
+          }
+          case 61: {
+            Ch4Voltage = input.ReadFloat();
+            break;
+          }
+          case 69: {
+            Ch4Current = input.ReadFloat();
+            break;
+          }
+          case 77: {
+            Ch5Voltage = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            Ch5Current = input.ReadFloat();
+            break;
+          }
+          case 93: {
+            Ch6Voltage = input.ReadFloat();
+            break;
+          }
+          case 101: {
+            Ch6Current = input.ReadFloat();
+            break;
+          }
+          case 109: {
+            Ch7Voltage = input.ReadFloat();
+            break;
+          }
+          case 117: {
+            Ch7Current = input.ReadFloat();
+            break;
+          }
+          case 125: {
+            Ch8Voltage = input.ReadFloat();
+            break;
+          }
+          case 133: {
+            Ch8Current = input.ReadFloat();
             break;
           }
         }
@@ -2746,6 +3323,8 @@ namespace Meshtastic.Protobufs {
       particles50Um_ = other.particles50Um_;
       particles100Um_ = other.particles100Um_;
       co2_ = other.co2_;
+      co2Temperature_ = other.co2Temperature_;
+      co2Humidity_ = other.co2Humidity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3158,6 +3737,68 @@ namespace Meshtastic.Protobufs {
       _hasBits0 &= ~4096;
     }
 
+    /// <summary>Field number for the "co2_temperature" field.</summary>
+    public const int Co2TemperatureFieldNumber = 14;
+    private readonly static float Co2TemperatureDefaultValue = 0F;
+
+    private float co2Temperature_;
+    /// <summary>
+    ///
+    /// CO2 sensor temperature in degC
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Co2Temperature {
+      get { if ((_hasBits0 & 8192) != 0) { return co2Temperature_; } else { return Co2TemperatureDefaultValue; } }
+      set {
+        _hasBits0 |= 8192;
+        co2Temperature_ = value;
+      }
+    }
+    /// <summary>Gets whether the "co2_temperature" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCo2Temperature {
+      get { return (_hasBits0 & 8192) != 0; }
+    }
+    /// <summary>Clears the value of the "co2_temperature" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCo2Temperature() {
+      _hasBits0 &= ~8192;
+    }
+
+    /// <summary>Field number for the "co2_humidity" field.</summary>
+    public const int Co2HumidityFieldNumber = 15;
+    private readonly static float Co2HumidityDefaultValue = 0F;
+
+    private float co2Humidity_;
+    /// <summary>
+    ///
+    /// CO2 sensor relative humidity in %
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Co2Humidity {
+      get { if ((_hasBits0 & 16384) != 0) { return co2Humidity_; } else { return Co2HumidityDefaultValue; } }
+      set {
+        _hasBits0 |= 16384;
+        co2Humidity_ = value;
+      }
+    }
+    /// <summary>Gets whether the "co2_humidity" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCo2Humidity {
+      get { return (_hasBits0 & 16384) != 0; }
+    }
+    /// <summary>Clears the value of the "co2_humidity" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCo2Humidity() {
+      _hasBits0 &= ~16384;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3186,6 +3827,8 @@ namespace Meshtastic.Protobufs {
       if (Particles50Um != other.Particles50Um) return false;
       if (Particles100Um != other.Particles100Um) return false;
       if (Co2 != other.Co2) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Co2Temperature, other.Co2Temperature)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Co2Humidity, other.Co2Humidity)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3206,6 +3849,8 @@ namespace Meshtastic.Protobufs {
       if (HasParticles50Um) hash ^= Particles50Um.GetHashCode();
       if (HasParticles100Um) hash ^= Particles100Um.GetHashCode();
       if (HasCo2) hash ^= Co2.GetHashCode();
+      if (HasCo2Temperature) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Co2Temperature);
+      if (HasCo2Humidity) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Co2Humidity);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3276,6 +3921,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(104);
         output.WriteUInt32(Co2);
       }
+      if (HasCo2Temperature) {
+        output.WriteRawTag(117);
+        output.WriteFloat(Co2Temperature);
+      }
+      if (HasCo2Humidity) {
+        output.WriteRawTag(125);
+        output.WriteFloat(Co2Humidity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3338,6 +3991,14 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(104);
         output.WriteUInt32(Co2);
       }
+      if (HasCo2Temperature) {
+        output.WriteRawTag(117);
+        output.WriteFloat(Co2Temperature);
+      }
+      if (HasCo2Humidity) {
+        output.WriteRawTag(125);
+        output.WriteFloat(Co2Humidity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3386,6 +4047,12 @@ namespace Meshtastic.Protobufs {
       }
       if (HasCo2) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Co2);
+      }
+      if (HasCo2Temperature) {
+        size += 1 + 4;
+      }
+      if (HasCo2Humidity) {
+        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3437,6 +4104,12 @@ namespace Meshtastic.Protobufs {
       }
       if (other.HasCo2) {
         Co2 = other.Co2;
+      }
+      if (other.HasCo2Temperature) {
+        Co2Temperature = other.Co2Temperature;
+      }
+      if (other.HasCo2Humidity) {
+        Co2Humidity = other.Co2Humidity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3509,6 +4182,14 @@ namespace Meshtastic.Protobufs {
             Co2 = input.ReadUInt32();
             break;
           }
+          case 117: {
+            Co2Temperature = input.ReadFloat();
+            break;
+          }
+          case 125: {
+            Co2Humidity = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -3578,6 +4259,14 @@ namespace Meshtastic.Protobufs {
           }
           case 104: {
             Co2 = input.ReadUInt32();
+            break;
+          }
+          case 117: {
+            Co2Temperature = input.ReadFloat();
+            break;
+          }
+          case 125: {
+            Co2Humidity = input.ReadFloat();
             break;
           }
         }

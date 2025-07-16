@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static DeviceUiReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyK+AwoO",
+            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyKkBAoO",
             "RGV2aWNlVUlDb25maWcSDwoHdmVyc2lvbhgBIAEoDRIZChFzY3JlZW5fYnJp",
             "Z2h0bmVzcxgCIAEoDRIWCg5zY3JlZW5fdGltZW91dBgDIAEoDRITCgtzY3Jl",
             "ZW5fbG9jaxgEIAEoCBIVCg1zZXR0aW5nc19sb2NrGAUgASgIEhAKCHBpbl9j",
@@ -34,31 +34,35 @@ namespace Meshtastic.Protobufs {
             "c2h0YXN0aWMuTGFuZ3VhZ2USKwoLbm9kZV9maWx0ZXIYDCABKAsyFi5tZXNo",
             "dGFzdGljLk5vZGVGaWx0ZXISMQoObm9kZV9oaWdobGlnaHQYDSABKAsyGS5t",
             "ZXNodGFzdGljLk5vZGVIaWdobGlnaHQSGAoQY2FsaWJyYXRpb25fZGF0YRgO",
-            "IAEoDBIhCghtYXBfZGF0YRgPIAEoCzIPLm1lc2h0YXN0aWMuTWFwIqcBCgpO",
-            "b2RlRmlsdGVyEhYKDnVua25vd25fc3dpdGNoGAEgASgIEhYKDm9mZmxpbmVf",
-            "c3dpdGNoGAIgASgIEhkKEXB1YmxpY19rZXlfc3dpdGNoGAMgASgIEhEKCWhv",
-            "cHNfYXdheRgEIAEoBRIXCg9wb3NpdGlvbl9zd2l0Y2gYBSABKAgSEQoJbm9k",
-            "ZV9uYW1lGAYgASgJEg8KB2NoYW5uZWwYByABKAUifgoNTm9kZUhpZ2hsaWdo",
-            "dBITCgtjaGF0X3N3aXRjaBgBIAEoCBIXCg9wb3NpdGlvbl9zd2l0Y2gYAiAB",
-            "KAgSGAoQdGVsZW1ldHJ5X3N3aXRjaBgDIAEoCBISCgppYXFfc3dpdGNoGAQg",
-            "ASgIEhEKCW5vZGVfbmFtZRgFIAEoCSI9CghHZW9Qb2ludBIMCgR6b29tGAEg",
-            "ASgFEhAKCGxhdGl0dWRlGAIgASgFEhEKCWxvbmdpdHVkZRgDIAEoBSJMCgNN",
-            "YXASIgoEaG9tZRgBIAEoCzIULm1lc2h0YXN0aWMuR2VvUG9pbnQSDQoFc3R5",
-            "bGUYAiABKAkSEgoKZm9sbG93X2dwcxgDIAEoCColCgVUaGVtZRIICgREQVJL",
-            "EAASCQoFTElHSFQQARIHCgNSRUQQAiqpAgoITGFuZ3VhZ2USCwoHRU5HTElT",
-            "SBAAEgoKBkZSRU5DSBABEgoKBkdFUk1BThACEgsKB0lUQUxJQU4QAxIOCgpQ",
-            "T1JUVUdVRVNFEAQSCwoHU1BBTklTSBAFEgsKB1NXRURJU0gQBhILCgdGSU5O",
-            "SVNIEAcSCgoGUE9MSVNIEAgSCwoHVFVSS0lTSBAJEgsKB1NFUkJJQU4QChIL",
-            "CgdSVVNTSUFOEAsSCQoFRFVUQ0gQDBIJCgVHUkVFSxANEg0KCU5PUldFR0lB",
-            "ThAOEg0KCVNMT1ZFTklBThAPEg0KCVVLUkFJTklBThAQEg0KCUJVTEdBUklB",
-            "ThAREhYKElNJTVBMSUZJRURfQ0hJTkVTRRAeEhcKE1RSQURJVElPTkFMX0NI",
-            "SU5FU0UQH0JjChNjb20uZ2Vla3N2aWxsZS5tZXNoQg5EZXZpY2VVSVByb3Rv",
-            "c1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0",
-            "YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "IAEoDBIhCghtYXBfZGF0YRgPIAEoCzIPLm1lc2h0YXN0aWMuTWFwEi0KDGNv",
+            "bXBhc3NfbW9kZRgQIAEoDjIXLm1lc2h0YXN0aWMuQ29tcGFzc01vZGUSGAoQ",
+            "c2NyZWVuX3JnYl9jb2xvchgRIAEoDRIbChNpc19jbG9ja2ZhY2VfYW5hbG9n",
+            "GBIgASgIIqcBCgpOb2RlRmlsdGVyEhYKDnVua25vd25fc3dpdGNoGAEgASgI",
+            "EhYKDm9mZmxpbmVfc3dpdGNoGAIgASgIEhkKEXB1YmxpY19rZXlfc3dpdGNo",
+            "GAMgASgIEhEKCWhvcHNfYXdheRgEIAEoBRIXCg9wb3NpdGlvbl9zd2l0Y2gY",
+            "BSABKAgSEQoJbm9kZV9uYW1lGAYgASgJEg8KB2NoYW5uZWwYByABKAUifgoN",
+            "Tm9kZUhpZ2hsaWdodBITCgtjaGF0X3N3aXRjaBgBIAEoCBIXCg9wb3NpdGlv",
+            "bl9zd2l0Y2gYAiABKAgSGAoQdGVsZW1ldHJ5X3N3aXRjaBgDIAEoCBISCgpp",
+            "YXFfc3dpdGNoGAQgASgIEhEKCW5vZGVfbmFtZRgFIAEoCSI9CghHZW9Qb2lu",
+            "dBIMCgR6b29tGAEgASgFEhAKCGxhdGl0dWRlGAIgASgFEhEKCWxvbmdpdHVk",
+            "ZRgDIAEoBSJMCgNNYXASIgoEaG9tZRgBIAEoCzIULm1lc2h0YXN0aWMuR2Vv",
+            "UG9pbnQSDQoFc3R5bGUYAiABKAkSEgoKZm9sbG93X2dwcxgDIAEoCCo+CgtD",
+            "b21wYXNzTW9kZRILCgdEWU5BTUlDEAASDgoKRklYRURfUklORxABEhIKDkZS",
+            "RUVaRV9IRUFESU5HEAIqJQoFVGhlbWUSCAoEREFSSxAAEgkKBUxJR0hUEAES",
+            "BwoDUkVEEAIqqQIKCExhbmd1YWdlEgsKB0VOR0xJU0gQABIKCgZGUkVOQ0gQ",
+            "ARIKCgZHRVJNQU4QAhILCgdJVEFMSUFOEAMSDgoKUE9SVFVHVUVTRRAEEgsK",
+            "B1NQQU5JU0gQBRILCgdTV0VESVNIEAYSCwoHRklOTklTSBAHEgoKBlBPTElT",
+            "SBAIEgsKB1RVUktJU0gQCRILCgdTRVJCSUFOEAoSCwoHUlVTU0lBThALEgkK",
+            "BURVVENIEAwSCQoFR1JFRUsQDRINCglOT1JXRUdJQU4QDhINCglTTE9WRU5J",
+            "QU4QDxINCglVS1JBSU5JQU4QEBINCglCVUxHQVJJQU4QERIWChJTSU1QTElG",
+            "SUVEX0NISU5FU0UQHhIXChNUUkFESVRJT05BTF9DSElORVNFEB9CYwoTY29t",
+            "LmdlZWtzdmlsbGUubWVzaEIORGV2aWNlVUlQcm90b3NaImdpdGh1Yi5jb20v",
+            "bWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVm",
+            "c7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight", "CalibrationData", "MapData" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.CompassMode), typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight", "CalibrationData", "MapData", "CompassMode", "ScreenRgbColor", "IsClockfaceAnalog" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeFilter), global::Meshtastic.Protobufs.NodeFilter.Parser, new[]{ "UnknownSwitch", "OfflineSwitch", "PublicKeySwitch", "HopsAway", "PositionSwitch", "NodeName", "Channel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeHighlight), global::Meshtastic.Protobufs.NodeHighlight.Parser, new[]{ "ChatSwitch", "PositionSwitch", "TelemetrySwitch", "IaqSwitch", "NodeName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.GeoPoint), global::Meshtastic.Protobufs.GeoPoint.Parser, new[]{ "Zoom", "Latitude", "Longitude" }, null, null, null, null),
@@ -69,6 +73,24 @@ namespace Meshtastic.Protobufs {
 
   }
   #region Enums
+  public enum CompassMode {
+    /// <summary>
+    ///
+    /// Compass with dynamic ring and heading
+    /// </summary>
+    [pbr::OriginalName("DYNAMIC")] Dynamic = 0,
+    /// <summary>
+    ///
+    /// Compass with fixed ring and heading
+    /// </summary>
+    [pbr::OriginalName("FIXED_RING")] FixedRing = 1,
+    /// <summary>
+    ///
+    /// Compass with heading and freeze option
+    /// </summary>
+    [pbr::OriginalName("FREEZE_HEADING")] FreezeHeading = 2,
+  }
+
   public enum Theme {
     /// <summary>
     ///
@@ -247,6 +269,9 @@ namespace Meshtastic.Protobufs {
       nodeHighlight_ = other.nodeHighlight_ != null ? other.nodeHighlight_.Clone() : null;
       calibrationData_ = other.calibrationData_;
       mapData_ = other.mapData_ != null ? other.mapData_.Clone() : null;
+      compassMode_ = other.compassMode_;
+      screenRgbColor_ = other.screenRgbColor_;
+      isClockfaceAnalog_ = other.isClockfaceAnalog_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -480,6 +505,56 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "compass_mode" field.</summary>
+    public const int CompassModeFieldNumber = 16;
+    private global::Meshtastic.Protobufs.CompassMode compassMode_ = global::Meshtastic.Protobufs.CompassMode.Dynamic;
+    /// <summary>
+    ///
+    /// Compass mode
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.CompassMode CompassMode {
+      get { return compassMode_; }
+      set {
+        compassMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "screen_rgb_color" field.</summary>
+    public const int ScreenRgbColorFieldNumber = 17;
+    private uint screenRgbColor_;
+    /// <summary>
+    ///
+    /// RGB color for BaseUI
+    /// 0xRRGGBB format, e.g. 0xFF0000 for red
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ScreenRgbColor {
+      get { return screenRgbColor_; }
+      set {
+        screenRgbColor_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_clockface_analog" field.</summary>
+    public const int IsClockfaceAnalogFieldNumber = 18;
+    private bool isClockfaceAnalog_;
+    /// <summary>
+    ///
+    /// Clockface analog style
+    /// true for analog clockface, false for digital clockface
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsClockfaceAnalog {
+      get { return isClockfaceAnalog_; }
+      set {
+        isClockfaceAnalog_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -510,6 +585,9 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(NodeHighlight, other.NodeHighlight)) return false;
       if (CalibrationData != other.CalibrationData) return false;
       if (!object.Equals(MapData, other.MapData)) return false;
+      if (CompassMode != other.CompassMode) return false;
+      if (ScreenRgbColor != other.ScreenRgbColor) return false;
+      if (IsClockfaceAnalog != other.IsClockfaceAnalog) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -532,6 +610,9 @@ namespace Meshtastic.Protobufs {
       if (nodeHighlight_ != null) hash ^= NodeHighlight.GetHashCode();
       if (CalibrationData.Length != 0) hash ^= CalibrationData.GetHashCode();
       if (mapData_ != null) hash ^= MapData.GetHashCode();
+      if (CompassMode != global::Meshtastic.Protobufs.CompassMode.Dynamic) hash ^= CompassMode.GetHashCode();
+      if (ScreenRgbColor != 0) hash ^= ScreenRgbColor.GetHashCode();
+      if (IsClockfaceAnalog != false) hash ^= IsClockfaceAnalog.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -610,6 +691,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(122);
         output.WriteMessage(MapData);
       }
+      if (CompassMode != global::Meshtastic.Protobufs.CompassMode.Dynamic) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) CompassMode);
+      }
+      if (ScreenRgbColor != 0) {
+        output.WriteRawTag(136, 1);
+        output.WriteUInt32(ScreenRgbColor);
+      }
+      if (IsClockfaceAnalog != false) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(IsClockfaceAnalog);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -680,6 +773,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(122);
         output.WriteMessage(MapData);
       }
+      if (CompassMode != global::Meshtastic.Protobufs.CompassMode.Dynamic) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) CompassMode);
+      }
+      if (ScreenRgbColor != 0) {
+        output.WriteRawTag(136, 1);
+        output.WriteUInt32(ScreenRgbColor);
+      }
+      if (IsClockfaceAnalog != false) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(IsClockfaceAnalog);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -734,6 +839,15 @@ namespace Meshtastic.Protobufs {
       }
       if (mapData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MapData);
+      }
+      if (CompassMode != global::Meshtastic.Protobufs.CompassMode.Dynamic) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) CompassMode);
+      }
+      if (ScreenRgbColor != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(ScreenRgbColor);
+      }
+      if (IsClockfaceAnalog != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -800,6 +914,15 @@ namespace Meshtastic.Protobufs {
           MapData = new global::Meshtastic.Protobufs.Map();
         }
         MapData.MergeFrom(other.MapData);
+      }
+      if (other.CompassMode != global::Meshtastic.Protobufs.CompassMode.Dynamic) {
+        CompassMode = other.CompassMode;
+      }
+      if (other.ScreenRgbColor != 0) {
+        ScreenRgbColor = other.ScreenRgbColor;
+      }
+      if (other.IsClockfaceAnalog != false) {
+        IsClockfaceAnalog = other.IsClockfaceAnalog;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -889,6 +1012,18 @@ namespace Meshtastic.Protobufs {
             input.ReadMessage(MapData);
             break;
           }
+          case 128: {
+            CompassMode = (global::Meshtastic.Protobufs.CompassMode) input.ReadEnum();
+            break;
+          }
+          case 136: {
+            ScreenRgbColor = input.ReadUInt32();
+            break;
+          }
+          case 144: {
+            IsClockfaceAnalog = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -975,6 +1110,18 @@ namespace Meshtastic.Protobufs {
               MapData = new global::Meshtastic.Protobufs.Map();
             }
             input.ReadMessage(MapData);
+            break;
+          }
+          case 128: {
+            CompassMode = (global::Meshtastic.Protobufs.CompassMode) input.ReadEnum();
+            break;
+          }
+          case 136: {
+            ScreenRgbColor = input.ReadUInt32();
+            break;
+          }
+          case 144: {
+            IsClockfaceAnalog = input.ReadBool();
             break;
           }
         }

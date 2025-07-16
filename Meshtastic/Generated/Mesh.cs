@@ -25,10 +25,10 @@ namespace Meshtastic.Protobufs {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVtZXNodGFzdGljL21lc2gucHJvdG8SCm1lc2h0YXN0aWMaGG1lc2h0YXN0",
-            "aWMvY2hhbm5lbC5wcm90bxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8aHm1l",
-            "c2h0YXN0aWMvbW9kdWxlX2NvbmZpZy5wcm90bxoZbWVzaHRhc3RpYy9wb3J0",
-            "bnVtcy5wcm90bxoabWVzaHRhc3RpYy90ZWxlbWV0cnkucHJvdG8aF21lc2h0",
-            "YXN0aWMveG1vZGVtLnByb3RvGhptZXNodGFzdGljL2RldmljZV91aS5wcm90",
+            "aWMvY2hhbm5lbC5wcm90bxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8aGm1l",
+            "c2h0YXN0aWMvZGV2aWNlX3VpLnByb3RvGh5tZXNodGFzdGljL21vZHVsZV9j",
+            "b25maWcucHJvdG8aGW1lc2h0YXN0aWMvcG9ydG51bXMucHJvdG8aGm1lc2h0",
+            "YXN0aWMvdGVsZW1ldHJ5LnByb3RvGhdtZXNodGFzdGljL3htb2RlbS5wcm90",
             "byKHBwoIUG9zaXRpb24SFwoKbGF0aXR1ZGVfaRgBIAEoD0gAiAEBEhgKC2xv",
             "bmdpdHVkZV9pGAIgASgPSAGIAQESFQoIYWx0aXR1ZGUYAyABKAVIAogBARIM",
             "CgR0aW1lGAQgASgHEjcKD2xvY2F0aW9uX3NvdXJjZRgFIAEoDjIeLm1lc2h0",
@@ -178,7 +178,7 @@ namespace Meshtastic.Protobufs {
             "ZF9pZBgBIAEoDRIaChByZXF1ZXN0X3RyYW5zZmVyGAIgASgISAASGQoPYWNj",
             "ZXB0X3RyYW5zZmVyGAMgASgISAASMgoNcmVzZW5kX2NodW5rcxgEIAEoCzIZ",
             "Lm1lc2h0YXN0aWMucmVzZW5kX2NodW5rc0gAQhEKD3BheWxvYWRfdmFyaWFu",
-            "dCr3DwoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRMT1JBX1YyEAES",
+            "dCqnEAoNSGFyZHdhcmVNb2RlbBIJCgVVTlNFVBAAEgwKCFRMT1JBX1YyEAES",
             "DAoIVExPUkFfVjEQAhISCg5UTE9SQV9WMl8xXzFQNhADEgkKBVRCRUFNEAQS",
             "DwoLSEVMVEVDX1YyXzAQBRIOCgpUQkVBTV9WMFA3EAYSCgoGVF9FQ0hPEAcS",
             "EAoMVExPUkFfVjFfMVAzEAgSCwoHUkFLNDYzMRAJEg8KC0hFTFRFQ19WMl8x",
@@ -223,28 +223,29 @@ namespace Meshtastic.Protobufs {
             "RF9XSU9fVFJBQ0tFUl9MMRBjEh0KGVNFRUVEX1dJT19UUkFDS0VSX0wxX0VJ",
             "TksQZBIUChBRV0FOVFpfVElOWV9BUk1TEGUSDgoKVF9ERUNLX1BSTxBmEhAK",
             "DFRfTE9SQV9QQUdFUhBnEh0KGUdBVDU2Ml9NRVNIX1RSSUFMX1RSQUNLRVIQ",
-            "aBIPCgpQUklWQVRFX0hXEP8BKiwKCUNvbnN0YW50cxIICgRaRVJPEAASFQoQ",
-            "REFUQV9QQVlMT0FEX0xFThDpASq0AgoRQ3JpdGljYWxFcnJvckNvZGUSCAoE",
-            "Tk9ORRAAEg8KC1RYX1dBVENIRE9HEAESFAoQU0xFRVBfRU5URVJfV0FJVBAC",
-            "EgwKCE5PX1JBRElPEAMSDwoLVU5TUEVDSUZJRUQQBBIVChFVQkxPWF9VTklU",
-            "X0ZBSUxFRBAFEg0KCU5PX0FYUDE5MhAGEhkKFUlOVkFMSURfUkFESU9fU0VU",
-            "VElORxAHEhMKD1RSQU5TTUlUX0ZBSUxFRBAIEgwKCEJST1dOT1VUEAkSEgoO",
-            "U1gxMjYyX0ZBSUxVUkUQChIRCg1SQURJT19TUElfQlVHEAsSIAocRkxBU0hf",
-            "Q09SUlVQVElPTl9SRUNPVkVSQUJMRRAMEiIKHkZMQVNIX0NPUlJVUFRJT05f",
-            "VU5SRUNPVkVSQUJMRRANKoADCg9FeGNsdWRlZE1vZHVsZXMSEQoNRVhDTFVE",
-            "RURfTk9ORRAAEg8KC01RVFRfQ09ORklHEAESEQoNU0VSSUFMX0NPTkZJRxAC",
-            "EhMKD0VYVE5PVElGX0NPTkZJRxAEEhcKE1NUT1JFRk9SV0FSRF9DT05GSUcQ",
-            "CBIUChBSQU5HRVRFU1RfQ09ORklHEBASFAoQVEVMRU1FVFJZX0NPTkZJRxAg",
-            "EhQKEENBTk5FRE1TR19DT05GSUcQQBIRCgxBVURJT19DT05GSUcQgAESGgoV",
-            "UkVNT1RFSEFSRFdBUkVfQ09ORklHEIACEhgKE05FSUdIQk9SSU5GT19DT05G",
-            "SUcQgAQSGwoWQU1CSUVOVExJR0hUSU5HX0NPTkZJRxCACBIbChZERVRFQ1RJ",
-            "T05TRU5TT1JfQ09ORklHEIAQEhYKEVBBWENPVU5URVJfQ09ORklHEIAgEhUK",
-            "EEJMVUVUT09USF9DT05GSUcQgEASFAoOTkVUV09SS19DT05GSUcQgIABQl8K",
-            "E2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5jb20v",
-            "bWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVm",
-            "c7oCAGIGcHJvdG8z"));
+            "aBIPCgtXSVNNRVNIX1RBRxBpEgsKB1JBSzMzMTIQahIQCgxUSElOS05PREVf",
+            "TTUQaxIPCgpQUklWQVRFX0hXEP8BKiwKCUNvbnN0YW50cxIICgRaRVJPEAAS",
+            "FQoQREFUQV9QQVlMT0FEX0xFThDpASq0AgoRQ3JpdGljYWxFcnJvckNvZGUS",
+            "CAoETk9ORRAAEg8KC1RYX1dBVENIRE9HEAESFAoQU0xFRVBfRU5URVJfV0FJ",
+            "VBACEgwKCE5PX1JBRElPEAMSDwoLVU5TUEVDSUZJRUQQBBIVChFVQkxPWF9V",
+            "TklUX0ZBSUxFRBAFEg0KCU5PX0FYUDE5MhAGEhkKFUlOVkFMSURfUkFESU9f",
+            "U0VUVElORxAHEhMKD1RSQU5TTUlUX0ZBSUxFRBAIEgwKCEJST1dOT1VUEAkS",
+            "EgoOU1gxMjYyX0ZBSUxVUkUQChIRCg1SQURJT19TUElfQlVHEAsSIAocRkxB",
+            "U0hfQ09SUlVQVElPTl9SRUNPVkVSQUJMRRAMEiIKHkZMQVNIX0NPUlJVUFRJ",
+            "T05fVU5SRUNPVkVSQUJMRRANKoADCg9FeGNsdWRlZE1vZHVsZXMSEQoNRVhD",
+            "TFVERURfTk9ORRAAEg8KC01RVFRfQ09ORklHEAESEQoNU0VSSUFMX0NPTkZJ",
+            "RxACEhMKD0VYVE5PVElGX0NPTkZJRxAEEhcKE1NUT1JFRk9SV0FSRF9DT05G",
+            "SUcQCBIUChBSQU5HRVRFU1RfQ09ORklHEBASFAoQVEVMRU1FVFJZX0NPTkZJ",
+            "RxAgEhQKEENBTk5FRE1TR19DT05GSUcQQBIRCgxBVURJT19DT05GSUcQgAES",
+            "GgoVUkVNT1RFSEFSRFdBUkVfQ09ORklHEIACEhgKE05FSUdIQk9SSU5GT19D",
+            "T05GSUcQgAQSGwoWQU1CSUVOVExJR0hUSU5HX0NPTkZJRxCACBIbChZERVRF",
+            "Q1RJT05TRU5TT1JfQ09ORklHEIAQEhYKEVBBWENPVU5URVJfQ09ORklHEIAg",
+            "EhUKEEJMVUVUT09USF9DT05GSUcQgEASFAoOTkVUV09SS19DT05GSUcQgIAB",
+            "Ql8KE2NvbS5nZWVrc3ZpbGxlLm1lc2hCCk1lc2hQcm90b3NaImdpdGh1Yi5j",
+            "b20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3Rv",
+            "YnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), typeof(global::Meshtastic.Protobufs.ExcludedModules), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Position), global::Meshtastic.Protobufs.Position.Parser, new[]{ "LatitudeI", "LongitudeI", "Altitude", "Time", "LocationSource", "AltitudeSource", "Timestamp", "TimestampMillisAdjust", "AltitudeHae", "AltitudeGeoidalSeparation", "PDOP", "HDOP", "VDOP", "GpsAccuracy", "GroundSpeed", "GroundTrack", "FixQuality", "FixType", "SatsInView", "SensorId", "NextUpdate", "SeqNumber", "PrecisionBits" }, new[]{ "LatitudeI", "LongitudeI", "Altitude", "AltitudeHae", "AltitudeGeoidalSeparation", "GroundSpeed", "GroundTrack" }, new[]{ typeof(global::Meshtastic.Protobufs.Position.Types.LocSource), typeof(global::Meshtastic.Protobufs.Position.Types.AltSource) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.User), global::Meshtastic.Protobufs.User.Parser, new[]{ "Id", "LongName", "ShortName", "Macaddr", "HwModel", "IsLicensed", "Role", "PublicKey", "IsUnmessagable" }, new[]{ "IsUnmessagable" }, null, null, null),
@@ -801,17 +802,17 @@ namespace Meshtastic.Protobufs {
     /// </summary>
     [pbr::OriginalName("CROWPANEL")] Crowpanel = 97,
     /// <summary>
-    ///*
+    ///
     /// Lilygo LINK32 board with sensors
     /// </summary>
     [pbr::OriginalName("LINK_32")] Link32 = 98,
     /// <summary>
-    ///*
+    ///
     /// Seeed Tracker L1
     /// </summary>
     [pbr::OriginalName("SEEED_WIO_TRACKER_L1")] SeeedWioTrackerL1 = 99,
     /// <summary>
-    ///*
+    ///
     /// Seeed Tracker L1 EINK driver
     /// </summary>
     [pbr::OriginalName("SEEED_WIO_TRACKER_L1_EINK")] SeeedWioTrackerL1Eink = 100,
@@ -821,20 +822,35 @@ namespace Meshtastic.Protobufs {
     /// </summary>
     [pbr::OriginalName("QWANTZ_TINY_ARMS")] QwantzTinyArms = 101,
     /// <summary>
-    ///*
+    ///
     /// Lilygo T-Deck Pro
     /// </summary>
     [pbr::OriginalName("T_DECK_PRO")] TDeckPro = 102,
     /// <summary>
-    ///*
+    ///
     /// Lilygo TLora Pager
     /// </summary>
     [pbr::OriginalName("T_LORA_PAGER")] TLoraPager = 103,
     /// <summary>
-    ///*
+    ///
     /// GAT562 Mesh Trial Tracker
     /// </summary>
     [pbr::OriginalName("GAT562_MESH_TRIAL_TRACKER")] Gat562MeshTrialTracker = 104,
+    /// <summary>
+    ///
+    /// RAKwireless WisMesh Tag
+    /// </summary>
+    [pbr::OriginalName("WISMESH_TAG")] WismeshTag = 105,
+    /// <summary>
+    ///
+    /// RAKwireless WisBlock Core RAK3312 https://docs.rakwireless.com/product-categories/wisduo/rak3112-module/overview/
+    /// </summary>
+    [pbr::OriginalName("RAK3312")] Rak3312 = 106,
+    /// <summary>
+    ///
+    /// Elecrow ThinkNode M5 https://www.elecrow.com/wiki/ThinkNode_M5_Meshtastic_LoRa_Signal_Transceiver_ESP32-S3.html
+    /// </summary>
+    [pbr::OriginalName("THINKNODE_M5")] ThinknodeM5 = 107,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -1027,7 +1043,7 @@ namespace Meshtastic.Protobufs {
     /// </summary>
     [pbr::OriginalName("PAXCOUNTER_CONFIG")] PaxcounterConfig = 4096,
     /// <summary>
-    /// 
+    ///
     /// Bluetooth config (not technically a module, but used to indicate bluetooth capabilities)
     /// </summary>
     [pbr::OriginalName("BLUETOOTH_CONFIG")] BluetoothConfig = 8192,

@@ -54,7 +54,7 @@ namespace Meshtastic.Protobufs {
   #region Messages
   /// <summary>
   /// Note: There are no 'PowerMon' messages normally in use (PowerMons are sent only as structured logs - slogs).
-  ///But we wrap our State enum in this message to effectively nest a namespace (without our linter yelling at us)
+  /// But we wrap our State enum in this message to effectively nest a namespace (without our linter yelling at us)
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PowerMon : pb::IMessage<PowerMon>
@@ -222,7 +222,7 @@ namespace Meshtastic.Protobufs {
     public static partial class Types {
       /// <summary>
       /// Any significant power changing event in meshtastic should be tagged with a powermon state transition.
-      ///If you are making new meshtastic features feel free to add new entries at the end of this definition.
+      /// If you are making new meshtastic features feel free to add new entries at the end of this definition.
       /// </summary>
       public enum State {
         [pbr::OriginalName("None")] None = 0,
@@ -250,8 +250,8 @@ namespace Meshtastic.Protobufs {
         [pbr::OriginalName("Wifi_On")] WifiOn = 1024,
         /// <summary>
         ///
-        ///GPS is actively trying to find our location
-        ///See GPSPowerState for more details
+        /// GPS is actively trying to find our location
+        /// See GPSPowerState for more details
         /// </summary>
         [pbr::OriginalName("GPS_Active")] GpsActive = 2048,
       }
@@ -510,8 +510,8 @@ namespace Meshtastic.Protobufs {
       /// <summary>
       ///
       /// What operation would we like the UUT to perform.
-      ///note: senders should probably set want_response in their request packets, so that they can know when the state
-      ///machine has started processing their request
+      /// note: senders should probably set want_response in their request packets, so that they can know when the state
+      /// machine has started processing their request
       /// </summary>
       public enum Opcode {
         /// <summary>
