@@ -81,7 +81,9 @@ public static class PKIEncryption
 	
 	private static byte[] Encrypt(X25519PrivateKeyParameters senderPrivateKey, X25519PublicKeyParameters recipientPublicKey, byte[] plaintext, uint packetId, uint senderNodeId)
 	{
-		var extraNonce = (uint)new SecureRandom().Next();
+		var extraNonceBytes = new byte[4];
+		new SecureRandom().NextBytes(extraNonceBytes);
+		var extraNonce = BitConverter.ToUInt32(extraNonceBytes, 0);
 		var sharedKey = GenerateSharedKey(senderPrivateKey, recipientPublicKey);
 		var nonce = GenerateNonce(packetId, senderNodeId, extraNonce);
 
