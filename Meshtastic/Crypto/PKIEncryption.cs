@@ -66,13 +66,14 @@ public static class PKIEncryption
 		return output;
 	}
 
-	public static void Encrypt(byte[] senderPrivateKey, byte[] recipientPublicKey, MeshPacket meshPacket)
+	public static bool Encrypt(byte[] senderPrivateKey, byte[] recipientPublicKey, MeshPacket meshPacket)
 	{
-		if (meshPacket.Encrypted != null && meshPacket.Encrypted.Length > 0) return;
-		if (meshPacket.Decoded == null) return;
+		if (meshPacket.Encrypted != null && meshPacket.Encrypted.Length > 0) return false;
+		if (meshPacket.Decoded == null) return false;
 		var plaintext = meshPacket.Decoded.ToByteArray();
 		var encrypted = Encrypt(senderPrivateKey, recipientPublicKey, plaintext, meshPacket.Id, meshPacket.From);
 		meshPacket.Encrypted = ByteString.CopyFrom(encrypted);
+		return true;
 	}
 
 	public static byte[] Encrypt(byte[] senderPrivateKey, byte[] recipientPublicKey, byte[] plaintext, uint packetId, uint senderNodeId)
