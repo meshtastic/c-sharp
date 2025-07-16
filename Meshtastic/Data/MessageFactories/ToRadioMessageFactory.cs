@@ -26,6 +26,12 @@ public class ToRadioMessageFactory
     public ToRadio CreateWantConfigOnlyMessage() =>
         new()
         {
+            WantConfigId = 69420,
+        };
+
+    public ToRadio CreateWantConfigOnlyNodesMessage() =>
+        new()
+        {
             WantConfigId = 69421,
         };
 
