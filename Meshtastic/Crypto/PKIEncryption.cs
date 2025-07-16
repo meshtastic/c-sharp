@@ -95,8 +95,8 @@ public static class PKIEncryption
 		byte[] output = new byte[cipher.GetOutputSize(plaintext.Length) + 4];
 		int len = cipher.ProcessBytes(plaintext, 0, plaintext.Length, output, 0);
 		cipher.DoFinal(output, len);
-		var extraNonceBytes = BitConverter.GetBytes(extraNonce);
-		Array.Copy(extraNonceBytes, 0, output, output.Length - 4, 4);
+		var extraNonceBits = BitConverter.GetBytes(extraNonce);
+		Array.Copy(extraNonceBits, 0, output, output.Length - 4, 4);
 		return output;
 	}
 }
