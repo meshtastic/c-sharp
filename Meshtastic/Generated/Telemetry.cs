@@ -65,7 +65,7 @@ namespace Meshtastic.Protobufs {
             "dXJyZW50Qg4KDF9jaDRfdm9sdGFnZUIOCgxfY2g0X2N1cnJlbnRCDgoMX2No",
             "NV92b2x0YWdlQg4KDF9jaDVfY3VycmVudEIOCgxfY2g2X3ZvbHRhZ2VCDgoM",
             "X2NoNl9jdXJyZW50Qg4KDF9jaDdfdm9sdGFnZUIOCgxfY2g3X2N1cnJlbnRC",
-            "DgoMX2NoOF92b2x0YWdlQg4KDF9jaDhfY3VycmVudCLjBQoRQWlyUXVhbGl0",
+            "DgoMX2NoOF92b2x0YWdlQg4KDF9jaDhfY3VycmVudCKxCQoRQWlyUXVhbGl0",
             "eU1ldHJpY3MSGgoNcG0xMF9zdGFuZGFyZBgBIAEoDUgAiAEBEhoKDXBtMjVf",
             "c3RhbmRhcmQYAiABKA1IAYgBARIbCg5wbTEwMF9zdGFuZGFyZBgDIAEoDUgC",
             "iAEBEh8KEnBtMTBfZW52aXJvbm1lbnRhbBgEIAEoDUgDiAEBEh8KEnBtMjVf",
@@ -75,63 +75,74 @@ namespace Meshtastic.Protobufs {
             "CSABKA1ICIgBARIbCg5wYXJ0aWNsZXNfMjV1bRgKIAEoDUgJiAEBEhsKDnBh",
             "cnRpY2xlc181MHVtGAsgASgNSAqIAQESHAoPcGFydGljbGVzXzEwMHVtGAwg",
             "ASgNSAuIAQESEAoDY28yGA0gASgNSAyIAQESHAoPY28yX3RlbXBlcmF0dXJl",
-            "GA4gASgCSA2IAQESGQoMY28yX2h1bWlkaXR5GA8gASgCSA6IAQFCEAoOX3Bt",
-            "MTBfc3RhbmRhcmRCEAoOX3BtMjVfc3RhbmRhcmRCEQoPX3BtMTAwX3N0YW5k",
-            "YXJkQhUKE19wbTEwX2Vudmlyb25tZW50YWxCFQoTX3BtMjVfZW52aXJvbm1l",
-            "bnRhbEIWChRfcG0xMDBfZW52aXJvbm1lbnRhbEIRCg9fcGFydGljbGVzXzAz",
-            "dW1CEQoPX3BhcnRpY2xlc18wNXVtQhEKD19wYXJ0aWNsZXNfMTB1bUIRCg9f",
-            "cGFydGljbGVzXzI1dW1CEQoPX3BhcnRpY2xlc181MHVtQhIKEF9wYXJ0aWNs",
-            "ZXNfMTAwdW1CBgoEX2NvMkISChBfY28yX3RlbXBlcmF0dXJlQg8KDV9jbzJf",
-            "aHVtaWRpdHki0gIKCkxvY2FsU3RhdHMSFgoOdXB0aW1lX3NlY29uZHMYASAB",
-            "KA0SGwoTY2hhbm5lbF91dGlsaXphdGlvbhgCIAEoAhITCgthaXJfdXRpbF90",
-            "eBgDIAEoAhIWCg5udW1fcGFja2V0c190eBgEIAEoDRIWCg5udW1fcGFja2V0",
-            "c19yeBgFIAEoDRIaChJudW1fcGFja2V0c19yeF9iYWQYBiABKA0SGAoQbnVt",
-            "X29ubGluZV9ub2RlcxgHIAEoDRIXCg9udW1fdG90YWxfbm9kZXMYCCABKA0S",
-            "EwoLbnVtX3J4X2R1cGUYCSABKA0SFAoMbnVtX3R4X3JlbGF5GAogASgNEh0K",
-            "FW51bV90eF9yZWxheV9jYW5jZWxlZBgLIAEoDRIYChBoZWFwX3RvdGFsX2J5",
-            "dGVzGAwgASgNEhcKD2hlYXBfZnJlZV9ieXRlcxgNIAEoDSJ7Cg1IZWFsdGhN",
-            "ZXRyaWNzEhYKCWhlYXJ0X2JwbRgBIAEoDUgAiAEBEhEKBHNwTzIYAiABKA1I",
-            "AYgBARIYCgt0ZW1wZXJhdHVyZRgDIAEoAkgCiAEBQgwKCl9oZWFydF9icG1C",
-            "BwoFX3NwTzJCDgoMX3RlbXBlcmF0dXJlIpECCgtIb3N0TWV0cmljcxIWCg51",
-            "cHRpbWVfc2Vjb25kcxgBIAEoDRIVCg1mcmVlbWVtX2J5dGVzGAIgASgEEhcK",
-            "D2Rpc2tmcmVlMV9ieXRlcxgDIAEoBBIcCg9kaXNrZnJlZTJfYnl0ZXMYBCAB",
-            "KARIAIgBARIcCg9kaXNrZnJlZTNfYnl0ZXMYBSABKARIAYgBARINCgVsb2Fk",
-            "MRgGIAEoDRINCgVsb2FkNRgHIAEoDRIOCgZsb2FkMTUYCCABKA0SGAoLdXNl",
-            "cl9zdHJpbmcYCSABKAlIAogBAUISChBfZGlza2ZyZWUyX2J5dGVzQhIKEF9k",
-            "aXNrZnJlZTNfYnl0ZXNCDgoMX3VzZXJfc3RyaW5nIp4DCglUZWxlbWV0cnkS",
-            "DAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0cmljcxgCIAEoCzIZLm1lc2h0",
-            "YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vudmlyb25tZW50X21ldHJpY3MY",
-            "AyABKAsyHi5tZXNodGFzdGljLkVudmlyb25tZW50TWV0cmljc0gAEjwKE2Fp",
-            "cl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5tZXNodGFzdGljLkFpclF1YWxp",
-            "dHlNZXRyaWNzSAASMQoNcG93ZXJfbWV0cmljcxgFIAEoCzIYLm1lc2h0YXN0",
-            "aWMuUG93ZXJNZXRyaWNzSAASLQoLbG9jYWxfc3RhdHMYBiABKAsyFi5tZXNo",
-            "dGFzdGljLkxvY2FsU3RhdHNIABIzCg5oZWFsdGhfbWV0cmljcxgHIAEoCzIZ",
-            "Lm1lc2h0YXN0aWMuSGVhbHRoTWV0cmljc0gAEi8KDGhvc3RfbWV0cmljcxgI",
-            "IAEoCzIXLm1lc2h0YXN0aWMuSG9zdE1ldHJpY3NIAEIJCgd2YXJpYW50Ij4K",
-            "DU5hdTc4MDJDb25maWcSEgoKemVyb09mZnNldBgBIAEoBRIZChFjYWxpYnJh",
-            "dGlvbkZhY3RvchgCIAEoAiq5BAoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxT",
-            "RU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5",
-            "ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoF",
-            "U0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoS",
-            "DAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwKCFBNU0EwMDNJEA0SCwoHSU5B",
-            "MzIyMRAOEgoKBkJNUDA4NRAPEgwKCFJDV0w5NjIwEBASCQoFU0hUNFgQERIM",
-            "CghWRU1MNzcwMBASEgwKCE1MWDkwNjMyEBMSCwoHT1BUMzAwMRAUEgwKCExU",
-            "UjM5MFVWEBUSDgoKVFNMMjU5MTFGThAWEgkKBUFIVDEwEBcSEAoMREZST0JP",
-            "VF9MQVJLEBgSCwoHTkFVNzgwMhAZEgoKBkJNUDNYWBAaEgwKCElDTTIwOTQ4",
-            "EBsSDAoITUFYMTcwNDgQHBIRCg1DVVNUT01fU0VOU09SEB0SDAoITUFYMzAx",
-            "MDIQHhIMCghNTFg5MDYxNBAfEgkKBVNDRDRYECASCwoHUkFEU0VOUxAhEgoK",
-            "BklOQTIyNhAiEhAKDERGUk9CT1RfUkFJThAjEgoKBkRQUzMxMBAkEgwKCFJB",
-            "SzEyMDM1ECUSDAoITUFYMTcyNjEQJhILCgdQQ1QyMDc1ECcSCwoHQURTMVgx",
-            "NRAoQmQKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1RlbGVtZXRyeVByb3Rvc1oi",
-            "Z2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0",
-            "aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "GA4gASgCSA2IAQESGQoMY28yX2h1bWlkaXR5GA8gASgCSA6IAQESHgoRZm9y",
+            "bV9mb3JtYWxkZWh5ZGUYECABKAJID4gBARIaCg1mb3JtX2h1bWlkaXR5GBEg",
+            "ASgCSBCIAQESHQoQZm9ybV90ZW1wZXJhdHVyZRgSIAEoAkgRiAEBEhoKDXBt",
+            "NDBfc3RhbmRhcmQYEyABKA1IEogBARIbCg5wYXJ0aWNsZXNfNDB1bRgUIAEo",
+            "DUgTiAEBEhsKDnBtX3RlbXBlcmF0dXJlGBUgASgCSBSIAQESGAoLcG1faHVt",
+            "aWRpdHkYFiABKAJIFYgBARIXCgpwbV92b2NfaWR4GBcgASgCSBaIAQESFwoK",
+            "cG1fbm94X2lkeBgYIAEoAkgXiAEBEhoKDXBhcnRpY2xlc190cHMYGSABKAJI",
+            "GIgBAUIQCg5fcG0xMF9zdGFuZGFyZEIQCg5fcG0yNV9zdGFuZGFyZEIRCg9f",
+            "cG0xMDBfc3RhbmRhcmRCFQoTX3BtMTBfZW52aXJvbm1lbnRhbEIVChNfcG0y",
+            "NV9lbnZpcm9ubWVudGFsQhYKFF9wbTEwMF9lbnZpcm9ubWVudGFsQhEKD19w",
+            "YXJ0aWNsZXNfMDN1bUIRCg9fcGFydGljbGVzXzA1dW1CEQoPX3BhcnRpY2xl",
+            "c18xMHVtQhEKD19wYXJ0aWNsZXNfMjV1bUIRCg9fcGFydGljbGVzXzUwdW1C",
+            "EgoQX3BhcnRpY2xlc18xMDB1bUIGCgRfY28yQhIKEF9jbzJfdGVtcGVyYXR1",
+            "cmVCDwoNX2NvMl9odW1pZGl0eUIUChJfZm9ybV9mb3JtYWxkZWh5ZGVCEAoO",
+            "X2Zvcm1faHVtaWRpdHlCEwoRX2Zvcm1fdGVtcGVyYXR1cmVCEAoOX3BtNDBf",
+            "c3RhbmRhcmRCEQoPX3BhcnRpY2xlc180MHVtQhEKD19wbV90ZW1wZXJhdHVy",
+            "ZUIOCgxfcG1faHVtaWRpdHlCDQoLX3BtX3ZvY19pZHhCDQoLX3BtX25veF9p",
+            "ZHhCEAoOX3BhcnRpY2xlc190cHMi0gIKCkxvY2FsU3RhdHMSFgoOdXB0aW1l",
+            "X3NlY29uZHMYASABKA0SGwoTY2hhbm5lbF91dGlsaXphdGlvbhgCIAEoAhIT",
+            "CgthaXJfdXRpbF90eBgDIAEoAhIWCg5udW1fcGFja2V0c190eBgEIAEoDRIW",
+            "Cg5udW1fcGFja2V0c19yeBgFIAEoDRIaChJudW1fcGFja2V0c19yeF9iYWQY",
+            "BiABKA0SGAoQbnVtX29ubGluZV9ub2RlcxgHIAEoDRIXCg9udW1fdG90YWxf",
+            "bm9kZXMYCCABKA0SEwoLbnVtX3J4X2R1cGUYCSABKA0SFAoMbnVtX3R4X3Jl",
+            "bGF5GAogASgNEh0KFW51bV90eF9yZWxheV9jYW5jZWxlZBgLIAEoDRIYChBo",
+            "ZWFwX3RvdGFsX2J5dGVzGAwgASgNEhcKD2hlYXBfZnJlZV9ieXRlcxgNIAEo",
+            "DSJ7Cg1IZWFsdGhNZXRyaWNzEhYKCWhlYXJ0X2JwbRgBIAEoDUgAiAEBEhEK",
+            "BHNwTzIYAiABKA1IAYgBARIYCgt0ZW1wZXJhdHVyZRgDIAEoAkgCiAEBQgwK",
+            "Cl9oZWFydF9icG1CBwoFX3NwTzJCDgoMX3RlbXBlcmF0dXJlIpECCgtIb3N0",
+            "TWV0cmljcxIWCg51cHRpbWVfc2Vjb25kcxgBIAEoDRIVCg1mcmVlbWVtX2J5",
+            "dGVzGAIgASgEEhcKD2Rpc2tmcmVlMV9ieXRlcxgDIAEoBBIcCg9kaXNrZnJl",
+            "ZTJfYnl0ZXMYBCABKARIAIgBARIcCg9kaXNrZnJlZTNfYnl0ZXMYBSABKARI",
+            "AYgBARINCgVsb2FkMRgGIAEoDRINCgVsb2FkNRgHIAEoDRIOCgZsb2FkMTUY",
+            "CCABKA0SGAoLdXNlcl9zdHJpbmcYCSABKAlIAogBAUISChBfZGlza2ZyZWUy",
+            "X2J5dGVzQhIKEF9kaXNrZnJlZTNfYnl0ZXNCDgoMX3VzZXJfc3RyaW5nIp4D",
+            "CglUZWxlbWV0cnkSDAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0cmljcxgC",
+            "IAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vudmlyb25t",
+            "ZW50X21ldHJpY3MYAyABKAsyHi5tZXNodGFzdGljLkVudmlyb25tZW50TWV0",
+            "cmljc0gAEjwKE2Fpcl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5tZXNodGFz",
+            "dGljLkFpclF1YWxpdHlNZXRyaWNzSAASMQoNcG93ZXJfbWV0cmljcxgFIAEo",
+            "CzIYLm1lc2h0YXN0aWMuUG93ZXJNZXRyaWNzSAASLQoLbG9jYWxfc3RhdHMY",
+            "BiABKAsyFi5tZXNodGFzdGljLkxvY2FsU3RhdHNIABIzCg5oZWFsdGhfbWV0",
+            "cmljcxgHIAEoCzIZLm1lc2h0YXN0aWMuSGVhbHRoTWV0cmljc0gAEi8KDGhv",
+            "c3RfbWV0cmljcxgIIAEoCzIXLm1lc2h0YXN0aWMuSG9zdE1ldHJpY3NIAEIJ",
+            "Cgd2YXJpYW50Ij4KDU5hdTc4MDJDb25maWcSEgoKemVyb09mZnNldBgBIAEo",
+            "BRIZChFjYWxpYnJhdGlvbkZhY3RvchgCIAEoAirgBAoTVGVsZW1ldHJ5U2Vu",
+            "c29yVHlwZRIQCgxTRU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2",
+            "ODAQAhILCgdNQ1A5ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoG",
+            "Qk1QMjgwEAYSCQoFU0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRIL",
+            "CgdRTUk4NjU4EAoSDAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwKCFBNU0Ew",
+            "MDNJEA0SCwoHSU5BMzIyMRAOEgoKBkJNUDA4NRAPEgwKCFJDV0w5NjIwEBAS",
+            "CQoFU0hUNFgQERIMCghWRU1MNzcwMBASEgwKCE1MWDkwNjMyEBMSCwoHT1BU",
+            "MzAwMRAUEgwKCExUUjM5MFVWEBUSDgoKVFNMMjU5MTFGThAWEgkKBUFIVDEw",
+            "EBcSEAoMREZST0JPVF9MQVJLEBgSCwoHTkFVNzgwMhAZEgoKBkJNUDNYWBAa",
+            "EgwKCElDTTIwOTQ4EBsSDAoITUFYMTcwNDgQHBIRCg1DVVNUT01fU0VOU09S",
+            "EB0SDAoITUFYMzAxMDIQHhIMCghNTFg5MDYxNBAfEgkKBVNDRDRYECASCwoH",
+            "UkFEU0VOUxAhEgoKBklOQTIyNhAiEhAKDERGUk9CT1RfUkFJThAjEgoKBkRQ",
+            "UzMxMBAkEgwKCFJBSzEyMDM1ECUSDAoITUFYMTcyNjEQJhILCgdQQ1QyMDc1",
+            "ECcSCwoHQURTMVgxNRAoEg8KC0FEUzFYMTVfQUxUECkSCQoFU0ZBMzAQKhIJ",
+            "CgVTRU41WBArQmQKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1RlbGVtZXRyeVBy",
+            "b3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1l",
+            "c2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceMetrics), global::Meshtastic.Protobufs.DeviceMetrics.Parser, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, new[]{ "BatteryLevel", "Voltage", "ChannelUtilization", "AirUtilTx", "UptimeSeconds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current", "Ch4Voltage", "Ch4Current", "Ch5Voltage", "Ch5Current", "Ch6Voltage", "Ch6Current", "Ch7Voltage", "Ch7Current", "Ch8Voltage", "Ch8Current" }, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current", "Ch4Voltage", "Ch4Current", "Ch5Voltage", "Ch5Current", "Ch6Voltage", "Ch6Current", "Ch7Voltage", "Ch7Current", "Ch8Voltage", "Ch8Current" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity" }, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity", "FormFormaldehyde", "FormHumidity", "FormTemperature", "Pm40Standard", "Particles40Um", "PmTemperature", "PmHumidity", "PmVocIdx", "PmNoxIdx", "ParticlesTps" }, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity", "FormFormaldehyde", "FormHumidity", "FormTemperature", "Pm40Standard", "Particles40Um", "PmTemperature", "PmHumidity", "PmVocIdx", "PmNoxIdx", "ParticlesTps" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled", "HeapTotalBytes", "HeapFreeBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HealthMetrics), global::Meshtastic.Protobufs.HealthMetrics.Parser, new[]{ "HeartBpm", "SpO2", "Temperature" }, new[]{ "HeartBpm", "SpO2", "Temperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HostMetrics), global::Meshtastic.Protobufs.HostMetrics.Parser, new[]{ "UptimeSeconds", "FreememBytes", "Diskfree1Bytes", "Diskfree2Bytes", "Diskfree3Bytes", "Load1", "Load5", "Load15", "UserString" }, new[]{ "Diskfree2Bytes", "Diskfree3Bytes", "UserString" }, null, null, null),
@@ -353,6 +364,21 @@ namespace Meshtastic.Protobufs {
     /// ADS1X15 ADC
     /// </summary>
     [pbr::OriginalName("ADS1X15")] Ads1X15 = 40,
+    /// <summary>
+    ///
+    /// ADS1X15 ADC_ALT
+    /// </summary>
+    [pbr::OriginalName("ADS1X15_ALT")] Ads1X15Alt = 41,
+    /// <summary>
+    ///
+    /// Sensirion SFA30 Formaldehyde sensor
+    /// </summary>
+    [pbr::OriginalName("SFA30")] Sfa30 = 42,
+    /// <summary>
+    ///
+    /// SEN5X PM SENSORS
+    /// </summary>
+    [pbr::OriginalName("SEN5X")] Sen5X = 43,
   }
 
   #endregion
@@ -3325,6 +3351,16 @@ namespace Meshtastic.Protobufs {
       co2_ = other.co2_;
       co2Temperature_ = other.co2Temperature_;
       co2Humidity_ = other.co2Humidity_;
+      formFormaldehyde_ = other.formFormaldehyde_;
+      formHumidity_ = other.formHumidity_;
+      formTemperature_ = other.formTemperature_;
+      pm40Standard_ = other.pm40Standard_;
+      particles40Um_ = other.particles40Um_;
+      pmTemperature_ = other.pmTemperature_;
+      pmHumidity_ = other.pmHumidity_;
+      pmVocIdx_ = other.pmVocIdx_;
+      pmNoxIdx_ = other.pmNoxIdx_;
+      particlesTps_ = other.particlesTps_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3341,7 +3377,7 @@ namespace Meshtastic.Protobufs {
     private uint pm10Standard_;
     /// <summary>
     ///
-    /// Concentration Units Standard PM1.0
+    /// Concentration Units Standard PM1.0 in ug/m3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3372,7 +3408,7 @@ namespace Meshtastic.Protobufs {
     private uint pm25Standard_;
     /// <summary>
     ///
-    /// Concentration Units Standard PM2.5
+    /// Concentration Units Standard PM2.5 in ug/m3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3403,7 +3439,7 @@ namespace Meshtastic.Protobufs {
     private uint pm100Standard_;
     /// <summary>
     ///
-    /// Concentration Units Standard PM10.0
+    /// Concentration Units Standard PM10.0 in ug/m3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3434,7 +3470,7 @@ namespace Meshtastic.Protobufs {
     private uint pm10Environmental_;
     /// <summary>
     ///
-    /// Concentration Units Environmental PM1.0
+    /// Concentration Units Environmental PM1.0 in ug/m3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3465,7 +3501,7 @@ namespace Meshtastic.Protobufs {
     private uint pm25Environmental_;
     /// <summary>
     ///
-    /// Concentration Units Environmental PM2.5
+    /// Concentration Units Environmental PM2.5 in ug/m3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3496,7 +3532,7 @@ namespace Meshtastic.Protobufs {
     private uint pm100Environmental_;
     /// <summary>
     ///
-    /// Concentration Units Environmental PM10.0
+    /// Concentration Units Environmental PM10.0 in ug/m3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3527,7 +3563,7 @@ namespace Meshtastic.Protobufs {
     private uint particles03Um_;
     /// <summary>
     ///
-    /// 0.3um Particle Count
+    /// 0.3um Particle Count in #/0.1l
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3558,7 +3594,7 @@ namespace Meshtastic.Protobufs {
     private uint particles05Um_;
     /// <summary>
     ///
-    /// 0.5um Particle Count
+    /// 0.5um Particle Count in #/0.1l
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3589,7 +3625,7 @@ namespace Meshtastic.Protobufs {
     private uint particles10Um_;
     /// <summary>
     ///
-    /// 1.0um Particle Count
+    /// 1.0um Particle Count in #/0.1l
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3620,7 +3656,7 @@ namespace Meshtastic.Protobufs {
     private uint particles25Um_;
     /// <summary>
     ///
-    /// 2.5um Particle Count
+    /// 2.5um Particle Count in #/0.1l
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3651,7 +3687,7 @@ namespace Meshtastic.Protobufs {
     private uint particles50Um_;
     /// <summary>
     ///
-    /// 5.0um Particle Count
+    /// 5.0um Particle Count in #/0.1l
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3682,7 +3718,7 @@ namespace Meshtastic.Protobufs {
     private uint particles100Um_;
     /// <summary>
     ///
-    /// 10.0um Particle Count
+    /// 10.0um Particle Count in #/0.1l
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3799,6 +3835,316 @@ namespace Meshtastic.Protobufs {
       _hasBits0 &= ~16384;
     }
 
+    /// <summary>Field number for the "form_formaldehyde" field.</summary>
+    public const int FormFormaldehydeFieldNumber = 16;
+    private readonly static float FormFormaldehydeDefaultValue = 0F;
+
+    private float formFormaldehyde_;
+    /// <summary>
+    ///
+    /// Formaldehyde sensor formaldehyde concentration in ppb
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float FormFormaldehyde {
+      get { if ((_hasBits0 & 32768) != 0) { return formFormaldehyde_; } else { return FormFormaldehydeDefaultValue; } }
+      set {
+        _hasBits0 |= 32768;
+        formFormaldehyde_ = value;
+      }
+    }
+    /// <summary>Gets whether the "form_formaldehyde" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFormFormaldehyde {
+      get { return (_hasBits0 & 32768) != 0; }
+    }
+    /// <summary>Clears the value of the "form_formaldehyde" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFormFormaldehyde() {
+      _hasBits0 &= ~32768;
+    }
+
+    /// <summary>Field number for the "form_humidity" field.</summary>
+    public const int FormHumidityFieldNumber = 17;
+    private readonly static float FormHumidityDefaultValue = 0F;
+
+    private float formHumidity_;
+    /// <summary>
+    ///
+    /// Formaldehyde sensor relative humidity in %RH
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float FormHumidity {
+      get { if ((_hasBits0 & 65536) != 0) { return formHumidity_; } else { return FormHumidityDefaultValue; } }
+      set {
+        _hasBits0 |= 65536;
+        formHumidity_ = value;
+      }
+    }
+    /// <summary>Gets whether the "form_humidity" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFormHumidity {
+      get { return (_hasBits0 & 65536) != 0; }
+    }
+    /// <summary>Clears the value of the "form_humidity" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFormHumidity() {
+      _hasBits0 &= ~65536;
+    }
+
+    /// <summary>Field number for the "form_temperature" field.</summary>
+    public const int FormTemperatureFieldNumber = 18;
+    private readonly static float FormTemperatureDefaultValue = 0F;
+
+    private float formTemperature_;
+    /// <summary>
+    ///
+    /// Formaldehyde sensor temperature in degrees Celsius
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float FormTemperature {
+      get { if ((_hasBits0 & 131072) != 0) { return formTemperature_; } else { return FormTemperatureDefaultValue; } }
+      set {
+        _hasBits0 |= 131072;
+        formTemperature_ = value;
+      }
+    }
+    /// <summary>Gets whether the "form_temperature" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFormTemperature {
+      get { return (_hasBits0 & 131072) != 0; }
+    }
+    /// <summary>Clears the value of the "form_temperature" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFormTemperature() {
+      _hasBits0 &= ~131072;
+    }
+
+    /// <summary>Field number for the "pm40_standard" field.</summary>
+    public const int Pm40StandardFieldNumber = 19;
+    private readonly static uint Pm40StandardDefaultValue = 0;
+
+    private uint pm40Standard_;
+    /// <summary>
+    ///
+    /// Concentration Units Standard PM4.0 in ug/m3
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pm40Standard {
+      get { if ((_hasBits0 & 262144) != 0) { return pm40Standard_; } else { return Pm40StandardDefaultValue; } }
+      set {
+        _hasBits0 |= 262144;
+        pm40Standard_ = value;
+      }
+    }
+    /// <summary>Gets whether the "pm40_standard" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPm40Standard {
+      get { return (_hasBits0 & 262144) != 0; }
+    }
+    /// <summary>Clears the value of the "pm40_standard" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPm40Standard() {
+      _hasBits0 &= ~262144;
+    }
+
+    /// <summary>Field number for the "particles_40um" field.</summary>
+    public const int Particles40UmFieldNumber = 20;
+    private readonly static uint Particles40UmDefaultValue = 0;
+
+    private uint particles40Um_;
+    /// <summary>
+    ///
+    /// 4.0um Particle Count in #/0.1l
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Particles40Um {
+      get { if ((_hasBits0 & 524288) != 0) { return particles40Um_; } else { return Particles40UmDefaultValue; } }
+      set {
+        _hasBits0 |= 524288;
+        particles40Um_ = value;
+      }
+    }
+    /// <summary>Gets whether the "particles_40um" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasParticles40Um {
+      get { return (_hasBits0 & 524288) != 0; }
+    }
+    /// <summary>Clears the value of the "particles_40um" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParticles40Um() {
+      _hasBits0 &= ~524288;
+    }
+
+    /// <summary>Field number for the "pm_temperature" field.</summary>
+    public const int PmTemperatureFieldNumber = 21;
+    private readonly static float PmTemperatureDefaultValue = 0F;
+
+    private float pmTemperature_;
+    /// <summary>
+    ///
+    /// PM Sensor Temperature
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float PmTemperature {
+      get { if ((_hasBits0 & 1048576) != 0) { return pmTemperature_; } else { return PmTemperatureDefaultValue; } }
+      set {
+        _hasBits0 |= 1048576;
+        pmTemperature_ = value;
+      }
+    }
+    /// <summary>Gets whether the "pm_temperature" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPmTemperature {
+      get { return (_hasBits0 & 1048576) != 0; }
+    }
+    /// <summary>Clears the value of the "pm_temperature" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPmTemperature() {
+      _hasBits0 &= ~1048576;
+    }
+
+    /// <summary>Field number for the "pm_humidity" field.</summary>
+    public const int PmHumidityFieldNumber = 22;
+    private readonly static float PmHumidityDefaultValue = 0F;
+
+    private float pmHumidity_;
+    /// <summary>
+    ///
+    /// PM Sensor humidity
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float PmHumidity {
+      get { if ((_hasBits0 & 2097152) != 0) { return pmHumidity_; } else { return PmHumidityDefaultValue; } }
+      set {
+        _hasBits0 |= 2097152;
+        pmHumidity_ = value;
+      }
+    }
+    /// <summary>Gets whether the "pm_humidity" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPmHumidity {
+      get { return (_hasBits0 & 2097152) != 0; }
+    }
+    /// <summary>Clears the value of the "pm_humidity" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPmHumidity() {
+      _hasBits0 &= ~2097152;
+    }
+
+    /// <summary>Field number for the "pm_voc_idx" field.</summary>
+    public const int PmVocIdxFieldNumber = 23;
+    private readonly static float PmVocIdxDefaultValue = 0F;
+
+    private float pmVocIdx_;
+    /// <summary>
+    ///
+    /// PM Sensor VOC Index
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float PmVocIdx {
+      get { if ((_hasBits0 & 4194304) != 0) { return pmVocIdx_; } else { return PmVocIdxDefaultValue; } }
+      set {
+        _hasBits0 |= 4194304;
+        pmVocIdx_ = value;
+      }
+    }
+    /// <summary>Gets whether the "pm_voc_idx" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPmVocIdx {
+      get { return (_hasBits0 & 4194304) != 0; }
+    }
+    /// <summary>Clears the value of the "pm_voc_idx" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPmVocIdx() {
+      _hasBits0 &= ~4194304;
+    }
+
+    /// <summary>Field number for the "pm_nox_idx" field.</summary>
+    public const int PmNoxIdxFieldNumber = 24;
+    private readonly static float PmNoxIdxDefaultValue = 0F;
+
+    private float pmNoxIdx_;
+    /// <summary>
+    ///
+    /// PM Sensor NOx Index
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float PmNoxIdx {
+      get { if ((_hasBits0 & 8388608) != 0) { return pmNoxIdx_; } else { return PmNoxIdxDefaultValue; } }
+      set {
+        _hasBits0 |= 8388608;
+        pmNoxIdx_ = value;
+      }
+    }
+    /// <summary>Gets whether the "pm_nox_idx" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPmNoxIdx {
+      get { return (_hasBits0 & 8388608) != 0; }
+    }
+    /// <summary>Clears the value of the "pm_nox_idx" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPmNoxIdx() {
+      _hasBits0 &= ~8388608;
+    }
+
+    /// <summary>Field number for the "particles_tps" field.</summary>
+    public const int ParticlesTpsFieldNumber = 25;
+    private readonly static float ParticlesTpsDefaultValue = 0F;
+
+    private float particlesTps_;
+    /// <summary>
+    ///
+    /// Typical Particle Size in um
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float ParticlesTps {
+      get { if ((_hasBits0 & 16777216) != 0) { return particlesTps_; } else { return ParticlesTpsDefaultValue; } }
+      set {
+        _hasBits0 |= 16777216;
+        particlesTps_ = value;
+      }
+    }
+    /// <summary>Gets whether the "particles_tps" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasParticlesTps {
+      get { return (_hasBits0 & 16777216) != 0; }
+    }
+    /// <summary>Clears the value of the "particles_tps" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParticlesTps() {
+      _hasBits0 &= ~16777216;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3829,6 +4175,16 @@ namespace Meshtastic.Protobufs {
       if (Co2 != other.Co2) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Co2Temperature, other.Co2Temperature)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Co2Humidity, other.Co2Humidity)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FormFormaldehyde, other.FormFormaldehyde)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FormHumidity, other.FormHumidity)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FormTemperature, other.FormTemperature)) return false;
+      if (Pm40Standard != other.Pm40Standard) return false;
+      if (Particles40Um != other.Particles40Um) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PmTemperature, other.PmTemperature)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PmHumidity, other.PmHumidity)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PmVocIdx, other.PmVocIdx)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PmNoxIdx, other.PmNoxIdx)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ParticlesTps, other.ParticlesTps)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3851,6 +4207,16 @@ namespace Meshtastic.Protobufs {
       if (HasCo2) hash ^= Co2.GetHashCode();
       if (HasCo2Temperature) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Co2Temperature);
       if (HasCo2Humidity) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Co2Humidity);
+      if (HasFormFormaldehyde) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FormFormaldehyde);
+      if (HasFormHumidity) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FormHumidity);
+      if (HasFormTemperature) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FormTemperature);
+      if (HasPm40Standard) hash ^= Pm40Standard.GetHashCode();
+      if (HasParticles40Um) hash ^= Particles40Um.GetHashCode();
+      if (HasPmTemperature) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PmTemperature);
+      if (HasPmHumidity) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PmHumidity);
+      if (HasPmVocIdx) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PmVocIdx);
+      if (HasPmNoxIdx) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PmNoxIdx);
+      if (HasParticlesTps) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ParticlesTps);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3929,6 +4295,46 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(125);
         output.WriteFloat(Co2Humidity);
       }
+      if (HasFormFormaldehyde) {
+        output.WriteRawTag(133, 1);
+        output.WriteFloat(FormFormaldehyde);
+      }
+      if (HasFormHumidity) {
+        output.WriteRawTag(141, 1);
+        output.WriteFloat(FormHumidity);
+      }
+      if (HasFormTemperature) {
+        output.WriteRawTag(149, 1);
+        output.WriteFloat(FormTemperature);
+      }
+      if (HasPm40Standard) {
+        output.WriteRawTag(152, 1);
+        output.WriteUInt32(Pm40Standard);
+      }
+      if (HasParticles40Um) {
+        output.WriteRawTag(160, 1);
+        output.WriteUInt32(Particles40Um);
+      }
+      if (HasPmTemperature) {
+        output.WriteRawTag(173, 1);
+        output.WriteFloat(PmTemperature);
+      }
+      if (HasPmHumidity) {
+        output.WriteRawTag(181, 1);
+        output.WriteFloat(PmHumidity);
+      }
+      if (HasPmVocIdx) {
+        output.WriteRawTag(189, 1);
+        output.WriteFloat(PmVocIdx);
+      }
+      if (HasPmNoxIdx) {
+        output.WriteRawTag(197, 1);
+        output.WriteFloat(PmNoxIdx);
+      }
+      if (HasParticlesTps) {
+        output.WriteRawTag(205, 1);
+        output.WriteFloat(ParticlesTps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3999,6 +4405,46 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(125);
         output.WriteFloat(Co2Humidity);
       }
+      if (HasFormFormaldehyde) {
+        output.WriteRawTag(133, 1);
+        output.WriteFloat(FormFormaldehyde);
+      }
+      if (HasFormHumidity) {
+        output.WriteRawTag(141, 1);
+        output.WriteFloat(FormHumidity);
+      }
+      if (HasFormTemperature) {
+        output.WriteRawTag(149, 1);
+        output.WriteFloat(FormTemperature);
+      }
+      if (HasPm40Standard) {
+        output.WriteRawTag(152, 1);
+        output.WriteUInt32(Pm40Standard);
+      }
+      if (HasParticles40Um) {
+        output.WriteRawTag(160, 1);
+        output.WriteUInt32(Particles40Um);
+      }
+      if (HasPmTemperature) {
+        output.WriteRawTag(173, 1);
+        output.WriteFloat(PmTemperature);
+      }
+      if (HasPmHumidity) {
+        output.WriteRawTag(181, 1);
+        output.WriteFloat(PmHumidity);
+      }
+      if (HasPmVocIdx) {
+        output.WriteRawTag(189, 1);
+        output.WriteFloat(PmVocIdx);
+      }
+      if (HasPmNoxIdx) {
+        output.WriteRawTag(197, 1);
+        output.WriteFloat(PmNoxIdx);
+      }
+      if (HasParticlesTps) {
+        output.WriteRawTag(205, 1);
+        output.WriteFloat(ParticlesTps);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4053,6 +4499,36 @@ namespace Meshtastic.Protobufs {
       }
       if (HasCo2Humidity) {
         size += 1 + 4;
+      }
+      if (HasFormFormaldehyde) {
+        size += 2 + 4;
+      }
+      if (HasFormHumidity) {
+        size += 2 + 4;
+      }
+      if (HasFormTemperature) {
+        size += 2 + 4;
+      }
+      if (HasPm40Standard) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(Pm40Standard);
+      }
+      if (HasParticles40Um) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(Particles40Um);
+      }
+      if (HasPmTemperature) {
+        size += 2 + 4;
+      }
+      if (HasPmHumidity) {
+        size += 2 + 4;
+      }
+      if (HasPmVocIdx) {
+        size += 2 + 4;
+      }
+      if (HasPmNoxIdx) {
+        size += 2 + 4;
+      }
+      if (HasParticlesTps) {
+        size += 2 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4110,6 +4586,36 @@ namespace Meshtastic.Protobufs {
       }
       if (other.HasCo2Humidity) {
         Co2Humidity = other.Co2Humidity;
+      }
+      if (other.HasFormFormaldehyde) {
+        FormFormaldehyde = other.FormFormaldehyde;
+      }
+      if (other.HasFormHumidity) {
+        FormHumidity = other.FormHumidity;
+      }
+      if (other.HasFormTemperature) {
+        FormTemperature = other.FormTemperature;
+      }
+      if (other.HasPm40Standard) {
+        Pm40Standard = other.Pm40Standard;
+      }
+      if (other.HasParticles40Um) {
+        Particles40Um = other.Particles40Um;
+      }
+      if (other.HasPmTemperature) {
+        PmTemperature = other.PmTemperature;
+      }
+      if (other.HasPmHumidity) {
+        PmHumidity = other.PmHumidity;
+      }
+      if (other.HasPmVocIdx) {
+        PmVocIdx = other.PmVocIdx;
+      }
+      if (other.HasPmNoxIdx) {
+        PmNoxIdx = other.PmNoxIdx;
+      }
+      if (other.HasParticlesTps) {
+        ParticlesTps = other.ParticlesTps;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4190,6 +4696,46 @@ namespace Meshtastic.Protobufs {
             Co2Humidity = input.ReadFloat();
             break;
           }
+          case 133: {
+            FormFormaldehyde = input.ReadFloat();
+            break;
+          }
+          case 141: {
+            FormHumidity = input.ReadFloat();
+            break;
+          }
+          case 149: {
+            FormTemperature = input.ReadFloat();
+            break;
+          }
+          case 152: {
+            Pm40Standard = input.ReadUInt32();
+            break;
+          }
+          case 160: {
+            Particles40Um = input.ReadUInt32();
+            break;
+          }
+          case 173: {
+            PmTemperature = input.ReadFloat();
+            break;
+          }
+          case 181: {
+            PmHumidity = input.ReadFloat();
+            break;
+          }
+          case 189: {
+            PmVocIdx = input.ReadFloat();
+            break;
+          }
+          case 197: {
+            PmNoxIdx = input.ReadFloat();
+            break;
+          }
+          case 205: {
+            ParticlesTps = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -4267,6 +4813,46 @@ namespace Meshtastic.Protobufs {
           }
           case 125: {
             Co2Humidity = input.ReadFloat();
+            break;
+          }
+          case 133: {
+            FormFormaldehyde = input.ReadFloat();
+            break;
+          }
+          case 141: {
+            FormHumidity = input.ReadFloat();
+            break;
+          }
+          case 149: {
+            FormTemperature = input.ReadFloat();
+            break;
+          }
+          case 152: {
+            Pm40Standard = input.ReadUInt32();
+            break;
+          }
+          case 160: {
+            Particles40Um = input.ReadUInt32();
+            break;
+          }
+          case 173: {
+            PmTemperature = input.ReadFloat();
+            break;
+          }
+          case 181: {
+            PmHumidity = input.ReadFloat();
+            break;
+          }
+          case 189: {
+            PmVocIdx = input.ReadFloat();
+            break;
+          }
+          case 197: {
+            PmNoxIdx = input.ReadFloat();
+            break;
+          }
+          case 205: {
+            ParticlesTps = input.ReadFloat();
             break;
           }
         }
