@@ -5,16 +5,10 @@ using System.Diagnostics.CodeAnalysis;
 namespace Meshtastic.Cli;
 
 [ExcludeFromCodeCoverage(Justification = "Requires hardware")]
-public class DeviceConnectionContext
+public class DeviceConnectionContext(string? port, string? host)
 {
-    public readonly string? Port;
-    public readonly string? Host;
-
-    public DeviceConnectionContext(string? port, string? host)
-    {
-        this.Port = port;
-        this.Host = host;
-    }
+    public readonly string? Port = port;
+    public readonly string? Host = host;
 
     public DeviceConnection GetDeviceConnection(ILogger logger)
     {
