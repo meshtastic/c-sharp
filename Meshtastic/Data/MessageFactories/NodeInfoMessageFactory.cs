@@ -172,7 +172,8 @@ public static class NodeInfoMessageFactory
         // For testing, we'll generate a mock private key
         var random = new Random();
         var privateKey = new byte[32];
-        random.NextBytes(privateKey);
+        var privateKey = new byte[32];
+        new SecureRandom().NextBytes(privateKey);
         return privateKey;
     }
 
