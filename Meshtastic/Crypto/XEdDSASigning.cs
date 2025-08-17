@@ -4,6 +4,8 @@ using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 using Org.BouncyCastle.Crypto.Generators;
 using Org.BouncyCastle.Crypto;
+using System.Numerics;
+using System.Text;
 
 namespace Meshtastic.Crypto;
 
