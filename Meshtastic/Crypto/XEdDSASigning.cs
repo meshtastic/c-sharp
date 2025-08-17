@@ -4,7 +4,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 using Org.BouncyCastle.Crypto.Generators;
 using Org.BouncyCastle.Crypto;
-using System.Numerics;
+using Org.BouncyCastle.Math;
 using System.Text;
 
 namespace Meshtastic.Crypto;
@@ -116,17 +116,17 @@ public static class XEdDSASigning
 
         // Encode y as 32-byte little-endian
         byte[] yBytes = y.ToByteArrayUnsigned();
-        byte[] edPublicKey = new byte[32];
+        byte[] edPublicKeyResult = new byte[32];
         // Copy yBytes into edPublicKey (little-endian)
         for (int i = 0; i < yBytes.Length && i < 32; i++)
         {
-            edPublicKey[i] = yBytes[yBytes.Length - 1 - i];
+            edPublicKeyResult[i] = yBytes[yBytes.Length - 1 - i];
         }
         // If yBytes is shorter than 32 bytes, the rest is already zero
 
         // Set the sign bit to 0 (positive x)
-        edPublicKey[31] &= 0x7F;
-        return edPublicKey;
+        edPublicKeyResult[31] &= 0x7F;
+        return edPublicKeyResult;
     }
 
     /// <summary>
