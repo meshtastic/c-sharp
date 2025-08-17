@@ -97,7 +97,8 @@ public static class XEdDSASigning
         // See: https://tools.ietf.org/html/rfc7748#section-5
 
         // Curve25519 prime: 2^255 - 19
-        BigInteger p = Ed25519FieldElement.Q;
+        // Ed25519 field prime: 2^255 - 19
+        BigInteger p = BigInteger.ValueOf(2).Pow(255).Subtract(BigInteger.ValueOf(19));
 
         // Interpret the X25519 public key as a little-endian integer u
         byte[] uBytes = new byte[32];
