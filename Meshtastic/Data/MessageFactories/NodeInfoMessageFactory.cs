@@ -161,7 +161,6 @@ public static class NodeInfoMessageFactory
         // meshPacket.Decoded.XeddsaSignature = ByteString.CopyFrom(signature);
         // meshPacket.Decoded.HasXeddsaSignature = true;
 
-        Console.WriteLine($"Generated XEdDSA signature: {Convert.ToHexString(signature)}");
     }
 
     private static byte[]? GetDevicePrivateKey(DeviceStateContainer deviceStateContainer)
