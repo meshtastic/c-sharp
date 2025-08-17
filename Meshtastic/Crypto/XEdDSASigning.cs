@@ -49,7 +49,6 @@ public static class XEdDSASigning
         keyPairGen.Init(new KeyGenerationParameters(secureRandom, 256));
         
         var keyPair = keyPairGen.GenerateKeyPair();
-        var privateKey = ((Ed25519PrivateKeyParameters)keyPair.Private).GetEncoded();
         // Proper XEdDSA key derivation with domain separation
         // Ed25519 seed = SHA-512("XEdDSA" || x25519PrivateKey)[0..31]
         byte[] domain = Encoding.ASCII.GetBytes("XEdDSA");
