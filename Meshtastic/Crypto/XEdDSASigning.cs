@@ -79,7 +79,39 @@ public static class XEdDSASigning
         
         // Clear the sign bit (bit 7 of the last byte) as per Ed25519 specification
         edPublicKey[31] &= 0x7F;
-        
+        // Implements the birational map from Montgomery (X25519) u to Edwards (Ed25519) y:
+        // y = (u - 1) / (u + 1) mod p
+        // See: https://tools.ietf.org/html/rfc7748#section-5
+
+        // Curve25519 prime: 2^255 - 19
+        BigInteger p = Ed25519FieldElement.Q;
+
+        // Interpret the X25519 public key as a little-endian integer u
+        byte[] uBytes = new byte[32];
+        Array.Copy(x25519PublicKey, uBytes, 32);
+        // Ensure top bit is masked (Montgomery u-coordinate is 255 bits)
+        uBytes[31] &= 0x7F;
+        BigInteger u = new BigInteger(1, uBytes.Reverse().ToArray());
+
+        // Compute y = (u - 1) * (u + 1)^-1 mod p
+        BigInteger one = BigInteger.One;
+        BigInteger uMinus1 = u.Subtract(one).Mod(p);
+        BigInteger uPlus1 = u.Add(one).Mod(p);
+        BigInteger uPlus1Inv = uPlus1.ModInverse(p);
+        BigInteger y = uMinus1.Multiply(uPlus1Inv).Mod(p);
+
+        // Encode y as 32-byte little-endian
+        byte[] yBytes = y.ToByteArrayUnsigned();
+        byte[] edPublicKey = new byte[32];
+        // Copy yBytes into edPublicKey (little-endian)
+        for (int i = 0; i < yBytes.Length && i < 32; i++)
+        {
+            edPublicKey[i] = yBytes[yBytes.Length - 1 - i];
+        }
+        // If yBytes is shorter than 32 bytes, the rest is already zero
+
+        // Set the sign bit to 0 (positive x)
+        edPublicKey[31] &= 0x7F;
         return edPublicKey;
     }
 
