@@ -91,7 +91,6 @@ public static class XEdDSASigning
         var edPublicKey = ((Ed25519PublicKeyParameters)keyPair.Public).GetEncoded();
         
         // Clear the sign bit (bit 7 of the last byte) as per Ed25519 specification
-        edPublicKey[31] &= 0x7F;
         // Implements the birational map from Montgomery (X25519) u to Edwards (Ed25519) y:
         // y = (u - 1) / (u + 1) mod p
         // See: https://tools.ietf.org/html/rfc7748#section-5
