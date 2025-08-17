@@ -60,7 +60,7 @@ public static class NodeInfoMessageFactory
             catch (Exception ex)
             {
                 // Log error but don't fail packet creation
-                Console.WriteLine($"Failed to sign NodeInfo packet: {ex.Message}");
+                // Swallow exception: failed to sign NodeInfo packet, but don't fail packet creation
             }
         }
 
