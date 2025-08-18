@@ -90,6 +90,7 @@ public class VirtualStore(IFilePersistance filePersistance) : IVirtualStore
         }
         else
         {
+#pragma warning disable CS0612 // Type or member is obsolete
             var user = new User
             {
                 HwModel = HardwareModel.Portduino,
@@ -97,6 +98,7 @@ public class VirtualStore(IFilePersistance filePersistance) : IVirtualStore
                 LongName = $"Simulator_{shortName}",
                 ShortName = shortName,
             };
+#pragma warning restore CS0612 // Type or member is obsolete
             deviceStateContainer.Node = new NodeInfo
             {
                 User = user,
