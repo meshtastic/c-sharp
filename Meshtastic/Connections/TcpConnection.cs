@@ -59,12 +59,21 @@ public class TcpConnection : DeviceConnection, IDisposable
             throw new ApplicationException("Could not establish network stream");
 
         var buffer = new byte[DEFAULT_BUFFER_SIZE];
-        while (networkStream.CanRead)
+        while (true)
         {
-            await networkStream.ReadExactlyAsync(buffer);
-            foreach (var item in buffer)
+            // Read up to buffer.Length bytes, returns actual bytes read
+            int bytesRead = await networkStream.ReadAsync(buffer, 0, buffer.Length);
+
+            if (bytesRead == 0)
             {
-                if (await ParsePackets(item, isComplete))
+                // End of stream reached
+                break;
+            }
+
+            // Only process the bytes that were actually read
+            for (int i = 0; i < bytesRead; i++)
+            {
+                if (await ParsePackets(buffer[i], isComplete))
                     return;
             }
         }
