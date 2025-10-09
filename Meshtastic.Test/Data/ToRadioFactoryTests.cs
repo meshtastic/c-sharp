@@ -20,20 +20,20 @@ public class ToRadioMessageFactoryTests
         var result = factory.CreateMeshPacketMessage(new MeshPacket()
         {
         });
-        result.Packet.Should().NotBeNull();
+        result.Packet.ShouldNotBeNull();
     }
 
     [Test]
     public void CreateWantConfigMessage_Should_ReturnValidWantConfig()
     {
         var result = factory.CreateWantConfigMessage();
-        result.WantConfigId.Should().BeGreaterThan(0);
+        result.WantConfigId.ShouldBeGreaterThan((uint)0);
     }
 
     [Test]
     public void CreateXmodemPacketMessage_Should_ReturnValidXModemMessage()
     {
         var result = factory.CreateXmodemPacketMessage();
-        result.XmodemPacket.Should().NotBeNull();
+        result.XmodemPacket.ShouldNotBeNull();
     }
 }

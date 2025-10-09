@@ -18,8 +18,8 @@ public class PacketCryptoTests
 
         var decrypted = PacketEncryption.TransformPacket(Convert.FromBase64String("kiDV39nDDsi8AON+Czei6zUpy+F/7E+lyIpicxJR40KXBFmPkqFUEnobI5voQadha+s="), nonce, Resources.DEFAULT_PSK);
         var testMessage = Meshtastic.Protobufs.Data.Parser.ParseFrom(decrypted);
-        testMessage.Portnum.Should().Be(PortNum.NodeinfoApp);
+        testMessage.Portnum.ShouldBe(PortNum.NodeinfoApp);
         var nodeInfo = User.Parser.ParseFrom(testMessage.Payload);
-        nodeInfo.LongName.Should().Be("Meshtastic 65a4");
+        nodeInfo.LongName.ShouldBe("Meshtastic 65a4");
     }
 }

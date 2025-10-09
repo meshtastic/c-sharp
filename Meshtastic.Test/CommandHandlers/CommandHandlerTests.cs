@@ -43,8 +43,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
 
         ReceivedWantConfigPayloads();
         InformationLogsContain("Getting device metadata");
-        container.FromRadioMessageLog.Should()
-            .Contain(fromRadio => fromRadio.GetPayload<AdminMessage>() != null && 
+        container.FromRadioMessageLog.ShouldContain(fromRadio => fromRadio.GetPayload<AdminMessage>() != null && 
                 fromRadio.GetPayload<AdminMessage>()!.GetDeviceMetadataResponse != null);
     }
 
@@ -66,7 +65,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     {
         var settings = new List<string>() { "butt.farts" };
         var handler = new GetCommandHandler(settings, ConnectionContext, CommandContext);
-        handler.ParsedSettings.Should().BeNull();
+        handler.ParsedSettings.ShouldBeNull();
     }
 
     [Test]
@@ -78,7 +77,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
         await handler.Handle();
 
         var container = await new InfoCommandHandler(ConnectionContext, CommandContext).Handle();
-        container.LocalConfig.Display.ScreenOnSecs.Should().Be(123456);
+        container.LocalConfig.Display.ScreenOnSecs.ShouldBe((uint)123456);
     }
 
     [Test]
@@ -87,7 +86,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
     {
         var settings = new List<string>() { "butt.farts=2" };
         var handler = new SetCommandHandler(settings, ConnectionContext, CommandContext);
-        handler.ParsedSettings.Should().BeNull();
+        handler.ParsedSettings.ShouldBeNull();
     }
 
     // [Test]
@@ -99,7 +98,7 @@ public class CommandHandlerTests : CommandHandlerTestBase
         // InformationLogsContain("Sending position to device");
         // InformationLogsContain("Setting Position.FixedPosition to True");
         // var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
-        // routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        // routingPacket.GetPayload<Routing>()!.ErrorReason.ShouldBe(Routing.Types.Error.None);
     // }
 
     [Test]
@@ -111,9 +110,9 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var container = await handler.Handle();
         InformationLogsContain("Writing channel");
         var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
-        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.ShouldBe(Routing.Types.Error.None);
         var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
-        adminMessages.Should().Contain(adminMessage =>
+        adminMessages.ShouldContain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
     }
 
@@ -126,9 +125,9 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var container = await handler.Handle();
         InformationLogsContain("Writing channel");
         var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
-        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.ShouldBe(Routing.Types.Error.None);
         var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
-        adminMessages.Should().Contain(adminMessage =>
+        adminMessages.ShouldContain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
     }
 
@@ -141,9 +140,9 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var container = await handler.Handle();
         InformationLogsContain("Writing channel");
         var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
-        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.ShouldBe(Routing.Types.Error.None);
         var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
-        adminMessages.Should().Contain(adminMessage =>
+        adminMessages.ShouldContain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
     }
 
@@ -156,9 +155,9 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var container = await handler.Handle();
         InformationLogsContain("Writing channel");
         var routingPacket = container.FromRadioMessageLog.First(fromRadio => fromRadio.GetPayload<Routing>() != null);
-        routingPacket.GetPayload<Routing>()!.ErrorReason.Should().Be(Routing.Types.Error.None);
+        routingPacket.GetPayload<Routing>()!.ErrorReason.ShouldBe(Routing.Types.Error.None);
         var adminMessages = container.ToRadioMessageLog.Where(toRadio => toRadio?.Packet?.Decoded.Portnum == PortNum.AdminApp);
-        adminMessages.Should().Contain(adminMessage =>
+        adminMessages.ShouldContain(adminMessage =>
             AdminMessage.Parser.ParseFrom(adminMessage.Packet.Decoded.Payload).PayloadVariantCase == AdminMessage.PayloadVariantOneofCase.SetChannel);
     }
 
@@ -169,6 +168,6 @@ public class CommandHandlerTests : CommandHandlerTestBase
         var channelSettings = new ChannelOperationSettings(ChannelOperation.Save, 10, null, null, null, null, null);
         var handler = new ChannelCommandHandler(channelSettings, ConnectionContext, CommandContext);
         var action = () => handler.Handle();
-        await action.Should().ThrowAsync<IndexOutOfRangeException>();
+        await action.ShouldThrowAsync<IndexOutOfRangeException>();
     }
 }

@@ -29,14 +29,14 @@ public class GetCommandTests : CommandTestBase
     public async Task SetCommand_Should_Fail_ForEmptyOrNullSettings()
     {
         var result = await rootCommand.InvokeAsync("get --port SIMPORT", Console);
-        result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Option '--setting' is required");
+        result.ShouldBeGreaterThan(0);
+        Out.Output.ShouldContain("Option '--setting' is required");
     }
 
     [Test]
     public async Task GetCommand_Should_Succeed_ForValidSetting()
     {
         var result = await rootCommand.InvokeAsync("get --setting Mqtt.Address --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }

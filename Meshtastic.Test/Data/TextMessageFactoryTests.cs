@@ -29,6 +29,6 @@ public class TextMessageFactoryTests
     public void CreateTextMessagePacket_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateTextMessagePacket("Text");
-        result.Decoded.Portnum.Should().Be(PortNum.TextMessageApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.TextMessageApp);
     }
 }

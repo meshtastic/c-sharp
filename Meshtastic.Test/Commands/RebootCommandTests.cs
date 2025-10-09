@@ -20,6 +20,6 @@ public class RebootCommandTests : CommandTestBase
     public async Task RebootCommand_Should_Succeed_ForValidArgs()
     {
         var result = await rootCommand.InvokeAsync("reboot --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }
