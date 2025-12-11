@@ -13,7 +13,7 @@ public static class ArgumentParsers
         }
         else if (result.Tokens.Count > 1)
         {
-            result.ErrorMessage = $"Argument --{result.Argument.Name} expect one argument but got {result.Tokens.Count}";
+            result.ErrorMessage = $"Argument --{result.Argument.Name} expects one argument but got {result.Tokens.Count}";
             return null;
         }
 
@@ -30,20 +30,22 @@ public static class ArgumentParsers
             {
                 result.ErrorMessage = $"Argument --{result.Argument.Name} can not be parsed. " +
                                       $"{e.Message}";
+                return null;
             }
         }
 
-        var octMatch = Regex.Match(nodeStr, "^(?<num>[0-9]+)$");
-        if (octMatch.Success)
+        var decMatch = Regex.Match(nodeStr, "^(?<num>[0-9]+)$");
+        if (decMatch.Success)
         {
             try
             {
-                return Convert.ToUInt32(octMatch.Groups["num"].Value, 10);
+                return Convert.ToUInt32(decMatch.Groups["num"].Value, 10);
             }
             catch (Exception e)
             {
                 result.ErrorMessage = $"Argument --{result.Argument.Name} can not be parsed. " +
                                       $"{e.Message}";
+                return null;
             }
         }
 

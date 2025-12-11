@@ -1,5 +1,6 @@
 using Google.Protobuf;
 using Meshtastic.Protobufs;
+using Meshtastic.Utilities;
 
 namespace Meshtastic.Data.MessageFactories;
 
@@ -16,15 +17,12 @@ public class TraceRouteMessageFactory
 
     public MeshPacket CreateRouteDiscoveryPacket(uint channel = 0)
     {
-        var p1 = (uint)Random.Shared.Next();
-        var p2 = (uint)Random.Shared.Next();
-        var id = unchecked(p1 + p2);
         return new MeshPacket()
         {
             Channel = channel,
             To = dest!.Value,
-            Id = id,
-            HopLimit = container?.GetHopLimitOrDefault() ?? 3,
+            Id = PacketUtils.GenerateRandomPacketId(),
+            HopLimit = container.GetHopLimitOrDefault(),
             Priority = MeshPacket.Types.Priority.Reliable,
             Decoded = new Protobufs.Data()
             {
