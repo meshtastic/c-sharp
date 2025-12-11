@@ -6,6 +6,7 @@ using Meshtastic.Protobufs;
 using Microsoft.Extensions.Logging;
 using System.CommandLine.Builder;
 using System.CommandLine.Parsing;
+using Meshtastic.Cli.Utilities;
 
 var port = new Option<string>("--port", description: "Target serial port for meshtastic device");
 var host = new Option<string>("--host", description: "Target host ip or name for meshtastic device");
@@ -18,7 +19,9 @@ log.AddAlias("-l");
 log.SetDefaultValue(LogLevel.Information);
 log.AddCompletions(Enum.GetNames(typeof(LogLevel)));
 
-var dest = new Option<uint?>("--dest", description: "Destination node address for command");
+var dest = new Option<uint?>("--dest", description: "Destination node address for command", parseArgument: ArgumentParsers.NodeIdParser);
+
+
 var selectDest = new Option<bool>("--select-dest", description: "Interactively select a destination from device's node list");
 selectDest.AddAlias("-sd");
 selectDest.SetDefaultValue(false);
