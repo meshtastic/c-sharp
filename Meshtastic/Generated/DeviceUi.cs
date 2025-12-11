@@ -24,7 +24,7 @@ namespace Meshtastic.Protobufs {
     static DeviceUiReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyKkBAoO",
+            "ChptZXNodGFzdGljL2RldmljZV91aS5wcm90bxIKbWVzaHRhc3RpYyLABQoO",
             "RGV2aWNlVUlDb25maWcSDwoHdmVyc2lvbhgBIAEoDRIZChFzY3JlZW5fYnJp",
             "Z2h0bmVzcxgCIAEoDRIWCg5zY3JlZW5fdGltZW91dBgDIAEoDRITCgtzY3Jl",
             "ZW5fbG9jaxgEIAEoCBIVCg1zZXR0aW5nc19sb2NrGAUgASgIEhAKCHBpbl9j",
@@ -37,32 +37,36 @@ namespace Meshtastic.Protobufs {
             "IAEoDBIhCghtYXBfZGF0YRgPIAEoCzIPLm1lc2h0YXN0aWMuTWFwEi0KDGNv",
             "bXBhc3NfbW9kZRgQIAEoDjIXLm1lc2h0YXN0aWMuQ29tcGFzc01vZGUSGAoQ",
             "c2NyZWVuX3JnYl9jb2xvchgRIAEoDRIbChNpc19jbG9ja2ZhY2VfYW5hbG9n",
-            "GBIgASgIIqcBCgpOb2RlRmlsdGVyEhYKDnVua25vd25fc3dpdGNoGAEgASgI",
-            "EhYKDm9mZmxpbmVfc3dpdGNoGAIgASgIEhkKEXB1YmxpY19rZXlfc3dpdGNo",
-            "GAMgASgIEhEKCWhvcHNfYXdheRgEIAEoBRIXCg9wb3NpdGlvbl9zd2l0Y2gY",
-            "BSABKAgSEQoJbm9kZV9uYW1lGAYgASgJEg8KB2NoYW5uZWwYByABKAUifgoN",
-            "Tm9kZUhpZ2hsaWdodBITCgtjaGF0X3N3aXRjaBgBIAEoCBIXCg9wb3NpdGlv",
-            "bl9zd2l0Y2gYAiABKAgSGAoQdGVsZW1ldHJ5X3N3aXRjaBgDIAEoCBISCgpp",
-            "YXFfc3dpdGNoGAQgASgIEhEKCW5vZGVfbmFtZRgFIAEoCSI9CghHZW9Qb2lu",
-            "dBIMCgR6b29tGAEgASgFEhAKCGxhdGl0dWRlGAIgASgFEhEKCWxvbmdpdHVk",
-            "ZRgDIAEoBSJMCgNNYXASIgoEaG9tZRgBIAEoCzIULm1lc2h0YXN0aWMuR2Vv",
-            "UG9pbnQSDQoFc3R5bGUYAiABKAkSEgoKZm9sbG93X2dwcxgDIAEoCCo+CgtD",
-            "b21wYXNzTW9kZRILCgdEWU5BTUlDEAASDgoKRklYRURfUklORxABEhIKDkZS",
-            "RUVaRV9IRUFESU5HEAIqJQoFVGhlbWUSCAoEREFSSxAAEgkKBUxJR0hUEAES",
-            "BwoDUkVEEAIqqQIKCExhbmd1YWdlEgsKB0VOR0xJU0gQABIKCgZGUkVOQ0gQ",
-            "ARIKCgZHRVJNQU4QAhILCgdJVEFMSUFOEAMSDgoKUE9SVFVHVUVTRRAEEgsK",
-            "B1NQQU5JU0gQBRILCgdTV0VESVNIEAYSCwoHRklOTklTSBAHEgoKBlBPTElT",
-            "SBAIEgsKB1RVUktJU0gQCRILCgdTRVJCSUFOEAoSCwoHUlVTU0lBThALEgkK",
-            "BURVVENIEAwSCQoFR1JFRUsQDRINCglOT1JXRUdJQU4QDhINCglTTE9WRU5J",
-            "QU4QDxINCglVS1JBSU5JQU4QEBINCglCVUxHQVJJQU4QERIWChJTSU1QTElG",
-            "SUVEX0NISU5FU0UQHhIXChNUUkFESVRJT05BTF9DSElORVNFEB9CYwoTY29t",
-            "LmdlZWtzdmlsbGUubWVzaEIORGV2aWNlVUlQcm90b3NaImdpdGh1Yi5jb20v",
+            "GBIgASgIEkIKCmdwc19mb3JtYXQYEyABKA4yLi5tZXNodGFzdGljLkRldmlj",
+            "ZVVJQ29uZmlnLkdwc0Nvb3JkaW5hdGVGb3JtYXQiVgoTR3BzQ29vcmRpbmF0",
+            "ZUZvcm1hdBIHCgNERUMQABIHCgNETVMQARIHCgNVVE0QAhIICgRNR1JTEAMS",
+            "BwoDT0xDEAQSCAoET1NHUhAFEgcKA01MUxAGIqcBCgpOb2RlRmlsdGVyEhYK",
+            "DnVua25vd25fc3dpdGNoGAEgASgIEhYKDm9mZmxpbmVfc3dpdGNoGAIgASgI",
+            "EhkKEXB1YmxpY19rZXlfc3dpdGNoGAMgASgIEhEKCWhvcHNfYXdheRgEIAEo",
+            "BRIXCg9wb3NpdGlvbl9zd2l0Y2gYBSABKAgSEQoJbm9kZV9uYW1lGAYgASgJ",
+            "Eg8KB2NoYW5uZWwYByABKAUifgoNTm9kZUhpZ2hsaWdodBITCgtjaGF0X3N3",
+            "aXRjaBgBIAEoCBIXCg9wb3NpdGlvbl9zd2l0Y2gYAiABKAgSGAoQdGVsZW1l",
+            "dHJ5X3N3aXRjaBgDIAEoCBISCgppYXFfc3dpdGNoGAQgASgIEhEKCW5vZGVf",
+            "bmFtZRgFIAEoCSI9CghHZW9Qb2ludBIMCgR6b29tGAEgASgFEhAKCGxhdGl0",
+            "dWRlGAIgASgFEhEKCWxvbmdpdHVkZRgDIAEoBSJMCgNNYXASIgoEaG9tZRgB",
+            "IAEoCzIULm1lc2h0YXN0aWMuR2VvUG9pbnQSDQoFc3R5bGUYAiABKAkSEgoK",
+            "Zm9sbG93X2dwcxgDIAEoCCo+CgtDb21wYXNzTW9kZRILCgdEWU5BTUlDEAAS",
+            "DgoKRklYRURfUklORxABEhIKDkZSRUVaRV9IRUFESU5HEAIqJQoFVGhlbWUS",
+            "CAoEREFSSxAAEgkKBUxJR0hUEAESBwoDUkVEEAIqwAIKCExhbmd1YWdlEgsK",
+            "B0VOR0xJU0gQABIKCgZGUkVOQ0gQARIKCgZHRVJNQU4QAhILCgdJVEFMSUFO",
+            "EAMSDgoKUE9SVFVHVUVTRRAEEgsKB1NQQU5JU0gQBRILCgdTV0VESVNIEAYS",
+            "CwoHRklOTklTSBAHEgoKBlBPTElTSBAIEgsKB1RVUktJU0gQCRILCgdTRVJC",
+            "SUFOEAoSCwoHUlVTU0lBThALEgkKBURVVENIEAwSCQoFR1JFRUsQDRINCglO",
+            "T1JXRUdJQU4QDhINCglTTE9WRU5JQU4QDxINCglVS1JBSU5JQU4QEBINCglC",
+            "VUxHQVJJQU4QERIJCgVDWkVDSBASEgoKBkRBTklTSBATEhYKElNJTVBMSUZJ",
+            "RURfQ0hJTkVTRRAeEhcKE1RSQURJVElPTkFMX0NISU5FU0UQH0JkChRvcmcu",
+            "bWVzaHRhc3RpYy5wcm90b0IORGV2aWNlVUlQcm90b3NaImdpdGh1Yi5jb20v",
             "bWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVm",
             "c7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.CompassMode), typeof(global::Meshtastic.Protobufs.Theme), typeof(global::Meshtastic.Protobufs.Language), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight", "CalibrationData", "MapData", "CompassMode", "ScreenRgbColor", "IsClockfaceAnalog" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.DeviceUIConfig), global::Meshtastic.Protobufs.DeviceUIConfig.Parser, new[]{ "Version", "ScreenBrightness", "ScreenTimeout", "ScreenLock", "SettingsLock", "PinCode", "Theme", "AlertEnabled", "BannerEnabled", "RingToneId", "Language", "NodeFilter", "NodeHighlight", "CalibrationData", "MapData", "CompassMode", "ScreenRgbColor", "IsClockfaceAnalog", "GpsFormat" }, null, new[]{ typeof(global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeFilter), global::Meshtastic.Protobufs.NodeFilter.Parser, new[]{ "UnknownSwitch", "OfflineSwitch", "PublicKeySwitch", "HopsAway", "PositionSwitch", "NodeName", "Channel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeHighlight), global::Meshtastic.Protobufs.NodeHighlight.Parser, new[]{ "ChatSwitch", "PositionSwitch", "TelemetrySwitch", "IaqSwitch", "NodeName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.GeoPoint), global::Meshtastic.Protobufs.GeoPoint.Parser, new[]{ "Zoom", "Latitude", "Longitude" }, null, null, null, null),
@@ -206,6 +210,16 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("BULGARIAN")] Bulgarian = 17,
     /// <summary>
     ///
+    /// Czech
+    /// </summary>
+    [pbr::OriginalName("CZECH")] Czech = 18,
+    /// <summary>
+    ///
+    /// Danish
+    /// </summary>
+    [pbr::OriginalName("DANISH")] Danish = 19,
+    /// <summary>
+    ///
     /// Simplified Chinese (experimental)
     /// </summary>
     [pbr::OriginalName("SIMPLIFIED_CHINESE")] SimplifiedChinese = 30,
@@ -272,6 +286,7 @@ namespace Meshtastic.Protobufs {
       compassMode_ = other.compassMode_;
       screenRgbColor_ = other.screenRgbColor_;
       isClockfaceAnalog_ = other.isClockfaceAnalog_;
+      gpsFormat_ = other.gpsFormat_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -555,6 +570,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "gps_format" field.</summary>
+    public const int GpsFormatFieldNumber = 19;
+    private global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat gpsFormat_ = global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat.Dec;
+    /// <summary>
+    ///
+    /// How the GPS coordinates are formatted on the OLED screen.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat GpsFormat {
+      get { return gpsFormat_; }
+      set {
+        gpsFormat_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -588,6 +619,7 @@ namespace Meshtastic.Protobufs {
       if (CompassMode != other.CompassMode) return false;
       if (ScreenRgbColor != other.ScreenRgbColor) return false;
       if (IsClockfaceAnalog != other.IsClockfaceAnalog) return false;
+      if (GpsFormat != other.GpsFormat) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -613,6 +645,7 @@ namespace Meshtastic.Protobufs {
       if (CompassMode != global::Meshtastic.Protobufs.CompassMode.Dynamic) hash ^= CompassMode.GetHashCode();
       if (ScreenRgbColor != 0) hash ^= ScreenRgbColor.GetHashCode();
       if (IsClockfaceAnalog != false) hash ^= IsClockfaceAnalog.GetHashCode();
+      if (GpsFormat != global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat.Dec) hash ^= GpsFormat.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -703,6 +736,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(144, 1);
         output.WriteBool(IsClockfaceAnalog);
       }
+      if (GpsFormat != global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat.Dec) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) GpsFormat);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -785,6 +822,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(144, 1);
         output.WriteBool(IsClockfaceAnalog);
       }
+      if (GpsFormat != global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat.Dec) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) GpsFormat);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -848,6 +889,9 @@ namespace Meshtastic.Protobufs {
       }
       if (IsClockfaceAnalog != false) {
         size += 2 + 1;
+      }
+      if (GpsFormat != global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat.Dec) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) GpsFormat);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -923,6 +967,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.IsClockfaceAnalog != false) {
         IsClockfaceAnalog = other.IsClockfaceAnalog;
+      }
+      if (other.GpsFormat != global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat.Dec) {
+        GpsFormat = other.GpsFormat;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1022,6 +1069,10 @@ namespace Meshtastic.Protobufs {
           }
           case 144: {
             IsClockfaceAnalog = input.ReadBool();
+            break;
+          }
+          case 152: {
+            GpsFormat = (global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat) input.ReadEnum();
             break;
           }
         }
@@ -1124,10 +1175,72 @@ namespace Meshtastic.Protobufs {
             IsClockfaceAnalog = input.ReadBool();
             break;
           }
+          case 152: {
+            GpsFormat = (global::Meshtastic.Protobufs.DeviceUIConfig.Types.GpsCoordinateFormat) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DeviceUIConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      ///
+      /// How the GPS coordinates are displayed on the OLED screen.
+      /// </summary>
+      public enum GpsCoordinateFormat {
+        /// <summary>
+        ///
+        /// GPS coordinates are displayed in the normal decimal degrees format:
+        /// DD.DDDDDD DDD.DDDDDD
+        /// </summary>
+        [pbr::OriginalName("DEC")] Dec = 0,
+        /// <summary>
+        ///
+        /// GPS coordinates are displayed in the degrees minutes seconds format:
+        /// DD°MM'SS"C DDD°MM'SS"C, where C is the compass point representing the locations quadrant
+        /// </summary>
+        [pbr::OriginalName("DMS")] Dms = 1,
+        /// <summary>
+        ///
+        /// Universal Transverse Mercator format:
+        /// ZZB EEEEEE NNNNNNN, where Z is zone, B is band, E is easting, N is northing
+        /// </summary>
+        [pbr::OriginalName("UTM")] Utm = 2,
+        /// <summary>
+        ///
+        /// Military Grid Reference System format:
+        /// ZZB CD EEEEE NNNNN, where Z is zone, B is band, C is the east 100k square, D is the north 100k square,
+        /// E is easting, N is northing
+        /// </summary>
+        [pbr::OriginalName("MGRS")] Mgrs = 3,
+        /// <summary>
+        ///
+        /// Open Location Code (aka Plus Codes).
+        /// </summary>
+        [pbr::OriginalName("OLC")] Olc = 4,
+        /// <summary>
+        ///
+        /// Ordnance Survey Grid Reference (the National Grid System of the UK).
+        /// Format: AB EEEEE NNNNN, where A is the east 100k square, B is the north 100k square,
+        /// E is the easting, N is the northing
+        /// </summary>
+        [pbr::OriginalName("OSGR")] Osgr = 5,
+        /// <summary>
+        ///
+        /// Maidenhead Locator System
+        /// Described here: https://en.wikipedia.org/wiki/Maidenhead_Locator_System
+        /// </summary>
+        [pbr::OriginalName("MLS")] Mls = 6,
+      }
+
+    }
+    #endregion
 
   }
 

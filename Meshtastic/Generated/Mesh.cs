@@ -186,7 +186,7 @@ namespace Meshtastic.Protobufs {
             "AygNIqoBChZDaHVua2VkUGF5bG9hZFJlc3BvbnNlEhIKCnBheWxvYWRfaWQY",
             "ASABKA0SGgoQcmVxdWVzdF90cmFuc2ZlchgCIAEoCEgAEhkKD2FjY2VwdF90",
             "cmFuc2ZlchgDIAEoCEgAEjIKDXJlc2VuZF9jaHVua3MYBCABKAsyGS5tZXNo",
-            "dGFzdGljLnJlc2VuZF9jaHVua3NIAEIRCg9wYXlsb2FkX3ZhcmlhbnQqzxAK",
+            "dGFzdGljLnJlc2VuZF9jaHVua3NIAEIRCg9wYXlsb2FkX3ZhcmlhbnQqhhIK",
             "DUhhcmR3YXJlTW9kZWwSCQoFVU5TRVQQABIMCghUTE9SQV9WMhABEgwKCFRM",
             "T1JBX1YxEAISEgoOVExPUkFfVjJfMV8xUDYQAxIJCgVUQkVBTRAEEg8KC0hF",
             "TFRFQ19WMl8wEAUSDgoKVEJFQU1fVjBQNxAGEgoKBlRfRUNITxAHEhAKDFRM",
@@ -225,37 +225,42 @@ namespace Meshtastic.Protobufs {
             "RjEQUhIMCghUTE9SQV9DNhBTEg8KC1dJU01FU0hfVEFQEFQSDQoJUk9VVEFT",
             "VElDEFUSDAoITUVTSF9UQUIQVhIMCghNRVNITElOSxBXEhIKDlhJQU9fTlJG",
             "NTJfS0lUEFgSEAoMVEhJTktOT0RFX00xEFkSEAoMVEhJTktOT0RFX00yEFoS",
-            "DwoLVF9FVEhfRUxJVEUQWxIVChFIRUxURUNfU0VOU09SX0hVQhBcEhoKFlJF",
-            "U0VSVkVEX0ZSSUVEX0NISUNLRU4QXRIWChJIRUxURUNfTUVTSF9QT0NLRVQQ",
-            "XhIUChBTRUVFRF9TT0xBUl9OT0RFEF8SGAoUTk9NQURTVEFSX01FVEVPUl9Q",
-            "Uk8QYBINCglDUk9XUEFORUwQYRILCgdMSU5LXzMyEGISGAoUU0VFRURfV0lP",
-            "X1RSQUNLRVJfTDEQYxIdChlTRUVFRF9XSU9fVFJBQ0tFUl9MMV9FSU5LEGQS",
-            "FAoQUVdBTlRaX1RJTllfQVJNUxBlEg4KClRfREVDS19QUk8QZhIQCgxUX0xP",
-            "UkFfUEFHRVIQZxIdChlHQVQ1NjJfTUVTSF9UUklBTF9UUkFDS0VSEGgSDwoL",
-            "V0lTTUVTSF9UQUcQaRILCgdSQUszMzEyEGoSEAoMVEhJTktOT0RFX001EGsS",
-            "FQoRSEVMVEVDX01FU0hfU09MQVIQbBIPCgtUX0VDSE9fTElURRBtEg8KClBS",
-            "SVZBVEVfSFcQ/wEqLAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRBX1BB",
-            "WUxPQURfTEVOEOkBKrQCChFDcml0aWNhbEVycm9yQ29kZRIICgROT05FEAAS",
-            "DwoLVFhfV0FUQ0hET0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoITk9f",
-            "UkFESU8QAxIPCgtVTlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJTEVE",
-            "EAUSDQoJTk9fQVhQMTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5HEAcS",
-            "EwoPVFJBTlNNSVRfRkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEyNjJf",
-            "RkFJTFVSRRAKEhEKDVJBRElPX1NQSV9CVUcQCxIgChxGTEFTSF9DT1JSVVBU",
-            "SU9OX1JFQ09WRVJBQkxFEAwSIgoeRkxBU0hfQ09SUlVQVElPTl9VTlJFQ09W",
-            "RVJBQkxFEA0qfwoPRmlybXdhcmVFZGl0aW9uEgsKB1ZBTklMTEEQABIRCg1T",
-            "TUFSVF9DSVRJWkVOEAESDgoKT1BFTl9TQVVDRRAQEgoKBkRFRkNPThAREg8K",
-            "C0JVUk5JTkdfTUFOEBISDgoKSEFNVkVOVElPThATEg8KC0RJWV9FRElUSU9O",
-            "EH8qgAMKD0V4Y2x1ZGVkTW9kdWxlcxIRCg1FWENMVURFRF9OT05FEAASDwoL",
-            "TVFUVF9DT05GSUcQARIRCg1TRVJJQUxfQ09ORklHEAISEwoPRVhUTk9USUZf",
-            "Q09ORklHEAQSFwoTU1RPUkVGT1JXQVJEX0NPTkZJRxAIEhQKEFJBTkdFVEVT",
-            "VF9DT05GSUcQEBIUChBURUxFTUVUUllfQ09ORklHECASFAoQQ0FOTkVETVNH",
-            "X0NPTkZJRxBAEhEKDEFVRElPX0NPTkZJRxCAARIaChVSRU1PVEVIQVJEV0FS",
-            "RV9DT05GSUcQgAISGAoTTkVJR0hCT1JJTkZPX0NPTkZJRxCABBIbChZBTUJJ",
-            "RU5UTElHSFRJTkdfQ09ORklHEIAIEhsKFkRFVEVDVElPTlNFTlNPUl9DT05G",
-            "SUcQgBASFgoRUEFYQ09VTlRFUl9DT05GSUcQgCASFQoQQkxVRVRPT1RIX0NP",
-            "TkZJRxCAQBIUCg5ORVRXT1JLX0NPTkZJRxCAgAFCXwoTY29tLmdlZWtzdmls",
-            "bGUubWVzaEIKTWVzaFByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dv",
-            "L2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "DwoLVF9FVEhfRUxJVEUQWxIVChFIRUxURUNfU0VOU09SX0hVQhBcEg0KCU1V",
+            "WklfQkFTRRBdEhYKEkhFTFRFQ19NRVNIX1BPQ0tFVBBeEhQKEFNFRUVEX1NP",
+            "TEFSX05PREUQXxIYChROT01BRFNUQVJfTUVURU9SX1BSTxBgEg0KCUNST1dQ",
+            "QU5FTBBhEgsKB0xJTktfMzIQYhIYChRTRUVFRF9XSU9fVFJBQ0tFUl9MMRBj",
+            "Eh0KGVNFRUVEX1dJT19UUkFDS0VSX0wxX0VJTksQZBIPCgtNVVpJX1IxX05F",
+            "TxBlEg4KClRfREVDS19QUk8QZhIQCgxUX0xPUkFfUEFHRVIQZxIUChBNNVNU",
+            "QUNLX1JFU0VSVkVEEGgSDwoLV0lTTUVTSF9UQUcQaRILCgdSQUszMzEyEGoS",
+            "EAoMVEhJTktOT0RFX001EGsSFQoRSEVMVEVDX01FU0hfU09MQVIQbBIPCgtU",
+            "X0VDSE9fTElURRBtEg0KCUhFTFRFQ19WNBBuEg8KC001U1RBQ0tfQzZMEG8S",
+            "GQoVTTVTVEFDS19DQVJEUFVURVJfQURWEHASHgoaSEVMVEVDX1dJUkVMRVNT",
+            "X1RSQUNLRVJfVjIQcRIRCg1UX1dBVENIX1VMVFJBEHISEAoMVEhJTktOT0RF",
+            "X00zEHMSEgoOV0lTTUVTSF9UQVBfVjIQdBILCgdSQUszNDAxEHUSCwoHUkFL",
+            "NjQyMRB2EhAKDFRISU5LTk9ERV9NNBB3EhAKDFRISU5LTk9ERV9NNhB4Eg8K",
+            "ClBSSVZBVEVfSFcQ/wEqLAoJQ29uc3RhbnRzEggKBFpFUk8QABIVChBEQVRB",
+            "X1BBWUxPQURfTEVOEOkBKrQCChFDcml0aWNhbEVycm9yQ29kZRIICgROT05F",
+            "EAASDwoLVFhfV0FUQ0hET0cQARIUChBTTEVFUF9FTlRFUl9XQUlUEAISDAoI",
+            "Tk9fUkFESU8QAxIPCgtVTlNQRUNJRklFRBAEEhUKEVVCTE9YX1VOSVRfRkFJ",
+            "TEVEEAUSDQoJTk9fQVhQMTkyEAYSGQoVSU5WQUxJRF9SQURJT19TRVRUSU5H",
+            "EAcSEwoPVFJBTlNNSVRfRkFJTEVEEAgSDAoIQlJPV05PVVQQCRISCg5TWDEy",
+            "NjJfRkFJTFVSRRAKEhEKDVJBRElPX1NQSV9CVUcQCxIgChxGTEFTSF9DT1JS",
+            "VVBUSU9OX1JFQ09WRVJBQkxFEAwSIgoeRkxBU0hfQ09SUlVQVElPTl9VTlJF",
+            "Q09WRVJBQkxFEA0qfwoPRmlybXdhcmVFZGl0aW9uEgsKB1ZBTklMTEEQABIR",
+            "Cg1TTUFSVF9DSVRJWkVOEAESDgoKT1BFTl9TQVVDRRAQEgoKBkRFRkNPThAR",
+            "Eg8KC0JVUk5JTkdfTUFOEBISDgoKSEFNVkVOVElPThATEg8KC0RJWV9FRElU",
+            "SU9OEH8qgAMKD0V4Y2x1ZGVkTW9kdWxlcxIRCg1FWENMVURFRF9OT05FEAAS",
+            "DwoLTVFUVF9DT05GSUcQARIRCg1TRVJJQUxfQ09ORklHEAISEwoPRVhUTk9U",
+            "SUZfQ09ORklHEAQSFwoTU1RPUkVGT1JXQVJEX0NPTkZJRxAIEhQKEFJBTkdF",
+            "VEVTVF9DT05GSUcQEBIUChBURUxFTUVUUllfQ09ORklHECASFAoQQ0FOTkVE",
+            "TVNHX0NPTkZJRxBAEhEKDEFVRElPX0NPTkZJRxCAARIaChVSRU1PVEVIQVJE",
+            "V0FSRV9DT05GSUcQgAISGAoTTkVJR0hCT1JJTkZPX0NPTkZJRxCABBIbChZB",
+            "TUJJRU5UTElHSFRJTkdfQ09ORklHEIAIEhsKFkRFVEVDVElPTlNFTlNPUl9D",
+            "T05GSUcQgBASFgoRUEFYQ09VTlRFUl9DT05GSUcQgCASFQoQQkxVRVRPT1RI",
+            "X0NPTkZJRxCAQBIUCg5ORVRXT1JLX0NPTkZJRxCAgAFCYAoUb3JnLm1lc2h0",
+            "YXN0aWMucHJvdG9CCk1lc2hQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3Rp",
+            "Yy9nby9nZW5lcmF0ZWSqAhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, global::Meshtastic.Protobufs.PortnumsReflection.Descriptor, global::Meshtastic.Protobufs.TelemetryReflection.Descriptor, global::Meshtastic.Protobufs.XmodemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.HardwareModel), typeof(global::Meshtastic.Protobufs.Constants), typeof(global::Meshtastic.Protobufs.CriticalErrorCode), typeof(global::Meshtastic.Protobufs.FirmwareEdition), typeof(global::Meshtastic.Protobufs.ExcludedModules), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -790,9 +795,9 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("HELTEC_SENSOR_HUB")] HeltecSensorHub = 92,
     /// <summary>
     ///
-    /// Reserved Fried Chicken ID for future use
+    /// Muzi Works Muzi-Base device
     /// </summary>
-    [pbr::OriginalName("RESERVED_FRIED_CHICKEN")] ReservedFriedChicken = 93,
+    [pbr::OriginalName("MUZI_BASE")] MuziBase = 93,
     /// <summary>
     ///
     /// Heltec Magnetic Power Bank with Meshtastic compatible
@@ -830,9 +835,9 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("SEEED_WIO_TRACKER_L1_EINK")] SeeedWioTrackerL1Eink = 100,
     /// <summary>
     ///
-    /// Reserved ID for future and past use
+    /// Muzi Works R1 Neo
     /// </summary>
-    [pbr::OriginalName("QWANTZ_TINY_ARMS")] QwantzTinyArms = 101,
+    [pbr::OriginalName("MUZI_R1_NEO")] MuziR1Neo = 101,
     /// <summary>
     ///
     /// Lilygo T-Deck Pro
@@ -845,9 +850,9 @@ namespace Meshtastic.Protobufs {
     [pbr::OriginalName("T_LORA_PAGER")] TLoraPager = 103,
     /// <summary>
     ///
-    /// GAT562 Mesh Trial Tracker
+    /// M5Stack Reserved
     /// </summary>
-    [pbr::OriginalName("GAT562_MESH_TRIAL_TRACKER")] Gat562MeshTrialTracker = 104,
+    [pbr::OriginalName("M5STACK_RESERVED")] M5StackReserved = 104,
     /// <summary>
     ///
     /// RAKwireless WisMesh Tag
@@ -874,6 +879,61 @@ namespace Meshtastic.Protobufs {
     /// Lilygo T-Echo Lite
     /// </summary>
     [pbr::OriginalName("T_ECHO_LITE")] TEchoLite = 109,
+    /// <summary>
+    ///
+    /// New Heltec LoRA32 with ESP32-S3 CPU
+    /// </summary>
+    [pbr::OriginalName("HELTEC_V4")] HeltecV4 = 110,
+    /// <summary>
+    ///
+    /// M5Stack C6L
+    /// </summary>
+    [pbr::OriginalName("M5STACK_C6L")] M5StackC6L = 111,
+    /// <summary>
+    ///
+    /// M5Stack Cardputer Adv
+    /// </summary>
+    [pbr::OriginalName("M5STACK_CARDPUTER_ADV")] M5StackCardputerAdv = 112,
+    /// <summary>
+    ///
+    /// ESP32S3 main controller with GPS and TFT screen.
+    /// </summary>
+    [pbr::OriginalName("HELTEC_WIRELESS_TRACKER_V2")] HeltecWirelessTrackerV2 = 113,
+    /// <summary>
+    ///
+    /// LilyGo T-Watch Ultra
+    /// </summary>
+    [pbr::OriginalName("T_WATCH_ULTRA")] TWatchUltra = 114,
+    /// <summary>
+    ///
+    /// Elecrow ThinkNode M3
+    /// </summary>
+    [pbr::OriginalName("THINKNODE_M3")] ThinknodeM3 = 115,
+    /// <summary>
+    ///
+    /// RAK WISMESH_TAP_V2 with ESP32-S3 CPU
+    /// </summary>
+    [pbr::OriginalName("WISMESH_TAP_V2")] WismeshTapV2 = 116,
+    /// <summary>
+    ///
+    /// RAK3401
+    /// </summary>
+    [pbr::OriginalName("RAK3401")] Rak3401 = 117,
+    /// <summary>
+    ///
+    /// RAK6421 Hat+
+    /// </summary>
+    [pbr::OriginalName("RAK6421")] Rak6421 = 118,
+    /// <summary>
+    ///
+    /// Elecrow ThinkNode M4
+    /// </summary>
+    [pbr::OriginalName("THINKNODE_M4")] ThinknodeM4 = 119,
+    /// <summary>
+    ///
+    /// Elecrow ThinkNode M6
+    /// </summary>
+    [pbr::OriginalName("THINKNODE_M6")] ThinknodeM6 = 120,
     /// <summary>
     ///
     /// ------------------------------------------------------------------------------------------------------------------------------------------
@@ -5642,6 +5702,10 @@ namespace Meshtastic.Protobufs {
     /// <summary>
     ///
     /// The (immediate) destination for this packet
+    /// If the value is 4,294,967,295 (maximum value of an unsigned 32bit integer), this indicates that the packet was
+    /// not destined for a specific node, but for a channel as indicated by the value of `channel` below.
+    /// If the value is another, this indicates that the packet was destined for a specific
+    /// node (i.e. a kind of "Direct Message" to this node) and not broadcast on a channel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

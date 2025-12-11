@@ -92,7 +92,7 @@ namespace Meshtastic.Protobufs {
             "X2Zvcm1faHVtaWRpdHlCEwoRX2Zvcm1fdGVtcGVyYXR1cmVCEAoOX3BtNDBf",
             "c3RhbmRhcmRCEQoPX3BhcnRpY2xlc180MHVtQhEKD19wbV90ZW1wZXJhdHVy",
             "ZUIOCgxfcG1faHVtaWRpdHlCDQoLX3BtX3ZvY19pZHhCDQoLX3BtX25veF9p",
-            "ZHhCEAoOX3BhcnRpY2xlc190cHMi0gIKCkxvY2FsU3RhdHMSFgoOdXB0aW1l",
+            "ZHhCEAoOX3BhcnRpY2xlc190cHMi6gIKCkxvY2FsU3RhdHMSFgoOdXB0aW1l",
             "X3NlY29uZHMYASABKA0SGwoTY2hhbm5lbF91dGlsaXphdGlvbhgCIAEoAhIT",
             "CgthaXJfdXRpbF90eBgDIAEoAhIWCg5udW1fcGFja2V0c190eBgEIAEoDRIW",
             "Cg5udW1fcGFja2V0c19yeBgFIAEoDRIaChJudW1fcGFja2V0c19yeF9iYWQY",
@@ -100,42 +100,43 @@ namespace Meshtastic.Protobufs {
             "bm9kZXMYCCABKA0SEwoLbnVtX3J4X2R1cGUYCSABKA0SFAoMbnVtX3R4X3Jl",
             "bGF5GAogASgNEh0KFW51bV90eF9yZWxheV9jYW5jZWxlZBgLIAEoDRIYChBo",
             "ZWFwX3RvdGFsX2J5dGVzGAwgASgNEhcKD2hlYXBfZnJlZV9ieXRlcxgNIAEo",
-            "DSJ7Cg1IZWFsdGhNZXRyaWNzEhYKCWhlYXJ0X2JwbRgBIAEoDUgAiAEBEhEK",
-            "BHNwTzIYAiABKA1IAYgBARIYCgt0ZW1wZXJhdHVyZRgDIAEoAkgCiAEBQgwK",
-            "Cl9oZWFydF9icG1CBwoFX3NwTzJCDgoMX3RlbXBlcmF0dXJlIpECCgtIb3N0",
-            "TWV0cmljcxIWCg51cHRpbWVfc2Vjb25kcxgBIAEoDRIVCg1mcmVlbWVtX2J5",
-            "dGVzGAIgASgEEhcKD2Rpc2tmcmVlMV9ieXRlcxgDIAEoBBIcCg9kaXNrZnJl",
-            "ZTJfYnl0ZXMYBCABKARIAIgBARIcCg9kaXNrZnJlZTNfYnl0ZXMYBSABKARI",
-            "AYgBARINCgVsb2FkMRgGIAEoDRINCgVsb2FkNRgHIAEoDRIOCgZsb2FkMTUY",
-            "CCABKA0SGAoLdXNlcl9zdHJpbmcYCSABKAlIAogBAUISChBfZGlza2ZyZWUy",
-            "X2J5dGVzQhIKEF9kaXNrZnJlZTNfYnl0ZXNCDgoMX3VzZXJfc3RyaW5nIp4D",
-            "CglUZWxlbWV0cnkSDAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0cmljcxgC",
-            "IAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vudmlyb25t",
-            "ZW50X21ldHJpY3MYAyABKAsyHi5tZXNodGFzdGljLkVudmlyb25tZW50TWV0",
-            "cmljc0gAEjwKE2Fpcl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5tZXNodGFz",
-            "dGljLkFpclF1YWxpdHlNZXRyaWNzSAASMQoNcG93ZXJfbWV0cmljcxgFIAEo",
-            "CzIYLm1lc2h0YXN0aWMuUG93ZXJNZXRyaWNzSAASLQoLbG9jYWxfc3RhdHMY",
-            "BiABKAsyFi5tZXNodGFzdGljLkxvY2FsU3RhdHNIABIzCg5oZWFsdGhfbWV0",
-            "cmljcxgHIAEoCzIZLm1lc2h0YXN0aWMuSGVhbHRoTWV0cmljc0gAEi8KDGhv",
-            "c3RfbWV0cmljcxgIIAEoCzIXLm1lc2h0YXN0aWMuSG9zdE1ldHJpY3NIAEIJ",
-            "Cgd2YXJpYW50Ij4KDU5hdTc4MDJDb25maWcSEgoKemVyb09mZnNldBgBIAEo",
-            "BRIZChFjYWxpYnJhdGlvbkZhY3RvchgCIAEoAirgBAoTVGVsZW1ldHJ5U2Vu",
-            "c29yVHlwZRIQCgxTRU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIKCgZCTUU2",
-            "ODAQAhILCgdNQ1A5ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoG",
-            "Qk1QMjgwEAYSCQoFU0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYzMTAQCRIL",
-            "CgdRTUk4NjU4EAoSDAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwKCFBNU0Ew",
-            "MDNJEA0SCwoHSU5BMzIyMRAOEgoKBkJNUDA4NRAPEgwKCFJDV0w5NjIwEBAS",
-            "CQoFU0hUNFgQERIMCghWRU1MNzcwMBASEgwKCE1MWDkwNjMyEBMSCwoHT1BU",
-            "MzAwMRAUEgwKCExUUjM5MFVWEBUSDgoKVFNMMjU5MTFGThAWEgkKBUFIVDEw",
-            "EBcSEAoMREZST0JPVF9MQVJLEBgSCwoHTkFVNzgwMhAZEgoKBkJNUDNYWBAa",
-            "EgwKCElDTTIwOTQ4EBsSDAoITUFYMTcwNDgQHBIRCg1DVVNUT01fU0VOU09S",
-            "EB0SDAoITUFYMzAxMDIQHhIMCghNTFg5MDYxNBAfEgkKBVNDRDRYECASCwoH",
-            "UkFEU0VOUxAhEgoKBklOQTIyNhAiEhAKDERGUk9CT1RfUkFJThAjEgoKBkRQ",
-            "UzMxMBAkEgwKCFJBSzEyMDM1ECUSDAoITUFYMTcyNjEQJhILCgdQQ1QyMDc1",
-            "ECcSCwoHQURTMVgxNRAoEg8KC0FEUzFYMTVfQUxUECkSCQoFU0ZBMzAQKhIJ",
-            "CgVTRU41WBArQmQKE2NvbS5nZWVrc3ZpbGxlLm1lc2hCD1RlbGVtZXRyeVBy",
-            "b3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1l",
-            "c2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "DRIWCg5udW1fdHhfZHJvcHBlZBgOIAEoDSJ7Cg1IZWFsdGhNZXRyaWNzEhYK",
+            "CWhlYXJ0X2JwbRgBIAEoDUgAiAEBEhEKBHNwTzIYAiABKA1IAYgBARIYCgt0",
+            "ZW1wZXJhdHVyZRgDIAEoAkgCiAEBQgwKCl9oZWFydF9icG1CBwoFX3NwTzJC",
+            "DgoMX3RlbXBlcmF0dXJlIpECCgtIb3N0TWV0cmljcxIWCg51cHRpbWVfc2Vj",
+            "b25kcxgBIAEoDRIVCg1mcmVlbWVtX2J5dGVzGAIgASgEEhcKD2Rpc2tmcmVl",
+            "MV9ieXRlcxgDIAEoBBIcCg9kaXNrZnJlZTJfYnl0ZXMYBCABKARIAIgBARIc",
+            "Cg9kaXNrZnJlZTNfYnl0ZXMYBSABKARIAYgBARINCgVsb2FkMRgGIAEoDRIN",
+            "CgVsb2FkNRgHIAEoDRIOCgZsb2FkMTUYCCABKA0SGAoLdXNlcl9zdHJpbmcY",
+            "CSABKAlIAogBAUISChBfZGlza2ZyZWUyX2J5dGVzQhIKEF9kaXNrZnJlZTNf",
+            "Ynl0ZXNCDgoMX3VzZXJfc3RyaW5nIp4DCglUZWxlbWV0cnkSDAoEdGltZRgB",
+            "IAEoBxIzCg5kZXZpY2VfbWV0cmljcxgCIAEoCzIZLm1lc2h0YXN0aWMuRGV2",
+            "aWNlTWV0cmljc0gAEj0KE2Vudmlyb25tZW50X21ldHJpY3MYAyABKAsyHi5t",
+            "ZXNodGFzdGljLkVudmlyb25tZW50TWV0cmljc0gAEjwKE2Fpcl9xdWFsaXR5",
+            "X21ldHJpY3MYBCABKAsyHS5tZXNodGFzdGljLkFpclF1YWxpdHlNZXRyaWNz",
+            "SAASMQoNcG93ZXJfbWV0cmljcxgFIAEoCzIYLm1lc2h0YXN0aWMuUG93ZXJN",
+            "ZXRyaWNzSAASLQoLbG9jYWxfc3RhdHMYBiABKAsyFi5tZXNodGFzdGljLkxv",
+            "Y2FsU3RhdHNIABIzCg5oZWFsdGhfbWV0cmljcxgHIAEoCzIZLm1lc2h0YXN0",
+            "aWMuSGVhbHRoTWV0cmljc0gAEi8KDGhvc3RfbWV0cmljcxgIIAEoCzIXLm1l",
+            "c2h0YXN0aWMuSG9zdE1ldHJpY3NIAEIJCgd2YXJpYW50Ij4KDU5hdTc4MDJD",
+            "b25maWcSEgoKemVyb09mZnNldBgBIAEoBRIZChFjYWxpYnJhdGlvbkZhY3Rv",
+            "chgCIAEoAir5BAoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1JfVU5T",
+            "RVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMSCgoG",
+            "SU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQBxIJ",
+            "CgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoSDAoIUU1DNTg4",
+            "M0wQCxIJCgVTSFQzMRAMEgwKCFBNU0EwMDNJEA0SCwoHSU5BMzIyMRAOEgoK",
+            "BkJNUDA4NRAPEgwKCFJDV0w5NjIwEBASCQoFU0hUNFgQERIMCghWRU1MNzcw",
+            "MBASEgwKCE1MWDkwNjMyEBMSCwoHT1BUMzAwMRAUEgwKCExUUjM5MFVWEBUS",
+            "DgoKVFNMMjU5MTFGThAWEgkKBUFIVDEwEBcSEAoMREZST0JPVF9MQVJLEBgS",
+            "CwoHTkFVNzgwMhAZEgoKBkJNUDNYWBAaEgwKCElDTTIwOTQ4EBsSDAoITUFY",
+            "MTcwNDgQHBIRCg1DVVNUT01fU0VOU09SEB0SDAoITUFYMzAxMDIQHhIMCghN",
+            "TFg5MDYxNBAfEgkKBVNDRDRYECASCwoHUkFEU0VOUxAhEgoKBklOQTIyNhAi",
+            "EhAKDERGUk9CT1RfUkFJThAjEgoKBkRQUzMxMBAkEgwKCFJBSzEyMDM1ECUS",
+            "DAoITUFYMTcyNjEQJhILCgdQQ1QyMDc1ECcSCwoHQURTMVgxNRAoEg8KC0FE",
+            "UzFYMTVfQUxUECkSCQoFU0ZBMzAQKhIJCgVTRU41WBArEgsKB1RTTDI1NjEQ",
+            "LBIKCgZCSDE3NTAQLUJlChRvcmcubWVzaHRhc3RpYy5wcm90b0IPVGVsZW1l",
+            "dHJ5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVk",
+            "qgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -143,7 +144,7 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current", "Ch4Voltage", "Ch4Current", "Ch5Voltage", "Ch5Current", "Ch6Voltage", "Ch6Current", "Ch7Voltage", "Ch7Current", "Ch8Voltage", "Ch8Current" }, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current", "Ch4Voltage", "Ch4Current", "Ch5Voltage", "Ch5Current", "Ch6Voltage", "Ch6Current", "Ch7Voltage", "Ch7Current", "Ch8Voltage", "Ch8Current" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity", "FormFormaldehyde", "FormHumidity", "FormTemperature", "Pm40Standard", "Particles40Um", "PmTemperature", "PmHumidity", "PmVocIdx", "PmNoxIdx", "ParticlesTps" }, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity", "FormFormaldehyde", "FormHumidity", "FormTemperature", "Pm40Standard", "Particles40Um", "PmTemperature", "PmHumidity", "PmVocIdx", "PmNoxIdx", "ParticlesTps" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled", "HeapTotalBytes", "HeapFreeBytes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled", "HeapTotalBytes", "HeapFreeBytes", "NumTxDropped" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HealthMetrics), global::Meshtastic.Protobufs.HealthMetrics.Parser, new[]{ "HeartBpm", "SpO2", "Temperature" }, new[]{ "HeartBpm", "SpO2", "Temperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HostMetrics), global::Meshtastic.Protobufs.HostMetrics.Parser, new[]{ "UptimeSeconds", "FreememBytes", "Diskfree1Bytes", "Diskfree2Bytes", "Diskfree3Bytes", "Load1", "Load5", "Load15", "UserString" }, new[]{ "Diskfree2Bytes", "Diskfree3Bytes", "UserString" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics", "LocalStats", "HealthMetrics", "HostMetrics" }, new[]{ "Variant" }, null, null, null),
@@ -379,6 +380,16 @@ namespace Meshtastic.Protobufs {
     /// SEN5X PM SENSORS
     /// </summary>
     [pbr::OriginalName("SEN5X")] Sen5X = 43,
+    /// <summary>
+    ///
+    /// TSL2561 light sensor
+    /// </summary>
+    [pbr::OriginalName("TSL2561")] Tsl2561 = 44,
+    /// <summary>
+    ///
+    /// BH1750 light sensor
+    /// </summary>
+    [pbr::OriginalName("BH1750")] Bh1750 = 45,
   }
 
   #endregion
@@ -4914,6 +4925,7 @@ namespace Meshtastic.Protobufs {
       numTxRelayCanceled_ = other.numTxRelayCanceled_;
       heapTotalBytes_ = other.heapTotalBytes_;
       heapFreeBytes_ = other.heapFreeBytes_;
+      numTxDropped_ = other.numTxDropped_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5133,6 +5145,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "num_tx_dropped" field.</summary>
+    public const int NumTxDroppedFieldNumber = 14;
+    private uint numTxDropped_;
+    /// <summary>
+    ///
+    /// Number of packets that were dropped because the transmit queue was full.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NumTxDropped {
+      get { return numTxDropped_; }
+      set {
+        numTxDropped_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5161,6 +5189,7 @@ namespace Meshtastic.Protobufs {
       if (NumTxRelayCanceled != other.NumTxRelayCanceled) return false;
       if (HeapTotalBytes != other.HeapTotalBytes) return false;
       if (HeapFreeBytes != other.HeapFreeBytes) return false;
+      if (NumTxDropped != other.NumTxDropped) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5181,6 +5210,7 @@ namespace Meshtastic.Protobufs {
       if (NumTxRelayCanceled != 0) hash ^= NumTxRelayCanceled.GetHashCode();
       if (HeapTotalBytes != 0) hash ^= HeapTotalBytes.GetHashCode();
       if (HeapFreeBytes != 0) hash ^= HeapFreeBytes.GetHashCode();
+      if (NumTxDropped != 0) hash ^= NumTxDropped.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5251,6 +5281,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(104);
         output.WriteUInt32(HeapFreeBytes);
       }
+      if (NumTxDropped != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(NumTxDropped);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5313,6 +5347,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(104);
         output.WriteUInt32(HeapFreeBytes);
       }
+      if (NumTxDropped != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(NumTxDropped);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5361,6 +5399,9 @@ namespace Meshtastic.Protobufs {
       }
       if (HeapFreeBytes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HeapFreeBytes);
+      }
+      if (NumTxDropped != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumTxDropped);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5412,6 +5453,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.HeapFreeBytes != 0) {
         HeapFreeBytes = other.HeapFreeBytes;
+      }
+      if (other.NumTxDropped != 0) {
+        NumTxDropped = other.NumTxDropped;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5484,6 +5528,10 @@ namespace Meshtastic.Protobufs {
             HeapFreeBytes = input.ReadUInt32();
             break;
           }
+          case 112: {
+            NumTxDropped = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -5553,6 +5601,10 @@ namespace Meshtastic.Protobufs {
           }
           case 104: {
             HeapFreeBytes = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            NumTxDropped = input.ReadUInt32();
             break;
           }
         }

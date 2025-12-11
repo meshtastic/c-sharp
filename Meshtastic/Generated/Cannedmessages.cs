@@ -26,9 +26,9 @@ namespace Meshtastic.Protobufs {
           string.Concat(
             "Ch9tZXNodGFzdGljL2Nhbm5lZG1lc3NhZ2VzLnByb3RvEgptZXNodGFzdGlj",
             "Ii0KGUNhbm5lZE1lc3NhZ2VNb2R1bGVDb25maWcSEAoIbWVzc2FnZXMYASAB",
-            "KAlCbgoTY29tLmdlZWtzdmlsbGUubWVzaEIZQ2FubmVkTWVzc2FnZUNvbmZp",
-            "Z1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoC",
-            "FE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "KAlCbwoUb3JnLm1lc2h0YXN0aWMucHJvdG9CGUNhbm5lZE1lc3NhZ2VDb25m",
+            "aWdQcm90b3NaImdpdGh1Yi5jb20vbWVzaHRhc3RpYy9nby9nZW5lcmF0ZWSq",
+            "AhRNZXNodGFzdGljLlByb3RvYnVmc7oCAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -45,9 +45,9 @@ namespace Meshtastic.Protobufs {
             "YXJrX0dyZWVuEA0SCQoFQnJvd24QDip/CgpNZW1iZXJSb2xlEg4KClVuc3Bl",
             "Y2lmZWQQABIOCgpUZWFtTWVtYmVyEAESDAoIVGVhbUxlYWQQAhIGCgJIURAD",
             "EgoKBlNuaXBlchAEEgkKBU1lZGljEAUSEwoPRm9yd2FyZE9ic2VydmVyEAYS",
-            "BwoDUlRPEAcSBgoCSzkQCEJfChNjb20uZ2Vla3N2aWxsZS5tZXNoQgpBVEFL",
-            "UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIU",
-            "TWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "BwoDUlRPEAcSBgoCSzkQCEJgChRvcmcubWVzaHRhc3RpYy5wcm90b0IKQVRB",
+            "S1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoC",
+            "FE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.Team), typeof(global::Meshtastic.Protobufs.MemberRole), }, null, new pbr::GeneratedClrTypeInfo[] {

@@ -28,9 +28,9 @@ namespace Meshtastic.Protobufs {
             "YXN0aWMvY2hhbm5lbC5wcm90bxoXbWVzaHRhc3RpYy9jb25maWcucHJvdG8i",
             "bwoKQ2hhbm5lbFNldBItCghzZXR0aW5ncxgBIAMoCzIbLm1lc2h0YXN0aWMu",
             "Q2hhbm5lbFNldHRpbmdzEjIKC2xvcmFfY29uZmlnGAIgASgLMh0ubWVzaHRh",
-            "c3RpYy5Db25maWcuTG9SYUNvbmZpZ0JiChNjb20uZ2Vla3N2aWxsZS5tZXNo",
-            "Qg1BcHBPbmx5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2Vu",
-            "ZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "c3RpYy5Db25maWcuTG9SYUNvbmZpZ0JjChRvcmcubWVzaHRhc3RpYy5wcm90",
+            "b0INQXBwT25seVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dl",
+            "bmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

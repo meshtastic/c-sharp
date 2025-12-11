@@ -35,10 +35,10 @@ namespace Meshtastic.Protobufs {
             "BogBARIcCg9jYW5uZWRfbWVzc2FnZXMYCCABKAlIB4gBAUIMCgpfbG9uZ19u",
             "YW1lQg0KC19zaG9ydF9uYW1lQg4KDF9jaGFubmVsX3VybEIJCgdfY29uZmln",
             "QhAKDl9tb2R1bGVfY29uZmlnQhEKD19maXhlZF9wb3NpdGlvbkILCglfcmlu",
-            "Z3RvbmVCEgoQX2Nhbm5lZF9tZXNzYWdlc0JlChNjb20uZ2Vla3N2aWxsZS5t",
-            "ZXNoQhBDbGllbnRPbmx5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMv",
-            "Z28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3Rv",
-            "Mw=="));
+            "Z3RvbmVCEgoQX2Nhbm5lZF9tZXNzYWdlc0JmChRvcmcubWVzaHRhc3RpYy5w",
+            "cm90b0IQQ2xpZW50T25seVByb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGlj",
+            "L2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.LocalonlyReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
