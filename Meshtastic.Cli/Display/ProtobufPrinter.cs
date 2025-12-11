@@ -247,28 +247,79 @@ public class ProtobufPrinter
         }
     }
 
-    public void PrintRoute(RepeatedField<uint> route)
+    public void PrintRoute(FromRadio fromRadio)
     {
-        if (outputFormat == OutputFormat.PrettyConsole)
-        {
-            var root = new Tree("[bold]Route[/]")
-            {
-                Style = new Style(StyleResources.MESHTASTIC_GREEN)
-            };
+        const int unknownSnr = -128;
 
-            IHasTreeNodes currentTreeNode = root;
-            foreach (var nodeNum in route)
+        if (outputFormat != OutputFormat.PrettyConsole) 
+            return;
+
+        var routeDiscovery = fromRadio.GetPayload<RouteDiscovery>()!;
+
+        // invert roles when receiving data
+        var srcNodeId = fromRadio.Packet!.To;
+        var dstNodeId = fromRadio.Packet!.From;
+
+        // toward
+        var towardRoute = Enumerable.Empty<uint>()
+            .Append(srcNodeId)
+            .Concat(routeDiscovery.Route)
+            .Append(dstNodeId)
+            .ToList();
+        var towardSnr = Enumerable.Empty<float?>()
+            .Append(null)
+            .Concat(routeDiscovery.SnrTowards.Select(x => x == unknownSnr ? (float?)null : x / 4f))
+            .ToList();
+        var toward = towardRoute
+            .Select((nodeId, i) => (nodeId, snr: towardSnr.Count == towardRoute.Count ? towardSnr[i] : null))
+            .ToList();
+        PrintRouteDirection("toward", toward);
+
+        // backward
+        var backwardRoute = Enumerable.Empty<uint>()
+            .Append(dstNodeId)
+            .Concat(routeDiscovery.RouteBack)
+            .Append(srcNodeId)
+            .ToList();
+        var backwardSnr = Enumerable.Empty<float?>()
+            .Append(null)
+            .Concat(routeDiscovery.SnrBack.Select(x => x == unknownSnr ? (float?)null : x / 4f))
+            .ToList();
+        var backward = backwardRoute
+            .Select((nodeId, i) => (nodeId, snr: backwardSnr.Count == backwardRoute.Count ? backwardSnr[i] : null))
+            .ToList();
+        PrintRouteDirection("backward", backward);
+
+    }
+
+    private void PrintRouteDirection(string name, IReadOnlyList<(uint nodeId, float? snr)> route)
+    {
+        var root = new Tree($"[bold]Route {name}[/]")
+        {
+            Style = new Style(StyleResources.MESHTASTIC_GREEN)
+        };
+        IHasTreeNodes currentTreeNode = root;
+        for (var i = 0; i < route.Count; i++)
+        {
+            var hop = route[i];
+            var node = container.Nodes.Find(n => n.Num == hop.nodeId);
+            var positionStr = node?.Position.ToDisplayString() ?? "???";
+            var snrStr = hop.snr == null
+                ? i == 0
+                    ? "Not applicable"
+                    : "???"
+                : hop.snr.Value.ToString("F");
+            var content =
+                $"Position: {positionStr}{Environment.NewLine}" +
+                $"SNR: {snrStr}{Environment.NewLine}";
+            var panel = new Panel(content)
             {
-                var node = container.Nodes.Find(n => n.Num == nodeNum);
-                var content = $"Position: {node?.Position.ToDisplayString()}{Environment.NewLine}";
-                var panel = new Panel(content)
-                {
-                    Header = new PanelHeader(container.GetNodeDisplayName(nodeNum))
-                };
-                currentTreeNode = currentTreeNode.AddNode(panel);
-            }
-            AnsiConsole.Write(root);
+                Header = new PanelHeader(container.GetNodeDisplayName(hop.nodeId)),
+            };
+            currentTreeNode = currentTreeNode.AddNode(panel);
         }
+
+        AnsiConsole.Write(root);
     }
 
     public Panel PrintTrafficCharts()

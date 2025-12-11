@@ -16,12 +16,16 @@ public class TraceRouteMessageFactory
 
     public MeshPacket CreateRouteDiscoveryPacket(uint channel = 0)
     {
+        var p1 = (uint)Random.Shared.Next();
+        var p2 = (uint)Random.Shared.Next();
+        var id = unchecked(p1 + p2);
         return new MeshPacket()
         {
             Channel = channel,
             To = dest!.Value,
-            Id = (uint)Math.Floor(Random.Shared.Next() * 1e9),
+            Id = id,
             HopLimit = container?.GetHopLimitOrDefault() ?? 3,
+            Priority = MeshPacket.Types.Priority.Reliable,
             Decoded = new Protobufs.Data()
             {
                 WantResponse = true,
