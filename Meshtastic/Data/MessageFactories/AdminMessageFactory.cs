@@ -128,7 +128,7 @@ public class AdminMessageFactory
     }
     public MeshPacket CreateNodeDbResetMessage()
     {
-        return GetNewMeshPacket(new AdminMessage() { NodedbReset = 1 });
+        return GetNewMeshPacket(new AdminMessage() { NodedbReset = true });
     }
     public MeshPacket CreateRemoveByNodenumMessage(uint nodeNum)
     {
