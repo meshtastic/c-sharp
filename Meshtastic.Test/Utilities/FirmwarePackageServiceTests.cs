@@ -10,8 +10,7 @@ namespace Meshtastic.Test.Utilities
         {
             var github = new FirmwarePackageService();
             var releases = await github.GetFirmwareReleases();
-            releases.releases.stable.Should().HaveCountGreaterThan(0);
-            releases.releases.stable.Should().HaveCountGreaterThan(0);
+            releases.releases.stable.Count().ShouldBeGreaterThan(0);
         }
 
         [Test]
@@ -20,7 +19,7 @@ namespace Meshtastic.Test.Utilities
             var github = new FirmwarePackageService();
             var releases = await github.GetFirmwareReleases();
             var memoryStream = await github.DownloadRelease(releases.releases.alpha.First());
-            memoryStream.Length.Should().BeGreaterThan(0);
+            memoryStream.Length.ShouldBeGreaterThan(0);
         }
     }
 }

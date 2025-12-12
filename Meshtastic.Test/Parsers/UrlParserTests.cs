@@ -18,7 +18,7 @@ public class UrlParserTests
         var url = "https://meshtastic.org/e/#CjMSIK4kboySjOqKWHn8dCR2Gp7L0syIGv1_sySCrbZxneV2GgtCZW5zRnVuTGFuZCgBMAEKKRIgarYveKnCBHSGrOMkzVVStMEElngYZQir38xCiDKkj6UaBWFkbWluCisSIExfvRlaRwJWHDEvQYaUjzwUeN4FvkI_6nJX9P0ByHCOGgdQYXJ0eU9uEgoIATgBQANIAVAe";
         var parser = new UrlParser(url);
         var result = parser.ParseChannels();
-        result.Settings[0].Name.Should().Be("BensFunLand");
+        result.Settings[0].Name.ShouldBe("BensFunLand");
     }
 
     [Test]
@@ -49,7 +49,7 @@ public class UrlParserTests
         var url = $"https://meshtastic.org/v/#{base64}";
         var parser = new UrlParser(url);
         var result = parser.ParseContact();
-        result.User.LongName.Should().Be("Benben");
+        result.User.LongName.ShouldBe("Benben");
     }
 
     [Test]
@@ -58,13 +58,13 @@ public class UrlParserTests
 #pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
         var action = () => new UrlParser(null);
 #pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
-        action.Should().Throw<ArgumentException>();
+        action.ShouldThrow<ArgumentException>();
     }
 
     [Test]
     public void Should_ThrowException_GivenEmptyMeshtasticUrl()
     {
         var action = () => new UrlParser(String.Empty);
-        action.Should().Throw<ArgumentException>();
+        action.ShouldThrow<ArgumentException>();
     }
 }

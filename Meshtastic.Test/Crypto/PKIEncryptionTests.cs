@@ -19,14 +19,14 @@ public class PKIEncryptionTests
 		var senderPublicKey = Convert.FromBase64String("WWb1Pvgu6zs1dnncqtMcLW6AvFo84U9pJfJp417i+T4=");
 		var meshPacket = MeshPacket.Parser.ParseFrom(rawCapturedPacket);
 
-		meshPacket.Decoded.Should().BeNull();
-		meshPacket.Encrypted.Should().NotBeNull();
+		meshPacket.Decoded.ShouldBeNull();
+		meshPacket.Encrypted.ShouldNotBeNull();
 		PKIEncryption.Decrypt(recipientPrivateKey, senderPublicKey, meshPacket);
-		meshPacket.Decoded.Should().NotBeNull();
-		meshPacket.Encrypted.Should().BeNullOrEmpty();
+		meshPacket.Decoded.ShouldNotBeNull();
+		(meshPacket.Encrypted?.Length ?? 0).ShouldBe(0);
 
 		var plaintext = Encoding.UTF8.GetString(meshPacket.Decoded.Payload.ToArray());
-		plaintext.Should().Be("Test packet for PKI, please ignore");
+		plaintext.ShouldBe("Test packet for PKI, please ignore");
 	}
 
 	[Test]
@@ -45,22 +45,22 @@ public class PKIEncryptionTests
 			}
 		};
 
-		senderMeshPacket.Decoded.Should().NotBeNull();
-		senderMeshPacket.Encrypted.Should().BeNullOrEmpty();
-		PKIEncryption.Encrypt(senderKeyPair.privateKey, recipientKeyPair.publicKey, senderMeshPacket);
-		senderMeshPacket.Decoded.Should().BeNull();
-		senderMeshPacket.Encrypted.Should().NotBeNull();
+		senderMeshPacket.Decoded.ShouldNotBeNull();
+        (senderMeshPacket.Encrypted?.Length ?? 0).ShouldBe(0);
+        PKIEncryption.Encrypt(senderKeyPair.privateKey, recipientKeyPair.publicKey, senderMeshPacket);
+		senderMeshPacket.Decoded.ShouldBeNull();
+		senderMeshPacket.Encrypted.ShouldNotBeNull();
 
 		var recipientMeshPacket = MeshPacket.Parser.ParseFrom(senderMeshPacket.ToByteArray());
 
-		recipientMeshPacket.Decoded.Should().BeNull();
-		recipientMeshPacket.Encrypted.Should().NotBeNull();
+		recipientMeshPacket.Decoded.ShouldBeNull();
+		recipientMeshPacket.Encrypted.ShouldNotBeNull();
 		PKIEncryption.Decrypt(recipientKeyPair.privateKey, senderKeyPair.publicKey, recipientMeshPacket);
-		recipientMeshPacket.Decoded.Should().NotBeNull();
-		recipientMeshPacket.Encrypted.Should().BeNullOrEmpty();
+		recipientMeshPacket.Decoded.ShouldNotBeNull();
+        (recipientMeshPacket.Encrypted?.Length ?? 0).ShouldBe(0);
 
-		recipientMeshPacket.From.Should().Be(senderMeshPacket.From);
-		recipientMeshPacket.Id.Should().Be(senderMeshPacket.Id);
-		Encoding.UTF8.GetString(recipientMeshPacket.Decoded.Payload.ToByteArray()).Should().Be(plaintext);
+        recipientMeshPacket.From.ShouldBe(senderMeshPacket.From);
+		recipientMeshPacket.Id.ShouldBe(senderMeshPacket.Id);
+		Encoding.UTF8.GetString(recipientMeshPacket.Decoded.Payload.ToByteArray()).ShouldBe(plaintext);
 	}
 }

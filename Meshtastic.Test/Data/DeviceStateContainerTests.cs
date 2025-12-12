@@ -22,7 +22,7 @@ public class DeviceStateContainerTests
             }
         };
         deviceStateContainer.AddFromRadio(fromRadio);
-        deviceStateContainer.LocalConfig.Lora.TxPower.Should().Be(100);
+        deviceStateContainer.LocalConfig.Lora.TxPower.ShouldBe(100);
     }
 
     [Test]
@@ -40,7 +40,7 @@ public class DeviceStateContainerTests
             }
         };
         deviceStateContainer.AddFromRadio(fromRadio);
-        deviceStateContainer.LocalModuleConfig.Mqtt.Address.Should().Be("derp.com");
+        deviceStateContainer.LocalModuleConfig.Mqtt.Address.ShouldBe("derp.com");
     }
 
     [Test]
@@ -63,7 +63,7 @@ public class DeviceStateContainerTests
             }
         };
         deviceStateContainer.AddFromRadio(fromRadio);
-        deviceStateContainer.Channels.Should().Contain(c => c.Settings.Name == "admin");
+        deviceStateContainer.Channels.ShouldContain(c => c.Settings.Name == "admin");
     }
 
     [Test]
@@ -78,7 +78,7 @@ public class DeviceStateContainerTests
             }
         };
         deviceStateContainer.AddFromRadio(fromRadio);
-        deviceStateContainer.MyNodeInfo.RebootCount.Should().Be(1234);
+        deviceStateContainer.MyNodeInfo.RebootCount.ShouldBe((uint)1234);
     }
 
     [Test]
@@ -93,7 +93,7 @@ public class DeviceStateContainerTests
             }
         };
         deviceStateContainer.AddFromRadio(fromRadio);
-        deviceStateContainer.Nodes.Should().Contain(n => n.Num == 1234);
+        deviceStateContainer.Nodes.ShouldContain(n => n.Num == 1234);
     }
 
     [Test]
@@ -101,7 +101,7 @@ public class DeviceStateContainerTests
     {
         var deviceStateContainer = new DeviceStateContainer();
         var result = deviceStateContainer.GetAdminChannelIndex();
-        result.Should().Be(0);
+        result.ShouldBe((uint)0);
     }
 
     [Test]
@@ -118,7 +118,7 @@ public class DeviceStateContainerTests
             }
         });
         var result = deviceStateContainer.GetAdminChannelIndex();
-        result.Should().Be(3);
+        result.ShouldBe((uint)3);
     }
 
     [Test]
@@ -132,7 +132,7 @@ public class DeviceStateContainerTests
             }
         };
         var result = deviceStateContainer.GetHopLimitOrDefault();
-        result.Should().Be(3);
+        result.ShouldBe((uint)3);
     }
 
     [Test]
@@ -144,7 +144,7 @@ public class DeviceStateContainerTests
             Lora = new LoRaConfig() { HopLimit = 7 }
         };
         var result = deviceStateContainer.GetHopLimitOrDefault();
-        result.Should().Be(7);
+        result.ShouldBe((uint)7);
     }
 
     [Test]
@@ -165,9 +165,9 @@ public class DeviceStateContainerTests
         };
         deviceStateContainer.AddFromRadio(fromRadio);
         var result = deviceStateContainer.GetNodeDisplayName(1234);
-        result.Should().Contain("BUTT");
-        result.Should().Contain("Bunghole");
-        result.Should().Contain("1234");
+        result.ShouldContain("BUTT");
+        result.ShouldContain("Bunghole");
+        result.ShouldContain("1234");
     }
 
     [Test]
@@ -175,6 +175,6 @@ public class DeviceStateContainerTests
     {
         var deviceStateContainer = new DeviceStateContainer();
         var result = deviceStateContainer.GetNodeDisplayName(1234);
-        result.Should().Be("1234");
+        result.ShouldBe("1234");
     }
 }

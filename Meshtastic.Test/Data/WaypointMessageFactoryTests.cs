@@ -29,6 +29,6 @@ public class WaypointMessageFactoryTests
     public void CreateWaypointPacket_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateWaypointPacket(new Waypoint());
-        result.Decoded.Portnum.Should().Be(PortNum.WaypointApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.WaypointApp);
     }
 }

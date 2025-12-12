@@ -15,6 +15,6 @@ public class ReflectionExtensionsTests
     {
         var configs = new LocalConfig().GetSettingsOptions();
 
-        configs.Should().Contain("Display.ScreenOnSecs");
+        configs.ShouldContain("Display.ScreenOnSecs");
     }
 }

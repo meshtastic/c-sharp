@@ -20,6 +20,6 @@ public class TraceRouteCommandTests : CommandTestBase
     public async Task TraceRouteCommand_Should_Succeed_ForValidArgs()
     {
         var result = await rootCommand.InvokeAsync("traceroute --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }

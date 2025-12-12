@@ -21,7 +21,7 @@ public class FromDeviceMessageTests
         {
             fromDeviceMessage.ParsedFromRadio(BitConverter.GetBytes(123456));
         };
-        action.Should().NotThrow<InvalidProtocolBufferException>();
+        action.ShouldNotThrow();
     }
 
     [Test]
@@ -29,7 +29,7 @@ public class FromDeviceMessageTests
     {
         var fromRadio = new FromRadio() { };
         var message = fromDeviceMessage.ParsedFromRadio(fromRadio.ToByteArray());
-        message.Should().BeNull();
+        message.ShouldBeNull();
     }
 
     [Test]
@@ -47,6 +47,6 @@ public class FromDeviceMessageTests
             }
         };
         var result = fromDeviceMessage.ParsedFromRadio(fromRadio.ToByteArray());
-        result!.GetPayload<AdminMessage>()!.BeginEditSettings.Should().BeTrue();
+        result!.GetPayload<AdminMessage>()!.BeginEditSettings.ShouldBeTrue();
     }
 }
