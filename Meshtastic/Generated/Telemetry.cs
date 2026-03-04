@@ -92,7 +92,7 @@ namespace Meshtastic.Protobufs {
             "X2Zvcm1faHVtaWRpdHlCEwoRX2Zvcm1fdGVtcGVyYXR1cmVCEAoOX3BtNDBf",
             "c3RhbmRhcmRCEQoPX3BhcnRpY2xlc180MHVtQhEKD19wbV90ZW1wZXJhdHVy",
             "ZUIOCgxfcG1faHVtaWRpdHlCDQoLX3BtX3ZvY19pZHhCDQoLX3BtX25veF9p",
-            "ZHhCEAoOX3BhcnRpY2xlc190cHMi6gIKCkxvY2FsU3RhdHMSFgoOdXB0aW1l",
+            "ZHhCEAoOX3BhcnRpY2xlc190cHMi/wIKCkxvY2FsU3RhdHMSFgoOdXB0aW1l",
             "X3NlY29uZHMYASABKA0SGwoTY2hhbm5lbF91dGlsaXphdGlvbhgCIAEoAhIT",
             "CgthaXJfdXRpbF90eBgDIAEoAhIWCg5udW1fcGFja2V0c190eBgEIAEoDRIW",
             "Cg5udW1fcGFja2V0c19yeBgFIAEoDRIaChJudW1fcGFja2V0c19yeF9iYWQY",
@@ -100,43 +100,57 @@ namespace Meshtastic.Protobufs {
             "bm9kZXMYCCABKA0SEwoLbnVtX3J4X2R1cGUYCSABKA0SFAoMbnVtX3R4X3Jl",
             "bGF5GAogASgNEh0KFW51bV90eF9yZWxheV9jYW5jZWxlZBgLIAEoDRIYChBo",
             "ZWFwX3RvdGFsX2J5dGVzGAwgASgNEhcKD2hlYXBfZnJlZV9ieXRlcxgNIAEo",
-            "DRIWCg5udW1fdHhfZHJvcHBlZBgOIAEoDSJ7Cg1IZWFsdGhNZXRyaWNzEhYK",
-            "CWhlYXJ0X2JwbRgBIAEoDUgAiAEBEhEKBHNwTzIYAiABKA1IAYgBARIYCgt0",
-            "ZW1wZXJhdHVyZRgDIAEoAkgCiAEBQgwKCl9oZWFydF9icG1CBwoFX3NwTzJC",
-            "DgoMX3RlbXBlcmF0dXJlIpECCgtIb3N0TWV0cmljcxIWCg51cHRpbWVfc2Vj",
-            "b25kcxgBIAEoDRIVCg1mcmVlbWVtX2J5dGVzGAIgASgEEhcKD2Rpc2tmcmVl",
-            "MV9ieXRlcxgDIAEoBBIcCg9kaXNrZnJlZTJfYnl0ZXMYBCABKARIAIgBARIc",
-            "Cg9kaXNrZnJlZTNfYnl0ZXMYBSABKARIAYgBARINCgVsb2FkMRgGIAEoDRIN",
-            "CgVsb2FkNRgHIAEoDRIOCgZsb2FkMTUYCCABKA0SGAoLdXNlcl9zdHJpbmcY",
-            "CSABKAlIAogBAUISChBfZGlza2ZyZWUyX2J5dGVzQhIKEF9kaXNrZnJlZTNf",
-            "Ynl0ZXNCDgoMX3VzZXJfc3RyaW5nIp4DCglUZWxlbWV0cnkSDAoEdGltZRgB",
-            "IAEoBxIzCg5kZXZpY2VfbWV0cmljcxgCIAEoCzIZLm1lc2h0YXN0aWMuRGV2",
-            "aWNlTWV0cmljc0gAEj0KE2Vudmlyb25tZW50X21ldHJpY3MYAyABKAsyHi5t",
-            "ZXNodGFzdGljLkVudmlyb25tZW50TWV0cmljc0gAEjwKE2Fpcl9xdWFsaXR5",
-            "X21ldHJpY3MYBCABKAsyHS5tZXNodGFzdGljLkFpclF1YWxpdHlNZXRyaWNz",
-            "SAASMQoNcG93ZXJfbWV0cmljcxgFIAEoCzIYLm1lc2h0YXN0aWMuUG93ZXJN",
-            "ZXRyaWNzSAASLQoLbG9jYWxfc3RhdHMYBiABKAsyFi5tZXNodGFzdGljLkxv",
-            "Y2FsU3RhdHNIABIzCg5oZWFsdGhfbWV0cmljcxgHIAEoCzIZLm1lc2h0YXN0",
-            "aWMuSGVhbHRoTWV0cmljc0gAEi8KDGhvc3RfbWV0cmljcxgIIAEoCzIXLm1l",
-            "c2h0YXN0aWMuSG9zdE1ldHJpY3NIAEIJCgd2YXJpYW50Ij4KDU5hdTc4MDJD",
-            "b25maWcSEgoKemVyb09mZnNldBgBIAEoBRIZChFjYWxpYnJhdGlvbkZhY3Rv",
-            "chgCIAEoAir5BAoTVGVsZW1ldHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1JfVU5T",
-            "RVQQABIKCgZCTUUyODAQARIKCgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMSCgoG",
-            "SU5BMjYwEAQSCgoGSU5BMjE5EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQBxIJ",
-            "CgVMUFMyMhAIEgsKB1FNQzYzMTAQCRILCgdRTUk4NjU4EAoSDAoIUU1DNTg4",
-            "M0wQCxIJCgVTSFQzMRAMEgwKCFBNU0EwMDNJEA0SCwoHSU5BMzIyMRAOEgoK",
-            "BkJNUDA4NRAPEgwKCFJDV0w5NjIwEBASCQoFU0hUNFgQERIMCghWRU1MNzcw",
-            "MBASEgwKCE1MWDkwNjMyEBMSCwoHT1BUMzAwMRAUEgwKCExUUjM5MFVWEBUS",
-            "DgoKVFNMMjU5MTFGThAWEgkKBUFIVDEwEBcSEAoMREZST0JPVF9MQVJLEBgS",
-            "CwoHTkFVNzgwMhAZEgoKBkJNUDNYWBAaEgwKCElDTTIwOTQ4EBsSDAoITUFY",
-            "MTcwNDgQHBIRCg1DVVNUT01fU0VOU09SEB0SDAoITUFYMzAxMDIQHhIMCghN",
-            "TFg5MDYxNBAfEgkKBVNDRDRYECASCwoHUkFEU0VOUxAhEgoKBklOQTIyNhAi",
-            "EhAKDERGUk9CT1RfUkFJThAjEgoKBkRQUzMxMBAkEgwKCFJBSzEyMDM1ECUS",
-            "DAoITUFYMTcyNjEQJhILCgdQQ1QyMDc1ECcSCwoHQURTMVgxNRAoEg8KC0FE",
-            "UzFYMTVfQUxUECkSCQoFU0ZBMzAQKhIJCgVTRU41WBArEgsKB1RTTDI1NjEQ",
-            "LBIKCgZCSDE3NTAQLUJlChRvcmcubWVzaHRhc3RpYy5wcm90b0IPVGVsZW1l",
-            "dHJ5UHJvdG9zWiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVk",
-            "qgIUTWVzaHRhc3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "DRIWCg5udW1fdHhfZHJvcHBlZBgOIAEoDRITCgtub2lzZV9mbG9vchgPIAEo",
+            "BSLkAQoWVHJhZmZpY01hbmFnZW1lbnRTdGF0cxIZChFwYWNrZXRzX2luc3Bl",
+            "Y3RlZBgBIAEoDRIcChRwb3NpdGlvbl9kZWR1cF9kcm9wcxgCIAEoDRIbChNu",
+            "b2RlaW5mb19jYWNoZV9oaXRzGAMgASgNEhgKEHJhdGVfbGltaXRfZHJvcHMY",
+            "BCABKA0SHAoUdW5rbm93bl9wYWNrZXRfZHJvcHMYBSABKA0SHQoVaG9wX2V4",
+            "aGF1c3RlZF9wYWNrZXRzGAYgASgNEh0KFXJvdXRlcl9ob3BzX3ByZXNlcnZl",
+            "ZBgHIAEoDSJ7Cg1IZWFsdGhNZXRyaWNzEhYKCWhlYXJ0X2JwbRgBIAEoDUgA",
+            "iAEBEhEKBHNwTzIYAiABKA1IAYgBARIYCgt0ZW1wZXJhdHVyZRgDIAEoAkgC",
+            "iAEBQgwKCl9oZWFydF9icG1CBwoFX3NwTzJCDgoMX3RlbXBlcmF0dXJlIpEC",
+            "CgtIb3N0TWV0cmljcxIWCg51cHRpbWVfc2Vjb25kcxgBIAEoDRIVCg1mcmVl",
+            "bWVtX2J5dGVzGAIgASgEEhcKD2Rpc2tmcmVlMV9ieXRlcxgDIAEoBBIcCg9k",
+            "aXNrZnJlZTJfYnl0ZXMYBCABKARIAIgBARIcCg9kaXNrZnJlZTNfYnl0ZXMY",
+            "BSABKARIAYgBARINCgVsb2FkMRgGIAEoDRINCgVsb2FkNRgHIAEoDRIOCgZs",
+            "b2FkMTUYCCABKA0SGAoLdXNlcl9zdHJpbmcYCSABKAlIAogBAUISChBfZGlz",
+            "a2ZyZWUyX2J5dGVzQhIKEF9kaXNrZnJlZTNfYnl0ZXNCDgoMX3VzZXJfc3Ry",
+            "aW5nIuYDCglUZWxlbWV0cnkSDAoEdGltZRgBIAEoBxIzCg5kZXZpY2VfbWV0",
+            "cmljcxgCIAEoCzIZLm1lc2h0YXN0aWMuRGV2aWNlTWV0cmljc0gAEj0KE2Vu",
+            "dmlyb25tZW50X21ldHJpY3MYAyABKAsyHi5tZXNodGFzdGljLkVudmlyb25t",
+            "ZW50TWV0cmljc0gAEjwKE2Fpcl9xdWFsaXR5X21ldHJpY3MYBCABKAsyHS5t",
+            "ZXNodGFzdGljLkFpclF1YWxpdHlNZXRyaWNzSAASMQoNcG93ZXJfbWV0cmlj",
+            "cxgFIAEoCzIYLm1lc2h0YXN0aWMuUG93ZXJNZXRyaWNzSAASLQoLbG9jYWxf",
+            "c3RhdHMYBiABKAsyFi5tZXNodGFzdGljLkxvY2FsU3RhdHNIABIzCg5oZWFs",
+            "dGhfbWV0cmljcxgHIAEoCzIZLm1lc2h0YXN0aWMuSGVhbHRoTWV0cmljc0gA",
+            "Ei8KDGhvc3RfbWV0cmljcxgIIAEoCzIXLm1lc2h0YXN0aWMuSG9zdE1ldHJp",
+            "Y3NIABJGChh0cmFmZmljX21hbmFnZW1lbnRfc3RhdHMYCSABKAsyIi5tZXNo",
+            "dGFzdGljLlRyYWZmaWNNYW5hZ2VtZW50U3RhdHNIAEIJCgd2YXJpYW50Ij4K",
+            "DU5hdTc4MDJDb25maWcSEgoKemVyb09mZnNldBgBIAEoBRIZChFjYWxpYnJh",
+            "dGlvbkZhY3RvchgCIAEoAiLwAQoKU0VONVhTdGF0ZRIaChJsYXN0X2NsZWFu",
+            "aW5nX3RpbWUYASABKA0SGwoTbGFzdF9jbGVhbmluZ192YWxpZBgCIAEoCBIV",
+            "Cg1vbmVfc2hvdF9tb2RlGAMgASgIEhsKDnZvY19zdGF0ZV90aW1lGAQgASgN",
+            "SACIAQESHAoPdm9jX3N0YXRlX3ZhbGlkGAUgASgISAGIAQESHAoPdm9jX3N0",
+            "YXRlX2FycmF5GAYgASgGSAKIAQFCEQoPX3ZvY19zdGF0ZV90aW1lQhIKEF92",
+            "b2Nfc3RhdGVfdmFsaWRCEgoQX3ZvY19zdGF0ZV9hcnJheSqnBQoTVGVsZW1l",
+            "dHJ5U2Vuc29yVHlwZRIQCgxTRU5TT1JfVU5TRVQQABIKCgZCTUUyODAQARIK",
+            "CgZCTUU2ODAQAhILCgdNQ1A5ODA4EAMSCgoGSU5BMjYwEAQSCgoGSU5BMjE5",
+            "EAUSCgoGQk1QMjgwEAYSCQoFU0hUQzMQBxIJCgVMUFMyMhAIEgsKB1FNQzYz",
+            "MTAQCRILCgdRTUk4NjU4EAoSDAoIUU1DNTg4M0wQCxIJCgVTSFQzMRAMEgwK",
+            "CFBNU0EwMDNJEA0SCwoHSU5BMzIyMRAOEgoKBkJNUDA4NRAPEgwKCFJDV0w5",
+            "NjIwEBASCQoFU0hUNFgQERIMCghWRU1MNzcwMBASEgwKCE1MWDkwNjMyEBMS",
+            "CwoHT1BUMzAwMRAUEgwKCExUUjM5MFVWEBUSDgoKVFNMMjU5MTFGThAWEgkK",
+            "BUFIVDEwEBcSEAoMREZST0JPVF9MQVJLEBgSCwoHTkFVNzgwMhAZEgoKBkJN",
+            "UDNYWBAaEgwKCElDTTIwOTQ4EBsSDAoITUFYMTcwNDgQHBIRCg1DVVNUT01f",
+            "U0VOU09SEB0SDAoITUFYMzAxMDIQHhIMCghNTFg5MDYxNBAfEgkKBVNDRDRY",
+            "ECASCwoHUkFEU0VOUxAhEgoKBklOQTIyNhAiEhAKDERGUk9CT1RfUkFJThAj",
+            "EgoKBkRQUzMxMBAkEgwKCFJBSzEyMDM1ECUSDAoITUFYMTcyNjEQJhILCgdQ",
+            "Q1QyMDc1ECcSCwoHQURTMVgxNRAoEg8KC0FEUzFYMTVfQUxUECkSCQoFU0ZB",
+            "MzAQKhIJCgVTRU41WBArEgsKB1RTTDI1NjEQLBIKCgZCSDE3NTAQLRILCgdI",
+            "REMxMDgwEC4SCQoFU0hUMjEQLxIJCgVTVEMzMRAwEgkKBVNDRDMwEDFCZQoU",
+            "b3JnLm1lc2h0YXN0aWMucHJvdG9CD1RlbGVtZXRyeVByb3Rvc1oiZ2l0aHVi",
+            "LmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRlZKoCFE1lc2h0YXN0aWMuUHJv",
+            "dG9idWZzugIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.TelemetrySensorType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -144,11 +158,13 @@ namespace Meshtastic.Protobufs {
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.EnvironmentMetrics), global::Meshtastic.Protobufs.EnvironmentMetrics.Parser, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, new[]{ "Temperature", "RelativeHumidity", "BarometricPressure", "GasResistance", "Voltage", "Current", "Iaq", "Distance", "Lux", "WhiteLux", "IrLux", "UvLux", "WindDirection", "WindSpeed", "Weight", "WindGust", "WindLull", "Radiation", "Rainfall1H", "Rainfall24H", "SoilMoisture", "SoilTemperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.PowerMetrics), global::Meshtastic.Protobufs.PowerMetrics.Parser, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current", "Ch4Voltage", "Ch4Current", "Ch5Voltage", "Ch5Current", "Ch6Voltage", "Ch6Current", "Ch7Voltage", "Ch7Current", "Ch8Voltage", "Ch8Current" }, new[]{ "Ch1Voltage", "Ch1Current", "Ch2Voltage", "Ch2Current", "Ch3Voltage", "Ch3Current", "Ch4Voltage", "Ch4Current", "Ch5Voltage", "Ch5Current", "Ch6Voltage", "Ch6Current", "Ch7Voltage", "Ch7Current", "Ch8Voltage", "Ch8Current" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AirQualityMetrics), global::Meshtastic.Protobufs.AirQualityMetrics.Parser, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity", "FormFormaldehyde", "FormHumidity", "FormTemperature", "Pm40Standard", "Particles40Um", "PmTemperature", "PmHumidity", "PmVocIdx", "PmNoxIdx", "ParticlesTps" }, new[]{ "Pm10Standard", "Pm25Standard", "Pm100Standard", "Pm10Environmental", "Pm25Environmental", "Pm100Environmental", "Particles03Um", "Particles05Um", "Particles10Um", "Particles25Um", "Particles50Um", "Particles100Um", "Co2", "Co2Temperature", "Co2Humidity", "FormFormaldehyde", "FormHumidity", "FormTemperature", "Pm40Standard", "Particles40Um", "PmTemperature", "PmHumidity", "PmVocIdx", "PmNoxIdx", "ParticlesTps" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled", "HeapTotalBytes", "HeapFreeBytes", "NumTxDropped" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.LocalStats), global::Meshtastic.Protobufs.LocalStats.Parser, new[]{ "UptimeSeconds", "ChannelUtilization", "AirUtilTx", "NumPacketsTx", "NumPacketsRx", "NumPacketsRxBad", "NumOnlineNodes", "NumTotalNodes", "NumRxDupe", "NumTxRelay", "NumTxRelayCanceled", "HeapTotalBytes", "HeapFreeBytes", "NumTxDropped", "NoiseFloor" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.TrafficManagementStats), global::Meshtastic.Protobufs.TrafficManagementStats.Parser, new[]{ "PacketsInspected", "PositionDedupDrops", "NodeinfoCacheHits", "RateLimitDrops", "UnknownPacketDrops", "HopExhaustedPackets", "RouterHopsPreserved" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HealthMetrics), global::Meshtastic.Protobufs.HealthMetrics.Parser, new[]{ "HeartBpm", "SpO2", "Temperature" }, new[]{ "HeartBpm", "SpO2", "Temperature" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HostMetrics), global::Meshtastic.Protobufs.HostMetrics.Parser, new[]{ "UptimeSeconds", "FreememBytes", "Diskfree1Bytes", "Diskfree2Bytes", "Diskfree3Bytes", "Load1", "Load5", "Load15", "UserString" }, new[]{ "Diskfree2Bytes", "Diskfree3Bytes", "UserString" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics", "LocalStats", "HealthMetrics", "HostMetrics" }, new[]{ "Variant" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Nau7802Config), global::Meshtastic.Protobufs.Nau7802Config.Parser, new[]{ "ZeroOffset", "CalibrationFactor" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Telemetry), global::Meshtastic.Protobufs.Telemetry.Parser, new[]{ "Time", "DeviceMetrics", "EnvironmentMetrics", "AirQualityMetrics", "PowerMetrics", "LocalStats", "HealthMetrics", "HostMetrics", "TrafficManagementStats" }, new[]{ "Variant" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.Nau7802Config), global::Meshtastic.Protobufs.Nau7802Config.Parser, new[]{ "ZeroOffset", "CalibrationFactor" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SEN5XState), global::Meshtastic.Protobufs.SEN5XState.Parser, new[]{ "LastCleaningTime", "LastCleaningValid", "OneShotMode", "VocStateTime", "VocStateValid", "VocStateArray" }, new[]{ "VocStateTime", "VocStateValid", "VocStateArray" }, null, null, null)
           }));
     }
     #endregion
@@ -390,6 +406,26 @@ namespace Meshtastic.Protobufs {
     /// BH1750 light sensor
     /// </summary>
     [pbr::OriginalName("BH1750")] Bh1750 = 45,
+    /// <summary>
+    ///
+    /// HDC1080 Temperature and Humidity Sensor
+    /// </summary>
+    [pbr::OriginalName("HDC1080")] Hdc1080 = 46,
+    /// <summary>
+    ///
+    /// STH21 Temperature and R. Humidity sensor
+    /// </summary>
+    [pbr::OriginalName("SHT21")] Sht21 = 47,
+    /// <summary>
+    ///
+    /// Sensirion STC31 CO2 sensor
+    /// </summary>
+    [pbr::OriginalName("STC31")] Stc31 = 48,
+    /// <summary>
+    ///
+    /// SCD30 CO2, humidity, temperature sensor
+    /// </summary>
+    [pbr::OriginalName("SCD30")] Scd30 = 49,
   }
 
   #endregion
@@ -4926,6 +4962,7 @@ namespace Meshtastic.Protobufs {
       heapTotalBytes_ = other.heapTotalBytes_;
       heapFreeBytes_ = other.heapFreeBytes_;
       numTxDropped_ = other.numTxDropped_;
+      noiseFloor_ = other.noiseFloor_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5161,6 +5198,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "noise_floor" field.</summary>
+    public const int NoiseFloorFieldNumber = 15;
+    private int noiseFloor_;
+    /// <summary>
+    ///
+    /// Noise floor value measured in dBm
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NoiseFloor {
+      get { return noiseFloor_; }
+      set {
+        noiseFloor_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5190,6 +5243,7 @@ namespace Meshtastic.Protobufs {
       if (HeapTotalBytes != other.HeapTotalBytes) return false;
       if (HeapFreeBytes != other.HeapFreeBytes) return false;
       if (NumTxDropped != other.NumTxDropped) return false;
+      if (NoiseFloor != other.NoiseFloor) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5211,6 +5265,7 @@ namespace Meshtastic.Protobufs {
       if (HeapTotalBytes != 0) hash ^= HeapTotalBytes.GetHashCode();
       if (HeapFreeBytes != 0) hash ^= HeapFreeBytes.GetHashCode();
       if (NumTxDropped != 0) hash ^= NumTxDropped.GetHashCode();
+      if (NoiseFloor != 0) hash ^= NoiseFloor.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5285,6 +5340,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(112);
         output.WriteUInt32(NumTxDropped);
       }
+      if (NoiseFloor != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(NoiseFloor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5351,6 +5410,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(112);
         output.WriteUInt32(NumTxDropped);
       }
+      if (NoiseFloor != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(NoiseFloor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5402,6 +5465,9 @@ namespace Meshtastic.Protobufs {
       }
       if (NumTxDropped != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NumTxDropped);
+      }
+      if (NoiseFloor != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NoiseFloor);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5456,6 +5522,9 @@ namespace Meshtastic.Protobufs {
       }
       if (other.NumTxDropped != 0) {
         NumTxDropped = other.NumTxDropped;
+      }
+      if (other.NoiseFloor != 0) {
+        NoiseFloor = other.NoiseFloor;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5530,6 +5599,10 @@ namespace Meshtastic.Protobufs {
           }
           case 112: {
             NumTxDropped = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            NoiseFloor = input.ReadInt32();
             break;
           }
         }
@@ -5607,6 +5680,462 @@ namespace Meshtastic.Protobufs {
             NumTxDropped = input.ReadUInt32();
             break;
           }
+          case 120: {
+            NoiseFloor = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// Traffic management statistics for mesh network optimization
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TrafficManagementStats : pb::IMessage<TrafficManagementStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TrafficManagementStats> _parser = new pb::MessageParser<TrafficManagementStats>(() => new TrafficManagementStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TrafficManagementStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TrafficManagementStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TrafficManagementStats(TrafficManagementStats other) : this() {
+      packetsInspected_ = other.packetsInspected_;
+      positionDedupDrops_ = other.positionDedupDrops_;
+      nodeinfoCacheHits_ = other.nodeinfoCacheHits_;
+      rateLimitDrops_ = other.rateLimitDrops_;
+      unknownPacketDrops_ = other.unknownPacketDrops_;
+      hopExhaustedPackets_ = other.hopExhaustedPackets_;
+      routerHopsPreserved_ = other.routerHopsPreserved_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TrafficManagementStats Clone() {
+      return new TrafficManagementStats(this);
+    }
+
+    /// <summary>Field number for the "packets_inspected" field.</summary>
+    public const int PacketsInspectedFieldNumber = 1;
+    private uint packetsInspected_;
+    /// <summary>
+    ///
+    /// Total number of packets inspected by traffic management
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PacketsInspected {
+      get { return packetsInspected_; }
+      set {
+        packetsInspected_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "position_dedup_drops" field.</summary>
+    public const int PositionDedupDropsFieldNumber = 2;
+    private uint positionDedupDrops_;
+    /// <summary>
+    ///
+    /// Number of position packets dropped due to deduplication
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PositionDedupDrops {
+      get { return positionDedupDrops_; }
+      set {
+        positionDedupDrops_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nodeinfo_cache_hits" field.</summary>
+    public const int NodeinfoCacheHitsFieldNumber = 3;
+    private uint nodeinfoCacheHits_;
+    /// <summary>
+    ///
+    /// Number of NodeInfo requests answered from cache
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NodeinfoCacheHits {
+      get { return nodeinfoCacheHits_; }
+      set {
+        nodeinfoCacheHits_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rate_limit_drops" field.</summary>
+    public const int RateLimitDropsFieldNumber = 4;
+    private uint rateLimitDrops_;
+    /// <summary>
+    ///
+    /// Number of packets dropped due to rate limiting
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RateLimitDrops {
+      get { return rateLimitDrops_; }
+      set {
+        rateLimitDrops_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "unknown_packet_drops" field.</summary>
+    public const int UnknownPacketDropsFieldNumber = 5;
+    private uint unknownPacketDrops_;
+    /// <summary>
+    ///
+    /// Number of unknown/undecryptable packets dropped
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UnknownPacketDrops {
+      get { return unknownPacketDrops_; }
+      set {
+        unknownPacketDrops_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hop_exhausted_packets" field.</summary>
+    public const int HopExhaustedPacketsFieldNumber = 6;
+    private uint hopExhaustedPackets_;
+    /// <summary>
+    ///
+    /// Number of packets with hop_limit exhausted for local-only broadcast
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HopExhaustedPackets {
+      get { return hopExhaustedPackets_; }
+      set {
+        hopExhaustedPackets_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "router_hops_preserved" field.</summary>
+    public const int RouterHopsPreservedFieldNumber = 7;
+    private uint routerHopsPreserved_;
+    /// <summary>
+    ///
+    /// Number of times router hop preservation was applied
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RouterHopsPreserved {
+      get { return routerHopsPreserved_; }
+      set {
+        routerHopsPreserved_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TrafficManagementStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TrafficManagementStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PacketsInspected != other.PacketsInspected) return false;
+      if (PositionDedupDrops != other.PositionDedupDrops) return false;
+      if (NodeinfoCacheHits != other.NodeinfoCacheHits) return false;
+      if (RateLimitDrops != other.RateLimitDrops) return false;
+      if (UnknownPacketDrops != other.UnknownPacketDrops) return false;
+      if (HopExhaustedPackets != other.HopExhaustedPackets) return false;
+      if (RouterHopsPreserved != other.RouterHopsPreserved) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PacketsInspected != 0) hash ^= PacketsInspected.GetHashCode();
+      if (PositionDedupDrops != 0) hash ^= PositionDedupDrops.GetHashCode();
+      if (NodeinfoCacheHits != 0) hash ^= NodeinfoCacheHits.GetHashCode();
+      if (RateLimitDrops != 0) hash ^= RateLimitDrops.GetHashCode();
+      if (UnknownPacketDrops != 0) hash ^= UnknownPacketDrops.GetHashCode();
+      if (HopExhaustedPackets != 0) hash ^= HopExhaustedPackets.GetHashCode();
+      if (RouterHopsPreserved != 0) hash ^= RouterHopsPreserved.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PacketsInspected != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PacketsInspected);
+      }
+      if (PositionDedupDrops != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(PositionDedupDrops);
+      }
+      if (NodeinfoCacheHits != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(NodeinfoCacheHits);
+      }
+      if (RateLimitDrops != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(RateLimitDrops);
+      }
+      if (UnknownPacketDrops != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(UnknownPacketDrops);
+      }
+      if (HopExhaustedPackets != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(HopExhaustedPackets);
+      }
+      if (RouterHopsPreserved != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(RouterHopsPreserved);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PacketsInspected != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PacketsInspected);
+      }
+      if (PositionDedupDrops != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(PositionDedupDrops);
+      }
+      if (NodeinfoCacheHits != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(NodeinfoCacheHits);
+      }
+      if (RateLimitDrops != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(RateLimitDrops);
+      }
+      if (UnknownPacketDrops != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(UnknownPacketDrops);
+      }
+      if (HopExhaustedPackets != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(HopExhaustedPackets);
+      }
+      if (RouterHopsPreserved != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(RouterHopsPreserved);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PacketsInspected != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PacketsInspected);
+      }
+      if (PositionDedupDrops != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PositionDedupDrops);
+      }
+      if (NodeinfoCacheHits != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NodeinfoCacheHits);
+      }
+      if (RateLimitDrops != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RateLimitDrops);
+      }
+      if (UnknownPacketDrops != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UnknownPacketDrops);
+      }
+      if (HopExhaustedPackets != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HopExhaustedPackets);
+      }
+      if (RouterHopsPreserved != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RouterHopsPreserved);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TrafficManagementStats other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PacketsInspected != 0) {
+        PacketsInspected = other.PacketsInspected;
+      }
+      if (other.PositionDedupDrops != 0) {
+        PositionDedupDrops = other.PositionDedupDrops;
+      }
+      if (other.NodeinfoCacheHits != 0) {
+        NodeinfoCacheHits = other.NodeinfoCacheHits;
+      }
+      if (other.RateLimitDrops != 0) {
+        RateLimitDrops = other.RateLimitDrops;
+      }
+      if (other.UnknownPacketDrops != 0) {
+        UnknownPacketDrops = other.UnknownPacketDrops;
+      }
+      if (other.HopExhaustedPackets != 0) {
+        HopExhaustedPackets = other.HopExhaustedPackets;
+      }
+      if (other.RouterHopsPreserved != 0) {
+        RouterHopsPreserved = other.RouterHopsPreserved;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PacketsInspected = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            PositionDedupDrops = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            NodeinfoCacheHits = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            RateLimitDrops = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            UnknownPacketDrops = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            HopExhaustedPackets = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            RouterHopsPreserved = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PacketsInspected = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            PositionDedupDrops = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            NodeinfoCacheHits = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            RateLimitDrops = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            UnknownPacketDrops = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            HopExhaustedPackets = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            RouterHopsPreserved = input.ReadUInt32();
+            break;
+          }
         }
       }
     }
@@ -5634,7 +6163,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5969,7 +6498,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6549,7 +7078,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6591,6 +7120,9 @@ namespace Meshtastic.Protobufs {
           break;
         case VariantOneofCase.HostMetrics:
           HostMetrics = other.HostMetrics.Clone();
+          break;
+        case VariantOneofCase.TrafficManagementStats:
+          TrafficManagementStats = other.TrafficManagementStats.Clone();
           break;
       }
 
@@ -6731,6 +7263,22 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "traffic_management_stats" field.</summary>
+    public const int TrafficManagementStatsFieldNumber = 9;
+    /// <summary>
+    ///
+    /// Traffic management statistics
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.TrafficManagementStats TrafficManagementStats {
+      get { return variantCase_ == VariantOneofCase.TrafficManagementStats ? (global::Meshtastic.Protobufs.TrafficManagementStats) variant_ : null; }
+      set {
+        variant_ = value;
+        variantCase_ = value == null ? VariantOneofCase.None : VariantOneofCase.TrafficManagementStats;
+      }
+    }
+
     private object variant_;
     /// <summary>Enum of possible cases for the "variant" oneof.</summary>
     public enum VariantOneofCase {
@@ -6742,6 +7290,7 @@ namespace Meshtastic.Protobufs {
       LocalStats = 6,
       HealthMetrics = 7,
       HostMetrics = 8,
+      TrafficManagementStats = 9,
     }
     private VariantOneofCase variantCase_ = VariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6780,6 +7329,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(LocalStats, other.LocalStats)) return false;
       if (!object.Equals(HealthMetrics, other.HealthMetrics)) return false;
       if (!object.Equals(HostMetrics, other.HostMetrics)) return false;
+      if (!object.Equals(TrafficManagementStats, other.TrafficManagementStats)) return false;
       if (VariantCase != other.VariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6796,6 +7346,7 @@ namespace Meshtastic.Protobufs {
       if (variantCase_ == VariantOneofCase.LocalStats) hash ^= LocalStats.GetHashCode();
       if (variantCase_ == VariantOneofCase.HealthMetrics) hash ^= HealthMetrics.GetHashCode();
       if (variantCase_ == VariantOneofCase.HostMetrics) hash ^= HostMetrics.GetHashCode();
+      if (variantCase_ == VariantOneofCase.TrafficManagementStats) hash ^= TrafficManagementStats.GetHashCode();
       hash ^= (int) variantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6847,6 +7398,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(66);
         output.WriteMessage(HostMetrics);
       }
+      if (variantCase_ == VariantOneofCase.TrafficManagementStats) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TrafficManagementStats);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6889,6 +7444,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(66);
         output.WriteMessage(HostMetrics);
       }
+      if (variantCase_ == VariantOneofCase.TrafficManagementStats) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TrafficManagementStats);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6922,6 +7481,9 @@ namespace Meshtastic.Protobufs {
       }
       if (variantCase_ == VariantOneofCase.HostMetrics) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(HostMetrics);
+      }
+      if (variantCase_ == VariantOneofCase.TrafficManagementStats) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrafficManagementStats);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6980,6 +7542,12 @@ namespace Meshtastic.Protobufs {
             HostMetrics = new global::Meshtastic.Protobufs.HostMetrics();
           }
           HostMetrics.MergeFrom(other.HostMetrics);
+          break;
+        case VariantOneofCase.TrafficManagementStats:
+          if (TrafficManagementStats == null) {
+            TrafficManagementStats = new global::Meshtastic.Protobufs.TrafficManagementStats();
+          }
+          TrafficManagementStats.MergeFrom(other.TrafficManagementStats);
           break;
       }
 
@@ -7069,6 +7637,15 @@ namespace Meshtastic.Protobufs {
             HostMetrics = subBuilder;
             break;
           }
+          case 74: {
+            global::Meshtastic.Protobufs.TrafficManagementStats subBuilder = new global::Meshtastic.Protobufs.TrafficManagementStats();
+            if (variantCase_ == VariantOneofCase.TrafficManagementStats) {
+              subBuilder.MergeFrom(TrafficManagementStats);
+            }
+            input.ReadMessage(subBuilder);
+            TrafficManagementStats = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -7155,6 +7732,15 @@ namespace Meshtastic.Protobufs {
             HostMetrics = subBuilder;
             break;
           }
+          case 74: {
+            global::Meshtastic.Protobufs.TrafficManagementStats subBuilder = new global::Meshtastic.Protobufs.TrafficManagementStats();
+            if (variantCase_ == VariantOneofCase.TrafficManagementStats) {
+              subBuilder.MergeFrom(TrafficManagementStats);
+            }
+            input.ReadMessage(subBuilder);
+            TrafficManagementStats = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -7181,7 +7767,7 @@ namespace Meshtastic.Protobufs {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7400,6 +7986,464 @@ namespace Meshtastic.Protobufs {
           }
           case 21: {
             CalibrationFactor = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  ///
+  /// SEN5X State, for saving to flash
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SEN5XState : pb::IMessage<SEN5XState>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SEN5XState> _parser = new pb::MessageParser<SEN5XState>(() => new SEN5XState());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SEN5XState> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.TelemetryReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SEN5XState() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SEN5XState(SEN5XState other) : this() {
+      _hasBits0 = other._hasBits0;
+      lastCleaningTime_ = other.lastCleaningTime_;
+      lastCleaningValid_ = other.lastCleaningValid_;
+      oneShotMode_ = other.oneShotMode_;
+      vocStateTime_ = other.vocStateTime_;
+      vocStateValid_ = other.vocStateValid_;
+      vocStateArray_ = other.vocStateArray_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SEN5XState Clone() {
+      return new SEN5XState(this);
+    }
+
+    /// <summary>Field number for the "last_cleaning_time" field.</summary>
+    public const int LastCleaningTimeFieldNumber = 1;
+    private uint lastCleaningTime_;
+    /// <summary>
+    ///
+    /// Last cleaning time for SEN5X
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LastCleaningTime {
+      get { return lastCleaningTime_; }
+      set {
+        lastCleaningTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_cleaning_valid" field.</summary>
+    public const int LastCleaningValidFieldNumber = 2;
+    private bool lastCleaningValid_;
+    /// <summary>
+    ///
+    /// Last cleaning time for SEN5X - valid flag
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LastCleaningValid {
+      get { return lastCleaningValid_; }
+      set {
+        lastCleaningValid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "one_shot_mode" field.</summary>
+    public const int OneShotModeFieldNumber = 3;
+    private bool oneShotMode_;
+    /// <summary>
+    ///
+    /// Config flag for one-shot mode (see admin.proto)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OneShotMode {
+      get { return oneShotMode_; }
+      set {
+        oneShotMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "voc_state_time" field.</summary>
+    public const int VocStateTimeFieldNumber = 4;
+    private readonly static uint VocStateTimeDefaultValue = 0;
+
+    private uint vocStateTime_;
+    /// <summary>
+    ///
+    /// Last VOC state time for SEN55
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint VocStateTime {
+      get { if ((_hasBits0 & 1) != 0) { return vocStateTime_; } else { return VocStateTimeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        vocStateTime_ = value;
+      }
+    }
+    /// <summary>Gets whether the "voc_state_time" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVocStateTime {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "voc_state_time" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVocStateTime() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "voc_state_valid" field.</summary>
+    public const int VocStateValidFieldNumber = 5;
+    private readonly static bool VocStateValidDefaultValue = false;
+
+    private bool vocStateValid_;
+    /// <summary>
+    ///
+    /// Last VOC state validity flag for SEN55
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool VocStateValid {
+      get { if ((_hasBits0 & 2) != 0) { return vocStateValid_; } else { return VocStateValidDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        vocStateValid_ = value;
+      }
+    }
+    /// <summary>Gets whether the "voc_state_valid" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVocStateValid {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "voc_state_valid" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVocStateValid() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "voc_state_array" field.</summary>
+    public const int VocStateArrayFieldNumber = 6;
+    private readonly static ulong VocStateArrayDefaultValue = 0UL;
+
+    private ulong vocStateArray_;
+    /// <summary>
+    ///
+    /// VOC state array (8x uint8t) for SEN55
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong VocStateArray {
+      get { if ((_hasBits0 & 4) != 0) { return vocStateArray_; } else { return VocStateArrayDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        vocStateArray_ = value;
+      }
+    }
+    /// <summary>Gets whether the "voc_state_array" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVocStateArray {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "voc_state_array" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVocStateArray() {
+      _hasBits0 &= ~4;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SEN5XState);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SEN5XState other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (LastCleaningTime != other.LastCleaningTime) return false;
+      if (LastCleaningValid != other.LastCleaningValid) return false;
+      if (OneShotMode != other.OneShotMode) return false;
+      if (VocStateTime != other.VocStateTime) return false;
+      if (VocStateValid != other.VocStateValid) return false;
+      if (VocStateArray != other.VocStateArray) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (LastCleaningTime != 0) hash ^= LastCleaningTime.GetHashCode();
+      if (LastCleaningValid != false) hash ^= LastCleaningValid.GetHashCode();
+      if (OneShotMode != false) hash ^= OneShotMode.GetHashCode();
+      if (HasVocStateTime) hash ^= VocStateTime.GetHashCode();
+      if (HasVocStateValid) hash ^= VocStateValid.GetHashCode();
+      if (HasVocStateArray) hash ^= VocStateArray.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (LastCleaningTime != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(LastCleaningTime);
+      }
+      if (LastCleaningValid != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(LastCleaningValid);
+      }
+      if (OneShotMode != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(OneShotMode);
+      }
+      if (HasVocStateTime) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(VocStateTime);
+      }
+      if (HasVocStateValid) {
+        output.WriteRawTag(40);
+        output.WriteBool(VocStateValid);
+      }
+      if (HasVocStateArray) {
+        output.WriteRawTag(49);
+        output.WriteFixed64(VocStateArray);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LastCleaningTime != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(LastCleaningTime);
+      }
+      if (LastCleaningValid != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(LastCleaningValid);
+      }
+      if (OneShotMode != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(OneShotMode);
+      }
+      if (HasVocStateTime) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(VocStateTime);
+      }
+      if (HasVocStateValid) {
+        output.WriteRawTag(40);
+        output.WriteBool(VocStateValid);
+      }
+      if (HasVocStateArray) {
+        output.WriteRawTag(49);
+        output.WriteFixed64(VocStateArray);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (LastCleaningTime != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LastCleaningTime);
+      }
+      if (LastCleaningValid != false) {
+        size += 1 + 1;
+      }
+      if (OneShotMode != false) {
+        size += 1 + 1;
+      }
+      if (HasVocStateTime) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VocStateTime);
+      }
+      if (HasVocStateValid) {
+        size += 1 + 1;
+      }
+      if (HasVocStateArray) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SEN5XState other) {
+      if (other == null) {
+        return;
+      }
+      if (other.LastCleaningTime != 0) {
+        LastCleaningTime = other.LastCleaningTime;
+      }
+      if (other.LastCleaningValid != false) {
+        LastCleaningValid = other.LastCleaningValid;
+      }
+      if (other.OneShotMode != false) {
+        OneShotMode = other.OneShotMode;
+      }
+      if (other.HasVocStateTime) {
+        VocStateTime = other.VocStateTime;
+      }
+      if (other.HasVocStateValid) {
+        VocStateValid = other.VocStateValid;
+      }
+      if (other.HasVocStateArray) {
+        VocStateArray = other.VocStateArray;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            LastCleaningTime = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            LastCleaningValid = input.ReadBool();
+            break;
+          }
+          case 24: {
+            OneShotMode = input.ReadBool();
+            break;
+          }
+          case 32: {
+            VocStateTime = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            VocStateValid = input.ReadBool();
+            break;
+          }
+          case 49: {
+            VocStateArray = input.ReadFixed64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LastCleaningTime = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            LastCleaningValid = input.ReadBool();
+            break;
+          }
+          case 24: {
+            OneShotMode = input.ReadBool();
+            break;
+          }
+          case 32: {
+            VocStateTime = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            VocStateValid = input.ReadBool();
+            break;
+          }
+          case 49: {
+            VocStateArray = input.ReadFixed64();
             break;
           }
         }

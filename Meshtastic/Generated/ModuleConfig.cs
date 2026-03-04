@@ -24,27 +24,32 @@ namespace Meshtastic.Protobufs {
     static ModuleConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8SCm1lc2h0YXN0aWMi",
-            "tSYKDE1vZHVsZUNvbmZpZxIzCgRtcXR0GAEgASgLMiMubWVzaHRhc3RpYy5N",
-            "b2R1bGVDb25maWcuTVFUVENvbmZpZ0gAEjcKBnNlcmlhbBgCIAEoCzIlLm1l",
-            "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZ0gAElQKFWV4dGVy",
-            "bmFsX25vdGlmaWNhdGlvbhgDIAEoCzIzLm1lc2h0YXN0aWMuTW9kdWxlQ29u",
-            "ZmlnLkV4dGVybmFsTm90aWZpY2F0aW9uQ29uZmlnSAASRAoNc3RvcmVfZm9y",
-            "d2FyZBgEIAEoCzIrLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlN0b3JlRm9y",
-            "d2FyZENvbmZpZ0gAEj4KCnJhbmdlX3Rlc3QYBSABKAsyKC5tZXNodGFzdGlj",
-            "Lk1vZHVsZUNvbmZpZy5SYW5nZVRlc3RDb25maWdIABI9Cgl0ZWxlbWV0cnkY",
-            "BiABKAsyKC5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5UZWxlbWV0cnlDb25m",
-            "aWdIABJGCg5jYW5uZWRfbWVzc2FnZRgHIAEoCzIsLm1lc2h0YXN0aWMuTW9k",
-            "dWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWdIABI1CgVhdWRpbxgIIAEo",
-            "CzIkLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLkF1ZGlvQ29uZmlnSAASSAoP",
-            "cmVtb3RlX2hhcmR3YXJlGAkgASgLMi0ubWVzaHRhc3RpYy5Nb2R1bGVDb25m",
-            "aWcuUmVtb3RlSGFyZHdhcmVDb25maWdIABJECg1uZWlnaGJvcl9pbmZvGAog",
-            "ASgLMisubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuTmVpZ2hib3JJbmZvQ29u",
-            "ZmlnSAASSgoQYW1iaWVudF9saWdodGluZxgLIAEoCzIuLm1lc2h0YXN0aWMu",
-            "TW9kdWxlQ29uZmlnLkFtYmllbnRMaWdodGluZ0NvbmZpZ0gAEkoKEGRldGVj",
-            "dGlvbl9zZW5zb3IYDCABKAsyLi5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5E",
-            "ZXRlY3Rpb25TZW5zb3JDb25maWdIABI/CgpwYXhjb3VudGVyGA0gASgLMiku",
-            "bWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuUGF4Y291bnRlckNvbmZpZ0gAGrAC",
+            "Ch5tZXNodGFzdGljL21vZHVsZV9jb25maWcucHJvdG8SCm1lc2h0YXN0aWMa",
+            "FW1lc2h0YXN0aWMvYXRhay5wcm90byKPLQoMTW9kdWxlQ29uZmlnEjMKBG1x",
+            "dHQYASABKAsyIy5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5NUVRUQ29uZmln",
+            "SAASNwoGc2VyaWFsGAIgASgLMiUubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcu",
+            "U2VyaWFsQ29uZmlnSAASVAoVZXh0ZXJuYWxfbm90aWZpY2F0aW9uGAMgASgL",
+            "MjMubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuRXh0ZXJuYWxOb3RpZmljYXRp",
+            "b25Db25maWdIABJECg1zdG9yZV9mb3J3YXJkGAQgASgLMisubWVzaHRhc3Rp",
+            "Yy5Nb2R1bGVDb25maWcuU3RvcmVGb3J3YXJkQ29uZmlnSAASPgoKcmFuZ2Vf",
+            "dGVzdBgFIAEoCzIoLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlJhbmdlVGVz",
+            "dENvbmZpZ0gAEj0KCXRlbGVtZXRyeRgGIAEoCzIoLm1lc2h0YXN0aWMuTW9k",
+            "dWxlQ29uZmlnLlRlbGVtZXRyeUNvbmZpZ0gAEkYKDmNhbm5lZF9tZXNzYWdl",
+            "GAcgASgLMiwubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQ2FubmVkTWVzc2Fn",
+            "ZUNvbmZpZ0gAEjUKBWF1ZGlvGAggASgLMiQubWVzaHRhc3RpYy5Nb2R1bGVD",
+            "b25maWcuQXVkaW9Db25maWdIABJICg9yZW1vdGVfaGFyZHdhcmUYCSABKAsy",
+            "LS5tZXNodGFzdGljLk1vZHVsZUNvbmZpZy5SZW1vdGVIYXJkd2FyZUNvbmZp",
+            "Z0gAEkQKDW5laWdoYm9yX2luZm8YCiABKAsyKy5tZXNodGFzdGljLk1vZHVs",
+            "ZUNvbmZpZy5OZWlnaGJvckluZm9Db25maWdIABJKChBhbWJpZW50X2xpZ2h0",
+            "aW5nGAsgASgLMi4ubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcuQW1iaWVudExp",
+            "Z2h0aW5nQ29uZmlnSAASSgoQZGV0ZWN0aW9uX3NlbnNvchgMIAEoCzIuLm1l",
+            "c2h0YXN0aWMuTW9kdWxlQ29uZmlnLkRldGVjdGlvblNlbnNvckNvbmZpZ0gA",
+            "Ej8KCnBheGNvdW50ZXIYDSABKAsyKS5tZXNodGFzdGljLk1vZHVsZUNvbmZp",
+            "Zy5QYXhjb3VudGVyQ29uZmlnSAASRQoNc3RhdHVzbWVzc2FnZRgOIAEoCzIs",
+            "Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlN0YXR1c01lc3NhZ2VDb25maWdI",
+            "ABJOChJ0cmFmZmljX21hbmFnZW1lbnQYDyABKAsyMC5tZXNodGFzdGljLk1v",
+            "ZHVsZUNvbmZpZy5UcmFmZmljTWFuYWdlbWVudENvbmZpZ0gAEjEKA3RhaxgQ",
+            "IAEoCzIiLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlRBS0NvbmZpZ0gAGrAC",
             "CgpNUVRUQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSDwoHYWRkcmVzcxgCIAEo",
             "CRIQCgh1c2VybmFtZRgDIAEoCRIQCghwYXNzd29yZBgEIAEoCRIaChJlbmNy",
             "eXB0aW9uX2VuYWJsZWQYBSABKAgSFAoManNvbl9lbmFibGVkGAYgASgIEhMK",
@@ -79,85 +84,103 @@ namespace Meshtastic.Protobufs {
             "CgtDT0RFQzJfNzAwQhAIGnYKEFBheGNvdW50ZXJDb25maWcSDwoHZW5hYmxl",
             "ZBgBIAEoCBIiChpwYXhjb3VudGVyX3VwZGF0ZV9pbnRlcnZhbBgCIAEoDRIW",
             "Cg53aWZpX3RocmVzaG9sZBgDIAEoBRIVCg1ibGVfdGhyZXNob2xkGAQgASgF",
-            "GowFCgxTZXJpYWxDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIMCgRlY2hvGAIg",
-            "ASgIEgsKA3J4ZBgDIAEoDRILCgN0eGQYBCABKA0SPwoEYmF1ZBgFIAEoDjIx",
-            "Lm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENvbmZpZy5TZXJpYWxf",
-            "QmF1ZBIPCgd0aW1lb3V0GAYgASgNEj8KBG1vZGUYByABKA4yMS5tZXNodGFz",
-            "dGljLk1vZHVsZUNvbmZpZy5TZXJpYWxDb25maWcuU2VyaWFsX01vZGUSJAoc",
-            "b3ZlcnJpZGVfY29uc29sZV9zZXJpYWxfcG9ydBgIIAEoCCKKAgoLU2VyaWFs",
-            "X0JhdWQSEAoMQkFVRF9ERUZBVUxUEAASDAoIQkFVRF8xMTAQARIMCghCQVVE",
-            "XzMwMBACEgwKCEJBVURfNjAwEAMSDQoJQkFVRF8xMjAwEAQSDQoJQkFVRF8y",
-            "NDAwEAUSDQoJQkFVRF80ODAwEAYSDQoJQkFVRF85NjAwEAcSDgoKQkFVRF8x",
-            "OTIwMBAIEg4KCkJBVURfMzg0MDAQCRIOCgpCQVVEXzU3NjAwEAoSDwoLQkFV",
-            "RF8xMTUyMDAQCxIPCgtCQVVEXzIzMDQwMBAMEg8KC0JBVURfNDYwODAwEA0S",
-            "DwoLQkFVRF81NzYwMDAQDhIPCgtCQVVEXzkyMTYwMBAPIn0KC1NlcmlhbF9N",
-            "b2RlEgsKB0RFRkFVTFQQABIKCgZTSU1QTEUQARIJCgVQUk9UTxACEgsKB1RF",
-            "WFRNU0cQAxIICgROTUVBEAQSCwoHQ0FMVE9QTxAFEggKBFdTODUQBhINCglW",
-            "RV9ESVJFQ1QQBxINCglNU19DT05GSUcQCBrpAgoaRXh0ZXJuYWxOb3RpZmlj",
-            "YXRpb25Db25maWcSDwoHZW5hYmxlZBgBIAEoCBIRCglvdXRwdXRfbXMYAiAB",
-            "KA0SDgoGb3V0cHV0GAMgASgNEhQKDG91dHB1dF92aWJyYRgIIAEoDRIVCg1v",
-            "dXRwdXRfYnV6emVyGAkgASgNEg4KBmFjdGl2ZRgEIAEoCBIVCg1hbGVydF9t",
-            "ZXNzYWdlGAUgASgIEhsKE2FsZXJ0X21lc3NhZ2VfdmlicmEYCiABKAgSHAoU",
-            "YWxlcnRfbWVzc2FnZV9idXp6ZXIYCyABKAgSEgoKYWxlcnRfYmVsbBgGIAEo",
-            "CBIYChBhbGVydF9iZWxsX3ZpYnJhGAwgASgIEhkKEWFsZXJ0X2JlbGxfYnV6",
-            "emVyGA0gASgIEg8KB3VzZV9wd20YByABKAgSEwoLbmFnX3RpbWVvdXQYDiAB",
-            "KA0SGQoRdXNlX2kyc19hc19idXp6ZXIYDyABKAgalwEKElN0b3JlRm9yd2Fy",
-            "ZENvbmZpZxIPCgdlbmFibGVkGAEgASgIEhEKCWhlYXJ0YmVhdBgCIAEoCBIP",
-            "CgdyZWNvcmRzGAMgASgNEhoKEmhpc3RvcnlfcmV0dXJuX21heBgEIAEoDRId",
-            "ChVoaXN0b3J5X3JldHVybl93aW5kb3cYBSABKA0SEQoJaXNfc2VydmVyGAYg",
-            "ASgIGlkKD1JhbmdlVGVzdENvbmZpZxIPCgdlbmFibGVkGAEgASgIEg4KBnNl",
-            "bmRlchgCIAEoDRIMCgRzYXZlGAMgASgIEhcKD2NsZWFyX29uX3JlYm9vdBgE",
-            "IAEoCBrrAwoPVGVsZW1ldHJ5Q29uZmlnEh4KFmRldmljZV91cGRhdGVfaW50",
-            "ZXJ2YWwYASABKA0SIwobZW52aXJvbm1lbnRfdXBkYXRlX2ludGVydmFsGAIg",
-            "ASgNEicKH2Vudmlyb25tZW50X21lYXN1cmVtZW50X2VuYWJsZWQYAyABKAgS",
-            "IgoaZW52aXJvbm1lbnRfc2NyZWVuX2VuYWJsZWQYBCABKAgSJgoeZW52aXJv",
-            "bm1lbnRfZGlzcGxheV9mYWhyZW5oZWl0GAUgASgIEhsKE2Fpcl9xdWFsaXR5",
-            "X2VuYWJsZWQYBiABKAgSHAoUYWlyX3F1YWxpdHlfaW50ZXJ2YWwYByABKA0S",
-            "IQoZcG93ZXJfbWVhc3VyZW1lbnRfZW5hYmxlZBgIIAEoCBIdChVwb3dlcl91",
-            "cGRhdGVfaW50ZXJ2YWwYCSABKA0SHAoUcG93ZXJfc2NyZWVuX2VuYWJsZWQY",
-            "CiABKAgSIgoaaGVhbHRoX21lYXN1cmVtZW50X2VuYWJsZWQYCyABKAgSHgoW",
-            "aGVhbHRoX3VwZGF0ZV9pbnRlcnZhbBgMIAEoDRIdChVoZWFsdGhfc2NyZWVu",
-            "X2VuYWJsZWQYDSABKAgSIAoYZGV2aWNlX3RlbGVtZXRyeV9lbmFibGVkGA4g",
-            "ASgIGt4EChNDYW5uZWRNZXNzYWdlQ29uZmlnEhcKD3JvdGFyeTFfZW5hYmxl",
-            "ZBgBIAEoCBIZChFpbnB1dGJyb2tlcl9waW5fYRgCIAEoDRIZChFpbnB1dGJy",
-            "b2tlcl9waW5fYhgDIAEoDRIdChVpbnB1dGJyb2tlcl9waW5fcHJlc3MYBCAB",
-            "KA0SWQoUaW5wdXRicm9rZXJfZXZlbnRfY3cYBSABKA4yOy5tZXNodGFzdGlj",
-            "Lk1vZHVsZUNvbmZpZy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0RXZlbnRD",
-            "aGFyEloKFWlucHV0YnJva2VyX2V2ZW50X2NjdxgGIAEoDjI7Lm1lc2h0YXN0",
-            "aWMuTW9kdWxlQ29uZmlnLkNhbm5lZE1lc3NhZ2VDb25maWcuSW5wdXRFdmVu",
-            "dENoYXISXAoXaW5wdXRicm9rZXJfZXZlbnRfcHJlc3MYByABKA4yOy5tZXNo",
-            "dGFzdGljLk1vZHVsZUNvbmZpZy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0",
-            "RXZlbnRDaGFyEhcKD3VwZG93bjFfZW5hYmxlZBgIIAEoCBITCgdlbmFibGVk",
-            "GAkgASgIQgIYARIeChJhbGxvd19pbnB1dF9zb3VyY2UYCiABKAlCAhgBEhEK",
-            "CXNlbmRfYmVsbBgLIAEoCCJjCg5JbnB1dEV2ZW50Q2hhchIICgROT05FEAAS",
-            "BgoCVVAQERIICgRET1dOEBISCAoETEVGVBATEgkKBVJJR0hUEBQSCgoGU0VM",
-            "RUNUEAoSCAoEQkFDSxAbEgoKBkNBTkNFTBAYGmUKFUFtYmllbnRMaWdodGlu",
-            "Z0NvbmZpZxIRCglsZWRfc3RhdGUYASABKAgSDwoHY3VycmVudBgCIAEoDRIL",
-            "CgNyZWQYAyABKA0SDQoFZ3JlZW4YBCABKA0SDAoEYmx1ZRgFIAEoDUIRCg9w",
-            "YXlsb2FkX3ZhcmlhbnQiZAoRUmVtb3RlSGFyZHdhcmVQaW4SEAoIZ3Bpb19w",
-            "aW4YASABKA0SDAoEbmFtZRgCIAEoCRIvCgR0eXBlGAMgASgOMiEubWVzaHRh",
-            "c3RpYy5SZW1vdGVIYXJkd2FyZVBpblR5cGUqSQoVUmVtb3RlSGFyZHdhcmVQ",
-            "aW5UeXBlEgsKB1VOS05PV04QABIQCgxESUdJVEFMX1JFQUQQARIRCg1ESUdJ",
-            "VEFMX1dSSVRFEAJCaAoUb3JnLm1lc2h0YXN0aWMucHJvdG9CEk1vZHVsZUNv",
-            "bmZpZ1Byb3Rvc1oiZ2l0aHViLmNvbS9tZXNodGFzdGljL2dvL2dlbmVyYXRl",
-            "ZKoCFE1lc2h0YXN0aWMuUHJvdG9idWZzugIAYgZwcm90bzM="));
+            "GtMDChdUcmFmZmljTWFuYWdlbWVudENvbmZpZxIPCgdlbmFibGVkGAEgASgI",
+            "Eh4KFnBvc2l0aW9uX2RlZHVwX2VuYWJsZWQYAiABKAgSHwoXcG9zaXRpb25f",
+            "cHJlY2lzaW9uX2JpdHMYAyABKA0SIgoacG9zaXRpb25fbWluX2ludGVydmFs",
+            "X3NlY3MYBCABKA0SIAoYbm9kZWluZm9fZGlyZWN0X3Jlc3BvbnNlGAUgASgI",
+            "EikKIW5vZGVpbmZvX2RpcmVjdF9yZXNwb25zZV9tYXhfaG9wcxgGIAEoDRIa",
+            "ChJyYXRlX2xpbWl0X2VuYWJsZWQYByABKAgSHgoWcmF0ZV9saW1pdF93aW5k",
+            "b3dfc2VjcxgIIAEoDRIeChZyYXRlX2xpbWl0X21heF9wYWNrZXRzGAkgASgN",
+            "EhwKFGRyb3BfdW5rbm93bl9lbmFibGVkGAogASgIEiAKGHVua25vd25fcGFj",
+            "a2V0X3RocmVzaG9sZBgLIAEoDRIdChVleGhhdXN0X2hvcF90ZWxlbWV0cnkY",
+            "DCABKAgSHAoUZXhoYXVzdF9ob3BfcG9zaXRpb24YDSABKAgSHAoUcm91dGVy",
+            "X3ByZXNlcnZlX2hvcHMYDiABKAgaowUKDFNlcmlhbENvbmZpZxIPCgdlbmFi",
+            "bGVkGAEgASgIEgwKBGVjaG8YAiABKAgSCwoDcnhkGAMgASgNEgsKA3R4ZBgE",
+            "IAEoDRI/CgRiYXVkGAUgASgOMjEubWVzaHRhc3RpYy5Nb2R1bGVDb25maWcu",
+            "U2VyaWFsQ29uZmlnLlNlcmlhbF9CYXVkEg8KB3RpbWVvdXQYBiABKA0SPwoE",
+            "bW9kZRgHIAEoDjIxLm1lc2h0YXN0aWMuTW9kdWxlQ29uZmlnLlNlcmlhbENv",
+            "bmZpZy5TZXJpYWxfTW9kZRIkChxvdmVycmlkZV9jb25zb2xlX3NlcmlhbF9w",
+            "b3J0GAggASgIIooCCgtTZXJpYWxfQmF1ZBIQCgxCQVVEX0RFRkFVTFQQABIM",
+            "CghCQVVEXzExMBABEgwKCEJBVURfMzAwEAISDAoIQkFVRF82MDAQAxINCglC",
+            "QVVEXzEyMDAQBBINCglCQVVEXzI0MDAQBRINCglCQVVEXzQ4MDAQBhINCglC",
+            "QVVEXzk2MDAQBxIOCgpCQVVEXzE5MjAwEAgSDgoKQkFVRF8zODQwMBAJEg4K",
+            "CkJBVURfNTc2MDAQChIPCgtCQVVEXzExNTIwMBALEg8KC0JBVURfMjMwNDAw",
+            "EAwSDwoLQkFVRF80NjA4MDAQDRIPCgtCQVVEXzU3NjAwMBAOEg8KC0JBVURf",
+            "OTIxNjAwEA8ikwEKC1NlcmlhbF9Nb2RlEgsKB0RFRkFVTFQQABIKCgZTSU1Q",
+            "TEUQARIJCgVQUk9UTxACEgsKB1RFWFRNU0cQAxIICgROTUVBEAQSCwoHQ0FM",
+            "VE9QTxAFEggKBFdTODUQBhINCglWRV9ESVJFQ1QQBxINCglNU19DT05GSUcQ",
+            "CBIHCgNMT0cQCRILCgdMT0dURVhUEAoa6QIKGkV4dGVybmFsTm90aWZpY2F0",
+            "aW9uQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSEQoJb3V0cHV0X21zGAIgASgN",
+            "Eg4KBm91dHB1dBgDIAEoDRIUCgxvdXRwdXRfdmlicmEYCCABKA0SFQoNb3V0",
+            "cHV0X2J1enplchgJIAEoDRIOCgZhY3RpdmUYBCABKAgSFQoNYWxlcnRfbWVz",
+            "c2FnZRgFIAEoCBIbChNhbGVydF9tZXNzYWdlX3ZpYnJhGAogASgIEhwKFGFs",
+            "ZXJ0X21lc3NhZ2VfYnV6emVyGAsgASgIEhIKCmFsZXJ0X2JlbGwYBiABKAgS",
+            "GAoQYWxlcnRfYmVsbF92aWJyYRgMIAEoCBIZChFhbGVydF9iZWxsX2J1enpl",
+            "chgNIAEoCBIPCgd1c2VfcHdtGAcgASgIEhMKC25hZ190aW1lb3V0GA4gASgN",
+            "EhkKEXVzZV9pMnNfYXNfYnV6emVyGA8gASgIGpcBChJTdG9yZUZvcndhcmRD",
+            "b25maWcSDwoHZW5hYmxlZBgBIAEoCBIRCgloZWFydGJlYXQYAiABKAgSDwoH",
+            "cmVjb3JkcxgDIAEoDRIaChJoaXN0b3J5X3JldHVybl9tYXgYBCABKA0SHQoV",
+            "aGlzdG9yeV9yZXR1cm5fd2luZG93GAUgASgNEhEKCWlzX3NlcnZlchgGIAEo",
+            "CBpZCg9SYW5nZVRlc3RDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIOCgZzZW5k",
+            "ZXIYAiABKA0SDAoEc2F2ZRgDIAEoCBIXCg9jbGVhcl9vbl9yZWJvb3QYBCAB",
+            "KAgajwQKD1RlbGVtZXRyeUNvbmZpZxIeChZkZXZpY2VfdXBkYXRlX2ludGVy",
+            "dmFsGAEgASgNEiMKG2Vudmlyb25tZW50X3VwZGF0ZV9pbnRlcnZhbBgCIAEo",
+            "DRInCh9lbnZpcm9ubWVudF9tZWFzdXJlbWVudF9lbmFibGVkGAMgASgIEiIK",
+            "GmVudmlyb25tZW50X3NjcmVlbl9lbmFibGVkGAQgASgIEiYKHmVudmlyb25t",
+            "ZW50X2Rpc3BsYXlfZmFocmVuaGVpdBgFIAEoCBIbChNhaXJfcXVhbGl0eV9l",
+            "bmFibGVkGAYgASgIEhwKFGFpcl9xdWFsaXR5X2ludGVydmFsGAcgASgNEiEK",
+            "GXBvd2VyX21lYXN1cmVtZW50X2VuYWJsZWQYCCABKAgSHQoVcG93ZXJfdXBk",
+            "YXRlX2ludGVydmFsGAkgASgNEhwKFHBvd2VyX3NjcmVlbl9lbmFibGVkGAog",
+            "ASgIEiIKGmhlYWx0aF9tZWFzdXJlbWVudF9lbmFibGVkGAsgASgIEh4KFmhl",
+            "YWx0aF91cGRhdGVfaW50ZXJ2YWwYDCABKA0SHQoVaGVhbHRoX3NjcmVlbl9l",
+            "bmFibGVkGA0gASgIEiAKGGRldmljZV90ZWxlbWV0cnlfZW5hYmxlZBgOIAEo",
+            "CBIiChphaXJfcXVhbGl0eV9zY3JlZW5fZW5hYmxlZBgPIAEoCBreBAoTQ2Fu",
+            "bmVkTWVzc2FnZUNvbmZpZxIXCg9yb3RhcnkxX2VuYWJsZWQYASABKAgSGQoR",
+            "aW5wdXRicm9rZXJfcGluX2EYAiABKA0SGQoRaW5wdXRicm9rZXJfcGluX2IY",
+            "AyABKA0SHQoVaW5wdXRicm9rZXJfcGluX3ByZXNzGAQgASgNElkKFGlucHV0",
+            "YnJva2VyX2V2ZW50X2N3GAUgASgOMjsubWVzaHRhc3RpYy5Nb2R1bGVDb25m",
+            "aWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchJaChVpbnB1",
+            "dGJyb2tlcl9ldmVudF9jY3cYBiABKA4yOy5tZXNodGFzdGljLk1vZHVsZUNv",
+            "bmZpZy5DYW5uZWRNZXNzYWdlQ29uZmlnLklucHV0RXZlbnRDaGFyElwKF2lu",
+            "cHV0YnJva2VyX2V2ZW50X3ByZXNzGAcgASgOMjsubWVzaHRhc3RpYy5Nb2R1",
+            "bGVDb25maWcuQ2FubmVkTWVzc2FnZUNvbmZpZy5JbnB1dEV2ZW50Q2hhchIX",
+            "Cg91cGRvd24xX2VuYWJsZWQYCCABKAgSEwoHZW5hYmxlZBgJIAEoCEICGAES",
+            "HgoSYWxsb3dfaW5wdXRfc291cmNlGAogASgJQgIYARIRCglzZW5kX2JlbGwY",
+            "CyABKAgiYwoOSW5wdXRFdmVudENoYXISCAoETk9ORRAAEgYKAlVQEBESCAoE",
+            "RE9XThASEggKBExFRlQQExIJCgVSSUdIVBAUEgoKBlNFTEVDVBAKEggKBEJB",
+            "Q0sQGxIKCgZDQU5DRUwQGBplChVBbWJpZW50TGlnaHRpbmdDb25maWcSEQoJ",
+            "bGVkX3N0YXRlGAEgASgIEg8KB2N1cnJlbnQYAiABKA0SCwoDcmVkGAMgASgN",
+            "Eg0KBWdyZWVuGAQgASgNEgwKBGJsdWUYBSABKA0aKgoTU3RhdHVzTWVzc2Fn",
+            "ZUNvbmZpZxITCgtub2RlX3N0YXR1cxgBIAEoCRpRCglUQUtDb25maWcSHgoE",
+            "dGVhbRgBIAEoDjIQLm1lc2h0YXN0aWMuVGVhbRIkCgRyb2xlGAIgASgOMhYu",
+            "bWVzaHRhc3RpYy5NZW1iZXJSb2xlQhEKD3BheWxvYWRfdmFyaWFudCJkChFS",
+            "ZW1vdGVIYXJkd2FyZVBpbhIQCghncGlvX3BpbhgBIAEoDRIMCgRuYW1lGAIg",
+            "ASgJEi8KBHR5cGUYAyABKA4yIS5tZXNodGFzdGljLlJlbW90ZUhhcmR3YXJl",
+            "UGluVHlwZSpJChVSZW1vdGVIYXJkd2FyZVBpblR5cGUSCwoHVU5LTk9XThAA",
+            "EhAKDERJR0lUQUxfUkVBRBABEhEKDURJR0lUQUxfV1JJVEUQAkJoChRvcmcu",
+            "bWVzaHRhc3RpYy5wcm90b0ISTW9kdWxlQ29uZmlnUHJvdG9zWiJnaXRodWIu",
+            "Y29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90",
+            "b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.AtakReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.RemoteHardwarePinType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig), global::Meshtastic.Protobufs.ModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo", "AmbientLighting", "DetectionSensor", "Paxcounter" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig.Parser, new[]{ "Enabled", "Address", "Username", "Password", "EncryptionEnabled", "JsonEnabled", "TlsEnabled", "Root", "ProxyToClientEnabled", "MapReportingEnabled", "MapReportSettings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig), global::Meshtastic.Protobufs.ModuleConfig.Parser, new[]{ "Mqtt", "Serial", "ExternalNotification", "StoreForward", "RangeTest", "Telemetry", "CannedMessage", "Audio", "RemoteHardware", "NeighborInfo", "AmbientLighting", "DetectionSensor", "Paxcounter", "Statusmessage", "TrafficManagement", "Tak" }, new[]{ "PayloadVariant" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.MQTTConfig.Parser, new[]{ "Enabled", "Address", "Username", "Password", "EncryptionEnabled", "JsonEnabled", "TlsEnabled", "Root", "ProxyToClientEnabled", "MapReportingEnabled", "MapReportSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.MapReportSettings), global::Meshtastic.Protobufs.ModuleConfig.Types.MapReportSettings.Parser, new[]{ "PublishIntervalSecs", "PositionPrecision", "ShouldReportLocation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RemoteHardwareConfig.Parser, new[]{ "Enabled", "AllowUndefinedPinAccess", "AvailablePins" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.NeighborInfoConfig.Parser, new[]{ "Enabled", "UpdateInterval", "TransmitOverLora" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Parser, new[]{ "Enabled", "MinimumBroadcastSecs", "StateBroadcastSecs", "SendBell", "Name", "MonitorPin", "DetectionTriggerType", "UsePullup" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.DetectionSensorConfig.Types.TriggerType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Parser, new[]{ "Codec2Enabled", "PttPin", "Bitrate", "I2SWs", "I2SSd", "I2SDin", "I2SSck" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AudioConfig.Types.Audio_Baud) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig.Parser, new[]{ "Enabled", "PaxcounterUpdateInterval", "WifiThreshold", "BleThreshold" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig.Parser, new[]{ "Enabled", "PositionDedupEnabled", "PositionPrecisionBits", "PositionMinIntervalSecs", "NodeinfoDirectResponse", "NodeinfoDirectResponseMaxHops", "RateLimitEnabled", "RateLimitWindowSecs", "RateLimitMaxPackets", "DropUnknownEnabled", "UnknownPacketThreshold", "ExhaustHopTelemetry", "ExhaustHopPosition", "RouterPreserveHops" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Parser, new[]{ "Enabled", "Echo", "Rxd", "Txd", "Baud", "Timeout", "Mode", "OverrideConsoleSerialPort" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types.Serial_Baud), typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.SerialConfig.Types.Serial_Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.ExternalNotificationConfig.Parser, new[]{ "Enabled", "OutputMs", "Output", "OutputVibra", "OutputBuzzer", "Active", "AlertMessage", "AlertMessageVibra", "AlertMessageBuzzer", "AlertBell", "AlertBellVibra", "AlertBellBuzzer", "UsePwm", "NagTimeout", "UseI2SAsBuzzer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.StoreForwardConfig.Parser, new[]{ "Enabled", "Heartbeat", "Records", "HistoryReturnMax", "HistoryReturnWindow", "IsServer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.RangeTestConfig.Parser, new[]{ "Enabled", "Sender", "Save", "ClearOnReboot" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit", "AirQualityEnabled", "AirQualityInterval", "PowerMeasurementEnabled", "PowerUpdateInterval", "PowerScreenEnabled", "HealthMeasurementEnabled", "HealthUpdateInterval", "HealthScreenEnabled", "DeviceTelemetryEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TelemetryConfig.Parser, new[]{ "DeviceUpdateInterval", "EnvironmentUpdateInterval", "EnvironmentMeasurementEnabled", "EnvironmentScreenEnabled", "EnvironmentDisplayFahrenheit", "AirQualityEnabled", "AirQualityInterval", "PowerMeasurementEnabled", "PowerUpdateInterval", "PowerScreenEnabled", "HealthMeasurementEnabled", "HealthUpdateInterval", "HealthScreenEnabled", "DeviceTelemetryEnabled", "AirQualityScreenEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Parser, new[]{ "Rotary1Enabled", "InputbrokerPinA", "InputbrokerPinB", "InputbrokerPinPress", "InputbrokerEventCw", "InputbrokerEventCcw", "InputbrokerEventPress", "Updown1Enabled", "Enabled", "AllowInputSource", "SendBell" }, null, new[]{ typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.CannedMessageConfig.Types.InputEventChar) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig.Parser, new[]{ "LedState", "Current", "Red", "Green", "Blue" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.AmbientLightingConfig.Parser, new[]{ "LedState", "Current", "Red", "Green", "Blue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig.Parser, new[]{ "NodeStatus" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig), global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig.Parser, new[]{ "Team", "Role" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.RemoteHardwarePin), global::Meshtastic.Protobufs.RemoteHardwarePin.Parser, new[]{ "GpioPin", "Name", "Type" }, null, null, null, null)
           }));
     }
@@ -264,6 +287,15 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.Paxcounter:
           Paxcounter = other.Paxcounter.Clone();
+          break;
+        case PayloadVariantOneofCase.Statusmessage:
+          Statusmessage = other.Statusmessage.Clone();
+          break;
+        case PayloadVariantOneofCase.TrafficManagement:
+          TrafficManagement = other.TrafficManagement.Clone();
+          break;
+        case PayloadVariantOneofCase.Tak:
+          Tak = other.Tak.Clone();
           break;
       }
 
@@ -484,6 +516,54 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "statusmessage" field.</summary>
+    public const int StatusmessageFieldNumber = 14;
+    /// <summary>
+    ///
+    /// TODO: REPLACE
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig Statusmessage {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Statusmessage ? (global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.Statusmessage;
+      }
+    }
+
+    /// <summary>Field number for the "traffic_management" field.</summary>
+    public const int TrafficManagementFieldNumber = 15;
+    /// <summary>
+    ///
+    /// Traffic management module config for mesh network optimization
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig TrafficManagement {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.TrafficManagement ? (global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.TrafficManagement;
+      }
+    }
+
+    /// <summary>Field number for the "tak" field.</summary>
+    public const int TakFieldNumber = 16;
+    /// <summary>
+    ///
+    /// TAK team/role configuration for TAK_TRACKER
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig Tak {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.Tak ? (global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.Tak;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -501,6 +581,9 @@ namespace Meshtastic.Protobufs {
       AmbientLighting = 11,
       DetectionSensor = 12,
       Paxcounter = 13,
+      Statusmessage = 14,
+      TrafficManagement = 15,
+      Tak = 16,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -544,6 +627,9 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(AmbientLighting, other.AmbientLighting)) return false;
       if (!object.Equals(DetectionSensor, other.DetectionSensor)) return false;
       if (!object.Equals(Paxcounter, other.Paxcounter)) return false;
+      if (!object.Equals(Statusmessage, other.Statusmessage)) return false;
+      if (!object.Equals(TrafficManagement, other.TrafficManagement)) return false;
+      if (!object.Equals(Tak, other.Tak)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -565,6 +651,9 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.AmbientLighting) hash ^= AmbientLighting.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.DetectionSensor) hash ^= DetectionSensor.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.Paxcounter) hash ^= Paxcounter.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Statusmessage) hash ^= Statusmessage.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.TrafficManagement) hash ^= TrafficManagement.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Tak) hash ^= Tak.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -636,6 +725,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(106);
         output.WriteMessage(Paxcounter);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Statusmessage) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Statusmessage);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.TrafficManagement) {
+        output.WriteRawTag(122);
+        output.WriteMessage(TrafficManagement);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Tak) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(Tak);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -698,6 +799,18 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(106);
         output.WriteMessage(Paxcounter);
       }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Statusmessage) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Statusmessage);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.TrafficManagement) {
+        output.WriteRawTag(122);
+        output.WriteMessage(TrafficManagement);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Tak) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(Tak);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -746,6 +859,15 @@ namespace Meshtastic.Protobufs {
       }
       if (payloadVariantCase_ == PayloadVariantOneofCase.Paxcounter) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Paxcounter);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Statusmessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Statusmessage);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.TrafficManagement) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrafficManagement);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.Tak) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Tak);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -837,6 +959,24 @@ namespace Meshtastic.Protobufs {
             Paxcounter = new global::Meshtastic.Protobufs.ModuleConfig.Types.PaxcounterConfig();
           }
           Paxcounter.MergeFrom(other.Paxcounter);
+          break;
+        case PayloadVariantOneofCase.Statusmessage:
+          if (Statusmessage == null) {
+            Statusmessage = new global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig();
+          }
+          Statusmessage.MergeFrom(other.Statusmessage);
+          break;
+        case PayloadVariantOneofCase.TrafficManagement:
+          if (TrafficManagement == null) {
+            TrafficManagement = new global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig();
+          }
+          TrafficManagement.MergeFrom(other.TrafficManagement);
+          break;
+        case PayloadVariantOneofCase.Tak:
+          if (Tak == null) {
+            Tak = new global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig();
+          }
+          Tak.MergeFrom(other.Tak);
           break;
       }
 
@@ -976,6 +1116,33 @@ namespace Meshtastic.Protobufs {
             Paxcounter = subBuilder;
             break;
           }
+          case 114: {
+            global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig subBuilder = new global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Statusmessage) {
+              subBuilder.MergeFrom(Statusmessage);
+            }
+            input.ReadMessage(subBuilder);
+            Statusmessage = subBuilder;
+            break;
+          }
+          case 122: {
+            global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig subBuilder = new global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.TrafficManagement) {
+              subBuilder.MergeFrom(TrafficManagement);
+            }
+            input.ReadMessage(subBuilder);
+            TrafficManagement = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig subBuilder = new global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Tak) {
+              subBuilder.MergeFrom(Tak);
+            }
+            input.ReadMessage(subBuilder);
+            Tak = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1110,6 +1277,33 @@ namespace Meshtastic.Protobufs {
             }
             input.ReadMessage(subBuilder);
             Paxcounter = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig subBuilder = new global::Meshtastic.Protobufs.ModuleConfig.Types.StatusMessageConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Statusmessage) {
+              subBuilder.MergeFrom(Statusmessage);
+            }
+            input.ReadMessage(subBuilder);
+            Statusmessage = subBuilder;
+            break;
+          }
+          case 122: {
+            global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig subBuilder = new global::Meshtastic.Protobufs.ModuleConfig.Types.TrafficManagementConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.TrafficManagement) {
+              subBuilder.MergeFrom(TrafficManagement);
+            }
+            input.ReadMessage(subBuilder);
+            TrafficManagement = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig subBuilder = new global::Meshtastic.Protobufs.ModuleConfig.Types.TAKConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.Tak) {
+              subBuilder.MergeFrom(Tak);
+            }
+            input.ReadMessage(subBuilder);
+            Tak = subBuilder;
             break;
           }
         }
@@ -3953,6 +4147,746 @@ namespace Meshtastic.Protobufs {
 
       /// <summary>
       ///
+      /// Config for the Traffic Management module.
+      /// Provides packet inspection and traffic shaping to help reduce channel utilization
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TrafficManagementConfig : pb::IMessage<TrafficManagementConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TrafficManagementConfig> _parser = new pb::MessageParser<TrafficManagementConfig>(() => new TrafficManagementConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TrafficManagementConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrafficManagementConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrafficManagementConfig(TrafficManagementConfig other) : this() {
+          enabled_ = other.enabled_;
+          positionDedupEnabled_ = other.positionDedupEnabled_;
+          positionPrecisionBits_ = other.positionPrecisionBits_;
+          positionMinIntervalSecs_ = other.positionMinIntervalSecs_;
+          nodeinfoDirectResponse_ = other.nodeinfoDirectResponse_;
+          nodeinfoDirectResponseMaxHops_ = other.nodeinfoDirectResponseMaxHops_;
+          rateLimitEnabled_ = other.rateLimitEnabled_;
+          rateLimitWindowSecs_ = other.rateLimitWindowSecs_;
+          rateLimitMaxPackets_ = other.rateLimitMaxPackets_;
+          dropUnknownEnabled_ = other.dropUnknownEnabled_;
+          unknownPacketThreshold_ = other.unknownPacketThreshold_;
+          exhaustHopTelemetry_ = other.exhaustHopTelemetry_;
+          exhaustHopPosition_ = other.exhaustHopPosition_;
+          routerPreserveHops_ = other.routerPreserveHops_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrafficManagementConfig Clone() {
+          return new TrafficManagementConfig(this);
+        }
+
+        /// <summary>Field number for the "enabled" field.</summary>
+        public const int EnabledFieldNumber = 1;
+        private bool enabled_;
+        /// <summary>
+        ///
+        /// Master enable for traffic management module
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Enabled {
+          get { return enabled_; }
+          set {
+            enabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "position_dedup_enabled" field.</summary>
+        public const int PositionDedupEnabledFieldNumber = 2;
+        private bool positionDedupEnabled_;
+        /// <summary>
+        ///
+        /// Enable position deduplication to drop redundant position broadcasts
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PositionDedupEnabled {
+          get { return positionDedupEnabled_; }
+          set {
+            positionDedupEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "position_precision_bits" field.</summary>
+        public const int PositionPrecisionBitsFieldNumber = 3;
+        private uint positionPrecisionBits_;
+        /// <summary>
+        ///
+        /// Number of bits of precision for position deduplication (0-32)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint PositionPrecisionBits {
+          get { return positionPrecisionBits_; }
+          set {
+            positionPrecisionBits_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "position_min_interval_secs" field.</summary>
+        public const int PositionMinIntervalSecsFieldNumber = 4;
+        private uint positionMinIntervalSecs_;
+        /// <summary>
+        ///
+        /// Minimum interval in seconds between position updates from the same node
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint PositionMinIntervalSecs {
+          get { return positionMinIntervalSecs_; }
+          set {
+            positionMinIntervalSecs_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "nodeinfo_direct_response" field.</summary>
+        public const int NodeinfoDirectResponseFieldNumber = 5;
+        private bool nodeinfoDirectResponse_;
+        /// <summary>
+        ///
+        /// Enable direct response to NodeInfo requests from local cache
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool NodeinfoDirectResponse {
+          get { return nodeinfoDirectResponse_; }
+          set {
+            nodeinfoDirectResponse_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "nodeinfo_direct_response_max_hops" field.</summary>
+        public const int NodeinfoDirectResponseMaxHopsFieldNumber = 6;
+        private uint nodeinfoDirectResponseMaxHops_;
+        /// <summary>
+        ///
+        /// Minimum hop distance from requestor before responding to NodeInfo requests
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint NodeinfoDirectResponseMaxHops {
+          get { return nodeinfoDirectResponseMaxHops_; }
+          set {
+            nodeinfoDirectResponseMaxHops_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rate_limit_enabled" field.</summary>
+        public const int RateLimitEnabledFieldNumber = 7;
+        private bool rateLimitEnabled_;
+        /// <summary>
+        ///
+        /// Enable per-node rate limiting to throttle chatty nodes
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool RateLimitEnabled {
+          get { return rateLimitEnabled_; }
+          set {
+            rateLimitEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rate_limit_window_secs" field.</summary>
+        public const int RateLimitWindowSecsFieldNumber = 8;
+        private uint rateLimitWindowSecs_;
+        /// <summary>
+        ///
+        /// Time window in seconds for rate limiting calculations
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint RateLimitWindowSecs {
+          get { return rateLimitWindowSecs_; }
+          set {
+            rateLimitWindowSecs_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rate_limit_max_packets" field.</summary>
+        public const int RateLimitMaxPacketsFieldNumber = 9;
+        private uint rateLimitMaxPackets_;
+        /// <summary>
+        ///
+        /// Maximum packets allowed per node within the rate limit window
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint RateLimitMaxPackets {
+          get { return rateLimitMaxPackets_; }
+          set {
+            rateLimitMaxPackets_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "drop_unknown_enabled" field.</summary>
+        public const int DropUnknownEnabledFieldNumber = 10;
+        private bool dropUnknownEnabled_;
+        /// <summary>
+        ///
+        /// Enable dropping of unknown/undecryptable packets per rate_limit_window_secs
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DropUnknownEnabled {
+          get { return dropUnknownEnabled_; }
+          set {
+            dropUnknownEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unknown_packet_threshold" field.</summary>
+        public const int UnknownPacketThresholdFieldNumber = 11;
+        private uint unknownPacketThreshold_;
+        /// <summary>
+        ///
+        /// Number of unknown packets before dropping from a node
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public uint UnknownPacketThreshold {
+          get { return unknownPacketThreshold_; }
+          set {
+            unknownPacketThreshold_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "exhaust_hop_telemetry" field.</summary>
+        public const int ExhaustHopTelemetryFieldNumber = 12;
+        private bool exhaustHopTelemetry_;
+        /// <summary>
+        ///
+        /// Set hop_limit to 0 for relayed telemetry broadcasts (own packets unaffected)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ExhaustHopTelemetry {
+          get { return exhaustHopTelemetry_; }
+          set {
+            exhaustHopTelemetry_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "exhaust_hop_position" field.</summary>
+        public const int ExhaustHopPositionFieldNumber = 13;
+        private bool exhaustHopPosition_;
+        /// <summary>
+        ///
+        /// Set hop_limit to 0 for relayed position broadcasts (own packets unaffected)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ExhaustHopPosition {
+          get { return exhaustHopPosition_; }
+          set {
+            exhaustHopPosition_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "router_preserve_hops" field.</summary>
+        public const int RouterPreserveHopsFieldNumber = 14;
+        private bool routerPreserveHops_;
+        /// <summary>
+        ///
+        /// Preserve hop_limit for router-to-router traffic
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool RouterPreserveHops {
+          get { return routerPreserveHops_; }
+          set {
+            routerPreserveHops_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TrafficManagementConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TrafficManagementConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Enabled != other.Enabled) return false;
+          if (PositionDedupEnabled != other.PositionDedupEnabled) return false;
+          if (PositionPrecisionBits != other.PositionPrecisionBits) return false;
+          if (PositionMinIntervalSecs != other.PositionMinIntervalSecs) return false;
+          if (NodeinfoDirectResponse != other.NodeinfoDirectResponse) return false;
+          if (NodeinfoDirectResponseMaxHops != other.NodeinfoDirectResponseMaxHops) return false;
+          if (RateLimitEnabled != other.RateLimitEnabled) return false;
+          if (RateLimitWindowSecs != other.RateLimitWindowSecs) return false;
+          if (RateLimitMaxPackets != other.RateLimitMaxPackets) return false;
+          if (DropUnknownEnabled != other.DropUnknownEnabled) return false;
+          if (UnknownPacketThreshold != other.UnknownPacketThreshold) return false;
+          if (ExhaustHopTelemetry != other.ExhaustHopTelemetry) return false;
+          if (ExhaustHopPosition != other.ExhaustHopPosition) return false;
+          if (RouterPreserveHops != other.RouterPreserveHops) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Enabled != false) hash ^= Enabled.GetHashCode();
+          if (PositionDedupEnabled != false) hash ^= PositionDedupEnabled.GetHashCode();
+          if (PositionPrecisionBits != 0) hash ^= PositionPrecisionBits.GetHashCode();
+          if (PositionMinIntervalSecs != 0) hash ^= PositionMinIntervalSecs.GetHashCode();
+          if (NodeinfoDirectResponse != false) hash ^= NodeinfoDirectResponse.GetHashCode();
+          if (NodeinfoDirectResponseMaxHops != 0) hash ^= NodeinfoDirectResponseMaxHops.GetHashCode();
+          if (RateLimitEnabled != false) hash ^= RateLimitEnabled.GetHashCode();
+          if (RateLimitWindowSecs != 0) hash ^= RateLimitWindowSecs.GetHashCode();
+          if (RateLimitMaxPackets != 0) hash ^= RateLimitMaxPackets.GetHashCode();
+          if (DropUnknownEnabled != false) hash ^= DropUnknownEnabled.GetHashCode();
+          if (UnknownPacketThreshold != 0) hash ^= UnknownPacketThreshold.GetHashCode();
+          if (ExhaustHopTelemetry != false) hash ^= ExhaustHopTelemetry.GetHashCode();
+          if (ExhaustHopPosition != false) hash ^= ExhaustHopPosition.GetHashCode();
+          if (RouterPreserveHops != false) hash ^= RouterPreserveHops.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Enabled != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(Enabled);
+          }
+          if (PositionDedupEnabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(PositionDedupEnabled);
+          }
+          if (PositionPrecisionBits != 0) {
+            output.WriteRawTag(24);
+            output.WriteUInt32(PositionPrecisionBits);
+          }
+          if (PositionMinIntervalSecs != 0) {
+            output.WriteRawTag(32);
+            output.WriteUInt32(PositionMinIntervalSecs);
+          }
+          if (NodeinfoDirectResponse != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(NodeinfoDirectResponse);
+          }
+          if (NodeinfoDirectResponseMaxHops != 0) {
+            output.WriteRawTag(48);
+            output.WriteUInt32(NodeinfoDirectResponseMaxHops);
+          }
+          if (RateLimitEnabled != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(RateLimitEnabled);
+          }
+          if (RateLimitWindowSecs != 0) {
+            output.WriteRawTag(64);
+            output.WriteUInt32(RateLimitWindowSecs);
+          }
+          if (RateLimitMaxPackets != 0) {
+            output.WriteRawTag(72);
+            output.WriteUInt32(RateLimitMaxPackets);
+          }
+          if (DropUnknownEnabled != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(DropUnknownEnabled);
+          }
+          if (UnknownPacketThreshold != 0) {
+            output.WriteRawTag(88);
+            output.WriteUInt32(UnknownPacketThreshold);
+          }
+          if (ExhaustHopTelemetry != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(ExhaustHopTelemetry);
+          }
+          if (ExhaustHopPosition != false) {
+            output.WriteRawTag(104);
+            output.WriteBool(ExhaustHopPosition);
+          }
+          if (RouterPreserveHops != false) {
+            output.WriteRawTag(112);
+            output.WriteBool(RouterPreserveHops);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Enabled != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(Enabled);
+          }
+          if (PositionDedupEnabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(PositionDedupEnabled);
+          }
+          if (PositionPrecisionBits != 0) {
+            output.WriteRawTag(24);
+            output.WriteUInt32(PositionPrecisionBits);
+          }
+          if (PositionMinIntervalSecs != 0) {
+            output.WriteRawTag(32);
+            output.WriteUInt32(PositionMinIntervalSecs);
+          }
+          if (NodeinfoDirectResponse != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(NodeinfoDirectResponse);
+          }
+          if (NodeinfoDirectResponseMaxHops != 0) {
+            output.WriteRawTag(48);
+            output.WriteUInt32(NodeinfoDirectResponseMaxHops);
+          }
+          if (RateLimitEnabled != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(RateLimitEnabled);
+          }
+          if (RateLimitWindowSecs != 0) {
+            output.WriteRawTag(64);
+            output.WriteUInt32(RateLimitWindowSecs);
+          }
+          if (RateLimitMaxPackets != 0) {
+            output.WriteRawTag(72);
+            output.WriteUInt32(RateLimitMaxPackets);
+          }
+          if (DropUnknownEnabled != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(DropUnknownEnabled);
+          }
+          if (UnknownPacketThreshold != 0) {
+            output.WriteRawTag(88);
+            output.WriteUInt32(UnknownPacketThreshold);
+          }
+          if (ExhaustHopTelemetry != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(ExhaustHopTelemetry);
+          }
+          if (ExhaustHopPosition != false) {
+            output.WriteRawTag(104);
+            output.WriteBool(ExhaustHopPosition);
+          }
+          if (RouterPreserveHops != false) {
+            output.WriteRawTag(112);
+            output.WriteBool(RouterPreserveHops);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Enabled != false) {
+            size += 1 + 1;
+          }
+          if (PositionDedupEnabled != false) {
+            size += 1 + 1;
+          }
+          if (PositionPrecisionBits != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PositionPrecisionBits);
+          }
+          if (PositionMinIntervalSecs != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PositionMinIntervalSecs);
+          }
+          if (NodeinfoDirectResponse != false) {
+            size += 1 + 1;
+          }
+          if (NodeinfoDirectResponseMaxHops != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NodeinfoDirectResponseMaxHops);
+          }
+          if (RateLimitEnabled != false) {
+            size += 1 + 1;
+          }
+          if (RateLimitWindowSecs != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RateLimitWindowSecs);
+          }
+          if (RateLimitMaxPackets != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RateLimitMaxPackets);
+          }
+          if (DropUnknownEnabled != false) {
+            size += 1 + 1;
+          }
+          if (UnknownPacketThreshold != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UnknownPacketThreshold);
+          }
+          if (ExhaustHopTelemetry != false) {
+            size += 1 + 1;
+          }
+          if (ExhaustHopPosition != false) {
+            size += 1 + 1;
+          }
+          if (RouterPreserveHops != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TrafficManagementConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Enabled != false) {
+            Enabled = other.Enabled;
+          }
+          if (other.PositionDedupEnabled != false) {
+            PositionDedupEnabled = other.PositionDedupEnabled;
+          }
+          if (other.PositionPrecisionBits != 0) {
+            PositionPrecisionBits = other.PositionPrecisionBits;
+          }
+          if (other.PositionMinIntervalSecs != 0) {
+            PositionMinIntervalSecs = other.PositionMinIntervalSecs;
+          }
+          if (other.NodeinfoDirectResponse != false) {
+            NodeinfoDirectResponse = other.NodeinfoDirectResponse;
+          }
+          if (other.NodeinfoDirectResponseMaxHops != 0) {
+            NodeinfoDirectResponseMaxHops = other.NodeinfoDirectResponseMaxHops;
+          }
+          if (other.RateLimitEnabled != false) {
+            RateLimitEnabled = other.RateLimitEnabled;
+          }
+          if (other.RateLimitWindowSecs != 0) {
+            RateLimitWindowSecs = other.RateLimitWindowSecs;
+          }
+          if (other.RateLimitMaxPackets != 0) {
+            RateLimitMaxPackets = other.RateLimitMaxPackets;
+          }
+          if (other.DropUnknownEnabled != false) {
+            DropUnknownEnabled = other.DropUnknownEnabled;
+          }
+          if (other.UnknownPacketThreshold != 0) {
+            UnknownPacketThreshold = other.UnknownPacketThreshold;
+          }
+          if (other.ExhaustHopTelemetry != false) {
+            ExhaustHopTelemetry = other.ExhaustHopTelemetry;
+          }
+          if (other.ExhaustHopPosition != false) {
+            ExhaustHopPosition = other.ExhaustHopPosition;
+          }
+          if (other.RouterPreserveHops != false) {
+            RouterPreserveHops = other.RouterPreserveHops;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Enabled = input.ReadBool();
+                break;
+              }
+              case 16: {
+                PositionDedupEnabled = input.ReadBool();
+                break;
+              }
+              case 24: {
+                PositionPrecisionBits = input.ReadUInt32();
+                break;
+              }
+              case 32: {
+                PositionMinIntervalSecs = input.ReadUInt32();
+                break;
+              }
+              case 40: {
+                NodeinfoDirectResponse = input.ReadBool();
+                break;
+              }
+              case 48: {
+                NodeinfoDirectResponseMaxHops = input.ReadUInt32();
+                break;
+              }
+              case 56: {
+                RateLimitEnabled = input.ReadBool();
+                break;
+              }
+              case 64: {
+                RateLimitWindowSecs = input.ReadUInt32();
+                break;
+              }
+              case 72: {
+                RateLimitMaxPackets = input.ReadUInt32();
+                break;
+              }
+              case 80: {
+                DropUnknownEnabled = input.ReadBool();
+                break;
+              }
+              case 88: {
+                UnknownPacketThreshold = input.ReadUInt32();
+                break;
+              }
+              case 96: {
+                ExhaustHopTelemetry = input.ReadBool();
+                break;
+              }
+              case 104: {
+                ExhaustHopPosition = input.ReadBool();
+                break;
+              }
+              case 112: {
+                RouterPreserveHops = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Enabled = input.ReadBool();
+                break;
+              }
+              case 16: {
+                PositionDedupEnabled = input.ReadBool();
+                break;
+              }
+              case 24: {
+                PositionPrecisionBits = input.ReadUInt32();
+                break;
+              }
+              case 32: {
+                PositionMinIntervalSecs = input.ReadUInt32();
+                break;
+              }
+              case 40: {
+                NodeinfoDirectResponse = input.ReadBool();
+                break;
+              }
+              case 48: {
+                NodeinfoDirectResponseMaxHops = input.ReadUInt32();
+                break;
+              }
+              case 56: {
+                RateLimitEnabled = input.ReadBool();
+                break;
+              }
+              case 64: {
+                RateLimitWindowSecs = input.ReadUInt32();
+                break;
+              }
+              case 72: {
+                RateLimitMaxPackets = input.ReadUInt32();
+                break;
+              }
+              case 80: {
+                DropUnknownEnabled = input.ReadBool();
+                break;
+              }
+              case 88: {
+                UnknownPacketThreshold = input.ReadUInt32();
+                break;
+              }
+              case 96: {
+                ExhaustHopTelemetry = input.ReadBool();
+                break;
+              }
+              case 104: {
+                ExhaustHopPosition = input.ReadBool();
+                break;
+              }
+              case 112: {
+                RouterPreserveHops = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      ///
       /// Serial Config
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3970,7 +4904,7 @@ namespace Meshtastic.Protobufs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[7]; }
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[8]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4496,10 +5430,18 @@ namespace Meshtastic.Protobufs {
             /// </summary>
             [pbr::OriginalName("VE_DIRECT")] VeDirect = 7,
             /// <summary>
-            ///Used to configure and view some parameters of MeshSolar.
-            ///https://heltec.org/project/meshsolar/
+            /// Used to configure and view some parameters of MeshSolar.
+            /// https://heltec.org/project/meshsolar/
             /// </summary>
             [pbr::OriginalName("MS_CONFIG")] MsConfig = 8,
+            /// <summary>
+            /// Logs mesh traffic to the serial pins, ideal for logging via openLog or similar.
+            /// </summary>
+            [pbr::OriginalName("LOG")] Log = 9,
+            /// <summary>
+            /// only text (channel &amp; DM)
+            /// </summary>
+            [pbr::OriginalName("LOGTEXT")] Logtext = 10,
           }
 
         }
@@ -4526,7 +5468,7 @@ namespace Meshtastic.Protobufs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[8]; }
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[9]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5317,7 +6259,7 @@ namespace Meshtastic.Protobufs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[9]; }
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[10]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5728,7 +6670,7 @@ namespace Meshtastic.Protobufs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[10]; }
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[11]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6059,7 +7001,7 @@ namespace Meshtastic.Protobufs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[11]; }
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[12]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6093,6 +7035,7 @@ namespace Meshtastic.Protobufs {
           healthUpdateInterval_ = other.healthUpdateInterval_;
           healthScreenEnabled_ = other.healthScreenEnabled_;
           deviceTelemetryEnabled_ = other.deviceTelemetryEnabled_;
+          airQualityScreenEnabled_ = other.airQualityScreenEnabled_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -6330,6 +7273,22 @@ namespace Meshtastic.Protobufs {
           }
         }
 
+        /// <summary>Field number for the "air_quality_screen_enabled" field.</summary>
+        public const int AirQualityScreenEnabledFieldNumber = 15;
+        private bool airQualityScreenEnabled_;
+        /// <summary>
+        ///
+        /// Enable/Disable the air quality telemetry measurement module on-device display
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AirQualityScreenEnabled {
+          get { return airQualityScreenEnabled_; }
+          set {
+            airQualityScreenEnabled_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -6359,6 +7318,7 @@ namespace Meshtastic.Protobufs {
           if (HealthUpdateInterval != other.HealthUpdateInterval) return false;
           if (HealthScreenEnabled != other.HealthScreenEnabled) return false;
           if (DeviceTelemetryEnabled != other.DeviceTelemetryEnabled) return false;
+          if (AirQualityScreenEnabled != other.AirQualityScreenEnabled) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -6380,6 +7340,7 @@ namespace Meshtastic.Protobufs {
           if (HealthUpdateInterval != 0) hash ^= HealthUpdateInterval.GetHashCode();
           if (HealthScreenEnabled != false) hash ^= HealthScreenEnabled.GetHashCode();
           if (DeviceTelemetryEnabled != false) hash ^= DeviceTelemetryEnabled.GetHashCode();
+          if (AirQualityScreenEnabled != false) hash ^= AirQualityScreenEnabled.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -6454,6 +7415,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(112);
             output.WriteBool(DeviceTelemetryEnabled);
           }
+          if (AirQualityScreenEnabled != false) {
+            output.WriteRawTag(120);
+            output.WriteBool(AirQualityScreenEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -6520,6 +7485,10 @@ namespace Meshtastic.Protobufs {
             output.WriteRawTag(112);
             output.WriteBool(DeviceTelemetryEnabled);
           }
+          if (AirQualityScreenEnabled != false) {
+            output.WriteRawTag(120);
+            output.WriteBool(AirQualityScreenEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -6570,6 +7539,9 @@ namespace Meshtastic.Protobufs {
             size += 1 + 1;
           }
           if (DeviceTelemetryEnabled != false) {
+            size += 1 + 1;
+          }
+          if (AirQualityScreenEnabled != false) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {
@@ -6625,6 +7597,9 @@ namespace Meshtastic.Protobufs {
           }
           if (other.DeviceTelemetryEnabled != false) {
             DeviceTelemetryEnabled = other.DeviceTelemetryEnabled;
+          }
+          if (other.AirQualityScreenEnabled != false) {
+            AirQualityScreenEnabled = other.AirQualityScreenEnabled;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -6699,6 +7674,10 @@ namespace Meshtastic.Protobufs {
               }
               case 112: {
                 DeviceTelemetryEnabled = input.ReadBool();
+                break;
+              }
+              case 120: {
+                AirQualityScreenEnabled = input.ReadBool();
                 break;
               }
             }
@@ -6776,6 +7755,10 @@ namespace Meshtastic.Protobufs {
                 DeviceTelemetryEnabled = input.ReadBool();
                 break;
               }
+              case 120: {
+                AirQualityScreenEnabled = input.ReadBool();
+                break;
+              }
             }
           }
         }
@@ -6802,7 +7785,7 @@ namespace Meshtastic.Protobufs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[12]; }
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[13]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7478,7 +8461,7 @@ namespace Meshtastic.Protobufs {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[13]; }
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[14]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7820,6 +8803,461 @@ namespace Meshtastic.Protobufs {
               }
               case 40: {
                 Blue = input.ReadUInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      ///
+      /// StatusMessage config - Allows setting a status message for a node to periodically rebroadcast
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class StatusMessageConfig : pb::IMessage<StatusMessageConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StatusMessageConfig> _parser = new pb::MessageParser<StatusMessageConfig>(() => new StatusMessageConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StatusMessageConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[15]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusMessageConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusMessageConfig(StatusMessageConfig other) : this() {
+          nodeStatus_ = other.nodeStatus_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusMessageConfig Clone() {
+          return new StatusMessageConfig(this);
+        }
+
+        /// <summary>Field number for the "node_status" field.</summary>
+        public const int NodeStatusFieldNumber = 1;
+        private string nodeStatus_ = "";
+        /// <summary>
+        ///
+        /// The actual status string
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NodeStatus {
+          get { return nodeStatus_; }
+          set {
+            nodeStatus_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StatusMessageConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StatusMessageConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (NodeStatus != other.NodeStatus) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (NodeStatus.Length != 0) hash ^= NodeStatus.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (NodeStatus.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NodeStatus);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (NodeStatus.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NodeStatus);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (NodeStatus.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeStatus);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StatusMessageConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.NodeStatus.Length != 0) {
+            NodeStatus = other.NodeStatus;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                NodeStatus = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                NodeStatus = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      ///
+      /// TAK team/role configuration
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TAKConfig : pb::IMessage<TAKConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TAKConfig> _parser = new pb::MessageParser<TAKConfig>(() => new TAKConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TAKConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Meshtastic.Protobufs.ModuleConfig.Descriptor.NestedTypes[16]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TAKConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TAKConfig(TAKConfig other) : this() {
+          team_ = other.team_;
+          role_ = other.role_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TAKConfig Clone() {
+          return new TAKConfig(this);
+        }
+
+        /// <summary>Field number for the "team" field.</summary>
+        public const int TeamFieldNumber = 1;
+        private global::Meshtastic.Protobufs.Team team_ = global::Meshtastic.Protobufs.Team.UnspecifedColor;
+        /// <summary>
+        ///
+        /// Team color.
+        /// Default Unspecifed_Color -> firmware uses Cyan
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Meshtastic.Protobufs.Team Team {
+          get { return team_; }
+          set {
+            team_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "role" field.</summary>
+        public const int RoleFieldNumber = 2;
+        private global::Meshtastic.Protobufs.MemberRole role_ = global::Meshtastic.Protobufs.MemberRole.Unspecifed;
+        /// <summary>
+        ///
+        /// Member role.
+        /// Default Unspecifed -> firmware uses TeamMember
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Meshtastic.Protobufs.MemberRole Role {
+          get { return role_; }
+          set {
+            role_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TAKConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TAKConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Team != other.Team) return false;
+          if (Role != other.Role) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Team != global::Meshtastic.Protobufs.Team.UnspecifedColor) hash ^= Team.GetHashCode();
+          if (Role != global::Meshtastic.Protobufs.MemberRole.Unspecifed) hash ^= Role.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Team != global::Meshtastic.Protobufs.Team.UnspecifedColor) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Team);
+          }
+          if (Role != global::Meshtastic.Protobufs.MemberRole.Unspecifed) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Role);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Team != global::Meshtastic.Protobufs.Team.UnspecifedColor) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Team);
+          }
+          if (Role != global::Meshtastic.Protobufs.MemberRole.Unspecifed) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Role);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Team != global::Meshtastic.Protobufs.Team.UnspecifedColor) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Team);
+          }
+          if (Role != global::Meshtastic.Protobufs.MemberRole.Unspecifed) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Role);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TAKConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Team != global::Meshtastic.Protobufs.Team.UnspecifedColor) {
+            Team = other.Team;
+          }
+          if (other.Role != global::Meshtastic.Protobufs.MemberRole.Unspecifed) {
+            Role = other.Role;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Team = (global::Meshtastic.Protobufs.Team) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                Role = (global::Meshtastic.Protobufs.MemberRole) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Team = (global::Meshtastic.Protobufs.Team) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                Role = (global::Meshtastic.Protobufs.MemberRole) input.ReadEnum();
                 break;
               }
             }

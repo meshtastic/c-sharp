@@ -28,7 +28,7 @@ namespace Meshtastic.Protobufs {
             "dGljL2NoYW5uZWwucHJvdG8aF21lc2h0YXN0aWMvY29uZmlnLnByb3RvGiJt",
             "ZXNodGFzdGljL2Nvbm5lY3Rpb25fc3RhdHVzLnByb3RvGhptZXNodGFzdGlj",
             "L2RldmljZV91aS5wcm90bxoVbWVzaHRhc3RpYy9tZXNoLnByb3RvGh5tZXNo",
-            "dGFzdGljL21vZHVsZV9jb25maWcucHJvdG8i1hgKDEFkbWluTWVzc2FnZRIX",
+            "dGFzdGljL21vZHVsZV9jb25maWcucHJvdG8i+BoKDEFkbWluTWVzc2FnZRIX",
             "Cg9zZXNzaW9uX3Bhc3NrZXkYZSABKAwSHQoTZ2V0X2NoYW5uZWxfcmVxdWVz",
             "dBgBIAEoDUgAEjMKFGdldF9jaGFubmVsX3Jlc3BvbnNlGAIgASgLMhMubWVz",
             "aHRhc3RpYy5DaGFubmVsSAASGwoRZ2V0X293bmVyX3JlcXVlc3QYAyABKAhI",
@@ -75,59 +75,118 @@ namespace Meshtastic.Protobufs {
             "cmVzcG9uc2UYLSABKAsyGi5tZXNodGFzdGljLkRldmljZVVJQ29uZmlnSAAS",
             "NQoPc3RvcmVfdWlfY29uZmlnGC4gASgLMhoubWVzaHRhc3RpYy5EZXZpY2VV",
             "SUNvbmZpZ0gAEhoKEHNldF9pZ25vcmVkX25vZGUYLyABKA1IABIdChNyZW1v",
-            "dmVfaWdub3JlZF9ub2RlGDAgASgNSAASHQoTYmVnaW5fZWRpdF9zZXR0aW5n",
-            "cxhAIAEoCEgAEh4KFGNvbW1pdF9lZGl0X3NldHRpbmdzGEEgASgISAASMAoL",
-            "YWRkX2NvbnRhY3QYQiABKAsyGS5tZXNodGFzdGljLlNoYXJlZENvbnRhY3RI",
-            "ABI8ChBrZXlfdmVyaWZpY2F0aW9uGEMgASgLMiAubWVzaHRhc3RpYy5LZXlW",
-            "ZXJpZmljYXRpb25BZG1pbkgAEh4KFGZhY3RvcnlfcmVzZXRfZGV2aWNlGF4g",
-            "ASgFSAASHAoScmVib290X290YV9zZWNvbmRzGF8gASgFSAASGAoOZXhpdF9z",
-            "aW11bGF0b3IYYCABKAhIABIYCg5yZWJvb3Rfc2Vjb25kcxhhIAEoBUgAEhoK",
-            "EHNodXRkb3duX3NlY29uZHMYYiABKAVIABIeChRmYWN0b3J5X3Jlc2V0X2Nv",
-            "bmZpZxhjIAEoBUgAEhYKDG5vZGVkYl9yZXNldBhkIAEoCEgAGlMKCklucHV0",
-            "RXZlbnQSEgoKZXZlbnRfY29kZRgBIAEoDRIPCgdrYl9jaGFyGAIgASgNEg8K",
-            "B3RvdWNoX3gYAyABKA0SDwoHdG91Y2hfeRgEIAEoDSLWAQoKQ29uZmlnVHlw",
-            "ZRIRCg1ERVZJQ0VfQ09ORklHEAASEwoPUE9TSVRJT05fQ09ORklHEAESEAoM",
-            "UE9XRVJfQ09ORklHEAISEgoOTkVUV09SS19DT05GSUcQAxISCg5ESVNQTEFZ",
-            "X0NPTkZJRxAEEg8KC0xPUkFfQ09ORklHEAUSFAoQQkxVRVRPT1RIX0NPTkZJ",
-            "RxAGEhMKD1NFQ1VSSVRZX0NPTkZJRxAHEhUKEVNFU1NJT05LRVlfQ09ORklH",
-            "EAgSEwoPREVWSUNFVUlfQ09ORklHEAkiuwIKEE1vZHVsZUNvbmZpZ1R5cGUS",
-            "DwoLTVFUVF9DT05GSUcQABIRCg1TRVJJQUxfQ09ORklHEAESEwoPRVhUTk9U",
-            "SUZfQ09ORklHEAISFwoTU1RPUkVGT1JXQVJEX0NPTkZJRxADEhQKEFJBTkdF",
-            "VEVTVF9DT05GSUcQBBIUChBURUxFTUVUUllfQ09ORklHEAUSFAoQQ0FOTkVE",
-            "TVNHX0NPTkZJRxAGEhAKDEFVRElPX0NPTkZJRxAHEhkKFVJFTU9URUhBUkRX",
-            "QVJFX0NPTkZJRxAIEhcKE05FSUdIQk9SSU5GT19DT05GSUcQCRIaChZBTUJJ",
-            "RU5UTElHSFRJTkdfQ09ORklHEAoSGgoWREVURUNUSU9OU0VOU09SX0NPTkZJ",
-            "RxALEhUKEVBBWENPVU5URVJfQ09ORklHEAwiIwoOQmFja3VwTG9jYXRpb24S",
-            "CQoFRkxBU0gQABIGCgJTRBABQhEKD3BheWxvYWRfdmFyaWFudCJbCg1IYW1Q",
-            "YXJhbWV0ZXJzEhEKCWNhbGxfc2lnbhgBIAEoCRIQCgh0eF9wb3dlchgCIAEo",
-            "BRIRCglmcmVxdWVuY3kYAyABKAISEgoKc2hvcnRfbmFtZRgEIAEoCSJmCh5O",
-            "b2RlUmVtb3RlSGFyZHdhcmVQaW5zUmVzcG9uc2USRAoZbm9kZV9yZW1vdGVf",
-            "aGFyZHdhcmVfcGlucxgBIAMoCzIhLm1lc2h0YXN0aWMuTm9kZVJlbW90ZUhh",
-            "cmR3YXJlUGluInMKDVNoYXJlZENvbnRhY3QSEAoIbm9kZV9udW0YASABKA0S",
-            "HgoEdXNlchgCIAEoCzIQLm1lc2h0YXN0aWMuVXNlchIVCg1zaG91bGRfaWdu",
-            "b3JlGAMgASgIEhkKEW1hbnVhbGx5X3ZlcmlmaWVkGAQgASgIIpwCChRLZXlW",
-            "ZXJpZmljYXRpb25BZG1pbhJCCgxtZXNzYWdlX3R5cGUYASABKA4yLC5tZXNo",
-            "dGFzdGljLktleVZlcmlmaWNhdGlvbkFkbWluLk1lc3NhZ2VUeXBlEhYKDnJl",
-            "bW90ZV9ub2RlbnVtGAIgASgNEg0KBW5vbmNlGAMgASgEEhwKD3NlY3VyaXR5",
-            "X251bWJlchgEIAEoDUgAiAEBImcKC01lc3NhZ2VUeXBlEhkKFUlOSVRJQVRF",
-            "X1ZFUklGSUNBVElPThAAEhsKF1BST1ZJREVfU0VDVVJJVFlfTlVNQkVSEAES",
-            "DQoJRE9fVkVSSUZZEAISEQoNRE9fTk9UX1ZFUklGWRADQhIKEF9zZWN1cml0",
-            "eV9udW1iZXJCYQoUb3JnLm1lc2h0YXN0aWMucHJvdG9CC0FkbWluUHJvdG9z",
-            "WiJnaXRodWIuY29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRh",
-            "c3RpYy5Qcm90b2J1ZnO6AgBiBnByb3RvMw=="));
+            "dmVfaWdub3JlZF9ub2RlGDAgASgNSAASGwoRdG9nZ2xlX211dGVkX25vZGUY",
+            "MSABKA1IABIdChNiZWdpbl9lZGl0X3NldHRpbmdzGEAgASgISAASHgoUY29t",
+            "bWl0X2VkaXRfc2V0dGluZ3MYQSABKAhIABIwCgthZGRfY29udGFjdBhCIAEo",
+            "CzIZLm1lc2h0YXN0aWMuU2hhcmVkQ29udGFjdEgAEjwKEGtleV92ZXJpZmlj",
+            "YXRpb24YQyABKAsyIC5tZXNodGFzdGljLktleVZlcmlmaWNhdGlvbkFkbWlu",
+            "SAASHgoUZmFjdG9yeV9yZXNldF9kZXZpY2UYXiABKAVIABIgChJyZWJvb3Rf",
+            "b3RhX3NlY29uZHMYXyABKAVCAhgBSAASGAoOZXhpdF9zaW11bGF0b3IYYCAB",
+            "KAhIABIYCg5yZWJvb3Rfc2Vjb25kcxhhIAEoBUgAEhoKEHNodXRkb3duX3Nl",
+            "Y29uZHMYYiABKAVIABIeChRmYWN0b3J5X3Jlc2V0X2NvbmZpZxhjIAEoBUgA",
+            "EhYKDG5vZGVkYl9yZXNldBhkIAEoCEgAEjgKC290YV9yZXF1ZXN0GGYgASgL",
+            "MiEubWVzaHRhc3RpYy5BZG1pbk1lc3NhZ2UuT1RBRXZlbnRIABIxCg1zZW5z",
+            "b3JfY29uZmlnGGcgASgLMhgubWVzaHRhc3RpYy5TZW5zb3JDb25maWdIABpT",
+            "CgpJbnB1dEV2ZW50EhIKCmV2ZW50X2NvZGUYASABKA0SDwoHa2JfY2hhchgC",
+            "IAEoDRIPCgd0b3VjaF94GAMgASgNEg8KB3RvdWNoX3kYBCABKA0aSgoIT1RB",
+            "RXZlbnQSLAoPcmVib290X290YV9tb2RlGAEgASgOMhMubWVzaHRhc3RpYy5P",
+            "VEFNb2RlEhAKCG90YV9oYXNoGAIgASgMItYBCgpDb25maWdUeXBlEhEKDURF",
+            "VklDRV9DT05GSUcQABITCg9QT1NJVElPTl9DT05GSUcQARIQCgxQT1dFUl9D",
+            "T05GSUcQAhISCg5ORVRXT1JLX0NPTkZJRxADEhIKDkRJU1BMQVlfQ09ORklH",
+            "EAQSDwoLTE9SQV9DT05GSUcQBRIUChBCTFVFVE9PVEhfQ09ORklHEAYSEwoP",
+            "U0VDVVJJVFlfQ09ORklHEAcSFQoRU0VTU0lPTktFWV9DT05GSUcQCBITCg9E",
+            "RVZJQ0VVSV9DT05GSUcQCSKDAwoQTW9kdWxlQ29uZmlnVHlwZRIPCgtNUVRU",
+            "X0NPTkZJRxAAEhEKDVNFUklBTF9DT05GSUcQARITCg9FWFROT1RJRl9DT05G",
+            "SUcQAhIXChNTVE9SRUZPUldBUkRfQ09ORklHEAMSFAoQUkFOR0VURVNUX0NP",
+            "TkZJRxAEEhQKEFRFTEVNRVRSWV9DT05GSUcQBRIUChBDQU5ORURNU0dfQ09O",
+            "RklHEAYSEAoMQVVESU9fQ09ORklHEAcSGQoVUkVNT1RFSEFSRFdBUkVfQ09O",
+            "RklHEAgSFwoTTkVJR0hCT1JJTkZPX0NPTkZJRxAJEhoKFkFNQklFTlRMSUdI",
+            "VElOR19DT05GSUcQChIaChZERVRFQ1RJT05TRU5TT1JfQ09ORklHEAsSFQoR",
+            "UEFYQ09VTlRFUl9DT05GSUcQDBIYChRTVEFUVVNNRVNTQUdFX0NPTkZJRxAN",
+            "EhwKGFRSQUZGSUNNQU5BR0VNRU5UX0NPTkZJRxAOEg4KClRBS19DT05GSUcQ",
+            "DyIjCg5CYWNrdXBMb2NhdGlvbhIJCgVGTEFTSBAAEgYKAlNEEAFCEQoPcGF5",
+            "bG9hZF92YXJpYW50IlsKDUhhbVBhcmFtZXRlcnMSEQoJY2FsbF9zaWduGAEg",
+            "ASgJEhAKCHR4X3Bvd2VyGAIgASgFEhEKCWZyZXF1ZW5jeRgDIAEoAhISCgpz",
+            "aG9ydF9uYW1lGAQgASgJImYKHk5vZGVSZW1vdGVIYXJkd2FyZVBpbnNSZXNw",
+            "b25zZRJEChlub2RlX3JlbW90ZV9oYXJkd2FyZV9waW5zGAEgAygLMiEubWVz",
+            "aHRhc3RpYy5Ob2RlUmVtb3RlSGFyZHdhcmVQaW4icwoNU2hhcmVkQ29udGFj",
+            "dBIQCghub2RlX251bRgBIAEoDRIeCgR1c2VyGAIgASgLMhAubWVzaHRhc3Rp",
+            "Yy5Vc2VyEhUKDXNob3VsZF9pZ25vcmUYAyABKAgSGQoRbWFudWFsbHlfdmVy",
+            "aWZpZWQYBCABKAginAIKFEtleVZlcmlmaWNhdGlvbkFkbWluEkIKDG1lc3Nh",
+            "Z2VfdHlwZRgBIAEoDjIsLm1lc2h0YXN0aWMuS2V5VmVyaWZpY2F0aW9uQWRt",
+            "aW4uTWVzc2FnZVR5cGUSFgoOcmVtb3RlX25vZGVudW0YAiABKA0SDQoFbm9u",
+            "Y2UYAyABKAQSHAoPc2VjdXJpdHlfbnVtYmVyGAQgASgNSACIAQEiZwoLTWVz",
+            "c2FnZVR5cGUSGQoVSU5JVElBVEVfVkVSSUZJQ0FUSU9OEAASGwoXUFJPVklE",
+            "RV9TRUNVUklUWV9OVU1CRVIQARINCglET19WRVJJRlkQAhIRCg1ET19OT1Rf",
+            "VkVSSUZZEANCEgoQX3NlY3VyaXR5X251bWJlciKeAQoMU2Vuc29yQ29uZmln",
+            "Ei4KDHNjZDR4X2NvbmZpZxgBIAEoCzIYLm1lc2h0YXN0aWMuU0NENFhfY29u",
+            "ZmlnEi4KDHNlbjV4X2NvbmZpZxgCIAEoCzIYLm1lc2h0YXN0aWMuU0VONVhf",
+            "Y29uZmlnEi4KDHNjZDMwX2NvbmZpZxgDIAEoCzIYLm1lc2h0YXN0aWMuU0NE",
+            "MzBfY29uZmlnIuICCgxTQ0Q0WF9jb25maWcSFAoHc2V0X2FzYxgBIAEoCEgA",
+            "iAEBEiAKE3NldF90YXJnZXRfY28yX2NvbmMYAiABKA1IAYgBARIcCg9zZXRf",
+            "dGVtcGVyYXR1cmUYAyABKAJIAogBARIZCgxzZXRfYWx0aXR1ZGUYBCABKA1I",
+            "A4gBARIhChRzZXRfYW1iaWVudF9wcmVzc3VyZRgFIAEoDUgEiAEBEhoKDWZh",
+            "Y3RvcnlfcmVzZXQYBiABKAhIBYgBARIbCg5zZXRfcG93ZXJfbW9kZRgHIAEo",
+            "CEgGiAEBQgoKCF9zZXRfYXNjQhYKFF9zZXRfdGFyZ2V0X2NvMl9jb25jQhIK",
+            "EF9zZXRfdGVtcGVyYXR1cmVCDwoNX3NldF9hbHRpdHVkZUIXChVfc2V0X2Ft",
+            "YmllbnRfcHJlc3N1cmVCEAoOX2ZhY3RvcnlfcmVzZXRCEQoPX3NldF9wb3dl",
+            "cl9tb2RlInYKDFNFTjVYX2NvbmZpZxIcCg9zZXRfdGVtcGVyYXR1cmUYASAB",
+            "KAJIAIgBARIeChFzZXRfb25lX3Nob3RfbW9kZRgCIAEoCEgBiAEBQhIKEF9z",
+            "ZXRfdGVtcGVyYXR1cmVCFAoSX3NldF9vbmVfc2hvdF9tb2RlIrQCCgxTQ0Qz",
+            "MF9jb25maWcSFAoHc2V0X2FzYxgBIAEoCEgAiAEBEiAKE3NldF90YXJnZXRf",
+            "Y28yX2NvbmMYAiABKA1IAYgBARIcCg9zZXRfdGVtcGVyYXR1cmUYAyABKAJI",
+            "AogBARIZCgxzZXRfYWx0aXR1ZGUYBCABKA1IA4gBARIlChhzZXRfbWVhc3Vy",
+            "ZW1lbnRfaW50ZXJ2YWwYBSABKA1IBIgBARIXCgpzb2Z0X3Jlc2V0GAYgASgI",
+            "SAWIAQFCCgoIX3NldF9hc2NCFgoUX3NldF90YXJnZXRfY28yX2NvbmNCEgoQ",
+            "X3NldF90ZW1wZXJhdHVyZUIPCg1fc2V0X2FsdGl0dWRlQhsKGV9zZXRfbWVh",
+            "c3VyZW1lbnRfaW50ZXJ2YWxCDQoLX3NvZnRfcmVzZXQqNwoHT1RBTW9kZRIR",
+            "Cg1OT19SRUJPT1RfT1RBEAASCwoHT1RBX0JMRRABEgwKCE9UQV9XSUZJEAJC",
+            "YQoUb3JnLm1lc2h0YXN0aWMucHJvdG9CC0FkbWluUHJvdG9zWiJnaXRodWIu",
+            "Y29tL21lc2h0YXN0aWMvZ28vZ2VuZXJhdGVkqgIUTWVzaHRhc3RpYy5Qcm90",
+            "b2J1ZnO6AgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Meshtastic.Protobufs.ChannelReflection.Descriptor, global::Meshtastic.Protobufs.ConfigReflection.Descriptor, global::Meshtastic.Protobufs.ConnectionStatusReflection.Descriptor, global::Meshtastic.Protobufs.DeviceUiReflection.Descriptor, global::Meshtastic.Protobufs.MeshReflection.Descriptor, global::Meshtastic.Protobufs.ModuleConfigReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "SessionPasskey", "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "BackupPreferences", "RestorePreferences", "RemoveBackupPreferences", "SendInputEvent", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "SetTimeOnly", "GetUiConfigRequest", "GetUiConfigResponse", "StoreUiConfig", "SetIgnoredNode", "RemoveIgnoredNode", "BeginEditSettings", "CommitEditSettings", "AddContact", "KeyVerification", "FactoryResetDevice", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryResetConfig", "NodedbReset" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent), global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent.Parser, new[]{ "EventCode", "KbChar", "TouchX", "TouchY" }, null, null, null, null)}),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Meshtastic.Protobufs.OTAMode), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage), global::Meshtastic.Protobufs.AdminMessage.Parser, new[]{ "SessionPasskey", "GetChannelRequest", "GetChannelResponse", "GetOwnerRequest", "GetOwnerResponse", "GetConfigRequest", "GetConfigResponse", "GetModuleConfigRequest", "GetModuleConfigResponse", "GetCannedMessageModuleMessagesRequest", "GetCannedMessageModuleMessagesResponse", "GetDeviceMetadataRequest", "GetDeviceMetadataResponse", "GetRingtoneRequest", "GetRingtoneResponse", "GetDeviceConnectionStatusRequest", "GetDeviceConnectionStatusResponse", "SetHamMode", "GetNodeRemoteHardwarePinsRequest", "GetNodeRemoteHardwarePinsResponse", "EnterDfuModeRequest", "DeleteFileRequest", "SetScale", "BackupPreferences", "RestorePreferences", "RemoveBackupPreferences", "SendInputEvent", "SetOwner", "SetChannel", "SetConfig", "SetModuleConfig", "SetCannedMessageModuleMessages", "SetRingtoneMessage", "RemoveByNodenum", "SetFavoriteNode", "RemoveFavoriteNode", "SetFixedPosition", "RemoveFixedPosition", "SetTimeOnly", "GetUiConfigRequest", "GetUiConfigResponse", "StoreUiConfig", "SetIgnoredNode", "RemoveIgnoredNode", "ToggleMutedNode", "BeginEditSettings", "CommitEditSettings", "AddContact", "KeyVerification", "FactoryResetDevice", "RebootOtaSeconds", "ExitSimulator", "RebootSeconds", "ShutdownSeconds", "FactoryResetConfig", "NodedbReset", "OtaRequest", "SensorConfig" }, new[]{ "PayloadVariant" }, new[]{ typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.ModuleConfigType), typeof(global::Meshtastic.Protobufs.AdminMessage.Types.BackupLocation) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent), global::Meshtastic.Protobufs.AdminMessage.Types.InputEvent.Parser, new[]{ "EventCode", "KbChar", "TouchX", "TouchY" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent), global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent.Parser, new[]{ "RebootOtaMode", "OtaHash" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.HamParameters), global::Meshtastic.Protobufs.HamParameters.Parser, new[]{ "CallSign", "TxPower", "Frequency", "ShortName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse), global::Meshtastic.Protobufs.NodeRemoteHardwarePinsResponse.Parser, new[]{ "NodeRemoteHardwarePins" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SharedContact), global::Meshtastic.Protobufs.SharedContact.Parser, new[]{ "NodeNum", "User", "ShouldIgnore", "ManuallyVerified" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.KeyVerificationAdmin), global::Meshtastic.Protobufs.KeyVerificationAdmin.Parser, new[]{ "MessageType", "RemoteNodenum", "Nonce", "SecurityNumber" }, new[]{ "SecurityNumber" }, new[]{ typeof(global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.KeyVerificationAdmin), global::Meshtastic.Protobufs.KeyVerificationAdmin.Parser, new[]{ "MessageType", "RemoteNodenum", "Nonce", "SecurityNumber" }, new[]{ "SecurityNumber" }, new[]{ typeof(global::Meshtastic.Protobufs.KeyVerificationAdmin.Types.MessageType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SensorConfig), global::Meshtastic.Protobufs.SensorConfig.Parser, new[]{ "Scd4XConfig", "Sen5XConfig", "Scd30Config" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SCD4X_config), global::Meshtastic.Protobufs.SCD4X_config.Parser, new[]{ "SetAsc", "SetTargetCo2Conc", "SetTemperature", "SetAltitude", "SetAmbientPressure", "FactoryReset", "SetPowerMode" }, new[]{ "SetAsc", "SetTargetCo2Conc", "SetTemperature", "SetAltitude", "SetAmbientPressure", "FactoryReset", "SetPowerMode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SEN5X_config), global::Meshtastic.Protobufs.SEN5X_config.Parser, new[]{ "SetTemperature", "SetOneShotMode" }, new[]{ "SetTemperature", "SetOneShotMode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Meshtastic.Protobufs.SCD30_config), global::Meshtastic.Protobufs.SCD30_config.Parser, new[]{ "SetAsc", "SetTargetCo2Conc", "SetTemperature", "SetAltitude", "SetMeasurementInterval", "SoftReset" }, new[]{ "SetAsc", "SetTargetCo2Conc", "SetTemperature", "SetAltitude", "SetMeasurementInterval", "SoftReset" }, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  ///
+  /// Firmware update mode for OTA updates
+  /// </summary>
+  public enum OTAMode {
+    /// <summary>
+    ///
+    /// Do not reboot into OTA mode
+    /// </summary>
+    [pbr::OriginalName("NO_REBOOT_OTA")] NoRebootOta = 0,
+    /// <summary>
+    ///
+    /// Reboot into OTA mode for BLE firmware update
+    /// </summary>
+    [pbr::OriginalName("OTA_BLE")] OtaBle = 1,
+    /// <summary>
+    ///
+    /// Reboot into OTA mode for WiFi firmware update
+    /// </summary>
+    [pbr::OriginalName("OTA_WIFI")] OtaWifi = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   ///
@@ -301,6 +360,9 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.RemoveIgnoredNode:
           RemoveIgnoredNode = other.RemoveIgnoredNode;
           break;
+        case PayloadVariantOneofCase.ToggleMutedNode:
+          ToggleMutedNode = other.ToggleMutedNode;
+          break;
         case PayloadVariantOneofCase.BeginEditSettings:
           BeginEditSettings = other.BeginEditSettings;
           break;
@@ -333,6 +395,12 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.NodedbReset:
           NodedbReset = other.NodedbReset;
+          break;
+        case PayloadVariantOneofCase.OtaRequest:
+          OtaRequest = other.OtaRequest.Clone();
+          break;
+        case PayloadVariantOneofCase.SensorConfig:
+          SensorConfig = other.SensorConfig.Clone();
           break;
       }
 
@@ -1437,6 +1505,36 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "toggle_muted_node" field.</summary>
+    public const int ToggleMutedNodeFieldNumber = 49;
+    /// <summary>
+    ///
+    /// Set specified node-num to be muted
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ToggleMutedNode {
+      get { return HasToggleMutedNode ? (uint) payloadVariant_ : 0; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = PayloadVariantOneofCase.ToggleMutedNode;
+      }
+    }
+    /// <summary>Gets whether the "toggle_muted_node" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasToggleMutedNode {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.ToggleMutedNode; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "toggle_muted_node" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearToggleMutedNode() {
+      if (HasToggleMutedNode) {
+        ClearPayloadVariant();
+      }
+    }
+
     /// <summary>Field number for the "begin_edit_settings" field.</summary>
     public const int BeginEditSettingsFieldNumber = 64;
     /// <summary>
@@ -1566,7 +1664,9 @@ namespace Meshtastic.Protobufs {
     ///
     /// Tell the node to reboot into the OTA Firmware in this many seconds (or &lt;0 to cancel reboot)
     /// Only Implemented for ESP32 Devices. This needs to be issued to send a new main firmware via bluetooth.
+    /// Deprecated in favor of reboot_ota_mode in 2.7.17
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RebootOtaSeconds {
@@ -1577,12 +1677,14 @@ namespace Meshtastic.Protobufs {
       }
     }
     /// <summary>Gets whether the "reboot_ota_seconds" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasRebootOtaSeconds {
       get { return payloadVariantCase_ == PayloadVariantOneofCase.RebootOtaSeconds; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "reboot_ota_seconds" </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearRebootOtaSeconds() {
@@ -1743,6 +1845,38 @@ namespace Meshtastic.Protobufs {
       }
     }
 
+    /// <summary>Field number for the "ota_request" field.</summary>
+    public const int OtaRequestFieldNumber = 102;
+    /// <summary>
+    ///
+    /// Tell the node to reset into the OTA Loader
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent OtaRequest {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.OtaRequest ? (global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.OtaRequest;
+      }
+    }
+
+    /// <summary>Field number for the "sensor_config" field.</summary>
+    public const int SensorConfigFieldNumber = 103;
+    /// <summary>
+    ///
+    /// Parameters and sensor configuration
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.SensorConfig SensorConfig {
+      get { return payloadVariantCase_ == PayloadVariantOneofCase.SensorConfig ? (global::Meshtastic.Protobufs.SensorConfig) payloadVariant_ : null; }
+      set {
+        payloadVariant_ = value;
+        payloadVariantCase_ = value == null ? PayloadVariantOneofCase.None : PayloadVariantOneofCase.SensorConfig;
+      }
+    }
+
     private object payloadVariant_;
     /// <summary>Enum of possible cases for the "payload_variant" oneof.</summary>
     public enum PayloadVariantOneofCase {
@@ -1790,6 +1924,7 @@ namespace Meshtastic.Protobufs {
       StoreUiConfig = 46,
       SetIgnoredNode = 47,
       RemoveIgnoredNode = 48,
+      ToggleMutedNode = 49,
       BeginEditSettings = 64,
       CommitEditSettings = 65,
       AddContact = 66,
@@ -1801,6 +1936,8 @@ namespace Meshtastic.Protobufs {
       ShutdownSeconds = 98,
       FactoryResetConfig = 99,
       NodedbReset = 100,
+      OtaRequest = 102,
+      SensorConfig = 103,
     }
     private PayloadVariantOneofCase payloadVariantCase_ = PayloadVariantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1875,6 +2012,7 @@ namespace Meshtastic.Protobufs {
       if (!object.Equals(StoreUiConfig, other.StoreUiConfig)) return false;
       if (SetIgnoredNode != other.SetIgnoredNode) return false;
       if (RemoveIgnoredNode != other.RemoveIgnoredNode) return false;
+      if (ToggleMutedNode != other.ToggleMutedNode) return false;
       if (BeginEditSettings != other.BeginEditSettings) return false;
       if (CommitEditSettings != other.CommitEditSettings) return false;
       if (!object.Equals(AddContact, other.AddContact)) return false;
@@ -1886,6 +2024,8 @@ namespace Meshtastic.Protobufs {
       if (ShutdownSeconds != other.ShutdownSeconds) return false;
       if (FactoryResetConfig != other.FactoryResetConfig) return false;
       if (NodedbReset != other.NodedbReset) return false;
+      if (!object.Equals(OtaRequest, other.OtaRequest)) return false;
+      if (!object.Equals(SensorConfig, other.SensorConfig)) return false;
       if (PayloadVariantCase != other.PayloadVariantCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1938,6 +2078,7 @@ namespace Meshtastic.Protobufs {
       if (payloadVariantCase_ == PayloadVariantOneofCase.StoreUiConfig) hash ^= StoreUiConfig.GetHashCode();
       if (HasSetIgnoredNode) hash ^= SetIgnoredNode.GetHashCode();
       if (HasRemoveIgnoredNode) hash ^= RemoveIgnoredNode.GetHashCode();
+      if (HasToggleMutedNode) hash ^= ToggleMutedNode.GetHashCode();
       if (HasBeginEditSettings) hash ^= BeginEditSettings.GetHashCode();
       if (HasCommitEditSettings) hash ^= CommitEditSettings.GetHashCode();
       if (payloadVariantCase_ == PayloadVariantOneofCase.AddContact) hash ^= AddContact.GetHashCode();
@@ -1949,6 +2090,8 @@ namespace Meshtastic.Protobufs {
       if (HasShutdownSeconds) hash ^= ShutdownSeconds.GetHashCode();
       if (HasFactoryResetConfig) hash ^= FactoryResetConfig.GetHashCode();
       if (HasNodedbReset) hash ^= NodedbReset.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.OtaRequest) hash ^= OtaRequest.GetHashCode();
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SensorConfig) hash ^= SensorConfig.GetHashCode();
       hash ^= (int) payloadVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2140,6 +2283,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(128, 3);
         output.WriteUInt32(RemoveIgnoredNode);
       }
+      if (HasToggleMutedNode) {
+        output.WriteRawTag(136, 3);
+        output.WriteUInt32(ToggleMutedNode);
+      }
       if (HasBeginEditSettings) {
         output.WriteRawTag(128, 4);
         output.WriteBool(BeginEditSettings);
@@ -2187,6 +2334,14 @@ namespace Meshtastic.Protobufs {
       if (SessionPasskey.Length != 0) {
         output.WriteRawTag(170, 6);
         output.WriteBytes(SessionPasskey);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.OtaRequest) {
+        output.WriteRawTag(178, 6);
+        output.WriteMessage(OtaRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SensorConfig) {
+        output.WriteRawTag(186, 6);
+        output.WriteMessage(SensorConfig);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2370,6 +2525,10 @@ namespace Meshtastic.Protobufs {
         output.WriteRawTag(128, 3);
         output.WriteUInt32(RemoveIgnoredNode);
       }
+      if (HasToggleMutedNode) {
+        output.WriteRawTag(136, 3);
+        output.WriteUInt32(ToggleMutedNode);
+      }
       if (HasBeginEditSettings) {
         output.WriteRawTag(128, 4);
         output.WriteBool(BeginEditSettings);
@@ -2417,6 +2576,14 @@ namespace Meshtastic.Protobufs {
       if (SessionPasskey.Length != 0) {
         output.WriteRawTag(170, 6);
         output.WriteBytes(SessionPasskey);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.OtaRequest) {
+        output.WriteRawTag(178, 6);
+        output.WriteMessage(OtaRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SensorConfig) {
+        output.WriteRawTag(186, 6);
+        output.WriteMessage(SensorConfig);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2560,6 +2727,9 @@ namespace Meshtastic.Protobufs {
       if (HasRemoveIgnoredNode) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RemoveIgnoredNode);
       }
+      if (HasToggleMutedNode) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(ToggleMutedNode);
+      }
       if (HasBeginEditSettings) {
         size += 2 + 1;
       }
@@ -2592,6 +2762,12 @@ namespace Meshtastic.Protobufs {
       }
       if (HasNodedbReset) {
         size += 2 + 1;
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.OtaRequest) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(OtaRequest);
+      }
+      if (payloadVariantCase_ == PayloadVariantOneofCase.SensorConfig) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SensorConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2786,6 +2962,9 @@ namespace Meshtastic.Protobufs {
         case PayloadVariantOneofCase.RemoveIgnoredNode:
           RemoveIgnoredNode = other.RemoveIgnoredNode;
           break;
+        case PayloadVariantOneofCase.ToggleMutedNode:
+          ToggleMutedNode = other.ToggleMutedNode;
+          break;
         case PayloadVariantOneofCase.BeginEditSettings:
           BeginEditSettings = other.BeginEditSettings;
           break;
@@ -2824,6 +3003,18 @@ namespace Meshtastic.Protobufs {
           break;
         case PayloadVariantOneofCase.NodedbReset:
           NodedbReset = other.NodedbReset;
+          break;
+        case PayloadVariantOneofCase.OtaRequest:
+          if (OtaRequest == null) {
+            OtaRequest = new global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent();
+          }
+          OtaRequest.MergeFrom(other.OtaRequest);
+          break;
+        case PayloadVariantOneofCase.SensorConfig:
+          if (SensorConfig == null) {
+            SensorConfig = new global::Meshtastic.Protobufs.SensorConfig();
+          }
+          SensorConfig.MergeFrom(other.SensorConfig);
           break;
       }
 
@@ -3103,6 +3294,10 @@ namespace Meshtastic.Protobufs {
             RemoveIgnoredNode = input.ReadUInt32();
             break;
           }
+          case 392: {
+            ToggleMutedNode = input.ReadUInt32();
+            break;
+          }
           case 512: {
             BeginEditSettings = input.ReadBool();
             break;
@@ -3159,6 +3354,24 @@ namespace Meshtastic.Protobufs {
           }
           case 810: {
             SessionPasskey = input.ReadBytes();
+            break;
+          }
+          case 818: {
+            global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent subBuilder = new global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.OtaRequest) {
+              subBuilder.MergeFrom(OtaRequest);
+            }
+            input.ReadMessage(subBuilder);
+            OtaRequest = subBuilder;
+            break;
+          }
+          case 826: {
+            global::Meshtastic.Protobufs.SensorConfig subBuilder = new global::Meshtastic.Protobufs.SensorConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.SensorConfig) {
+              subBuilder.MergeFrom(SensorConfig);
+            }
+            input.ReadMessage(subBuilder);
+            SensorConfig = subBuilder;
             break;
           }
         }
@@ -3437,6 +3650,10 @@ namespace Meshtastic.Protobufs {
             RemoveIgnoredNode = input.ReadUInt32();
             break;
           }
+          case 392: {
+            ToggleMutedNode = input.ReadUInt32();
+            break;
+          }
           case 512: {
             BeginEditSettings = input.ReadBool();
             break;
@@ -3493,6 +3710,24 @@ namespace Meshtastic.Protobufs {
           }
           case 810: {
             SessionPasskey = input.ReadBytes();
+            break;
+          }
+          case 818: {
+            global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent subBuilder = new global::Meshtastic.Protobufs.AdminMessage.Types.OTAEvent();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.OtaRequest) {
+              subBuilder.MergeFrom(OtaRequest);
+            }
+            input.ReadMessage(subBuilder);
+            OtaRequest = subBuilder;
+            break;
+          }
+          case 826: {
+            global::Meshtastic.Protobufs.SensorConfig subBuilder = new global::Meshtastic.Protobufs.SensorConfig();
+            if (payloadVariantCase_ == PayloadVariantOneofCase.SensorConfig) {
+              subBuilder.MergeFrom(SensorConfig);
+            }
+            input.ReadMessage(subBuilder);
+            SensorConfig = subBuilder;
             break;
           }
         }
@@ -3632,6 +3867,21 @@ namespace Meshtastic.Protobufs {
         /// TODO: REPLACE
         /// </summary>
         [pbr::OriginalName("PAXCOUNTER_CONFIG")] PaxcounterConfig = 12,
+        /// <summary>
+        ///
+        /// TODO: REPLACE
+        /// </summary>
+        [pbr::OriginalName("STATUSMESSAGE_CONFIG")] StatusmessageConfig = 13,
+        /// <summary>
+        ///
+        /// Traffic management module config
+        /// </summary>
+        [pbr::OriginalName("TRAFFICMANAGEMENT_CONFIG")] TrafficmanagementConfig = 14,
+        /// <summary>
+        ///
+        /// TAK module config
+        /// </summary>
+        [pbr::OriginalName("TAK_CONFIG")] TakConfig = 15,
       }
 
       public enum BackupLocation {
@@ -3967,6 +4217,255 @@ namespace Meshtastic.Protobufs {
               }
               case 32: {
                 TouchY = input.ReadUInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      ///
+      /// User is requesting an over the air update.
+      /// Node will reboot into the OTA loader
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class OTAEvent : pb::IMessage<OTAEvent>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<OTAEvent> _parser = new pb::MessageParser<OTAEvent>(() => new OTAEvent());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<OTAEvent> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Meshtastic.Protobufs.AdminMessage.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OTAEvent() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OTAEvent(OTAEvent other) : this() {
+          rebootOtaMode_ = other.rebootOtaMode_;
+          otaHash_ = other.otaHash_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OTAEvent Clone() {
+          return new OTAEvent(this);
+        }
+
+        /// <summary>Field number for the "reboot_ota_mode" field.</summary>
+        public const int RebootOtaModeFieldNumber = 1;
+        private global::Meshtastic.Protobufs.OTAMode rebootOtaMode_ = global::Meshtastic.Protobufs.OTAMode.NoRebootOta;
+        /// <summary>
+        ///
+        /// Tell the node to reboot into OTA mode for firmware update via BLE or WiFi (ESP32 only for now)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Meshtastic.Protobufs.OTAMode RebootOtaMode {
+          get { return rebootOtaMode_; }
+          set {
+            rebootOtaMode_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "ota_hash" field.</summary>
+        public const int OtaHashFieldNumber = 2;
+        private pb::ByteString otaHash_ = pb::ByteString.Empty;
+        /// <summary>
+        ///
+        /// A 32 byte hash of the OTA firmware.
+        /// Used to verify the integrity of the firmware before applying an update.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString OtaHash {
+          get { return otaHash_; }
+          set {
+            otaHash_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as OTAEvent);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(OTAEvent other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RebootOtaMode != other.RebootOtaMode) return false;
+          if (OtaHash != other.OtaHash) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RebootOtaMode != global::Meshtastic.Protobufs.OTAMode.NoRebootOta) hash ^= RebootOtaMode.GetHashCode();
+          if (OtaHash.Length != 0) hash ^= OtaHash.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RebootOtaMode != global::Meshtastic.Protobufs.OTAMode.NoRebootOta) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) RebootOtaMode);
+          }
+          if (OtaHash.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(OtaHash);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RebootOtaMode != global::Meshtastic.Protobufs.OTAMode.NoRebootOta) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) RebootOtaMode);
+          }
+          if (OtaHash.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(OtaHash);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RebootOtaMode != global::Meshtastic.Protobufs.OTAMode.NoRebootOta) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RebootOtaMode);
+          }
+          if (OtaHash.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(OtaHash);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(OTAEvent other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RebootOtaMode != global::Meshtastic.Protobufs.OTAMode.NoRebootOta) {
+            RebootOtaMode = other.RebootOtaMode;
+          }
+          if (other.OtaHash.Length != 0) {
+            OtaHash = other.OtaHash;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RebootOtaMode = (global::Meshtastic.Protobufs.OTAMode) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                OtaHash = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RebootOtaMode = (global::Meshtastic.Protobufs.OTAMode) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                OtaHash = input.ReadBytes();
                 break;
               }
             }
@@ -5216,6 +5715,1646 @@ namespace Meshtastic.Protobufs {
 
     }
     #endregion
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SensorConfig : pb::IMessage<SensorConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SensorConfig> _parser = new pb::MessageParser<SensorConfig>(() => new SensorConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SensorConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.AdminReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SensorConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SensorConfig(SensorConfig other) : this() {
+      scd4XConfig_ = other.scd4XConfig_ != null ? other.scd4XConfig_.Clone() : null;
+      sen5XConfig_ = other.sen5XConfig_ != null ? other.sen5XConfig_.Clone() : null;
+      scd30Config_ = other.scd30Config_ != null ? other.scd30Config_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SensorConfig Clone() {
+      return new SensorConfig(this);
+    }
+
+    /// <summary>Field number for the "scd4x_config" field.</summary>
+    public const int Scd4XConfigFieldNumber = 1;
+    private global::Meshtastic.Protobufs.SCD4X_config scd4XConfig_;
+    /// <summary>
+    ///
+    /// SCD4X CO2 Sensor configuration
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.SCD4X_config Scd4XConfig {
+      get { return scd4XConfig_; }
+      set {
+        scd4XConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sen5x_config" field.</summary>
+    public const int Sen5XConfigFieldNumber = 2;
+    private global::Meshtastic.Protobufs.SEN5X_config sen5XConfig_;
+    /// <summary>
+    ///
+    /// SEN5X PM Sensor configuration
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.SEN5X_config Sen5XConfig {
+      get { return sen5XConfig_; }
+      set {
+        sen5XConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scd30_config" field.</summary>
+    public const int Scd30ConfigFieldNumber = 3;
+    private global::Meshtastic.Protobufs.SCD30_config scd30Config_;
+    /// <summary>
+    ///
+    /// SCD30 CO2 Sensor configuration
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Meshtastic.Protobufs.SCD30_config Scd30Config {
+      get { return scd30Config_; }
+      set {
+        scd30Config_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SensorConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SensorConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Scd4XConfig, other.Scd4XConfig)) return false;
+      if (!object.Equals(Sen5XConfig, other.Sen5XConfig)) return false;
+      if (!object.Equals(Scd30Config, other.Scd30Config)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (scd4XConfig_ != null) hash ^= Scd4XConfig.GetHashCode();
+      if (sen5XConfig_ != null) hash ^= Sen5XConfig.GetHashCode();
+      if (scd30Config_ != null) hash ^= Scd30Config.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (scd4XConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Scd4XConfig);
+      }
+      if (sen5XConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Sen5XConfig);
+      }
+      if (scd30Config_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Scd30Config);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (scd4XConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Scd4XConfig);
+      }
+      if (sen5XConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Sen5XConfig);
+      }
+      if (scd30Config_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Scd30Config);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (scd4XConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scd4XConfig);
+      }
+      if (sen5XConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sen5XConfig);
+      }
+      if (scd30Config_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scd30Config);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SensorConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.scd4XConfig_ != null) {
+        if (scd4XConfig_ == null) {
+          Scd4XConfig = new global::Meshtastic.Protobufs.SCD4X_config();
+        }
+        Scd4XConfig.MergeFrom(other.Scd4XConfig);
+      }
+      if (other.sen5XConfig_ != null) {
+        if (sen5XConfig_ == null) {
+          Sen5XConfig = new global::Meshtastic.Protobufs.SEN5X_config();
+        }
+        Sen5XConfig.MergeFrom(other.Sen5XConfig);
+      }
+      if (other.scd30Config_ != null) {
+        if (scd30Config_ == null) {
+          Scd30Config = new global::Meshtastic.Protobufs.SCD30_config();
+        }
+        Scd30Config.MergeFrom(other.Scd30Config);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (scd4XConfig_ == null) {
+              Scd4XConfig = new global::Meshtastic.Protobufs.SCD4X_config();
+            }
+            input.ReadMessage(Scd4XConfig);
+            break;
+          }
+          case 18: {
+            if (sen5XConfig_ == null) {
+              Sen5XConfig = new global::Meshtastic.Protobufs.SEN5X_config();
+            }
+            input.ReadMessage(Sen5XConfig);
+            break;
+          }
+          case 26: {
+            if (scd30Config_ == null) {
+              Scd30Config = new global::Meshtastic.Protobufs.SCD30_config();
+            }
+            input.ReadMessage(Scd30Config);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (scd4XConfig_ == null) {
+              Scd4XConfig = new global::Meshtastic.Protobufs.SCD4X_config();
+            }
+            input.ReadMessage(Scd4XConfig);
+            break;
+          }
+          case 18: {
+            if (sen5XConfig_ == null) {
+              Sen5XConfig = new global::Meshtastic.Protobufs.SEN5X_config();
+            }
+            input.ReadMessage(Sen5XConfig);
+            break;
+          }
+          case 26: {
+            if (scd30Config_ == null) {
+              Scd30Config = new global::Meshtastic.Protobufs.SCD30_config();
+            }
+            input.ReadMessage(Scd30Config);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SCD4X_config : pb::IMessage<SCD4X_config>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SCD4X_config> _parser = new pb::MessageParser<SCD4X_config>(() => new SCD4X_config());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SCD4X_config> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.AdminReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SCD4X_config() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SCD4X_config(SCD4X_config other) : this() {
+      _hasBits0 = other._hasBits0;
+      setAsc_ = other.setAsc_;
+      setTargetCo2Conc_ = other.setTargetCo2Conc_;
+      setTemperature_ = other.setTemperature_;
+      setAltitude_ = other.setAltitude_;
+      setAmbientPressure_ = other.setAmbientPressure_;
+      factoryReset_ = other.factoryReset_;
+      setPowerMode_ = other.setPowerMode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SCD4X_config Clone() {
+      return new SCD4X_config(this);
+    }
+
+    /// <summary>Field number for the "set_asc" field.</summary>
+    public const int SetAscFieldNumber = 1;
+    private readonly static bool SetAscDefaultValue = false;
+
+    private bool setAsc_;
+    /// <summary>
+    ///
+    /// Set Automatic self-calibration enabled
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SetAsc {
+      get { if ((_hasBits0 & 1) != 0) { return setAsc_; } else { return SetAscDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        setAsc_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_asc" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetAsc {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "set_asc" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetAsc() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "set_target_co2_conc" field.</summary>
+    public const int SetTargetCo2ConcFieldNumber = 2;
+    private readonly static uint SetTargetCo2ConcDefaultValue = 0;
+
+    private uint setTargetCo2Conc_;
+    /// <summary>
+    ///
+    /// Recalibration target CO2 concentration in ppm (FRC or ASC)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SetTargetCo2Conc {
+      get { if ((_hasBits0 & 2) != 0) { return setTargetCo2Conc_; } else { return SetTargetCo2ConcDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        setTargetCo2Conc_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_target_co2_conc" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetTargetCo2Conc {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "set_target_co2_conc" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetTargetCo2Conc() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "set_temperature" field.</summary>
+    public const int SetTemperatureFieldNumber = 3;
+    private readonly static float SetTemperatureDefaultValue = 0F;
+
+    private float setTemperature_;
+    /// <summary>
+    ///
+    /// Reference temperature in degC
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SetTemperature {
+      get { if ((_hasBits0 & 4) != 0) { return setTemperature_; } else { return SetTemperatureDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        setTemperature_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_temperature" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetTemperature {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "set_temperature" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetTemperature() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "set_altitude" field.</summary>
+    public const int SetAltitudeFieldNumber = 4;
+    private readonly static uint SetAltitudeDefaultValue = 0;
+
+    private uint setAltitude_;
+    /// <summary>
+    ///
+    /// Altitude of sensor in meters above sea level. 0 - 3000m (overrides ambient pressure)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SetAltitude {
+      get { if ((_hasBits0 & 8) != 0) { return setAltitude_; } else { return SetAltitudeDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        setAltitude_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_altitude" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetAltitude {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "set_altitude" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetAltitude() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "set_ambient_pressure" field.</summary>
+    public const int SetAmbientPressureFieldNumber = 5;
+    private readonly static uint SetAmbientPressureDefaultValue = 0;
+
+    private uint setAmbientPressure_;
+    /// <summary>
+    ///
+    /// Sensor ambient pressure in Pa. 70000 - 120000 Pa (overrides altitude)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SetAmbientPressure {
+      get { if ((_hasBits0 & 16) != 0) { return setAmbientPressure_; } else { return SetAmbientPressureDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        setAmbientPressure_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_ambient_pressure" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetAmbientPressure {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "set_ambient_pressure" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetAmbientPressure() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "factory_reset" field.</summary>
+    public const int FactoryResetFieldNumber = 6;
+    private readonly static bool FactoryResetDefaultValue = false;
+
+    private bool factoryReset_;
+    /// <summary>
+    ///
+    /// Perform a factory reset of the sensor
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool FactoryReset {
+      get { if ((_hasBits0 & 32) != 0) { return factoryReset_; } else { return FactoryResetDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        factoryReset_ = value;
+      }
+    }
+    /// <summary>Gets whether the "factory_reset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFactoryReset {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "factory_reset" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFactoryReset() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "set_power_mode" field.</summary>
+    public const int SetPowerModeFieldNumber = 7;
+    private readonly static bool SetPowerModeDefaultValue = false;
+
+    private bool setPowerMode_;
+    /// <summary>
+    ///
+    /// Power mode for sensor (true for low power, false for normal)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SetPowerMode {
+      get { if ((_hasBits0 & 64) != 0) { return setPowerMode_; } else { return SetPowerModeDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        setPowerMode_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_power_mode" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetPowerMode {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "set_power_mode" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetPowerMode() {
+      _hasBits0 &= ~64;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SCD4X_config);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SCD4X_config other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SetAsc != other.SetAsc) return false;
+      if (SetTargetCo2Conc != other.SetTargetCo2Conc) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SetTemperature, other.SetTemperature)) return false;
+      if (SetAltitude != other.SetAltitude) return false;
+      if (SetAmbientPressure != other.SetAmbientPressure) return false;
+      if (FactoryReset != other.FactoryReset) return false;
+      if (SetPowerMode != other.SetPowerMode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasSetAsc) hash ^= SetAsc.GetHashCode();
+      if (HasSetTargetCo2Conc) hash ^= SetTargetCo2Conc.GetHashCode();
+      if (HasSetTemperature) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SetTemperature);
+      if (HasSetAltitude) hash ^= SetAltitude.GetHashCode();
+      if (HasSetAmbientPressure) hash ^= SetAmbientPressure.GetHashCode();
+      if (HasFactoryReset) hash ^= FactoryReset.GetHashCode();
+      if (HasSetPowerMode) hash ^= SetPowerMode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasSetAsc) {
+        output.WriteRawTag(8);
+        output.WriteBool(SetAsc);
+      }
+      if (HasSetTargetCo2Conc) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(SetTargetCo2Conc);
+      }
+      if (HasSetTemperature) {
+        output.WriteRawTag(29);
+        output.WriteFloat(SetTemperature);
+      }
+      if (HasSetAltitude) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SetAltitude);
+      }
+      if (HasSetAmbientPressure) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SetAmbientPressure);
+      }
+      if (HasFactoryReset) {
+        output.WriteRawTag(48);
+        output.WriteBool(FactoryReset);
+      }
+      if (HasSetPowerMode) {
+        output.WriteRawTag(56);
+        output.WriteBool(SetPowerMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasSetAsc) {
+        output.WriteRawTag(8);
+        output.WriteBool(SetAsc);
+      }
+      if (HasSetTargetCo2Conc) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(SetTargetCo2Conc);
+      }
+      if (HasSetTemperature) {
+        output.WriteRawTag(29);
+        output.WriteFloat(SetTemperature);
+      }
+      if (HasSetAltitude) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SetAltitude);
+      }
+      if (HasSetAmbientPressure) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SetAmbientPressure);
+      }
+      if (HasFactoryReset) {
+        output.WriteRawTag(48);
+        output.WriteBool(FactoryReset);
+      }
+      if (HasSetPowerMode) {
+        output.WriteRawTag(56);
+        output.WriteBool(SetPowerMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasSetAsc) {
+        size += 1 + 1;
+      }
+      if (HasSetTargetCo2Conc) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SetTargetCo2Conc);
+      }
+      if (HasSetTemperature) {
+        size += 1 + 4;
+      }
+      if (HasSetAltitude) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SetAltitude);
+      }
+      if (HasSetAmbientPressure) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SetAmbientPressure);
+      }
+      if (HasFactoryReset) {
+        size += 1 + 1;
+      }
+      if (HasSetPowerMode) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SCD4X_config other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasSetAsc) {
+        SetAsc = other.SetAsc;
+      }
+      if (other.HasSetTargetCo2Conc) {
+        SetTargetCo2Conc = other.SetTargetCo2Conc;
+      }
+      if (other.HasSetTemperature) {
+        SetTemperature = other.SetTemperature;
+      }
+      if (other.HasSetAltitude) {
+        SetAltitude = other.SetAltitude;
+      }
+      if (other.HasSetAmbientPressure) {
+        SetAmbientPressure = other.SetAmbientPressure;
+      }
+      if (other.HasFactoryReset) {
+        FactoryReset = other.FactoryReset;
+      }
+      if (other.HasSetPowerMode) {
+        SetPowerMode = other.SetPowerMode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SetAsc = input.ReadBool();
+            break;
+          }
+          case 16: {
+            SetTargetCo2Conc = input.ReadUInt32();
+            break;
+          }
+          case 29: {
+            SetTemperature = input.ReadFloat();
+            break;
+          }
+          case 32: {
+            SetAltitude = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            SetAmbientPressure = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            FactoryReset = input.ReadBool();
+            break;
+          }
+          case 56: {
+            SetPowerMode = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SetAsc = input.ReadBool();
+            break;
+          }
+          case 16: {
+            SetTargetCo2Conc = input.ReadUInt32();
+            break;
+          }
+          case 29: {
+            SetTemperature = input.ReadFloat();
+            break;
+          }
+          case 32: {
+            SetAltitude = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            SetAmbientPressure = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            FactoryReset = input.ReadBool();
+            break;
+          }
+          case 56: {
+            SetPowerMode = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SEN5X_config : pb::IMessage<SEN5X_config>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SEN5X_config> _parser = new pb::MessageParser<SEN5X_config>(() => new SEN5X_config());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SEN5X_config> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.AdminReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SEN5X_config() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SEN5X_config(SEN5X_config other) : this() {
+      _hasBits0 = other._hasBits0;
+      setTemperature_ = other.setTemperature_;
+      setOneShotMode_ = other.setOneShotMode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SEN5X_config Clone() {
+      return new SEN5X_config(this);
+    }
+
+    /// <summary>Field number for the "set_temperature" field.</summary>
+    public const int SetTemperatureFieldNumber = 1;
+    private readonly static float SetTemperatureDefaultValue = 0F;
+
+    private float setTemperature_;
+    /// <summary>
+    ///
+    /// Reference temperature in degC
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SetTemperature {
+      get { if ((_hasBits0 & 1) != 0) { return setTemperature_; } else { return SetTemperatureDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        setTemperature_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_temperature" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetTemperature {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "set_temperature" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetTemperature() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "set_one_shot_mode" field.</summary>
+    public const int SetOneShotModeFieldNumber = 2;
+    private readonly static bool SetOneShotModeDefaultValue = false;
+
+    private bool setOneShotMode_;
+    /// <summary>
+    ///
+    /// One-shot mode (true for low power - one-shot mode, false for normal - continuous mode)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SetOneShotMode {
+      get { if ((_hasBits0 & 2) != 0) { return setOneShotMode_; } else { return SetOneShotModeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        setOneShotMode_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_one_shot_mode" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetOneShotMode {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "set_one_shot_mode" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetOneShotMode() {
+      _hasBits0 &= ~2;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SEN5X_config);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SEN5X_config other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SetTemperature, other.SetTemperature)) return false;
+      if (SetOneShotMode != other.SetOneShotMode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasSetTemperature) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SetTemperature);
+      if (HasSetOneShotMode) hash ^= SetOneShotMode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasSetTemperature) {
+        output.WriteRawTag(13);
+        output.WriteFloat(SetTemperature);
+      }
+      if (HasSetOneShotMode) {
+        output.WriteRawTag(16);
+        output.WriteBool(SetOneShotMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasSetTemperature) {
+        output.WriteRawTag(13);
+        output.WriteFloat(SetTemperature);
+      }
+      if (HasSetOneShotMode) {
+        output.WriteRawTag(16);
+        output.WriteBool(SetOneShotMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasSetTemperature) {
+        size += 1 + 4;
+      }
+      if (HasSetOneShotMode) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SEN5X_config other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasSetTemperature) {
+        SetTemperature = other.SetTemperature;
+      }
+      if (other.HasSetOneShotMode) {
+        SetOneShotMode = other.SetOneShotMode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            SetTemperature = input.ReadFloat();
+            break;
+          }
+          case 16: {
+            SetOneShotMode = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            SetTemperature = input.ReadFloat();
+            break;
+          }
+          case 16: {
+            SetOneShotMode = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SCD30_config : pb::IMessage<SCD30_config>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SCD30_config> _parser = new pb::MessageParser<SCD30_config>(() => new SCD30_config());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SCD30_config> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Meshtastic.Protobufs.AdminReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SCD30_config() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SCD30_config(SCD30_config other) : this() {
+      _hasBits0 = other._hasBits0;
+      setAsc_ = other.setAsc_;
+      setTargetCo2Conc_ = other.setTargetCo2Conc_;
+      setTemperature_ = other.setTemperature_;
+      setAltitude_ = other.setAltitude_;
+      setMeasurementInterval_ = other.setMeasurementInterval_;
+      softReset_ = other.softReset_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SCD30_config Clone() {
+      return new SCD30_config(this);
+    }
+
+    /// <summary>Field number for the "set_asc" field.</summary>
+    public const int SetAscFieldNumber = 1;
+    private readonly static bool SetAscDefaultValue = false;
+
+    private bool setAsc_;
+    /// <summary>
+    ///
+    /// Set Automatic self-calibration enabled
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SetAsc {
+      get { if ((_hasBits0 & 1) != 0) { return setAsc_; } else { return SetAscDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        setAsc_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_asc" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetAsc {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "set_asc" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetAsc() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "set_target_co2_conc" field.</summary>
+    public const int SetTargetCo2ConcFieldNumber = 2;
+    private readonly static uint SetTargetCo2ConcDefaultValue = 0;
+
+    private uint setTargetCo2Conc_;
+    /// <summary>
+    ///
+    /// Recalibration target CO2 concentration in ppm (FRC or ASC)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SetTargetCo2Conc {
+      get { if ((_hasBits0 & 2) != 0) { return setTargetCo2Conc_; } else { return SetTargetCo2ConcDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        setTargetCo2Conc_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_target_co2_conc" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetTargetCo2Conc {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "set_target_co2_conc" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetTargetCo2Conc() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "set_temperature" field.</summary>
+    public const int SetTemperatureFieldNumber = 3;
+    private readonly static float SetTemperatureDefaultValue = 0F;
+
+    private float setTemperature_;
+    /// <summary>
+    ///
+    /// Reference temperature in degC
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SetTemperature {
+      get { if ((_hasBits0 & 4) != 0) { return setTemperature_; } else { return SetTemperatureDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        setTemperature_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_temperature" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetTemperature {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "set_temperature" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetTemperature() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "set_altitude" field.</summary>
+    public const int SetAltitudeFieldNumber = 4;
+    private readonly static uint SetAltitudeDefaultValue = 0;
+
+    private uint setAltitude_;
+    /// <summary>
+    ///
+    /// Altitude of sensor in meters above sea level. 0 - 3000m (overrides ambient pressure)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SetAltitude {
+      get { if ((_hasBits0 & 8) != 0) { return setAltitude_; } else { return SetAltitudeDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        setAltitude_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_altitude" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetAltitude {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "set_altitude" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetAltitude() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "set_measurement_interval" field.</summary>
+    public const int SetMeasurementIntervalFieldNumber = 5;
+    private readonly static uint SetMeasurementIntervalDefaultValue = 0;
+
+    private uint setMeasurementInterval_;
+    /// <summary>
+    ///
+    /// Power mode for sensor (true for low power, false for normal)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SetMeasurementInterval {
+      get { if ((_hasBits0 & 16) != 0) { return setMeasurementInterval_; } else { return SetMeasurementIntervalDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        setMeasurementInterval_ = value;
+      }
+    }
+    /// <summary>Gets whether the "set_measurement_interval" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetMeasurementInterval {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "set_measurement_interval" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetMeasurementInterval() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "soft_reset" field.</summary>
+    public const int SoftResetFieldNumber = 6;
+    private readonly static bool SoftResetDefaultValue = false;
+
+    private bool softReset_;
+    /// <summary>
+    ///
+    /// Perform a factory reset of the sensor
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SoftReset {
+      get { if ((_hasBits0 & 32) != 0) { return softReset_; } else { return SoftResetDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        softReset_ = value;
+      }
+    }
+    /// <summary>Gets whether the "soft_reset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSoftReset {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "soft_reset" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSoftReset() {
+      _hasBits0 &= ~32;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SCD30_config);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SCD30_config other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SetAsc != other.SetAsc) return false;
+      if (SetTargetCo2Conc != other.SetTargetCo2Conc) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SetTemperature, other.SetTemperature)) return false;
+      if (SetAltitude != other.SetAltitude) return false;
+      if (SetMeasurementInterval != other.SetMeasurementInterval) return false;
+      if (SoftReset != other.SoftReset) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasSetAsc) hash ^= SetAsc.GetHashCode();
+      if (HasSetTargetCo2Conc) hash ^= SetTargetCo2Conc.GetHashCode();
+      if (HasSetTemperature) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SetTemperature);
+      if (HasSetAltitude) hash ^= SetAltitude.GetHashCode();
+      if (HasSetMeasurementInterval) hash ^= SetMeasurementInterval.GetHashCode();
+      if (HasSoftReset) hash ^= SoftReset.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasSetAsc) {
+        output.WriteRawTag(8);
+        output.WriteBool(SetAsc);
+      }
+      if (HasSetTargetCo2Conc) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(SetTargetCo2Conc);
+      }
+      if (HasSetTemperature) {
+        output.WriteRawTag(29);
+        output.WriteFloat(SetTemperature);
+      }
+      if (HasSetAltitude) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SetAltitude);
+      }
+      if (HasSetMeasurementInterval) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SetMeasurementInterval);
+      }
+      if (HasSoftReset) {
+        output.WriteRawTag(48);
+        output.WriteBool(SoftReset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasSetAsc) {
+        output.WriteRawTag(8);
+        output.WriteBool(SetAsc);
+      }
+      if (HasSetTargetCo2Conc) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(SetTargetCo2Conc);
+      }
+      if (HasSetTemperature) {
+        output.WriteRawTag(29);
+        output.WriteFloat(SetTemperature);
+      }
+      if (HasSetAltitude) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SetAltitude);
+      }
+      if (HasSetMeasurementInterval) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SetMeasurementInterval);
+      }
+      if (HasSoftReset) {
+        output.WriteRawTag(48);
+        output.WriteBool(SoftReset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasSetAsc) {
+        size += 1 + 1;
+      }
+      if (HasSetTargetCo2Conc) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SetTargetCo2Conc);
+      }
+      if (HasSetTemperature) {
+        size += 1 + 4;
+      }
+      if (HasSetAltitude) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SetAltitude);
+      }
+      if (HasSetMeasurementInterval) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SetMeasurementInterval);
+      }
+      if (HasSoftReset) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SCD30_config other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasSetAsc) {
+        SetAsc = other.SetAsc;
+      }
+      if (other.HasSetTargetCo2Conc) {
+        SetTargetCo2Conc = other.SetTargetCo2Conc;
+      }
+      if (other.HasSetTemperature) {
+        SetTemperature = other.SetTemperature;
+      }
+      if (other.HasSetAltitude) {
+        SetAltitude = other.SetAltitude;
+      }
+      if (other.HasSetMeasurementInterval) {
+        SetMeasurementInterval = other.SetMeasurementInterval;
+      }
+      if (other.HasSoftReset) {
+        SoftReset = other.SoftReset;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SetAsc = input.ReadBool();
+            break;
+          }
+          case 16: {
+            SetTargetCo2Conc = input.ReadUInt32();
+            break;
+          }
+          case 29: {
+            SetTemperature = input.ReadFloat();
+            break;
+          }
+          case 32: {
+            SetAltitude = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            SetMeasurementInterval = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            SoftReset = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SetAsc = input.ReadBool();
+            break;
+          }
+          case 16: {
+            SetTargetCo2Conc = input.ReadUInt32();
+            break;
+          }
+          case 29: {
+            SetTemperature = input.ReadFloat();
+            break;
+          }
+          case 32: {
+            SetAltitude = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            SetMeasurementInterval = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            SoftReset = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
