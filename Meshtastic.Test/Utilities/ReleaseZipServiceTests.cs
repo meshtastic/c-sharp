@@ -26,7 +26,7 @@ namespace Meshtastic.Test.Utilities
             var releases = await github.GetFirmwareReleases();
             var memoryStream = await github.DownloadRelease(releases.releases.stable.First());
             var path = await service.ExtractUpdateBinary(memoryStream, HardwareModel.Tbeam);
-            path.Should().EndWith("update.bin");
+            path.ShouldEndWith("update.bin");
             File.Delete(path);
         }
     }

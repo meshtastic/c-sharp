@@ -20,6 +20,6 @@ public class InfoCommandTests : CommandTestBase
     public async Task InfoCommand_Should_Succeed_ForValidCoords()
     {
         var result = await rootCommand.InvokeAsync("info --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }

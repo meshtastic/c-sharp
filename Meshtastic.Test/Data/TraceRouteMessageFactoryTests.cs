@@ -30,7 +30,7 @@ public class TraceRouteMessageFactoryTests
     {
         factory = new TraceRouteMessageFactory(deviceStateContainer, 100);
         var result = factory.CreateRouteDiscoveryPacket();
-        result.Decoded.Portnum.Should().Be(PortNum.TracerouteApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.TracerouteApp);
     }
 
     [Test]
@@ -38,6 +38,6 @@ public class TraceRouteMessageFactoryTests
     {
         factory = new TraceRouteMessageFactory(deviceStateContainer);
         var action = () => factory.CreateRouteDiscoveryPacket();
-        action.Should().Throw<InvalidOperationException>();
+        action.ShouldThrow<InvalidOperationException>();
     }
 }

@@ -20,6 +20,6 @@ public class MetadataCommandTests : CommandTestBase
     public async Task MetadataCommand_Should_Succeed_ForValidArgs()
     {
         var result = await rootCommand.InvokeAsync("metadata --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }

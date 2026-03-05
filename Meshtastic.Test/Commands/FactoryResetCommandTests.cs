@@ -20,6 +20,6 @@ public class FactoryResetCommandTests : CommandTestBase
     public async Task FactoryReset_Should_Succeed_ForValidArgs()
     {
         var result = await rootCommand.InvokeAsync("factory-reset --port SIMPORT", Console);
-        result.Should().BeGreaterThan(0);
+        result.ShouldBeGreaterThan(0);
     }
 }

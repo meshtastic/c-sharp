@@ -20,28 +20,28 @@ public class SendWaypointCommandTests : CommandTestBase
     public async Task SendWaypointCommand_Should_Fail_ForInvalidLat()
     {
         var result = await rootCommand.InvokeAsync("waypoint -91 -90.023 --port SIMPORT", Console);
-        result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Invalid latitude");
+        result.ShouldBeGreaterThan(0);
+        Out.Output.ShouldContain("Invalid latitude");
         result = await rootCommand.InvokeAsync("waypoint 91 -90.023 --port SIMPORT", Console);
-        result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Invalid latitude");
+        result.ShouldBeGreaterThan(0);
+        Out.Output.ShouldContain("Invalid latitude");
     }
 
     [Test]
     public async Task SendWaypointCommand_Should_Fail_ForInvalidLon()
     {
         var result = await rootCommand.InvokeAsync("waypoint 34.00 -181 --port SIMPORT", Console);
-        result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Invalid longitude");
+        result.ShouldBeGreaterThan(0);
+        Out.Output.ShouldContain("Invalid longitude");
         result = await rootCommand.InvokeAsync("waypoint 34.00 -181 --port SIMPORT", Console);
-        result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Invalid longitude");
+        result.ShouldBeGreaterThan(0);
+        Out.Output.ShouldContain("Invalid longitude");
     }
 
     [Test]
     public async Task SendWaypointCommand_Should_Succeed_ForValidCoords()
     {
         var result = await rootCommand.InvokeAsync("waypoint 34.00 -90 --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }

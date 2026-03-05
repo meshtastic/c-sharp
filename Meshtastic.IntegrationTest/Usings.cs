@@ -1,5 +1,5 @@
 global using NUnit.Framework;
-global using FluentAssertions;
+global using Shouldly;
 global using Microsoft.Extensions.Logging;
 global using Meshtastic.Connections;
 global using Meshtastic.Data;

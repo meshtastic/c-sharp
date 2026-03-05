@@ -20,13 +20,13 @@ public class UrlCommandTests : CommandTestBase
     public async Task UrlCommand_Should_Succeed_ForValidSetArgs()
     {
         var result = await rootCommand.InvokeAsync("url get --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 
     [Test]
     public async Task UrlCommand_Should_Succeed_ForValidGetArgs()
     {
         var result = await rootCommand.InvokeAsync("url set http://meshtastic.org/#e/1235 --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }

@@ -20,14 +20,14 @@ public class FileCommandTests : CommandTestBase
     public async Task FileCommand_Should_Fail_ForEmptyOrNullText()
     {
         var result = await rootCommand.InvokeAsync("file --port SIMPORT", Console);
-        result.Should().BeGreaterThan(0);
-        Out.Output.Should().Contain("Required argument missing for command: 'file'");
+        result.ShouldBeGreaterThan(0);
+        Out.Output.ShouldContain("Required argument missing for command: 'file'");
     }
 
     [Test]
     public async Task FileCommand_Should_Succeed_ForValidText()
     {
         var result = await rootCommand.InvokeAsync("file 'Butt.txt' --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }

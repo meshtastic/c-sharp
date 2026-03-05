@@ -12,16 +12,16 @@ namespace Meshtastic.Test.Extensions
         {
             FromRadio fromRadio = new();
             var result = fromRadio.GetPayload<AdminMessage>();
-            result.Should().BeNull();
+            result.ShouldBeNull();
             fromRadio.Packet = new MeshPacket();
             result = fromRadio.GetPayload<AdminMessage>();
-            result.Should().BeNull();
+            result.ShouldBeNull();
             fromRadio.Packet = new MeshPacket
             {
                 Decoded = new Protobufs.Data()
             };
             result = fromRadio.GetPayload<AdminMessage>();
-            result.Should().BeNull();
+            result.ShouldBeNull();
         }
 
         [Test]
@@ -38,8 +38,8 @@ namespace Meshtastic.Test.Extensions
                 }
             };
             result = fromRadio.GetPayload<AdminMessage>();
-            result.Should().NotBeNull();
-            result.Should().BeOfType<AdminMessage>();
+            result.ShouldNotBeNull();
+            result.ShouldBeOfType<AdminMessage>();
         }
 
         [Test]
@@ -56,8 +56,8 @@ namespace Meshtastic.Test.Extensions
                 }
             };
             result = fromRadio.GetPayload<RouteDiscovery>();
-            result.Should().NotBeNull();
-            result.Should().BeOfType<RouteDiscovery>();
+            result.ShouldNotBeNull();
+            result.ShouldBeOfType<RouteDiscovery>();
         }
 
         [Test]
@@ -74,8 +74,8 @@ namespace Meshtastic.Test.Extensions
                 }
             };
             result = fromRadio.GetPayload<Routing>();
-            result.Should().NotBeNull();
-            result.Should().BeOfType<Routing>();
+            result.ShouldNotBeNull();
+            result.ShouldBeOfType<Routing>();
         }
 
 
@@ -90,9 +90,9 @@ namespace Meshtastic.Test.Extensions
                 }
             };
             var result = fromRadio.GetPayload<XModem>();
-            result.Should().NotBeNull();
-            result.Should().BeOfType<XModem>();
-            result!.Control.Should().Be(XModem.Types.Control.Stx);
+            result.ShouldNotBeNull();
+            result.ShouldBeOfType<XModem>();
+            result!.Control.ShouldBe(XModem.Types.Control.Stx);
         }
     }
 }

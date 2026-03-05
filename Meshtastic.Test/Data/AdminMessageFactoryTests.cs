@@ -30,42 +30,42 @@ public class AdminMessageFactoryTests
     public void CreateBeginEditSettingsMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateBeginEditSettingsMessage();
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
     public void CreateCommitEditSettingsMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateCommitEditSettingsMessage();
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
     public void CreateRebootMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateRebootMessage(0, true);
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateRebootMessage(0, false);
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
     public void CreateSetConfigMessage_Should_ReturnValidAdminMessageMeshPacket()
     {
         var result = factory.CreateSetConfigMessage(new NetworkConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetConfigMessage(new BluetoothConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetConfigMessage(new DeviceConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetConfigMessage(new DisplayConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetConfigMessage(new LoRaConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetConfigMessage(new PositionConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetConfigMessage(new PowerConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
@@ -74,28 +74,28 @@ public class AdminMessageFactoryTests
         var instance = new Telemetry();
 
         var action = () => factory.CreateSetConfigMessage(instance);
-        action.Should().Throw<ArgumentException>();
+        action.ShouldThrow<ArgumentException>();
     }
 
     [Test]
     public void CreateSetModuleConfigMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateSetModuleConfigMessage(new AudioConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetModuleConfigMessage(new CannedMessageConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetModuleConfigMessage(new ExternalNotificationConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetModuleConfigMessage(new MQTTConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetModuleConfigMessage(new RangeTestConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetModuleConfigMessage(new SerialConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetModuleConfigMessage(new StoreForwardConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
         result = factory.CreateSetModuleConfigMessage(new TelemetryConfig());
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
@@ -104,7 +104,7 @@ public class AdminMessageFactoryTests
         var instance = new Telemetry();
 
         var action = () => factory.CreateSetModuleConfigMessage(instance);
-        action.Should().Throw<ArgumentException>();
+        action.ShouldThrow<ArgumentException>();
     }
 
     [Test]
@@ -113,42 +113,42 @@ public class AdminMessageFactoryTests
         var channel = new Channel();
 
         var result = factory.CreateSetChannelMessage(channel);
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
     public void CreateGetMetadataMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateGetMetadataMessage();
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
     public void CreateFactoryResetMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateFactoryResetMessage();
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
     public void CreateNodeDbResetMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateNodeDbResetMessage();
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
     public void CreateSetCannedMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateSetCannedMessage(String.Empty);
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
     public void CreateGetCannedMessage_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreateGetCannedMessage();
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 
     [Test]
@@ -163,6 +163,6 @@ public class AdminMessageFactoryTests
         };
 
         var result = factory.CreateSendInputEventMessage(inputEvent);
-        result.Decoded.Portnum.Should().Be(PortNum.AdminApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.AdminApp);
     }
 }

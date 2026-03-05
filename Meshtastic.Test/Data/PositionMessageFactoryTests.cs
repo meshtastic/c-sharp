@@ -29,6 +29,6 @@ public class PositionMessageFactoryTests
     public void CreatePositionPacket_Should_ReturnValidAdminMessage()
     {
         var result = factory.CreatePositionPacket(new Position());
-        result.Decoded.Portnum.Should().Be(PortNum.PositionApp);
+        result.Decoded.Portnum.ShouldBe(PortNum.PositionApp);
     }
 }

@@ -42,9 +42,9 @@ public class TextMessageTests : IntegrationTestBase
                 return await Task.FromResult(container.MyNodeInfo.MyNodeNum != 0);
             });
             
-            container.Should().NotBeNull();
-            container.MyNodeInfo.Should().NotBeNull();
-            container.MyNodeInfo.MyNodeNum.Should().NotBe(0u);
+            container.ShouldNotBeNull();
+            container.MyNodeInfo.ShouldNotBeNull();
+            container.MyNodeInfo.MyNodeNum.ShouldNotBe(0u);
             
             _logger.LogInformation($"Connected to device. Node number: {container.MyNodeInfo.MyNodeNum}");
             
@@ -88,8 +88,8 @@ public class TextMessageTests : IntegrationTestBase
         }
         
         // Assert
-        ackReceived.Should().BeTrue("An ACK should be received for the sent message");
-        errorReason.Should().Be(Routing.Types.Error.None, "The message should be delivered without errors");
+        ackReceived.ShouldBeTrue("An ACK should be received for the sent message");
+        errorReason.ShouldBe(Routing.Types.Error.None, "The message should be delivered without errors");
     }
     
     [Test]
@@ -124,14 +124,14 @@ public class TextMessageTests : IntegrationTestBase
         }
         
         // Assert
-        container.Should().NotBeNull();
-        container!.MyNodeInfo.Should().NotBeNull();
-        container.MyNodeInfo.MyNodeNum.Should().NotBe(0u);
+        container.ShouldNotBeNull();
+        container!.MyNodeInfo.ShouldNotBeNull();
+        container.MyNodeInfo.MyNodeNum.ShouldNotBe(0u);
         
         var deviceNode = container.GetDeviceNodeInfo();
-        deviceNode.Should().NotBeNull();
-        deviceNode!.User.Should().NotBeNull();
-        deviceNode.User!.LongName.Should().NotBeNullOrEmpty();
+        deviceNode.ShouldNotBeNull();
+        deviceNode!.User.ShouldNotBeNull();
+        deviceNode.User!.LongName.ShouldNotBeNullOrEmpty();
         
         _logger.LogInformation($"Device Info - Node: {container.MyNodeInfo.MyNodeNum}, " +
                              $"Name: '{deviceNode.User.LongName}', " +

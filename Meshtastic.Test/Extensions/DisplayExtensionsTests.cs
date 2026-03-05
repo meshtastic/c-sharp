@@ -15,7 +15,7 @@ namespace Meshtastic.Test.Extensions
 #pragma warning disable CS8604 // Possible null reference argument.
             var result = position.ToDisplayString();
 #pragma warning restore CS8604 // Possible null reference argument.
-            result.Should().Be("Not available");
+            result.ShouldBe("Not available");
         }
 
         [Test]
@@ -27,7 +27,7 @@ namespace Meshtastic.Test.Extensions
                 LongitudeI = 0,
             };
             var result = position.ToDisplayString();
-            result.Should().Be("Not available");
+            result.ShouldBe("Not available");
         }
 
         [Test]
@@ -39,7 +39,7 @@ namespace Meshtastic.Test.Extensions
                 LongitudeI = -921234567,
             };
             var result = position.ToDisplayString();
-            result.Should().Be("34.1234567, -92.1234567");
+            result.ShouldBe("34.1234567, -92.1234567");
         }
     }
 }

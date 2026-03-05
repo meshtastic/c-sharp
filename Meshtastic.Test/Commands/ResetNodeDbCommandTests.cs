@@ -20,6 +20,6 @@ public class ResetNodeDbCommandTests : CommandTestBase
     public async Task ResetNodeDbCommand_Should_Succeed_ForValidArgs()
     {
         var result = await rootCommand.InvokeAsync("reset-nodedb --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }

@@ -20,6 +20,6 @@ public class ListCommandTests : CommandTestBase
     public async Task ListCommand_Should_Succeed_ForValidCoords()
     {
         var result = await rootCommand.InvokeAsync("list --port SIMPORT", Console);
-        result.Should().Be(0);
+        result.ShouldBe(0);
     }
 }
