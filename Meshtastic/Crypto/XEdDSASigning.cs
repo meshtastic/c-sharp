@@ -56,18 +56,6 @@ public static class XEdDSASigning
         if (x25519PublicKey.Length != 32)
             throw new ArgumentException("X25519 public key must be 32 bytes", nameof(x25519PublicKey));
 
-        // Simplified conversion - in practice would use proper birational map
-        // For demo purposes, derive deterministic Ed25519 key from X25519 key
-        var hashedKey = SHA256.HashData(x25519PublicKey);
-        
-        var keyPairGen = new Ed25519KeyPairGenerator();
-        var secureRandom = new SecureRandom();
-        secureRandom.SetSeed(hashedKey);
-        keyPairGen.Init(new KeyGenerationParameters(secureRandom, 256));
-        
-        var keyPair = keyPairGen.GenerateKeyPair();
-        var edPublicKey = ((Ed25519PublicKeyParameters)keyPair.Public).GetEncoded();
-        
         // Clear the sign bit (bit 7 of the last byte) as per Ed25519 specification
         // Implements the birational map from Montgomery (X25519) u to Edwards (Ed25519) y:
         // y = (u - 1) / (u + 1) mod p
