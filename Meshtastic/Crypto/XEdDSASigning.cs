@@ -113,20 +113,17 @@ public static class XEdDSASigning
     /// <param name="edPrivateKey">Ed25519 private key</param>
     /// <param name="useShortHash">Use SHA-256 instead of SHA-512 for hashing before signing</param>
     /// <returns>64-byte signature</returns>
-    public static byte[] Sign(byte[] message, byte[] edPrivateKey, byte[] edPublicKey, bool useShortHash = true)
+    public static byte[] Sign(byte[] message, byte[] edPrivateKey, byte[] edPublicKey)
     {
         if (message == null) throw new ArgumentNullException(nameof(message));
         if (edPrivateKey.Length != 32) throw new ArgumentException("Ed25519 private key must be 32 bytes", nameof(edPrivateKey));
-
-        // Hash the message using the selected algorithm
-        var messageHash = useShortHash ? SHA256.HashData(message) : SHA512.HashData(message);
 
         // Create Ed25519 signer
         var signer = new Ed25519Signer();
         var privateKeyParams = new Ed25519PrivateKeyParameters(edPrivateKey, 0);
         
         signer.Init(true, privateKeyParams);
-        signer.BlockUpdate(messageHash, 0, messageHash.Length);
+        signer.BlockUpdate(message, 0, message.Length);
         
         return signer.GenerateSignature();
     }
@@ -139,7 +136,7 @@ public static class XEdDSASigning
     /// <param name="edPublicKey">Ed25519 public key of the signer</param>
     /// <param name="useShortHash">Use SHA-256 instead of SHA-512 for hashing</param>
     /// <returns>True if signature is valid</returns>
-    public static bool Verify(byte[] message, byte[] signature, byte[] edPublicKey, bool useShortHash = true)
+    public static bool Verify(byte[] message, byte[] signature, byte[] edPublicKey)
     {
         if (message == null) throw new ArgumentNullException(nameof(message));
         if (signature == null || signature.Length != 64) throw new ArgumentException("Signature must be 64 bytes", nameof(signature));
@@ -147,15 +144,12 @@ public static class XEdDSASigning
 
         try
         {
-            // Hash the message using the selected algorithm
-            var messageHash = useShortHash ? SHA256.HashData(message) : SHA512.HashData(message);
-
             // Create Ed25519 verifier
             var verifier = new Ed25519Signer();
             var publicKeyParams = new Ed25519PublicKeyParameters(edPublicKey, 0);
             
             verifier.Init(false, publicKeyParams);
-            verifier.BlockUpdate(messageHash, 0, messageHash.Length);
+            verifier.BlockUpdate(message, 0, message.Length);
             
             return verifier.VerifySignature(signature);
         }
@@ -173,13 +167,13 @@ public static class XEdDSASigning
     /// <param name="x25519PublicKey">X25519 public key of the signer</param>
     /// <param name="useShortHash">Use SHA-256 instead of SHA-512 for verification</param>
     /// <returns>True if signature is valid</returns>
-    public static bool VerifyWithX25519Key(byte[] message, byte[] signature, byte[] x25519PublicKey, bool useShortHash = true)
+    public static bool VerifyWithX25519Key(byte[] message, byte[] signature, byte[] x25519PublicKey)
     {
         try
         {
             // Convert X25519 public key to Ed25519 public key
             var edPublicKey = ConvertX25519PublicKeyToEd25519(x25519PublicKey);
-            return Verify(message, signature, edPublicKey, useShortHash);
+            return Verify(message, signature, edPublicKey);
         }
         catch
         {
