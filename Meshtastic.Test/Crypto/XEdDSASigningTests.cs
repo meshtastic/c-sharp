@@ -58,7 +58,7 @@ public class XEdDSASigningTests
         var (edPrivateKey, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
 
         // Act
-        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey, useShortHash: true);
+        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey);
 
         // Assert
         Assert.That(signature, Is.Not.Null);
@@ -72,10 +72,10 @@ public class XEdDSASigningTests
         // Arrange
         var message = Encoding.UTF8.GetBytes("Test message for verification");
         var (edPrivateKey, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
-        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey, useShortHash: true);
+        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey);
 
         // Act
-        var isValid = XEdDSASigning.Verify(message, signature, edPublicKey, useShortHash: true);
+        var isValid = XEdDSASigning.Verify(message, signature, edPublicKey);
 
         // Assert
         Assert.That(isValid, Is.True);
@@ -90,7 +90,7 @@ public class XEdDSASigningTests
         var (_, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
 
         // Act
-        var isValid = XEdDSASigning.Verify(message, invalidSignature, edPublicKey, useShortHash: true);
+        var isValid = XEdDSASigning.Verify(message, invalidSignature, edPublicKey);
 
         // Assert
         Assert.That(isValid, Is.False);
@@ -103,29 +103,13 @@ public class XEdDSASigningTests
         var originalMessage = Encoding.UTF8.GetBytes("Original message");
         var tamperedMessage = Encoding.UTF8.GetBytes("Tampered message");
         var (edPrivateKey, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
-        var signature = XEdDSASigning.Sign(originalMessage, edPrivateKey, edPublicKey, useShortHash: true);
+        var signature = XEdDSASigning.Sign(originalMessage, edPrivateKey, edPublicKey);
 
         // Act
-        var isValid = XEdDSASigning.Verify(tamperedMessage, signature, edPublicKey, useShortHash: true);
+        var isValid = XEdDSASigning.Verify(tamperedMessage, signature, edPublicKey);
 
         // Assert
         Assert.That(isValid, Is.False);
-    }
-
-    [TestCase(true)]
-    [TestCase(false)]
-    public void SignAndVerify_Should_Work_WithBothHashTypes(bool useShortHash)
-    {
-        // Arrange
-        var message = Encoding.UTF8.GetBytes("Test message for both hash types");
-        var (edPrivateKey, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
-
-        // Act
-        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey, useShortHash);
-        var isValid = XEdDSASigning.Verify(message, signature, edPublicKey, useShortHash);
-
-        // Assert
-        Assert.That(isValid, Is.True);
     }
 
     [Test]

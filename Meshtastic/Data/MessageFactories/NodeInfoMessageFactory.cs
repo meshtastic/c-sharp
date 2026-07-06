@@ -17,13 +17,11 @@ public static class NodeInfoMessageFactory
     /// <param name="deviceStateContainer">Device state containing configuration</param>
     /// <param name="user">User information to broadcast</param>
     /// <param name="signPacket">Whether to sign the packet with XEdDSA</param>
-    /// <param name="useShortHash">Use SHA-256 instead of SHA-512 for signatures</param>
     /// <returns>MeshPacket containing the NodeInfo</returns>
     public static MeshPacket CreateNodeInfoMessage(
         DeviceStateContainer deviceStateContainer,
         User user,
-        bool signPacket = false,
-        bool useShortHash = true)
+        bool signPacket = false)
     {
         if (deviceStateContainer == null)
             throw new ArgumentNullException(nameof(deviceStateContainer));
@@ -55,7 +53,7 @@ public static class NodeInfoMessageFactory
         {
             try
             {
-                AddXEdDSASignature(meshPacket, deviceStateContainer, useShortHash);
+                AddXEdDSASignature(meshPacket, deviceStateContainer);
             }
             catch (Exception)
             {
@@ -106,12 +104,10 @@ public static class NodeInfoMessageFactory
     /// </summary>
     /// <param name="meshPacket">Received mesh packet</param>
     /// <param name="senderPublicKey">Public key of the sender</param>
-    /// <param name="useShortHash">Use SHA-256 instead of SHA-512</param>
     /// <returns>True if signature is valid</returns>
     public static bool VerifyNodeInfoSignature(
         MeshPacket meshPacket,
-        byte[] senderPublicKey,
-        bool useShortHash = true)
+        byte[] senderPublicKey)
     {
         if (meshPacket?.Decoded?.Payload == null)
             return false;
@@ -127,7 +123,7 @@ public static class NodeInfoMessageFactory
             // For now, we'll demonstrate the verification process
             var mockSignature = new byte[64]; // This would come from the packet
 
-            return XEdDSASigning.Verify(payload, mockSignature, senderPublicKey, useShortHash);
+            return XEdDSASigning.Verify(payload, mockSignature, senderPublicKey);
         }
         catch
         {
@@ -142,7 +138,7 @@ public static class NodeInfoMessageFactory
         return deviceStateContainer.LocalConfig?.Security?.PublicKey != null;
     }
 
-    private static void AddXEdDSASignature(MeshPacket meshPacket, DeviceStateContainer deviceStateContainer, bool useShortHash)
+    private static void AddXEdDSASignature(MeshPacket meshPacket, DeviceStateContainer deviceStateContainer)
     {
         if (meshPacket.Decoded?.Payload == null)
             return;
@@ -157,7 +153,7 @@ public static class NodeInfoMessageFactory
 
         // Sign the payload
         var payload = meshPacket.Decoded.Payload.ToByteArray();
-        var signature = XEdDSASigning.Sign(payload, edPrivateKey, edPublicKey, useShortHash);
+        var signature = XEdDSASigning.Sign(payload, edPrivateKey, edPublicKey);
 
         // Note: In the actual implementation, we would add the signature to the packet
         // For now, we'll store it in a custom field or metadata
@@ -200,14 +196,12 @@ public static class NodeInfoMessageFactory
         var signedSha256Packet = CreateNodeInfoMessage(
             deviceStateContainer: testDeviceState,
             user: user,
-            signPacket: true,
-            useShortHash: true);
+            signPacket: true);
 
         var signedSha512Packet = CreateNodeInfoMessage(
             deviceStateContainer: testDeviceState,
             user: user,
-            signPacket: true,
-            useShortHash: false);
+            signPacket: true);
 
         // Since signing currently fails silently due to no private key,
         // we'll simulate the signature overhead by creating packets with mock signatures
