@@ -6,6 +6,7 @@ using Org.BouncyCastle.Crypto.Generators;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Math;
 using System.Text;
+using Meshtastic.Protobufs;
 
 namespace Meshtastic.Crypto;
 
@@ -92,6 +93,24 @@ public static class XEdDSASigning
         // Set the sign bit to 0 (positive x)
         edPublicKeyResult[31] &= 0x7F;
         return edPublicKeyResult;
+    }
+
+    private static byte[] BuildSigningBuffer(MeshPacket meshPacket)
+    {
+        return [
+            ..BitConverter.GetBytes(meshPacket.From),
+            ..BitConverter.GetBytes(meshPacket.Id),
+            ..BitConverter.GetBytes((uint)meshPacket.Decoded.Portnum),
+            ..meshPacket.Decoded.Payload.ToByteArray()
+        ];
+    }
+
+    public static bool VerifyPacketSignature(byte[] senderPublicKey, MeshPacket meshPacket)
+    {
+        var message = BuildSigningBuffer(meshPacket);
+        var signature = meshPacket.Decoded.XeddsaSignature.ToByteArray();
+        var edPublicKey = ConvertX25519PublicKeyToEd25519(senderPublicKey);
+        return Verify(message, signature, edPublicKey);
     }
 
     /// <summary>
