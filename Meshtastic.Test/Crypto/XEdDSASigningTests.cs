@@ -51,6 +51,15 @@ public class XEdDSASigningTests
     }
 
     [Test]
+    public void ConvertX25519PublicKeyToEd25519_Should_EqualToGenerateEdDSAKeysFromX25519()
+    {
+        var (x25519PrivateKey, x25519PublicKey) = PKIEncryption.GenerateKeyPair();
+        var (edPrivateKey, edPublicKeyFromPrivate) = XEdDSASigning.GenerateEdDSAKeysFromX25519(x25519PrivateKey);
+        var edPublicKeyFromPublic = XEdDSASigning.ConvertX25519PublicKeyToEd25519(x25519PublicKey);
+        Assert.That(edPublicKeyFromPrivate, Is.EqualTo(edPublicKeyFromPublic));
+    }
+
+    [Test]
     public void Sign_Should_ProduceValidSignature()
     {
         // Arrange
