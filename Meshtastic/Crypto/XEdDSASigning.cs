@@ -129,6 +129,12 @@ public static class XEdDSASigning
         ];
     }
 
+    /// <summary>
+    /// Verify MeshPacket signature using provided node's X25519 public key.
+    /// </summary>
+    /// <param name="senderPublicKey">Public key of sender node.</param>
+    /// <param name="meshPacket">Packet to verify.</param>
+    /// <returns>True is packet signature is valid</returns>
     public static bool VerifyPacketSignature(byte[] senderPublicKey, MeshPacket meshPacket)
     {
         var message = BuildSigningBuffer(meshPacket);
@@ -137,6 +143,11 @@ public static class XEdDSASigning
         return Verify(message, signature, edPublicKey);
     }
 
+    /// <summary>
+    /// Adds a signature to provided MeshPacket.
+    /// </summary>
+    /// <param name="senderPrivateKey">Private X25519 key of packet sender.</param>
+    /// <param name="meshPacket">Packet to sign.</param>
     public static void AddPacketSignature(byte[] senderPrivateKey, MeshPacket meshPacket)
     {
         var message = BuildSigningBuffer(meshPacket);
