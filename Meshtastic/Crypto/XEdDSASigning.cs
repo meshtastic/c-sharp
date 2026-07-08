@@ -32,6 +32,28 @@ public static class XEdDSASigning
         return (privateKey, publicKey);
     }
 
+    private static byte[] GeneratePublicKeyFromPrivateKey(byte[] ed25519PrivateKey)
+    {
+        /*
+         * Normally the public key should be obtained by calling:
+         * new Ed25519PrivateKeyParameters(ed25519PrivateKey).GeneratePublicKey().GetEncoded()
+         * but in firmware's function XEdDSA::priv_curve_to_ed_keys private key is used as-is
+         * as a scalar, while BouncyCastle's GeneratePublicKey first passes private key material
+         * through SHA512 to obtain 64-byte seed, of which 2nd half is used as a scalar and multiplied
+         * by curve's base point to obtain public key.
+         * 
+         * Reimplementing field multiplication, as provided by ScalarMultBaseEncoded, in this project
+         * seems pointless - hence use of reflection to gain access to this primitive to generate
+         * a public key directly from provided material.
+         */
+
+        var ed25519PublicKey = new byte[32];
+        typeof(Org.BouncyCastle.Math.EC.Rfc8032.Ed25519)
+            .GetMethod("ScalarMultBaseEncoded", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static, [typeof(byte[]), typeof(byte[]), typeof(int)])!
+            .Invoke(null, [ed25519PrivateKey, ed25519PublicKey, 0]);
+        return ed25519PublicKey;
+    }
+
     /// <summary>
     /// Generate Ed25519 keys from an X25519 private key (simplified for demo)
     /// </summary>
@@ -44,29 +66,33 @@ public static class XEdDSASigning
 
         var ed25519PrivateKey = new byte[32];
         Array.Copy(x25519PrivateKey, ed25519PrivateKey, ed25519PrivateKey.Length);
+
         // Clamp X25519
         ed25519PrivateKey[0] &= 0xF8;
         ed25519PrivateKey[31] &= 0x7F;
         ed25519PrivateKey[31] |= 0x40;
 
         var x25519PublicKey = PKIEncryption.GetPublicKeyFromPrivateKey(x25519PrivateKey);
-        var ed25519PublicKey = ConvertX25519PublicKeyToEd25519(x25519PublicKey, forcePositive: false);
+        var ed25519PublicKey = GeneratePublicKeyFromPrivateKey(ed25519PrivateKey);
 
         // If resulting public key is positive, return as-is
-        if ((ed25519PublicKey[31] & 0x80) == 0) return (x25519PrivateKey, ed25519PublicKey);
+        if ((ed25519PublicKey[31] & 0x80) == 0) return (ed25519PrivateKey, ed25519PublicKey);
 
         // Ed25519 Group Order
         var L = new BigInteger("7237005577332262213973186563042994240857116359379907606001950938285454250989");
 
         // Negate private key
-        var privateKeyScalar = new BigInteger(ed25519PrivateKey.Reverse().ToArray());
+        var privateKeyScalar = new BigInteger(1, ed25519PrivateKey.Reverse().ToArray());
         var negatedPrivateKeyScalar = L.Subtract(privateKeyScalar);
         var negatedPrivateKeyBytes = negatedPrivateKeyScalar.ToByteArrayUnsigned();
         byte[] negatedPrivateKey = new byte[32];
-        Array.Copy(negatedPrivateKeyBytes, 0, negatedPrivateKey, 0, negatedPrivateKeyBytes.Length);
+        for (int i = 0; i < negatedPrivateKeyBytes.Length && i < 32; i++)
+        {
+            negatedPrivateKey[i] = negatedPrivateKeyBytes[negatedPrivateKeyBytes.Length - 1 - i];
+        }
 
         // Recompute public key from negated privated key
-        var negatedPublicKey = ConvertX25519PublicKeyToEd25519(negatedPrivateKey);
+        var negatedPublicKey = GeneratePublicKeyFromPrivateKey(negatedPrivateKey);
 
         return (negatedPrivateKey, negatedPublicKey);
     }
