@@ -42,9 +42,33 @@ public static class XEdDSASigning
         if (x25519PrivateKey.Length != 32)
             throw new ArgumentException("X25519 private key must be 32 bytes", nameof(x25519PrivateKey));
 
+        var ed25519PrivateKey = new byte[32];
+        Array.Copy(x25519PrivateKey, ed25519PrivateKey, ed25519PrivateKey.Length);
+        // Clamp X25519
+        ed25519PrivateKey[0] &= 0xF8;
+        ed25519PrivateKey[31] &= 0x7F;
+        ed25519PrivateKey[31] |= 0x40;
+
         var x25519PublicKey = PKIEncryption.GetPublicKeyFromPrivateKey(x25519PrivateKey);
-        var ed25519PublicKey = ConvertX25519PublicKeyToEd25519(x25519PublicKey);
-        return (x25519PrivateKey, ed25519PublicKey);
+        var ed25519PublicKey = ConvertX25519PublicKeyToEd25519(x25519PublicKey, forcePositive: false);
+
+        // If resulting public key is positive, return as-is
+        if ((ed25519PublicKey[31] & 0x80) == 0) return (x25519PrivateKey, ed25519PublicKey);
+
+        // Ed25519 Group Order
+        var L = new BigInteger("7237005577332262213973186563042994240857116359379907606001950938285454250989");
+
+        // Negate private key
+        var privateKeyScalar = new BigInteger(ed25519PrivateKey.Reverse().ToArray());
+        var negatedPrivateKeyScalar = L.Subtract(privateKeyScalar);
+        var negatedPrivateKeyBytes = negatedPrivateKeyScalar.ToByteArrayUnsigned();
+        byte[] negatedPrivateKey = new byte[32];
+        Array.Copy(negatedPrivateKeyBytes, 0, negatedPrivateKey, 0, negatedPrivateKeyBytes.Length);
+
+        // Recompute public key from negated privated key
+        var negatedPublicKey = ConvertX25519PublicKeyToEd25519(negatedPrivateKey);
+
+        return (negatedPrivateKey, negatedPublicKey);
     }
 
     /// <summary>
@@ -52,7 +76,7 @@ public static class XEdDSASigning
     /// </summary>
     /// <param name="x25519PublicKey">32-byte X25519 public key</param>
     /// <returns>32-byte Ed25519 public key</returns>
-    public static byte[] ConvertX25519PublicKeyToEd25519(byte[] x25519PublicKey)
+    public static byte[] ConvertX25519PublicKeyToEd25519(byte[] x25519PublicKey, bool forcePositive = false)
     {
         if (x25519PublicKey.Length != 32)
             throw new ArgumentException("X25519 public key must be 32 bytes", nameof(x25519PublicKey));
@@ -91,7 +115,7 @@ public static class XEdDSASigning
         // If yBytes is shorter than 32 bytes, the rest is already zero
 
         // Set the sign bit to 0 (positive x)
-        edPublicKeyResult[31] &= 0x7F;
+        if (forcePositive) edPublicKeyResult[31] &= 0x7F;
         return edPublicKeyResult;
     }
 
