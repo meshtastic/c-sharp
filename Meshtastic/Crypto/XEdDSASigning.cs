@@ -113,6 +113,14 @@ public static class XEdDSASigning
         return Verify(message, signature, edPublicKey);
     }
 
+    public static void AddPacketSignature(byte[] senderPrivateKey, MeshPacket meshPacket)
+    {
+        var message = BuildSigningBuffer(meshPacket);
+        var (edPrivateKey, edPublicKey) = GenerateEdDSAKeysFromX25519(senderPrivateKey);
+        var signature = Sign(message, edPrivateKey, edPublicKey);
+        meshPacket.Decoded.XeddsaSignature = Google.Protobuf.ByteString.CopyFrom(signature);
+    }
+
     /// <summary>
     /// Sign a message using Ed25519
     /// </summary>
