@@ -83,7 +83,7 @@ public static class XEdDSASigning
 
         // Negate private key
         var privateKeyScalar = new BigInteger(1, ed25519PrivateKey.Reverse().ToArray());
-        var negatedPrivateKeyScalar = L.Subtract(privateKeyScalar);
+        var negatedPrivateKeyScalar = L.Subtract(privateKeyScalar.Mod(L));
         var negatedPrivateKeyBytes = negatedPrivateKeyScalar.ToByteArrayUnsigned();
         byte[] negatedPrivateKey = new byte[32];
         for (int i = 0; i < negatedPrivateKeyBytes.Length && i < 32; i++)
