@@ -7,6 +7,7 @@ using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Math;
 using System.Text;
 using Meshtastic.Protobufs;
+using Org.BouncyCastle.Math.EC.Rfc8032;
 
 namespace Meshtastic.Crypto;
 
@@ -187,21 +188,20 @@ public static class XEdDSASigning
     /// </summary>
     /// <param name="message">Message to sign</param>
     /// <param name="edPrivateKey">Ed25519 private key</param>
-    /// <param name="useShortHash">Use SHA-256 instead of SHA-512 for hashing before signing</param>
+    /// <param name="edPublicKey">Ed25519 public key</param>
     /// <returns>64-byte signature</returns>
     public static byte[] Sign(byte[] message, byte[] edPrivateKey, byte[] edPublicKey)
     {
         if (message == null) throw new ArgumentNullException(nameof(message));
         if (edPrivateKey.Length != 32) throw new ArgumentException("Ed25519 private key must be 32 bytes", nameof(edPrivateKey));
-
-        // Create Ed25519 signer
-        var signer = new Ed25519Signer();
-        var privateKeyParams = new Ed25519PrivateKeyParameters(edPrivateKey, 0);
-        
-        signer.Init(true, privateKeyParams);
-        signer.BlockUpdate(message, 0, message.Length);
-        
-        return signer.GenerateSignature();
+        var signature = new byte[64];
+        /*
+         * Ed25519Signer computes public key from private key differently than firmware (see comment for GeneratePublicKeyFromPrivateKey)
+         * and causes signature verification by actual radios to fail, so instead use Ed25519 primitive directly, explicitly passing 
+         * public key computed derived as in XEdDSA::priv_curve_to_ed_keys.
+         */
+        Ed25519.Sign(edPrivateKey, 0, edPublicKey, 0, null, message, 0, message.Length, signature, 0);
+        return signature;
     }
 
     /// <summary>
@@ -210,29 +210,13 @@ public static class XEdDSASigning
     /// <param name="message">Original message</param>
     /// <param name="signature">64-byte signature</param>
     /// <param name="edPublicKey">Ed25519 public key of the signer</param>
-    /// <param name="useShortHash">Use SHA-256 instead of SHA-512 for hashing</param>
     /// <returns>True if signature is valid</returns>
     public static bool Verify(byte[] message, byte[] signature, byte[] edPublicKey)
     {
         if (message == null) throw new ArgumentNullException(nameof(message));
         if (signature == null || signature.Length != 64) throw new ArgumentException("Signature must be 64 bytes", nameof(signature));
         if (edPublicKey == null || edPublicKey.Length != 32) throw new ArgumentException("Ed25519 public key must be 32 bytes", nameof(edPublicKey));
-
-        try
-        {
-            // Create Ed25519 verifier
-            var verifier = new Ed25519Signer();
-            var publicKeyParams = new Ed25519PublicKeyParameters(edPublicKey, 0);
-            
-            verifier.Init(false, publicKeyParams);
-            verifier.BlockUpdate(message, 0, message.Length);
-            
-            return verifier.VerifySignature(signature);
-        }
-        catch
-        {
-            return false;
-        }
+        return Ed25519.Verify(signature, 0, edPublicKey, 0, message, 0, message.Length);
     }
 
     /// <summary>
