@@ -8,6 +8,7 @@ using Org.BouncyCastle.Math;
 using System.Text;
 using Meshtastic.Protobufs;
 using Org.BouncyCastle.Math.EC.Rfc8032;
+using Org.BouncyCastle.Crypto.Digests;
 
 namespace Meshtastic.Crypto;
 
@@ -199,8 +200,50 @@ public static class XEdDSASigning
          * Ed25519Signer computes public key from private key differently than firmware (see comment for GeneratePublicKeyFromPrivateKey)
          * and causes signature verification by actual radios to fail, so instead use Ed25519 primitive directly, explicitly passing 
          * public key computed derived as in XEdDSA::priv_curve_to_ed_keys.
+         * 
+         * Also, Ed25519.Sign passes sk (private key) through SHA-512 before feeding it to actual ImplSign, which for some reason
+         * later fails to verify both by firmware and by Ed25519.Verify.
+         * 
+         * The following code is inlined from BouncyCastle's Ed25519 class, method:
+         * private static void ImplSign(byte[] sk, int skOff, byte[] pk, int pkOff, byte[] ctx, byte phflag, byte[] m, int mOff, int mLen, byte[] sig, int sigOff)
          */
-        Ed25519.Sign(edPrivateKey, 0, edPublicKey, 0, null, message, 0, message.Length, signature, 0);
+
+        var digest = new Sha512Digest();
+        var h = new byte[64];
+
+        digest.BlockUpdate(edPrivateKey, 0, 32);
+        digest.DoFinal(h, 0);
+
+        typeof(Ed25519)
+            .GetMethod("ImplSign", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static, 
+            [
+                typeof(IDigest),
+                typeof(byte[]),
+                typeof(byte[]),
+                typeof(byte[]),
+                typeof(int),
+                typeof(byte[]),
+                typeof(byte),
+                typeof(byte[]),
+                typeof(int),
+                typeof(int),
+                typeof(byte[]),
+                typeof(int)
+            ])!
+            .Invoke(null, [
+                /* IDigest d */ digest,
+                /* byte[] h */ h,
+                /* byte[] s */ edPrivateKey /* original argument: s, scalar computed from h */,
+                /* byte[] pk */ edPublicKey,
+                /* int pkOff */ 0,
+                /* byte[] ctx */ null,
+                /* byte phflag */ (byte)0,
+                /* byte[] */ message,
+                /* int mOff*/ 0,
+                /* int mLen */ message.Length,
+                /* byte[] sig */ signature,
+                /* int sigOff */ 0]);
+
         return signature;
     }
 
