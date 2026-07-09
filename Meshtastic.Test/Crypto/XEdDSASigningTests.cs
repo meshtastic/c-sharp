@@ -51,6 +51,26 @@ public class XEdDSASigningTests
     }
 
     [Test]
+    public void ConvertX25519PublicKeyToEd25519_Should_EqualToGenerateEdDSAKeysFromX25519_Positive()
+    {
+        var x25519PrivateKey = Convert.FromBase64String("+ATTWKM68dlArUzWrXWlQm45Gi3ZYrOdDt2z5VT5+2o=");
+        var x25519PublicKey = PKIEncryption.GetPublicKeyFromPrivateKey(x25519PrivateKey);
+        var edPublicKeyFromPublic = XEdDSASigning.ConvertX25519PublicKeyToEd25519(x25519PublicKey);
+        var (_, edPublicKeyFromPrivate) = XEdDSASigning.GenerateEdDSAKeysFromX25519(x25519PrivateKey);
+        Assert.That(edPublicKeyFromPrivate, Is.EqualTo(edPublicKeyFromPublic));
+    }
+
+    [Test]
+    public void ConvertX25519PublicKeyToEd25519_Should_EqualToGenerateEdDSAKeysFromX25519_Negative()
+    {
+        var x25519PrivateKey = Convert.FromBase64String("wJNheemu5n2oPgpu0BpEdomsPlChBSM8gAO7RRWkT2w=");
+        var x25519PublicKey = PKIEncryption.GetPublicKeyFromPrivateKey(x25519PrivateKey);
+        var edPublicKeyFromPublic = XEdDSASigning.ConvertX25519PublicKeyToEd25519(x25519PublicKey);
+        var (_, edPublicKeyFromPrivate) = XEdDSASigning.GenerateEdDSAKeysFromX25519(x25519PrivateKey);
+        Assert.That(edPublicKeyFromPrivate, Is.EqualTo(edPublicKeyFromPublic));
+    }
+
+    [Test]
     public void Sign_Should_ProduceValidSignature()
     {
         // Arrange
@@ -58,7 +78,7 @@ public class XEdDSASigningTests
         var (edPrivateKey, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
 
         // Act
-        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey, useShortHash: true);
+        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey);
 
         // Assert
         Assert.That(signature, Is.Not.Null);
@@ -72,10 +92,10 @@ public class XEdDSASigningTests
         // Arrange
         var message = Encoding.UTF8.GetBytes("Test message for verification");
         var (edPrivateKey, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
-        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey, useShortHash: true);
+        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey);
 
         // Act
-        var isValid = XEdDSASigning.Verify(message, signature, edPublicKey, useShortHash: true);
+        var isValid = XEdDSASigning.Verify(message, signature, edPublicKey);
 
         // Assert
         Assert.That(isValid, Is.True);
@@ -90,7 +110,7 @@ public class XEdDSASigningTests
         var (_, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
 
         // Act
-        var isValid = XEdDSASigning.Verify(message, invalidSignature, edPublicKey, useShortHash: true);
+        var isValid = XEdDSASigning.Verify(message, invalidSignature, edPublicKey);
 
         // Assert
         Assert.That(isValid, Is.False);
@@ -103,29 +123,45 @@ public class XEdDSASigningTests
         var originalMessage = Encoding.UTF8.GetBytes("Original message");
         var tamperedMessage = Encoding.UTF8.GetBytes("Tampered message");
         var (edPrivateKey, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
-        var signature = XEdDSASigning.Sign(originalMessage, edPrivateKey, edPublicKey, useShortHash: true);
+        var signature = XEdDSASigning.Sign(originalMessage, edPrivateKey, edPublicKey);
 
         // Act
-        var isValid = XEdDSASigning.Verify(tamperedMessage, signature, edPublicKey, useShortHash: true);
+        var isValid = XEdDSASigning.Verify(tamperedMessage, signature, edPublicKey);
 
         // Assert
         Assert.That(isValid, Is.False);
     }
 
-    [TestCase(true)]
-    [TestCase(false)]
-    public void SignAndVerify_Should_Work_WithBothHashTypes(bool useShortHash)
+    [Test]
+    public void Verify_RealLife_ValidSignature()
     {
-        // Arrange
-        var message = Encoding.UTF8.GetBytes("Test message for both hash types");
-        var (edPrivateKey, edPublicKey) = XEdDSASigning.GenerateEdDSAKeysFromX25519(_testPrivateKey);
-
-        // Act
-        var signature = XEdDSASigning.Sign(message, edPrivateKey, edPublicKey, useShortHash);
-        var isValid = XEdDSASigning.Verify(message, signature, edPublicKey, useShortHash);
-
-        // Assert
+        var rawCapturedPacket = Convert.FromBase64String("DbVdZX4V/////xgVIkwIARIEVGVzdEgBUkDdbuxwz2lvDyBKpCW1ojj+pMPfnRfWiUsDwf1cwisx+82L7fA5/g5OW5LrpWfU4z73AHqysNLKBUOt3TfhBEQONXE20CI9ieBNakgHWGR4B5gBtQE=");
+        var senderPublicKey = Convert.FromBase64String("t0hKwMywRb2nKFOvVXcjFAGPWgCSta4ZwEkgPkgJWwM=");
+        var meshPacket = MeshPacket.Parser.ParseFrom(rawCapturedPacket);
+        var isValid = XEdDSASigning.VerifyPacketSignature(senderPublicKey, meshPacket);
         Assert.That(isValid, Is.True);
+    }
+
+    [Test]
+    public void Verify_RealLife_InvalidPubkey()
+    {
+        var rawCapturedPacket = Convert.FromBase64String("DbVdZX4V/////xgVIkwIARIEVGVzdEgBUkDdbuxwz2lvDyBKpCW1ojj+pMPfnRfWiUsDwf1cwisx+82L7fA5/g5OW5LrpWfU4z73AHqysNLKBUOt3TfhBEQONXE20CI9ieBNakgHWGR4B5gBtQE=");
+        var senderPublicKey = Convert.FromBase64String("t0hKwMywRb2nKFOvVXcjFAGPWgCSta4ZwEkgPkgJWwM=");
+        senderPublicKey[0]++;
+        var meshPacket = MeshPacket.Parser.ParseFrom(rawCapturedPacket);
+        var isValid = XEdDSASigning.VerifyPacketSignature(senderPublicKey, meshPacket);
+        Assert.That(isValid, Is.False);
+    }
+
+    [Test]
+    public void Verify_RealLife_TamperedMessage()
+    {
+        var rawCapturedPacket = Convert.FromBase64String("DbVdZX4V/////xgVIkwIARIEVGVzdEgBUkDdbuxwz2lvDyBKpCW1ojj+pMPfnRfWiUsDwf1cwisx+82L7fA5/g5OW5LrpWfU4z73AHqysNLKBUOt3TfhBEQONXE20CI9ieBNakgHWGR4B5gBtQE=");
+        var senderPublicKey = Convert.FromBase64String("t0hKwMywRb2nKFOvVXcjFAGPWgCSta4ZwEkgPkgJWwM=");
+        var meshPacket = MeshPacket.Parser.ParseFrom(rawCapturedPacket);
+        meshPacket.Decoded.Payload = Google.Protobuf.ByteString.CopyFromUtf8("Tampered");
+        var isValid = XEdDSASigning.VerifyPacketSignature(senderPublicKey, meshPacket);
+        Assert.That(isValid, Is.False);
     }
 
     [Test]
