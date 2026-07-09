@@ -34,6 +34,53 @@ public static class XEdDSASigning
         return (privateKey, publicKey);
     }
 
+    /*
+     * Reflected private methods from BouncyCastle's Org.BouncyCastle.Math.EC.Rfc8032.Ed25519 used directly,
+     * because proper public methods differ in implementation details from those in Meshtastic firmware.
+     * Using those methods seems less wrong than to re-implement them here.
+     */
+    private static Action<byte[], byte[], int>? ed25519_ScalarMultBaseEncoded;
+    private static Action<IDigest, byte[], byte[], byte[], int, byte[]?, byte, byte[], int, int, byte[], int>? ed25519_ImplSign;
+
+    private static void Ed25519_ScalarMultBaseEncoded(byte[] k, byte[] r, int rOff)
+    {
+        if (ed25519_ScalarMultBaseEncoded == null)
+        {
+            var method = typeof(Ed25519).GetMethod("ScalarMultBaseEncoded", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static, [typeof(byte[]), typeof(byte[]), typeof(int)]);
+            if (method == null) throw new InvalidOperationException("Reflected private method \"ScalarMultBaseEncoded\" in \"Org.BouncyCastle.Math.EC.Rfc8032.Ed25519\" not found.");
+            ed25519_ScalarMultBaseEncoded = (Action<byte[], byte[], int>)method.CreateDelegate(typeof(Action<byte[], byte[], int>));
+        }
+
+        ed25519_ScalarMultBaseEncoded(k, r, rOff);
+    }
+
+    private static void Ed25519_ImplSign(IDigest d, byte[] h, byte[] s, byte[] pk, int pkOff, byte[]? ctx, byte phflag, byte[] m, int mOff, int mLen, byte[] sig, int sigOff)
+    {
+        if (ed25519_ImplSign == null)
+        {
+            var method = typeof(Ed25519)
+            .GetMethod("ImplSign", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static,
+                [
+                    typeof(IDigest),
+                    typeof(byte[]),
+                    typeof(byte[]),
+                    typeof(byte[]),
+                    typeof(int),
+                    typeof(byte[]),
+                    typeof(byte),
+                    typeof(byte[]),
+                    typeof(int),
+                    typeof(int),
+                    typeof(byte[]),
+                    typeof(int)
+                ]);
+            if (method == null) throw new InvalidOperationException("Reflected private method \"ImplSign\" in \"Org.BouncyCastle.Math.EC.Rfc8032.Ed25519\" not found.");
+            ed25519_ImplSign = (Action<IDigest, byte[], byte[], byte[], int, byte[]?, byte, byte[], int, int, byte[], int>)method.CreateDelegate(typeof(Action<IDigest, byte[], byte[], byte[], int, byte[], byte, byte[], int, int, byte[], int>));
+        }
+
+        ed25519_ImplSign(d, h, s, pk, pkOff, ctx, phflag, m, mOff, mLen, sig, sigOff);
+    }
+
     private static byte[] GeneratePublicKeyFromPrivateKey(byte[] ed25519PrivateKey)
     {
         /*
@@ -50,9 +97,7 @@ public static class XEdDSASigning
          */
 
         var ed25519PublicKey = new byte[32];
-        typeof(Org.BouncyCastle.Math.EC.Rfc8032.Ed25519)
-            .GetMethod("ScalarMultBaseEncoded", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static, [typeof(byte[]), typeof(byte[]), typeof(int)])!
-            .Invoke(null, [ed25519PrivateKey, ed25519PublicKey, 0]);
+        Ed25519_ScalarMultBaseEncoded(ed25519PrivateKey, ed25519PublicKey, 0);
         return ed25519PublicKey;
     }
 
@@ -214,35 +259,7 @@ public static class XEdDSASigning
         digest.BlockUpdate(edPrivateKey, 0, 32);
         digest.DoFinal(h, 0);
 
-        typeof(Ed25519)
-            .GetMethod("ImplSign", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static, 
-            [
-                typeof(IDigest),
-                typeof(byte[]),
-                typeof(byte[]),
-                typeof(byte[]),
-                typeof(int),
-                typeof(byte[]),
-                typeof(byte),
-                typeof(byte[]),
-                typeof(int),
-                typeof(int),
-                typeof(byte[]),
-                typeof(int)
-            ])!
-            .Invoke(null, [
-                /* IDigest d */ digest,
-                /* byte[] h */ h,
-                /* byte[] s */ edPrivateKey /* original argument: s, scalar computed from h */,
-                /* byte[] pk */ edPublicKey,
-                /* int pkOff */ 0,
-                /* byte[] ctx */ null,
-                /* byte phflag */ (byte)0,
-                /* byte[] */ message,
-                /* int mOff*/ 0,
-                /* int mLen */ message.Length,
-                /* byte[] sig */ signature,
-                /* int sigOff */ 0]);
+        Ed25519_ImplSign(digest, h, edPrivateKey /* original argument: s, scalar computed from h */, edPublicKey, 0, null, 0, message, 0, message.Length, signature, 0);
 
         return signature;
     }
